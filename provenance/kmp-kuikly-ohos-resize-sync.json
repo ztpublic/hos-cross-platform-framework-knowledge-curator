@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "kmp-kuikly-ohos-resize-sync",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "ohosApp/entry/src/main/ets/kuikly/KuiklyViewDelegate.ets",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/ohosApp/entry/src/main/ets/kuikly/KuiklyViewDelegate.ets",
+      "sha256": "5548ad5f3e5f7722c7797caac1f5fa1610676b349dc8146eeb26a85a6fae4a9a",
+      "revision": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "license": "KuiklyUI License (custom; see LICENSE).",
+      "evidence_note": "Exact bytes fetched at the recorded commit through the GitHub contents API. Source-reported results were not rerun."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/README.md",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/core-render-ohos/README.md",
+      "sha256": "8591ebb2b35842c8bc75872f3a7f0b8b881fcafcce5eaf78faf20d9fc9463ad4",
+      "revision": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "license": "KuiklyUI License (custom; see LICENSE).",
+      "evidence_note": "Exact bytes fetched at the recorded commit through the GitHub contents API. Source-reported results were not rerun."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "ohosApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/ohosApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "d0f3236da22ce4c283b73ca0d61e593ce32e1a3b8e610d6be87ee55e340d2dfc",
+      "revision": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "license": "KuiklyUI License (custom; see LICENSE).",
+      "evidence_note": "Exact bytes fetched at the recorded commit through the GitHub contents API. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "kmp-kuikly-ohos-resize-sync",
+    "project": "kuiklyui",
+    "repository": "https://github.com/Tencent-TDS/KuiklyUI",
+    "commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "paths": [
+      "ohosApp/entry/src/main/ets/kuikly/KuiklyViewDelegate.ets",
+      "core-render-ohos/README.md"
+    ],
+    "source_reported_validation": "The delegate documents syncSendEvent and explicitly suggests returning true for rootViewSizeDidChanged when a resize/rotation white screen appears. No device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the KuiklyUI OH host build/delegate; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the KuiklyUI renderer/NAPI host contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The KuiklyUI toolchain and the target device were not reproduced in this review.",
+    "The workaround is source-documented but was not measured on a device; the exact event timing may differ by renderer version."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "kuiklyui"
+  ],
+  "entries_before": 185,
+  "entries_after": 187,
+  "query_families": [
+    "Kotlin Multiplatform UI frameworks with HarmonyOS renderers",
+    "KMP shared-logic bridges and remaining app ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "Tencent-TDS/KuiklyUI",
+      "framework": "kotlin-multiplatform",
+      "disposition": "analyzed",
+      "reason": "KMP UI framework with an OH renderer HAR/C++ NAPI host and a documented resize-sync workaround."
+    },
+    {
+      "project": "baochao-sxiaofan/kmp-ohos-bridge",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "Small KMP shared-logic/.so bridge; needs a full source review before adding a distinct entry."
+    },
+    {
+      "project": "HM-U3/vectorcraft-harmonyos",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "VectorCraft engine port for tablet/2in1; source qualification pending."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_nixnote2_electron",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished Electron HAP; overlaps existing packaging/window entries."
+    }
+  ],
+  "added_entries": [
+    "kmp-kuikly-ohos-host",
+    "kmp-kuikly-ohos-resize-sync"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The KuiklyUI License is custom; only generalized mechanisms were recorded and no source code was copied.",
+    "The repository was read through the GitHub contents API at the recorded commit, not cloned.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 187 entries",
+    "kb.py check -> OK: 187 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for KuiklyUI host and resize terms",
+    "git diff review before commit"
+  ]
+}

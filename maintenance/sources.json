@@ -632,6 +632,36 @@
       "coverage": "Source-reviewed Flutter OH PC form-factor detection, versioned native-library packaging and TargetPlatform vendoring.",
       "source_reported_validation": "The port notes report a working HAP build and mobile/PC interaction split; no build or device run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "kuiklyui",
+      "kind": "project",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "analyzed_commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "license": "KuiklyUI License (custom; see LICENSE).",
+      "license_notice": "maintenance/licenses/kuiklyui-LICENSE.txt",
+      "local_path": "",
+      "working_tree_status": "Read through the GitHub contents API at the recorded commit; repository not cloned.",
+      "reviewed_paths": [
+        "2.0_ohos_demo_build.sh",
+        "core-render-ohos/README.md",
+        "core-render-ohos/oh-package.json5",
+        "ohosApp/entry/oh-package.json5",
+        "ohosApp/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohosApp/entry/src/main/ets/kuikly/KuiklyViewDelegate.ets"
+      ],
+      "knowledge_ids": [
+        "kmp-kuikly-ohos-host",
+        "kmp-kuikly-ohos-resize-sync"
+      ],
+      "last_run": "2026-10-20-project-research-15.json",
+      "coverage": "Source-reviewed KuiklyUI OH host integration (Kotlin .so + renderer HAR/NAPI) and synchronous resize handling.",
+      "source_reported_validation": "The demo build script and host delegate describe the integration; no build or device run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }
