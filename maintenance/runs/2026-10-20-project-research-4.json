@@ -1,0 +1,83 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "vlc-qt6-ohos"
+  ],
+  "entries_before": 157,
+  "entries_after": 160,
+  "query_families": [
+    "Qt 6 media and video surface OH PC ports",
+    "Electron PC registry follow-up",
+    "Qt PC window/tray samples (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "Aloereed/vlc-qt6-ohos",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt 6 media player with native video texture handoff, SRT/ASS subtitle overlay and AVSession integration."
+    },
+    {
+      "project": "liang-xiaohui/freecad-on-harmonyos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "FreeCAD 1.1.2 Qt 6/Coin3D/gl4es port for HarmonyOS PC; high-value 3D candidate for the next batch."
+    },
+    {
+      "project": "wallace5303/electron-egg-ohos",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "GitCode ElectronEgg PC adaptation; needs source qualification."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app with Android/OpenHarmony targets; screen capture and permissions may be valuable."
+    },
+    {
+      "project": "scenario-samples/qt-custom-title-bar",
+      "framework": "qt",
+      "disposition": "screened",
+      "reason": "Official Qt custom title-bar sample; the core is generic window flags and does not add a distinct OH mechanism beyond the existing window entries."
+    },
+    {
+      "project": "scenario-samples/qt-tray-minimize",
+      "framework": "qt",
+      "disposition": "screened",
+      "reason": "Official close-to-tray sample; behavior overlaps the existing tray capability and close-event entries."
+    },
+    {
+      "project": "forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 scientific port; README reviewed, source analysis still pending."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    }
+  ],
+  "added_entries": [
+    "qt6-ohos-native-video-texture",
+    "qt6-ohos-subtitle-overlay",
+    "qt6-ohos-avsession-bridge"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The media player source is GPL-2.0; only generalized mechanisms were recorded and no source code was copied.",
+    "The video path depends on the external-texture backend; software/native-surface behavior was not reviewed.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run.",
+    "FreeCAD, ElectronEgg, ScreenCast and SciDAVis were screened but not analyzed in this batch."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 160 entries",
+    "kb.py check -> OK: 160 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for external texture, subtitle bridge and AVSession terms",
+    "git diff review before commit"
+  ]
+}

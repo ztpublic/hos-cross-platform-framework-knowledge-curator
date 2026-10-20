@@ -263,6 +263,39 @@
       "source_reported_validation": "The porting record reports OCR/injected-input verification on a 2in1 device; no run was rerun.",
       "checked_at": "2026-10-20",
       "license_notice": "maintenance/licenses/ohshark-Qt-LGPL-NOTICE.md"
+    },
+    {
+      "id": "vlc-qt6-ohos",
+      "kind": "project",
+      "url": "https://github.com/Aloereed/vlc-qt6-ohos",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "analyzed_commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "license_notice": "maintenance/licenses/vlc-GPL-2.0.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/vlc-qt6-ohos",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "harmony/patch-harmony-package.ps1",
+        "include/vlc_ohos_subtitle_bridge.h",
+        "modules/gui/qt/components/interface_widgets.cpp",
+        "modules/gui/qt/components/ohos_avsession_bridge.cpp",
+        "modules/gui/qt/components/ohos_avsession_bridge.hpp",
+        "modules/gui/qt/components/ohos_subtitle_bridge.cpp",
+        "modules/gui/qt/components/ohos_video_texture_widget.cpp",
+        "modules/gui/qt/components/ohos_video_texture_widget.hpp"
+      ],
+      "knowledge_ids": [
+        "qt6-ohos-native-video-texture",
+        "qt6-ohos-subtitle-overlay",
+        "qt6-ohos-avsession-bridge"
+      ],
+      "last_run": "2026-10-20-project-research-4.json",
+      "coverage": "Source-reviewed Qt 6 native video texture, subtitle overlay and AVSession integration.",
+      "source_reported_validation": "The porting notes report hardware-texture playback, SRT/external/embedded ASS subtitles, AVSession controls and background audio on a 2in1 device; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

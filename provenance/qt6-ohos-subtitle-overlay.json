@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-subtitle-overlay",
+  "sources": [
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "sha256": "7d8d5b2a2c52055030c6c7524bf6d13f90ce702d455855e972955c1da3ba60a9",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_subtitle_bridge.cpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_subtitle_bridge.cpp",
+      "sha256": "d186a629f383a9e866e19813bd6e63af463deae675cd19c98f7eda42c788163c",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_subtitle_bridge.hpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_subtitle_bridge.hpp",
+      "sha256": "aa356f88fa4ca1a693692998c39e0db09ba6f2cc74e86eb3016e92fd01d5cac4",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "include/vlc_ohos_subtitle_bridge.h",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/include/vlc_ohos_subtitle_bridge.h",
+      "sha256": "195585bac0aff4b70bbb36f4864623f3412c911c50ea13fbaa5e1735fdaa9840",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "harmony/OHOS_PORTING_NOTES.md",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/harmony/OHOS_PORTING_NOTES.md",
+      "sha256": "75cb5d941a564501242db60c480195ea2a645efa601baf6adda87b0dd40b83b5",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-subtitle-overlay",
+    "project": "vlc-qt6-ohos",
+    "repository": "https://github.com/Aloereed/vlc-qt6-ohos",
+    "commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+    "paths": [
+      "modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "modules/gui/qt/components/ohos_subtitle_bridge.cpp",
+      "include/vlc_ohos_subtitle_bridge.h"
+    ],
+    "source_reported_validation": "The source implements a second RGBA overlay texture, a C ABI bridge with region validation and separate text/bitmap owners, and early bridge registration. The porting notes report SRT, external ASS and embedded ASS verification; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the media-player source and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt OH QPA and the media player integration."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains, libass build and hardware video backend were not reproduced in this review.",
+    "The text overlay does not cover full ASS typesetting or bitmap subtitles; those depend on the libass/bitmap producer path."
+  ]
+}

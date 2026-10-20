@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-avsession-bridge",
+  "sources": [
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_avsession_bridge.cpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_avsession_bridge.cpp",
+      "sha256": "88b28f130df68e5370487aa8bfa19fad4ed8c5b12090043111fc61b5c896bcf5",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_avsession_bridge.hpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_avsession_bridge.hpp",
+      "sha256": "e2b8923211e1b8f458e321aece5b063e5e74ff72442d7dad87b7488188501993",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "harmony/patch-harmony-package.ps1",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/harmony/patch-harmony-package.ps1",
+      "sha256": "b53ef38ab96063dff1dff0117c39d822eea79c68ff06ddc5ce04ed3ddb36a54f",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "harmony/OHOS_PORTING_NOTES.md",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/harmony/OHOS_PORTING_NOTES.md",
+      "sha256": "75cb5d941a564501242db60c480195ea2a645efa601baf6adda87b0dd40b83b5",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-avsession-bridge",
+    "project": "vlc-qt6-ohos",
+    "repository": "https://github.com/Aloereed/vlc-qt6-ohos",
+    "commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+    "paths": [
+      "modules/gui/qt/components/ohos_avsession_bridge.cpp",
+      "modules/gui/qt/components/ohos_avsession_bridge.hpp",
+      "harmony/patch-harmony-package.ps1"
+    ],
+    "source_reported_validation": "The source creates and activates an audio session, registers command/seek callbacks with queued delivery to Qt, publishes metadata and state, and unregisters everything on teardown. The packaging script adds background audio and the matching permission; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the media-player source and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt OH QPA and the media player integration."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains, libass build and hardware video backend were not reproduced in this review.",
+    "AVSession callback behavior and background-audio policy are API/product dependent and were not independently verified."
+  ]
+}

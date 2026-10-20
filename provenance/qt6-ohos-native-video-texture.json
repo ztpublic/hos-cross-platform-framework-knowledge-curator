@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-native-video-texture",
+  "sources": [
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "sha256": "7d8d5b2a2c52055030c6c7524bf6d13f90ce702d455855e972955c1da3ba60a9",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/ohos_video_texture_widget.hpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/ohos_video_texture_widget.hpp",
+      "sha256": "7dff929301f02a5c1c100f373767fc6c2e967d9bf446a9a8c2444e7aa657dd5d",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "modules/gui/qt/components/interface_widgets.cpp",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/modules/gui/qt/components/interface_widgets.cpp",
+      "sha256": "5757454ee53bd6672804ddf070f1ddeb5b2807829763ea3a7dc24eb2276a686a",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "vlc-qt6-ohos",
+      "original_path": "harmony/OHOS_PORTING_NOTES.md",
+      "snapshot": "provenance/snapshots/projects/vlc-qt6-ohos/harmony/OHOS_PORTING_NOTES.md",
+      "sha256": "75cb5d941a564501242db60c480195ea2a645efa601baf6adda87b0dd40b83b5",
+      "revision": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "license": "GPL-2.0-or-later (repository COPYING is GPLv2; individual Qt module files carry GPL/LGPL headers).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-native-video-texture",
+    "project": "vlc-qt6-ohos",
+    "repository": "https://github.com/Aloereed/vlc-qt6-ohos",
+    "commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+    "paths": [
+      "modules/gui/qt/components/ohos_video_texture_widget.cpp",
+      "modules/gui/qt/components/ohos_video_texture_widget.hpp",
+      "modules/gui/qt/components/interface_widgets.cpp"
+    ],
+    "source_reported_validation": "The source creates an OH_NativeImage-backed external texture, sets buffer geometry before the first decoded buffer, and registers the native window with the media engine before playback. The porting notes report successful playback and resize behavior; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the media-player source and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt OH QPA and the media player integration."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains, libass build and hardware video backend were not reproduced in this review.",
+    "The warm-up restart is a source-reported workaround for a first-session color issue and is not a general color-management fix."
+  ]
+}
