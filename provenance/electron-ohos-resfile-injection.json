@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-resfile-injection",
+  "sources": [
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "cmd/bin.js",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/cmd/bin.js",
+      "sha256": "83dd49c1e207f4ee63b19db8f16a554490e6c291693424b29319785882288b9a",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/package.json",
+      "sha256": "dc9b923be1718c243526b5646f0e562cd3f1d6e0fe47cd7b99a46fb4f1109923",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/README.OpenHarmony_CN.md",
+      "sha256": "30d36f082e3a115d8dde5b2ab3105115d2525ab5819c88263d576895dddb623e",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/electron/src/main/module.json5",
+      "sha256": "5553a1869fd8bfdec97ada9e8a08fe6217c29d525c1bdeafe1554b64a98a2a22",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/AppScope/app.json5",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/AppScope/app.json5",
+      "sha256": "8bafd04468fd8b90ce74500032ff587b4d3ae89fdbabea1c68a90acc9c397997",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-resfile-injection",
+    "project": "electron-egg-ohos",
+    "repository": "https://gitcode.com/wallace5303/electron-egg-ohos",
+    "commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+    "paths": [
+      "cmd/bin.js",
+      "package.json",
+      "README.OpenHarmony_CN.md",
+      "ohos_hap/electron/src/main/module.json5"
+    ],
+    "source_reported_validation": "The repository declares an `ohos` resource map from the packaged app and extraResources into the HAP resfile tree, plus a test injection from `public`, and documents the frontend-before-injection order. Its T0 record reports a device launch; no build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the Electron framework adapter, HAP manifests and build configuration; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron HAP packaging and OH process model."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native engine libraries and the original build environment were not reproduced in this review.",
+    "The repository does not include the engine native libraries; they must be supplied from the framework engine and are not part of this evidence."
+  ]
+}

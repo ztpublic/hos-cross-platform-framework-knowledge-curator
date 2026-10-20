@@ -1,0 +1,63 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "electron-egg-ohos"
+  ],
+  "entries_before": 166,
+  "entries_after": 168,
+  "query_families": [
+    "Electron PC framework adapters and finished-HAP projects",
+    "Qt screen-capture and 2in1 registry candidates (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "wallace5303/electron-egg-ohos",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "ElectronEgg HAP with declarative resfile injection, thin entry/engine HAR split and process-isolated abilities."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_markdownify",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished MarkText HAP with a packaged Electron app under resfile; README reviewed, source packaging next."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app; the shallow clone did not complete, so it was not source-reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_KTouch",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6/QML typing application on GitCode; source qualification pending."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    }
+  ],
+  "added_entries": [
+    "electron-ohos-resfile-injection",
+    "electron-ohos-process-isolation"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is Apache-2.0; only generalized mechanisms were recorded and no source code was copied.",
+    "The engine native libraries are not in the repository, and the sample application is single-window/single-instance; multi-window and multi-instance remain configuration evidence.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run.",
+    "MarkText, ScreenCast, KTouch and the GitCode editor remain deferred."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 168 entries",
+    "kb.py check -> OK: 168 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for resfile injection and process isolation terms",
+    "git diff review before commit"
+  ]
+}

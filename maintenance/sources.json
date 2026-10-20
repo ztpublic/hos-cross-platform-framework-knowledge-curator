@@ -363,6 +363,37 @@
       "coverage": "Source-reviewed a Qt/ArkTS hybrid work-folder grant, embedded file dialogs and ArkTS chrome insets.",
       "source_reported_validation": "The README reports working file operations, embedded dialogs and 2in1 UI on API 26; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "electron-egg-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/wallace5303/electron-egg-ohos",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "analyzed_commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "license_notice": "maintenance/licenses/electron-egg-ohos-Apache-2.0.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/electron-egg-ohos",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "README.OpenHarmony_CN.md",
+        "cmd/bin.js",
+        "ohos_hap/AppScope/app.json5",
+        "ohos_hap/electron/src/main/ets/process/CustomChildProcess.ets",
+        "ohos_hap/electron/src/main/module.json5",
+        "ohos_hap/web_engine/src/main/ets/process/WebChildProcess.ets",
+        "package.json"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-resfile-injection",
+        "electron-ohos-process-isolation"
+      ],
+      "last_run": "2026-10-20-project-research-7.json",
+      "coverage": "Source-reviewed an ElectronEgg HAP resource-injection pipeline and multi-process ability split.",
+      "source_reported_validation": "The adaptation record reports T0/T1 device runs and classifies multi-window/multi-instance as untested T2; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

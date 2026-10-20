@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-process-isolation",
+  "sources": [
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/electron/src/main/module.json5",
+      "sha256": "5553a1869fd8bfdec97ada9e8a08fe6217c29d525c1bdeafe1554b64a98a2a22",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/electron/src/main/ets/process/CustomChildProcess.ets",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/electron/src/main/ets/process/CustomChildProcess.ets",
+      "sha256": "09517e85fcc0841202be39af7faaeb0f8b0f807232b690b23aa89fe1879e1c83",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/web_engine/src/main/ets/process/WebChildProcess.ets",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/web_engine/src/main/ets/process/WebChildProcess.ets",
+      "sha256": "3dfe624ec3736dd5663439f22031114a23a9b1c8f5f8b764404f7e521ccd6595",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/web_engine/childProcess.ets",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/web_engine/childProcess.ets",
+      "sha256": "3291e537d3c1a8161b5571a7a591131776ca9284de8e3eef2f94e27763499c4b",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "ohos_hap/AppScope/app.json5",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/ohos_hap/AppScope/app.json5",
+      "sha256": "8bafd04468fd8b90ce74500032ff587b4d3ae89fdbabea1c68a90acc9c397997",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "electron-egg-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/electron-egg-ohos/README.OpenHarmony_CN.md",
+      "sha256": "30d36f082e3a115d8dde5b2ab3105115d2525ab5819c88263d576895dddb623e",
+      "revision": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "license": "Apache-2.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-process-isolation",
+    "project": "electron-egg-ohos",
+    "repository": "https://gitcode.com/wallace5303/electron-egg-ohos",
+    "commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+    "paths": [
+      "ohos_hap/electron/src/main/module.json5",
+      "ohos_hap/electron/src/main/ets/process/CustomChildProcess.ets",
+      "ohos_hap/web_engine/src/main/ets/process/WebChildProcess.ets",
+      "ohos_hap/AppScope/app.json5",
+      "README.OpenHarmony_CN.md"
+    ],
+    "source_reported_validation": "The source declares browser/stateless abilities with `process: \":browser\"`, extends the engine child-process class, starts the render process through the native context, and configures multiInstance with maxCount 2. The README classifies multi-window and multi-instance as untested T2 capabilities; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the Electron framework adapter, HAP manifests and build configuration; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron HAP packaging and OH process model."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native engine libraries and the original build environment were not reproduced in this review.",
+    "The sample application is single-window/single-instance; the process declarations and multi-instance limit are configuration evidence, not a verified multi-window workflow."
+  ]
+}
