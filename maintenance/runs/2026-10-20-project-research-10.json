@@ -1,0 +1,63 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "harmonykmp"
+  ],
+  "entries_before": 174,
+  "entries_after": 176,
+  "query_families": [
+    "Kotlin Multiplatform/Compose OH PC applications",
+    "Qt screen-capture and host-only Qt ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "xiaqingpeng/HarmonyKMP",
+      "framework": "kotlin-multiplatform",
+      "disposition": "analyzed",
+      "reason": "Three-target Compose app with OH-specific Ktor/Coil/navigation artifacts, renderer selection and rawfile cinterop."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt desktop casting client for external OH devices, not an app adapted to run on OH PC; archive download also timed out."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_QElectroTech",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "ArkTS/Qt host with an external business library; the repository snapshot lacks the business .so and most runtime libs."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_markdownify",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished MarkText HAP; engine libraries are LFS pointers and the main process is minified."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    }
+  ],
+  "added_entries": [
+    "kmp-ohos-dependency-and-renderer",
+    "kmp-ohos-rawfile-resources"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project has no repository-level license; only generalized mechanisms were recorded and no source code was copied.",
+    "The OH-specific artifact versions and renderer identifiers are tied to one adapter generation.",
+    "ScreenCast was determined to be a desktop casting client rather than an OH PC app adaptation, and QElectroTech lacks the business library in its snapshot.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 176 entries",
+    "kb.py check -> OK: 176 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for Ktor/renderer and rawfile resource terms",
+    "git diff review before commit"
+  ]
+}

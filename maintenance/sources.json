@@ -486,6 +486,38 @@
       "coverage": "Source-reviewed a loopback static-server runtime and private-HNP packaging for a web IDE.",
       "source_reported_validation": "The build notes report a signed HAP and simulator verification; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "harmonykmp",
+      "kind": "project",
+      "url": "https://github.com/xiaqingpeng/HarmonyKMP",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "analyzed_commit": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "license": "No repository-level license found.",
+      "license_notice": "maintenance/licenses/harmonykmp-NOTICE.md",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/HarmonyKMP",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "composeApp/build.gradle.kts",
+        "composeApp/src/ohosMain/cinterop/resource.def",
+        "composeApp/src/ohosMain/kotlin/com/example/cmp_hello/Images.ohosArm64.kt",
+        "composeApp/src/ohosMain/kotlin/com/example/cmp_hello/MainArkUIViewController.kt",
+        "gradle/libs.versions.toml",
+        "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+        "harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+        "settings.gradle.kts"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-dependency-and-renderer",
+        "kmp-ohos-rawfile-resources"
+      ],
+      "last_run": "2026-10-20-project-research-10.json",
+      "coverage": "Source-reviewed OH-specific KMP artifact selection, Compose renderer choice and rawfile resource loading.",
+      "source_reported_validation": "The README reports Android/iOS/OH targets and the build configuration is present; no build or device run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

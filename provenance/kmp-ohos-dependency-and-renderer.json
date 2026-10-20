@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-dependency-and-renderer",
+  "sources": [
+    {
+      "collection": "harmonykmp",
+      "original_path": "composeApp/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/harmonykmp/composeApp/build.gradle.kts",
+      "sha256": "d494b7333ce4b8f568ad23c3a6fbcc23f45f9ac72a27cade0dacf30af24746cd",
+      "revision": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "harmonykmp",
+      "original_path": "gradle/libs.versions.toml",
+      "snapshot": "provenance/snapshots/projects/harmonykmp/gradle/libs.versions.toml",
+      "sha256": "d47aa8ee8b661f43a1cbdd12111f153e76546093b48f8e9bc69da28d7d298d62",
+      "revision": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "harmonykmp",
+      "original_path": "settings.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/harmonykmp/settings.gradle.kts",
+      "sha256": "280baa549c16357d23ea1a69908d70d41b7c231ae3795020e7823affeb7d634b",
+      "revision": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "kmp-ohos-dependency-and-renderer",
+    "project": "harmonykmp",
+    "repository": "https://github.com/xiaqingpeng/HarmonyKMP",
+    "commit": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+    "paths": [
+      "composeApp/build.gradle.kts",
+      "gradle/libs.versions.toml",
+      "settings.gradle.kts"
+    ],
+    "source_reported_validation": "The build pins OH-adapted Compose/Kotlin/kotlinx/Coil/navigation versions, selects the Ktor curl engine only in ohosArm64Main, and configures the Compose OH renderer explicitly. The README reports three-target support; no build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the Gradle configuration, cinterop and NAPI/Kotlin bridge; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the KMP adapter artifacts and the Kotlin/Native OH integration."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchain and private Maven repository were not reproduced in this review.",
+    "The exact artifact versions and renderer identifiers are tied to one adapter generation."
+  ]
+}
