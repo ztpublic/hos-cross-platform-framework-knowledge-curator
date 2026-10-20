@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-gl4es-draw-batching",
+  "sources": [
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/gl4es-81547d9/ohos-fpe-scratch-lifetime.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/gl4es-81547d9/ohos-fpe-scratch-lifetime.patch",
+      "sha256": "fcdd872c992c2f5a3925d58cbccb3fe0ef16b44a51002b53802474cd7f632da8",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/gl4es-81547d9/ohos-fpe-client-array-vbo.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/gl4es-81547d9/ohos-fpe-client-array-vbo.patch",
+      "sha256": "edfb97ae7df77dd7e17cd5f20711f88236273f0288d6dd2182b6f6184ea6277c",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/gl4es-81547d9/ohos-draw-batch-throttle.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/gl4es-81547d9/ohos-draw-batch-throttle.patch",
+      "sha256": "1abd0ababeca71333bffd535b6e7b7e169ad4719757b999de88cbacfb754c96b",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "docs/sketcher-rendering-debug-playbook.md",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/docs/sketcher-rendering-debug-playbook.md",
+      "sha256": "52cf04896a1005d36aa85fed93dae5ea06d479a1cc7fd2eca7b10f15286ffdcd",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-gl4es-draw-batching",
+    "project": "freecad-on-harmonyos",
+    "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+    "commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+    "paths": [
+      "patches/gl4es-81547d9/ohos-fpe-scratch-lifetime.patch",
+      "patches/gl4es-81547d9/ohos-fpe-client-array-vbo.patch",
+      "patches/gl4es-81547d9/ohos-draw-batch-throttle.patch",
+      "docs/sketcher-rendering-debug-playbook.md"
+    ],
+    "source_reported_validation": "The porting record reports device-lost/page-fault failures on a large model, and stability after scratch-lifetime tracking, client-array VBO upload and a four-draw non-blocking flush. No run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source patches, ETS implementation and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on Qt 6 QPA, GL translation or window-manager behavior."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and the original device were not reproduced in this review.",
+    "The four-draw threshold is empirical; a different GPU/driver may need a different value."
+  ]
+}

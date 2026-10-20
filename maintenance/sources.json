@@ -296,6 +296,44 @@
       "coverage": "Source-reviewed Qt 6 native video texture, subtitle overlay and AVSession integration.",
       "source_reported_validation": "The porting notes report hardware-texture playback, SRT/external/embedded ASS subtitles, AVSession controls and background audio on a 2in1 device; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "freecad-on-harmonyos",
+      "kind": "project",
+      "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "analyzed_commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/freecad-on-harmonyos",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "docs/gui-hap-integration.md",
+        "docs/sketcher-rendering-debug-playbook.md",
+        "entry/src/main/ets/pages/StartupSplash.ets",
+        "entry/src/main/ets/qability/QAbility.ets",
+        "entry/src/main/module.json5",
+        "entry/src/main/resources/base/profile/start_window.json",
+        "patches/gl4es-81547d9/ohos-draw-batch-throttle.patch",
+        "patches/gl4es-81547d9/ohos-external-context-state.patch",
+        "patches/gl4es-81547d9/ohos-fpe-client-array-vbo.patch",
+        "patches/gl4es-81547d9/ohos-fpe-scratch-lifetime.patch",
+        "patches/gl4es-81547d9/ohos-raster-blit-native-texture.patch",
+        "patches/qt-6.8-ohos/02-gl4es-external-context.patch",
+        "patches/qt-6.8-ohos/11-use-egl-proc-address-for-gl4es.patch"
+      ],
+      "knowledge_ids": [
+        "qt6-ohos-gl4es-context-state",
+        "qt6-ohos-gl4es-draw-batching",
+        "qt6-ohos-single-ability-splash"
+      ],
+      "last_run": "2026-10-20-project-research-5.json",
+      "coverage": "Source-reviewed Qt 6 GL translation state, draw batching and single-Ability splash startup.",
+      "source_reported_validation": "The porting notes report a working 3D GUI, Preferences, splash cold-start frames and large-model rotation on a 2in1 device; no run was rerun.",
+      "checked_at": "2026-10-20",
+      "license_notice": "maintenance/licenses/freecad-LGPL-2.1.txt"
     }
   ]
 }

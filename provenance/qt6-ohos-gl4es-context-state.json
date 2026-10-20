@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-gl4es-context-state",
+  "sources": [
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/gl4es-81547d9/ohos-external-context-state.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/gl4es-81547d9/ohos-external-context-state.patch",
+      "sha256": "0283fb95fac2a59073b8513482be8e613bd692fd097f9927ccb7b9f67f62621e",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/qt-6.8-ohos/02-gl4es-external-context.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/qt-6.8-ohos/02-gl4es-external-context.patch",
+      "sha256": "89b388658662de611049df9eff588f34650bfd18e2922e35316ae5554a5ec31b",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/qt-6.8-ohos/11-use-egl-proc-address-for-gl4es.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/qt-6.8-ohos/11-use-egl-proc-address-for-gl4es.patch",
+      "sha256": "38d24df4cdca2b51d96d1a5040f31d8b3e4689251e5eea58064f0a2693c779e1",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "patches/gl4es-81547d9/ohos-raster-blit-native-texture.patch",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/patches/gl4es-81547d9/ohos-raster-blit-native-texture.patch",
+      "sha256": "d96839a48534e5ff06c4661b9875441246a9c5cfca6c15aa547dad08c5c8d3cb",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "docs/sketcher-rendering-debug-playbook.md",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/docs/sketcher-rendering-debug-playbook.md",
+      "sha256": "52cf04896a1005d36aa85fed93dae5ea06d479a1cc7fd2eca7b10f15286ffdcd",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "docs/gui-hap-integration.md",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/docs/gui-hap-integration.md",
+      "sha256": "33420c6e7347a14180c8ab0eed4baa06b33ac4a8812faeb0b26b87ec0bd3d49b",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "entry/src/main/ets/qability/QAbility.ets",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/entry/src/main/ets/qability/QAbility.ets",
+      "sha256": "273d9d7d647674ce8ce45abe30e9377b15eb26fd23c492a85cd6567ba7060ca3",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-gl4es-context-state",
+    "project": "freecad-on-harmonyos",
+    "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+    "commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+    "paths": [
+      "patches/gl4es-81547d9/ohos-external-context-state.patch",
+      "patches/qt-6.8-ohos/02-gl4es-external-context.patch",
+      "patches/qt-6.8-ohos/11-use-egl-proc-address-for-gl4es.patch",
+      "patches/gl4es-81547d9/ohos-raster-blit-native-texture.patch",
+      "docs/sketcher-rendering-debug-playbook.md",
+      "docs/gui-hap-integration.md"
+    ],
+    "source_reported_validation": "The porting notes and patches document a white 3D viewport and first-solid crash caused by Qt and the translation layer drifting apart, and report them fixed by context-state mapping, capability resync and cache invalidation. No run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source patches, ETS implementation and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on Qt 6 QPA, GL translation or window-manager behavior."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and the original device were not reproduced in this review.",
+    "The patches depend on private translation-layer state and Qt QPA internals; both must be revalidated when either version changes."
+  ]
+}

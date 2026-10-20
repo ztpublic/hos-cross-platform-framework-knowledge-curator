@@ -1,0 +1,129 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntry": "./ets/qabilitystage/QAbilityStage.ets",
+    "description": "$string:module_desc",
+    "mainElement": "QAbility",
+    // AppGallery refuses a package whose declared device range is narrower
+    // than the range ticked in AGC ("上传的软件包与声明支持设备不一致"), while
+    // declaring a wider range is allowed. This port ships to HarmonyOS PC
+    // only, and Huawei's 2in1 token is what a MateBook reports, so a single
+    // entry is enough. Do NOT write "pc": the schema only accepts
+    // default/tablet/tv/wearable/car/2in1 and rejects it with 00303038.
+    "deviceTypes": [
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+
+    // The FreeCAD AI workbench (Mod/freecad-ai) talks to LLM providers over
+    // HTTP from inside the embedded CPython runtime. Without this the socket
+    // layer is denied at bind/connect time and every request fails with a bare
+    // EPERM, which is hard to tell apart from an unreachable endpoint.
+    // INTERNET is a system_grant permission: declaring it is enough, there is
+    // no runtime prompt.
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:reason_internet",
+        "usedScene": {
+          "abilities": [
+            "QAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      // Qt draws its own text widgets, so FreeCAD reads the pasteboard through
+      // the native pasteboard API instead of the system paste widget. That is
+      // exactly the "app built on an open source framework that cannot use the
+      // paste widget" case for which Huawei allows this permission on PC/2in1.
+      // It is system_basic + user_grant: the signing Profile must carry it in
+      // acls.allowed-acls (requested in AGC), otherwise installing this HAP
+      // fails with 9568289 ("grant request permissions failed"); QAbility also
+      // asks the user at startup. Only declare it once the Profile has it.
+      {
+        "name": "ohos.permission.READ_PASTEBOARD",
+        "reason": "$string:reason_read_pasteboard",
+        "usedScene": {
+          "abilities": [
+            "QAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ],
+
+    "abilities": [
+      // Headless bridge: runs a FlexiMind geometry job when the Want carries
+      // freecadJobJson, and the six device-side acceptance checks otherwise. It is
+      // declared here because this file is the dev-complete manifest, but
+      // entry/hvigorfile.ts DROPS it during the build unless PACKAGE_FLEXIMIND=ON.
+      // Reason: it is exported, so any app could start it and feed it parameters, while
+      // neither the FlexiMind payload nor rawfile/freecad_headless_acceptance.py ships in
+      // the outward-facing package. Keep both sides in sync when editing this block --
+      // see docs/appgallery-release.md「FlexiMind 面的清除」.
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "launchType": "singleton",
+        "description": "$string:module_desc",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true
+      },
+      {
+        "name": "QAbility",
+        "srcEntry": "./ets/qability/QAbility.ets",
+        "launchType": "specified",
+        "description": "$string:QAbility_desc",
+        // Layered icon (foreground + background), as required by Huawei's
+        // "通用应用 UX 体验标准" 2.1.4.3.1 for PC/2in1 as well. The system
+        // masks the corners; startWindowIcon keeps the flat $media:icon.
+        "icon": "$media:layered_image",
+        "label": "$string:app_name",
+        "startWindow": "$profile:start_window",
+        "startWindowIcon": "$media:transparent_start_window",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "isolationProcess": false,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home",
+              "ohos.want.action.sendData"
+            ],
+            "uris": [
+              {
+                "scheme": "file",
+                "utd": "general.text",
+                "maxFileSupported": 10
+              },
+              {
+                "scheme": "file",
+                "utd": "general.png",
+                "maxFileSupported": 10
+              },
+              {
+                "scheme": "file",
+                "utd": "general.jpeg",
+                "maxFileSupported": 10
+              }
+            ]
+          }
+        ],
+        "metadata": [
+          {
+            "name": "enable.remove.starting.window",
+            "value": "true"
+          }
+        ],
+        "continuable": true
+      }
+    ]
+  }
+}

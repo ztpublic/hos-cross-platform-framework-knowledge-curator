@@ -1,0 +1,69 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "freecad-on-harmonyos"
+  ],
+  "entries_before": 160,
+  "entries_after": 163,
+  "query_families": [
+    "Qt 6 3D/GL translation-layer PC ports",
+    "Qt 6 scientific and window/tray PC samples (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "liang-xiaohui/freecad-on-harmonyos",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt 6 FreeCAD port with gl4es context/cache fixes, large-scene batching and a single-Ability splash sequence."
+    },
+    {
+      "project": "forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 scientific port cloned; README reviewed, source analysis still pending."
+    },
+    {
+      "project": "wallace5303/electron-egg-ohos",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "GitCode ElectronEgg PC adaptation; source qualification pending."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app; capture and permission mechanisms may be valuable."
+    },
+    {
+      "project": "scenario-samples/qt-custom-title-bar",
+      "framework": "qt",
+      "disposition": "screened",
+      "reason": "Custom title-bar sample; core is generic window flags and overlaps existing window entries."
+    },
+    {
+      "project": "scenario-samples/qt-tray-minimize",
+      "framework": "qt",
+      "disposition": "screened",
+      "reason": "Close-to-tray sample; behavior overlaps existing tray and close-event entries."
+    }
+  ],
+  "added_entries": [
+    "qt6-ohos-gl4es-context-state",
+    "qt6-ohos-gl4es-draw-batching",
+    "qt6-ohos-single-ability-splash"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is LGPL-2.1; only generalized mechanisms were recorded and no source code was copied.",
+    "The GL4ES patches and splash sequence depend on private Qt QPA and device/window-manager behavior; no build or device run was performed.",
+    "SciDAVis, ElectronEgg and ScreenCast were screened but not analyzed in this batch."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 163 entries",
+    "kb.py check -> OK: 163 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for GL state, device-lost and splash terms",
+    "git diff review before commit"
+  ]
+}

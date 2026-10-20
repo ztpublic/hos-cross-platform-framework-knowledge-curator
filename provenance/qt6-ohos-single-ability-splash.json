@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-single-ability-splash",
+  "sources": [
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "entry/src/main/ets/qability/QAbility.ets",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/entry/src/main/ets/qability/QAbility.ets",
+      "sha256": "273d9d7d647674ce8ce45abe30e9377b15eb26fd23c492a85cd6567ba7060ca3",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "entry/src/main/ets/pages/StartupSplash.ets",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/entry/src/main/ets/pages/StartupSplash.ets",
+      "sha256": "b1fb2b527cbb4c84efd6355cd9c0f1a9410411e82296481a8c426e1f72860e3b",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "entry/src/main/resources/base/profile/start_window.json",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/entry/src/main/resources/base/profile/start_window.json",
+      "sha256": "959a0c151a75feadce99d653a7930c4e1d0c5c2b61bae4243e86234170ebcc77",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/entry/src/main/module.json5",
+      "sha256": "8477d5d7bcacbae4b95c35c48a962b2e1ca886f1b4392942ea41701f672dace5",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "freecad-on-harmonyos",
+      "original_path": "docs/gui-hap-integration.md",
+      "snapshot": "provenance/snapshots/projects/freecad-on-harmonyos/docs/gui-hap-integration.md",
+      "sha256": "33420c6e7347a14180c8ab0eed4baa06b33ac4a8812faeb0b26b87ec0bd3d49b",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-single-ability-splash",
+    "project": "freecad-on-harmonyos",
+    "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+    "commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+    "paths": [
+      "entry/src/main/ets/qability/QAbility.ets",
+      "entry/src/main/ets/pages/StartupSplash.ets",
+      "entry/src/main/resources/base/profile/start_window.json",
+      "entry/src/main/module.json5",
+      "docs/gui-hap-integration.md"
+    ],
+    "source_reported_validation": "The source implements the hidden system starting window, a decor-free subwindow splash, exact host/splash geometry, transparent background after show, off-screen XComponent, and a GUI-ready reveal sequence. The porting record reports cold-start frame verification; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source patches, ETS implementation and porting record; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on Qt 6 QPA, GL translation or window-manager behavior."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and the original device were not reproduced in this review.",
+    "The startup sequence depends on device-specific window-manager behavior and was verified on one 2in1 device."
+  ]
+}
