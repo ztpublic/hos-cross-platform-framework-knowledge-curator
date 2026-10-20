@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-older-runtime-shims",
+  "sources": [
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/src/main/clipboard-compat.js",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/src/main/clipboard-compat.js",
+      "sha256": "3690fe0a6bfa43fd170cbbe436ea1a9c9e4cd87657bcf7c294c9f732cb71018e",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/src/main/ohos-fonts.js",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/src/main/ohos-fonts.js",
+      "sha256": "7432cb54d71ac9f364b2cba25170a8199242d5e8987b1a219095bc6bd578fe0b",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/src/main/electron.js",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/src/main/electron.js",
+      "sha256": "a2bfb57bd0702829a2f0d512c2965b4821176e0b26b0a4b4e1b6d46b6964ce5a",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/vendor/electron-context-menu/HARMONY_PATCH.md",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/vendor/electron-context-menu/HARMONY_PATCH.md",
+      "sha256": "6b77f563d6c094bfde20b59cf3e84f88f8cab777a71b79cf038485648ad0633b",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "ADAPTATION.md",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/ADAPTATION.md",
+      "sha256": "338dfac12a5de7a763fb70082ec9aabafde57a51b38ef25a5fcdfc82fe777c0f",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "FEASIBILITY.md",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/FEASIBILITY.md",
+      "sha256": "9c0492dd2682640b70abcba3a748eae0ab2d4c9233b2f87bb03df9c3184c2425",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-older-runtime-shims",
+    "project": "drawio-in-harmony",
+    "repository": "https://github.com/Red-Sa1t/drawio-in-harmony",
+    "commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+    "paths": [
+      "application/src/main/clipboard-compat.js",
+      "application/src/main/ohos-fonts.js",
+      "application/src/main/electron.js",
+      "application/vendor/electron-context-menu/HARMONY_PATCH.md"
+    ],
+    "source_reported_validation": "The source selects ClipboardItem or clipboard.write({image, html}) by runtime capability, parses system sfnt font names instead of fc-list, vendors a context-menu patch, and documents the single-instance/updater gaps. No device run was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the runtime source, manifests and adaptation notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime, host contract or HAP packaging."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and original build environments were not reproduced in this review.",
+    "The observed API gaps are tied to one OH Electron 37-class runtime; re-derive the matrix for another runtime build."
+  ]
+}

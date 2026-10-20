@@ -1,0 +1,72 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "drawio-in-harmony",
+    "ohos-jupyter"
+  ],
+  "entries_before": 170,
+  "entries_after": 174,
+  "query_families": [
+    "Electron PC ports with runtime-version gaps and host integration",
+    "Electron web-IDE ports with local servers and native HNP packages"
+  ],
+  "candidates_screened": [
+    {
+      "project": "Red-Sa1t/drawio-in-harmony",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "draw.io Desktop port with Electron 37/44 clipboard shims, context-menu patch, status-bar/host contract, open-url routing and font enumeration."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_jupyter",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "JupyterLab port with a loopback static server, in-browser Python, external/device modes and a private Python HNP."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app; the clone did not complete."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_markdownify",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished MarkText HAP; engine libraries are LFS pointers and the main process is minified."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    },
+    {
+      "project": "wandcs/leantty",
+      "framework": null,
+      "disposition": "deferred",
+      "reason": "Keyboard-first SSH terminal; not a Flutter/Qt/Electron/RN/KMP framework port."
+    }
+  ],
+  "added_entries": [
+    "electron-ohos-older-runtime-shims",
+    "electron-ohos-statusbar-openurl",
+    "electron-ohos-local-static-server",
+    "electron-ohos-private-hnp"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "draw.io is GPL-3.0 and ohos_jupyter has no repository-level license; only generalized mechanisms were recorded and no source code was copied.",
+    "The JupyterLab GitCode checkout was incomplete; evidence was read from HEAD blobs.",
+    "The local REST surface is a compatibility shim and the device-Python mode was not exercised.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 174 entries",
+    "kb.py check -> OK: 174 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for runtime shim, status bar, local server and HNP terms",
+    "git diff review before commit"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "module": {
+    "name": "electron",
+    "type": "entry",
+    "srcEntry": "./ets/Application/AbilityStage.ets",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "2in1",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "hnpPackages": [
+      {
+        "package": "jupyterlab_python.hnp",
+        "type": "private"
+      }
+    ],
+    "pages": "$profile:main_pages",
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:app_icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "launchType": "specified",
+        "supportWindowMode": [
+          "floating",
+          "split",
+          "fullscreen"
+        ],
+        "removeMissionAfterTerminate": true,
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home",
+              "entity.system.browsable"
+            ],
+            "actions": [
+              "action.system.home",
+              "ohos.want.action.viewData"
+            ],
+            "uris": []
+          }
+        ],
+        "metadata": [
+          {
+            "name": "ohos.ability.shortcuts",
+            "resource": "$profile:shortcuts_config"
+          }
+        ]
+      },
+      {
+        "name": "BrowserAbility",
+        "srcEntry": "./ets/entryability/BrowserAbility.ets",
+        "description": "$string:BrowserAbility_desc",
+        "startWindowIcon": "$media:app_icon",
+        "startWindowBackground": "$color:start_window_background",
+        "supportWindowMode": [
+          "floating",
+          "split",
+          "fullscreen"
+        ],
+        "removeMissionAfterTerminate": true,
+        "exported": false,
+        "skills": [
+          {
+            "actions": [
+              "ohos.want.action.viewData"
+            ],
+            "uris": []
+          }
+        ],
+        "process": ":browser"
+      },
+      {
+        "name": "StatelessAbility",
+        "srcEntry": "./ets/entryability/StatelessAbility.ets",
+        "description": "$string:StatelessAbility_desc",
+        "label": "$string:StatelessAbility_label",
+        "startWindowIcon": "$media:app_icon",
+        "startWindowBackground": "$color:start_window_background",
+        "launchType": "specified",
+        "supportWindowMode": [
+          "floating",
+          "split",
+          "fullscreen"
+        ],
+        "removeMissionAfterTerminate": true,
+        "exported": true,
+        "process": ":browser"
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "BrowserEmbeddedAbility",
+        "srcEntry": "./ets/extensionAbility/BrowserEmbeddedAbility.ets",
+        "type": "embeddedUI",
+        "exported": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-private-hnp",
+  "sources": [
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/electron/src/main/module.json5",
+      "sha256": "ddabf1fe370a0570dbdbf9eacb4fb0b9fb20c5578fcd1c6b8c4cabe1ea62cc87",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/README.OpenHarmony_CN.md",
+      "sha256": "a7e975b4720f861e791d0270f385f7fa308778610a56882bd16217ff57e1301a",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/README.md",
+      "sha256": "b2fea3fc370e018aeb92940869d920cb9825300434cb7393ed8c0292c2babd34",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-private-hnp",
+    "project": "ohos-jupyter",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+    "commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+    "paths": [
+      "electron/src/main/module.json5",
+      "README.OpenHarmony_CN.md"
+    ],
+    "source_reported_validation": "The entry module declares `jupyterlab_python.hnp` as a private HNP and the build notes document the public-HNP install conflict with the sibling app. No install was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the runtime source, manifests and adaptation notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime, host contract or HAP packaging."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and original build environments were not reproduced in this review.",
+    "Private HNP behavior was not independently verified; the evidence is manifest and build documentation."
+  ]
+}

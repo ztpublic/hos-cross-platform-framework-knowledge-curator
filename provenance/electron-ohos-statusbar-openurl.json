@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-statusbar-openurl",
+  "sources": [
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/src/main/harmony-runtime.js",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/src/main/harmony-runtime.js",
+      "sha256": "44b0b1deaa3e3b2ad94e94eba2b0304e8eed087497a048893b4fb4e0924ed864",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "ADAPTATION.md",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/ADAPTATION.md",
+      "sha256": "338dfac12a5de7a763fb70082ec9aabafde57a51b38ef25a5fcdfc82fe777c0f",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "application/src/main/electron.js",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/application/src/main/electron.js",
+      "sha256": "a2bfb57bd0702829a2f0d512c2965b4821176e0b26b0a4b4e1b6d46b6964ce5a",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-statusbar-openurl",
+    "project": "drawio-in-harmony",
+    "repository": "https://github.com/Red-Sa1t/drawio-in-harmony",
+    "commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+    "paths": [
+      "application/src/main/harmony-runtime.js",
+      "ADAPTATION.md"
+    ],
+    "source_reported_validation": "The source creates the status-bar Tray before secondary-ability attach, restores a live window on click, destroys it on quit, and converts open-url file URIs into a second-instance event. No device run was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the runtime source, manifests and adaptation notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime, host contract or HAP packaging."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and original build environments were not reproduced in this review.",
+    "The host-side ATTACH_TO_STATUS_BAR_ITEM behavior and file-open routing were not independently exercised."
+  ]
+}

@@ -426,6 +426,66 @@
       "coverage": "Source-reviewed QML module bundling and a KF6 compatibility shim layer for a Qt/KDE PC port.",
       "source_reported_validation": "The port notes report a device-tested core typing flow and a 36M HAP; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "drawio-in-harmony",
+      "kind": "project",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "analyzed_commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "license_notice": "maintenance/licenses/drawio-in-harmony-GPL-3.0.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/drawio-in-harmony",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "ADAPTATION.md",
+        "application/src/main/clipboard-compat.js",
+        "application/src/main/electron.js",
+        "application/src/main/harmony-runtime.js",
+        "application/src/main/ohos-fonts.js",
+        "application/vendor/electron-context-menu/HARMONY_PATCH.md"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-older-runtime-shims",
+        "electron-ohos-statusbar-openurl"
+      ],
+      "last_run": "2026-10-20-project-research-9.json",
+      "coverage": "Source-reviewed an Electron version-gap shim layer and status-bar/open-url host integration.",
+      "source_reported_validation": "The adaptation notes report targeted unit tests and a validated host; no device run was rerun.",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "id": "ohos-jupyter",
+      "kind": "project",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "analyzed_commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "license_notice": "maintenance/licenses/ohos-jupyter-NOTICE.md",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ohos_jupyter",
+      "working_tree_status": "GitCode checkout incomplete (mass deletions); evidence read from HEAD blobs.",
+      "reviewed_paths": [
+        "README.OpenHarmony_CN.md",
+        "electron/src/main/module.json5",
+        "electron/src/main/resources/resfile/resources/app/src/js/jupyterlab.js",
+        "electron/src/main/resources/resfile/resources/app/src/js/platform.js",
+        "electron/src/main/resources/resfile/resources/app/src/js/serverConfig.js",
+        "electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-local-static-server",
+        "electron-ohos-private-hnp"
+      ],
+      "last_run": "2026-10-20-project-research-9.json",
+      "coverage": "Source-reviewed a loopback static-server runtime and private-HNP packaging for a web IDE.",
+      "source_reported_validation": "The build notes report a signed HAP and simulator verification; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-local-static-server",
+  "sources": [
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js",
+      "sha256": "cc6325254ffefa7d5c1a7cee9b2e623920f7840f5ff1cd2a625b9637570520af",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "electron/src/main/resources/resfile/resources/app/src/js/jupyterlab.js",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/electron/src/main/resources/resfile/resources/app/src/js/jupyterlab.js",
+      "sha256": "ba74bf3d2362bb868a868d48ea1315a299033752e417d223128d0a0aa1720588",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "electron/src/main/resources/resfile/resources/app/src/js/platform.js",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/electron/src/main/resources/resfile/resources/app/src/js/platform.js",
+      "sha256": "08e6b63f9c985f1be5f6065499fc94504016258bbc49291c5e1ae4042eb95fd0",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "electron/src/main/resources/resfile/resources/app/src/js/serverConfig.js",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/electron/src/main/resources/resfile/resources/app/src/js/serverConfig.js",
+      "sha256": "b752a158d9853b992710a56df64f2757a032afaffea4a2e36c517be7730c532f",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-jupyter",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/ohos-jupyter/README.OpenHarmony_CN.md",
+      "sha256": "a7e975b4720f861e791d0270f385f7fa308778610a56882bd16217ff57e1301a",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-local-static-server",
+    "project": "ohos-jupyter",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+    "commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+    "paths": [
+      "electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js",
+      "electron/src/main/resources/resfile/resources/app/src/js/jupyterlab.js",
+      "electron/src/main/resources/resfile/resources/app/src/js/platform.js",
+      "electron/src/main/resources/resfile/resources/app/src/js/serverConfig.js"
+    ],
+    "source_reported_validation": "The runtime starts a loopback static server with a minimal Jupyter-compatible REST surface and in-browser Python execution, with external-server and device-Python modes. The build notes report a signed HAP and simulator verification; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the runtime source, manifests and adaptation notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime, host contract or HAP packaging."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and original build environments were not reproduced in this review.",
+    "The frontend/REST compatibility is implementation-specific and the device-Python mode was not exercised."
+  ]
+}
