@@ -334,6 +334,35 @@
       "source_reported_validation": "The porting notes report a working 3D GUI, Preferences, splash cold-start frames and large-model rotation on a 2in1 device; no run was rerun.",
       "checked_at": "2026-10-20",
       "license_notice": "maintenance/licenses/freecad-LGPL-2.1.txt"
+    },
+    {
+      "id": "scidavis-for-harmonyos",
+      "kind": "project",
+      "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "analyzed_commit": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "license_notice": "maintenance/licenses/scidavis-GPL-2.0.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/SciDAVis-for-HarmonyOS",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "entry/src/main/ets/components/ToolBar.ets",
+        "entry/src/main/ets/pages/MainLayout.ets",
+        "tools/qt_src_staging/main.cpp",
+        "tools/qt_src_staging/ohos_bridge.cpp"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-work-folder-grant",
+        "qt-ohos-embedded-file-dialogs",
+        "qt-ohos-arkts-chrome-insets"
+      ],
+      "last_run": "2026-10-20-project-research-6.json",
+      "coverage": "Source-reviewed a Qt/ArkTS hybrid work-folder grant, embedded file dialogs and ArkTS chrome insets.",
+      "source_reported_validation": "The README reports working file operations, embedded dialogs and 2in1 UI on API 26; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

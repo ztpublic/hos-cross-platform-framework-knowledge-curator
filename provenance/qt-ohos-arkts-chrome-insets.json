@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-arkts-chrome-insets",
+  "sources": [
+    {
+      "collection": "scidavis-for-harmonyos",
+      "original_path": "entry/src/main/ets/pages/MainLayout.ets",
+      "snapshot": "provenance/snapshots/projects/scidavis-for-harmonyos/entry/src/main/ets/pages/MainLayout.ets",
+      "sha256": "69ea06df8bc36d813c67fd31b3735cbaec3a7b65696325a21713baa353e460d7",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "scidavis-for-harmonyos",
+      "original_path": "entry/src/main/ets/components/ToolBar.ets",
+      "snapshot": "provenance/snapshots/projects/scidavis-for-harmonyos/entry/src/main/ets/components/ToolBar.ets",
+      "sha256": "e6fa93a50d3ff9c232e19d76a4751491d3940d016d27accd5df9aa4f8824228b",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "scidavis-for-harmonyos",
+      "original_path": "tools/qt_src_staging/ohos_bridge.cpp",
+      "snapshot": "provenance/snapshots/projects/scidavis-for-harmonyos/tools/qt_src_staging/ohos_bridge.cpp",
+      "sha256": "910bac78bad4a60e6c56429b2ebdfddf1644a45f0cc8df3c30d1d3cc5167c71b",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "scidavis-for-harmonyos",
+      "original_path": "tools/qt_src_staging/main.cpp",
+      "snapshot": "provenance/snapshots/projects/scidavis-for-harmonyos/tools/qt_src_staging/main.cpp",
+      "sha256": "a90ef67425e9039f95a527324b641b78ea9129868d1bcf0102413fbff0d07170",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-arkts-chrome-insets",
+    "project": "scidavis-for-harmonyos",
+    "repository": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS",
+    "commit": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+    "paths": [
+      "entry/src/main/ets/pages/MainLayout.ets",
+      "entry/src/main/ets/components/ToolBar.ets",
+      "tools/qt_src_staging/ohos_bridge.cpp",
+      "tools/qt_src_staging/main.cpp"
+    ],
+    "source_reported_validation": "The source measures dynamic ArkTS chrome, pushes physical-pixel top/bottom insets and an explicit menu limit to Qt, insets the whole QMainWindow, and documents not forwarding chrome-band touches. No run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the ArkTS shell, Qt bridge and dialog interposition code; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt/ArkTS integration and OH file-grant behavior."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and the original device were not reproduced in this review.",
+    "The layout depends on the specific ArkTS chrome composition and single-XComponent QPA; toolbar heights and device decor vary."
+  ]
+}

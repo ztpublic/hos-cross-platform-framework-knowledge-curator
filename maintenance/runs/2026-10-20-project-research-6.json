@@ -1,0 +1,57 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "scidavis-for-harmonyos"
+  ],
+  "entries_before": 163,
+  "entries_after": 166,
+  "query_families": [
+    "Qt 6 hybrid ArkTS/Qt PC applications",
+    "Qt PC file access and chrome integration"
+  ],
+  "candidates_screened": [
+    {
+      "project": "forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt/ArkTS hybrid on API 26 with a persistent work-folder grant, embedded QFileDialog interposition and measured ArkTS chrome insets."
+    },
+    {
+      "project": "wallace5303/electron-egg-ohos",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "GitCode ElectronEgg PC adaptation; source qualification pending."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app; capture and permission mechanisms may be valuable."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    }
+  ],
+  "added_entries": [
+    "qt-ohos-work-folder-grant",
+    "qt-ohos-embedded-file-dialogs",
+    "qt-ohos-arkts-chrome-insets"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is GPL-2.0-or-later; only generalized mechanisms were recorded and no source code was copied.",
+    "The file-grant and chrome behavior target API 26 and a single-XComponent QPA; no build or device run was performed.",
+    "ElectronEgg, ScreenCast and the GitCode editor remain deferred."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 166 entries",
+    "kb.py check -> OK: 166 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for work-folder, embedded-dialog and chrome-inset terms",
+    "git diff review before commit"
+  ]
+}
