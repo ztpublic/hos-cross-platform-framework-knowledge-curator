@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-non-pty-exec",
+  "sources": [
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "plugins/harmony-plugin-exec/lib/session.js",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/plugins/harmony-plugin-exec/lib/session.js",
+      "sha256": "a0ed26f98eb21aa6e2358a51d35efe3cb95d6e919485f4e573bba085c61c0972",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "plugins/harmony-plugin-exec/lib/protocol.js",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/plugins/harmony-plugin-exec/lib/protocol.js",
+      "sha256": "96b989baf0e45668717a790088bd70bc74148d40b35190a8658b26013037dc85",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "specs/010-tool-bash/spec.md",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/specs/010-tool-bash/spec.md",
+      "sha256": "3ec153d0590d23d1384bdc2a5e2d7734bbde2a7e8188f830fc2f947a2e8e988e",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-non-pty-exec",
+    "project": "dsh-desktop-hos",
+    "repository": "https://github.com/fellow99/dsh-desktop-hos",
+    "commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+    "paths": [
+      "plugins/harmony-plugin-exec/lib/session.js",
+      "plugins/harmony-plugin-exec/lib/protocol.js",
+      "specs/010-tool-bash/spec.md"
+    ],
+    "source_reported_validation": "The project reports device measurements that PTY allocation was denied, child exit/close events did not fire, and non-PTY fork/exec with pipes worked, including a sentinel-framed resident shell. These measurements were not rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting notes and build scripts; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime or the Qt for OpenHarmony toolchain."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and the original build environment were not reproduced in this review.",
+    "The reviewed implementation is an application-level command tool, not a general PTY or job-control replacement."
+  ]
+}

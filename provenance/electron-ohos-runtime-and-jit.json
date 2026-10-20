@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-runtime-and-jit",
+  "sources": [
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/electron/src/main/module.json5",
+      "sha256": "c1559d6522fc998b800e98732a153f7e4e1511cd5dd7879940ae07b02bd0f980",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "web_engine/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/web_engine/src/main/module.json5",
+      "sha256": "001759ebd748ca14baa00df286d4f6f48762f1636634571fa34b52e6ccb845c8",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "docs/ACL申请清单-v2.md",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/docs/ACL申请清单-v2.md",
+      "sha256": "a6e22e1bdbac4079056d906af0022b26ec7deb0735d5315c17df6c6f4d41bdce",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "scripts/collect-runtime.mjs",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/scripts/collect-runtime.mjs",
+      "sha256": "fa4092f05620d41c3a81db09701f811ed7bed66368d2285ab029c6ce88e1ff59",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-runtime-and-jit",
+    "project": "dsh-desktop-hos",
+    "repository": "https://github.com/fellow99/dsh-desktop-hos",
+    "commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+    "paths": [
+      "electron/src/main/module.json5",
+      "web_engine/src/main/module.json5",
+      "docs/ACL申请清单-v2.md",
+      "scripts/collect-runtime.mjs"
+    ],
+    "source_reported_validation": "Project documentation reports device measurements on HarmonyOS 6.1.0.135 (API 24): Electron startup, a JIT-enabled runtime, native-addon loading and non-PTY command execution. These measurements were not rerun for this database."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting notes and build scripts; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime or the Qt for OpenHarmony toolchain."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and the original build environment were not reproduced in this review.",
+    "The runtime binaries and the OH Electron SDK were not available in the reviewed checkout; runtime packaging and JIT behavior remain source-reviewed only."
+  ]
+}

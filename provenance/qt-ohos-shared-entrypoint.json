@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-shared-entrypoint",
+  "sources": [
+    {
+      "collection": "klayout-on-harmony-pc",
+      "original_path": "ohos-app/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/klayout-on-harmony-pc/ohos-app/entry/src/main/module.json5",
+      "sha256": "41e3d5688274196bebc70b2bb4793fc7298887bf885c70209334a78da90b5779",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "license": "GPL-3.0",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "klayout-on-harmony-pc",
+      "original_path": "docs/PORTING-NOTES.md",
+      "snapshot": "provenance/snapshots/projects/klayout-on-harmony-pc/docs/PORTING-NOTES.md",
+      "sha256": "acb95c36347612e6efbae055d0d594838bcfd4a4390a4d85e071687ab5620e0a",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "license": "GPL-3.0",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "klayout-on-harmony-pc",
+      "original_path": "patches/klayout-0.30.10-ohos.patch",
+      "snapshot": "provenance/snapshots/projects/klayout-on-harmony-pc/patches/klayout-0.30.10-ohos.patch",
+      "sha256": "49b8c6c67fd4a5d7c2d04f38a21708a999212dbdb812e9427e669a5b52cf8a56",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "license": "GPL-3.0",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "klayout-on-harmony-pc",
+      "original_path": "docs/VERIFICATION.md",
+      "snapshot": "provenance/snapshots/projects/klayout-on-harmony-pc/docs/VERIFICATION.md",
+      "sha256": "d30290f8a1647ef82fec536ce61909bdd16dc9cfcea196f14a0d25c395dc3620",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "license": "GPL-3.0",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-shared-entrypoint",
+    "project": "klayout-on-harmony-pc",
+    "repository": "https://github.com/yangy79/KLayout-on-Harmony-PC",
+    "commit": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+    "paths": [
+      "ohos-app/entry/src/main/module.json5",
+      "docs/PORTING-NOTES.md",
+      "patches/klayout-0.30.10-ohos.patch",
+      "docs/VERIFICATION.md"
+    ],
+    "source_reported_validation": "The porting notes and verification record report a release HAP launching on a 2in1 device with a successful library open and dlsym(\"main\") call. These results were not rerun for this database."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting notes and build scripts; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime or the Qt for OpenHarmony toolchain."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and the original build environment were not reproduced in this review.",
+    "The Qt private startup behavior and flags are version-specific."
+  ]
+}

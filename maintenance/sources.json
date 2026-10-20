@@ -45,6 +45,71 @@
         "identity": "per-file hashes, including local modifications",
         "reviewed_on": "2026-10-20"
       }
+    },
+    {
+      "id": "dsh-desktop-hos",
+      "kind": "project",
+      "url": "https://github.com/fellow99/dsh-desktop-hos",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "analyzed_commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/dsh-desktop-hos",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "docs/ACL申请清单-v2.md",
+        "electron/src/main/module.json5",
+        "plugins/harmony-plugin-exec/lib/protocol.js",
+        "plugins/harmony-plugin-exec/lib/session.js",
+        "scripts/collect-dsh.mjs",
+        "scripts/collect-runtime.mjs",
+        "scripts/lib/sharp-stub-body.js",
+        "specs/005-build-pipeline/spec.md",
+        "specs/010-tool-bash/spec.md",
+        "web_engine/src/main/module.json5"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-runtime-and-jit",
+        "electron-ohos-native-addon-abi",
+        "electron-ohos-non-pty-exec"
+      ],
+      "last_run": "2026-10-20-project-research-1.json",
+      "coverage": "Source-reviewed Electron runtime/JIT, native-addon ABI and non-PTY command execution.",
+      "source_reported_validation": "Device measurements on HarmonyOS 6.1.0.135 (API 24) for Electron startup, JIT, native addons and non-PTY execution; not rerun.",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "id": "klayout-on-harmony-pc",
+      "kind": "project",
+      "url": "https://github.com/yangy79/KLayout-on-Harmony-PC",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "analyzed_commit": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "license": "GPL-3.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/KLayout-on-Harmony-PC",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "build-scripts/build_klayout_hap.sh",
+        "docs/PORTING-NOTES.md",
+        "docs/VERIFICATION.md",
+        "ohos-app/entry/src/main/module.json5",
+        "patches/klayout-0.30.10-ohos.patch"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-shared-entrypoint",
+        "qt-ohos-resource-dir",
+        "qt-ohos-plugin-loading",
+        "qt-ohos-link-gc-static-registration",
+        "qt-ohos-system-lib-duplication"
+      ],
+      "last_run": "2026-10-20-project-research-1.json",
+      "coverage": "Source-reviewed Qt application startup, resource and plugin loading, linker retention and system-library packaging.",
+      "source_reported_validation": "A release HAP on a 2in1 device loaded 25 plugins, registered formats and opened layouts; not rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

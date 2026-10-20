@@ -11,7 +11,7 @@ The installed curator is [`harmonyos-pc-knowledge-curator`](/Users/mac/.codex/sk
 
 For example, document URI identity and read/write grants are common; consuming an XFile or mapping QFileDialog suffix filters are framework adapters. General guidance and adapters link to one another.
 
-The initial database contains **138 entries: 88 common, 29 Flutter-specific and 21 Qt-specific**. Electron, RN and KMP are supported classification and research categories with no framework-specific entries yet. Queries for them still retrieve relevant common knowledge.
+The database contains **146 entries: 88 common, 29 Flutter-specific, 26 Qt-specific and 3 Electron-specific**. RN and KMP are supported classification and research categories with no framework-specific entries yet. Queries for them still retrieve relevant common knowledge.
 
 ## Query and maintenance
 
@@ -33,6 +33,8 @@ All 63 Flutter knowledge documents were imported, with broad entries split and c
 
 `provenance/` retains original content snapshots, hashes, revisions, source-reported evidence and transformation notes. `maintenance/` holds source inventories, review outcomes, attribution and the one-time import recipe. Consumer search excludes these maintenance files.
 
-**This import validates database integrity and retrieval, not app behavior.** Every entry starts with `evidence_tier=imported-guidance` and `pc_validation=not-run`. Source-reported builds or device experiments remain attributed historical reports. Each entry's “Check it works” section is an acceptance plan, not a claim those tests ran here.
+A source-review pass over two HarmonyOS PC ports added Electron-specific runtime/JIT, native-addon and command-execution entries, plus Qt-specific entrypoint, resource, plugin, linker and packaging entries. Their commit-pinned evidence is under `provenance/snapshots/projects/`, with the screened candidates recorded in `maintenance/runs/`.
+
+**The database validates integrity and retrieval, not app behavior.** The initial import left every entry at `evidence_tier=imported-guidance`; the project-review pass added eight entries at `evidence_tier=source-reviewed`. All entries remain `pc_validation=not-run`. Source-reported builds or device experiments remain attributed historical reports. Each entry's “Check it works” section is an acceptance plan, not a claim those tests ran here.
 
 The Qt collection's [MIT notice](maintenance/licenses/qt-MIT.txt) is retained. No database-wide license was found in the Flutter source; its original per-project license and evidence context is preserved in provenance. No new blanket license is inferred for the combined database.

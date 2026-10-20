@@ -1,0 +1,177 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "dsh-desktop-hos",
+    "klayout-on-harmony-pc"
+  ],
+  "query_families": [
+    "Electron on HarmonyOS/OpenHarmony 2in1 or tablet",
+    "Qt application ports to HarmonyOS PC/2in1",
+    "Flutter/React Native/Kotlin Multiplatform on HarmonyOS PC (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "fellow99/dsh-desktop-hos",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "Source and build pipeline for an Electron runtime on 2in1/tablet, including JIT ACL, native addons and non-PTY exec."
+    },
+    {
+      "project": "yangy79/KLayout-on-Harmony-PC",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Patch set and build scripts for a Qt 5.12.12 2in1 port with entrypoint, resource, plugin and packaging fixes."
+    },
+    {
+      "project": "littlestone0806/doubao-watermark-lab",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Electron app packaged for HarmonyOS tablet/2in1; secondary evidence, not source-reviewed in this batch."
+    },
+    {
+      "project": "Aloereed/vlc-qt6-ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 media port; needs a separate Qt 6 review."
+    },
+    {
+      "project": "xiaomu120413/ohshark",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Wireshark Qt port; likely overlaps Qt build/plugin mechanisms, review next."
+    },
+    {
+      "project": "forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt engine plus ArkTS front end; mixed architecture needs source review."
+    },
+    {
+      "project": "sammary114/shotcut-on-harmonyos-pc",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Linux ABI compatibility layer plus Qt; not a direct Qt application port yet."
+    },
+    {
+      "project": "OrdinaryManZ/HarmonyAdaptQtDemo",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Teaching example; lower novelty than the selected port."
+    },
+    {
+      "project": "xiaqingpeng/HarmonyKMP",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "KMP/Compose OH target; empty KMP category, review next."
+    },
+    {
+      "project": "mucute/ComposeMultiplatformHarmony",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "KMP template; qualification of the actual OH target pending."
+    },
+    {
+      "project": "kuma0605/react-native-harmony-seed",
+      "framework": "react-native",
+      "disposition": "deferred",
+      "reason": "RNOH seed; empty RN category, review next."
+    },
+    {
+      "project": "BlackishGreen33/Expo-Harmony-Toolkit",
+      "framework": "react-native",
+      "disposition": "deferred",
+      "reason": "Expo migration tooling, not an application adaptation."
+    },
+    {
+      "project": "tracking-query",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 tutorial app; PC-specific but no new mechanism identified in the first pass."
+    },
+    {
+      "project": "dalian-oa",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 app; review for window/storage mechanisms in a later pass."
+    },
+    {
+      "project": "dingtalkrepo/ohos-pc-launcher",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Gitee demo of a dual-process HarmonyOS PC launch architecture with Qt UI; small, high-value next-round candidate."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode Qt/C++ editor port; likely extends the selected Qt build/plugin findings."
+    },
+    {
+      "project": "weixin_44613381/myapplication",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode Qt desktop port sample; needs source qualification."
+    },
+    {
+      "project": "jianguoxu/pc_flutterdemo",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "GitCode PC Flutter demo; no new mechanism established from the repository summary."
+    }
+  ],
+  "added_entries": [
+    "electron-ohos-runtime-and-jit",
+    "electron-ohos-native-addon-abi",
+    "electron-ohos-non-pty-exec",
+    "qt-ohos-shared-entrypoint",
+    "qt-ohos-resource-dir",
+    "qt-ohos-plugin-loading",
+    "qt-ohos-link-gc-static-registration",
+    "qt-ohos-system-lib-duplication"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "GitHub repository search was used for discovery; GitCode search required a token and Gitee API searches returned no usable results in this pass.",
+    "README claims were not treated as proof: selected entries were grounded in source files, patches and build scripts.",
+    "Electron runtime binaries were external to the reviewed checkout; device claims remain source-reported.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run.",
+    "Kotlin Multiplatform and React Native candidates were screened but not analyzed, so those categories remain empty."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 146 entries",
+    "kb.py check -> OK: 146 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for runtime/JIT, native-addon ABI, PTY, dlsym/main, resfile, dlopen, gc-sections and SIGSEGV terms",
+    "git diff review before commit"
+  ],
+  "entries_before": 138,
+  "entries_after": 146,
+  "registry_searches": [
+    {
+      "registry": "GitHub",
+      "method": "repository search API, sorted by stars",
+      "query_families": [
+        "harmonyos 2in1",
+        "openharmony 2in1",
+        "harmonyos PC",
+        "2in1 in:readme harmonyos",
+        "react-native harmonyos",
+        "kotlin multiplatform harmonyos",
+        "qt harmonyos",
+        "ohos flutter"
+      ],
+      "result": "Selected dsh-desktop-hos and KLayout-on-Harmony-PC; deferred further Electron/Qt/KMP/RN candidates."
+    },
+    {
+      "registry": "Gitee",
+      "method": "REST repository search and site search",
+      "result": "REST queries returned no usable results; site search surfaced dingtalkrepo/ohos-pc-launcher and harmonyos_samples/multi-columns."
+    },
+    {
+      "registry": "GitCode (AtomGit)",
+      "method": "site search; REST search requires a private token",
+      "result": "Site search surfaced OpenHarmonyPCDeveloper/notepad--_ohos, weixin_44613381/myapplication and oh-flutter/tracking_query."
+    }
+  ]
+}

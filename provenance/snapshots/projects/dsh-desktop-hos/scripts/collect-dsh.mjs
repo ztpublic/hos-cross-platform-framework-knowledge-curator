@@ -1,0 +1,1059 @@
+#!/usr/bin/env node
+/**
+ * 收集 dsh 部署产物：pnpm deploy 物化依赖闭包 → 物化 Junction → 补全 @deepseek-ai 包
+ * 与非 hoisted 依赖 → 复制 web dist → 写 sharp 纯 JS stub。
+ *
+ * 产出 dsh-dist/（真实文件、无 Junction、无 .pnpm），随后由 tar 压成 dsh-dist.tar.gz 打入 resfile。
+ * 前置：dsh 已构建（node scripts/build-dsh.mjs）。本脚本只依赖同级 ../deepseek-harness 与
+ * ../dsh-market，与 dsh-desktop 无关。
+ *
+ * 背景：pnpm deploy --legacy 物化的 node_modules 是「链接结构」（外部依赖为 Junction 指向
+ * .pnpm store），打包分发后指向失效，故需物化为真实文件。且 deploy 不物化：① peerDependencies
+ * （如 cordis-plugin-group、大量 packages 下插件）；② 非 hoisted 的外部依赖（如 zod）。
+ */
+import { execSync } from 'node:child_process';
+import { cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, realpathSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { basename, dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { wrapSharpStubCjs, wrapSharpStubEsm } from './lib/sharp-stub.mjs';
+
+const projectRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const dshRoot = resolve(projectRoot, '../deepseek-harness');
+const distDir = resolve(projectRoot, 'dsh-dist');
+const betterSqliteArchive = resolve(projectRoot, '../harmonypc-electron-versions/better-sqlite3编译指导（Electron37）/better-sqlite3-ohos-v138.tar.gz');
+const requireBuiltinNode = resolve(projectRoot, 'native/require-builtin/require_builtin.node');
+
+/**
+ * Pinned pure-JS pnpm engine version (spec 012). Materialized by
+ * `collectMarketPNPM()` and asserted before it is recorded as ready.
+ * See `docs/012-pnpm+dsh-market.md` and `logs/20261002-1/spike-pnpm-FINDINGS.md`.
+ */
+const PNPM_VERSION = '10.34.6';
+
+/**
+ * Pinned dsh-market version — the single source of truth asserted at build
+ * time (`assertDshMarketVersion()`), replacing the previously inconsistent
+ * README / profile / spec declarations.
+ */
+const DSH_MARKET_VERSION = '1.66.21';
+
+/**
+ * Pinned isomorphic-git version — materialized into the plugin's own nested node_modules by
+ * `collectGitRuntime()`. jsdiff is deliberately **not** pinned here: it is reused from the host
+ * closure (dsh declares `diff ^9.0.0`), guarded by a major-version assertion in the plugin's
+ * `lib/runtime.js`.
+ */
+const ISOMORPHIC_GIT_VERSION = '1.44.2';
+
+function run(cmd, cwd) {
+  console.log(`\n> ${cmd}`);
+  execSync(cmd, { cwd, stdio: 'inherit' });
+}
+
+/** 递归物化目录下的 Junction 为真实文件（跳过 .bin 与 .pnpm）。 */
+function materializeJunctions(dir, depth = 0) {
+  if (depth > 8) return;
+  let entries;
+  try {
+    entries = readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return;
+  }
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name);
+    if (entry.name === '.bin' || entry.name === '.pnpm') continue;
+    let st;
+    try {
+      st = lstatSync(fullPath);
+    } catch {
+      continue;
+    }
+    if (st.isSymbolicLink()) {
+      try {
+        const target = realpathSync(fullPath);
+        rmSync(fullPath, { recursive: true, force: true });
+        cpSync(target, fullPath, { recursive: true, dereference: true });
+      } catch (err) {
+        console.warn(`[collect-dsh] 物化失败 ${fullPath}: ${err.message}`);
+      }
+    } else if (st.isDirectory()) {
+      materializeJunctions(fullPath, depth + 1);
+    }
+  }
+}
+
+/** 复制单个 @deepseek-ai 包（lib + package.json + cordis.patch.yml 等，排除 node_modules）。 */
+function copyPackage(pkgDir, destRoot) {
+  const pkgJson = resolve(pkgDir, 'package.json');
+  if (!existsSync(pkgJson)) return;
+  let name;
+  try {
+    name = JSON.parse(readFileSync(pkgJson, 'utf8')).name;
+  } catch {
+    return;
+  }
+  if (!name || !name.startsWith('@deepseek-ai/')) return;
+  const shortName = name.slice('@deepseek-ai/'.length);
+  const dest = resolve(destRoot, shortName);
+  if (existsSync(dest)) return; // 已物化
+  cpSync(pkgDir, dest, {
+    recursive: true,
+    dereference: true,
+    // 排除 node_modules：嵌套依赖是 Junction 指向其它包，递归物化会循环；扁平结构里已有
+    filter: (src) => !src.includes('node_modules'),
+  });
+  console.log(`[collect-dsh] 物化 @deepseek-ai/${shortName}`);
+}
+
+/** 递归复制 dshmarket 的运行时依赖（dependencies 字段 + 传递依赖）到物化目录，@deepseek-ai scope 从宿主解析。 */
+function copyMarketRuntimeDeps(srcNm, destNm, marketRoot) {
+  let queue = [];
+  try {
+    queue = Object.keys(JSON.parse(readFileSync(resolve(marketRoot, 'package.json'), 'utf8')).dependencies ?? {});
+  } catch {
+    return;
+  }
+  const seen = new Set();
+  while (queue.length > 0) {
+    const name = queue.shift();
+    if (seen.has(name) || name.startsWith('@deepseek-ai/')) continue;
+    seen.add(name);
+    const srcPkg = resolve(srcNm, name);
+    const destPkg = resolve(destNm, name);
+    if (!existsSync(resolve(srcPkg, 'package.json')) || existsSync(resolve(destPkg, 'package.json'))) continue;
+    cpSync(srcPkg, destPkg, { recursive: true, dereference: true });
+    try {
+      const deps = JSON.parse(readFileSync(resolve(srcPkg, 'package.json'), 'utf8')).dependencies ?? {};
+      for (const dep of Object.keys(deps)) queue.push(dep);
+    } catch {
+      // 跳过无法解析的传递依赖
+    }
+  }
+}
+
+/** 物化 dsh-market（插件市场，非 scoped 包）到 dsh-dist/node_modules/dshmarket。
+ *  复制 package.json + cordis.patch.yml + lib/ + client/ + 运行时依赖（undici/js-yaml 等），
+ *  排除源码/测试/devDeps；@deepseek-ai 依赖从宿主 dsh-dist 解析。 */
+function collectDshMarket() {
+  const marketRoot = resolve(projectRoot, '../dsh-market');
+  const dest = resolve(distDir, 'node_modules/dshmarket');
+  if (!existsSync(resolve(marketRoot, 'package.json'))) {
+    console.error(`[collect-dsh] dsh-market 未找到（打包必需，先构建 ../dsh-market）: ${marketRoot}`);
+    process.exit(1);
+  }
+  if (existsSync(resolve(dest, 'package.json'))) {
+    console.log('[collect-dsh] dshmarket 已物化');
+    return;
+  }
+  cpSync(marketRoot, dest, {
+    recursive: true,
+    dereference: true,
+    filter: (src) => {
+      const rel = src.slice(marketRoot.length + 1);
+      if (rel === '') return true;
+      const top = rel.split(/[\\/]/)[0];
+      return top === 'package.json' || top === 'cordis.patch.yml' || top === 'lib' || top === 'client';
+    },
+  });
+  // 复制运行时依赖（dshmarket 的 dependencies，如 undici/js-yaml）
+  const srcNm = resolve(marketRoot, 'node_modules');
+  if (existsSync(srcNm)) {
+    copyMarketRuntimeDeps(srcNm, resolve(dest, 'node_modules'), marketRoot);
+  }
+  console.log('[collect-dsh] 物化 dshmarket（lib/client/cordis.patch.yml/package.json + 运行时依赖）');
+}
+
+/** 物化本工程 plugins/ 下的专用插件到 dsh-dist/node_modules/<包名>。
+ *  约定：本工程专用插件统一放在 `<projectRoot>/plugins/`，目录名与包名同为 `harmony-plugin-XXX`
+ *  （XXX 描述功能）；通用可插拔插件放父工程 `../dsh-plugins/`，命名 `dsh-plugin-XXX`，不由本脚本处理。
+ *  本函数按 `harmony-plugin-*` 通配自动发现，落地目录名一律取自各插件 package.json 的 `name`
+ *  （而非目录名），因此以后新增插件无需改动本脚本。
+ *  与 dshmarket 同策略：非 scoped 包直接落在 node_modules 顶层，agent preset 行按包名挂载即可解析。
+ *  硬失败：plugins 存在、但匹配到的插件缺 package.json / JSON 非法 / 包名不符约定（同时防 `../` 逃逸）。
+ *  无 op：plugins 缺失或无 harmony-plugin-* 目录时只打印一行日志。幂等：目标已有 package.json 即跳过。 */
+function collectPlugins() {
+  const pluginsRoot = resolve(projectRoot, 'plugins');
+  if (!existsSync(pluginsRoot)) {
+    console.log(`[collect-dsh] plugins 目录不存在，跳过插件物化: ${pluginsRoot}`);
+    return;
+  }
+  const pluginDirs = readdirSync(pluginsRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && entry.name.startsWith('harmony-plugin-'))
+    .map((entry) => entry.name)
+    .sort();
+  if (pluginDirs.length === 0) {
+    console.log('[collect-dsh] plugins 下没有 harmony-plugin-* 目录，跳过插件物化');
+    return;
+  }
+  for (const dirName of pluginDirs) {
+    const src = resolve(pluginsRoot, dirName);
+    const pkgJson = resolve(src, 'package.json');
+    if (!existsSync(pkgJson)) {
+      console.error(`[collect-dsh] 插件 ${dirName} 缺少 package.json（约定 harmony-plugin-XXX 必须是可发布的包）: ${pkgJson}`);
+      process.exit(1);
+    }
+    let name;
+    try {
+      name = JSON.parse(readFileSync(pkgJson, 'utf8')).name;
+    } catch (err) {
+      console.error(`[collect-dsh] 插件 ${dirName} 的 package.json 无法解析: ${err.message}`);
+      process.exit(1);
+    }
+    // 包名即落地目录名：只接受裸包名 harmony-plugin-*，既落实命名约定，也杜绝 `../` 逃逸出 node_modules
+    if (typeof name !== 'string' || !/^harmony-plugin-[A-Za-z0-9._-]+$/.test(name)) {
+      console.error(`[collect-dsh] 插件 ${dirName} 的包名不符合 harmony-plugin-* 约定: ${JSON.stringify(name)}`);
+      process.exit(1);
+    }
+    const dest = resolve(distDir, 'node_modules', name);
+    if (existsSync(resolve(dest, 'package.json'))) {
+      console.log(`[collect-dsh] 插件 ${name} 已物化`);
+      continue;
+    }
+    // 排除 node_modules：插件的运行时依赖由宿主 dsh-dist 解析（与 copyPackage 同策略），
+    // 避免把 pnpm junction 递归展开成巨型目录。
+    cpSync(src, dest, {
+      recursive: true,
+      dereference: true,
+      filter: (s) => !s.includes('node_modules'),
+    });
+    console.log(`[collect-dsh] 物化插件 ${name} <- plugins/${dirName}`);
+  }
+}
+
+/** 补全所有 @deepseek-ai 包（packages、vendor、apps 下），覆盖 peer 依赖与 link: override。 */
+function collectWorkspacePackages() {
+  const destRoot = resolve(distDir, 'node_modules/@deepseek-ai');
+  for (const root of ['packages', 'vendor', 'apps']) {
+    const rootDir = resolve(dshRoot, root);
+    if (!existsSync(rootDir)) continue;
+    for (const cat of readdirSync(rootDir)) {
+      const catDir = resolve(rootDir, cat);
+      if (!existsSync(catDir)) continue;
+      if (existsSync(resolve(catDir, 'package.json'))) {
+        copyPackage(catDir, destRoot); // 一级（vendor/*、apps/*）
+      } else {
+        try {
+          for (const pkg of readdirSync(catDir)) {
+            copyPackage(resolve(catDir, pkg), destRoot); // 两级（packages/*/*）
+          }
+        } catch {
+          // 非目录，跳过
+        }
+      }
+    }
+  }
+}
+
+/** 物化非 hoisted 的外部依赖到顶层 node_modules。
+ *  从每个 .pnpm entry 的 node_modules 子目录提取真实包名（entry 名可能是截断+hash，
+ *  如 @opentelemetry+exporter-log_8841...，真实包名在 node_modules/@opentelemetry/exporter-logs-otlp-http）。 */
+function collectNonHoistedDeps() {
+  const pnpmDir = resolve(distDir, 'node_modules/.pnpm');
+  const topDir = resolve(distDir, 'node_modules');
+  if (!existsSync(pnpmDir)) return;
+  const seen = new Set();
+  const materialize = (entry, pkgName) => {
+    if (seen.has(pkgName)) return;
+    seen.add(pkgName);
+    const dest = resolve(topDir, ...pkgName.split('/'));
+    if (existsSync(dest)) return; // 已 hoisted 或已物化
+    const nested = resolve(pnpmDir, entry, 'node_modules', ...pkgName.split('/'));
+    if (!existsSync(nested)) return;
+    cpSync(nested, dest, { recursive: true, dereference: true });
+    console.log(`[collect-dsh] 物化非 hoisted 依赖 ${pkgName}`);
+  };
+  for (const entry of readdirSync(pnpmDir)) {
+    const entryNodeModules = resolve(pnpmDir, entry, 'node_modules');
+    if (!existsSync(entryNodeModules)) continue;
+    for (const scopeOrName of readdirSync(entryNodeModules)) {
+      const full = resolve(entryNodeModules, scopeOrName);
+      let st;
+      try {
+        st = lstatSync(full);
+      } catch {
+        continue;
+      }
+      if (!st.isDirectory()) continue;
+      if (scopeOrName.startsWith('@')) {
+        for (const name of readdirSync(full)) {
+          materialize(entry, `${scopeOrName}/${name}`);
+        }
+      } else {
+        materialize(entry, scopeOrName);
+      }
+    }
+  }
+}
+
+/** 递归清理原生模块中非目标平台的 prebuilds（如 node-pty 的 linux-arm64/win32-x64 等），
+ *  避免 rpmbuild 的 brp-strip 遇到非目标架构 .node 报错，并减小包体积。 */
+function pruneForeignPrebuilds(dir, depth = 0) {
+  if (depth > 8) return;
+  let entries;
+  try {
+    entries = readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return;
+  }
+  const target = `${process.platform}-${process.arch}`;
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const fullPath = join(dir, entry.name);
+    if (entry.name === 'prebuilds') {
+      for (const sub of readdirSync(fullPath)) {
+        const subPath = resolve(fullPath, sub);
+        let st;
+        try {
+          st = lstatSync(subPath);
+        } catch {
+          continue;
+        }
+        if (!st.isDirectory()) continue;
+        if (sub !== target) {
+          rmSync(subPath, { recursive: true, force: true });
+          console.log(`[collect-dsh] 清理非目标架构 prebuilds: ${sub}`);
+        }
+      }
+    } else {
+      pruneForeignPrebuilds(fullPath, depth + 1);
+    }
+  }
+}
+
+/**
+ * 用纯 JS stub 替换 sharp 原生模块入口（libvips 在鸿蒙 aarch64 不可用，见 docs/工程规划.md §18.3）。
+ *
+ * stub body 位于 scripts/lib/sharp-stub-body.js，经 scripts/lib/sharp-stub.mjs 的同一对包装函数
+ * 嵌入 index.mjs / index.cjs（构建与测试共用，避免转义与漂移）。
+ *
+ * stub 能做的：按容器头解析并在 metadata() 返回真实的 format（png/jpeg/webp/gif，无法识别时不返回
+ * format）、width/height、depth、space、hasAlpha、pages，以及仅在字节确实携带时才给出的
+ * exif/icc/xmp/iptc/comments/orientation。
+ * stub 不能做的：任何解码、缩放、色彩空间转换与再编码 —— 因此需要转换的图片（GIF/动画、16-bit PNG、
+ * 带 ICC 或其他元数据等）仍会在附件规范化阶段明确报错。
+ */
+function applySharpStub() {
+  const sharpDist = resolve(distDir, 'node_modules/sharp/dist');
+  if (!existsSync(resolve(sharpDist, 'index.mjs')) || !existsSync(resolve(sharpDist, 'index.cjs'))) {
+    console.warn('[collect-dsh] sharp 未找到，跳过 stub');
+    return;
+  }
+  const bodyPath = resolve(projectRoot, 'scripts/lib/sharp-stub-body.js');
+  if (!existsSync(bodyPath)) {
+    throw new Error(`[collect-dsh] sharp stub body 缺失: ${bodyPath}`);
+  }
+  const body = readFileSync(bodyPath, 'utf8');
+  writeFileSync(resolve(sharpDist, 'index.mjs'), wrapSharpStubEsm(body));
+  writeFileSync(resolve(sharpDist, 'index.cjs'), wrapSharpStubCjs(body));
+  console.log('[collect-dsh] sharp 纯 JS stub 已写入 node_modules/sharp/dist');
+}
+
+/**
+ * HarmonyOS: 适配 agent preset —— 禁用依赖 shell/subprocess/pty（node-pty 等原生模块，MVP 已禁用）
+ * 的工具行，并补齐本应用需要的行。
+ *
+ * 背景：agent preset（<agent-presets 包>/presets/<id>/agent.cordis.yml）由 cordis Include 在会话创建时
+ * 直接组合成独立 EntryTree（见 dsh packages/preset/agent-presets/src/mount.ts），host 的
+ * cordis.patch.yml 只覆盖 host-plane 行、管不到 agent-plane；这些工具行会无限等待被禁用的
+ * shell/subprocess 服务，mount 的 inactiveRows 审计报 "waiting for shell/subprocess"，preset 挂载
+ * 失败 → session.create 抛 agent-preset-invalid → 工作区无法选中、点聊天区反复弹「选择工作区」。
+ * inactiveRows 会跳过 disabled: true 的行，故禁用后 preset 可正常挂载（终端/内容搜索能力按
+ * §18.3 取舍，文件读写 tool-fs 等不依赖子进程的工具保留）。
+ */
+// 注：minimal 的常驻终端组 `persistent-shell` 是 10 空格顶层行（其子行 pty/terminal-bash/… 为
+// 14 空格），故可由本表统一禁用；禁用后该组整棵不挂载（其子行随之失效）。
+const HARMONY_DISABLED_PRESET_ROWS = {
+  'tool-bash': '依赖 shell 服务（bash 终端，node-pty 子进程，MVP 已禁用）',
+  'tool-fs-search': '依赖 subprocess 跑 ripgrep 内容搜索（node-pty 已禁用）',
+  'persistent-shell': 'minimal 的常驻终端组（pty / terminal-bash / persistent-bash），依赖 PTY/terminals（node-pty 无 aarch64 产物，本平台禁用）',
+  'tool-plugin-manager': "plugin_manager 工具 inject ['tools','pluginManager','sandboxPolicy']（本平台沙箱不可用）；standard/PTC 上游已 disabled:true，cordis 未禁",
+};
+
+/**
+ * 禁用 delegation group 内 14 空格嵌套、依赖 PTC 引擎的行（与 src-main/main.js 的
+ * HARMONY_DISABLED_NESTED_PRESET_ROWS 逐条镜像）。
+ * workflow-ptc 是唯一的 workflowEngine 具体实现，依赖 ptcRuntime（需 subprocess/sandbox，均禁用）；
+ * tool-workflow 依赖 workflowEngine。同组 tool-ralph 早已 disabled，此前漏禁这两行。
+ * minimal 无此嵌套行，故不误伤。
+ */
+const HARMONY_DISABLED_NESTED_PRESET_ROWS = {
+  'workflow-ptc': 'PTC workflow 引擎依赖 ptcRuntime（subprocess/sandbox，本平台不可用）',
+  'tool-workflow': 'workflow 工具依赖 workflowEngine（PTC 引擎本平台不可用）',
+};
+
+/**
+ * 补齐 preset 中本应用需要、但上游 preset 未挂载的工具行（顶层追加）。
+ * 与 src-main/main.js 的 HARMONY_ENSURED_PRESET_ROWS 保持一致：`tool-str-replace-editor` 是纯 JS
+ * 工具（inject ['tools','fs']，无 subprocess/原生依赖），其 `view` 对目录经 ctx.fs.listDir 列目录 ——
+ * 在 tool-fs-search 被禁用后这是唯一可用的列目录入口。`requireRow` 限定只加到已挂载该行的 preset。
+ *
+ * `fs-mutate`（harmony-plugin-fs-mutate）是本工程专用插件，由 collectPlugins() 从本工程 plugins/
+ * 物化到 dsh-dist/node_modules，故 name 为裸包名；它经围栏 ctx.fs 原语补齐 delete / move / copy /
+ * chmod：remove 提供 delete 与 move 的删除半程，writeBytes（readBytes 读入）提供 copy 与 move 的
+ * 拷贝半程，chmod 提供权限位变更（本工程补丁新增，见 dsh-fs-chmod-primitive.patch）。
+ *
+ * `fs-search`（harmony-plugin-fs-search）同理：纯 JS 内容搜索，经 ctx.fs.listDir + readText 遍历，
+ * 不依赖 subprocess / ripgrep 二进制 —— 上游 tool-fs-search 在鸿蒙上装不起来（见其被禁原因）。
+ */
+const HARMONY_ENSURED_PRESET_ROWS = [
+  {
+    id: 'tool-str-replace-editor',
+    name: '@deepseek-ai/dsh-tool-str-replace-editor',
+    requireRow: 'tool-fs',
+    reason: 'HarmonyOS: 补齐列目录（view）与文件编辑，替代依赖 subprocess 的 tool-fs-search',
+  },
+  {
+    id: 'fs-mutate',
+    name: 'harmony-plugin-fs-mutate',
+    requireRow: 'tool-fs',
+    reason: 'HarmonyOS: 经围栏 ctx.fs 原语补齐 delete / move / copy / chmod（纯 JS，本工程 plugins 物化）',
+  },
+  {
+    id: 'fs-search',
+    name: 'harmony-plugin-fs-search',
+    requireRow: 'tool-fs',
+    reason: 'HarmonyOS: 纯 JS 内容搜索（替代依赖 subprocess 与 ripgrep 二进制的 tool-fs-search）',
+  },
+  {
+    id: 'exec',
+    name: 'harmony-plugin-exec',
+    requireRow: 'persona',
+    reason: 'HarmonyOS: 非 PTY 常驻 shell 命令执行（单 spawn + 哨兵行；替代依赖 node-pty 的 tool-bash，并为 minimal 提供其终端组的替代）',
+  },
+];
+
+// dsh ≥ 0.2.0 的 preset 文件是「一个 - insert: 行内嵌 config.plugins: 数组」：插件行以 10 空格
+// `- id:` 起始，其 name:/disabled:/config: 等键为 12 空格，cordis:group 的内层子行为 14 空格。
+// 补丁只认 10 空格的顶层插件行；14 空格的嵌套行（如 minimal 的 terminal-bash / persistent-bash）
+// 一律不动，避免误伤 minimal 的持久 shell 组。
+const TOP_ROW_RE = /^          - id: ([A-Za-z0-9_-]+)\s*$/;
+const TOP_ROW_INDENT = '          '; // 10 空格：顶层插件行 `- id:` 的缩进
+const KEY_INDENT = '            ';   // 12 空格：行内 name:/disabled: 等键的缩进
+const HARMONY_MARKER = '# HarmonyOS:';
+const NESTED_ROW_RE = /^              - id: ([A-Za-z0-9_-]+)\s*$/; // 14 空格：group config 内嵌套行
+const NESTED_KEY_RE = /^                \S/;                        // 16 空格：嵌套行的键
+
+/** 本 preset 的 config.plugins 数组顶层（10 空格 `- id:`）是否已有该 id 的行；
+ *  cordis:group 内 14 空格的嵌套行不算（minimal 的 terminal-bash / persistent-bash 即属此类）。 */
+function hasTopLevelRow(lines, id) {
+  for (const line of lines) {
+    const m = TOP_ROW_RE.exec(line);
+    if (m !== null && m[1] === id) return true;
+  }
+  return false;
+}
+
+/** 按 HARMONY_ENSURED_PRESET_ROWS 追加缺失的顶层插件行；返回追加数。
+ *  行以 10 空格 `- id:` / 12 空格 `name:` 追加到文件末尾（即 config.plugins 数组末），
+ *  与数组内既有行的缩进一致；idempotency 由 hasTopLevelRow（按 id）保证。 */
+function ensurePresetRows(out) {
+  let ensured = 0;
+  for (const spec of HARMONY_ENSURED_PRESET_ROWS) {
+    if (spec.requireRow !== undefined && !hasTopLevelRow(out, spec.requireRow)) continue;
+    if (hasTopLevelRow(out, spec.id)) continue;
+    out.push(`# ${spec.reason}`);
+    out.push(`${TOP_ROW_INDENT}- id: ${spec.id}`);
+    out.push(`${KEY_INDENT}name: '${spec.name}'`);
+    ensured++;
+  }
+  return ensured;
+}
+
+/**
+ * 前端文案守卫：本应用不上架「内测/预览」语义，且品牌已统一为 `DSH Desktop`。
+ * 这些改动由 dsh 补丁（`dsh-disable-welcome-notice.patch` / `dsh-rebrand.patch`）落到构建产物；
+ * 补丁一旦失效（dsh 升级、冲突被跳过、手工改回），产物会**静默**回到旧文案（首启内测声明、
+ * 首页「探索未至之境」/「预览版」/「DSH 本地构建」），审核会再次驳回，故在此硬失败。
+ * @returns {void}
+ */
+function assertClientCopyPatched() {
+  const checks = [
+    {
+      rel: 'node_modules/@deepseek-ai/dsh-client-ui-settings-models/lib/client.js',
+      forbid: ['settings.onboarding'],
+      why: '首启内测声明（dsh-disable-welcome-notice.patch）',
+    },
+    {
+      rel: 'node_modules/@deepseek-ai/dsh-client-ui-conversation/lib/client.js',
+      forbid: ['探索未至之境'],
+      require: ['DSH Desktop'],
+      why: '首页品牌/标题与去「预览版」（dsh-rebrand.patch）',
+    },
+  ];
+  for (const c of checks) {
+    const file = resolve(distDir, c.rel);
+    if (!existsSync(file)) {
+      throw new Error(`[collect-dsh] 前端守卫：找不到 ${c.rel}（产物结构可能已变化，请重新评估该守卫）`);
+    }
+    const text = readFileSync(file, 'utf8');
+    for (const token of c.forbid) {
+      if (text.includes(token)) {
+        throw new Error(`[collect-dsh] 前端守卫失败：${c.rel} 仍含「${token}」——${c.why} 未生效`);
+      }
+    }
+    for (const token of c.require ?? []) {
+      if (!text.includes(token)) {
+        throw new Error(`[collect-dsh] 前端守卫失败：${c.rel} 缺少「${token}」——${c.why} 未生效`);
+      }
+    }
+  }
+  console.log('[collect-dsh] 前端文案守卫通过：无 settings.onboarding / 无「探索未至之境」/ 含 DSH Desktop');
+}
+
+/**
+ * HarmonyOS: `HARMONY_ENSURED_PRESET_ROWS` 必须与 `src-main/main.js` 的同名表逐条一致。
+ *
+ * 同一批 preset 行由两处分别补入：本脚本补进构建产物，`src-main/main.js` 在设备上按运行期
+ * preset 树再补一次。任何一侧漏改（新增行只加了一边，或改了 id / 包名 / requireRow），产物与
+ * 设备行为即分叉，而分叉只在运行期以 `agent-preset/invalid`（row "<id>" names a plugin that
+ * cannot be resolved，即创建会话直接失败）暴露，构建期完全静默。这里把它变成构建期硬失败。
+ *
+ * 采用「读源码互校」而非「共享模块 / JSON」是刻意的：共享文件要让 collect-runtime 多恢复一个
+ * 产物、给 APP_KEEP 多加一项，并给主进程引入一个启动期硬失败（产物缺失即无法启动）。互校在
+ * 不新增运行时产物、不新增启动失败模式的前提下消除了同一个分叉风险。
+ *
+ * 解析失败（定位不到表、或条目数与本地不符）同样抛错，避免正则漏匹配造成「假通过」。
+ * @returns {void}
+ */
+function assertPresetRowsMirrorMainJs() {
+  const mainPath = resolve(projectRoot, 'src-main/main.js');
+  const source = readFileSync(mainPath, 'utf8');
+  const start = source.indexOf('const HARMONY_ENSURED_PRESET_ROWS = [');
+  const end = start === -1 ? -1 : source.indexOf('\n];', start);
+  if (end === -1) {
+    throw new Error(`[collect-dsh] 无法在 ${mainPath} 定位 HARMONY_ENSURED_PRESET_ROWS，两处 preset 行无法互校`);
+  }
+  const slice = source.slice(start, end);
+  // 条目键序固定为 id → name → requireRow（requireRow 可缺省），与本文件的写法一致。
+  const parsed = [...slice.matchAll(/\{\s*id: '([^']+)',\s*name: '([^']+)',(?:\s*requireRow: '([^']+)',)?/g)]
+    .map((m) => ({ id: m[1], name: m[2], requireRow: m[3] ?? null }));
+  const local = HARMONY_ENSURED_PRESET_ROWS.map((spec) => ({
+    id: spec.id,
+    name: spec.name,
+    requireRow: spec.requireRow ?? null,
+  }));
+  if (parsed.length !== local.length) {
+    throw new Error(
+      `[collect-dsh] preset 行互校失败：src-main/main.js 解析出 ${parsed.length} 条，本脚本有 ${local.length} 条 —— 任一侧已改动，或其写法已无法被互校解析`,
+    );
+  }
+  const mirror = JSON.stringify(parsed);
+  const own = JSON.stringify(local);
+  if (mirror !== own) {
+    throw new Error(
+      `[collect-dsh] preset 行互校失败，两处 HARMONY_ENSURED_PRESET_ROWS 必须逐条一致：\n` +
+        `  src-main/main.js = ${mirror}\n` +
+        `  collect-dsh.mjs  = ${own}`,
+    );
+  }
+  console.log(`[collect-dsh] preset 行互校通过（${local.length} 条与 src-main/main.js 一致）`);
+}
+
+/**
+ * 禁用 14 空格嵌套行（见 HARMONY_DISABLED_NESTED_PRESET_ROWS）。在顶层行补丁之后跑。
+ * 返回 { lines, count }；幂等。
+ */
+function disableNestedRows(lines) {
+  const out = [];
+  let count = 0;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    out.push(line);
+    const m = NESTED_ROW_RE.exec(line);
+    const reason = m ? HARMONY_DISABLED_NESTED_PRESET_ROWS[m[1]] : undefined;
+    if (reason === undefined) continue;
+    let j = i + 1;
+    const block = [];
+    while (j < lines.length && NESTED_KEY_RE.test(lines[j])) { block.push(lines[j]); j++; }
+    const hasDisabled = block.some((b) => /^                disabled:/.test(b));
+    let inserted = false;
+    for (const b of block) {
+      if (/^                disabled:/.test(b)) {
+        if (b.includes(HARMONY_MARKER)) { out.push(b); continue; }
+        out.push(`                disabled: true ${HARMONY_MARKER} ${reason}`);
+        count++;
+      } else {
+        out.push(b);
+        if (!hasDisabled && !inserted && /^                name:/.test(b)) {
+          out.push(`                disabled: true ${HARMONY_MARKER} ${reason}`);
+          inserted = true; count++;
+        }
+      }
+    }
+    i = j - 1;
+  }
+  return { lines: out, count };
+}
+
+function patchAgentPresets() {
+  // dsh ≥ 0.2.0 把 preset 放在 dsh-web-app 包内（每个 preset 一个 <id>.patch.yml，
+  // 结构为单个 - insert: 行，config.plugins: 数组内嵌各插件行）。更早版本放在
+  // dsh-agent-presets 包 / config/agent-presets 下，已不存在，不再查找。
+  const presetsDir = resolve(distDir, 'node_modules/@deepseek-ai/dsh-web-app/presets');
+  if (!existsSync(presetsDir)) {
+    console.warn('[collect-dsh] agent-presets 目录缺失，跳过 preset 补丁');
+    return;
+  }
+  let disabled = 0;
+  let ensuredTotal = 0;
+  const names = readdirSync(presetsDir).filter((n) => n.endsWith('.patch.yml')).sort();
+  for (const name of names) {
+    const file = resolve(presetsDir, name);
+    const lines = readFileSync(file, 'utf8').split('\n');
+    const out = [];
+    let disabledHere = 0;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      out.push(line);
+      const m = TOP_ROW_RE.exec(line);
+      const reason = m ? HARMONY_DISABLED_PRESET_ROWS[m[1]] : undefined;
+      if (reason === undefined) continue;
+      // 收集该顶层插件行（10 空格 `- id:`）的后续 12 空格键行（14 空格的 group 内层行不计入，
+      // 以免越过 tool-fs-search 的 config: 子块或误伤 minimal 的嵌套持久 shell 组）。
+      const block = [];
+      let j = i + 1;
+      while (j < lines.length && /^            \S/.test(lines[j])) { block.push(lines[j]); j++; }
+      const hasDisabled = block.some((b) => /^            disabled:/.test(b));
+      let inserted = false;
+      for (const b of block) {
+        if (/^            disabled:/.test(b)) {
+          if (b.includes(HARMONY_MARKER)) { out.push(b); continue; }
+          out.push(`${KEY_INDENT}disabled: true ${HARMONY_MARKER} ${reason}`);
+          disabledHere++;
+        } else {
+          out.push(b);
+          if (!hasDisabled && !inserted && /^            name:/.test(b)) {
+            out.push(`${KEY_INDENT}disabled: true ${HARMONY_MARKER} ${reason}`);
+            inserted = true; disabledHere++;
+          }
+        }
+      }
+      i = j - 1; // block 已输出，外层循环从 block 之后继续
+    }
+    const nested = disableNestedRows(out);
+    const nestedLines = nested.lines;
+    const nestedCount = nested.count;
+    const ensured = ensurePresetRows(nestedLines);
+    disabled += disabledHere + nestedCount;
+    ensuredTotal += ensured;
+    if (disabledHere + nestedCount > 0 || ensured > 0) {
+      writeFileSync(file, nestedLines.join('\n'));
+      console.log(`[collect-dsh] preset ${name}: 禁用 ${disabledHere + nestedCount} 行、补齐 ${ensured} 行`);
+    }
+  }
+  console.log(`[collect-dsh] agent preset 补丁完成：禁用 ${disabled} 行、补齐 ${ensuredTotal} 行`);
+}
+
+/** Inject the tested Electron 37 / Node ABI v138 better-sqlite3 package. */
+function injectBetterSqlite3() {
+  if (!existsSync(betterSqliteArchive)) {
+    console.error(`[collect-dsh] better-sqlite3 v138 成品缺失: ${betterSqliteArchive}`);
+    process.exit(1);
+  }
+  const tempRoot = mkdtempSync(resolve(projectRoot, '.better-sqlite3-'));
+  try {
+    // 归档名只传 basename、用 cwd 定位目录：Windows 绝对路径含 `D:`，而 GNU tar（MSYS
+    // 的 /usr/bin/tar）会把归档名里的 `host:path` 当远程主机而报 "Cannot connect to D:"。
+    // System32 的 bsdtar 无此语义但也不支持 `--force-local`，故只传文件名是唯一同时兼容两者的写法。
+    run(`tar -xzf "${basename(betterSqliteArchive)}" -C "${tempRoot}"`, dirname(betterSqliteArchive));
+    const source = resolve(tempRoot, 'better-sqlite3');
+    const destination = resolve(distDir, 'node_modules/better-sqlite3');
+    if (!existsSync(resolve(source, 'package.json')) || !existsSync(resolve(source, 'build/Release/better_sqlite3.node'))) {
+      console.error(`[collect-dsh] better-sqlite3 v138 成品结构无效: ${source}`);
+      process.exit(1);
+    }
+    rmSync(destination, { recursive: true, force: true });
+    cpSync(source, destination, { recursive: true, dereference: true });
+    console.log('[collect-dsh] better-sqlite3 v138 aarch64 成品已注入 dsh-dist');
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+}
+
+/**
+ * 物化 require-builtin 的 OpenHarmony 可选平台包到 dsh-dist/node_modules。
+ *
+ * node-addon-native-custom-loader 的 loadEntry 先按 optionalPackageName(packagePrefix)
+ * require 「<prefix>-openharmony-arm64」，pnpm deploy 不含此平台包（未发布），故这里手工物化。
+ * 包内 prebuilt/require_builtin.node 是 dlopen 锚点：链接器对 files/ 路径报命名空间不可达，
+ * node_binding.cc 重试到 bundle/libs/arm64/require_builtin.node（由 stageAddonBinariesForLinkerRetry 投放）。
+ * 三处文件须与设备上已验证通过的内容逐字节一致。
+ */
+function materializeRequireBuiltinPlatformPackage() {
+  if (!existsSync(requireBuiltinNode)) {
+    console.error(`[collect-dsh] require_builtin.node 缺失: ${requireBuiltinNode}（先构建 native/require-builtin）`);
+    process.exit(1);
+  }
+  const pkgDir = resolve(distDir, 'node_modules/node-addon-require-builtin-openharmony-arm64');
+  rmSync(pkgDir, { recursive: true, force: true });
+  mkdirSync(resolve(pkgDir, 'lib'), { recursive: true });
+  mkdirSync(resolve(pkgDir, 'prebuilt'), { recursive: true });
+  writeFileSync(
+    resolve(pkgDir, 'package.json'),
+    JSON.stringify({
+      name: 'node-addon-require-builtin-openharmony-arm64',
+      version: '0.1.6',
+      type: 'commonjs',
+      main: 'lib/index.js',
+    }) + '\n',
+  );
+  writeFileSync(
+    resolve(pkgDir, 'lib/index.js'),
+    '"use strict";\nconst path = require(\'path\');\nconst binding = require(path.join(__dirname, \'..\', \'prebuilt\', \'require_builtin.node\'));\nmodule.exports = binding;\n',
+  );
+  cpSync(requireBuiltinNode, resolve(pkgDir, 'prebuilt/require_builtin.node'));
+  console.log('[collect-dsh] require-builtin 平台包已物化到 dsh-dist/node_modules');
+}
+
+/**
+ * 把 require_builtin.node 与 better_sqlite3.node 投放到 electron/libs/arm64-v8a。
+ *
+ * HarmonyOS 链接器命名空间（default/ndk/moduleNs_default）不能访问 app files/ 沙箱，
+ * 任何从 files/ dlopen 的 .node 都失败（含已知可用的 better_sqlite3.node）；
+ * node_binding.cc 的重试把同名文件映射到 namespace 可达的 bundle/libs/arm64/。
+ * collectAllLibs:true 会把 libs/arm64-v8a 下的文件（含非 lib*.so 的 .node）一并打入 HAP。
+ */
+function stageAddonBinariesForLinkerRetry() {
+  const libsDir = resolve(projectRoot, 'electron/libs/arm64-v8a');
+  const bs3Node = resolve(distDir, 'node_modules/better-sqlite3/build/Release/better_sqlite3.node');
+  if (!existsSync(bs3Node)) {
+    console.error(`[collect-dsh] better_sqlite3.node 缺失: ${bs3Node}（injectBetterSqlite3 未生效）`);
+    process.exit(1);
+  }
+  mkdirSync(libsDir, { recursive: true });
+  cpSync(requireBuiltinNode, resolve(libsDir, 'require_builtin.node'));
+  cpSync(bs3Node, resolve(libsDir, 'better_sqlite3.node'));
+  console.log('[collect-dsh] require_builtin.node + better_sqlite3.node 已投放到 electron/libs/arm64-v8a');
+}
+
+/**
+ * 断言同级 dsh-market 的版本与固定常量一致（spec 012 / 201 FR-201-018）。
+ * 消除此前 README/profile/spec 三处版本声明不一致、构建期无法察觉的问题。
+ */
+function assertDshMarketVersion() {
+  const pkgPath = resolve(projectRoot, '../dsh-market/package.json');
+  if (!existsSync(pkgPath)) {
+    console.error(`[collect-dsh] dsh-market 未找到: ${pkgPath}`);
+    process.exit(1);
+  }
+  let version;
+  try {
+    version = JSON.parse(readFileSync(pkgPath, 'utf8')).version;
+  } catch (err) {
+    console.error(`[collect-dsh] dsh-market package.json 无法解析: ${err.message}`);
+    process.exit(1);
+  }
+  if (version !== DSH_MARKET_VERSION) {
+    console.error(`[collect-dsh] dsh-market 版本不符: 期望 ${DSH_MARKET_VERSION}，实际 ${version}`
+      + ` —— 更新 scripts/collect-dsh.mjs 的 DSH_MARKET_VERSION、profiles/desktop/package.json、README 与 specs/201-dsh-market 后再构建`);
+    process.exit(1);
+  }
+  console.log(`[collect-dsh] dsh-market 版本断言通过 (${version})`);
+}
+
+/**
+ * 清理 pnpm 引擎中非目标平台的产物以控体积 / 避免 rpmbuild 处理非目标架构 .node：
+ *  - `dist/node_modules/@reflink/reflink-{darwin,win32}-*`（clone 导入法的平台二进制，copy 路径不加载）
+ *  - `dist/vendor/*.exe`（Windows 专用辅助程序）
+ *  - `CHANGELOG.md`
+ */
+function prunePnpmEngine(root) {
+  // pnpm@10 ships reflink binaries at dist/ top level; pnpm@11 nests them under
+  // dist/node_modules/@reflink. Remove non-target ones (copy method loads none).
+  const distDir = resolve(root, 'dist');
+  if (existsSync(distDir)) {
+    for (const entry of readdirSync(distDir)) {
+      if (/^reflink\.(darwin|win32)/.test(entry)) {
+        rmSync(resolve(distDir, entry), { force: true });
+        console.log(`[collect-dsh] 清理 pnpm 非目标平台 reflink: ${entry}`);
+      }
+    }
+  }
+  const reflinkDir = resolve(root, 'dist/node_modules/@reflink');
+  if (existsSync(reflinkDir)) {
+    for (const entry of readdirSync(reflinkDir)) {
+      if (/^reflink-(darwin|win32)/.test(entry)) {
+        rmSync(resolve(reflinkDir, entry), { recursive: true, force: true });
+        console.log(`[collect-dsh] 清理 pnpm 非目标平台 reflink: ${entry}`);
+      }
+    }
+  }
+  const vendorDir = resolve(root, 'dist/vendor');
+  if (existsSync(vendorDir)) {
+    for (const entry of readdirSync(vendorDir)) {
+      if (entry.endsWith('.exe')) {
+        rmSync(resolve(vendorDir, entry), { force: true });
+        console.log(`[collect-dsh] 清理 pnpm Windows 辅助 exe: ${entry}`);
+      }
+    }
+  }
+  const changelog = resolve(root, 'CHANGELOG.md');
+  if (existsSync(changelog)) rmSync(changelog, { force: true });
+}
+
+/**
+ * 断言已物化的 pnpm 引擎产物：版本与 `PNPM_VERSION` 一致（FR-012-002），入口非空（FR-012-004）。
+ * 两条路径（新物化 / 已存在快路径）都调用，避免快路径绕过断言。
+ */
+function assertPnpmEngineArtifact(dest) {
+  const pkgPath = resolve(dest, 'package.json');
+  let version;
+  try {
+    version = JSON.parse(readFileSync(pkgPath, 'utf8')).version;
+  } catch (err) {
+    console.error(`[collect-dsh] pnpm 引擎 package.json 无法解析: ${err.message}`);
+    process.exit(1);
+  }
+  if (version !== PNPM_VERSION) {
+    console.error(`[collect-dsh] pnpm 引擎版本不符: 期望 ${PNPM_VERSION}，实际 ${version}`);
+    process.exit(1);
+  }
+  const entry = resolve(dest, 'bin', 'pnpm.cjs');
+  let size = 0;
+  try { size = statSync(entry).size; } catch { /* missing */ }
+  if (!(size > 0)) {
+    console.error(`[collect-dsh] pnpm 引擎入口缺失或为空: ${entry}`);
+    process.exit(1);
+  }
+}
+
+/**
+ * 物化纯 JS pnpm 引擎（`pnpm` 包）到 `dsh-dist/node_modules/pnpm`（spec 012 FR-012-001~004）。
+ *
+ * 引擎选型见 docs/012-pnpm+dsh-market.md：采用自带打包 CLI 的 `pnpm` 包（进程内由
+ * `harmony-plugin-market-runtime` 在 worker 线程中 import 其 `dist/pnpm.mjs`）。
+ * 以宿主 pnpm 安装到临时目录后整包拷贝；版本不符即硬失败；幂等。
+ */
+function collectMarketPNPM() {
+  // Distinct dir, NOT node_modules/pnpm: `pnpm deploy` already places dsh's own
+  // `pnpm` dependency (currently 11.7.0) at node_modules/pnpm, and overwriting
+  // it would fight dsh's closure. Keep our pinned engine self-contained here.
+  const dest = resolve(distDir, 'node_modules/dsh-market-pnpm');
+  if (existsSync(resolve(dest, 'package.json'))) {
+    assertPnpmEngineArtifact(dest);
+    console.log('[collect-dsh] pnpm 引擎已物化');
+    return;
+  }
+  const staging = resolve(projectRoot, '.pnpm-engine-staging');
+  rmSync(staging, { recursive: true, force: true });
+  mkdirSync(staging, { recursive: true });
+  writeFileSync(resolve(staging, 'package.json'),
+    JSON.stringify({ name: 'pnpm-engine-staging', version: '0.0.0', private: true }, null, 2) + '\n');
+  try {
+    run(`pnpm add pnpm@${PNPM_VERSION} --config.node-linker=hoisted --ignore-scripts`, staging);
+    const src = resolve(staging, 'node_modules/pnpm');
+    if (!existsSync(resolve(src, 'package.json'))) {
+      console.error(`[collect-dsh] pnpm 引擎物化失败（未落地）: ${src}`);
+      process.exit(1);
+    }
+    cpSync(src, dest, { recursive: true, dereference: true });
+    prunePnpmEngine(dest);
+    assertPnpmEngineArtifact(dest);
+    console.log(`[collect-dsh] pnpm 引擎已物化 (pnpm@${PNPM_VERSION})`);
+  } finally {
+    rmSync(staging, { recursive: true, force: true });
+  }
+}
+
+/**
+ * 物化 git 运行时（需求 204）：isomorphic-git 及其整棵依赖闭包。
+ *
+ * **只物化 isomorphic-git** —— jsdiff 复用宿主闭包：`diff@^9.0.0` 本就是 dsh 自己的依赖
+ * （`fs/tool-fs`、`deliverables/workspace-changes`、`client/ui-trajectory`、`client/ui-primitives`
+ * 均声明），且 dsh `app-boot` 的 profile resolution 会把 profile 包的裸名请求路由到宿主闭包。
+ * 真机实测：从插件自身目录解析 `diff` 命中 `<userData>/dsh-dist/node_modules/diff@9.0.0`，
+ * 其 ESM 入口导出 `createTwoFilesPatch`、`structuredPatch` 且输出符合预期。故这里**不再**重复
+ * 分发一份 jsdiff —— 那会多出约 800 KB，并与宿主同名包形成遮蔽风险。
+ * （插件侧仍以 peerDependencies 声明 `diff`，并以 major 断言守住这个复用。）
+ *
+ * **落位**：isomorphic-git 的整棵闭包嵌套在**插件自己**的 `node_modules/` 下
+ * （`dsh-dist/node_modules/harmony-plugin-git/node_modules/`），绝不落顶层，也不落
+ * `dsh-dist/node_modules/isomorphic-git/node_modules/` —— 后者不会被 main.js 的
+ * `ensureDshPluginsProfileLink()` 一起复制到 `$DSH_HOME/profiles/node_modules/`（它只整目录
+ * 复制 `harmony-plugin-*`），插件在设备上就解析不到自己那一份闭包。
+ * 依据是实测事实：顶层已有 dsh 自己的 `pako@0.2.9`、`ignore@5.3.2`、`diff@9.0.0`，而
+ * isomorphic-git 需要它自己那份（更新的）`pako`/`ignore`；嵌套后 Node 的「最近优先」解析
+ * 保证双方各用各的，互不覆盖。dsh 的 profile resolution 会把 `isomorphic-git` 这个裸名请求
+ * 路由到宿主闭包，因此顶层落位不是解析所必需的 —— 嵌套纯为隔离。
+ *
+ * 版本 pin 为常量（对齐 DSH_MARKET_VERSION / PNPM_VERSION 先例）；幂等：目标已在且版本相符即跳过。
+ * 缺入口或版本不符一律硬失败，避免把半成品打进包。硬失败一律**抛错**而非 `process.exit(1)`：
+ * 本函数在 `try/finally` 里清 staging，退出进程会跳过 finally，把整棵闭包留在工程根目录；
+ * 终止进程由调用点统一负责。
+ */
+function collectGitRuntime() {
+  const pluginDest = resolve(distDir, 'node_modules', 'harmony-plugin-git');
+  const nested = resolve(pluginDest, 'node_modules');
+
+  if (existsSync(resolve(nested, 'isomorphic-git', 'package.json'))) {
+    assertGitRuntimeArtifact(nested);
+    console.log('[collect-dsh] git 运行时已物化');
+    return;
+  }
+  if (!existsSync(resolve(pluginDest, 'package.json'))) {
+    throw new Error(`插件目录缺失，无法物化 git 运行时: ${pluginDest}`);
+  }
+
+  const staging = resolve(projectRoot, '.git-runtime-staging');
+  rmSync(staging, { recursive: true, force: true });
+  mkdirSync(staging, { recursive: true });
+  writeFileSync(resolve(staging, 'package.json'),
+    JSON.stringify({ name: 'git-runtime-staging', version: '0.0.0', private: true }, null, 2) + '\n');
+  try {
+    run(`pnpm add isomorphic-git@${ISOMORPHIC_GIT_VERSION} --config.node-linker=hoisted --ignore-scripts`, staging);
+    const srcNm = resolve(staging, 'node_modules');
+    if (!existsSync(resolve(srcNm, 'isomorphic-git', 'package.json'))) {
+      throw new Error('git 运行时物化失败（isomorphic-git 未落地）');
+    }
+    rmSync(nested, { recursive: true, force: true });
+    mkdirSync(nested, { recursive: true });
+    // hoisted staging 已是扁平结构，整目录搬运。跳过 pnpm 自身的簿记条目：`.pnpm`（内容寻址
+    // 目录）、`.bin`（可执行垫片）、`.modules.yaml` 与 `.pnpm-workspace-state-v1.json`（安装期
+    // 的工作区状态）都是安装期的账本而非运行时依赖，随包发出去只会变成将来的诊断噪音；staging
+    // 根清单 `package.json` 同理（插件自己的清单已经在上一层）。判据取「点号开头 + package.json」，
+    // 这样 pnpm 以后新增别的账本文件也自动跳过。
+    for (const entry of readdirSync(srcNm)) {
+      if (entry.startsWith('.') || entry === 'package.json') continue;
+      cpSync(resolve(srcNm, entry), resolve(nested, entry), { recursive: true, dereference: true });
+    }
+    assertGitRuntimeArtifact(nested);
+    const packages = readdirSync(nested).filter(entry => !entry.startsWith('.')).length;
+    console.log(`[collect-dsh] git 运行时已物化 (isomorphic-git@${ISOMORPHIC_GIT_VERSION}，闭包 ${packages} 个包，嵌套于插件内)`);
+  } finally {
+    rmSync(staging, { recursive: true, force: true });
+  }
+}
+
+/**
+ * 断言 git 运行时载体就位：版本与 pin 一致，且 ESM 入口与 Node HTTP 客户端存在且非空。
+ * 任一不满足即硬失败 —— 这两种缺陷都只会在运行期第一次调用工具时暴露。
+ *
+ * 硬失败一律抛错，不用 `process.exit(1)`：调用点在 `try/finally` 内，退出进程会跳过 finally
+ * 的 staging 清理，把整棵依赖闭包（55 个包）留在工程根目录里。终止进程由调用点统一负责。
+ * @throws {Error} 包清单缺失或不可解析、版本与 pin 不符、入口缺失或为空。
+ */
+function assertGitRuntimeArtifact(nested) {
+  const pkgPath = resolve(nested, 'isomorphic-git', 'package.json');
+  if (!existsSync(pkgPath)) {
+    throw new Error(`git 运行时缺 isomorphic-git 包清单: ${pkgPath}`);
+  }
+  let actual;
+  try {
+    actual = JSON.parse(readFileSync(pkgPath, 'utf8')).version;
+  } catch (err) {
+    throw new Error(`isomorphic-git 包清单不可解析: ${err.message}`);
+  }
+  if (actual !== ISOMORPHIC_GIT_VERSION) {
+    throw new Error(`isomorphic-git 版本不符: 期望 ${ISOMORPHIC_GIT_VERSION}，实际 ${actual}`);
+  }
+  for (const rel of ['isomorphic-git/index.js', 'isomorphic-git/http/node/index.js']) {
+    const entry = resolve(nested, rel);
+    let size = 0;
+    try { size = statSync(entry).size; } catch { /* 缺失按 0 处理 */ }
+    if (!(size > 0)) {
+      throw new Error(`git 运行时入口缺失或为空: ${entry}`);
+    }
+  }
+}
+// 0. 校验
+if (!existsSync(dshRoot)) {
+  console.error(`[collect-dsh] dsh 未找到: ${dshRoot}`);
+  process.exit(1);
+}
+
+// 0b. dsh-market 版本断言（spec 012/201）
+assertDshMarketVersion();
+
+// 1. 清理旧产物
+if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true });
+
+// 2. pnpm deploy 物化依赖闭包（apps/cli 的 dependencies 含 web profile 全部插件）
+run(`pnpm --filter @deepseek-ai/dsh deploy --legacy "${distDir}"`, dshRoot);
+
+// 3. 物化顶层 Junction（js-yaml 等）
+console.log('\n[collect-dsh] 物化 Junction 为真实文件...');
+materializeJunctions(join(distDir, 'node_modules'));
+
+// 4. 补全 @deepseek-ai 包（peer 依赖与 link: override）
+console.log('\n[collect-dsh] 补全 @deepseek-ai 包...');
+collectWorkspacePackages();
+
+// 4b. 物化 landlock-run 入口包（native 原生模块，win32 无平台 .node，但沙箱插件静态 import 其入口；
+//     产品概念设计已确认 MVP 裁掉 landlock 原生沙箱，此处仅物化入口使 import 不报错）
+const landlockEntry = resolve(dshRoot, 'native/landlock-run/packages/entry');
+copyPackage(landlockEntry, resolve(distDir, 'node_modules/@deepseek-ai'));
+
+// 5. 物化非 hoisted 依赖（zod 等）
+console.log('\n[collect-dsh] 物化非 hoisted 依赖...');
+collectNonHoistedDeps();
+
+// 6. 删除 .pnpm store（已物化，冗余）
+const pnpmStore = resolve(distDir, 'node_modules/.pnpm');
+if (existsSync(pnpmStore)) rmSync(pnpmStore, { recursive: true, force: true });
+
+// 6b. 清理非目标架构的原生模块 prebuilds（node-pty 等），避免 rpmbuild brp-strip 失败
+console.log('\n[collect-dsh] 清理非目标架构 prebuilds...');
+pruneForeignPrebuilds(join(distDir, 'node_modules'));
+
+// 6c. 写 sharp 纯 JS stub（libvips 在鸿蒙 aarch64 不可用）
+applySharpStub();
+
+// 6d. 注入 better-sqlite3 v138（Windows 不安装 native addon，部署包使用 OpenHarmony aarch64 成品）
+injectBetterSqlite3();
+
+// 6f. 物化 require-builtin OpenHarmony 平台包（loader optional-package 锚点）
+materializeRequireBuiltinPlatformPackage();
+
+// 6g. 把 require_builtin.node + better_sqlite3.node 投放到 electron/libs/arm64-v8a
+//     （files/ 链接器命名空间不可达，node_binding.cc 重试到 bundle/libs/arm64）
+stageAddonBinariesForLinkerRetry();
+
+// 6e. 先互校两处 preset 行（与 src-main/main.js 逐条一致），再适配 agent preset
+//     （禁用依赖 shell/subprocess/pty 的行，补齐列目录工具行）
+assertPresetRowsMirrorMainJs();
+assertClientCopyPatched();
+patchAgentPresets();
+
+// 7. 复制 web dist（pnpm deploy 不物化 build 产物，frontend-static 经
+//    require.resolve('@deepseek-ai/dsh-web-frontend/dist/index.html') 定位）
+const webDist = resolve(dshRoot, 'apps/web/dist');
+const webFrontendDist = resolve(distDir, 'node_modules/@deepseek-ai/dsh-web-frontend/dist');
+if (existsSync(webDist)) {
+  cpSync(webDist, webFrontendDist, { recursive: true });
+  console.log('[collect-dsh] web dist 已复制到 dsh-web-frontend/dist');
+} else {
+  console.error('[collect-dsh] web dist 缺失（先跑 npm run build:dsh）');
+  process.exit(1);
+}
+
+// 8. 复制 desktop profile 到 dsh-dist/profiles/desktop（供 host.ts 复制到 $DSH_HOME）
+const profileSrc = resolve(projectRoot, 'profiles/desktop');
+const profileDest = resolve(distDir, 'profiles/desktop');
+if (existsSync(profileSrc)) {
+  cpSync(profileSrc, profileDest, { recursive: true });
+  console.log('[collect-dsh] desktop profile 已复制到 dsh-dist/profiles/desktop');
+}
+
+// 9. 物化 dsh-market（插件市场）到 dsh-dist/node_modules/dshmarket
+collectDshMarket();
+
+// 10. 物化本工程 plugins/ 下的专用插件（harmony-plugin-*）到 dsh-dist/node_modules/<包名>。
+//     刻意放在最后：此前所有清理动作（.pnpm 删除、非目标架构 prebuilds 剪裁）都已跑完，
+//     插件目录落在 dsh-dist.tar.gz 内，不经过 resfile/app 的 demo 清理，故无需 keep 白名单。
+collectPlugins();
+
+// 10b. 物化纯 JS pnpm 引擎（spec 012）：dsh-dist/node_modules/pnpm（进程内安装引擎）。
+collectMarketPNPM();
+
+// 10c. 物化 git 运行时（需求 204）：isomorphic-git 及其整棵依赖闭包，嵌套在插件自己的
+//      node_modules 下；jsdiff 复用宿主闭包，不再重复发一份（理由见 collectGitRuntime 注释）。
+//      失败必须在 staging 清理（collectGitRuntime 的 finally）之后才终止进程，所以这里统一收敛：
+//      抛错时临时目录已经清掉，再打印一行原因并以非零码退出，工程根目录不留残留。
+try {
+  collectGitRuntime();
+} catch (error) {
+  console.error(`[collect-dsh] ${error instanceof Error ? error.message : String(error)}`);
+  process.exit(1);
+}
+
+console.log(`\n[collect-dsh] 完成: ${distDir}`);

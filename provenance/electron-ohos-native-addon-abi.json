@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-native-addon-abi",
+  "sources": [
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "scripts/collect-dsh.mjs",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/scripts/collect-dsh.mjs",
+      "sha256": "eb48f3285cc3a286b74b4129436ac28c3215b786480a22dfa86f461729be4c11",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "specs/005-build-pipeline/spec.md",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/specs/005-build-pipeline/spec.md",
+      "sha256": "2ed337b19d3e5335c807e71f83e4e3de05df6f007e3ccb69211e677c40bd0f19",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "scripts/lib/sharp-stub-body.js",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/scripts/lib/sharp-stub-body.js",
+      "sha256": "1777f1b1923804949c86d2b04f19c0f899961a94468d16680c43cd1b12cada35",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-native-addon-abi",
+    "project": "dsh-desktop-hos",
+    "repository": "https://github.com/fellow99/dsh-desktop-hos",
+    "commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+    "paths": [
+      "scripts/collect-dsh.mjs",
+      "specs/005-build-pipeline/spec.md",
+      "scripts/lib/sharp-stub-body.js"
+    ],
+    "source_reported_validation": "The build specification reports that the tested runtime exposed Node ABI 138 and that a matching better-sqlite3 AArch64 artifact was injected, while sharp, node-pty and koffi were stubbed or disabled. Build/device results were not rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting notes and build scripts; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron runtime or the Qt for OpenHarmony toolchain."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native runtime binaries and the original build environment were not reproduced in this review.",
+    "The tested ABI value is tied to one Electron/Node release; the mechanism is generalized, but the number must be re-read on another runtime."
+  ]
+}
