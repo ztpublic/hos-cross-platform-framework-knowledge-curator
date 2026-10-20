@@ -518,6 +518,35 @@
       "coverage": "Source-reviewed OH-specific KMP artifact selection, Compose renderer choice and rawfile resource loading.",
       "source_reported_validation": "The README reports Android/iOS/OH targets and the build configuration is present; no build or device run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "ohos-electron-hap",
+      "kind": "project",
+      "url": "https://github.com/ohosvscode/ohos_electron_hap",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "analyzed_commit": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "license": "No repository-level license found.",
+      "license_notice": "maintenance/licenses/ohos-electron-hap-NOTICE.md",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ohos_electron_hap",
+      "working_tree_status": "GitHub checkout incomplete (mass deletions); evidence read from HEAD blobs.",
+      "reviewed_paths": [
+        "QUICKSTART.md",
+        "web_engine/src/main/ets/adapter/SubWindowAdapter.ets",
+        "web_engine/src/main/ets/components/WebSubWindow.ets",
+        "web_engine/src/main/ets/components/WebWindow.ets",
+        "web_engine/src/main/module.json5"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-window-types",
+        "electron-ohos-main-inspect"
+      ],
+      "last_run": "2026-10-20-project-research-11.json",
+      "coverage": "Source-reviewed Electron OH subwindow/floating-window host logic and main-process inspection setup.",
+      "source_reported_validation": "The template documents the window/debug workflows and provides host adapters; no build or device run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

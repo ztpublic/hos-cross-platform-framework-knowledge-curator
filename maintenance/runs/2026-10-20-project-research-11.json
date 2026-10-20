@@ -1,0 +1,68 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "ohos-electron-hap"
+  ],
+  "entries_before": 176,
+  "entries_after": 178,
+  "query_families": [
+    "Electron HAP templates and multi-window/debug contracts",
+    "GitCode OpenHarmony PC organization ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "ohosvscode/ohos_electron_hap",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "Canonical Electron-on-Harmony HAP template with windowInfo sub/floating windows, permissions and main-process inspect instructions."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_joplin",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Joplin finished-HAP port; upstream README only surfaced in the raw fetch, packaging source not reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_kdesvn",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished Electron HAP; overlaps existing resfile/packaging findings."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Checkout incomplete; only README known issues (clipboard/font) reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_QElectroTech",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Host-only snapshot without the business .so."
+    },
+    {
+      "project": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "App-specific Electron port with LFS assets; not source-reviewed yet."
+    }
+  ],
+  "added_entries": [
+    "electron-ohos-window-types",
+    "electron-ohos-main-inspect"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The template has no repository-level license; only generalized mechanisms were recorded and no source code was copied.",
+    "The checkout was incomplete; evidence was read from HEAD blobs.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 178 entries",
+    "kb.py check -> OK: 178 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for windowInfo, floating window and inspect terms",
+    "git diff review before commit"
+  ]
+}

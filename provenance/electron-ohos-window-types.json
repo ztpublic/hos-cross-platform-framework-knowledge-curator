@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-window-types",
+  "sources": [
+    {
+      "collection": "ohos-electron-hap",
+      "original_path": "web_engine/src/main/ets/adapter/SubWindowAdapter.ets",
+      "snapshot": "provenance/snapshots/projects/ohos-electron-hap/web_engine/src/main/ets/adapter/SubWindowAdapter.ets",
+      "sha256": "3e743f01c22a639e8777cebbfa7e694b9a030b47b82d78b4b575316ff6734c51",
+      "revision": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "license": "No repository-level license found.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-electron-hap",
+      "original_path": "web_engine/src/main/ets/components/WebSubWindow.ets",
+      "snapshot": "provenance/snapshots/projects/ohos-electron-hap/web_engine/src/main/ets/components/WebSubWindow.ets",
+      "sha256": "b0c73e4ce2624a6bc7e76c13bb844124e283cfb61284dc2f096c86f7fe01619f",
+      "revision": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "license": "No repository-level license found.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-electron-hap",
+      "original_path": "web_engine/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-electron-hap/web_engine/src/main/module.json5",
+      "sha256": "59c59a195aecc620cb40f3d4b1776a76aed01d116c1360711c2bdde6cac05b0b",
+      "revision": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "license": "No repository-level license found.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-electron-hap",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/ohos-electron-hap/README.md",
+      "sha256": "80f43e1d241721601c50955c64add927d261b260274546ace585b36bae39f441",
+      "revision": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "license": "No repository-level license found.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-window-types",
+    "project": "ohos-electron-hap",
+    "repository": "https://github.com/ohosvscode/ohos_electron_hap",
+    "commit": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+    "paths": [
+      "web_engine/src/main/ets/adapter/SubWindowAdapter.ets",
+      "web_engine/src/main/ets/components/WebSubWindow.ets",
+      "web_engine/src/main/module.json5"
+    ],
+    "source_reported_validation": "The template documents windowInfo types and implements subwindow creation, reuse, minimize, move/resize and cache eviction, with floating-window permissions in the web engine manifest. No device run was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the host adapter, manifest and template documentation; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron host window/debug integration."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The template targets an older API level and its runtime binaries were not reproduced.",
+    "The template targets an older API level; multi-display behavior and the window limit must be rechecked on the target build."
+  ]
+}
