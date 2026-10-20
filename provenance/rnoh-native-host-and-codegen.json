@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-native-host-and-codegen",
+  "sources": [
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "0891095cd7b5926299cbb937686a1f9b617bac6ca71406559b05a5c3819cf971",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "sha256": "cd495c234bbaa87e52ddaa0f1edde1e4d8b798614204f046464b38a57bca50de",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "sha256": "1a808c41e8acd51ec6ca4b268aae88097a1ffb3221b112088ed63b20e23052b8",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/src/main/ets/pages/Index.ets",
+      "sha256": "2e5e50d9df5dfcf75f97c4aa2149582b6d9c1ee485d6e7b754c8f753e8d410e2",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/oh-package.json5",
+      "sha256": "4031fe8b081730ce9c1d2508bd66b68c57e8220d34f8dd8a11e04107da078c7c",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/package.json",
+      "sha256": "5778056c6d13eaa27ce857ea91655a6eb0bcd561c118bffba035e4a2a34c063b",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rnoh-native-host-and-codegen",
+    "project": "react-native-harmony-seed",
+    "repository": "https://github.com/kuma0605/react-native-harmony-seed",
+    "commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+    "paths": [
+      "harmony/entry/src/main/cpp/CMakeLists.txt",
+      "harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "harmony/entry/src/main/ets/pages/Index.ets",
+      "harmony/entry/oh-package.json5"
+    ],
+    "source_reported_validation": "The repository implements the RNOH native host, generated package, C++ package provider, ArkTS package factory and RNApp host. No build or device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The repository has no license file; only generalized mechanisms were recorded."
+  ]
+}

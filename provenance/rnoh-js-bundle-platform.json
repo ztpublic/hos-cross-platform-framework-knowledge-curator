@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-js-bundle-platform",
+  "sources": [
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "metro.config.js",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/metro.config.js",
+      "sha256": "5454caced2fc53b5385c250ea40f494cde07626e2517a8cf5cc6ceff663d9200",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/src/main/ets/pages/Index.ets",
+      "sha256": "2e5e50d9df5dfcf75f97c4aa2149582b6d9c1ee485d6e7b754c8f753e8d410e2",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/package.json",
+      "sha256": "5778056c6d13eaa27ce857ea91655a6eb0bcd561c118bffba035e4a2a34c063b",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rnoh-js-bundle-platform",
+    "project": "react-native-harmony-seed",
+    "repository": "https://github.com/kuma0605/react-native-harmony-seed",
+    "commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+    "paths": [
+      "metro.config.js",
+      "harmony/entry/src/main/ets/pages/Index.ets",
+      "package.json"
+    ],
+    "source_reported_validation": "The repository implements the harmony Metro platform, RNOH Metro config merge, platform-specific InitializeCore selection and a bundle-provider chain. No runtime run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The repository has no license file; only generalized mechanisms were recorded."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "module": {
+    "name": "meeting",
+    "type": "feature",
+    "description": "$string:module_desc",
+    "mainElement": "MeetingAbility",
+    "deviceTypes": [
+      "tablet",
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "isolationMode": "isolationOnly",
+    "abilities": [
+      {
+        "name": "MeetingAbility",
+        "launchType": "specified",
+        "srcEntry": "./ets/meetingability/MeetingAbility.ets",
+        "description": "$string:MeetingAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:MeetingAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground":  "$color:start_window_background",
+        "exported": true
+      }
+    ],
+    requestPermissions: [
+      {
+        "name": "ohos.permission.PREPARE_APP_TERMINATE"
+      },
+      {
+        "reason" : "$string:reason_record",
+        "usedScene" : { "abilities" : [ "MeetingAbility" ], "when" : "always" },
+        "name": "ohos.permission.READ_WRITE_DOCUMENTS_DIRECTORY"
+      },
+      {
+        "reason" : "$string:camera_use",
+        "usedScene" : { "abilities" : [ "MeetingAbility" ], "when" : "always" },
+        "name" : "ohos.permission.CAMERA"
+      },
+      {
+        "reason" : "$string:reason_mic",
+        "usedScene" : { "abilities" : [ "MeetingAbility" ], "when" : "always" },
+        "name" : "ohos.permission.MICROPHONE"
+      },
+      {
+        "name": "ohos.permission.CUSTOM_SCREEN_CAPTURE",
+        "reason": "$string:reason_screen",
+        "usedScene": {
+          "abilities": [
+            "Screen_toolAbility"
+          ],
+          "when":"inuse"
+        }
+      }
+      ]
+  }
+}

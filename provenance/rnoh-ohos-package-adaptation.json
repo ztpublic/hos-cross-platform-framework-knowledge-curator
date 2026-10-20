@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-ohos-package-adaptation",
+  "sources": [
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/harmony/entry/oh-package.json5",
+      "sha256": "4031fe8b081730ce9c1d2508bd66b68c57e8220d34f8dd8a11e04107da078c7c",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/package.json",
+      "sha256": "5778056c6d13eaa27ce857ea91655a6eb0bcd561c118bffba035e4a2a34c063b",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "scripts/repack-ohos-hars.sh",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/scripts/repack-ohos-hars.sh",
+      "sha256": "fcd8f7172dacd44ee1dc333aa0db445683cb7b4405ada8e917ea91d28bce5cd7",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "docs/rnoh/react-native-webview.md",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/docs/rnoh/react-native-webview.md",
+      "sha256": "d02c693a5a452744d8eb098dc1af22872c7ca83994e043f89f01623cad9b5be8",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "react-native-harmony-seed",
+      "original_path": "patches/@react-native-ohos+react-native-document-picker+9.3.2.patch",
+      "snapshot": "provenance/snapshots/projects/react-native-harmony-seed/patches/@react-native-ohos+react-native-document-picker+9.3.2.patch",
+      "sha256": "0c9f87a5918988cf938192a28e8b02847d2c209c843746f735eaab234829b565",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rnoh-ohos-package-adaptation",
+    "project": "react-native-harmony-seed",
+    "repository": "https://github.com/kuma0605/react-native-harmony-seed",
+    "commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+    "paths": [
+      "harmony/entry/oh-package.json5",
+      "package.json",
+      "scripts/repack-ohos-hars.sh",
+      "docs/rnoh/react-native-webview.md"
+    ],
+    "source_reported_validation": "The repository lists OH fork packages and HAR paths, patches incompatible packages, and repacks source HARs with patched ETS sources. No runtime run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The repository has no license file; only generalized mechanisms were recorded."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-secondary-ability-process",
+  "sources": [
+    {
+      "collection": "ohos-pc-launcher",
+      "original_path": "DingTalk-Build/dingtalk/src/conference_process_impl_ohos.cpp",
+      "snapshot": "provenance/snapshots/projects/ohos-pc-launcher/DingTalk-Build/dingtalk/src/conference_process_impl_ohos.cpp",
+      "sha256": "30045ea4eb3fa21d1637e36bbe53cc1ef0ed9da04102f5e088eb7d7c4059c0a3",
+      "revision": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "license": "BSD-3-Clause-style source license with DingTalk copyright; notice retained.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-pc-launcher",
+      "original_path": "meeting/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-pc-launcher/meeting/src/main/module.json5",
+      "sha256": "6f0801d261879e0d474b020aa6ba80043352f9835cc3007b9e541f506bb256e0",
+      "revision": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "license": "BSD-3-Clause-style source license with DingTalk copyright; notice retained.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-pc-launcher",
+      "original_path": "meeting/src/main/ets/meetingability/MeetingAbility.ets",
+      "snapshot": "provenance/snapshots/projects/ohos-pc-launcher/meeting/src/main/ets/meetingability/MeetingAbility.ets",
+      "sha256": "95fd9046b5f41d33c0c358bce618521f6b81933e53d9cb56d172e2b081ae888a",
+      "revision": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "license": "BSD-3-Clause-style source license with DingTalk copyright; notice retained.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-pc-launcher",
+      "original_path": "entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/ohos-pc-launcher/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "1bda46940d18db11b379f34dc4016891b96773ad7a8975011e73486fcc51fbed",
+      "revision": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "license": "BSD-3-Clause-style source license with DingTalk copyright; notice retained.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-secondary-ability-process",
+    "project": "ohos-pc-launcher",
+    "repository": "https://gitee.com/dingtalkrepo/ohos-pc-launcher",
+    "commit": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+    "paths": [
+      "DingTalk-Build/dingtalk/src/conference_process_impl_ohos.cpp",
+      "meeting/src/main/module.json5",
+      "meeting/src/main/ets/meetingability/MeetingAbility.ets"
+    ],
+    "source_reported_validation": "The repository README describes a dual-process HarmonyOS PC launch architecture. The source shows an isolation-only feature module, a want with bundle/module/ability fields, physical-pixel start options and caller-side permission checks. Device results were not rerun."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The repository is an architecture demonstration with a proprietary application license; only the launch mechanism was extracted."
+  ]
+}

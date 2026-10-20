@@ -112,6 +112,96 @@
       "source_reported_validation": "A release HAP on a 2in1 device loaded 25 plugins, registered formats and opened layouts; not rerun.",
       "checked_at": "2026-10-20",
       "license_notice": "maintenance/licenses/klayout-GPL-3.0.txt"
+    },
+    {
+      "id": "ohos-pc-launcher",
+      "kind": "project",
+      "url": "https://gitee.com/dingtalkrepo/ohos-pc-launcher",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "master",
+      "observed_commit": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "analyzed_commit": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "license": "BSD-3-Clause-style source license with DingTalk copyright; notice retained.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ohos-pc-launcher",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "DingTalk-Build/dingtalk/src/conference_process_impl_ohos.cpp",
+        "meeting/src/main/ets/meetingability/MeetingAbility.ets",
+        "meeting/src/main/module.json5"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-secondary-ability-process"
+      ],
+      "last_run": "2026-10-20-project-research-2.json",
+      "coverage": "Source-reviewed a Qt dual-process PC launch architecture.",
+      "source_reported_validation": "The README describes a dual-process PC launch architecture; no device run was rerun.",
+      "checked_at": "2026-10-20",
+      "license_notice": "maintenance/licenses/ohos-pc-launcher-BSD.txt"
+    },
+    {
+      "id": "compose-multiplatform-harmony",
+      "kind": "project",
+      "url": "https://github.com/mucute/ComposeMultiplatformHarmony",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "analyzed_commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ComposeMultiplatformHarmony",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "composeApp/build.gradle.kts",
+        "composeApp/src/ohosMain/kotlin/com.mucute.myapplication/MainArkUIViewController.kt",
+        "docs/harmony-cmp-on-official-kmp.md",
+        "gradle/libs.versions.toml",
+        "harmonyApp/entry/src/main/cpp/CMakeLists.txt",
+        "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+        "harmonyApp/entry/src/main/ets/pages/Index.ets",
+        "settings.gradle.kts"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-compose-target",
+        "kmp-ohos-compose-host"
+      ],
+      "last_run": "2026-10-20-project-research-2.json",
+      "coverage": "Source-reviewed an OH-adapted Compose Multiplatform target and ArkTS host.",
+      "source_reported_validation": "The README and notes describe a working OH HAP; no build was rerun.",
+      "checked_at": "2026-10-20"
+    },
+    {
+      "id": "react-native-harmony-seed",
+      "kind": "project",
+      "url": "https://github.com/kuma0605/react-native-harmony-seed",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "analyzed_commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "license": "No repository-level license found.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/react-native-harmony-seed",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "docs/rnoh/react-native-webview.md",
+        "harmony/entry/oh-package.json5",
+        "harmony/entry/src/main/cpp/CMakeLists.txt",
+        "harmony/entry/src/main/cpp/PackageProvider.cpp",
+        "harmony/entry/src/main/ets/RNPackagesFactory.ets",
+        "harmony/entry/src/main/ets/pages/Index.ets",
+        "metro.config.js",
+        "package.json",
+        "scripts/repack-ohos-hars.sh"
+      ],
+      "knowledge_ids": [
+        "rnoh-native-host-and-codegen",
+        "rnoh-js-bundle-platform",
+        "rnoh-ohos-package-adaptation"
+      ],
+      "last_run": "2026-10-20-project-research-2.json",
+      "coverage": "Source-reviewed an RNOH native host, harmony Metro bundle and OH package adaptation.",
+      "source_reported_validation": "The README describes an RNOH seed application; no build or device run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-compose-host",
+  "sources": [
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "composeApp/src/ohosMain/kotlin/com.mucute.myapplication/MainArkUIViewController.kt",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/composeApp/src/ohosMain/kotlin/com.mucute.myapplication/MainArkUIViewController.kt",
+      "sha256": "d91fb6b12c48836227614bed0729eb3dbb3846eec0e286866d50783e1a7144a9",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "ca5569dc0fea59c8d24afda7948f7057ae6e810373060aea1d266846be31fe9a",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "harmonyApp/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/harmonyApp/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "8cf78c20f6070c09a5ff207db80d84e77c00f509872d453e9fe4f1de8a9db5bf",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "sha256": "cf6c9ae899f0a4a81ffc6bc3eb3fb6c6cc2c25053a27b63fc28cf1b4f2e2c2ac",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "composeApp/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/composeApp/build.gradle.kts",
+      "sha256": "8d67a500a240ab5e456025db73381ece116ac7df42f5a55cb516a0ef9c32b5c2",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "kmp-ohos-compose-host",
+    "project": "compose-multiplatform-harmony",
+    "repository": "https://github.com/mucute/ComposeMultiplatformHarmony",
+    "commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+    "paths": [
+      "composeApp/src/ohosMain/kotlin/com.mucute.myapplication/MainArkUIViewController.kt",
+      "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "harmonyApp/entry/src/main/cpp/CMakeLists.txt",
+      "harmonyApp/entry/src/main/ets/pages/Index.ets"
+    ],
+    "source_reported_validation": "The repository contains the Kotlin/Native controller, the NAPI registration, the CMake link order and the ArkTS mounting code. Its notes describe a working HAP; no build or device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The adapter HAR and private Maven artifacts were not independently obtained; the runtime result remains source-reported."
+  ]
+}

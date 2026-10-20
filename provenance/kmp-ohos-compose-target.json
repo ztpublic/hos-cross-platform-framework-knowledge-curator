@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-compose-target",
+  "sources": [
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "composeApp/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/composeApp/build.gradle.kts",
+      "sha256": "8d67a500a240ab5e456025db73381ece116ac7df42f5a55cb516a0ef9c32b5c2",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "docs/harmony-cmp-on-official-kmp.md",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/docs/harmony-cmp-on-official-kmp.md",
+      "sha256": "576d30098f332f8308dcbe6af4b8dfad36c743ddbe862c649fad2074a18737f5",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "gradle/libs.versions.toml",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/gradle/libs.versions.toml",
+      "sha256": "774a489e159b6cddfc04fa8993a50d1e834b2ef8439e4464198612d30918a994",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "compose-multiplatform-harmony",
+      "original_path": "settings.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/compose-multiplatform-harmony/settings.gradle.kts",
+      "sha256": "847fc2df372f969bef37a71dfaf02c4b092594897f78922991c885849186e187",
+      "revision": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "license": "No repository-level license found; README states the license is unspecified.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "kmp-ohos-compose-target",
+    "project": "compose-multiplatform-harmony",
+    "repository": "https://github.com/mucute/ComposeMultiplatformHarmony",
+    "commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+    "paths": [
+      "composeApp/build.gradle.kts",
+      "docs/harmony-cmp-on-official-kmp.md",
+      "gradle/libs.versions.toml",
+      "settings.gradle.kts"
+    ],
+    "source_reported_validation": "The repository documents and implements a three-target build: official Android/desktop artifacts, OH-adapted Compose artifacts, an ohosArm64 shared library and a target-specific dependency redirect. No build was rerun for this database."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, build scripts and integration notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the QtOH, Compose or RNOH integration contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The adapted artifacts come from an external Maven repository that may not be publicly reachable; the version suffix and dependency coordinates must be revalidated."
+  ]
+}

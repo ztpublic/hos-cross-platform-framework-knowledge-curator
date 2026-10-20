@@ -1,0 +1,107 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "ohos-pc-launcher",
+    "compose-multiplatform-harmony",
+    "react-native-harmony-seed"
+  ],
+  "entries_before": 146,
+  "entries_after": 152,
+  "query_families": [
+    "Gitee Qt/HarmonyOS PC multi-process and launcher projects",
+    "Kotlin Multiplatform and Compose Multiplatform HarmonyOS PC projects",
+    "React Native and RNOH HarmonyOS PC projects"
+  ],
+  "candidates_screened": [
+    {
+      "project": "dingtalkrepo/ohos-pc-launcher",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Gitee dual-process HarmonyOS PC launcher; source shows isolation-only secondary ability, want construction and physical-pixel window options."
+    },
+    {
+      "project": "mucute/ComposeMultiplatformHarmony",
+      "framework": "kotlin-multiplatform",
+      "disposition": "analyzed",
+      "reason": "KMP/Compose three-target project with an ohosArm64 target, dependency redirection, libkn export and ArkTS Compose host."
+    },
+    {
+      "project": "kuma0605/react-native-harmony-seed",
+      "framework": "react-native",
+      "disposition": "analyzed",
+      "reason": "RN 0.82.1/RNOH 0.82.30 seed with native host, codegen, harmony Metro config and OH fork packages."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode Qt Widgets port; the clone checkout was incomplete, so only its README was screened. Revisit if the worktree can be restored."
+    },
+    {
+      "project": "xiaqingpeng/HarmonyKMP",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "KMP/Compose OH sample; clone did not finish cleanly in this pass."
+    },
+    {
+      "project": "weixin_44613381/myapplication",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode Qt desktop port sample; needs source qualification."
+    },
+    {
+      "project": "jianguoxu/pc_flutterdemo",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "GitCode PC Flutter demo; no new mechanism established from the repository summary."
+    },
+    {
+      "project": "HanversionOvO/OHSidian",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Obsidian wrapper; not confirmed as an Electron runtime port."
+    },
+    {
+      "project": "HanversionOvO/OHcode",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "VS Code wrapper; not confirmed as an Electron runtime port."
+    },
+    {
+      "project": "tracking-query",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 tutorial app; still pending a mechanism-level review."
+    },
+    {
+      "project": "dalian-oa",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 app; still pending a window/storage review."
+    }
+  ],
+  "added_entries": [
+    "qt-ohos-secondary-ability-process",
+    "kmp-ohos-compose-target",
+    "kmp-ohos-compose-host",
+    "rnoh-native-host-and-codegen",
+    "rnoh-js-bundle-platform",
+    "rnoh-ohos-package-adaptation"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The Compose adapter artifacts are hosted on an external Maven repository that may not be publicly reachable; no build was attempted.",
+    "The RNOH and Compose sample repositories declare no license, so only generalized mechanisms were recorded.",
+    "The notepad GitCode clone had an incomplete checkout and was not source-reviewed.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run.",
+    "GitCode search still required a token for its API; discovery used site search and direct repository reads."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 152 entries",
+    "kb.py check -> OK: 152 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for isolationMode, ohosArm64, libkn, RNOH, Metro and HAR terms",
+    "git diff review before commit"
+  ]
+}
