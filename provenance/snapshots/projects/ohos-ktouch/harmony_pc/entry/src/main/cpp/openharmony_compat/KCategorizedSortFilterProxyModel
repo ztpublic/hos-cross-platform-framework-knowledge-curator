@@ -1,0 +1,28 @@
+#pragma once
+
+#include <QSortFilterProxyModel>
+
+class KCategorizedSortFilterProxyModel : public QSortFilterProxyModel
+{
+public:
+    enum AdditionalRoles {
+        CategoryDisplayRole = Qt::UserRole + 100,
+        CategorySortRole
+    };
+
+    explicit KCategorizedSortFilterProxyModel(QObject *parent = nullptr)
+        : QSortFilterProxyModel(parent)
+    {
+    }
+
+protected:
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override
+    {
+        return subSortLessThan(left, right);
+    }
+
+    virtual bool subSortLessThan(const QModelIndex &left, const QModelIndex &right) const
+    {
+        return QSortFilterProxyModel::lessThan(left, right);
+    }
+};

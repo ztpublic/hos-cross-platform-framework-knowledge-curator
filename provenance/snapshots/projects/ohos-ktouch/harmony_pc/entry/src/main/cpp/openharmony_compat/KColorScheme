@@ -1,0 +1,168 @@
+#pragma once
+
+#include <QApplication>
+#include <QBrush>
+#include <QColor>
+#include <QPalette>
+
+class KColorScheme
+{
+public:
+    enum ColorSet {
+        View,
+        Window,
+        Button,
+        Selection,
+        Tooltip,
+        Complementary
+    };
+
+    enum BackgroundRole {
+        NormalBackground,
+        AlternateBackground,
+        ActiveBackground,
+        LinkBackground,
+        VisitedBackground,
+        NegativeBackground,
+        NeutralBackground,
+        PositiveBackground
+    };
+
+    enum ForegroundRole {
+        NormalText,
+        ActiveText,
+        LinkText,
+        VisitedText,
+        NegativeText,
+        NeutralText,
+        PositiveText,
+        InactiveText
+    };
+
+    enum DecorationRole {
+        FocusColor,
+        HoverColor
+    };
+
+    enum ShadeRole {
+        LightShade,
+        MidlightShade,
+        MidShade,
+        DarkShade,
+        ShadowShade
+    };
+
+    class Brush
+    {
+    public:
+        explicit Brush(const QColor &color = QColor()) : m_color(color) {}
+        QColor color() const { return m_color; }
+        operator QBrush() const { return QBrush(m_color); }
+    private:
+        QColor m_color;
+    };
+
+    explicit KColorScheme(QPalette::ColorGroup group = QPalette::Active, ColorSet set = View)
+        : m_group(group), m_set(set)
+    {
+    }
+
+    Brush background(BackgroundRole role) const
+    {
+        switch (role) {
+        case AlternateBackground:
+            if (m_group == QPalette::Disabled)
+                return Brush(QColor(QStringLiteral("#f0f0f0")));
+            return Brush(m_set == Complementary ? QColor(QStringLiteral("#5f737f")) : QColor(QStringLiteral("#f5f5f5")));
+        case ActiveBackground:
+            return Brush(QColor(QStringLiteral("#d7ecff")));
+        case LinkBackground:
+            return Brush(QColor(QStringLiteral("#e6f0ff")));
+        case VisitedBackground:
+            return Brush(QColor(QStringLiteral("#eee6ff")));
+        case NegativeBackground:
+            return Brush(QColor(QStringLiteral("#ffd8d8")));
+        case NeutralBackground:
+            return Brush(QColor(QStringLiteral("#fff1c2")));
+        case PositiveBackground:
+            return Brush(m_group == QPalette::Disabled ? QColor(QStringLiteral("#edf5ed")) : QColor(QStringLiteral("#c9efd8")));
+        case NormalBackground:
+        default:
+            if (m_group == QPalette::Disabled)
+                return Brush(QColor(QStringLiteral("#f2f2f2")));
+            if (m_set == Window)
+                return Brush(QColor(QStringLiteral("#eff0f1")));
+            if (m_set == Button)
+                return Brush(QColor(QStringLiteral("#e9ecef")));
+            if (m_set == Selection)
+                return Brush(QColor(QStringLiteral("#3f7fa4")));
+            if (m_set == Tooltip || m_set == Complementary)
+                return Brush(QColor(QStringLiteral("#496676")));
+            return Brush(QColor(QStringLiteral("#ffffff")));
+        }
+    }
+
+    Brush foreground(ForegroundRole role) const
+    {
+        switch (role) {
+        case ActiveText:
+            return Brush(m_set == Selection || m_set == Complementary ? QColor(QStringLiteral("#ffffff")) : QColor(QStringLiteral("#1f2a33")));
+        case LinkText:
+            return Brush(QColor(QStringLiteral("#0066cc")));
+        case VisitedText:
+            return Brush(QColor(QStringLiteral("#7445a6")));
+        case NegativeText:
+            return Brush(QColor(QStringLiteral("#b00020")));
+        case NeutralText:
+            return Brush(QColor(QStringLiteral("#815f00")));
+        case PositiveText:
+            return Brush(QColor(QStringLiteral("#237a2f")));
+        case InactiveText:
+            return Brush(QColor(QStringLiteral("#7a7f84")));
+        case NormalText:
+        default:
+            if (m_group == QPalette::Disabled)
+                return Brush(QColor(QStringLiteral("#9aa0a6")));
+            if (m_set == Selection || m_set == Complementary || m_set == Tooltip)
+                return Brush(QColor(QStringLiteral("#ffffff")));
+            return Brush(QColor(QStringLiteral("#232629")));
+        }
+    }
+
+    Brush decoration(DecorationRole role) const
+    {
+        return Brush(role == FocusColor ? QColor(QStringLiteral("#3f7fa4")) : QColor(QStringLiteral("#4f86a6")));
+    }
+
+    QColor shade(ShadeRole role) const
+    {
+        return shade(background(NormalBackground).color(), role);
+    }
+
+    static QColor shade(const QColor &color, ShadeRole role, qreal contrast = 1.0, qreal chromaAdjust = 0.0)
+    {
+        Q_UNUSED(chromaAdjust)
+        switch (role) {
+        case LightShade:
+            return color.lighter(static_cast<int>(120 * contrast));
+        case MidlightShade:
+            return color.lighter(static_cast<int>(108 * contrast));
+        case MidShade:
+            return color.darker(static_cast<int>(115 * contrast));
+        case DarkShade:
+            return color.darker(static_cast<int>(135 * contrast));
+        case ShadowShade:
+        default:
+            return color.darker(static_cast<int>(180 * contrast));
+        }
+    }
+
+    static qreal contrastF()
+    {
+        return 1.0;
+    }
+
+private:
+    QPalette::ColorGroup m_group;
+    ColorSet m_set;
+};

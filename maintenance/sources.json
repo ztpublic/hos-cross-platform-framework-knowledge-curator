@@ -394,6 +394,38 @@
       "coverage": "Source-reviewed an ElectronEgg HAP resource-injection pipeline and multi-process ability split.",
       "source_reported_validation": "The adaptation record reports T0/T1 device runs and classifies multi-window/multi-instance as untested T2; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "ohos-ktouch",
+      "kind": "project",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "analyzed_commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "license_notice": "maintenance/licenses/ktouch-GPL-2.0-or-later.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ohos_KTouch",
+      "working_tree_status": "GitCode checkout incomplete (mass deletions); evidence read from HEAD blobs.",
+      "reviewed_paths": [
+        "harmony_pc/HARMONYOS_PORT.md",
+        "harmony_pc/entry/build-profile.json5",
+        "harmony_pc/entry/src/main/cpp/CMakeLists.txt",
+        "harmony_pc/entry/src/main/cpp/openharmony_compat/KAboutData",
+        "harmony_pc/entry/src/main/cpp/openharmony_compat/KColorScheme",
+        "harmony_pc/entry/src/main/cpp/openharmony_compat/KLocalizedString",
+        "harmony_pc/entry/src/main/cpp/openharmony_compat/ohosi18ncontext.cpp",
+        "harmony_pc/entry/src/main/cpp/openharmony_compat/preferences.h"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-qml-module-bundling",
+        "qt-ohos-kde-shims"
+      ],
+      "last_run": "2026-10-20-project-research-8.json",
+      "coverage": "Source-reviewed QML module bundling and a KF6 compatibility shim layer for a Qt/KDE PC port.",
+      "source_reported_validation": "The port notes report a device-tested core typing flow and a 36M HAP; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

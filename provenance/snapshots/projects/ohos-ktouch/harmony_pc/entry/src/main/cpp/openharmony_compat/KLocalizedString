@@ -1,0 +1,59 @@
+#pragma once
+
+#include <QString>
+
+namespace KTouchOhosCompat {
+
+inline QString formatI18n(QString text)
+{
+    return text;
+}
+
+template<typename T, typename... Args>
+QString formatI18n(QString text, T value, Args... args)
+{
+    text = text.arg(value);
+    return formatI18n(text, args...);
+}
+
+class LocalizedStringBuilder
+{
+public:
+    explicit LocalizedStringBuilder(const QString &text) : m_text(text) {}
+
+    template<typename... Args>
+    LocalizedStringBuilder &subs(Args... args)
+    {
+        m_text = formatI18n(m_text, args...);
+        return *this;
+    }
+
+    QString toString() const
+    {
+        return m_text;
+    }
+
+private:
+    QString m_text;
+};
+
+} // namespace KTouchOhosCompat
+
+template<typename... Args>
+QString i18n(const char *text, Args... args)
+{
+    return KTouchOhosCompat::formatI18n(QString::fromUtf8(text), args...);
+}
+
+template<typename... Args>
+QString i18nc(const char *context, const char *text, Args... args)
+{
+    Q_UNUSED(context)
+    return KTouchOhosCompat::formatI18n(QString::fromUtf8(text), args...);
+}
+
+inline KTouchOhosCompat::LocalizedStringBuilder ki18nc(const char *context, const char *text)
+{
+    Q_UNUSED(context)
+    return KTouchOhosCompat::LocalizedStringBuilder(QString::fromUtf8(text));
+}

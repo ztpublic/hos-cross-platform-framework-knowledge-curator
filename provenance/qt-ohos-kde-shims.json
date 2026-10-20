@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-kde-shims",
+  "sources": [
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/KLocalizedString",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/KLocalizedString",
+      "sha256": "0e0e196fa48cc450aeee8427431bc5044bed80904d37f7dd61b4e38e96cb035d",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/KColorScheme",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/KColorScheme",
+      "sha256": "7e9a90ce23e125c58745a39e889046d296c974e552ad09f3537df40ad7497816",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/KAboutData",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/KAboutData",
+      "sha256": "9a940122f85fcff4f437bb77de42ffc654a100483c0019156d6f8c83b62df4e8",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/KCategorizedSortFilterProxyModel",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/KCategorizedSortFilterProxyModel",
+      "sha256": "9dfe2e68d7399c16562be389a14d8349dae1eaa012138ddd08804bfb916dc506",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/preferences.h",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/preferences.h",
+      "sha256": "8f722b814ed664faaee4f9fd86e83405064cc34e60eb5e0f0069f7c2e4bb43f3",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_compat/ohosi18ncontext.cpp",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_compat/ohosi18ncontext.cpp",
+      "sha256": "fb2f40dd7c3278aa106f98ee8af723d9f68be56b707b68428d1bb516345388e0",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/openharmony_data/ktouch_ohos_data.qrc",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/openharmony_data/ktouch_ohos_data.qrc",
+      "sha256": "22c890d5fef63c80c3c9a8cb3e923f50435f2823d453c695a890818f1ac93124",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/HARMONYOS_PORT.md",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/HARMONYOS_PORT.md",
+      "sha256": "b22f806e06c0bb3f65d43a6748cf9553424f3a3d69c6aa5a7cbe2a5f8bb2364e",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-kde-shims",
+    "project": "ohos-ktouch",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+    "commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+    "paths": [
+      "harmony_pc/entry/src/main/cpp/openharmony_compat/KLocalizedString",
+      "harmony_pc/entry/src/main/cpp/openharmony_compat/KColorScheme",
+      "harmony_pc/entry/src/main/cpp/openharmony_compat/KAboutData",
+      "harmony_pc/entry/src/main/cpp/openharmony_compat/preferences.h",
+      "harmony_pc/entry/src/main/cpp/openharmony_compat/ohosi18ncontext.cpp",
+      "harmony_pc/HARMONYOS_PORT.md"
+    ],
+    "source_reported_validation": "The source supplies local shims for KLocalizedString, KColorScheme, KAboutData and the categorized proxy, a QSettings preferences implementation and QML fallback modules, with MVP guards around editor/preferences/KCM flows. The port notes report a device-tested core flow; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the native build, compatibility shims and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt QML runtime and KDE Frameworks compatibility layer."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchain and bundled Qt SDK were not reproduced in this review.",
+    "The shims are an MVP approximation and do not implement full KF6 semantics; disabled features remain unavailable."
+  ]
+}

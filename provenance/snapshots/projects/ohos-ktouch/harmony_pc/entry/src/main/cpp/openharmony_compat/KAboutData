@@ -1,0 +1,17 @@
+#pragma once
+
+#include <QString>
+
+class KAboutData
+{
+public:
+    static KAboutData applicationData()
+    {
+        return KAboutData();
+    }
+
+    QString displayName() const
+    {
+        return QStringLiteral("KTouch");
+    }
+};

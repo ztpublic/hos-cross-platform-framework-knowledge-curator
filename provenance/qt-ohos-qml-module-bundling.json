@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-qml-module-bundling",
+  "sources": [
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "82f3e92389dd482a96800739bd1f595e31d1e9490b007f44a6dc4f229da00266",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/HARMONYOS_PORT.md",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/HARMONYOS_PORT.md",
+      "sha256": "b22f806e06c0bb3f65d43a6748cf9553424f3a3d69c6aa5a7cbe2a5f8bb2364e",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/build-profile.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/build-profile.json5",
+      "sha256": "d5e704de8c99bf4a68987eca38d7e367b27fbe153c0c8c90ed3aa70290157254",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-ktouch",
+      "original_path": "harmony_pc/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-ktouch/harmony_pc/entry/src/main/module.json5",
+      "sha256": "99dcfeb8cfda59d532e5368fd119a43ae9027d7670df9636d9be9f3ab5321a88",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-qml-module-bundling",
+    "project": "ohos-ktouch",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+    "commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+    "paths": [
+      "harmony_pc/entry/src/main/cpp/CMakeLists.txt",
+      "harmony_pc/HARMONYOS_PORT.md",
+      "harmony_pc/entry/build-profile.json5"
+    ],
+    "source_reported_validation": "The native build generates a QRC from the SDK QML module roots, patches unsupported properties in build-temp copies, embeds them under the Qt import prefix and copies QML plugin libraries post-build. The port notes report a 36M HAP with the required Qt libraries; no build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the native build, compatibility shims and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Qt QML runtime and KDE Frameworks compatibility layer."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchain and bundled Qt SDK were not reproduced in this review.",
+    "The QML module list and property patches are tied to the bundled Qt-for-OH SDK version."
+  ]
+}

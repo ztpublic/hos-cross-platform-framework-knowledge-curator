@@ -1,0 +1,57 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "ohos-ktouch"
+  ],
+  "entries_before": 168,
+  "entries_after": 170,
+  "query_families": [
+    "Qt/QML and KDE Frameworks PC ports",
+    "finished Electron HAP and screen-capture projects (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_KTouch",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt/KDE QML port with a generated QML module QRC, build-time property patches, KF6 shims and MVP guards."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_markdownify",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished MarkText HAP; README reviewed, but the committed .so files are LFS placeholders and the packaged main.js is minified."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 screen-cast app; the clone did not complete, so it was not source-reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete."
+    }
+  ],
+  "added_entries": [
+    "qt-ohos-qml-module-bundling",
+    "qt-ohos-kde-shims"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is GPL-2.0-or-later; only generalized mechanisms were recorded and no source code was copied.",
+    "The KTouch GitCode checkout was incomplete; evidence was read from HEAD blobs, not a clean worktree.",
+    "MarkText was not analyzed because its committed engine libraries are LFS placeholders and its main process is only available minified.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 170 entries",
+    "kb.py check -> OK: 170 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for QML module and KDE shim terms",
+    "git diff review before commit"
+  ]
+}
