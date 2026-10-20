@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-subwindow-surfaces",
+  "sources": [
+    {
+      "collection": "ohshark",
+      "original_path": "PORTING-FIXES.md",
+      "snapshot": "provenance/snapshots/projects/ohshark/PORTING-FIXES.md",
+      "sha256": "cfd06a2ab60e4c6b1de27ccc7d782271484a8b3139dd58a0e27be22fd14fac45",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "ohshark-qt-hap/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "snapshot": "provenance/snapshots/projects/ohshark/ohshark-qt-hap/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "sha256": "9bcadb99f5db3c95e79aba10a8aa41e9853465396fad2ffc5552d9e7a5c445e1",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "qtbase-dev/src/plugins/platforms/ohos/qarkui/qxcomponentregistry.cpp",
+      "snapshot": "provenance/snapshots/projects/ohshark/qtbase-dev/src/plugins/platforms/ohos/qarkui/qxcomponentregistry.cpp",
+      "sha256": "84d7986a174aeb96ade80d690921c9ac0b7b9c86168a0a59ebaaf49f34966dd4",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp",
+      "snapshot": "provenance/snapshots/projects/ohshark/qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp",
+      "sha256": "72cd8694fd56b81db8bf0cd7493e7d14bf1a198d4bce110da399f7123300ab1f",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-subwindow-surfaces",
+    "project": "ohshark",
+    "repository": "https://github.com/xiaomu120413/ohshark",
+    "commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+    "paths": [
+      "PORTING-FIXES.md",
+      "ohshark-qt-hap/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "qtbase-dev/src/plugins/platforms/ohos/qarkui/qxcomponentregistry.cpp"
+    ],
+    "source_reported_validation": "The porting record and source show the dual-XComponent subwindow page, the `_surf` registry capture and the direct-surface flush; the author reports OCR-verified menu and dialog rendering. No run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting record and platform code; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron packaging/runtime or the Qt OH QPA contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The subwindow integration depends on private QPA and ArkTS XComponent behavior that can change with the OH API level."
+  ]
+}

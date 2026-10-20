@@ -1,0 +1,86 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "doubao-watermark-lab",
+    "ohshark"
+  ],
+  "entries_before": 152,
+  "entries_after": 157,
+  "query_families": [
+    "Electron OH packaging and runtime capability gates",
+    "Qt 6 OH PC high-DPI and subwindow integration",
+    "additional Qt 6 media ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "littlestone0806/doubao-watermark-lab",
+      "framework": "electron",
+      "disposition": "analyzed",
+      "reason": "Electron 43 OH app with an OH builder adapter, prebuilt engine, app.asar sync and explicit platform gates."
+    },
+    {
+      "project": "xiaomu120413/ohshark",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt 6 Wireshark port with a high-DPI unit contract, dual-XComponent subwindows and input-routing fixes."
+    },
+    {
+      "project": "Aloereed/vlc-qt6-ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 media port with video surface handoff and subtitle bridge; notes reviewed, source analysis next."
+    },
+    {
+      "project": "forwardz666/SciDAVis-for-HarmonyOS",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Qt 6 scientific application port; README reviewed, no source analysis yet."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "GitCode checkout remains incomplete; README only."
+    },
+    {
+      "project": "xiaqingpeng/HarmonyKMP",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "Clone did not finish cleanly; KMP category already has Compose evidence."
+    },
+    {
+      "project": "tracking-query",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 tutorial app; source review found no PC-specific mechanism beyond the manifest."
+    },
+    {
+      "project": "dalian-oa",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "Local Flutter 2in1 app; no new PC-specific mechanism identified in the first pass."
+    }
+  ],
+  "added_entries": [
+    "electron-ohos-builder-packaging",
+    "electron-ohos-platform-capability-gates",
+    "qt6-ohos-highdpi-single-count",
+    "qt6-ohos-subwindow-surfaces",
+    "qt6-ohos-subwindow-input"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The Electron engine is a 144 MB external binary; packaging metadata was reviewed, not the engine build.",
+    "The ohshark repository has no top-level license; its Qt-derived files retain per-file LGPL/GPL SPDX headers.",
+    "VLC and SciDAVis were screened but not source-analyzed in this batch.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 157 entries",
+    "kb.py check -> OK: 157 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for Electron packaging/gates and Qt 6 High-DPI/subwindow terms",
+    "git diff review before commit"
+  ]
+}

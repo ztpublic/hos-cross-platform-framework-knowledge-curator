@@ -202,6 +202,67 @@
       "coverage": "Source-reviewed an RNOH native host, harmony Metro bundle and OH package adaptation.",
       "source_reported_validation": "The README describes an RNOH seed application; no build or device run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "doubao-watermark-lab",
+      "kind": "project",
+      "url": "https://github.com/littlestone0806/doubao-watermark-lab",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "analyzed_commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/doubao-watermark-lab",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "docs/HARMONYOS.md",
+        "electron-builder.ohos.json",
+        "ohos/electron/src/main/module.json5",
+        "package.json",
+        "scripts/prepare-ohos-libs.cjs",
+        "src/main.js"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-builder-packaging",
+        "electron-ohos-platform-capability-gates"
+      ],
+      "last_run": "2026-10-20-project-research-3.json",
+      "coverage": "Source-reviewed an Electron OH packaging pipeline and platform feature gates.",
+      "source_reported_validation": "The documentation reports a working 2in1/tablet HAP; no build was rerun.",
+      "checked_at": "2026-10-20",
+      "license_notice": "maintenance/licenses/doubao-watermark-lab-MIT.txt"
+    },
+    {
+      "id": "ohshark",
+      "kind": "project",
+      "url": "https://github.com/xiaomu120413/ohshark",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "analyzed_commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/ohshark",
+      "working_tree_status": "",
+      "reviewed_paths": [
+        "PORTING-FIXES.md",
+        "ohshark-qt-hap/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+        "qtbase-dev/src/plugins/platforms/ohos/qarkui/qxcomponentregistry.cpp",
+        "qtbase-dev/src/plugins/platforms/ohos/qohosplatformbackingstore.cpp",
+        "qtbase-dev/src/plugins/platforms/ohos/qohosplatformscreen.cpp",
+        "qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp"
+      ],
+      "knowledge_ids": [
+        "qt6-ohos-highdpi-single-count",
+        "qt6-ohos-subwindow-surfaces",
+        "qt6-ohos-subwindow-input"
+      ],
+      "last_run": "2026-10-20-project-research-3.json",
+      "coverage": "Source-reviewed Qt 6 OH high-DPI, subwindow surface and subwindow input integration.",
+      "source_reported_validation": "The porting record reports OCR/injected-input verification on a 2in1 device; no run was rerun.",
+      "checked_at": "2026-10-20",
+      "license_notice": "maintenance/licenses/ohshark-Qt-LGPL-NOTICE.md"
     }
   ]
 }

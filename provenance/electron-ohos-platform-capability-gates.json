@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-platform-capability-gates",
+  "sources": [
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "src/main.js",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/src/main.js",
+      "sha256": "d11a37730e89190a71a23860a4e247953ed1f39ff037a2b0a0bdc3aca63c3ec7",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "docs/HARMONYOS.md",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/docs/HARMONYOS.md",
+      "sha256": "7ae234f942f88d1841894abf92bd13d4287b1bfa4433aa5e277a3fd52a74728c",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "ohos/electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/ohos/electron/src/main/module.json5",
+      "sha256": "7b29373690b9aa68ccbb6a0ca0f3f8b293ae7a7ba797ec8de3d0131c18c93e7f",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-platform-capability-gates",
+    "project": "doubao-watermark-lab",
+    "repository": "https://github.com/littlestone0806/doubao-watermark-lab",
+    "commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+    "paths": [
+      "src/main.js",
+      "docs/HARMONYOS.md",
+      "ohos/electron/src/main/module.json5"
+    ],
+    "source_reported_validation": "The source gates window style, tray creation, auto-update, dock access and default paths on the OH platform flag, and documents the phone limitation. No device run was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting record and platform code; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron packaging/runtime or the Qt OH QPA contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The observed behavior belongs to one OH Electron runtime; capability checks should be revalidated on another runtime or API level."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "qt6-ohos-highdpi-single-count",
+  "sources": [
+    {
+      "collection": "ohshark",
+      "original_path": "PORTING-FIXES.md",
+      "snapshot": "provenance/snapshots/projects/ohshark/PORTING-FIXES.md",
+      "sha256": "cfd06a2ab60e4c6b1de27ccc7d782271484a8b3139dd58a0e27be22fd14fac45",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp",
+      "snapshot": "provenance/snapshots/projects/ohshark/qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp",
+      "sha256": "72cd8694fd56b81db8bf0cd7493e7d14bf1a198d4bce110da399f7123300ab1f",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "qtbase-dev/src/plugins/platforms/ohos/qohosplatformscreen.cpp",
+      "snapshot": "provenance/snapshots/projects/ohshark/qtbase-dev/src/plugins/platforms/ohos/qohosplatformscreen.cpp",
+      "sha256": "f41eb7db773f2266d41e5ec44837a5cf5cb3287398dedd30170b7add948c892d",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohshark",
+      "original_path": "qtbase-dev/src/plugins/platforms/ohos/qohosplatformbackingstore.cpp",
+      "snapshot": "provenance/snapshots/projects/ohshark/qtbase-dev/src/plugins/platforms/ohos/qohosplatformbackingstore.cpp",
+      "sha256": "617e5eb3dff107d063b57b243a49ecb3ebadb605924108c78648dec217ebb9fc",
+      "revision": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "license": "No repository-level license found; Qt-derived platform files carry LGPL-3.0/GPL-2.0 SPDX headers.",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt6-ohos-highdpi-single-count",
+    "project": "ohshark",
+    "repository": "https://github.com/xiaomu120413/ohshark",
+    "commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+    "paths": [
+      "PORTING-FIXES.md",
+      "qtbase-dev/src/plugins/platforms/ohos/qohosplatformwindow.cpp",
+      "qtbase-dev/src/plugins/platforms/ohos/qohosplatformscreen.cpp",
+      "qtbase-dev/src/plugins/platforms/ohos/qohosplatformbackingstore.cpp"
+    ],
+    "source_reported_validation": "The porting record and the QPA source document a 4x composition caused by returning the screen DPR from the platform window, and the 1:1 result after returning 1.0. Device screenshots/OCR were reported by the author; no run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting record and platform code; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron packaging/runtime or the Qt OH QPA contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The private QPA APIs and scaling composition are Qt-version specific; the source snapshot is a Qt-derived platform file with its own license headers."
+  ]
+}

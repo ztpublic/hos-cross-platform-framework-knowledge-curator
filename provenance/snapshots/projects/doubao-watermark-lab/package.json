@@ -1,0 +1,73 @@
+{
+  "name": "doubao-watermark-lab",
+  "version": "1.2.0",
+  "description": "基于 Electron 和豆包网页版的批量图片去水印工作台",
+  "main": "src/main.js",
+  "author": "Watermark Lab",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/preview-preload.js && node --check src/manual-preload.js && node --check src/advanced-preload.js && node --check src/doubao-automation.js && node --check src/update-check.js && node --check src/qc-check.js && node --check src/theme-icon.js && node --check src/image-pipeline.js && node --check src/zip-writer.js && node --check src/renderer/app.js && node --check src/renderer/preview-window.js && node --check src/renderer/manual-window.js && node --check src/renderer/advanced-window.js",
+    "test": "node --test \"test/*.test.js\"",
+    "postinstall": "node scripts/fix-electron-name.cjs",
+    "dist": "electron-builder",
+    "predist:ohos": "node scripts/prepare-ohos-libs.cjs",
+    "dist:ohos": "JAVA_HOME=\"/Applications/DevEco-Studio.app/Contents/jbr/Contents/Home\" electron-builder-ohos --ohos -c electron-builder.ohos.json",
+    "postdist:ohos": "node scripts/sync-ohos-app.cjs",
+    "sync:ohos": "node scripts/sync-ohos-app.cjs"
+  },
+  "devDependencies": {
+    "electron": "43.1.1",
+    "electron-builder": "26.15.3",
+    "@electron-ohos/electron-builder": "^26.8.5"
+  },
+  "build": {
+    "appId": "com.watermarklab.doubao",
+    "productName": "水印清理工作台",
+    "asar": true,
+    "publish": {
+      "provider": "github",
+      "owner": "littlestone0806",
+      "repo": "doubao-watermark-lab"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "src/assets/app-icon.png",
+      "category": "public.app-category.graphics-design",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "src/assets/app-icon.png",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "artifactName": "doubao-watermark-lab-${version}-${os}-${arch}-setup.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "doubao-watermark-lab-${version}-${os}-${arch}-portable.${ext}"
+    },
+    "linux": {
+      "icon": "src/assets/app-icon.png",
+      "target": [
+        "AppImage"
+      ],
+      "category": "Graphics"
+    },
+    "artifactName": "doubao-watermark-lab-${version}-${os}-${arch}.${ext}"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}

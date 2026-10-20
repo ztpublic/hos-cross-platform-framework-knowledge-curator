@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-builder-packaging",
+  "sources": [
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "electron-builder.ohos.json",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/electron-builder.ohos.json",
+      "sha256": "4ae9434c163b3be5f8f3bba0d04f21fccfd51b3268e9adf2b397844d1fea2591",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/package.json",
+      "sha256": "812cac112f56ce1302d2d62a7ef7e1d18a1b90b6da0d15962a395abc05c0313c",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "docs/HARMONYOS.md",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/docs/HARMONYOS.md",
+      "sha256": "7ae234f942f88d1841894abf92bd13d4287b1bfa4433aa5e277a3fd52a74728c",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "scripts/prepare-ohos-libs.cjs",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/scripts/prepare-ohos-libs.cjs",
+      "sha256": "36093cc7357f122fb4bf8a2fdc0bb04c872b31d58440827b03020bdf2bf9ff62",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "scripts/sync-ohos-app.cjs",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/scripts/sync-ohos-app.cjs",
+      "sha256": "2375954ce5b064db17a5bc78ee3fe3c65b4107ffdfe7d034d8c6dc2b2050317d",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    },
+    {
+      "collection": "doubao-watermark-lab",
+      "original_path": "ohos/electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/doubao-watermark-lab/ohos/electron/src/main/module.json5",
+      "sha256": "7b29373690b9aa68ccbb6a0ca0f3f8b293ae7a7ba797ec8de3d0131c18c93e7f",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "license": "MIT",
+      "evidence_note": "Exact file bytes read from the cloned repository at the recorded commit; the worktree was clean. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "electron-ohos-builder-packaging",
+    "project": "doubao-watermark-lab",
+    "repository": "https://github.com/littlestone0806/doubao-watermark-lab",
+    "commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+    "paths": [
+      "electron-builder.ohos.json",
+      "package.json",
+      "docs/HARMONYOS.md",
+      "scripts/prepare-ohos-libs.cjs",
+      "ohos/electron/src/main/module.json5"
+    ],
+    "source_reported_validation": "The repository contains the OH builder configuration, a compressed prebuilt engine, idempotent preparation and app.asar sync scripts, and tablet/2in1 manifests. Its documentation reports a working HAP; no build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the source files, porting record and platform code; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Electron packaging/runtime or the Qt OH QPA contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The native toolchains and original build environments were not reproduced in this review.",
+    "The 144 MB Electron engine is an external binary artifact; its exact build and redistribution terms were not independently audited."
+  ]
+}
