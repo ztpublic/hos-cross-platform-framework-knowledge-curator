@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "transport-reply-watchdog",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/foreground-recovery-and-save-lifetime.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/foreground-recovery-and-save-lifetime.md",
+      "sha256": "17a0aaf1d2919a2fd5bbffd0c96cb89fd1afe7ee55564d027a57944688574b9c",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/foreground-recovery-and-save-lifetime.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/foreground-recovery-and-save-lifetime.json",
+      "sha256": "715962eda527132c8a97ef4073488f43ff789a93520fe6484b3723c1db1e9bd2",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

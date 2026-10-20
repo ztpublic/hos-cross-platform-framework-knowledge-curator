@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "picker-result-readable-content",
+  "evidence": [
+    {
+      "project": "beecount-oh",
+      "commit": "e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "paths": [
+        "lib/pages/import_page.dart",
+        "pubspec.yaml",
+        "pubspec.lock"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "note": "PlatformFile replaced by nullable XFile; file_selector openFile with XTypeGroup; fallback to XFile.readAsBytes when File(path) does not exist."
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "14e6b10648ef7ce88414d7a562be638609205924",
+      "paths": [
+        "lib/pages/import_page.dart",
+        "pubspec.lock"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/pages/import_page.dart",
+      "note": "HEAD retains XFile import route and cross_file 0.3.4+2; failed byte reads return empty string, and chunks are later accumulated in memory."
+    },
+    {
+      "project": "fusheng-music",
+      "commit": "a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950",
+      "paths": [
+        "lib/screens/home/tab_mylist.dart",
+        "lib/services/music/local_music_service.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Manual import skips null path, constructs File and reports selected count rather than verified durable imports. Android scanning uses external paths; OH directs user to picker. No persisted grant/copy proof.",
+      "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/commit/a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950"
+    },
+    {
+      "project": "jimu-comate",
+      "commit": "5d687359b56de3fc9b4f03107b91f80661a92d15",
+      "paths": [
+        "lib/providers/project_provider.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Actual runtime OS branch selects aliased OH picker for import/export. Import force-unwraps path and suppresses failure. Null/URI/bytes distinction remains necessary; no grant persistence proven.",
+      "url": "https://github.com/aizhaiyu/jimu-comate/commit/5d687359b56de3fc9b4f03107b91f80661a92d15"
+    },
+    {
+      "project": "operit2",
+      "commit": "404c6645d601601f67af0fd156129221d4640517",
+      "paths": [
+        "apps/flutter/app/lib/core/host/SelectedFileInput.dart",
+        "apps/flutter/thirdparty/file_selector_ohos/lib/src/uri_xfile.dart",
+        "apps/flutter/thirdparty/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets",
+        "apps/flutter/thirdparty/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorOhosPlugin.ets",
+        "apps/flutter/thirdparty/file_selector_ohos/lib/src/file_selector_api.g.dart",
+        "apps/flutter/thirdparty/file_selector_ohos/ohos/src/main/ets/file_selector/GeneratedFileSelectorApi.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/404c6645d601601f67af0fd156129221d4640517"
+    }
+  ],
+  "source_context": "Generalized guidance keeps cancel, empty content and read failure distinct; the source does not implement this improved outcome contract or bounded-memory parsing. No claim that a particular OH URI was exercised or that readAsBytes grants permission. Distinct from sandbox-import-as-access-fallback: this lesson serves Dart content decoders without requiring a native path. API member guidance is scoped to file_selector 1.0/cross_file 0.3; latest cross_file 0.4 documentation changes the API and is not evidence for the older shape. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\nFu Sheng Music OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nManual import skips null path, constructs File and reports selected count rather than verified durable imports. Android scanning uses external paths; OH directs user to picker. No persisted grant/copy proof.\n\nJimu Comate: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nActual runtime OS branch selects aliased OH picker for import/export. Import force-unwraps path and suppresses failure. Null/URI/bytes distinction remains necessary; no grant persistence proven.",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "SelectedFileInput consumes ranged XFile.openRead. OH selection now carries metadata only, UriXFile reads at most one MiB via open/readChunk/close, validates ranges and premature EOF, and uses finally for token closure. Native inputs are serialized and teardown drains in-flight operations then closes descriptors. readAsBytes still collects all data. Failed cleanup can replace the primary Dart exception in the shown implementation; preserving that exception is recommended hardening. Source length is snapshotted; mutation/grant persistence and memory/descriptor behavior require runtime checks. Generated Dart/ArkTS FileResponse fields remove bytes together. Later 4250747263 changes only the Android picker route in shared input, not these OH mechanisms.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    }
+  ]
+}

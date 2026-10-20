@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "clang-template-depth-limit",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "problems/build-fail-magic-enum-bracket-depth.md",
+      "snapshot": "provenance/snapshots/qt/problems/build-fail-magic-enum-bracket-depth.md",
+      "sha256": "b9fb7f018f9dfacfc388cfa983a22f4d7a38d5a77d85ef6bdce88e1380e90076",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

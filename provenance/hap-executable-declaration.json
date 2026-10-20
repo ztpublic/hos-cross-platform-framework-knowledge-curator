@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "hap-executable-declaration",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/problems/executable-binary-eacces.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/problems/executable-binary-eacces.md",
+      "sha256": "7b68a5b5281f0ad014f70dad13f5c3bf4f43ad12a6495b078f2003abe7b3d2bf",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/native-runtime-embedding.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/native-runtime-embedding.md",
+      "sha256": "4b83aa961d02ff9396ac15efe14103d63c5ebcca09861e84d0121ebf8d33c2c8",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

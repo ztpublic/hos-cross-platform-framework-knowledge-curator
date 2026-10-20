@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "picker-cancellation-concurrency",
+  "evidence": [
+    {
+      "project": "nipaplay",
+      "commit": "d243f3dfa51a5dbb02fb089e8f261277520cf1b5",
+      "paths": [
+        "packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets",
+        "packages/file_selector_ohos/lib/src/file_selector_ohos.dart",
+        "pubspec_overrides.ohos.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/d243f3dfa51a5dbb02fb089e8f261277520cf1b5"
+    },
+    {
+      "project": "gardendless",
+      "commit": "9bfb9cc49fdec2e812209c43c9524ee50c21445e",
+      "paths": [
+        "ohos/entry/src/main/ets/picker/DocumentPickerOrientation.ets",
+        "ohos/entry/src/main/ets/game/GameBridge.ets",
+        "ohos/entry/src/main/ets/pages/GamePage.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/9bfb9cc49fdec2e812209c43c9524ee50c21445e"
+    },
+    {
+      "project": "gardendless",
+      "commit": "a4b58e3a2a6395e6dbc4af57fd4dcba59b3f1063",
+      "paths": [
+        "ohos/entry/src/main/ets/game/GameBridge.ets",
+        "ohos/entry/src/main/ets/game/ExportDocumentSpec.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/a4b58e3a2a6395e6dbc4af57fd4dcba59b3f1063"
+    },
+    {
+      "project": "simple-live",
+      "commit": "ccb637feed373333207144b3c124e5d0d98d6261",
+      "paths": [
+        "simple_live_app/lib/modules/live_room/player/player_controller.dart",
+        "simple_live_app/ohos/entry/src/main/ets/plugins/OhosMediaPlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/ccb637feed373333207144b3c124e5d0d98d6261"
+    },
+    {
+      "project": "nomark",
+      "commit": "caf912bf8b73c7dac9262c4bd6a6243b43c85c0c",
+      "paths": [
+        "lib/services/platform_services.dart",
+        "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c"
+    },
+    {
+      "project": "nomark",
+      "commit": "8eecb8e390f54e7bafc8ae0db8a4348de4d2d445",
+      "paths": [
+        "lib/services/platform_services.dart",
+        "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+        "ohos/entry/src/main/ets/pages/LoginWebPage.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445"
+    }
+  ],
+  "source_context": "# Complete picker requests on cancellation and serialize conflicting dialogs\n\n## Platform difference\n\nNative picker cancellation, concurrent presentation and exceptions need explicit bridge results so Dart futures do not hang or report false success.\n\n## Implementation\n\nNipaPlay fixes empty/undefined file selections by mapping a cancellation marker to null or an empty list. Gardendless adds pickerActive exclusion, busy errors, finally-based reset and temporary export cleanup; it also restores window orientation after dialog use. Simple Live reports photo-dialog cancellation separately from screenshot failure. Nomark returns per-item media results, but its broad dialog-exception mapping can conflate errors with cancellation.\n\n## Applicability\n\nPreserve the chosen public API cancellation convention. Serialize only operations sharing a dialog/native resource; do not use one untracked global callback for concurrent requests.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nTimeouts do not cancel native work automatically. Mapping every exception to cancellation hides permission/API failures. Cleanup must run on all outcomes.\n\n## Verification\n\nCancel, double-tap, switch routes, deny permissions and provoke a native exception; every request must settle once and the next picker invocation must still work.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [NipaPlay Reload — d243f3dfa5](https://github.com/AimesSoft/NipaPlay-Reload/commit/d243f3dfa51a5dbb02fb089e8f261277520cf1b5) (diff): `packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets`, `packages/file_selector_ohos/lib/src/file_selector_ohos.dart`, `pubspec_overrides.ohos.yaml`. Source license recorded by the study: MIT.\n- [GardendlessLoader — 9bfb9cc49f](https://github.com/Dey410/GardendlessLoader/commit/9bfb9cc49fdec2e812209c43c9524ee50c21445e) (diff): `ohos/entry/src/main/ets/picker/DocumentPickerOrientation.ets`, `ohos/entry/src/main/ets/game/GameBridge.ets`, `ohos/entry/src/main/ets/pages/GamePage.ets`. Source license recorded by the study: GPL-3.0.\n- [GardendlessLoader — a4b58e3a2a](https://github.com/Dey410/GardendlessLoader/commit/a4b58e3a2a6395e6dbc4af57fd4dcba59b3f1063) (diff): `ohos/entry/src/main/ets/game/GameBridge.ets`, `ohos/entry/src/main/ets/game/ExportDocumentSpec.ets`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — ccb637feed](https://github.com/xuanxuan123xuan/dart_simple_live/commit/ccb637feed373333207144b3c124e5d0d98d6261) (diff): `simple_live_app/lib/modules/live_room/player/player_controller.dart`, `simple_live_app/ohos/entry/src/main/ets/plugins/OhosMediaPlugin.ets`. Source license recorded by the study: GPL-3.0.\n- [无印字节 / Bytedance Nomark — caf912bf8b](https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n- [无印字节 / Bytedance Nomark — 8eecb8e390](https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [GardendlessLoader: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/gardendless.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+  "previous_document_sha256": "2bae2757232fb37d299c2a473b2bff11633b38ea56f2281a2fe23d2fec106908"
+}

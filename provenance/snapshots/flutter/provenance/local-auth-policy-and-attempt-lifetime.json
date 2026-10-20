@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "local-auth-policy-and-attempt-lifetime",
+  "evidence": [
+    {
+      "project": "venera-harmony",
+      "commit": "e9ea54f2aec9407ae505b663d4fe8c4309abb2f4",
+      "paths": [
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/PlatformBridge.ets",
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/SettingsBridge.ets",
+        "apps/app_ohos/lib/platform/ohos_platform_services.dart",
+        "apps/app_ohos/lib/pages/auth_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Twopuding/venera-harmony/commit/e9ea54f2aec9407ae505b663d4fe8c4309abb2f4",
+      "note": "Introduces separate face/fingerprint/PIN methods and widget-navigation fallback. Queries ATL2 then ATL3 but starts ATL2/ATL1, fixed challenge, no active-instance cancellation/single-settlement guard. Dart unavailable branch calls successfulAuth, ordinary false results automatically open additional modalities. Guide explicitly corrects those failures."
+    }
+  ],
+  "source_context": "\n\n2026-10-06 Venera Harmony (Twopuding) main study at 68a5c836abbf2afe19c194763675bc8dc0ce4ebd. Upstream README names venera-app/venera; independent root import and modular apps/app_ohos host differ from registered AzadKuu monolithic OH host. Original upstream history absent, shared domain provenance is not independent corroboration. No root application license text identified; stub component licenses are not a license for all app code. No application implementation copied. Source/diff only; no build/dependency resolution/signing/install/device/authentication/AI/network/WebView runtime. Other remote branches not analyzed.\nIntroduces separate face/fingerprint/PIN methods and widget-navigation fallback. Queries ATL2 then ATL3 but starts ATL2/ATL1, fixed challenge, no active-instance cancellation/single-settlement guard. Dart unavailable branch calls successfulAuth, ordinary false results automatically open additional modalities. Guide explicitly corrects those failures.\nPrimary cross-checks on 2026-10-06: https://raw.githubusercontent.com/openharmony/docs/master/en/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-userauth.md (module getAvailableStatus void/exception API9 vs deprecated numeric-return API8, AuthParam challenge, API10 UserAuthInstance start once/off/cancel, CANCELED_FROM_WIDGET custom-flow meaning); https://developer.huawei.com/consumer/en/doc/harmonyos-references-V14/js-apis-useriam-userauth-V14 search-index excerpt confirms ACCESS_BIOMETRIC/API pairing. Full Huawei page timed out; accessible OpenHarmony official raw docs used. Fail-closed policy, same-level queries, unique request correlation and explicit fallback are curator recommendations; not a claim that source implements them or that OS requires app product recovery policy."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "distributed-device-discovery-versus-sync",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/distributed-device-discovery-versus-sync.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/distributed-device-discovery-versus-sync.md",
+      "sha256": "43a0c078dfb74eb1a016f866d3dcc89bea2eee29f35eb0513728761ed5d0176e",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/distributed-device-discovery-versus-sync.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/distributed-device-discovery-versus-sync.json",
+      "sha256": "796b31377d1be048e878efd4390bebd793b8c3be0134dd67834ccf73d5102ea2",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "distributed-device-discovery-versus-sync",
+    "evidence": [
+      {
+        "project": "etohos",
+        "commit": "c090eeae747667f3a0b19d356757854ee2408eb0",
+        "paths": [
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/methods.dart",
+          "lib/edit_screen.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/collaborative-creation/etohos/commit/c090eeae747667f3a0b19d356757854ee2408eb0"
+      },
+      {
+        "project": "etohos",
+        "commit": "fdb07dbfd2869502db7603b83d69d9a9661c228a",
+        "paths": [
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/collaborative-creation/etohos/blob/fdb07dbfd2869502db7603b83d69d9a9661c228a/ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      }
+    ],
+    "source_context": "# Separate distributed device discovery, synchronization and data retrieval\n\n## Platform difference\n\nDiscovering an OH device and requesting synchronization do not establish that application data was retrieved or applied.\n\n## Implementation\n\nEtohos adds device discovery and device_list channel handling. Its snapshot publishes shared_config through a device-collaboration KV store and requests PUSH_PULL synchronization, but the explicit requestConfigFromDevice path leaves the get operation commented and returns null from an empty value. A remote-change callback is a separate delivery route.\n\n## Applicability\n\nThis is a partly implemented native collaboration feature, dependent on device/account/trust/permission conditions not validated by the study.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nThe KV settings include encrypt:false and autoSync:true and the inspected code logs sensitive-looking configuration data. These are source configuration facts, not a statement about OS transport encryption or proof of exploitability. Review sharing scope and log content before adopting the pattern.\n\n## Verification\n\nTest discovery separately from pairing/trust, publish, synchronization completion, explicit pull, remote-change delivery and application of the retrieved configuration; test denied permissions and empty results.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Etohos — c090eeae74](https://github.com/collaborative-creation/etohos/commit/c090eeae747667f3a0b19d356757854ee2408eb0) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/methods.dart`, `lib/edit_screen.dart`. Source license recorded by the study: LGPL-3.0.\n- [Etohos — fdb07dbfd2](https://github.com/collaborative-creation/etohos/blob/fdb07dbfd2869502db7603b83d69d9a9661c228a/ohos/entry/src/main/ets/entryability/EntryAbility.ets) (snapshot): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: LGPL-3.0.\n\n## Study provenance\n\n- [Etohos: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/etohos.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+    "previous_document_sha256": "7ba60d9dc4da2d5c37e45bc5137a6a365a16d37522157d802c40555f15dbee7a"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

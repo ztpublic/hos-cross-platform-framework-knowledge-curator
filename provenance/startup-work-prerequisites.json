@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "startup-work-prerequisites",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/rendering-budget-and-progressive-ui.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/rendering-budget-and-progressive-ui.md",
+      "sha256": "9563d57b8f8494f5cfdbebf635963c197678d67c92ce4b538a1e35d3afcb59ef",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/rendering-budget-and-progressive-ui.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/rendering-budget-and-progressive-ui.json",
+      "sha256": "bfca08551f5c46fa528b71149376c2e119d87e6d07db8eb0cf68de24248da3a5",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

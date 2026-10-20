@@ -1,0 +1,37 @@
+{
+  "mode": "import",
+  "outcome": "complete",
+  "source_flutter_entries": 63,
+  "entries": 138,
+  "verification_performed": [
+    "Skill Creator validation",
+    "database metadata/IDs/topics/links validation",
+    "SHA-256 imported snapshots against originals",
+    "deterministic CSV regeneration",
+    "complete Flutter source-to-entry mapping",
+    "cwd-independent queries and framework filtering",
+    "independent isolated 13-case forward-test on earlier 123-entry revision"
+  ],
+  "not_performed": [
+    "fresh upstream API/source verification",
+    "build",
+    "sign",
+    "install",
+    "device",
+    "runtime"
+  ],
+  "limitations": [
+    "Electron, React Native and Kotlin Multiplatform adapter knowledge has not been researched in this import.",
+    "Original project registries retained as source snapshots, not adopted as independently analyzed projects."
+  ],
+  "scope_counts": {
+    "common": 88,
+    "flutter": 29,
+    "qt": 21,
+    "electron": 0,
+    "react-native": 0,
+    "kotlin-multiplatform": 0
+  },
+  "qt_source_documents": 68,
+  "validation_report": "maintenance/IMPORT-REPORT.md"
+}

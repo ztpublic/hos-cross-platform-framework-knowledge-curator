@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "document-picker-uri-access",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/document-picker-uri-access.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/document-picker-uri-access.md",
+      "sha256": "bb155e40c2113502deb994aab642db3b209cfdb54251e8dfceed703d3c306454",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/problems/document-picker-uri-access-failure.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/problems/document-picker-uri-access-failure.md",
+      "sha256": "d2676774c2d5fa7b0cb216f9448ce81aab8b6ac69a007f0c164a5f14ba641673",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

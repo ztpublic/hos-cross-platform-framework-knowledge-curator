@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "terminal-guest-working-directory",
+  "evidence": [
+    {
+      "project": "operit2",
+      "commit": "b3e74f29571af8e057189f67049be497a5c3ff85",
+      "paths": [
+        "hosts/ohos/src/terminal.rs",
+        "core/crates/foundation/host-api/src/TerminalWorkingDirectory.rs",
+        "core/crates/runtime/application/src/services/RuntimeTerminalService.rs",
+        "apps/flutter/native/operit-flutter-bridge/src/FlutterOwnerCapabilities.rs"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/b3e74f29571af8e057189f67049be497a5c3ff85"
+    }
+  ],
+  "source_context": "OH host selects NativeShell or QemuVroot before directory resolution. TerminalWorkingDirectory resolves /mnt/linux only at a complete segment boundary, maps its root to / and delegates host-owned locators; RuntimeTerminalService and the Flutter publishing wrapper preserve dispatch. Current OH backend accepts shell type only; typed-session interface additions do not establish other interpreters. Current guest assets and actual PTY/product behavior not validated.",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "OH host selects NativeShell or QemuVroot before directory resolution. TerminalWorkingDirectory resolves /mnt/linux only at a complete segment boundary, maps its root to / and delegates host-owned locators; RuntimeTerminalService and the Flutter publishing wrapper preserve dispatch. Current OH backend accepts shell type only; typed-session interface additions do not establish other interpreters. Current guest assets and actual PTY/product behavior not validated.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    }
+  ]
+}

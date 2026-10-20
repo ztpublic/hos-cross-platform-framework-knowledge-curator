@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "network-adapter-policy-propagation",
+  "evidence": [
+    {
+      "project": "venera",
+      "commit": "5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf",
+      "paths": [
+        "pubspec.yaml",
+        "lib/init.dart",
+        "lib/network/ohos_http_adapter.dart",
+        "lib/foundation/sqlite_connection.dart",
+        "lib/utils/background_download.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "third_party/flutter_qjs/lib/src/ffi.dart",
+        "third_party/sqlite3/lib/src/ffi/load_library.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf"
+    },
+    {
+      "project": "venera",
+      "commit": "af0e0a1a5585b75ac1046f70eb3a803111d027d1",
+      "paths": [
+        "lib/network/ohos_http_adapter.dart",
+        "lib/utils/data_sync.dart",
+        "lib/utils/comic_backup.dart",
+        "lib/foundation/appdata.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/af0e0a1a5585b75ac1046f70eb3a803111d027d1"
+    },
+    {
+      "project": "venera",
+      "commit": "fb4848c45b989b58a390f72f733a103945596034",
+      "paths": [
+        "lib/utils/data_sync.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/fb4848c45b989b58a390f72f733a103945596034"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f",
+      "paths": [
+        "lib/function/network.dart",
+        "pubspec.yaml",
+        "lib/server.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/lxdklp/MCB_OHOS/commit/1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f"
+    },
+    {
+      "project": "connssh",
+      "commit": "95174411f2b1daa888ac499d4717efc22075c00b",
+      "paths": [
+        "lib/services/ssh_service.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/RWPteam/ConnSSH/blob/95174411f2b1daa888ac499d4717efc22075c00b/lib/services/ssh_service.dart"
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "85197565fa0476d8f0433a7d827c8a6cc4485d53",
+      "paths": [
+        "lib/src/transport/ssh_connector.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/blob/85197565fa0476d8f0433a7d827c8a6cc4485d53/lib/src/transport/ssh_connector.dart"
+    },
+    {
+      "project": "venera-harmony",
+      "commit": "cc492773493465e76ebe6b762fb084e30a3c51cd",
+      "paths": [
+        "apps/app_ohos/lib/network/ohos_http_adapter.dart",
+        "apps/app_ohos/lib/utils/data_sync.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Twopuding/venera-harmony/commit/cc492773493465e76ebe6b762fb084e30a3c51cd",
+      "note": "Selected WebDAV transport carries proxy scheme and optional ignoreBadCertificate setting. Disabling certificate validation observed, not recommended default; no runtime server test."
+    }
+  ],
+  "source_context": "# Preserve transport policy across an OH HTTP adapter change\n\n## Platform difference\n\nReplacing a native HTTP backend for OH can require explicit propagation of options through every application transport path.\n\n## Implementation\n\nVenera routes OH requests through dart:io instead of rhttp. Later WebDAV changes add per-endpoint TLS policy and then repair upload/download construction that had omitted the option even though connection testing supplied it. ConnSSH, SSH Codex and Minecraft Box keep their SSH/socket protocols in Dart, showing that a native network rewrite is not inherently required.\n\n## Applicability\n\nApply policy consistently to probes, listing, uploads and downloads. Test proxy, cancellation, timeout and certificate behavior against the app's actual backend.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nThe Venera history records certificate-validation bypass support; bypass is a project option, not a recommended solution for ordinary TLS failures or an OH requirement. A successful connection test does not verify the data-transfer clients.\n\n## Verification\n\nUse valid and invalid certificates and exercise all transport paths. Verify defaults remain strict and that endpoint-specific configuration neither disappears nor leaks into unrelated clients.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Venera OH (AzadKuu port) — 5e20a6ebb9](https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf) (diff): `pubspec.yaml`, `lib/init.dart`, `lib/network/ohos_http_adapter.dart`, `lib/foundation/sqlite_connection.dart`, `lib/utils/background_download.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `third_party/flutter_qjs/lib/src/ffi.dart`, `third_party/sqlite3/lib/src/ffi/load_library.dart`. Source license recorded by the study: GPL-3.0.\n- [Venera OH (AzadKuu port) — af0e0a1a55](https://github.com/AzadKuu/venera-ohos/commit/af0e0a1a5585b75ac1046f70eb3a803111d027d1) (diff): `lib/network/ohos_http_adapter.dart`, `lib/utils/data_sync.dart`, `lib/utils/comic_backup.dart`, `lib/foundation/appdata.dart`. Source license recorded by the study: GPL-3.0.\n- [Venera OH (AzadKuu port) — fb4848c45b](https://github.com/AzadKuu/venera-ohos/commit/fb4848c45b989b58a390f72f733a103945596034) (diff): `lib/utils/data_sync.dart`. Source license recorded by the study: GPL-3.0.\n- [Minecraft Box OH — 1a99d6ad8c](https://github.com/lxdklp/MCB_OHOS/commit/1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f) (diff): `lib/function/network.dart`, `pubspec.yaml`, `lib/server.dart`. Source license recorded by the study: GPL-3.0.\n- [ConnSSH OH — 95174411f2](https://github.com/RWPteam/ConnSSH/blob/95174411f2b1daa888ac499d4717efc22075c00b/lib/services/ssh_service.dart) (snapshot): `lib/services/ssh_service.dart`. Source license recorded by the study: BSD-3-Clause.\n- [Android SSH Codex — 85197565fa](https://github.com/wkj2333666/Android-SSH-Codex/blob/85197565fa0476d8f0433a7d827c8a6cc4485d53/lib/src/transport/ssh_connector.dart) (snapshot): `lib/src/transport/ssh_connector.dart`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [ConnSSH OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/connssh.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Twopuding Venera Harmony main 68a5c836abbf2afe19c194763675bc8dc0ce4ebd: independent imported modular host differs from registered AzadKuu fork; shared domain ancestry unavailable, not independent corroboration. No root app license text identified, component licenses do not settle app licensing. No implementation copied. Source/diff only; no resolution, build, signing/install or device/authentication/AI/network/WebView runtime. Other remote branches not analyzed.\nSelected WebDAV transport carries proxy scheme and optional ignoreBadCertificate setting. Disabling certificate validation observed, not recommended default; no runtime server test.",
+  "previous_document_sha256": "8fa257e348f0ff636162ffca05c2de1ed233078b72be8eeb2a311ff0441231a9"
+}

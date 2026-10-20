@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "typed-channel-payload-extraction",
+  "evidence": [
+    {
+      "project": "gardendless",
+      "commit": "e51a79b5abd6ce16c2e9d738b52e28c39524e3ff",
+      "paths": [
+        "ohos/entry/src/main/ets/game/GameBridge.ets",
+        "ohos/entry/src/main/ets/game/GpNextNativeCore.ets",
+        "ohos/entry/src/main/ets/plugins/GameHostPlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/e51a79b5abd6ce16c2e9d738b52e28c39524e3ff"
+    },
+    {
+      "project": "gardendless",
+      "commit": "f7d9ab2c0c258bc825bca8e8008aa892bf87b62f",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/GameHostPlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/f7d9ab2c0c258bc825bca8e8008aa892bf87b62f"
+    },
+    {
+      "project": "nju-timetable",
+      "commit": "b9d20cf669820323109f77e5b6780d9fa34d38c6",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets",
+        "ohos/entry/src/main/ets/widget/models/FormData.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/b9d20cf669820323109f77e5b6780d9fa34d38c6"
+    },
+    {
+      "project": "wildfire-chat",
+      "commit": "c0efbffba64f1bfa4ce3f9a7e0b940f40f903cce",
+      "paths": [
+        "imclient/ohos/src/main/ets/cn/wildfirechat/imclient/ImclientPlugin.ets"
+      ],
+      "kind": "diff",
+      "note": "Map->JSON path converts Uint8Array to base64 before send/insert/update. Actual parent diff; encoding exceptions only log and omit field.",
+      "url": "https://github.com/wildfirechat/flutter-chat/commit/c0efbffba64f1bfa4ce3f9a7e0b940f40f903cce"
+    },
+    {
+      "project": "wildfire-chat",
+      "commit": "605b15281a41378a61a37078f8c6e2aa465e089b",
+      "paths": [
+        "imclient/ohos/src/main/ets/cn/wildfirechat/imclient/ImclientPlugin.ets"
+      ],
+      "kind": "diff",
+      "note": "getChannelInfo changed json.stringify(native JSON text) to json.parse, matching Dart Map contract.",
+      "url": "https://github.com/wildfirechat/flutter-chat/commit/605b15281a41378a61a37078f8c6e2aa465e089b"
+    },
+    {
+      "project": "wildfire-chat",
+      "commit": "ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7",
+      "paths": [
+        "imclient/lib/imclient_method_channel.dart",
+        "imclient/ohos/src/main/ets/cn/wildfirechat/imclient/ImclientPlugin.ets"
+      ],
+      "kind": "snapshot",
+      "note": "Current Dart binary decode and getChannelInfo Map consumer reviewed, including empty/malformed payload loss caveats.",
+      "url": "https://github.com/wildfirechat/flutter-chat/commit/ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7"
+    },
+    {
+      "project": "gardendless",
+      "commit": "0d4cc504d48883302ab41fb1c4a05c3684e19fd7",
+      "paths": [
+        "ohos/entry/src/main/ets/game/GpNextNativeCore.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/0d4cc504d48883302ab41fb1c4a05c3684e19fd7",
+      "note": "Replaces Object return with GpNextFileInfo interface; several unsupported POSIX metadata fields remain synthetic placeholders."
+    }
+  ],
+  "source_context": "# Extract typed ArkTS channel fields before serializing payloads\n\n## Platform difference\n\nA platform-channel argument container is not necessarily an ordinary JavaScript object with the JSON serialization behavior the application expects.\n\n## Implementation\n\nGardendless replaces JSON.stringify of the raw call arguments with explicit call.argument field extraction into a typed session structure, including optional fields separately. Its neighboring fixes also replace unsupported file-writing shorthand with open/write/finally-close. NJU introduces typed form models for its parsed data.\n\n## Applicability\n\nUse the selected Flutter OH embedding's accessor contract and explicit payload schema. Preserve version and optional-field semantics across Dart/native boundaries.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nAn intermediate accessor fix may be superseded by a later one; the cited Gardendless typed extraction is the later correction. Type casts alone do not validate hostile or malformed values.\n\n## Verification\n\nRound-trip required/optional fields, arrays, nulls and invalid types across the real codec; verify cleanup and error replies when parsing or I/O fails.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [GardendlessLoader — e51a79b5ab](https://github.com/Dey410/GardendlessLoader/commit/e51a79b5abd6ce16c2e9d738b52e28c39524e3ff) (diff): `ohos/entry/src/main/ets/game/GameBridge.ets`, `ohos/entry/src/main/ets/game/GpNextNativeCore.ets`, `ohos/entry/src/main/ets/plugins/GameHostPlugin.ets`. Source license recorded by the study: GPL-3.0.\n- [GardendlessLoader — f7d9ab2c0c](https://github.com/Dey410/GardendlessLoader/commit/f7d9ab2c0c258bc825bca8e8008aa892bf87b62f) (diff): `ohos/entry/src/main/ets/plugins/GameHostPlugin.ets`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — b9d20cf669](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/b9d20cf669820323109f77e5b6780d9fa34d38c6) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets`, `ohos/entry/src/main/ets/widget/models/FormData.ets`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [GardendlessLoader: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/gardendless.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 WildfireChat master ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7. LICENSE MIT plus Anti-996 text reviewed, OH plugin Apache header; missing marswrapper HAR proprietary/paid/trial per README. No implementation copied, no dependency resolution, builds, native SDK internals, IM server, device or message delivery tests. Wrapper fixes have actual parent diffs and matching Dart consumers. Current decode maps empty bytes to null and malformed bytes to omission; consumer recommendation preserves distinctions rather than copying those losses. Disconnect clears wrapper user ID but is not proof of SDK revocation completion.\nMap->JSON path converts Uint8Array to base64 before send/insert/update. Actual parent diff; encoding exceptions only log and omit field.\ngetChannelInfo changed json.stringify(native JSON text) to json.parse, matching Dart Map contract.\nCurrent Dart binary decode and getChannelInfo Map consumer reviewed, including empty/malformed payload loss caveats.\n\n2026-10-08 incremental update: gardendless 95395bf24d38ec0907d596fcf9400e00fd1148ca; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "ebee7d8b3d2dfcda38db1b3853d895550fa030f1b65d2241eb75e8ef97500786"
+}

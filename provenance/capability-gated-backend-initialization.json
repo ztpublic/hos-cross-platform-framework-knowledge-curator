@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "id": "capability-gated-backend-initialization",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/capability-gated-backend-initialization.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/capability-gated-backend-initialization.md",
+      "sha256": "064a3147cea1aad2827b5fc31ee90c3acb67d62c8fe2a2b9b4b91a237604e7ce",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/capability-gated-backend-initialization.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/capability-gated-backend-initialization.json",
+      "sha256": "3315da0cefcf4912f02edf5df2992d563b761d44e46a2b2ef9b2e8174bc5b3e8",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "capability-gated-backend-initialization",
+    "evidence": [
+      {
+        "project": "simple-live",
+        "commit": "b49331e7e1e91a533d7df8b2c640bd1e858c7ff3",
+        "paths": [
+          "simple_live_app/lib/modules/mine/account/kuaishou/web_login_controller.dart",
+          "simple_live_app/test/kuaishou_web_login_controller_test.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/b49331e7e1e91a533d7df8b2c640bd1e858c7ff3"
+      },
+      {
+        "project": "simple-live",
+        "commit": "ccb637feed373333207144b3c124e5d0d98d6261",
+        "paths": [
+          "simple_live_app/lib/modules/live_room/player/player_controller.dart",
+          "simple_live_app/ohos/entry/src/main/ets/plugins/OhosMediaPlugin.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/ccb637feed373333207144b3c124e5d0d98d6261"
+      },
+      {
+        "project": "kikoflu",
+        "commit": "f8ea4e7b1403824955b117fd1ae61da356cbc99c",
+        "paths": [
+          "lib/src/platform/runtime_platform.dart",
+          "lib/main.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/f8ea4e7b1403824955b117fd1ae61da356cbc99c"
+      },
+      {
+        "project": "neon",
+        "commit": "f9a850b09ae60c8c91e6279fe8dbcb43485b597b",
+        "paths": [
+          "packages/neon_framework/lib/src/platform/ohos.dart",
+          "packages/neon_framework/pubspec.yaml",
+          "packages/neon_framework/example/pubspec_overrides.yaml",
+          "packages/neon_framework/example/ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/shokakucarrier/neon-ohos/commit/f9a850b09ae60c8c91e6279fe8dbcb43485b597b"
+      },
+      {
+        "project": "kelivo",
+        "commit": "215e388134cd013eaa46791c176ecee6c6421016",
+        "paths": [
+          "pubspec.yaml",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos/entry/src/main/module.json5",
+          "lib/features/settings/pages/settings_page.dart",
+          "lib/shared/widgets/markdown_with_highlight.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/Chevey339/kelivo-ohos/commit/215e388134cd013eaa46791c176ecee6c6421016"
+      },
+      {
+        "project": "kelivo",
+        "commit": "7740cfb39669f159138b1ef292ea75c3441962c7",
+        "paths": [
+          "README.md"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Chevey339/kelivo-ohos/commit/7740cfb39669f159138b1ef292ea75c3441962c7"
+      },
+      {
+        "project": "kelivo",
+        "commit": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+        "paths": [
+          "README.md"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Chevey339/kelivo-ohos/commit/184b54e8bfdb672a566e9553bafc2090e99a5e29"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "400573949c3b8405ca4f087d80570ed0817425c8",
+        "paths": [
+          "lib/main.dart",
+          "lib/player_abstraction/erika_player_adapter.dart",
+          "lib/player_abstraction/player_factory.dart",
+          "lib/settings/pages/player_settings_content.dart",
+          "lib/utils/player_kernel_manager.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/400573949c3b8405ca4f087d80570ed0817425c8"
+      },
+      {
+        "project": "kazumi",
+        "commit": "d49ebafae27cbdff32c44df765a20551ba1af24b",
+        "paths": [
+          "lib/pages/settings/theme_settings_page.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/ErBWs/Kazumi/commit/d49ebafae27cbdff32c44df765a20551ba1af24b"
+      },
+      {
+        "project": "pixez",
+        "commit": "cb18035aa473f9488a9dc09e436bdce54522dbf0",
+        "paths": [
+          "lib/store/save_store.dart",
+          "lib/page/hello/android_hello_page.dart",
+          "lib/page/novel/viewer/novel_viewer.dart",
+          "lib/network/api_client.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/cb18035aa473f9488a9dc09e436bdce54522dbf0"
+      },
+      {
+        "project": "nju-timetable",
+        "commit": "2b722260f66378b733b60572386e06bc23ba3b4d",
+        "paths": [
+          "lib/Pages/Settings/SettingsView.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/2b722260f66378b733b60572386e06bc23ba3b4d"
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "2ebb6357dd33512abbdd4ff50107bf52955a21e5",
+        "paths": [
+          "lib/main.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/2ebb6357dd33512abbdd4ff50107bf52955a21e5",
+        "note": "Notification and monitor initialization exceptions made nonfatal."
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+        "paths": [
+          "lib/pages/mine_page.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+        "note": "Reminder settings and in-app update UI hidden; OH notification package selected."
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "14e6b10648ef7ce88414d7a562be638609205924",
+        "paths": [
+          "lib/utils/notification_factory.dart",
+          "lib/main.dart",
+          "lib/services/reminder_monitor_service.dart",
+          "ohos/entry/src/main/module.json5"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/utils/notification_factory.dart",
+        "note": "Factory supports Android/iOS only and throws on other targets; restored reminders and lifecycle monitor still call it. Permission declaration and plugin selection do not complete the app factory."
+      },
+      {
+        "project": "hlbmerge",
+        "commit": "47416f092fca969a19c92e316958ae716b253dcf",
+        "paths": [
+          "lib/utils/platform_util.dart",
+          "lib/features/export/cache_data_manager.dart",
+          "ohos/entry/src/main/module.json5",
+          "README.md"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/molihuan/hlbmerge_flutter/commit/47416f092fca969a19c92e316958ae716b253dcf",
+        "note": "OH grouped mobile but source-format enum Windows/Android/Mac selected independently. README restricts OH to PC/2in1 and excludes Bilibili OH cache; host declares phone only. No actual PC eligibility established."
+      },
+      {
+        "project": "lichess-oh",
+        "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+        "paths": [
+          "lib/main.dart",
+          "lib/src/binding.dart",
+          "lib/src/utils/ohos_stubs.dart"
+        ],
+        "kind": "diff",
+        "note": "Firebase failures caught and generic null stubs substituted; connectivity always wifi and preferences in memory. These do not establish real notification delivery, durable preferences or connectivity. Existing capability guidance applies.",
+        "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+      },
+      {
+        "project": "happy-coder",
+        "commit": "b89c764870fb6be5220fb8511422d71c880257bb",
+        "paths": [
+          "lib/features/auth/presentation/scan_qr_screen/scan_qr_screen.dart",
+          "lib/features/auth/presentation/scan_qr_screen/actions.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Native service availability probe precedes use but fallback controller eagerly initialized. Ping is registration proof only; optional feature guide applies.",
+        "url": "https://github.com/751848178/happy-coder-harmony/commit/b89c764870fb6be5220fb8511422d71c880257bb"
+      },
+      {
+        "project": "qingnote",
+        "commit": "6bfd7e1b8102da88b5843931891944bcbf32b475",
+        "paths": [
+          "code/HuaweiNoteFlutter/lib/main.dart",
+          "code/HuaweiNoteFlutter/lib/services/todo_notification_service.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Before runApp unconditional Rust/search/notifications init; notifications settings Android/Darwin only. Optional backend gating recommendation, no observed OH notification execution.",
+        "url": "https://github.com/fanshanhong/QingNote/commit/6bfd7e1b8102da88b5843931891944bcbf32b475"
+      },
+      {
+        "project": "wildfire-chat",
+        "commit": "4cf662e3c6247812a9c117c8fd7f43dcd53edd0a",
+        "paths": [
+          "imclient/lib/imclient_platform.dart"
+        ],
+        "kind": "diff",
+        "note": "Native device query and conservative older-plugin fallback; distinct UI desktop, native desktop and FFI predicates. OH PC remains HAR channel, not stock desktop FFI.",
+        "url": "https://github.com/wildfirechat/flutter-chat/commit/4cf662e3c6247812a9c117c8fd7f43dcd53edd0a"
+      },
+      {
+        "project": "wildfire-chat",
+        "commit": "ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7",
+        "paths": [
+          "imclient/lib/imclient_platform.dart",
+          "imclient/lib/src/imclient_channel.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Current backend caller contract, OS/device/UI/backend decision separation.",
+        "url": "https://github.com/wildfirechat/flutter-chat/commit/ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7"
+      },
+      {
+        "project": "mi-workbench",
+        "commit": "9b6478eab96dfd78c3b577608f473eca46342874",
+        "paths": [
+          "packages/flutter_reactive_ble_stub/lib/flutter_reactive_ble.dart",
+          "lib/screens/device_screen.dart",
+          "lib/services/notification_service.dart"
+        ],
+        "kind": "snapshot",
+        "note": "BLE compile stub versus UI capability; actual OH notification initialization/details branch present, unlike Android/Darwin-only factory. No delivery tested.",
+        "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/commit/9b6478eab96dfd78c3b577608f473eca46342874"
+      },
+      {
+        "project": "awesome-blbl",
+        "commit": "9b0de844e6bfa70eb9720123c4cbbcbe51d4d1f1",
+        "paths": [
+          "awesome_flutter/lib/state/player_state.dart"
+        ],
+        "kind": "diff",
+        "note": "Rename-aware parent diff uses per-player volume on OH while retaining an unconditional system listener. Current HEAD removes the OH branch and invokes async system setters without awaiting; a synchronous try/catch cannot guarantee fallback. System volume unsupported comment is a scoped backend observation, not OS prohibition.",
+        "url": "https://github.com/Luo-A-Chen/AwesomeResume/commit/9b0de844e6bfa70eb9720123c4cbbcbe51d4d1f1"
+      },
+      {
+        "project": "awesome-blbl",
+        "commit": "0be9adaa3176a100811f27fe621d1e9e7d7600b8",
+        "paths": [
+          "awesome_flutter/lib/state/player_state.dart",
+          "awesome_flutter/pubspec.yaml"
+        ],
+        "kind": "snapshot",
+        "note": "Current volume/brightness await and listener limitations reviewed. Moving Git sources and stock volume backend need resolution/runtime confirmation.",
+        "url": "https://github.com/Luo-A-Chen/AwesomeResume/commit/0be9adaa3176a100811f27fe621d1e9e7d7600b8"
+      },
+      {
+        "project": "moviepilot",
+        "commit": "286dd6dbdea1907880f1752e4063b055f193f391",
+        "paths": [
+          "lib/services/jpush_service.dart",
+          "lib/services/ios_shared_session_service.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Actual shared services guard Android/iOS or iOS-only initialization. Registrant containing push plugin does not prove OH application service is enabled.",
+        "url": "https://github.com/singleton-altman/MoviePilotLite/commit/286dd6dbdea1907880f1752e4063b055f193f391"
+      }
+    ],
+    "source_context": "# Select capabilities before constructing native-backed objects\n\n## Platform difference\n\nConstructing an unsupported native-backed object can fail before a later platform branch has a chance to avoid using it.\n\n## Implementation\n\nSimple Live makes its non-OH CookieManager lazy and prevents accessors from constructing an uninitialized media_kit player on OH. KikoFlu centralizes capability predicates before desktop-window, MPV and FFI initialization. Neon implements a platform capability object, including disabled camera/push/window features. Kelivo disables selected settings/rendering features in its imported snapshot; these are implementation boundaries rather than proof of OS-wide absence. Kazumi retains a dynamic-color guard; PixEz adds OH to shared feature branches. NJU temporarily hides an import/export entry before later calendar work, so routes must be assessed at the selected revision.\n\n## Applicability\n\nUse capabilities tied to implemented backends and initialization requirements, rather than classifying every OH device as Android-like or every large screen as a desktop backend.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA true capability flag is an assertion to test. A false flag may be temporary. Do not present local policies such as skipped MediaKit initialization as a statement that no OH MediaKit implementation can exist.\n\n## Verification\n\nConstruct controllers on OH without unavailable plugins, enter every advertised feature, and verify unavailable features fail explicitly before resource allocation.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Simple Live OH (maintained stable port) — b49331e7e1](https://github.com/xuanxuan123xuan/dart_simple_live/commit/b49331e7e1e91a533d7df8b2c640bd1e858c7ff3) (diff): `simple_live_app/lib/modules/mine/account/kuaishou/web_login_controller.dart`, `simple_live_app/test/kuaishou_web_login_controller_test.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — ccb637feed](https://github.com/xuanxuan123xuan/dart_simple_live/commit/ccb637feed373333207144b3c124e5d0d98d6261) (diff): `simple_live_app/lib/modules/live_room/player/player_controller.dart`, `simple_live_app/ohos/entry/src/main/ets/plugins/OhosMediaPlugin.ets`. Source license recorded by the study: GPL-3.0.\n- [KikoFlu OH — f8ea4e7b14](https://github.com/natsuz0ra/KikoFlu_ohos/commit/f8ea4e7b1403824955b117fd1ae61da356cbc99c) (diff): `lib/src/platform/runtime_platform.dart`, `lib/main.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Neon OH — f9a850b09a](https://github.com/shokakucarrier/neon-ohos/commit/f9a850b09ae60c8c91e6279fe8dbcb43485b597b) (diff): `packages/neon_framework/lib/src/platform/ohos.dart`, `packages/neon_framework/pubspec.yaml`, `packages/neon_framework/example/pubspec_overrides.yaml`, `packages/neon_framework/example/ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: AGPL-3.0.\n- [Kelivo OH — 215e388134](https://github.com/Chevey339/kelivo-ohos/commit/215e388134cd013eaa46791c176ecee6c6421016) (snapshot): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`, `lib/features/settings/pages/settings_page.dart`, `lib/shared/widgets/markdown_with_highlight.dart`. Source license recorded by the study: unknown.\n- [Kelivo OH — 7740cfb396](https://github.com/Chevey339/kelivo-ohos/commit/7740cfb39669f159138b1ef292ea75c3441962c7) (diff): `README.md`. Source license recorded by the study: unknown.\n- [Kelivo OH — 184b54e8bf](https://github.com/Chevey339/kelivo-ohos/commit/184b54e8bfdb672a566e9553bafc2090e99a5e29) (diff): `README.md`. Source license recorded by the study: unknown.\n- [NipaPlay Reload — 400573949c](https://github.com/AimesSoft/NipaPlay-Reload/commit/400573949c3b8405ca4f087d80570ed0817425c8) (diff): `lib/main.dart`, `lib/player_abstraction/erika_player_adapter.dart`, `lib/player_abstraction/player_factory.dart`, `lib/settings/pages/player_settings_content.dart`, `lib/utils/player_kernel_manager.dart`. Source license recorded by the study: MIT.\n- [Kazumi OH — d49ebafae2](https://github.com/ErBWs/Kazumi/commit/d49ebafae27cbdff32c44df765a20551ba1af24b) (diff): `lib/pages/settings/theme_settings_page.dart`. Source license recorded by the study: GPL-3.0.\n- [PixEz OH — cb18035aa4](https://github.com/bgli100/pixez-flutter-ohos/commit/cb18035aa473f9488a9dc09e436bdce54522dbf0) (diff): `lib/store/save_store.dart`, `lib/page/hello/android_hello_page.dart`, `lib/page/novel/viewer/novel_viewer.dart`, `lib/network/api_client.dart`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — 2b722260f6](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/2b722260f66378b733b60572386e06bc23ba3b4d) (diff): `lib/Pages/Settings/SettingsView.dart`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [Kelivo OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kelivo.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [Neon OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/neon.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nBeeCount OH discovery: This is negative/partial source evidence for the capability boundary. The source catches failures and hides some UI; it does not implement a shared explicit availability result or OH scheduling. Consumer guidance proposes that stronger contract. Monitor registration is not evidence that scheduling succeeds. Disabled Supabase settings are not evidence that Supabase is unavailable on OH. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\n2026-10-06 HLBmerge source study: pinned master 47416f092fca969a19c92e316958ae716b253dcf. Selected OH introduction and later FFmpeg import/dependency change compared against parents; later relevant file workflow snapshots reviewed. LICENSE.txt is Apache-2.0 but README separately forbids commercial use: recorded conflict, no resolution inferred and no implementation copied. ffmpeg_xmake is a tracked tree at HEAD despite .gitmodules stanza; no submodule initialization. Native build input/license audit is incomplete. No dependency resolution, native build, HAP packaging/signing/install or device/file-handoff validation performed.\nOH grouped mobile but source-format enum Windows/Android/Mac selected independently. README restricts OH to PC/2in1 and excludes Bilibili OH cache; host declares phone only. No actual PC eligibility established.\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nFirebase failures caught and generic null stubs substituted; connectivity always wifi and preferences in memory. These do not establish real notification delivery, durable preferences or connectivity. Existing capability guidance applies.\n\n2026-10-06 Happy Coder main b89c764870fb6be5220fb8511422d71c880257bb. No root app license identified, no implementation copied. Source/diff only, no builds, camera/Scan Kit/device/server/signing tests. Primary cross-check https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V14/scan-scanbarcode-V14 and Chinese default-scanning guide reviewed: product scanning UI, promise result, UI lifetime. Guide corrects source session/cancellation limitations rather than claiming they are implemented.\nNative service availability probe precedes use but fallback controller eagerly initialized. Ping is registration proof only; optional feature guide applies.\n\n2026-10-06 QingNote main 6bfd7e1b8102da88b5843931891944bcbf32b475. No root app-level license found; no implementation copied. Source/diff only; no builds/plugin resolution/device/Rust execution. Later Rust dependency declares five stock targets but no OH ffiPlugin, no OH binary/build source in tracked OH/rust_builder tree. Startup unconditionally awaits Rust init, so generated OH host alone is not current working-app proof. Commit reports macOS/Android greet tests, not OH.\nBefore runApp unconditional Rust/search/notifications init; notifications settings Android/Darwin only. Optional backend gating recommendation, no observed OH notification execution.\n\n2026-10-06 WildfireChat master ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7. LICENSE MIT plus Anti-996 text reviewed, OH plugin Apache header; missing marswrapper HAR proprietary/paid/trial per README. No implementation copied, no dependency resolution, builds, native SDK internals, IM server, device or message delivery tests. Wrapper fixes have actual parent diffs and matching Dart consumers. Current decode maps empty bytes to null and malformed bytes to omission; consumer recommendation preserves distinctions rather than copying those losses. Disconnect clears wrapper user ID but is not proof of SDK revocation completion.\nNative device query and conservative older-plugin fallback; distinct UI desktop, native desktop and FFI predicates. OH PC remains HAR channel, not stock desktop FFI.\nCurrent backend caller contract, OS/device/UI/backend decision separation.\n\n2026-10-06 Mi Workbench main 9b6478eab96dfd78c3b577608f473eca46342874. No app-level LICENSE identified, no implementation copied. Source only, no compiler/build/dependency resolution/BLE/database/notification/device tests. Host registrant is intentionally empty .ts at ets/plugin while EntryAbility import ../ets/plugin resolves ets/ets/plugin, absent tracked path. Source may require regeneration, so host presence does not establish compile or backend registration. BLE stub plus OH UI disable is app policy, not universal OS inability; global override affects graph beyond runtime OS guard.\nBLE compile stub versus UI capability; actual OH notification initialization/details branch present, unlike Android/Darwin-only factory. No delivery tested.\n\nAwesome BLBL: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nRename-aware parent diff uses per-player volume on OH while retaining an unconditional system listener. Current HEAD removes the OH branch and invokes async system setters without awaiting; a synchronous try/catch cannot guarantee fallback. System volume unsupported comment is a scoped backend observation, not OS prohibition.\nCurrent volume/brightness await and listener limitations reviewed. Moving Git sources and stock volume backend need resolution/runtime confirmation.\n\nMoviePilot Lite OH: License file labeled Business Source License 1.1 with additional text; no code copied, no legal interpretation. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nActual shared services guard Android/iOS or iOS-only initialization. Registrant containing push plugin does not prove OH application service is enabled.",
+    "previous_document_sha256": "dc8f863751db061faf7826c352d67212c82878b367b9010d1d84a3f2bd168abb"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

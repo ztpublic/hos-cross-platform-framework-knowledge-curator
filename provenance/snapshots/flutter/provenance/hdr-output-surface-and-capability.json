@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "id": "hdr-output-surface-and-capability",
+  "source_context": "Initial HDR feature selects platform views only in fullscreen, revised a6a6600d80 permits embedded HDR and excludes PiP, uses explicit no for SDR fallback, creation-time mode/target peak, display hdrFormats unknown versus empty state, transparent Flutter backgrounds and player reconstruction. Consumer follows final state, not initial fullscreen-only restriction. Dependencies select p1nbored media-kit feat-ohos-hdr across player/video/OH libs. Native fork implementation was not separately fetched. No general Flutter texture HDR limitation, decoder output, HDR display activation or PiP behavior established. Source Dolby-to-Vivid tagging and optimistic native-Vivid unknown policy are experimental observations, not recommended format equivalence; conservative applicability and metadata verification used. Source query tolerates null/filters ints; no-HDR sentinel and malformed lists require SDK/device validation. Source peak-nits default is model-specific; no claim that OH universally lacks a peak API or that 1600 nit is universally correct.",
+  "evidence": [
+    {
+      "project": "piliplus",
+      "commit": "0e17bf8fe04f37cd98eb3ae34fed883164e9c927",
+      "parent_commit": "6f89478d2768df1e778d1192870f82e6ccf02d66",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart",
+        "lib/harmony_adapt/harmony_channel.dart",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/0e17bf8fe04f37cd98eb3ae34fed883164e9c927"
+    },
+    {
+      "project": "piliplus",
+      "commit": "a6a6600d8035d2e6bb219b9b8b675e994b2fab3b",
+      "parent_commit": "ebe1195d899aea59ca625e8773951a38868e52b5",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart",
+        "lib/plugin/pl_player/models/hdr_peak_nits.dart",
+        "lib/plugin/pl_player/view/view.dart",
+        "lib/plugin/pl_player/utils/player_rebuild_queue.dart",
+        "lib/pages/video/view.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/a6a6600d8035d2e6bb219b9b8b675e994b2fab3b"
+    },
+    {
+      "project": "pilinara",
+      "commit": "4ef89942e5fd331880e9482ebb50b3bc1385f4b4",
+      "parent_commit": "f4f275343ef16561c64bdcc609015c17c7a62711",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "lib/services/pip_overlay_service.dart",
+        "lib/services/live_pip_overlay_service.dart",
+        "lib/media_kit_adapt/simple_video.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/4ef89942e5fd331880e9482ebb50b3bc1385f4b4"
+    },
+    {
+      "project": "pilinara",
+      "commit": "413c43a5fb82f1b2cba1bdc966e19f8229e179b8",
+      "parent_commit": "1e243a2098baa69731679761b80b08155f4a2c39",
+      "paths": [
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/413c43a5fb82f1b2cba1bdc966e19f8229e179b8"
+    },
+    {
+      "project": "piliplus",
+      "commit": "f772f40ad785c7b924dc6454fd7fc141aa41203e",
+      "parent_commit": "cc9e8b8597f3080395fc2fc5efb62f2fadb777ed",
+      "paths": [
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart",
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/f772f40ad785c7b924dc6454fd7fc141aa41203e"
+    },
+    {
+      "project": "piliplus",
+      "commit": "00257da2f5776b313bed09311a19fb96c64daede",
+      "parent_commit": "cd126f88adbb5222656645f77f6c0de8e5277d53",
+      "paths": [
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/00257da2f5776b313bed09311a19fb96c64daede"
+    },
+    {
+      "project": "piliplus",
+      "commit": "509dae88de16dd1e3d56db7f56403197a9cd8bdf",
+      "parent_commit": "00257da2f5776b313bed09311a19fb96c64daede",
+      "paths": [
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/509dae88de16dd1e3d56db7f56403197a9cd8bdf"
+    },
+    {
+      "project": "pilinara",
+      "commit": "a5dec3467fec7b2cef860d325e205074afb8f3f9",
+      "parent_commit": "338eefee14e5b12110586ff8c18acf61e424ed83",
+      "paths": [
+        "lib/plugin/pl_player/models/ohos_hdr_output.dart",
+        "lib/plugin/pl_player/controller.dart",
+        "test/plugin/pl_player/ohos_hdr_output_test.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/a5dec3467fec7b2cef860d325e205074afb8f3f9"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "Initial HDR feature selects platform views only in fullscreen, revised a6a6600d80 permits embedded HDR and excludes PiP, uses explicit no for SDR fallback, creation-time mode/target peak, display hdrFormats unknown versus empty state, transparent Flutter backgrounds and player reconstruction. Consumer follows final state, not initial fullscreen-only restriction. Dependencies select p1nbored media-kit feat-ohos-hdr across player/video/OH libs. Native fork implementation was not separately fetched. No general Flutter texture HDR limitation, decoder output, HDR display activation or PiP behavior established. Source Dolby-to-Vivid tagging and optimistic native-Vivid unknown policy are experimental observations, not recommended format equivalence; conservative applicability and metadata verification used. Source query tolerates null/filters ints; no-HDR sentinel and malformed lists require SDK/device validation. Source peak-nits default is model-specific; no claim that OH universally lacks a peak API or that 1600 nit is universally correct.",
+      "licenses": {
+        "piliplus": "GPL-3.0"
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    },
+    {
+      "date": "2026-10-16",
+      "run": "2026-10-16-discover-pilinara.json",
+      "notes": "Distinct product fork imports PiliPlus OH layer: final EntryAbility, HarmonyChannel and native Index are byte-identical to registered snapshot, not independent native corroboration. Later in-app PiP fix adds separate desired-render-state exclusion, notifies queue after changing overlay state on entry/exit, adds custom renderer platform-controller notifier branch, and changes dependency resolved video ref. Earlier comments/transparent-backdrop mechanism assumed underlay composition; later source explicitly revises comment to HCPP overlay composition and removes backdrop machinery. Consumer now requires actual composition-mode verification and conditional transparency rather than asserting universal layer order. Native media-kit fork/engine internals were not separately inspected, so neither stacking comment nor PiP black-screen fix is runtime proof. System and in-app PiP are separate host policies; fallback limitations scoped to selected renderer.",
+      "licenses": {
+        "pilinara": "GPL-3.0 (root); third-party packages separately licensed; not fully audited"
+      },
+      "validation_tier": "pinned source, actual parent diffs and source-integrity/KB checks only; no dependency resolution, application tests/build or physical-device execution"
+    },
+    {
+      "date": "2026-10-19",
+      "run": "2026-10-19-update-registered-projects.json",
+      "notes": "Final shared HDR model separates platformView, signaling and optional targetPeak. Source-preserving mode omits targetPeak; mapped output enables peak estimation under a backend-specific policy. Source comments about absolute brightness, libplacebo no-expansion and HDR-format conversions were not independently validated as universal facts. Consumer describes conditional controls and acceptance checks without adopting numeric defaults, decoder/conversion guarantees or SDR omission semantics universally. PiliNara later corrects in-app PiP: same Flutter-view overlay keeps HDR, only native/system PiP forces selected texture/SDR fallback; supersedes prior blanket in-app fallback source. Dependency lock updates claim theme/HDR surface fix but native fork internals and compositor output unverified. Same-subject fork changes have different patch IDs except explicitly recorded copies.",
+      "licenses": {
+        "piliplus": "GPL-3.0",
+        "pilinara": "GPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+    }
+  ]
+}

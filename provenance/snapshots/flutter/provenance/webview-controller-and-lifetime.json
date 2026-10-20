@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "id": "webview-controller-and-lifetime",
+  "evidence": [
+    {
+      "project": "kazumi",
+      "commit": "ca34e0d7d0d87b4e73bdfbfaa33cbf9a05135540",
+      "paths": [
+        "lib/pages/webview/webview_controller_impel/webview_ohos_controller_impel.dart",
+        "lib/pages/webview/webview_item_impel/webview_ohos_item_impel.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/ca34e0d7d0d87b4e73bdfbfaa33cbf9a05135540"
+    },
+    {
+      "project": "kazumi",
+      "commit": "f6ae11bc770e842339f129f764db82cda19c6aa5",
+      "paths": [
+        "lib/bean/dialog/dialog_helper.dart",
+        "lib/webview/webview_controller_impel/webview_ohos_controller_impel.dart",
+        "lib/webview/webview_ohos_item.dart",
+        "lib/pages/video/video_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/f6ae11bc770e842339f129f764db82cda19c6aa5"
+    },
+    {
+      "project": "kazumi",
+      "commit": "bc2b53d2d980a9c7afe0c35d6c368f1cf404d104",
+      "paths": [
+        "lib/webview/video/impl/video_webview_ohos_impl.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/bc2b53d2d980a9c7afe0c35d6c368f1cf404d104"
+    },
+    {
+      "project": "nju-timetable",
+      "commit": "18d0915702dfbf930fe8968389a82bb69807e478",
+      "paths": [
+        "pubspec.yaml",
+        "lib/Pages/Import/ImportFromXKView.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/18d0915702dfbf930fe8968389a82bb69807e478"
+    },
+    {
+      "project": "mr",
+      "commit": "cae41962c2084b8bb8b4cfa2628cfc7800721da0",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/cae41962c2084b8bb8b4cfa2628cfc7800721da0"
+    },
+    {
+      "project": "mr",
+      "commit": "346916b69ed5378d64c063136ab9f13c22bf57e2",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/346916b69ed5378d64c063136ab9f13c22bf57e2"
+    },
+    {
+      "project": "wild",
+      "commit": "38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "paths": [
+        "lib/widgets/cf_bookshelf_loader.dart",
+        "lib/widgets/cf_search_loader.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Leif-Wang-021/wild-ohos-standalone-backup/commit/38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "note": "Port adds reload serialization, timer deadlines, readiness retries and JSON-encoded JS values. dispose only cancels timers; async callbacks can survive timeout/disposal and lack generation checks. Single settlement/generation checks are corrective recommendations. Search empty records may still be a failed page parse; no universal site/CDN bypass claimed."
+    },
+    {
+      "project": "venera-harmony",
+      "commit": "68a5c836abbf2afe19c194763675bc8dc0ce4ebd",
+      "paths": [
+        "apps/app_ohos/lib/bridge/webview_channel.dart",
+        "apps/app_ohos/lib/network/webview_fetch.dart",
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/WebViewBridge.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Twopuding/venera-harmony/commit/68a5c836abbf2afe19c194763675bc8dc0ce4ebd",
+      "note": "WIP WebView transport: shared global completer lacks request identity; replacement and old finally can clear a newer request. No universal challenge bypass claimed."
+    },
+    {
+      "project": "operit2",
+      "commit": "de5a48d6fd0f064fd83586974f28b6aa76bac7a3",
+      "paths": [
+        "apps/flutter/app/lib/ui/features/packages/screens/ToolPkgComposeDslWebView.dart",
+        "apps/flutter/thirdparty/webview_all_ohos/lib/src/ohos_webview_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/de5a48d6fd0f064fd83586974f28b6aa76bac7a3"
+    },
+    {
+      "project": "piliplus",
+      "commit": "ebe1195d899aea59ca625e8773951a38868e52b5",
+      "parent_commit": "8f9810d690916628794d7b82706c9456e060e642",
+      "paths": [
+        "lib/pages/webview/view.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/ebe1195d899aea59ca625e8773951a38868e52b5"
+    },
+    {
+      "project": "operit2",
+      "commit": "7f600632f0cb35e3dc48e3dda6429aa2fdf5b0f1",
+      "parent_commit": "80f8796cdc40cdff6b5aff36cd4bc6c2a0aaf9f8",
+      "paths": [
+        "apps/flutter/thirdparty/webview_all_ohos/lib/src/ohos_webview_controller.dart",
+        "apps/flutter/thirdparty/webview_flutter_platform_interface/lib/src/platform_webview_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/7f600632f0cb35e3dc48e3dda6429aa2fdf5b0f1"
+    }
+  ],
+  "source_context": "# Adapt WebView controller contracts and ownership, not just package URLs\n\n## Platform difference\n\nOH-capable WebView packages can expose a different controller/event API and native lifetime than an application's previous backend.\n\n## Implementation\n\nKazumi replaces its OH webview_flutter path with in-app WebView controllers, handlers and user scripts. Its later parsing overlay waits for initialization and survives independently of the video page, with subscription/disposal cleanup. NJU rewrites its old widget API to controller/widget separation and navigation delegates. Kazumi subsequently routes OH resolution callbacks through the shared notifier after upstream behavior changes.\n\n## Applicability\n\nPreserve application-specific parsing/login/notification contracts during backend replacement. A parser overlay solving off-page URL resolution is not a background download service.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA plugin source swap alone may compile while missing navigation callbacks, cookies or JavaScript results. Recreating a native view for every route change can invalidate in-flight work.\n\n## Verification\n\nTest initialization ordering, JS handlers, navigation/error callbacks, source resolution after leaving the player page and disposal with outstanding callbacks.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Kazumi OH — ca34e0d7d0](https://github.com/ErBWs/Kazumi/commit/ca34e0d7d0d87b4e73bdfbfaa33cbf9a05135540) (diff): `lib/pages/webview/webview_controller_impel/webview_ohos_controller_impel.dart`, `lib/pages/webview/webview_item_impel/webview_ohos_item_impel.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Kazumi OH — f6ae11bc77](https://github.com/ErBWs/Kazumi/commit/f6ae11bc770e842339f129f764db82cda19c6aa5) (diff): `lib/bean/dialog/dialog_helper.dart`, `lib/webview/webview_controller_impel/webview_ohos_controller_impel.dart`, `lib/webview/webview_ohos_item.dart`, `lib/pages/video/video_page.dart`. Source license recorded by the study: GPL-3.0.\n- [Kazumi OH — bc2b53d2d9](https://github.com/ErBWs/Kazumi/commit/bc2b53d2d980a9c7afe0c35d6c368f1cf404d104) (diff): `lib/webview/video/impl/video_webview_ohos_impl.dart`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — 18d0915702](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/18d0915702dfbf930fe8968389a82bb69807e478) (diff): `pubspec.yaml`, `lib/Pages/Import/ImportFromXKView.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: Apache-2.0.\n- [MR — cae41962c2](https://github.com/DandanLLab/mr/commit/cae41962c2084b8bb8b4cfa2628cfc7800721da0) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [MR — 346916b69e](https://github.com/DandanLLab/mr/commit/346916b69ed5378d64c063136ab9f13c22bf57e2) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Wild OH study: independent niuhuan/wild port, GPL-3.0 application; archived repository. Reviewed single initial adaptation commit against parent plus HEAD documentation. Consumer prose contains independently authored guidance, no application code copied. Source/diff inspection only; no build, signing, dependency resolution, device or website/service execution. README API 23/DevEco 6.1/arm64 success reports are maintainer claims. Vendored WebView ancestry and binary reproducibility were not audited.\nPort adds reload serialization, timer deadlines, readiness retries and JSON-encoded JS values. dispose only cancels timers; async callbacks can survive timeout/disposal and lack generation checks. Single settlement/generation checks are corrective recommendations. Search empty records may still be a failed page parse; no universal site/CDN bypass claimed.\n\n2026-10-06 Twopuding Venera Harmony main 68a5c836abbf2afe19c194763675bc8dc0ce4ebd: independent imported modular host differs from registered AzadKuu fork; shared domain ancestry unavailable, not independent corroboration. No root app license text identified, component licenses do not settle app licensing. No implementation copied. Source/diff only; no resolution, build, signing/install or device/authentication/AI/network/WebView runtime. Other remote branches not analyzed.\nWIP WebView transport: shared global completer lacks request identity; replacement and old finally can clear a newer request. No universal challenge bypass claimed.",
+  "previous_document_sha256": "c91298405b8b8f099933373d5ee568043a269ae67146245d84421c6efb89a702",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "Extends controller lifetime guidance with a link to the distinct native script-list registration barrier. Shared caller awaits channel registration and script update before URL/HTML loading, and retains/removes handles per owner. Generic controller readiness is not earliest-document script readiness.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    },
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "PiliPlus ebe1195d89 sets useShouldInterceptRequest false in page settings to scope a chosen backend request issue; no request trace or feature validation. Operit2 7f600632f0 changes shared/OH controller evaluation API to Object? and returns native/null JSON result instead of ArgumentError; transport/script errors remain separate. No browser/ArkWeb execution; no OS-wide interception bug inferred.",
+      "licenses": {
+        "piliplus": "GPL-3.0",
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "native-uri-streaming-read",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/picker-result-readable-content.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/picker-result-readable-content.md",
+      "sha256": "b3d96188aa330bba19340e850840fef9a21de6c358542724c801c730ceb235ea",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/picker-result-readable-content.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/picker-result-readable-content.json",
+      "sha256": "4290ff6f5b5e76eed1375401e14f447efca0c4f3a976f605bbaf1002945fcf04",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

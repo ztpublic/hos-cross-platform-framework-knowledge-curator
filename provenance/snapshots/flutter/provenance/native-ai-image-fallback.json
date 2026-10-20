@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "native-ai-image-fallback",
+  "evidence": [
+    {
+      "project": "venera",
+      "commit": "eac96dd8b2e4402378e8a8b3c26dbd3d1832ae19",
+      "paths": [
+        "lib/foundation/ai_super_resolution.dart",
+        "lib/pages/reader/images.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/eac96dd8b2e4402378e8a8b3c26dbd3d1832ae19"
+    },
+    {
+      "project": "venera",
+      "commit": "17603c570f72dbf637c41cfcd3efebd9f488beb2",
+      "paths": [
+        "lib/pages/reader/images.dart",
+        "lib/foundation/image_provider/reader_image.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/17603c570f72dbf637c41cfcd3efebd9f488beb2"
+    },
+    {
+      "project": "venera",
+      "commit": "0a4b010f147a6693132da409848564cac66da773",
+      "paths": [
+        "lib/foundation/native_reader.dart",
+        "lib/pages/settings/reader.dart",
+        "ohos/entry/src/main/ets/pages/NativeReader.ets",
+        "ohos/entry/src/main/ets/utils/AiSuperResolutionHelper.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/0a4b010f147a6693132da409848564cac66da773"
+    },
+    {
+      "project": "venera-harmony",
+      "commit": "f17707f754c64ce233645a89bf770c1796803ecd",
+      "paths": [
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/CoreVisionBridge.ets",
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/SuperResolutionBridge.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Twopuding/venera-harmony/commit/f17707f754c64ce233645a89bf770c1796803ecd",
+      "note": "CoreVision analyzer integration restored after 8feadcb removal, uses lazy create and release resources; reports isAvailable only after initialization. Memory cap checks after input decode and output scale after process, not peak allocation protection. API26 threshold is source policy, not universal OH support."
+    }
+  ],
+  "source_context": "# Bridge native image enhancement with binary payloads and an original-image fallback\n\n## Platform difference\n\nAn OH-only image-enhancement service needs explicit availability, data transfer and fallback handling around ordinary Flutter image rendering.\n\n## Implementation\n\nVenera moves image bytes to BasicMessageChannel/BinaryCodec, keeps a separate availability probe, and handles timeout/null-cache cases. It then shows the original image while precaching the enhanced result. A later opt-in ArkTS local reader provides an alternative native rendering route rather than forcing every Flutter page into ArkUI.\n\n## Applicability\n\nThe native service is device/product/API dependent. Channel presence only establishes that a handler exists, not that enhancement is available, correct or fast on every device.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not claim zero-copy or performance improvements from a codec choice alone. A timeout must leave usable original content and avoid stale results replacing newer pages. The native reader is experimental and optional in this branch.\n\n## Verification\n\nTest unavailable service, large images, cancellation/page changes, timeout, cache invalidation and visual quality/performance with original versus enhanced content.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Venera OH (AzadKuu port) — eac96dd8b2](https://github.com/AzadKuu/venera-ohos/commit/eac96dd8b2e4402378e8a8b3c26dbd3d1832ae19) (diff): `lib/foundation/ai_super_resolution.dart`, `lib/pages/reader/images.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n- [Venera OH (AzadKuu port) — 17603c570f](https://github.com/AzadKuu/venera-ohos/commit/17603c570f72dbf637c41cfcd3efebd9f488beb2) (diff): `lib/pages/reader/images.dart`, `lib/foundation/image_provider/reader_image.dart`. Source license recorded by the study: GPL-3.0.\n- [Venera OH (AzadKuu port) — 0a4b010f14](https://github.com/AzadKuu/venera-ohos/commit/0a4b010f147a6693132da409848564cac66da773) (diff): `lib/foundation/native_reader.dart`, `lib/pages/settings/reader.dart`, `ohos/entry/src/main/ets/pages/NativeReader.ets`, `ohos/entry/src/main/ets/utils/AiSuperResolutionHelper.ets`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Venera Harmony (Twopuding) main study at 68a5c836abbf2afe19c194763675bc8dc0ce4ebd. Upstream README names venera-app/venera; independent root import and modular apps/app_ohos host differ from registered AzadKuu monolithic OH host. Original upstream history absent, shared domain provenance is not independent corroboration. No root application license text identified; stub component licenses are not a license for all app code. No application implementation copied. Source/diff only; no build/dependency resolution/signing/install/device/authentication/AI/network/WebView runtime. Other remote branches not analyzed.\nCoreVision analyzer integration restored after 8feadcb removal, uses lazy create and release resources; reports isAvailable only after initialization. Memory cap checks after input decode and output scale after process, not peak allocation protection. API26 threshold is source policy, not universal OH support.",
+  "previous_document_sha256": "8677c39ab8cc7c86db2834eb6175b76540e86ea86868619de0601f23e39278f4"
+}

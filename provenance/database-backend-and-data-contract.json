@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "id": "database-backend-and-data-contract",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/database-backend-and-data-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/database-backend-and-data-contract.md",
+      "sha256": "664a523cd465783c0931fd6a3c8017c53a1e66d94222646373ced9269042da44",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/database-backend-and-data-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/database-backend-and-data-contract.json",
+      "sha256": "84f810418df6c35518b5a4d79e605e45bd08478e8af0a2627395928d1d9e53f1",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "database-backend-and-data-contract",
+    "evidence": [
+      {
+        "project": "picacomic",
+        "commit": "836e8a034c73dcad0aa3867ac29a1fe944a5e662",
+        "paths": [
+          "lib/init.dart",
+          "lib/foundation/ohos_path_provider.dart",
+          "lib/foundation/ohos_shared_preferences_store.dart",
+          "lib/foundation/ohos_sqlite.dart",
+          "lib/foundation/database_manager.dart",
+          "ohos/entry/src/main/module.json5",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/836e8a034c73dcad0aa3867ac29a1fe944a5e662"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "2f6464ec0e7baf69b624031162828f40b662f7a5",
+        "paths": [
+          "lib/services/database_service.dart",
+          "lib/services/ocr_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/2f6464ec0e7baf69b624031162828f40b662f7a5"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "c5ad9721174669e1bbf726b07138db6dc3d08ffc",
+        "paths": [
+          "pubspec.yaml",
+          "lib/providers/secure_storage_provider.dart",
+          "lib/services/database_service.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/services/update_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc"
+      },
+      {
+        "project": "nexora",
+        "commit": "a453a69bd6d5784bc0600c3e8d4145ddc8053d38",
+        "paths": [
+          "pubspec.yaml",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/src/agents/agent_workspace_picker.dart",
+          "rust/src/api/agents.rs",
+          "rust/src/api/ai_stream.rs",
+          "rust/src/api/provider_profile.rs",
+          "rust/Cargo.toml",
+          "rust_builder/ohos/src/main/cpp/CMakeLists.txt"
+        ],
+        "kind": "snapshot",
+        "url": "https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38"
+      },
+      {
+        "project": "zhiji",
+        "commit": "776c6c25d94915285b193755e2d2aad422be0f7b",
+        "paths": [
+          "lib/data/database/app_database.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/blob/776c6c25d94915285b193755e2d2aad422be0f7b/lib/data/database/app_database.dart"
+      },
+      {
+        "project": "nexora",
+        "commit": "a453a69bd6d5784bc0600c3e8d4145ddc8053d38",
+        "paths": [
+          "rust/src/storage/mod.rs",
+          "rust/Cargo.toml"
+        ],
+        "kind": "snapshot",
+        "url": "https://gitcode.com/nutpi/Nexora/blob/a453a69bd6d5784bc0600c3e8d4145ddc8053d38/rust/src/storage/mod.rs"
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+        "paths": [
+          "lib/data/db.dart",
+          "pubspec.yaml",
+          "pubspec.lock"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+        "note": "NativeDatabase.createInBackground in documents directory changed to drift_sqflite SqfliteQueryExecutor.inDatabaseFolder; sqflite OH fork selected."
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "d8ab7951a19d7f747c9523ea555afd338f0dbaa2",
+        "paths": [
+          "lib/data/db.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/d8ab7951a19d7f747c9523ea555afd338f0dbaa2",
+        "note": "Feature synchronization restores drift/native.dart and document-directory FFI executor; no merge, this is a single-parent commit."
+      },
+      {
+        "project": "beecount-oh",
+        "commit": "14e6b10648ef7ce88414d7a562be638609205924",
+        "paths": [
+          "lib/data/db.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/14e6b10648ef7ce88414d7a562be638609205924",
+        "note": "Reinstates drift_sqflite executor and disables SQL logging."
+      },
+      {
+        "project": "pindou",
+        "commit": "b8364c5ecd38fb6ba833b42698ebef7250656897",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/StoragePathPlugin.ets",
+          "lib/data/services/project_persistence_service.dart",
+          "lib/data/services/app_storage_path_service.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/w6521939-ops/pindou-workshop/commit/b8364c5ecd38fb6ba833b42698ebef7250656897",
+        "note": "Native preferences put/flush awaited, plus file fallback always written. Native readback only validates decodable nonempty payload, ignores stored schema, empty projects treated missing, no revision to select newest copy; timeout does not stop native write. Temporary file fallback not durable guarantee."
+      },
+      {
+        "project": "jellyfin-music",
+        "commit": "f33f7a6edc89b537a10eed388d338411dd97fa8b",
+        "paths": [
+          "pubspec.yaml",
+          "lib/database/database.dart"
+        ],
+        "kind": "diff",
+        "url": "https://gitee.com/fly2464874018/flutter_music/commit/f33f7a6edc89b537a10eed388d338411dd97fa8b",
+        "note": "Adds sqflite OH Git implementation and context-resolved application-documents location; later dp_helper snapshot schema upgrades reviewed. No old-engine migration claim, no resolution/transaction/device validation."
+      },
+      {
+        "project": "moviepilot",
+        "commit": "261cb8134c42e20d103e67af9e714a19b63feb39",
+        "paths": [
+          "lib/services/hive_service.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "note": "Parent diff replaces OH Realm dependency with Hive and opens fresh boxes after adapters. Selected init contains no old Realm/Drift migration; this is not proof of no migration anywhere. Earlier SQLite/Realm restorations found in subjects, not all individually audited.",
+        "url": "https://github.com/singleton-altman/MoviePilotLite/commit/261cb8134c42e20d103e67af9e714a19b63feb39"
+      },
+      {
+        "project": "moviepilot",
+        "commit": "286dd6dbdea1907880f1752e4063b055f193f391",
+        "paths": [
+          "lib/services/hive_service.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Current Hive init source reviewed; path-provider still required by initFlutter. Cache and login profile semantics differ from disposable cache.",
+        "url": "https://github.com/singleton-altman/MoviePilotLite/commit/286dd6dbdea1907880f1752e4063b055f193f391"
+      },
+      {
+        "project": "todo-harmony",
+        "commit": "7630e14506cd12a95e1fa61f115c7fe3d0e6f082",
+        "paths": [
+          "lib/database/database_helper.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Whole-app import snapshot JSON store: unsynchronized initialization/writes, direct truncating write, corrupt reads reset cache then mark initialized. Recovery and atomic serialization are recommendations, not present fixes.",
+        "url": "https://gitcode.com/zouhaixin/todo_flutter_harmony/commit/7630e14506cd12a95e1fa61f115c7fe3d0e6f082"
+      },
+      {
+        "project": "yun-reader",
+        "commit": "9f717157b4399684c581258abd06bc02216faf2e",
+        "paths": [
+          "lib/storage/app_store.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Corrupt JSON read becomes defaults/empty; later save overwrites original. Current direct synchronous write/flush has no atomic replacement. Preserve recovery data and signal read-only memory mode as recommendations.",
+        "url": "https://gitcode.com/jenken1209/yun/commit/9f717157b4399684c581258abd06bc02216faf2e"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "29e56aaf4f996aac73eadc6c22d875c6f0f6114a",
+        "paths": [
+          "ohos/entry/src/main/ets/cards/CourseCardDatabase.ets",
+          "lib/services/database_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/29e56aaf4f996aac73eadc6c22d875c6f0f6114a",
+        "note": "Cross-runtime database-name/path/config/schema contract; source comment default mapping not independently validated."
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "0fd213ae1ae799a41eaac3f2caab379c9801aa62",
+        "paths": [
+          "ohos/flutter/overrides/lib/providers/app_config_provider.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/0fd213ae1ae799a41eaac3f2caab379c9801aa62",
+        "note": "Historical source override normalizes numeric preference reads after integral doubles arrived as ints. This override was removed with b2f7bade; guidance is a scoped normalization option, not a claim the current backend still needs it."
+      },
+      {
+        "project": "operit2",
+        "commit": "30294fff5c93681b7751fcd95e74c88d7a247c16",
+        "parent_commit": "09be5d7a22a18c9842d4adbea7c78c4a7f0e2f43",
+        "paths": [
+          "hosts/ohos/src/storage.rs",
+          "hosts/common/operit-host-native-storage/src/lib.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/30294fff5c93681b7751fcd95e74c88d7a247c16"
+      },
+      {
+        "project": "operit2",
+        "commit": "9ae1e558a66f96d81ff95a499bd39bda7da6c122",
+        "parent_commit": "3f523074c10ead7e2a6dfe3bae1696fec87ef720",
+        "paths": [
+          "core/crates/persistence/store/src/PreferencesDataStore.rs",
+          "core/crates/runtime/application/src/data/preferences/UserPreferencesManager.rs",
+          "core/crates/runtime/application/src/data/preferences/PreferenceStorageManager.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/9ae1e558a66f96d81ff95a499bd39bda7da6c122"
+      },
+      {
+        "project": "operit2",
+        "commit": "3a7cfe1828ab5ac64bfc6a95a5c549c339f85929",
+        "parent_commit": "17c95db88f71dcc1bf2b1463c11776938109078a",
+        "paths": [
+          "core/crates/runtime/application/src/data/preferences/ThemeConfigManager.rs",
+          "core/crates/runtime/application/src/data/preferences/UserPreferencesManager.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/3a7cfe1828ab5ac64bfc6a95a5c549c339f85929"
+      },
+      {
+        "project": "operit2",
+        "commit": "9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+        "paths": [
+          "core/crates/persistence/store/src/PreferencesDataStore.rs",
+          "hosts/common/operit-host-native-storage/src/lib.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+        "parent_commit": "9ae1e558a66f96d81ff95a499bd39bda7da6c122"
+      },
+      {
+        "project": "operit2",
+        "commit": "93ccf7d43d69f8d9e084dc97fd96eacf52fb5f18",
+        "parent_commit": "7e8440df219e0a46577f963c60a77e63e90b611b",
+        "paths": [
+          "plugins/packages/buildin/character_cards/src/storage/database.ts"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/93ccf7d43d69f8d9e084dc97fd96eacf52fb5f18"
+      }
+    ],
+    "source_context": "# Treat OH database selection as a storage contract with migration implications\n\n## Platform difference\n\nA database abstraction remaining in Dart does not remove its native SQLite dependency; replacing it with preferences/JSON also changes storage semantics.\n\n## Implementation\n\nPica Comic introduces OH SQLite loading, a database abstraction and JSON-backed preferences. Bugaoshan initially selects a preferences/JSON database fallback on OH, then sets that selector to false after adopting the CPF sqflite implementation. Nexora uses bundled rusqlite with an app-support database. Zhiji retains Drift NativeDatabase and sqlite3_flutter_libs, but its earlier study did not establish a working OH native library path.\n\n## Applicability\n\nReview actual engine selection, data location, schema, transactions and old data compatibility, not just successful pub resolution. The Bugaoshan fallback is historical rather than its final recorded policy.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not claim SQLite is unavailable merely because one plugin is missing. Preferences can have different transaction/concurrency/durability behavior. Reverting a backend selector does not itself prove users' existing fallback data was migrated.\n\n## Verification\n\nTest create/read/update, restart, schema upgrades, concurrent writes, migration of existing data and failure recovery using the selected native library in a release app.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Pica Comic OH — 836e8a034c](https://github.com/nimmi114514/PicaComic_ohos/commit/836e8a034c73dcad0aa3867ac29a1fe944a5e662) (diff): `lib/init.dart`, `lib/foundation/ohos_path_provider.dart`, `lib/foundation/ohos_shared_preferences_store.dart`, `lib/foundation/ohos_sqlite.dart`, `lib/foundation/database_manager.dart`, `ohos/entry/src/main/module.json5`, `pubspec.yaml`. Source license recorded by the study: MIT.\n- [不高山上 / Bugaoshan HarmonyOS — 2f6464ec0e](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/2f6464ec0e7baf69b624031162828f40b662f7a5) (diff): `lib/services/database_service.dart`, `lib/services/ocr_service.dart`. Source license recorded by the study: AGPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — c5ad972117](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc) (diff): `pubspec.yaml`, `lib/providers/secure_storage_provider.dart`, `lib/services/database_service.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/services/update_service.dart`. Source license recorded by the study: AGPL-3.0.\n- [Nexora — a453a69bd6](https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38) (snapshot): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/src/agents/agent_workspace_picker.dart`, `rust/src/api/agents.rs`, `rust/src/api/ai_stream.rs`, `rust/src/api/provider_profile.rs`, `rust/Cargo.toml`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`. Source license recorded by the study: AGPL-3.0.\n- [知己油耗 / Zhiji Fuel Consumption — 776c6c25d9](https://github.com/LianbinZhou/zhiji_oil_consumption/blob/776c6c25d94915285b193755e2d2aad422be0f7b/lib/data/database/app_database.dart) (snapshot): `lib/data/database/app_database.dart`, `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [Nexora — a453a69bd6](https://gitcode.com/nutpi/Nexora/blob/a453a69bd6d5784bc0600c3e8d4145ddc8053d38/rust/src/storage/mod.rs) (snapshot): `rust/src/storage/mod.rs`, `rust/Cargo.toml`. Source license recorded by the study: AGPL-3.0.\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n- [Nexora: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nexora.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [知己油耗 / Zhiji Fuel Consumption: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/zhiji.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nBeeCount OH discovery: Drift models/repositories remain; executor and directory convention change. No old-file migration is implemented in the reviewed source. Safer backup/transfer and upgrade checks in consumer guidance are recommendations rather than observed implementation. Resolved drift_sqflite 2.0.1 and OH sqflite 2.2.8+3 at 0bd638a416215b9ab74f21eef98e14797827df04. Primary API documentation confirms inDatabaseFolder resolves relative to getDatabasesPath: https://pub.dev/documentation/drift_sqflite/latest/drift_sqflite/SqfliteQueryExecutor/SqfliteQueryExecutor.inDatabaseFolder.html (2.0.1 when read). Backup guidance checked against https://www.sqlite.org/backup.html; no source database transfer was tested. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\n2026-10-06 Pindou Workshop study: main cf66d71e648e00a8e649878bb954b39e7e21a63f, two commits. Complete root app snapshot read for selected OH storage/export/share contracts; subsequent screenshot commit carries no implementation delta. Independent app from same maintainer as registered Xingmu, distinct channel/domain source. No root license identified; no app code copied. Source inspection only; no dependency resolution, build, target device, system chooser/copy/persistence runtime verification. README device acceptance checklist and AppGallery image not curator runtime evidence.\nNative preferences put/flush awaited, plus file fallback always written. Native readback only validates decodable nonempty payload, ignores stored schema, empty projects treated missing, no revision to select newest copy; timeout does not stop native write. Temporary file fallback not durable guarantee.\n\n2026-10-06 JellyMusic Gitee master 7cad145082b7601d695572f0f9b7945daa6e80f6: 17 reachable commits, imported root has OH host. No app-level license tracked or identified; no source code copied. Initial filtered clone checkout failed on Gitee TLS; retry without proxy variables restored this newly-created research checkout and it is clean. No upstream setup/submodule scripts run. Source/diff only; missing local audio implementation prevents complete integration audit; no build/dependency resolution/device/remote Jellyfin or AI service testing.\nAdds sqflite OH Git implementation and context-resolved application-documents location; later dp_helper snapshot schema upgrades reviewed. No old-engine migration claim, no resolution/transaction/device validation.\n\nMoviePilot Lite OH: License file labeled Business Source License 1.1 with additional text; no code copied, no legal interpretation. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nParent diff replaces OH Realm dependency with Hive and opens fresh boxes after adapters. Selected init contains no old Realm/Drift migration; this is not proof of no migration anywhere. Earlier SQLite/Realm restorations found in subjects, not all individually audited.\nCurrent Hive init source reviewed; path-provider still required by initFlutter. Cache and login profile semantics differ from disposable cache.\n\nTodo Flutter Harmony: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nWhole-app import snapshot JSON store: unsynchronized initialization/writes, direct truncating write, corrupt reads reset cache then mark initialized. Recovery and atomic serialization are recommendations, not present fixes.\n\nYun reader: single root import, MIT code/build/config; content separately CC BY-NC-SA 4.0. No code/content copied. Git checkout failed because git-lfs unavailable; pinned text sources inspected through git show. Bundled content LFS unavailable and not needed for source review. No successful build/runtime/device/public Files-app visibility claim.\nCorrupt JSON read becomes defaults/empty; later save overwrites original. Current direct synchronous write/flush has no atomic replacement. Preserve recovery data and signal read-only memory mode as recommendations.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "previous_document_sha256": "97cc71733d1fb37fb0731fd58e389330048d73ddc4dd959f0d163f076f0cfa40",
+    "updates": [
+      {
+        "date": "2026-10-15",
+        "run": "2026-10-15-update-registered-projects.json",
+        "notes": "30294fff5c forwards OH writeBytesAtomically to common native staging writer, private Unix mode and commit path. Later preferences replace HashMap<String,String> with Value; schema owner converts only declared key types, payload format/schema versions reject incompatible synchronized operations, and complete-edit transactions precede persisted snapshots. 9ae1e558a6 and later 3a7cfe1828 owner/catalog changes reconciled; arbitrary strings remain strings, no generic parse-every-string recommendation. Atomic rename/write/cache behavior inspected as source, no crash durability or migration execution verified. Existing storage lesson extended rather than separate generic app synchronization entry.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+      },
+      {
+        "date": "2026-10-16",
+        "run": "2026-10-16-update-registered-projects.json",
+        "notes": "Complete preferences snapshot replacement now clones and migrates an in-memory snapshot before final persistence rather than first persisting schema-only migration. Consumer requires failed final replacement to leave persisted/cache state coherent. Shared SQLite switches transaction mode to Immediate, cross-linked as a distinct contention lesson. Atomicity/durability/rollback and native OH execution remain acceptance criteria, not measured source-study results.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/history review and local KB integrity; isolated local SQLite mechanism experiment only where recorded; no upstream build/tests or OH/device execution"
+      },
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "Plugin database import splits mutations into sequential <=1000-record host commits. Source comment explicitly preserves earlier committed batches on later failure and relies on repeated SKIP/UPDATE import; metadata publication remains separate. Consumer emphasizes partial commit/idempotence acceptance, not whole-import atomicity. Shared application storage with OH consumer, not a new SQLite transaction mechanism; earlier BEGIN IMMEDIATE lesson unchanged.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: shared-database-extension-contract, typed-preference-schema-migration",
+    "Retained Flutter-specific API/embedding conditions.",
+    "Extracted independent contract into batched-import-partial-commit"
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

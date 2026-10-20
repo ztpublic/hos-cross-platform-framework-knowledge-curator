@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "native-playback-state-observation",
+  "evidence": [
+    {
+      "project": "simple-live",
+      "commit": "899db0ec9b5254953da70733a2a53cfe360a8a06",
+      "paths": [
+        "simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/VideoPlayer.ets",
+        "simple_live_app/third_party/video_player_ohos/lib/src/ohos_video_player.dart",
+        "simple_live_app/lib/modules/live_room/player/ohos_video_player.dart",
+        "simple_live_app/lib/modules/live_room/player/ohos_playback_signal_adapter.dart",
+        "simple_live_app/lib/modules/live_room/live_room_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/899db0ec9b5254953da70733a2a53cfe360a8a06"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "37cce2a41748228cd15fef6f0c4f10e87184b41a",
+      "paths": [
+        "lib/src/services/audio_player_service.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/37cce2a41748228cd15fef6f0c4f10e87184b41a"
+    },
+    {
+      "project": "piliplus",
+      "commit": "96f9891fb617c14d86f0ea8acec36ba18f456432",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "lib/plugin/pl_player/view/view.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/96f9891fb617c14d86f0ea8acec36ba18f456432"
+    },
+    {
+      "project": "bujuan",
+      "commit": "cbcec911e1805d83256b2feb16f5c33d44d9e3aa",
+      "paths": [
+        "lib/common/bujuan_music_handler.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AnmSleepalone/bujuan-harmony/commit/cbcec911e1805d83256b2feb16f5c33d44d9e3aa",
+      "note": "System media-card fix publishes loading/control state and resumes paused player rather than always reloading. Later full handler snapshot checked for shared command/state path; no native generation correlation implemented."
+    },
+    {
+      "project": "simple-live-yabi",
+      "commit": "5da15c36fa7b3d295cbdb8bfe24cefc9ed429c77",
+      "paths": [
+        "lib/app/modules/live_room/live_room_controller.dart",
+        "lib/app/modules/live_room/live_room_page.dart"
+      ],
+      "kind": "diff",
+      "note": "Rect dimensions proxy for first frame; requested playing no longer hides placeholder. Guide explicitly does not claim dimensions guarantee rendering.",
+      "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/5da15c36fa7b3d295cbdb8bfe24cefc9ed429c77"
+    },
+    {
+      "project": "piliplusx",
+      "commit": "b54720409a5d4ec926beb0935477043e27c61d8e",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "note": "Always send volume despite same cached request, then read observed native volume; existing observation lesson.",
+      "url": "https://github.com/cnctem/PiliPlusX/commit/b54720409a5d4ec926beb0935477043e27c61d8e"
+    },
+    {
+      "project": "simple-live",
+      "commit": "6336d74ce3b01cd81bfc63da629de787bb535efd",
+      "paths": [
+        "simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/VideoPlayer.ets",
+        "simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/QueuingEventSink.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/6336d74ce3b01cd81bfc63da629de787bb535efd",
+      "note": "Typed percent versus duration/clock events, generation reset and detached telemetry drop."
+    },
+    {
+      "project": "simple-live",
+      "commit": "494838b13eed355c47c737ff116463a8f95545bb",
+      "paths": [
+        "simple_live_app/lib/modules/live_room/player/ohos_video_player.dart",
+        "simple_live_app/lib/modules/live_room/ohos_reconnect_confirmation.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/494838b13eed355c47c737ff116463a8f95545bb",
+      "note": "Makes heartbeat optional instead of fabricating receipt time from cache updates. Source confirmation combines readiness tiers; guidance keeps them distinct."
+    },
+    {
+      "project": "piliplus",
+      "commit": "a6a6600d8035d2e6bb219b9b8b675e994b2fab3b",
+      "parent_commit": "ebe1195d899aea59ca625e8773951a38868e52b5",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "lib/plugin/pl_player/view/view.dart",
+        "lib/pages/video/controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/a6a6600d8035d2e6bb219b9b8b675e994b2fab3b"
+    }
+  ],
+  "source_context": "# Observe native playback events instead of inferring success from Dart intent\n\n## Platform difference\n\nRequested play/volume state and wrapper initialization can diverge from actual native playback behavior.\n\n## Implementation\n\nSimple Live adds AVPlayer START_RENDER_FRAME events, correlates texture/generation and times out first-frame waiting; its failover strategy then tries remaining CDN lines. KikoFlu guards stale indices/completion and uses an OH pause-after-load/play sequence to recover a completed-state transition. PiliPlus removes a cached requested-volume equality gate and exposes observed volume when selected.\n\n## Applicability\n\nThe first-frame bridge is OH-specific; the volume reconciliation change is shared behavior relevant to the same boundary. Exact deadlines and CDN choices are application policy.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA stale event from an old player must not confirm the new stream. A timer or isPlaying flag alone does not prove visible video. Recoveries must not loop indefinitely or silently change user intent.\n\n## Verification\n\nTest delayed/no first frame, rapid stream switches, completion-to-replay, rejected native commands and external volume changes while logging request and observation identities.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Simple Live OH (maintained stable port) — 899db0ec9b](https://github.com/xuanxuan123xuan/dart_simple_live/commit/899db0ec9b5254953da70733a2a53cfe360a8a06) (diff): `simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/VideoPlayer.ets`, `simple_live_app/third_party/video_player_ohos/lib/src/ohos_video_player.dart`, `simple_live_app/lib/modules/live_room/player/ohos_video_player.dart`, `simple_live_app/lib/modules/live_room/player/ohos_playback_signal_adapter.dart`, `simple_live_app/lib/modules/live_room/live_room_controller.dart`. Source license recorded by the study: GPL-3.0.\n- [KikoFlu OH — 37cce2a417](https://github.com/natsuz0ra/KikoFlu_ohos/commit/37cce2a41748228cd15fef6f0c4f10e87184b41a) (diff): `lib/src/services/audio_player_service.dart`. Source license recorded by the study: GPL-3.0.\n- [PiliPlus OH — 96f9891fb6](https://github.com/dev4harmony/PiliPlus/commit/96f9891fb617c14d86f0ea8acec36ba18f456432) (diff): `lib/plugin/pl_player/controller.dart`, `lib/plugin/pl_player/view/view.dart`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Bujuan Harmony study, feature/new-ui at 74be86f5688164334e348520ff1c6f113f9a0807. Independent 2697a/bujuan fork. No application-level license text identified; README MIT badge is a claim, vendored pinput license only covers that component. No application code copied. Non-shallow clone, 33 reachable commits; selected adaptation and follow-up diffs inspected. Native playback is supplied by external moving Git dependencies, not audited here. Source/diff evidence only, no dependency resolution, build, signing/install, playback/card/background/device testing.\nSystem media-card fix publishes loading/control state and resumes paused player rather than always reloading. Later full handler snapshot checked for shared command/state path; no native generation correlation implemented.\n\n2026-10-06 Simple Live yabi main 4fcb8b7d7ca996e8797218c3802818239ddb08ed. Archived legacy Flutter port; README recommends separate ArkTS replacement. Root GPL-3.0 and media-kit component licenses inspected; no app code copied. Source/diff only, no builds/background/player/device/live-service tests. Background start/cleanup exceptions are swallowed; activate ack can succeed without task. AVSession metadata and PLAY precede actual content readiness, event listener starts after activate. Local native package declares pluginClass without tracked OH host implementation; libmpv.so.2 arm64 artifact only, reproducible native build not established.\nRect dimensions proxy for first frame; requested playing no longer hides placeholder. Guide explicitly does not claim dimensions guarantee rendering.\n\n2026-10-06 PiliPlusX ohos 9c35fb5a3ae414e86bb00ca142bb668a00f4772b. Root GPL-3.0 inspected, no implementation copied. Source/diff only; no builds, HCPP hit testing, native window transitions, gallery or volume/device tests. Miniwindow scale fixed0.75 scoped layout heuristic, unawaited channel setters and stale lastWindow possible; no native transition settlement proof. Gallery return true defers permission to plugin, not permission granted. Moving ref ohos plugin is not reproducible pin.\nAlways send volume despite same cached request, then read observed native volume; existing observation lesson.\n\n2026-10-08 incremental update: simple-live 59ec2cc1dde14b368e6374b66fd72c9bd6c746d7; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "545db17b7ec80b998ca8fe375c72d9af78d93680fab36825b83da792f667d796",
+  "updates": [
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "Controller generation increments when new controller exists before Player.open; playerRebuilt increments after source opening for dependent track/subtitle work. Cached progress fallback avoids writing temporary zero from new player. Neither source event is first-rendered-frame evidence; consumer preserves distinction.",
+      "licenses": {
+        "piliplus": "GPL-3.0"
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "id": "native-host-and-shared-dart",
+  "evidence": [
+    {
+      "project": "snake",
+      "commit": "e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c",
+      "paths": [
+        "pubspec.yaml",
+        "lib/main.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/module.json5",
+        "ohos/oh-package.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/jianguo888/flutter_snake_game/commit/e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c"
+    },
+    {
+      "project": "shuqi",
+      "commit": "c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97",
+      "paths": [
+        "pubspec.yaml",
+        "lib/app/root_scene.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://gitee.com/zingwin/flutter_shuqi/commit/c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97"
+    },
+    {
+      "project": "pixez",
+      "commit": "33d68c6aad27ce7849b96212dda01b7659629917",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5",
+        "ohos/build-profile.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/33d68c6aad27ce7849b96212dda01b7659629917"
+    },
+    {
+      "project": "piliplus",
+      "commit": "454eee020ee10806f529fa6d8751a6d6b353c7c0",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "ohos/build-profile.json5",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/454eee020ee10806f529fa6d8751a6d6b353c7c0"
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "1913f8fdd28f72e80b478717f3ba0ccdc7e52292",
+      "paths": [
+        ".github/workflows/build.yml",
+        "tool/prepare_ohos.sh"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/1913f8fdd28f72e80b478717f3ba0ccdc7e52292"
+    },
+    {
+      "project": "localsend",
+      "commit": "139e3d67f7788244d170fcfae55d0040c622fa48",
+      "paths": [
+        "app/pubspec.yaml",
+        "app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "app/ohos/entry/src/main/module.json5",
+        "app/lib/util/native/platform_check.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/139e3d67f7788244d170fcfae55d0040c622fa48"
+    },
+    {
+      "project": "connssh",
+      "commit": "4cd65b62a13b94c1a0336ad0376e67485ea7087b",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/4cd65b62a13b94c1a0336ad0376e67485ea7087b"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "169cb906c5186675d8e3a35fa04c251ffe436a17",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/169cb906c5186675d8e3a35fa04c251ffe436a17"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "edc3531bc2372d6b547914b63bc52ec0427d4dc0",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/lxdklp/MCB_OHOS/commit/edc3531bc2372d6b547914b63bc52ec0427d4dc0"
+    },
+    {
+      "project": "xingmu",
+      "commit": "6be59dfccc6d1587799f5b3f12abbacaceb77c19",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/application/studio_bootstrap.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/w6521939-ops/xingmu-flutter/commit/6be59dfccc6d1587799f5b3f12abbacaceb77c19"
+    },
+    {
+      "project": "zhiji",
+      "commit": "69bd87c8522a4060d79734b86a3e1ee6ac3d9317",
+      "paths": [
+        "pubspec.yaml",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/commit/69bd87c8522a4060d79734b86a3e1ee6ac3d9317"
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "11f75e44f1ec0228bac1893eae11b343a9fb5cd9",
+      "paths": [
+        ".fvmrc",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/11f75e44f1ec0228bac1893eae11b343a9fb5cd9",
+      "note": "Adds FlutterAbility registration and FlutterPage around existing Dart app; declares Flutter 3.27.5-ohos-1.0.0."
+    },
+    {
+      "project": "venera-harmony",
+      "commit": "ea92e6f4d305d169212f66f0e07015d3ca3e69c6",
+      "paths": [
+        "apps/app_ohos/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "apps/app_ohos/ohos/entry/src/main/ets/bridge/FlutterBridge.ets",
+        "apps/app_ohos/pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/Twopuding/venera-harmony/commit/ea92e6f4d305d169212f66f0e07015d3ca3e69c6",
+      "note": "Independent root-import modular host with four abilities and engine-owned dispatch, differs from registered AzadKuu monolithic host. Missing original upstream adaptation ancestry; inherited domain code not independent corroboration."
+    },
+    {
+      "project": "qingnote",
+      "commit": "0a49e89a5a53dec0734b78de18e13c4d1e1162d9",
+      "paths": [
+        "code/HuaweiNoteFlutter/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "code/HuaweiNoteFlutter/ohos/entry/src/main/ets/pages/Index.ets"
+      ],
+      "kind": "diff",
+      "note": "Generated Flutter host addition actual parent diff, shared UI retained.",
+      "url": "https://github.com/fanshanhong/QingNote/commit/0a49e89a5a53dec0734b78de18e13c4d1e1162d9"
+    },
+    {
+      "project": "dmzj-aloereed",
+      "commit": "1622ef8929d93d837d514db221a35784441e9dc9",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/main.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Imported OH embedding host and shared app startup snapshot.",
+      "url": "https://github.com/Aloereed/flutter_dmzj_ohos/commit/1622ef8929d93d837d514db221a35784441e9dc9"
+    },
+    {
+      "project": "dmzj-handwer",
+      "commit": "b52da988a5f3fc1e1c624ba7cd1b8ca9fe5b8184",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/main.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Real Flutter OH host current snapshot, shared app startup retained.",
+      "url": "https://gitee.com/handwer/flutter_dmzj_ohos/commit/b52da988a5f3fc1e1c624ba7cd1b8ca9fe5b8184"
+    },
+    {
+      "project": "dorm-expense",
+      "commit": "9d293984ea1877c72ceb269e70cd4240daa40569",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "note": "OH generated host and device categories config, not PC runtime proof.",
+      "url": "https://github.com/Huanghuizhi2007/dorm-expense-manager/commit/9d293984ea1877c72ceb269e70cd4240daa40569"
+    },
+    {
+      "project": "simple-shop",
+      "commit": "cf1f9846130be785168e9344b309f95acd97fc7b",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Native OH FlutterAbility host registration and selected dependency graph inspected; no full business logic or backend audit.",
+      "url": "https://github.com/mdddj/flutter_simple_shop/commit/cf1f9846130be785168e9344b309f95acd97fc7b"
+    }
+  ],
+  "source_context": "# Supply the OH host while retaining portable Dart logic\n\n## Platform difference\n\nFlutter widgets and pure Dart logic can remain shared; the application still needs an OH-native host and its packaging configuration.\n\n## Implementation\n\nSnake adds FlutterAbility/FlutterPage, module metadata and a local Flutter HAR reference while retaining the timer-driven game and widget rendering. Shuqi, PixEz and PiliPlus likewise introduce the native shell. Snake has no application plugins in its registrant, whereas the readers have native dependency boundaries. SSH Codex generates the host from a preparation script instead of checking it in: host absence in Git is not by itself absence of an OH build path.\n\n## Applicability\n\nUse this distinction for projects with different amounts of native functionality. Host templates and HAR wiring must match the chosen Flutter OH version.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA generated host proves neither feature parity nor a reproducible signed HAP. Snake retains example identity/signing prerequisites. Unchanged Dart code can still invoke plugins without OH handlers, as Shuqi demonstrates.\n\n## Verification\n\nBuild with the intended SDK and local signing; launch the real entrypoint and exercise each platform-boundary feature rather than accepting the counter page.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Flutter Snake Game — e2a746c8c0](https://github.com/jianguo888/flutter_snake_game/commit/e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c) (diff): `pubspec.yaml`, `lib/main.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/module.json5`, `ohos/oh-package.json5`. Source license recorded by the study: MIT.\n- [Flutter Shuqi reader OHOS port — c4f4403ddf](https://gitee.com/zingwin/flutter_shuqi/commit/c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97) (diff): `pubspec.yaml`, `lib/app/root_scene.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/pages/Index.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [PixEz OH — 33d68c6aad](https://github.com/bgli100/pixez-flutter-ohos/commit/33d68c6aad27ce7849b96212dda01b7659629917) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`, `ohos/build-profile.json5`. Source license recorded by the study: GPL-3.0.\n- [PiliPlus OH — 454eee020e](https://github.com/dev4harmony/PiliPlus/commit/454eee020ee10806f529fa6d8751a6d6b353c7c0) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/pages/Index.ets`, `ohos/build-profile.json5`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [Android SSH Codex — 1913f8fdd2](https://github.com/wkj2333666/Android-SSH-Codex/commit/1913f8fdd28f72e80b478717f3ba0ccdc7e52292) (diff): `.github/workflows/build.yml`, `tool/prepare_ohos.sh`. Source license recorded by the study: MIT.\n- [AloeSend / LocalSend OH — 139e3d67f7](https://github.com/Aloereed/localsend-ohos/commit/139e3d67f7788244d170fcfae55d0040c622fa48) (snapshot): `app/pubspec.yaml`, `app/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `app/ohos/entry/src/main/module.json5`, `app/lib/util/native/platform_check.dart`. Source license recorded by the study: Apache-2.0.\n- [ConnSSH OH — 4cd65b62a1](https://github.com/RWPteam/ConnSSH/commit/4cd65b62a13b94c1a0336ad0376e67485ea7087b) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `pubspec.yaml`. Source license recorded by the study: BSD-3-Clause.\n- [KikoFlu OH — 169cb906c5](https://github.com/natsuz0ra/KikoFlu_ohos/commit/169cb906c5186675d8e3a35fa04c251ffe436a17) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [Minecraft Box OH — edc3531bc2](https://github.com/lxdklp/MCB_OHOS/commit/edc3531bc2372d6b547914b63bc52ec0427d4dc0) (snapshot): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [星幕 AI 漫剧工作室 — 6be59dfccc](https://github.com/w6521939-ops/xingmu-flutter/commit/6be59dfccc6d1587799f5b3f12abbacaceb77c19) (snapshot): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/application/studio_bootstrap.dart`, `pubspec.yaml`. Source license recorded by the study: MIT.\n- [知己油耗 / Zhiji Fuel Consumption — 69bd87c852](https://github.com/LianbinZhou/zhiji_oil_consumption/commit/69bd87c8522a4060d79734b86a3e1ee6ac3d9317) (diff): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/pages/Index.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: Apache-2.0.\n\n## Related knowledge\n\n- [Resolve the whole OH plugin graph and its API generation](plugin-graph-source-and-api.md)\n- [Trace both backend selection and native handler registration](native-registration-and-handler-coverage.md)\n\n## Study provenance\n\n- [ConnSSH OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/connssh.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n- [Flutter Shuqi reader OHOS port: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/shuqi.md).\n- [Flutter Snake Game: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/snake.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n- [星幕 AI 漫剧工作室: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/xingmu.md).\n- [知己油耗 / Zhiji Fuel Consumption: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/zhiji.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nBeeCount OH discovery: Host source is present. GeneratedPluginRegistrant is referenced but not checked in, which is treated as a normal generated-input limitation, not proof of a missing private library. No actual plugin registration or launch was executed. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\n2026-10-06 Twopuding Venera Harmony main 68a5c836abbf2afe19c194763675bc8dc0ce4ebd: independent imported modular host differs from registered AzadKuu fork; shared domain ancestry unavailable, not independent corroboration. No root app license text identified, component licenses do not settle app licensing. No implementation copied. Source/diff only; no resolution, build, signing/install or device/authentication/AI/network/WebView runtime. Other remote branches not analyzed.\nIndependent root-import modular host with four abilities and engine-owned dispatch, differs from registered AzadKuu monolithic host. Missing original upstream adaptation ancestry; inherited domain code not independent corroboration.\n\n2026-10-06 QingNote main 6bfd7e1b8102da88b5843931891944bcbf32b475. No root app-level license found; no implementation copied. Source/diff only; no builds/plugin resolution/device/Rust execution. Later Rust dependency declares five stock targets but no OH ffiPlugin, no OH binary/build source in tracked OH/rust_builder tree. Startup unconditionally awaits Rust init, so generated OH host alone is not current working-app proof. Commit reports macOS/Android greet tests, not OH.\nGenerated Flutter host addition actual parent diff, shared UI retained.\n\n2026-10-06 DMZJ Aloereed main 8189765deb194e025ec91123215d872fe7ed9729. GPL-3.0 LICENSE conflicts with README noncommercial wording; no app code copied and no unrestricted licensing assertion. Source/diff only, no dependency resolution/build/device/content-provider tests. Native host + moving Git replacements are actual implementation evidence, not complete package/backend compatibility proof. Shared upstream app and identical host template not independent corroboration.\nImported OH embedding host and shared app startup snapshot.\n\n2026-10-06 DMZJ handwer my_ohos b52da988a5f3fc1e1c624ba7cd1b8ca9fe5b8184. GPL-3.0 LICENSE conflicts with noncommercial README; no implementation copied. Source/diff only, no build/plugin resolution/device/UI tests. Removing textScaler argument/system UI calls and pinning older widgets is source/toolchain workaround, not permanent OS limitation or feature-equivalent replacement. App domain/template overlaps Aloereed, not independent support proof.\nReal Flutter OH host current snapshot, shared app startup retained.\n\n2026-10-06 Dorm Expense main 8d10fded34b44b46b4bfed9791dfc5f09e91615f. No app-level license identified, no source code copied. Source/diff only; no Supabase calls, dependency resolution, HAP signing/install/PC device or browser tests. Build wrapper explicitly materializes temporary pubspec_overrides and restores absent state with trap; PATH flutter only existence checked, no toolchain-version proof. Generated plugin registrant referenced but not tracked, expected generated dependency must exist at build time.\nOH generated host and device categories config, not PC runtime proof.\n\nFlutter Simple Shop OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nNative OH FlutterAbility host registration and selected dependency graph inspected; no full business logic or backend audit.",
+  "previous_document_sha256": "6b4e3a679840453bca120713372a0610d4b8226f6b62e29443a63b49a0328812"
+}

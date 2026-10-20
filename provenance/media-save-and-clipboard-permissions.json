@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "media-save-and-clipboard-permissions",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/media-save-and-clipboard-permissions.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/media-save-and-clipboard-permissions.md",
+      "sha256": "c8681a7d2a44f9fb3d0c73fa43c797bc7547c2846372c3c3ecddff44736aecea",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/media-save-and-clipboard-permissions.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/media-save-and-clipboard-permissions.json",
+      "sha256": "6e983bffba31dfbe5b4114bf14e1a71cad026d372abcb587d6b07888ab1f8326",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "media-save-and-clipboard-permissions",
+    "evidence": [
+      {
+        "project": "localsend",
+        "commit": "15ce91f70f40fde5e0eb4bb15cb70c597f11b0e0",
+        "paths": [
+          "app/lib/util/native/file_picker.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Aloereed/localsend-ohos/commit/15ce91f70f40fde5e0eb4bb15cb70c597f11b0e0"
+      },
+      {
+        "project": "pixez",
+        "commit": "d7a00484b498dbc9868f9757cb616d9f858b82cc",
+        "paths": [
+          "lib/store/save_store.dart",
+          "lib/page/user/users_page.dart",
+          "lib/models/board_info.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/d7a00484b498dbc9868f9757cb616d9f858b82cc"
+      },
+      {
+        "project": "kikoflu",
+        "commit": "d4e4dd65c780ae0e2c4e2708a146dc4337cf89a3",
+        "paths": [
+          "lib/src/widgets/cover_preview_dialog.dart",
+          "lib/src/widgets/image_gallery_screen.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/d4e4dd65c780ae0e2c4e2708a146dc4337cf89a3"
+      },
+      {
+        "project": "nju-timetable",
+        "commit": "77fbd9368fdacb091867ecb4fd1d8396ad1e74f3",
+        "paths": [
+          "ohos/entry/src/main/module.json5",
+          "ohos/entry/src/main/resources/base/element/string.json"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/77fbd9368fdacb091867ecb4fd1d8396ad1e74f3"
+      },
+      {
+        "project": "nomark",
+        "commit": "caf912bf8b73c7dac9262c4bd6a6243b43c85c0c",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c"
+      },
+      {
+        "project": "piliplusx",
+        "commit": "34cffed13f1fa24993870f066ce19e9ec7afeceb",
+        "paths": [
+          "lib/utils/image_utils.dart"
+        ],
+        "kind": "diff",
+        "note": "OH permission helper returns true because selected plugin performs permission flow; not OS blanket grant.",
+        "url": "https://github.com/cnctem/PiliPlusX/commit/34cffed13f1fa24993870f066ce19e9ec7afeceb"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "c8593abe78f32e760529822d3d8c24f7892dc7d1",
+        "paths": [
+          "lib/utils/gallery_save.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c8593abe78f32e760529822d3d8c24f7892dc7d1",
+        "note": "Sniffs PNG/JPEG/GIF/WebP/BMP signatures, writes corresponding suffix, flushes temp file, awaits gallery map result and cleans up. Signature-only checking is not full decode validation; source maps a specific user-refuses-permission string to false and may let cleanup failure mask the primary result. Guidance calls for stronger validation/error preservation."
+      }
+    ],
+    "source_context": "# Use the OH media/clipboard route rather than Android permission assumptions\n\n## Platform difference\n\nAndroid media-library and clipboard code paths may require different OH plugins, dialogs and permission handling.\n\n## Implementation\n\nLocalSend selects ImagePicker for OH instead of its AssetPicker/PhotoManager UI and restricts clipboard import to plain text with rejected/empty-read handling. PixEz uses an OH gallery plugin for image saving. KikoFlu routes image export through SaverGallery while keeping Android storage/photo permission requests Android-only. NJU declares READ_PASTEBOARD with a localized reason/in-use scene. Nomark uses the native asset-creation dialog for media destinations.\n\n## Applicability\n\nPermission needs depend on the native operation and SDK version; these examples do not prescribe a universal permission list.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA manifest declaration is not a runtime grant, and clipboard text support is not clipboard file/image support. Do not blindly transfer Android permission names to OH or request unrelated permissions because a plugin README contains boilerplate.\n\n## Verification\n\nExercise allowed/denied/empty clipboard reads and media save cancellation; check actual gallery visibility, bytes and permission behavior on supported API/device variants.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [AloeSend / LocalSend OH — 15ce91f70f](https://github.com/Aloereed/localsend-ohos/commit/15ce91f70f40fde5e0eb4bb15cb70c597f11b0e0) (diff): `app/lib/util/native/file_picker.dart`. Source license recorded by the study: Apache-2.0.\n- [PixEz OH — d7a00484b4](https://github.com/bgli100/pixez-flutter-ohos/commit/d7a00484b498dbc9868f9757cb616d9f858b82cc) (diff): `lib/store/save_store.dart`, `lib/page/user/users_page.dart`, `lib/models/board_info.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [KikoFlu OH — d4e4dd65c7](https://github.com/natsuz0ra/KikoFlu_ohos/commit/d4e4dd65c780ae0e2c4e2708a146dc4337cf89a3) (diff): `lib/src/widgets/cover_preview_dialog.dart`, `lib/src/widgets/image_gallery_screen.dart`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — 77fbd9368f](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/77fbd9368fdacb091867ecb4fd1d8396ad1e74f3) (diff): `ohos/entry/src/main/module.json5`, `ohos/entry/src/main/resources/base/element/string.json`. Source license recorded by the study: Apache-2.0.\n- [无印字节 / Bytedance Nomark — caf912bf8b](https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 PiliPlusX ohos 9c35fb5a3ae414e86bb00ca142bb668a00f4772b. Root GPL-3.0 inspected, no implementation copied. Source/diff only; no builds, HCPP hit testing, native window transitions, gallery or volume/device tests. Miniwindow scale fixed0.75 scoped layout heuristic, unawaited channel setters and stale lastWindow possible; no native transition settlement proof. Gallery return true defers permission to plugin, not permission granted. Moving ref ohos plugin is not reproducible pin.\nOH permission helper returns true because selected plugin performs permission flow; not OS blanket grant.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "previous_document_sha256": "938b40f2e0fd130c0009fca08cd931b103e3959ac1b83238d866afac8082cdc3"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: gallery-image-format-preservation",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

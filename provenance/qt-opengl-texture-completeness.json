@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "qt-opengl-texture-completeness",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "problems/render-black-rgba8-zink-mipmap.md",
+      "snapshot": "provenance/snapshots/qt/problems/render-black-rgba8-zink-mipmap.md",
+      "sha256": "b129793f4e6231c16b5b434f90eff6ef98eb1da9cadcb4dc35d3630657bbb0df",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

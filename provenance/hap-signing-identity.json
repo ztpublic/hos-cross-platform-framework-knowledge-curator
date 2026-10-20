@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "hap-signing-identity",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/hap-application-identity.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/hap-application-identity.md",
+      "sha256": "e395e7e6c018b57f3cb9ae538823e9e39c234a304de47c7b9ecd8789283c84ce",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/hap-native-project-structure.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/hap-native-project-structure.md",
+      "sha256": "f45d943477703963a4b4b27e59f18fb5b66869d4a8e3835ee490f1d9bfc7e9bf",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

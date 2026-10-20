@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "id": "native-registration-and-handler-coverage",
+  "evidence": [
+    {
+      "project": "kazumi",
+      "commit": "a76a0ec13b8b306798e651cadcbd5936955014e3",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/a76a0ec13b8b306798e651cadcbd5936955014e3"
+    },
+    {
+      "project": "shuqi",
+      "commit": "c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97",
+      "paths": [
+        "pubspec.yaml",
+        "lib/app/root_scene.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://gitee.com/zingwin/flutter_shuqi/commit/c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97"
+    },
+    {
+      "project": "oronbox",
+      "commit": "178cc9cb91ac73fcf6328b0fb1e137bfa3c97edf",
+      "paths": [
+        "lib/main.dart",
+        "lib/src/core/services/ohos_ble_channel.dart",
+        "lib/src/core/services/ohos_file_picker.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/diana9905454/OronBox-Lite/commit/178cc9cb91ac73fcf6328b0fb1e137bfa3c97edf"
+    },
+    {
+      "project": "nomark",
+      "commit": "caf912bf8b73c7dac9262c4bd6a6243b43c85c0c",
+      "paths": [
+        "lib/services/platform_services.dart",
+        "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c"
+    },
+    {
+      "project": "wild",
+      "commit": "38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "paths": [
+        "lib/methods.dart",
+        "lib/cubits/screen_keep_on.dart",
+        "ohos/entry/src/main/ets/plugin/MethodsPlugin.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Leif-Wang-021/wild-ohos-standalone-backup/commit/38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "note": "Dart OH early returns bypass native get/set keep-on handlers. Dart and ArkTS caches are updated before an acknowledged native state change; native handler swallows failures and does not await setKeepScreenOn. These are negative examples, not a working keep-on integration."
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "47416f092fca969a19c92e316958ae716b253dcf",
+      "paths": [
+        "pigeons/api.dart",
+        "ohos/entry/src/main/ets/pigeon/FlutterNativeApi.g.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ffmpeg_xmake/pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/47416f092fca969a19c92e316958ae716b253dcf",
+      "note": "Generated Pigeon protocol present but no concrete app host NativeApis implementation/setup found in tracked OH ETS. Main export backend uses FFI instead; initial getPlatformVersion MethodChannel template did not implement merge."
+    },
+    {
+      "project": "happy-coder",
+      "commit": "b89c764870fb6be5220fb8511422d71c880257bb",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/plugins/HappyScreenAwakePlugin.ets",
+        "lib/app/platform/screen_awake_bridge.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Active OH engine registers three plugins. Awake native awaits window mutation before updating cached status and ack, Dart checks ack. Unlike separate harmony native shell, actual active registration observed.",
+      "url": "https://github.com/751848178/happy-coder-harmony/commit/b89c764870fb6be5220fb8511422d71c880257bb"
+    },
+    {
+      "project": "wildfire-chat",
+      "commit": "c041de9c93f3811db751f54881ba25d3901b2a98",
+      "paths": [
+        "imclient/ohos/src/main/ets/cn/wildfirechat/imclient/ImclientPlugin.ets",
+        "imclient/pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Initial three-method plugin has optional-dispatch fn?. with no unknown-method settlement; selected snapshot, initial ancestry present.",
+      "url": "https://github.com/wildfirechat/flutter-chat/commit/c041de9c93f3811db751f54881ba25d3901b2a98"
+    },
+    {
+      "project": "petnote",
+      "commit": "48aa608227d989c41e3ebbb13254a36264a311ea",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/ProjectPluginRegistrant.ets"
+      ],
+      "kind": "diff",
+      "note": "Native project plugins registered explicitly, source implementations tracked. Selected actual parent diff.",
+      "url": "https://github.com/juren233/PetNote/commit/48aa608227d989c41e3ebbb13254a36264a311ea"
+    },
+    {
+      "project": "mi-workbench",
+      "commit": "9b6478eab96dfd78c3b577608f473eca46342874",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/plugin/generated_plugin_registrant.ts"
+      ],
+      "kind": "snapshot",
+      "note": "Empty placeholder and mismatched relative import; native host template needs real regenerated integration.",
+      "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/commit/9b6478eab96dfd78c3b577608f473eca46342874"
+    },
+    {
+      "project": "moviepilot",
+      "commit": "70163a27f0650d330d75cb3ee642d919002488fa",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "pubspec.yaml",
+        "lib/main.dart"
+      ],
+      "kind": "diff",
+      "note": "Parent diff restores several native registrant classes together with OH Git facade overrides. A fire-and-forget path-provider probe does not certify registration or initialization.",
+      "url": "https://github.com/singleton-altman/MoviePilotLite/commit/70163a27f0650d330d75cb3ee642d919002488fa"
+    },
+    {
+      "project": "todo-harmony",
+      "commit": "7630e14506cd12a95e1fa61f115c7fe3d0e6f082",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "snapshot",
+      "note": "Storage channel bound before generated plugin registration and unknown method returns notImplemented. No detach/hot-restart lifetime proof.",
+      "url": "https://gitcode.com/zouhaixin/todo_flutter_harmony/commit/7630e14506cd12a95e1fa61f115c7fe3d0e6f082"
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+      "paths": [
+        "lib/generate/pigeon/flutter_native_api.g.dart",
+        "ohos/entry/src/main/ets/pigeon/FlutterNativeApi.g.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+      "parent_commit": "47416f092fca969a19c92e316958ae716b253dcf"
+    }
+  ],
+  "source_context": "# Trace both backend selection and native handler registration\n\n## Platform difference\n\nDart adapters and native host files do not establish a working platform call unless the selected backend is installed and its matching native handler is attached.\n\n## Implementation\n\nKazumi repairs wakelock by adding its native plugin registration. Shuqi registers a limited set of OH plugins while retained battery/WebView/share calls exceed that set; an override for device_info_plus also does not replace imports of legacy device_info. OronBox has Dart BLE/SPP channel adapters, but its study found neither installation of the OH BLE adapter nor matching native handlers in tracked source. Nomark explicitly registers its app-owned native plugin despite an empty generated registrar.\n\n## Applicability\n\nThis applies to package plugins, federated Dart implementations and application-owned channels. The cited Kazumi manual registrant edit is historical evidence; for a generated package registrant, repair generator inputs rather than treating hand edits as a universal workflow.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA scan of tracked source cannot establish what an unavailable proprietary or local artifact implements. OronBox pairing success stubs and false query results must not be interpreted as verified Bluetooth operations.\n\n## Verification\n\nFollow a public API through backend selection, messenger/channel names and native handlers. Exercise success, unsupported methods and missing-plugin behavior on the actual engine.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Kazumi OH — a76a0ec13b](https://github.com/ErBWs/Kazumi/commit/a76a0ec13b8b306798e651cadcbd5936955014e3) (diff): `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`. Source license recorded by the study: GPL-3.0.\n- [Flutter Shuqi reader OHOS port — c4f4403ddf](https://gitee.com/zingwin/flutter_shuqi/commit/c4f4403ddfa38f10021f7eb7c0db2ecf1cb16b97) (diff): `pubspec.yaml`, `lib/app/root_scene.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/pages/Index.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [OronBox Lite — 178cc9cb91](https://github.com/diana9905454/OronBox-Lite/commit/178cc9cb91ac73fcf6328b0fb1e137bfa3c97edf) (snapshot): `lib/main.dart`, `lib/src/core/services/ohos_ble_channel.dart`, `lib/src/core/services/ohos_file_picker.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `pubspec.yaml`. Source license recorded by the study: AGPL-3.0.\n- [无印字节 / Bytedance Nomark — caf912bf8b](https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n- [OronBox Lite: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/oronbox.md).\n- [Flutter Shuqi reader OHOS port: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/shuqi.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Wild OH study: independent niuhuan/wild port, GPL-3.0 application; archived repository. Reviewed single initial adaptation commit against parent plus HEAD documentation. Consumer prose contains independently authored guidance, no application code copied. Source/diff inspection only; no build, signing, dependency resolution, device or website/service execution. README API 23/DevEco 6.1/arm64 success reports are maintainer claims. Vendored WebView ancestry and binary reproducibility were not audited.\nDart OH early returns bypass native get/set keep-on handlers. Dart and ArkTS caches are updated before an acknowledged native state change; native handler swallows failures and does not await setKeepScreenOn. These are negative examples, not a working keep-on integration.\n\n2026-10-06 HLBmerge source study: pinned master 47416f092fca969a19c92e316958ae716b253dcf. Selected OH introduction and later FFmpeg import/dependency change compared against parents; later relevant file workflow snapshots reviewed. LICENSE.txt is Apache-2.0 but README separately forbids commercial use: recorded conflict, no resolution inferred and no implementation copied. ffmpeg_xmake is a tracked tree at HEAD despite .gitmodules stanza; no submodule initialization. Native build input/license audit is incomplete. No dependency resolution, native build, HAP packaging/signing/install or device/file-handoff validation performed.\nGenerated Pigeon protocol present but no concrete app host NativeApis implementation/setup found in tracked OH ETS. Main export backend uses FFI instead; initial getPlatformVersion MethodChannel template did not implement merge.\n\n2026-10-06 Happy Coder main b89c764870fb6be5220fb8511422d71c880257bb. No root app license identified, no implementation copied. Source/diff only, no builds, camera/Scan Kit/device/server/signing tests. Primary cross-check https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V14/scan-scanbarcode-V14 and Chinese default-scanning guide reviewed: product scanning UI, promise result, UI lifetime. Guide corrects source session/cancellation limitations rather than claiming they are implemented.\nActive OH engine registers three plugins. Awake native awaits window mutation before updating cached status and ack, Dart checks ack. Unlike separate harmony native shell, actual active registration observed.\n\n2026-10-06 WildfireChat master ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7. LICENSE MIT plus Anti-996 text reviewed, OH plugin Apache header; missing marswrapper HAR proprietary/paid/trial per README. No implementation copied, no dependency resolution, builds, native SDK internals, IM server, device or message delivery tests. Wrapper fixes have actual parent diffs and matching Dart consumers. Current decode maps empty bytes to null and malformed bytes to omission; consumer recommendation preserves distinctions rather than copying those losses. Disconnect clears wrapper user ID but is not proof of SDK revocation completion.\nInitial three-method plugin has optional-dispatch fn?. with no unknown-method settlement; selected snapshot, initial ancestry present.\n\n2026-10-06 PetNote main cbaa2910dda4798c3bdf7c6ada643b451c30d350. No app-level LICENSE tracked; source-only guidance, no implementation copied. AGENTS/README development/build constraints inspected as upstream research data; no upstream setup/submodules or changes. No dependency resolution, builds, RTC provider, device, native dock, secure-store or keyboard tests. Guide corrects absent join-generation/channel/peer authorization guards. Source method pending result set before validation can remain after outer catch; old callback can settle new join. Secure-named native store is preferences plaintext; fallback settings key is not secure storage. Avoid-area patch validates text patterns but skips unsupported inputs with warning, not fail-closed build. Commit device/API/ABI claims unverified.\nNative project plugins registered explicitly, source implementations tracked. Selected actual parent diff.\n\n2026-10-06 Mi Workbench main 9b6478eab96dfd78c3b577608f473eca46342874. No app-level LICENSE identified, no implementation copied. Source only, no compiler/build/dependency resolution/BLE/database/notification/device tests. Host registrant is intentionally empty .ts at ets/plugin while EntryAbility import ../ets/plugin resolves ets/ets/plugin, absent tracked path. Source may require regeneration, so host presence does not establish compile or backend registration. BLE stub plus OH UI disable is app policy, not universal OS inability; global override affects graph beyond runtime OS guard.\nEmpty placeholder and mismatched relative import; native host template needs real regenerated integration.\n\nMoviePilot Lite OH: License file labeled Business Source License 1.1 with additional text; no code copied, no legal interpretation. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nParent diff restores several native registrant classes together with OH Git facade overrides. A fire-and-forget path-provider probe does not certify registration or initialization.\n\nTodo Flutter Harmony: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nStorage channel bound before generated plugin registration and unknown method returns notImplemented. No detach/hot-restart lifetime proof.",
+  "previous_document_sha256": "617903ac283c98d9b73074399efc9e72e2b23948af0d971393a01d5e3629bf90",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "Regenerated Dart NativeApis and ArkTS setup/callback APIs consistently introduce optional messageChannelSuffix and dot normalization. ArkTS handlers add argument-list/arity checks and nullable parameter handling. Pinned OH tree still contains generated abstract NativeApis but no concrete host NativeApis.setup invocation found in host grep; FFI integration is separate. No supported OH host methods inferred from regenerated bindings.",
+      "licenses": {
+        "hlbmerge": "Apache-2.0 in LICENSE.txt; conflicting README noncommercial restriction"
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    }
+  ]
+}

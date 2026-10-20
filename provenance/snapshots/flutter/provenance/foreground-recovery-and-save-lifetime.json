@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "foreground-recovery-and-save-lifetime",
+  "evidence": [
+    {
+      "project": "inknote",
+      "commit": "1b9b9b430c743bf92e619d6b9d7016117a43dd7c",
+      "paths": [
+        "lib/main.dart",
+        "lib/src/notes/note_repository.dart",
+        "lib/src/notes/note_workspace.dart",
+        "rust/src/store.rs",
+        "rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "rust_builder/cargokit/cmake/cargokit.cmake",
+        "pubspec.yaml",
+        "README.md"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c"
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "210f06645900d73cc5e364c426f2aff207228efd",
+      "paths": [
+        "lib/src/protocol/foreground_probe.dart",
+        "lib/src/app_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/210f06645900d73cc5e364c426f2aff207228efd"
+    },
+    {
+      "project": "inknote",
+      "commit": "1b9b9b430c743bf92e619d6b9d7016117a43dd7c",
+      "paths": [
+        "rust/src/store.rs",
+        "lib/src/notes/note_workspace.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://gitcode.com/nutpi/InkNote/blob/1b9b9b430c743bf92e619d6b9d7016117a43dd7c/rust/src/store.rs"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "4a309d5e1c94c827f2ff0d49be629e4e41e28fff",
+      "paths": [
+        "lib/function/network.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/lxdklp/MCB_OHOS/blob/4a309d5e1c94c827f2ff0d49be629e4e41e28fff/lib/function/network.dart"
+    },
+    {
+      "project": "bujuan",
+      "commit": "cbcec911e1805d83256b2feb16f5c33d44d9e3aa",
+      "paths": [
+        "lib/main.dart",
+        "lib/common/bujuan_music_handler.dart",
+        "lib/services/playback_state_service.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AnmSleepalone/bujuan-harmony/commit/cbcec911e1805d83256b2feb16f5c33d44d9e3aa",
+      "note": "Adds playback checkpoint/restore: fixed 1-second delay before storage readiness, GetIt Box.put unawaited, continuous position debounce, recovery deletes snapshot on any failure. Readiness, bounded checkpoint and retaining valid recovery state are corrective recommendations."
+    },
+    {
+      "project": "wildfire-chat",
+      "commit": "e722390f143281e548a84e29369bf9c040674097",
+      "paths": [
+        "imclient/ohos/src/main/ets/cn/wildfirechat/imclient/ImclientPlugin.ets"
+      ],
+      "kind": "diff",
+      "note": "Disconnect clears cached user identity after native call. Scoped correction for wrapper stale state, no durable save or SDK acknowledgement claim.",
+      "url": "https://github.com/wildfirechat/flutter-chat/commit/e722390f143281e548a84e29369bf9c040674097"
+    },
+    {
+      "project": "simple-live-yabi",
+      "commit": "5da15c36fa7b3d295cbdb8bfe24cefc9ed429c77",
+      "paths": [
+        "lib/app/modules/live_room/live_room_controller.dart"
+      ],
+      "kind": "diff",
+      "note": "Output refresh delay changed50->16ms; current VO-only refresh vs stream reload selected by isPlaying and background duration, selected workaround not universal lifecycle guarantee.",
+      "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/5da15c36fa7b3d295cbdb8bfe24cefc9ed429c77"
+    },
+    {
+      "project": "yun-reader",
+      "commit": "9f717157b4399684c581258abd06bc02216faf2e",
+      "paths": [
+        "lib/storage/app_store.dart"
+      ],
+      "kind": "snapshot",
+      "note": "600ms debounced direct writes capture mutable note lists, no explicit flush-on-exit in selected store. Cache changes are not acknowledged durable saves; source-only, broader caller lifecycle not fully audited.",
+      "url": "https://gitcode.com/jenken1209/yun/commit/9f717157b4399684c581258abd06bc02216faf2e"
+    },
+    {
+      "project": "flclash-shenyingjun",
+      "commit": "92bb66d769044bb3554370edbba289403c8b490c",
+      "paths": [
+        "lib/providers/action.dart"
+      ],
+      "note": "Actual parent diff coalesces concurrent core connections; finally completes shared Completer<void> successfully even if preload throws, so joined callers lose the error. 300ms delay is not readiness proof. Recommended explicit shared result is corrective.",
+      "kind": "diff",
+      "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS/commit/92bb66d769044bb3554370edbba289403c8b490c"
+    },
+    {
+      "project": "flclash-shenyingjun",
+      "commit": "327f112c424ba3b5673ad300d6f23d44b1860c5f",
+      "paths": [
+        "lib/state.dart",
+        "lib/manager/vpn_manager.dart"
+      ],
+      "note": "Actual parent diff reconnects UI core after stopping VPN then initializes and reapplies profile only when connected. UI control transport and VPN tunnel have distinct lifetimes.",
+      "kind": "diff",
+      "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS/commit/327f112c424ba3b5673ad300d6f23d44b1860c5f"
+    },
+    {
+      "project": "flclash-shenyingjun",
+      "commit": "b9add1da11ff260c77acc48881553b924284bc46",
+      "paths": [
+        "lib/state.dart"
+      ],
+      "note": "Cold startup parent diff adds core initialization after successful transport connection, before profile/status refresh.",
+      "kind": "diff",
+      "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS/commit/b9add1da11ff260c77acc48881553b924284bc46"
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "f7d7b9b3ea566cd59c925e0c0df7c674bdbd39a5",
+      "paths": [
+        "lib/src/transport/ssh_health_monitor.dart",
+        "lib/src/transport/ssh_connector.dart",
+        "lib/src/app_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/f7d7b9b3ea566cd59c925e0c0df7c674bdbd39a5",
+      "note": "Single-flight reply watchdog and grace on the same request; dedicated transport cleanup. No claim that Dart timers continue while frozen."
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "11a85337abe2eef7e66e97d04a92da8cbbfeca39",
+      "paths": [
+        "lib/src/connection_keep_alive.dart",
+        "lib/src/connection_network.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/11a85337abe2eef7e66e97d04a92da8cbbfeca39",
+      "note": "Verifies native service state and coalesces network availability. Both native adapters remain Android guarded."
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "1ad1dfea556069c1f44d293605fcb63afd4ea03f",
+      "paths": [
+        "lib/src/app.dart",
+        "lib/src/connection_network.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/1ad1dfea556069c1f44d293605fcb63afd4ea03f",
+      "note": "Starts native network observation only after binding exists."
+    }
+  ],
+  "source_context": "# Separate foreground recovery and best-effort saves from background execution\n\n## Platform difference\n\nLifecycle callbacks can initiate recovery or persistence, but they do not guarantee asynchronous work completes before suspension or termination.\n\n## Implementation\n\nInkNote flushes pending saves on inactive/paused/detached; its unawaited calls are best-effort. Its Rust storage uses temporary files, sync and rename and reconstructs metadata after corrupt JSON. SSH Codex preserves an existing transport when a foreground model probe is slow/rejected, disconnecting only for its explicit transport error. Minecraft Box has shared pause/resume/dispose and reconnect cancellation, not a native OH background service.\n\n## Applicability\n\nThese are shared application mechanisms exercised by OH lifecycle transitions. Keep transport connectivity, application-server responsiveness and durable save completion as separate observable states.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA failed feature probe need not mean the SSH transport is dead. A callback starting a save is not proof that data reached disk. Native atomic-write source code alone does not establish crash durability on the target filesystem.\n\n## Verification\n\nTest rapid background/foreground transitions, delayed servers, actual disconnection, process termination during save, restart recovery and cancellation of stale reconnect attempts.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [InkNote / 墨笺 — 1b9b9b430c](https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c) (diff): `lib/main.dart`, `lib/src/notes/note_repository.dart`, `lib/src/notes/note_workspace.dart`, `rust/src/store.rs`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `rust_builder/cargokit/cmake/cargokit.cmake`, `pubspec.yaml`, `README.md`. Source license recorded by the study: MIT.\n- [Android SSH Codex — 210f066459](https://github.com/wkj2333666/Android-SSH-Codex/commit/210f06645900d73cc5e364c426f2aff207228efd) (diff): `lib/src/protocol/foreground_probe.dart`, `lib/src/app_controller.dart`. Source license recorded by the study: MIT.\n- [InkNote / 墨笺 — 1b9b9b430c](https://gitcode.com/nutpi/InkNote/blob/1b9b9b430c743bf92e619d6b9d7016117a43dd7c/rust/src/store.rs) (snapshot): `rust/src/store.rs`, `lib/src/notes/note_workspace.dart`. Source license recorded by the study: MIT.\n- [Minecraft Box OH — 4a309d5e1c](https://github.com/lxdklp/MCB_OHOS/blob/4a309d5e1c94c827f2ff0d49be629e4e41e28fff/lib/function/network.dart) (snapshot): `lib/function/network.dart`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [InkNote / 墨笺: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/inknote.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Bujuan Harmony study, feature/new-ui at 74be86f5688164334e348520ff1c6f113f9a0807. Independent 2697a/bujuan fork. No application-level license text identified; README MIT badge is a claim, vendored pinput license only covers that component. No application code copied. Non-shallow clone, 33 reachable commits; selected adaptation and follow-up diffs inspected. Native playback is supplied by external moving Git dependencies, not audited here. Source/diff evidence only, no dependency resolution, build, signing/install, playback/card/background/device testing.\nAdds playback checkpoint/restore: fixed 1-second delay before storage readiness, GetIt Box.put unawaited, continuous position debounce, recovery deletes snapshot on any failure. Readiness, bounded checkpoint and retaining valid recovery state are corrective recommendations.\n\n2026-10-06 WildfireChat master ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7. LICENSE MIT plus Anti-996 text reviewed, OH plugin Apache header; missing marswrapper HAR proprietary/paid/trial per README. No implementation copied, no dependency resolution, builds, native SDK internals, IM server, device or message delivery tests. Wrapper fixes have actual parent diffs and matching Dart consumers. Current decode maps empty bytes to null and malformed bytes to omission; consumer recommendation preserves distinctions rather than copying those losses. Disconnect clears wrapper user ID but is not proof of SDK revocation completion.\nDisconnect clears cached user identity after native call. Scoped correction for wrapper stale state, no durable save or SDK acknowledgement claim.\n\n2026-10-06 Simple Live yabi main 4fcb8b7d7ca996e8797218c3802818239ddb08ed. Archived legacy Flutter port; README recommends separate ArkTS replacement. Root GPL-3.0 and media-kit component licenses inspected; no app code copied. Source/diff only, no builds/background/player/device/live-service tests. Background start/cleanup exceptions are swallowed; activate ack can succeed without task. AVSession metadata and PLAY precede actual content readiness, event listener starts after activate. Local native package declares pluginClass without tracked OH host implementation; libmpv.so.2 arm64 artifact only, reproducible native build not established.\nOutput refresh delay changed50->16ms; current VO-only refresh vs stream reload selected by isPlaying and background duration, selected workaround not universal lifecycle guarantee.\n\nYun reader: single root import, MIT code/build/config; content separately CC BY-NC-SA 4.0. No code/content copied. Git checkout failed because git-lfs unavailable; pinned text sources inspected through git show. Bundled content LFS unavailable and not needed for source review. No successful build/runtime/device/public Files-app visibility claim.\n600ms debounced direct writes capture mutable note lists, no explicit flush-on-exit in selected store. Cache changes are not acknowledged durable saves; source-only, broader caller lifecycle not fully audited.\n\nFlClash shenyingjun fork harmony: GPL-3.0 root; no app code copied. Compared current EntryAbility against registered tljk/FlClash-ohos pinned EntryAbility: substantially different custom NAPI/VPN/registration structure, distinct historical adaptation fixes, not URL alias and not independent upstream architecture corroboration. Selected parent diffs and current bridge sections only; complete transport/security/Go/native lifecycle not audited. No build/device/tunnel/proxy/provider runtime validation.\nActual parent diff coalesces concurrent core connections; finally completes shared Completer<void> successfully even if preload throws, so joined callers lose the error. 300ms delay is not readiness proof. Recommended explicit shared result is corrective.\nActual parent diff reconnects UI core after stopping VPN then initializes and reapplies profile only when connected. UI control transport and VPN tunnel have distinct lifetimes.\nCold startup parent diff adds core initialization after successful transport connection, before profile/status refresh.\n\n2026-10-08 incremental update: ssh-codex 97b2e2cc694e02ba331da0e08904e9269b2faa2b; registry license MIT. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "8914f2af01f74d6e81b9e6ea45d3ca475542979216ae02580113cc832e4a1f7c"
+}

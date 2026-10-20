@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "id": "rust-bridge-target-and-packaging",
+  "evidence": [
+    {
+      "project": "pixez",
+      "commit": "bae31a794608cf6dd9447486593d72db6d3f6db1",
+      "paths": [
+        "plugins/rhttp/ohos/src/CMakeLists.txt",
+        "plugins/rhttp/ohos/build-profile.json5",
+        "plugins/rhttp/cargokit/build_tool/lib/src/target.dart",
+        "plugins/rhttp/pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/bae31a794608cf6dd9447486593d72db6d3f6db1"
+    },
+    {
+      "project": "pixez",
+      "commit": "9643cc9baa5f74b2cd24f5ba0ba45f1912365749",
+      "paths": [
+        "plugins/rhttp/rust/Cargo.toml",
+        "plugins/rhttp/cargokit/build_tool/lib/src/builder.dart",
+        "buildtool/config.toml",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/9643cc9baa5f74b2cd24f5ba0ba45f1912365749"
+    },
+    {
+      "project": "draftmark",
+      "commit": "d560dccd1aae670ba1900ce9d07622f3e3cc4ad5",
+      "paths": [
+        "apps/draftmark/pubspec.yaml",
+        "apps/draftmark/lib/src/app/studio_controller.dart",
+        "apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart",
+        "crates/draftmark-bridge/Cargo.toml",
+        "crates/draftmark-bridge/src/compiler.rs",
+        "crates/draftmark-bridge/src/store.rs"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5"
+    },
+    {
+      "project": "inknote",
+      "commit": "1b9b9b430c743bf92e619d6b9d7016117a43dd7c",
+      "paths": [
+        "lib/main.dart",
+        "lib/src/notes/note_repository.dart",
+        "lib/src/notes/note_workspace.dart",
+        "rust/src/store.rs",
+        "rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "rust_builder/cargokit/cmake/cargokit.cmake",
+        "pubspec.yaml",
+        "README.md"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c"
+    },
+    {
+      "project": "nexora",
+      "commit": "a453a69bd6d5784bc0600c3e8d4145ddc8053d38",
+      "paths": [
+        "pubspec.yaml",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/src/agents/agent_workspace_picker.dart",
+        "rust/src/api/agents.rs",
+        "rust/src/api/ai_stream.rs",
+        "rust/src/api/provider_profile.rs",
+        "rust/Cargo.toml",
+        "rust_builder/ohos/src/main/cpp/CMakeLists.txt"
+      ],
+      "kind": "snapshot",
+      "url": "https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38"
+    },
+    {
+      "project": "nipaplay",
+      "commit": "181bf77691df7925b2b07cc09dc25f20fc08cd08",
+      "paths": [
+        "ohos/entry/src/main/cpp/CMakeLists.txt",
+        "cpp_native/CMakeLists.txt",
+        "lib/plugins/js_runtime_ohos.dart",
+        "lib/cpp_native/native_library.dart",
+        "lib/src/rust/rust_external_library_io.dart",
+        "rust/src/api/torrent.rs",
+        "packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets",
+        "lib/danmaku_next/next2_platform_support.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08"
+    },
+    {
+      "project": "localsend",
+      "commit": "7bd485cfb83748695cbf90759b7276f3b224d0df",
+      "paths": [
+        "app/pubspec.yaml",
+        "common/pubspec.yaml",
+        "app/ohos/entry/oh-package.json5",
+        "app/frb_dart/lib/src/loader/_io.dart",
+        "app/rhttp"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/7bd485cfb83748695cbf90759b7276f3b224d0df"
+    },
+    {
+      "project": "wild",
+      "commit": "38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "paths": [
+        "lib/main.dart",
+        "rust/.cargo/config.toml",
+        "rust/Cargo.toml",
+        "pubspec.yaml",
+        "ohos/entry/libs/arm64-v8a/librust_lib_wild.so"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Leif-Wang-021/wild-ohos-standalone-backup/commit/38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "note": "Port adds FRB 2.11.1 explicit ExternalLibrary.open on OH and bundled arm64 library; Cargo target linker points to an absent developer-local Windows wrapper. Presence of a binary and x86 target configuration does not prove reproducible compilation or x86 packaging."
+    },
+    {
+      "project": "qingnote",
+      "commit": "cf18040c0b118eeb6a67e4b6465727a05aace759",
+      "paths": [
+        "code/HuaweiNoteFlutter/lib/main.dart",
+        "code/HuaweiNoteFlutter/rust_builder/pubspec.yaml",
+        "code/HuaweiNoteFlutter/pubspec.yaml"
+      ],
+      "kind": "diff",
+      "note": "FRB2.12.0 startup added after OH host but Rust plugin lacks OH target; existing full target/toolchain/packaging lesson applies.",
+      "url": "https://github.com/fanshanhong/QingNote/commit/cf18040c0b118eeb6a67e4b6465727a05aace759"
+    },
+    {
+      "project": "qingnote",
+      "commit": "6bfd7e1b8102da88b5843931891944bcbf32b475",
+      "paths": [
+        "code/HuaweiNoteFlutter/lib/src/rust/frb_generated.dart",
+        "code/HuaweiNoteFlutter/rust_builder/cargokit/build_tool/lib/src/target.dart",
+        "code/HuaweiNoteFlutter/ohos/entry/build-profile.json5"
+      ],
+      "kind": "snapshot",
+      "note": "Generated ioDirectory Rust target/release, stock Cargokit targets/no OH, no packaged libRust in OH tree; incomplete integration, no claim of runtime failure test.",
+      "url": "https://github.com/fanshanhong/QingNote/commit/6bfd7e1b8102da88b5843931891944bcbf32b475"
+    },
+    {
+      "project": "simple-shop",
+      "commit": "cf1f9846130be785168e9344b309f95acd97fc7b",
+      "paths": [
+        "lib/main.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "note": "Actual parent diff adds unconditional RustLib.init before appInit via hi_ohos local path outside repository. Bridge source/target/binaries absent; runtime cannot be established.",
+      "url": "https://github.com/mdddj/flutter_simple_shop/commit/cf1f9846130be785168e9344b309f95acd97fc7b"
+    },
+    {
+      "project": "operit2",
+      "commit": "675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4",
+      "paths": [
+        "tools/build_scripts/build_flutter_ohos.py"
+      ],
+      "note": "Current selected Rust build function uses OH SDK clang, target-specific C/C++/AR/linker, sysroot and bindgen args before cargo target build and copies expected SO into entry ABI dir; source-only, not proven target support or link/run.",
+      "kind": "snapshot",
+      "url": "https://github.com/AAswordman/Operit2/commit/675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4"
+    },
+    {
+      "project": "operit2",
+      "commit": "7960cf71c94eaeae068f4a22bb0607a7d047b694",
+      "paths": [
+        "apps/flutter/app/hook/build.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/7960cf71c94eaeae068f4a22bb0607a7d047b694"
+    },
+    {
+      "project": "operit2",
+      "commit": "c6dceacb6069c823c92749d71f47986c55f712d9",
+      "parent_commit": "d9e345f49ec2d9822bc525abc9ab4bc631cc5845",
+      "paths": [
+        "apps/flutter/native/operit-flutter-bridge/src/FfiTransport.rs",
+        "apps/flutter/app/lib/core/bridge/FfiCoreTransport.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/c6dceacb6069c823c92749d71f47986c55f712d9"
+    }
+  ],
+  "source_context": "# Adapt Rust bridge targets and package the resulting OH library\n\n## Platform difference\n\nReusing a Rust core still requires a matching OH toolchain target, Dart/Rust bridge generation and native library packaging.\n\n## Implementation\n\nPixEz adds the OH Cargokit target and aligns its Rust flutter_rust_bridge version/generated files. Draftmark, InkNote and Nexora supply local Rust builder modules and keep business/storage/compiler logic in Rust behind Flutter. NipaPlay invokes Cargo from the native build and copies its artifact into Hvigor output because its selected integration lacks an OH runner. LocalSend vendors FRB loader handling while the HTTP core remains a submodule.\n\n## Applicability\n\nThese are several version-specific build strategies, not interchangeable snippets. Match target triple, ABI, generator/runtime versions, dependent libraries and the actual Flutter OH embedding.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nUninitialized submodules, developer-local bridge paths and bundled binaries are reproducibility boundaries. Native source reuse does not prove the library loads on a device or that all features of the Rust core work on OH.\n\n## Verification\n\nBuild from explicit inputs, inspect packaged libraries and exported symbols, initialize the bridge in a release HAP and call representative functions including error and large-data cases.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PixEz OH — bae31a7946](https://github.com/bgli100/pixez-flutter-ohos/commit/bae31a794608cf6dd9447486593d72db6d3f6db1) (diff): `plugins/rhttp/ohos/src/CMakeLists.txt`, `plugins/rhttp/ohos/build-profile.json5`, `plugins/rhttp/cargokit/build_tool/lib/src/target.dart`, `plugins/rhttp/pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [PixEz OH — 9643cc9baa](https://github.com/bgli100/pixez-flutter-ohos/commit/9643cc9baa5f74b2cd24f5ba0ba45f1912365749) (diff): `plugins/rhttp/rust/Cargo.toml`, `plugins/rhttp/cargokit/build_tool/lib/src/builder.dart`, `buildtool/config.toml`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Draftmark — d560dccd1a](https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5) (diff): `apps/draftmark/pubspec.yaml`, `apps/draftmark/lib/src/app/studio_controller.dart`, `apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart`, `crates/draftmark-bridge/Cargo.toml`, `crates/draftmark-bridge/src/compiler.rs`, `crates/draftmark-bridge/src/store.rs`. Source license recorded by the study: Apache-2.0.\n- [InkNote / 墨笺 — 1b9b9b430c](https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c) (diff): `lib/main.dart`, `lib/src/notes/note_repository.dart`, `lib/src/notes/note_workspace.dart`, `rust/src/store.rs`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `rust_builder/cargokit/cmake/cargokit.cmake`, `pubspec.yaml`, `README.md`. Source license recorded by the study: MIT.\n- [Nexora — a453a69bd6](https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38) (snapshot): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/src/agents/agent_workspace_picker.dart`, `rust/src/api/agents.rs`, `rust/src/api/ai_stream.rs`, `rust/src/api/provider_profile.rs`, `rust/Cargo.toml`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`. Source license recorded by the study: AGPL-3.0.\n- [NipaPlay Reload — 181bf77691](https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08) (diff): `ohos/entry/src/main/cpp/CMakeLists.txt`, `cpp_native/CMakeLists.txt`, `lib/plugins/js_runtime_ohos.dart`, `lib/cpp_native/native_library.dart`, `lib/src/rust/rust_external_library_io.dart`, `rust/src/api/torrent.rs`, `packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets`, `lib/danmaku_next/next2_platform_support.dart`. Source license recorded by the study: MIT.\n- [AloeSend / LocalSend OH — 7bd485cfb8](https://github.com/Aloereed/localsend-ohos/commit/7bd485cfb83748695cbf90759b7276f3b224d0df) (diff): `app/pubspec.yaml`, `common/pubspec.yaml`, `app/ohos/entry/oh-package.json5`, `app/frb_dart/lib/src/loader/_io.dart`, `app/rhttp`. Source license recorded by the study: Apache-2.0.\n\n## Related knowledge\n\n- [Verify native library loading and the exact symbols a Dart wrapper uses](ffi-library-and-symbol-availability.md)\n- [Scope native linker workarounds to the failing OH toolchain](native-linker-toolchain-workarounds.md)\n\n## Study provenance\n\n- [Draftmark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/draftmark.md).\n- [InkNote / 墨笺: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/inknote.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Nexora: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nexora.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Wild OH study: independent niuhuan/wild port, GPL-3.0 application; archived repository. Reviewed single initial adaptation commit against parent plus HEAD documentation. Consumer prose contains independently authored guidance, no application code copied. Source/diff inspection only; no build, signing, dependency resolution, device or website/service execution. README API 23/DevEco 6.1/arm64 success reports are maintainer claims. Vendored WebView ancestry and binary reproducibility were not audited.\nPort adds FRB 2.11.1 explicit ExternalLibrary.open on OH and bundled arm64 library; Cargo target linker points to an absent developer-local Windows wrapper. Presence of a binary and x86 target configuration does not prove reproducible compilation or x86 packaging.\n\n2026-10-06 QingNote main 6bfd7e1b8102da88b5843931891944bcbf32b475. No root app-level license found; no implementation copied. Source/diff only; no builds/plugin resolution/device/Rust execution. Later Rust dependency declares five stock targets but no OH ffiPlugin, no OH binary/build source in tracked OH/rust_builder tree. Startup unconditionally awaits Rust init, so generated OH host alone is not current working-app proof. Commit reports macOS/Android greet tests, not OH.\nFRB2.12.0 startup added after OH host but Rust plugin lacks OH target; existing full target/toolchain/packaging lesson applies.\nGenerated ioDirectory Rust target/release, stock Cargokit targets/no OH, no packaged libRust in OH tree; incomplete integration, no claim of runtime failure test.\n\nFlutter Simple Shop OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nActual parent diff adds unconditional RustLib.init before appInit via hi_ohos local path outside repository. Bridge source/target/binaries absent; runtime cannot be established.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nCurrent selected Rust build function uses OH SDK clang, target-specific C/C++/AR/linker, sysroot and bindgen args before cargo target build and copies expected SO into entry ABI dir; source-only, not proven target support or link/run.",
+  "previous_document_sha256": "a948699e0c7fd79c2ec8d2a7d620b7f7cbd8412ea0e4e794241d71df74e0b895",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "Shared build hook only derives Cargo/rustup homes when sibling rustup/.rustup directory exists; returns no synthesized values otherwise. Fix addresses distribution /usr/bin cargo/rustup shim discovery, independent of OH linker/ABI. Equivalent later commit is identified by stable patch ID; no host toolchain or OH build executed.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    },
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "Shared-buffer function table version, allocator, sealing, retain and release callbacks must agree with native and Dart callers; cross-link distinct ownership lesson. Source changes establish ABI architecture only, not OH package/symbol/runtime success.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    }
+  ]
+}

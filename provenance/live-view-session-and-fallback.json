@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "live-view-session-and-fallback",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/live-view-session-and-fallback.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/live-view-session-and-fallback.md",
+      "sha256": "6415d2f63cdc7d138b93f6ecf95c235b24acf6bc47918aee29c348e90c392adf",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/live-view-session-and-fallback.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/live-view-session-and-fallback.json",
+      "sha256": "b1c623c72343c41f3d8429d8702ac0500eb681e8e76152a729864b09673119d5",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "live-view-session-and-fallback",
+    "evidence": [
+      {
+        "project": "toki",
+        "commit": "f0b0d4f341f4c58afab6617357ee4bd719aa35f8",
+        "paths": [
+          "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+          "lib/core/platform/contract/plat_live_view.dart",
+          "lib/core/platform/impl/ohos/live_view_ohos.dart",
+          "lib/core/live_view/live_view_course.dart",
+          "lib/presentation/widgets/course_reminder_bridge.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/WJKLL/Toki-HarmonyOS/commit/f0b0d4f341f4c58afab6617357ee4bd719aa35f8",
+        "note": "Introduces native LiveView channel, support/enablement probing, sequence preferences, throttling and lifecycle recovery; course bridge keeps notifications/cards independent."
+      },
+      {
+        "project": "toki",
+        "commit": "822e431c5d1d1226258c8afd66fee860632c8e8b",
+        "paths": [
+          "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+          "lib/presentation/widgets/course_reminder_bridge.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/822e431c5d1d1226258c8afd66fee860632c8e8b/plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+        "note": "HEAD preserves implementation, including non-throw resultCode forwarding and async calls without per-scene serialization."
+      }
+    ],
+    "source_context": "Toki OH discovery: Scoped source variant: README declares Flutter-OH 3.44.9 canary/API 24; targetSdkVersion 24 with compatibleSdkVersion 18. Source labels isLiveViewEnabled as entitlement, but official Huawei creation guide describes it as the user Live View setting; do not conflate this with service admission. Source reports ok=true whenever a non-null service result is returned, without checking resultCode; sequence persistence failure resets to 1, active query failure becomes false, and throttle rejects updates rather than coalescing. Consumer serialization, durable failure, result interpretation and coalescing are proposed safeguards, not implemented or tested behavior. Countdown helper partly uses fresh DateTime.now despite an injected clock; the one-clock recommendation addresses that boundary. Source comments about mandatory template fields and specific limits are maintainer observations, not independently reproduced SDK/device facts. Primary cross-check: https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V5/liveview-create-locally-V5 (search content accessible; direct open unavailable). No proof of service admission or actual presentation. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only."
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "flutter-player-surface-reconstruction",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/video-surface-backend-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/video-surface-backend-contract.md",
+      "sha256": "dd848c16f989152874fbc03223cc104c2e84738e3707d6287ce0e26fb6d6318f",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/video-surface-backend-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/video-surface-backend-contract.json",
+      "sha256": "d9a3e7bacc3553701f153873103aad77ce4ee1e74bb5097d1ea2c1c3db94c840",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

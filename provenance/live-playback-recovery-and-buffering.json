@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "live-playback-recovery-and-buffering",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/live-playback-recovery-and-buffering.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/live-playback-recovery-and-buffering.md",
+      "sha256": "17d305412dff06b2bf63e5a69fed300029c835d9fd48421400fee360f869eb8f",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/live-playback-recovery-and-buffering.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/live-playback-recovery-and-buffering.json",
+      "sha256": "5074de2f0d7230fad7f68cc1d96dbd08be8fc5cd8b7182e3455bb32eae42e000",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "live-playback-recovery-and-buffering",
+    "evidence": [
+      {
+        "project": "simple-live",
+        "commit": "6336d74ce3b01cd81bfc63da629de787bb535efd",
+        "paths": [
+          "simple_live_app/lib/modules/live_room/ohos_playback_degrade_evidence.dart",
+          "simple_live_app/lib/modules/live_room/player/ohos_video_player.dart",
+          "simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/VideoPlayer.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/6336d74ce3b01cd81bfc63da629de787bb535efd",
+        "note": "Adds warmup/duration evidence, heartbeat/cache separation and corrected buffering-percent units. The source window pruning retains whole overlapping intervals; window clipping above is a recommended strengthening, not a verified property of that implementation."
+      },
+      {
+        "project": "simple-live",
+        "commit": "494838b13eed355c47c737ff116463a8f95545bb",
+        "paths": [
+          "simple_live_app/lib/modules/live_room/ohos_reconnect_confirmation.dart",
+          "simple_live_app/lib/modules/live_room/live_room_controller.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/494838b13eed355c47c737ff116463a8f95545bb",
+        "note": "Pending generation confirmation and timeout accounting. Source accepts initialized/heartbeat/first frame under one confirmed flag; guidance intentionally distinguishes their different evidentiary strength."
+      },
+      {
+        "project": "simple-live",
+        "commit": "d2bb3add95190cb3c3fe4a165c085067e58f8111",
+        "paths": [
+          "simple_live_app/lib/modules/live_room/player/ohos_playback_profile_policy.dart",
+          "simple_live_app/ohos/entry/src/main/ets/plugins/OhosCapabilitiesPlugin.ets",
+          "simple_live_app/lib/modules/live_room/live_room_controller.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/d2bb3add95190cb3c3fe4a165c085067e58f8111",
+        "note": "User/capability/protocol/session gates and multi-revision auto-line probe acceptance. API-only capability is admission to an experiment, not measured latency."
+      },
+      {
+        "project": "simple-live",
+        "commit": "9498ee1234c210e927882ed9a9fc98a1338ee315",
+        "paths": [
+          "simple_live_app/third_party/video_player_ohos/ohos/src/main/ets/components/videoplayer/VideoPlayer.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/9498ee1234c210e927882ed9a9fc98a1338ee315",
+        "note": "Later correction keeps stable system defaults; the earlier 6f8e2e fixed 20s/5s/60s policy is not the current recommendation."
+      }
+    ],
+    "source_context": "\n\n2026-10-08 incremental update: simple-live 59ec2cc1dde14b368e6374b66fd72c9bd6c746d7; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence."
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Retained Flutter-specific API/embedding conditions."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

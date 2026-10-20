@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "native-shell-state-synchronization",
+  "evidence": [
+    {
+      "project": "pixez",
+      "commit": "07eeddd2e4f3d25bb84236727d62fd476cb5119d",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "lib/harmony_adapt/hds_controller.dart",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/07eeddd2e4f3d25bb84236727d62fd476cb5119d"
+    },
+    {
+      "project": "pixez",
+      "commit": "2a39ed676c734018d4d662518cf678be810920d2",
+      "paths": [
+        "lib/harmony_adapt/hds_controller.dart",
+        "lib/harmony_adapt/harmony_channel.dart",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/2a39ed676c734018d4d662518cf678be810920d2"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "b62c157ac3218cf69960caa84440d62f88efaa22",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/pages/Index.ets",
+        "lib/src/platform/runtime_platform.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/b62c157ac3218cf69960caa84440d62f88efaa22"
+    },
+    {
+      "project": "etohos",
+      "commit": "53eeee66650b26f016220416bc94752c3b978cb7",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/collaborative-creation/etohos/commit/53eeee66650b26f016220416bc94752c3b978cb7"
+    },
+    {
+      "project": "petnote",
+      "commit": "48aa608227d989c41e3ebbb13254a36264a311ea",
+      "paths": [
+        "lib/app/harmony_native_dock.dart",
+        "ohos/entry/src/main/ets/plugins/ProjectPluginRegistrant.ets"
+      ],
+      "kind": "diff",
+      "note": "Postframe tab synchronization, echo dedup, captures brightness; desired cache written before ack. Fixed56 inset scoped heuristic not general system navigation guarantee.",
+      "url": "https://github.com/juren233/PetNote/commit/48aa608227d989c41e3ebbb13254a36264a311ea"
+    },
+    {
+      "project": "piliplus",
+      "commit": "70bf4a4ffee0c1098b099fe0401d10c2203638c7",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "lib/models/common/harmony/hds_material_level.dart",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/70bf4a4ffee0c1098b099fe0401d10c2203638c7",
+      "note": "Adds enum-to-native map and AppStorage tabMaterialLevel API23 gate. Source returns success for API<23 and lacks native value validation; guidance retains unsupported/effective-state distinction instead of copying false success."
+    }
+  ],
+  "source_context": "# Synchronize optional native shell state with Flutter readiness and preferences\n\n## Platform difference\n\nAdding native controls around Flutter introduces another state/lifecycle owner that does not automatically follow Flutter navigation or theme.\n\n## Implementation\n\nPixEz adds native HDS tabs and a bidirectional HarmonyChannel, then propagates light/dark/system preferences into UIAbility color mode and replays cached state when tabs are ready. KikoFlu later removes its immersive native shell and restores a minimal FlutterPage host. Etohos supplies PC status-bar controls and close-to-hide behavior, distinct from its phone path.\n\n## Applicability\n\nNative shells and status surfaces are optional product integrations, with product/API support to validate. The KikoFlu removal is an intentional reduction of integration surface, not current feature support.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nNative readiness can lag Dart preference changes. Avoid feedback loops, duplicate listeners and stale cached state. Etohos close-to-hide is not equivalent to guaranteed background execution.\n\n## Verification\n\nTest cold startup, theme changes before native readiness, tab/navigation synchronization, listener disposal, PC close/reopen and phone behavior.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PixEz OH — 07eeddd2e4](https://github.com/bgli100/pixez-flutter-ohos/commit/07eeddd2e4f3d25bb84236727d62fd476cb5119d) (diff): `lib/harmony_adapt/harmony_channel.dart`, `lib/harmony_adapt/hds_controller.dart`, `ohos/entry/src/main/ets/pages/Index.ets`, `ohos/entry/src/main/ets/plugins/HarmonyChannel.ets`. Source license recorded by the study: GPL-3.0.\n- [PixEz OH — 2a39ed676c](https://github.com/bgli100/pixez-flutter-ohos/commit/2a39ed676c734018d4d662518cf678be810920d2) (diff): `lib/harmony_adapt/hds_controller.dart`, `lib/harmony_adapt/harmony_channel.dart`, `ohos/entry/src/main/ets/plugins/HarmonyChannel.ets`. Source license recorded by the study: GPL-3.0.\n- [KikoFlu OH — b62c157ac3](https://github.com/natsuz0ra/KikoFlu_ohos/commit/b62c157ac3218cf69960caa84440d62f88efaa22) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/pages/Index.ets`, `lib/src/platform/runtime_platform.dart`. Source license recorded by the study: GPL-3.0.\n- [Etohos — 53eeee6665](https://github.com/collaborative-creation/etohos/commit/53eeee66650b26f016220416bc94752c3b978cb7) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: LGPL-3.0.\n\n## Study provenance\n\n- [Etohos: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/etohos.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 PetNote main cbaa2910dda4798c3bdf7c6ada643b451c30d350. No app-level LICENSE tracked; source-only guidance, no implementation copied. AGENTS/README development/build constraints inspected as upstream research data; no upstream setup/submodules or changes. No dependency resolution, builds, RTC provider, device, native dock, secure-store or keyboard tests. Guide corrects absent join-generation/channel/peer authorization guards. Source method pending result set before validation can remain after outer catch; old callback can settle new join. Secure-named native store is preferences plaintext; fallback settings key is not secure storage. Avoid-area patch validates text patterns but skips unsupported inputs with warning, not fail-closed build. Commit device/API/ABI claims unverified.\nPostframe tab synchronization, echo dedup, captures brightness; desired cache written before ack. Fixed56 inset scoped heuristic not general system navigation guarantee.\n\n2026-10-08 incremental update: piliplus 70bf4a4ffee0c1098b099fe0401d10c2203638c7; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "8122d4883f5923c385a0027df938acc5f6760053032d029dade840a9e8027bfb"
+}

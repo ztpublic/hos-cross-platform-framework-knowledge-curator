@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "native-arkweb-game-host",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-arkweb-game-host.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-arkweb-game-host.md",
+      "sha256": "917d590147057c20026a2023290378fa31e485671b384cb471f285d5d49246e0",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-arkweb-game-host.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-arkweb-game-host.json",
+      "sha256": "27cb07f4d963549c995fe4aee03a3ba8b966aad38aa4ae15c2ef286134243ad0",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "native-arkweb-game-host",
+    "evidence": [
+      {
+        "project": "gardendless",
+        "commit": "07c41e042e654661ff51cb30a7565a192c757083",
+        "paths": [
+          "lib/src/game_host/game_host.dart",
+          "ohos/entry/src/main/ets/plugins/GameHostPlugin.ets",
+          "ohos/entry/src/main/ets/game/GameAbility.ets",
+          "ohos/entry/src/main/ets/game/NativeGameResourceHandler.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/07c41e042e654661ff51cb30a7565a192c757083"
+      },
+      {
+        "project": "gardendless",
+        "commit": "2750d5a3b02712c7b987c8260295b63f7b7374c4",
+        "paths": [
+          "ohos/entry/src/main/ets/pages/GamePage.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/2750d5a3b02712c7b987c8260295b63f7b7374c4"
+      },
+      {
+        "project": "gardendless",
+        "commit": "0c23088cd3caf88002c14d5753c9664539c4838f",
+        "paths": [
+          "ohos/entry/src/main/ets/pages/GamePage.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/0c23088cd3caf88002c14d5753c9664539c4838f"
+      },
+      {
+        "project": "gardendless",
+        "commit": "4b39d60361172da9331e7d4d986fc3c8e4b10589",
+        "paths": [
+          "ohos/entry/src/main/ets/pages/GamePage.ets",
+          "ohos/entry/src/main/ets/game/NativeGameResourceHandler.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/4b39d60361172da9331e7d4d986fc3c8e4b10589"
+      },
+      {
+        "project": "gardendless",
+        "commit": "5e7ba6e4b8553076d236b137e2f4e591c30d28a5",
+        "paths": [
+          "assets/game_bridge/touch_input_adapter.js"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/5e7ba6e4b8553076d236b137e2f4e591c30d28a5",
+        "note": "Lets recovery screen controls bypass synthetic game touch capture."
+      },
+      {
+        "project": "gardendless",
+        "commit": "7c271d9054d0c3b3003f725b2df37fb370adaaa8",
+        "paths": [
+          "ohos/entry/src/main/ets/game/GameBridge.ets",
+          "ohos/entry/src/main/ets/game/GpNextNativeCore.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/7c271d9054d0c3b3003f725b2df37fb370adaaa8",
+        "note": "Adds explicit FS operations, picker dispatch and GP transfer destroy cleanup; cleanup exceptions can precede destroyed marking, so guidance recommends independent cleanup guards."
+      }
+    ],
+    "source_context": "# Use a native ArkWeb ability with a scoped local-resource origin\n\n## Platform difference\n\nA Flutter launcher can hand a specialized web runtime to an OH-native ability, but the resource origin, script injection and lifecycle become native responsibilities.\n\n## Implementation\n\nGardendless replaces its Flutter WebView/local-server design with GameAbility and a versioned session. Its resource handler serves a synthetic HTTPS origin, restricts methods/paths and remote hosts, and rejects traversal/symlinks. Follow-up fixes stop a declarative about:blank source from overriding controller navigation, correct the document-start API name and use exact-origin script rules.\n\n## Applicability\n\nThis is an optional product architecture for a local web game, not a requirement for ordinary Flutter apps or all WebViews. The launcher-to-game/return path is part of the contract.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA URL glob-looking string may not match the native injection-rule grammar. The inspected path/origin controls are source evidence, not a penetration-test result. A native bridge exposed to arbitrary origins would change the security boundary.\n\n## Verification\n\nTest controller navigation, earliest script access, allowed/disallowed origins, encoded traversal and symlinks, remote requests, ability handoff and return-to-launcher behavior.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [GardendlessLoader — 07c41e042e](https://github.com/Dey410/GardendlessLoader/commit/07c41e042e654661ff51cb30a7565a192c757083) (diff): `lib/src/game_host/game_host.dart`, `ohos/entry/src/main/ets/plugins/GameHostPlugin.ets`, `ohos/entry/src/main/ets/game/GameAbility.ets`, `ohos/entry/src/main/ets/game/NativeGameResourceHandler.ets`. Source license recorded by the study: GPL-3.0.\n- [GardendlessLoader — 2750d5a3b0](https://github.com/Dey410/GardendlessLoader/commit/2750d5a3b02712c7b987c8260295b63f7b7374c4) (diff): `ohos/entry/src/main/ets/pages/GamePage.ets`. Source license recorded by the study: GPL-3.0.\n- [GardendlessLoader — 0c23088cd3](https://github.com/Dey410/GardendlessLoader/commit/0c23088cd3caf88002c14d5753c9664539c4838f) (diff): `ohos/entry/src/main/ets/pages/GamePage.ets`. Source license recorded by the study: GPL-3.0.\n- [GardendlessLoader — 4b39d60361](https://github.com/Dey410/GardendlessLoader/commit/4b39d60361172da9331e7d4d986fc3c8e4b10589) (diff): `ohos/entry/src/main/ets/pages/GamePage.ets`, `ohos/entry/src/main/ets/game/NativeGameResourceHandler.ets`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Extract typed ArkTS channel fields before serializing payloads](typed-channel-payload-extraction.md)\n- [Adapt WebView controller contracts and ownership, not just package URLs](webview-controller-and-lifetime.md)\n\n## Study provenance\n\n- [GardendlessLoader: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/gardendless.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-08 incremental update: gardendless 95395bf24d38ec0907d596fcf9400e00fd1148ca; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "previous_document_sha256": "af370357673470f1dcc724b41913d0e1e09143af08a7f20ae009ca0eb3e64782"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: arkweb-synthetic-input-exclusions",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

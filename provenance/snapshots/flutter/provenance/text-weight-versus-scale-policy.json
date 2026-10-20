@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "text-weight-versus-scale-policy",
+  "evidence": [
+    {
+      "project": "piliplus",
+      "commit": "766fd24afc1f525373bb7ab30989d1c872ea55da",
+      "paths": [
+        "lib/main.dart",
+        "lib/utils/theme_utils.dart",
+        "lib/harmony_adapt/harmony_channel.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/766fd24afc1f525373bb7ab30989d1c872ea55da",
+      "note": "Removes native fontWeightScale listener/range table and relies on embedding boldText; clears boldText for explicit appFontWeight. Engine mapping is an app-source observation/comment, not an independent engine or accessibility-device verification; guidance scopes and tests the policy instead of asserting an OS-wide mapping."
+    }
+  ],
+  "source_context": "\n\n2026-10-08 incremental update: piliplus 70bf4a4ffee0c1098b099fe0401d10c2203638c7; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence."
+}

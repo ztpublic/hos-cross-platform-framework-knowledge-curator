@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "native-dependency-closure",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/ohos-native-third-party-libraries.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/ohos-native-third-party-libraries.md",
+      "sha256": "c0ca1a6b97e2c90384ccd79aef85a6dc910f2734e9a5c95369f31f9cf8a4b2d2",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "problems/runtime-ffmpeg-versioned-soname-transitive-deps.md",
+      "snapshot": "provenance/snapshots/qt/problems/runtime-ffmpeg-versioned-soname-transitive-deps.md",
+      "sha256": "d35d7a396ed3721197d9aa0004139bf5908b879a142a38609a99b19fe4100a0d",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
+    "Did not promote unsafe empty native stubs or copied device-system libraries into the general solution; use complete dependencies or disable unavailable features."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

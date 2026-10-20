@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "id": "native-dependency-completeness",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-dependency-completeness.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-dependency-completeness.md",
+      "sha256": "68a642723c093aa3c6095658ea2c5350a6a4e25c765c9dccbf9862911da1a5df",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-dependency-completeness.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-dependency-completeness.json",
+      "sha256": "58a037618fff6f8b7f15410fad3ef02a0cb4db8390cb20bcf0362c9cdfc55188",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/ohos-native-third-party-libraries.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/ohos-native-third-party-libraries.md",
+      "sha256": "c0ca1a6b97e2c90384ccd79aef85a6dc910f2734e9a5c95369f31f9cf8a4b2d2",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "native-dependency-completeness",
+    "evidence": [
+      {
+        "project": "etohos",
+        "commit": "b78df29aec8aabc3fb1103055eabab9211412286",
+        "paths": [
+          "lib/methods.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos/entry/oh-package.json5"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/collaborative-creation/etohos/commit/b78df29aec8aabc3fb1103055eabab9211412286"
+      },
+      {
+        "project": "localsend",
+        "commit": "7bd485cfb83748695cbf90759b7276f3b224d0df",
+        "paths": [
+          "app/pubspec.yaml",
+          "common/pubspec.yaml",
+          "app/ohos/entry/oh-package.json5",
+          "app/frb_dart/lib/src/loader/_io.dart",
+          "app/rhttp"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Aloereed/localsend-ohos/commit/7bd485cfb83748695cbf90759b7276f3b224d0df"
+      },
+      {
+        "project": "pixez",
+        "commit": "9643cc9baa5f74b2cd24f5ba0ba45f1912365749",
+        "paths": [
+          "plugins/rhttp/rust/Cargo.toml",
+          "plugins/rhttp/cargokit/build_tool/lib/src/builder.dart",
+          "buildtool/config.toml",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/9643cc9baa5f74b2cd24f5ba0ba45f1912365749"
+      },
+      {
+        "project": "kelivo",
+        "commit": "215e388134cd013eaa46791c176ecee6c6421016",
+        "paths": [
+          "pubspec.yaml",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos/entry/src/main/module.json5",
+          "lib/features/settings/pages/settings_page.dart",
+          "lib/shared/widgets/markdown_with_highlight.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/Chevey339/kelivo-ohos/commit/215e388134cd013eaa46791c176ecee6c6421016"
+      },
+      {
+        "project": "kelivo",
+        "commit": "ea3eb79d99c69cf60744174bac09df43a3ebb7fa",
+        "paths": [
+          "README.md"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Chevey339/kelivo-ohos/commit/ea3eb79d99c69cf60744174bac09df43a3ebb7fa"
+      },
+      {
+        "project": "venera",
+        "commit": "5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf",
+        "paths": [
+          "pubspec.yaml",
+          "lib/init.dart",
+          "lib/network/ohos_http_adapter.dart",
+          "lib/foundation/sqlite_connection.dart",
+          "lib/utils/background_download.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "third_party/flutter_qjs/lib/src/ffi.dart",
+          "third_party/sqlite3/lib/src/ffi/load_library.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf"
+      },
+      {
+        "project": "snake",
+        "commit": "e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c",
+        "paths": [
+          "pubspec.yaml",
+          "lib/main.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+          "ohos/entry/src/main/module.json5",
+          "ohos/oh-package.json5"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/jianguo888/flutter_snake_game/commit/e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c"
+      },
+      {
+        "project": "jellyfin-music",
+        "commit": "7cad145082b7601d695572f0f9b7945daa6e80f6",
+        "paths": [
+          "pubspec.yaml",
+          "lib/providers/current_song_provider.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://gitee.com/fly2464874018/flutter_music/commit/7cad145082b7601d695572f0f9b7945daa6e80f6",
+        "note": "App imports just_audio_ohos from local plugins/just_audio_ohos, but no tracked plugins tree or gitlink exists. Native audio implementation unavailable; remote Git alternative is commented. No successful playback/build claim."
+      },
+      {
+        "project": "lichess-oh",
+        "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+        "paths": [
+          "third_party/multistockfish/pubspec.yaml",
+          "ohos/entry/libs/arm64-v8a/libsqlite3.so",
+          "ohos/entry/libs/x86_64/libsqlite3.so",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "note": "Vendored Dart bindings and packaged binaries present; source/build provenance of native binaries absent in selected component tree. Existing completeness guide, provenance-only.",
+        "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+      },
+      {
+        "project": "wildfire-chat",
+        "commit": "ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7",
+        "paths": [
+          "README.md",
+          "LICENSE",
+          "imclient/ohos/oh-package.json5"
+        ],
+        "kind": "snapshot",
+        "note": "Local marswrapper.har absent by tracked tree/README, paid/trial separately supplied; engine HAR override differs. Repo alone not reproducible complete SDK.",
+        "url": "https://github.com/wildfirechat/flutter-chat/commit/ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7"
+      },
+      {
+        "project": "simple-live-yabi",
+        "commit": "4fcb8b7d7ca996e8797218c3802818239ddb08ed",
+        "paths": [
+          "pubspec.yaml",
+          "media-kit/libs/ohos/media_kit_libs_ohos/pubspec.yaml",
+          "media-kit/libs/ohos/media_kit_libs_ohos/libs/arm64-v8a/libmpv.so.2"
+        ],
+        "kind": "snapshot",
+        "note": "Local package/tree completeness boundary and ABI binary; README stale GNU/Linux text, no native build provenance audited.",
+        "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/4fcb8b7d7ca996e8797218c3802818239ddb08ed"
+      },
+      {
+        "project": "simple-shop",
+        "commit": "cf1f9846130be785168e9344b309f95acd97fc7b",
+        "paths": [
+          "pubspec.yaml",
+          "lib/main.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Required sibling local dependency absent from clone. OH host plus FFI imports do not provide reproducible native build.",
+        "url": "https://github.com/mdddj/flutter_simple_shop/commit/cf1f9846130be785168e9344b309f95acd97fc7b"
+      },
+      {
+        "project": "hlbmerge",
+        "commit": "230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+        "paths": [
+          "pubspec.yaml",
+          "pubspec.lock",
+          "pigeons/api.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/molihuan/hlbmerge_flutter/commit/230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+        "parent_commit": "47416f092fca969a19c92e316958ae716b253dcf"
+      }
+    ],
+    "source_context": "# Record missing native dependency sources instead of treating wrappers as complete ports\n\n## Platform difference\n\nA repository with OH Dart/native wrapper code may still depend on unavailable local packages, uninitialized submodules or externally built libraries.\n\n## Implementation\n\nEtohos references a local EasyTier HAR outside the checkout. LocalSend's Rust HTTP core is a submodule and another gitlink lacks a declared source URL. PixEz retains a developer-local FRB dependency in its inspected snapshot. Kelivo has missing ignored path dependencies and build-profile prerequisites. Venera has an unavailable local ZIP package checkout. These gaps bound what can be concluded from the visible adapters.\n\n## Applicability\n\nDistinguish generated SDK artifacts from missing project-owned source. An SDK-generated flutter.har can be a normal build product; an unexplained private path needs a reproducible replacement or explicit limitation.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not fabricate an implementation or a clean-build guarantee from a wrapper call. Source availability alone is not a reuse license; Kelivo's unresolved license stays unresolved. Avoid executing opaque binaries to fill research gaps.\n\n## Verification\n\nInventory every path dependency/gitlink/HAR, identify its source/version/license, materialize it only within the authorized build scope, and validate a clean checkout independently from an existing developer machine.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Etohos — b78df29aec](https://github.com/collaborative-creation/etohos/commit/b78df29aec8aabc3fb1103055eabab9211412286) (snapshot): `lib/methods.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/oh-package.json5`. Source license recorded by the study: LGPL-3.0.\n- [AloeSend / LocalSend OH — 7bd485cfb8](https://github.com/Aloereed/localsend-ohos/commit/7bd485cfb83748695cbf90759b7276f3b224d0df) (diff): `app/pubspec.yaml`, `common/pubspec.yaml`, `app/ohos/entry/oh-package.json5`, `app/frb_dart/lib/src/loader/_io.dart`, `app/rhttp`. Source license recorded by the study: Apache-2.0.\n- [PixEz OH — 9643cc9baa](https://github.com/bgli100/pixez-flutter-ohos/commit/9643cc9baa5f74b2cd24f5ba0ba45f1912365749) (diff): `plugins/rhttp/rust/Cargo.toml`, `plugins/rhttp/cargokit/build_tool/lib/src/builder.dart`, `buildtool/config.toml`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Kelivo OH — 215e388134](https://github.com/Chevey339/kelivo-ohos/commit/215e388134cd013eaa46791c176ecee6c6421016) (snapshot): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`, `lib/features/settings/pages/settings_page.dart`, `lib/shared/widgets/markdown_with_highlight.dart`. Source license recorded by the study: unknown.\n- [Kelivo OH — ea3eb79d99](https://github.com/Chevey339/kelivo-ohos/commit/ea3eb79d99c69cf60744174bac09df43a3ebb7fa) (diff): `README.md`. Source license recorded by the study: unknown.\n- [Venera OH (AzadKuu port) — 5e20a6ebb9](https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf) (diff): `pubspec.yaml`, `lib/init.dart`, `lib/network/ohos_http_adapter.dart`, `lib/foundation/sqlite_connection.dart`, `lib/utils/background_download.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `third_party/flutter_qjs/lib/src/ffi.dart`, `third_party/sqlite3/lib/src/ffi/load_library.dart`. Source license recorded by the study: GPL-3.0.\n- [Flutter Snake Game — e2a746c8c0](https://github.com/jianguo888/flutter_snake_game/commit/e2a746c8c0910aad66c1ea4bb6e6a6e775637c5c) (diff): `pubspec.yaml`, `lib/main.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/module.json5`, `ohos/oh-package.json5`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [Etohos: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/etohos.md).\n- [Kelivo OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kelivo.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n- [Flutter Snake Game: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/snake.md).\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 JellyMusic Gitee master 7cad145082b7601d695572f0f9b7945daa6e80f6: 17 reachable commits, imported root has OH host. No app-level license tracked or identified; no source code copied. Initial filtered clone checkout failed on Gitee TLS; retry without proxy variables restored this newly-created research checkout and it is clean. No upstream setup/submodule scripts run. Source/diff only; missing local audio implementation prevents complete integration audit; no build/dependency resolution/device/remote Jellyfin or AI service testing.\nApp imports just_audio_ohos from local plugins/just_audio_ohos, but no tracked plugins tree or gitlink exists. Native audio implementation unavailable; remote Git alternative is commented. No successful playback/build claim.\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nVendored Dart bindings and packaged binaries present; source/build provenance of native binaries absent in selected component tree. Existing completeness guide, provenance-only.\n\n2026-10-06 WildfireChat master ef8a7bdbf710658679bf5ee6dd70bcc8bcc2dcd7. LICENSE MIT plus Anti-996 text reviewed, OH plugin Apache header; missing marswrapper HAR proprietary/paid/trial per README. No implementation copied, no dependency resolution, builds, native SDK internals, IM server, device or message delivery tests. Wrapper fixes have actual parent diffs and matching Dart consumers. Current decode maps empty bytes to null and malformed bytes to omission; consumer recommendation preserves distinctions rather than copying those losses. Disconnect clears wrapper user ID but is not proof of SDK revocation completion.\nLocal marswrapper.har absent by tracked tree/README, paid/trial separately supplied; engine HAR override differs. Repo alone not reproducible complete SDK.\n\n2026-10-06 Simple Live yabi main 4fcb8b7d7ca996e8797218c3802818239ddb08ed. Archived legacy Flutter port; README recommends separate ArkTS replacement. Root GPL-3.0 and media-kit component licenses inspected; no app code copied. Source/diff only, no builds/background/player/device/live-service tests. Background start/cleanup exceptions are swallowed; activate ack can succeed without task. AVSession metadata and PLAY precede actual content readiness, event listener starts after activate. Local native package declares pluginClass without tracked OH host implementation; libmpv.so.2 arm64 artifact only, reproducible native build not established.\nLocal package/tree completeness boundary and ABI binary; README stale GNU/Linux text, no native build provenance audited.\n\nFlutter Simple Shop OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nRequired sibling local dependency absent from clone. OH host plus FFI imports do not provide reproducible native build.",
+    "previous_document_sha256": "e66b42611d3effa64a413cd6a638105e4e3c754ae4b96091a88d47090044ef16",
+    "updates": [
+      {
+        "date": "2026-10-09",
+        "run": "2026-10-09-update-registered-projects.json",
+        "notes": "621 vendored generator paths removed by 230e975e; root contract retained, dependency now selects retrievable monorepo source plus resolved revision. Removal does not demonstrate network retrieval, generation reproducibility or license resolution. Deleted source context remains in parent 47416f092fca969a19c92e316958ae716b253dcf; no upstream generator implementation imported into KB.",
+        "licenses": {
+          "hlbmerge": "Apache-2.0 in LICENSE.txt; conflicting README noncommercial restriction"
+        },
+        "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter.",
+    "Merged matching Qt-collection platform evidence without copying its orchestration policies."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

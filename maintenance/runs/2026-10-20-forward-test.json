@@ -1,0 +1,117 @@
+[
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "OK: 123 entries; metadata, provenance hashes, links and CSV index agree\n"
+  },
+  {
+    "args": [
+      "init"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "Error: database already exists; init refuses overwrite\n"
+  },
+  {
+    "args": [
+      "index"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "Indexed 123 entries\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "OK: 123 entries; metadata, provenance hashes, links and CSV index agree\n"
+  },
+  {
+    "args": [
+      "search",
+      "\"DocumentViewPicker\"",
+      "--framework",
+      "rn"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "{\"id\": \"file-export-contract\", \"title\": \"Save a file where the user can actually access it\", \"scope\": \"common\", \"frameworks\": [], \"score\": 7, \"summary\": \"Separate private persistence, destination selection and export completion. Report export success only after the selected destination contains the intended bytes.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/file-export-contract.md\"}\n{\"id\": \"document-picker-uri-access\", \"title\": \"Keep document URI identity separate from path and access grants\", \"scope\": \"common\", \"frameworks\": [], \"score\": 6, \"summary\": \"Preserve the original URI and its operation-specific grant; convert to a path only when the selected native backend requires and permits it.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/document-picker-uri-access.md\"}\n"
+  },
+  {
+    "args": [
+      "search",
+      "picker",
+      "--framework",
+      "rn",
+      "--scope",
+      "framework-specific"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "No matching consumer entries.\n"
+  },
+  {
+    "args": [
+      "search",
+      "QFileDialog suffix filter",
+      "--framework",
+      "qt"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "{\"id\": \"qt-picker-suffix-filter-mapping\", \"title\": \"Translate Qt file filters without inventing native glob support\", \"scope\": \"framework-specific\", \"frameworks\": [\"qt\"], \"score\": 22, \"summary\": \"Translate only representable suffix filters and validate filename/content constraints after selection.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/qt-picker-suffix-filter-mapping.md\"}\n{\"id\": \"qt-native-file-dialog-contract\", \"title\": \"Verify the selected QFileDialog backend before replacing it\", \"scope\": \"framework-specific\", \"frameworks\": [\"qt\"], \"score\": 20, \"summary\": \"Try the selected QPA's implemented dialog route and validate result access and visibility separately.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/qt-native-file-dialog-contract.md\"}\n{\"id\": \"gallery-image-format-preservation\", \"title\": \"Preserve encoded image format across a file-based gallery API\", \"scope\": \"common\", \"frameworks\": [], \"score\": 6, \"summary\": \"Match validated encoded bytes to suffix and MIME type, await gallery consumption and clean up the owned staging file.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/gallery-image-format-preservation.md\"}\n{\"id\": \"qt-picker-initial-uri\", \"title\": \"Pass only supported initial locations to the Qt OH document picker\", \"scope\": \"framework-specific\", \"frameworks\": [\"qt\"], \"score\": 6, \"summary\": \"Leave the initial location unspecified unless the adapter can supply a supported user-document URI.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/qt-picker-initial-uri.md\"}\n{\"id\": \"qt-opengl-texture-completeness\", \"title\": \"Check texture completeness before treating black RGBA output as a decoder failure\", \"scope\": \"framework-specific\", \"frameworks\": [\"qt\"], \"score\": 2, \"summary\": \"Inspect mipmap generation, sampling filters and texture completeness before changing image format or blending policy.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/qt-opengl-texture-completeness.md\"}\n{\"id\": \"qt-ohosextras-version-boundary\", \"title\": \"Resolve QtOhosExtras against the actual Qt generation\", \"scope\": \"framework-specific\", \"frameworks\": [\"qt\"], \"score\": 1, \"summary\": \"Inspect installed headers and build metadata instead of carrying Qt 5 public Extras recipes into Qt 6.\", \"pc_validation\": \"not-run\", \"path\": \"/private/var/folders/6y/k_2qdnq92r38332qh9f0c_bc0000gn/T/harmonyos-kb-forward-test-9tgiqoml/database/knowledge/qt-ohosextras-version-boundary.md\"}\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "document-picker-uri-access.md: scope/framework mismatch\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "document-picker-uri-access.md: missing PC test evidence\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "document-picker-uri-access.md: verified status needs PC evidence\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "document-picker-uri-access.md: source snapshot hash mismatch: provenance/snapshots/forward-test-note.md\npersistent-file-access-grants.md: source snapshot hash mismatch: provenance/snapshots/forward-test-note.md\nqt-picker-suffix-filter-mapping.md: source snapshot hash mismatch: provenance/snapshots/forward-test-note.md\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 1,
+    "expected": 1,
+    "output": "index.csv is absent or stale; run index\n"
+  },
+  {
+    "args": [
+      "check"
+    ],
+    "returncode": 0,
+    "expected": 0,
+    "output": "OK: 123 entries; metadata, provenance hashes, links and CSV index agree\n"
+  }
+]

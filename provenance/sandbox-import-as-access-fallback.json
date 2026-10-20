@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "id": "sandbox-import-as-access-fallback",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/sandbox-import-as-access-fallback.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/sandbox-import-as-access-fallback.md",
+      "sha256": "6f2e744821d5d4557bc54929258369a3095bfd2a845d8d7b0cc93e6873697328",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/sandbox-import-as-access-fallback.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/sandbox-import-as-access-fallback.json",
+      "sha256": "9823f89459b09f581e65fb0cf8480bec3a155a5fdfff4c22d0a26e8cafe048e6",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "sandbox-import-as-access-fallback",
+    "evidence": [
+      {
+        "project": "nexora",
+        "commit": "a453a69bd6d5784bc0600c3e8d4145ddc8053d38",
+        "paths": [
+          "pubspec.yaml",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/src/agents/agent_workspace_picker.dart",
+          "rust/src/api/agents.rs",
+          "rust/src/api/ai_stream.rs",
+          "rust/src/api/provider_profile.rs",
+          "rust/Cargo.toml",
+          "rust_builder/ohos/src/main/cpp/CMakeLists.txt"
+        ],
+        "kind": "snapshot",
+        "url": "https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "accc9fd58d72d759c9211be0f3dfeda01382ac41",
+        "paths": [
+          "packages/file_selector_ohos/ohos/src/main/ets/file_selector/LocalMediaAccess.ets",
+          "packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets",
+          "lib/services/harmony_local_media_service.dart",
+          "ohos/entry/src/main/module.json5"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/accc9fd58d72d759c9211be0f3dfeda01382ac41"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "b1210fcfc5297cd7376c8929141709f5d976018d",
+        "paths": [
+          "lib/main.dart",
+          "lib/media_library/pick_local_media_directory.dart",
+          "lib/services/file_picker_service.dart",
+          "lib/services/scan_service.dart",
+          "lib/utils/video_player_state/video_player_state_player_setup.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/b1210fcfc5297cd7376c8929141709f5d976018d"
+      },
+      {
+        "project": "localsend",
+        "commit": "6d336c627b0ff3efddd36aac352b0f9c8f0dcc36",
+        "paths": [
+          "app/lib/config/init.dart",
+          "app/lib/pages/home_page.dart",
+          "app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets",
+          "app/ohos/entry/src/main/module.json5"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Aloereed/localsend-ohos/commit/6d336c627b0ff3efddd36aac352b0f9c8f0dcc36"
+      },
+      {
+        "project": "localsend",
+        "commit": "2a408c220cd1ec2101fed357867ab83dbac9efbc",
+        "paths": [
+          "app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets",
+          "app/lib/config/init.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Aloereed/localsend-ohos/commit/2a408c220cd1ec2101fed357867ab83dbac9efbc"
+      },
+      {
+        "project": "localsend",
+        "commit": "8f425f44cf46c38d27e6eb02071726f1b4881816",
+        "paths": [
+          "app/lib/provider/network/server/controller/send_controller.dart",
+          "app/lib/util/ui/visuals.dart",
+          "app/lib/widget/modern/modern_ui.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Aloereed/localsend-ohos/commit/8f425f44cf46c38d27e6eb02071726f1b4881816"
+      }
+    ],
+    "source_context": "# Import external resources into app-owned storage when direct access is unsuitable\n\n## Platform difference\n\nCopying selected content into the sandbox provides app-owned files; it does not grant continuing access to edit the original source.\n\n## Implementation\n\nNexora stages a selected folder in native cache and copies it into app-owned workspaces with Rust-side size/count limits and symlink rejection. NipaPlay imports selected media with descriptor copies, temporary files and rename when directory access is unsupported. LocalSend resolves incoming URIs into readable cache files and derives response lengths from the resulting files before serving them.\n\n## Applicability\n\nUseful for native libraries that require ordinary file paths or for authorities/devices without suitable ongoing access. Cache and durable files directories have different retention semantics.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nExplain duplicate storage and uninstall behavior to users. Large content should not be sent through a giant Dart channel payload just to copy it. LocalSend still has unsupported content-authority branches; a copy fallback is not universal URI support.\n\n## Verification\n\nCheck copied bytes, capacity failures, interrupted copies, zero-byte files, path traversal/symlink inputs and cleanup; ensure the original folder is not advertised as a live synchronized workspace.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Nexora — a453a69bd6](https://gitcode.com/nutpi/Nexora/commit/a453a69bd6d5784bc0600c3e8d4145ddc8053d38) (snapshot): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/src/agents/agent_workspace_picker.dart`, `rust/src/api/agents.rs`, `rust/src/api/ai_stream.rs`, `rust/src/api/provider_profile.rs`, `rust/Cargo.toml`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`. Source license recorded by the study: AGPL-3.0.\n- [NipaPlay Reload — accc9fd58d](https://github.com/AimesSoft/NipaPlay-Reload/commit/accc9fd58d72d759c9211be0f3dfeda01382ac41) (diff): `packages/file_selector_ohos/ohos/src/main/ets/file_selector/LocalMediaAccess.ets`, `packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets`, `lib/services/harmony_local_media_service.dart`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [NipaPlay Reload — b1210fcfc5](https://github.com/AimesSoft/NipaPlay-Reload/commit/b1210fcfc5297cd7376c8929141709f5d976018d) (diff): `lib/main.dart`, `lib/media_library/pick_local_media_directory.dart`, `lib/services/file_picker_service.dart`, `lib/services/scan_service.dart`, `lib/utils/video_player_state/video_player_state_player_setup.dart`. Source license recorded by the study: MIT.\n- [AloeSend / LocalSend OH — 6d336c627b](https://github.com/Aloereed/localsend-ohos/commit/6d336c627b0ff3efddd36aac352b0f9c8f0dcc36) (diff): `app/lib/config/init.dart`, `app/lib/pages/home_page.dart`, `app/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets`, `app/ohos/entry/src/main/module.json5`. Source license recorded by the study: Apache-2.0.\n- [AloeSend / LocalSend OH — 2a408c220c](https://github.com/Aloereed/localsend-ohos/commit/2a408c220cd1ec2101fed357867ab83dbac9efbc) (diff): `app/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets`, `app/lib/config/init.dart`. Source license recorded by the study: Apache-2.0.\n- [AloeSend / LocalSend OH — 8f425f44cf](https://github.com/Aloereed/localsend-ohos/commit/8f425f44cf46c38d27e6eb02071726f1b4881816) (diff): `app/lib/provider/network/server/controller/send_controller.dart`, `app/lib/util/ui/visuals.dart`, `app/lib/widget/modern/modern_ui.dart`. Source license recorded by the study: Apache-2.0.\n\n## Related knowledge\n\n- [Distinguish selecting a destination from exporting its bytes](file-export-contract.md)\n- [Keep native storage paths and application identity consistent](sandbox-paths-and-app-identity.md)\n\n## Study provenance\n\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Nexora: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nexora.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+    "previous_document_sha256": "6c0039188a5694edcfb23f844badab49de3dc06acd0a566ea4a2c14c81259c2c"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

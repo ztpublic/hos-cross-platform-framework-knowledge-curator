@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "qt-plugin-deployment-layout",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "problems/runtime-fail-qpa-plugin-not-found.md",
+      "snapshot": "provenance/snapshots/qt/problems/runtime-fail-qpa-plugin-not-found.md",
+      "sha256": "8dd69067955191b80cb9295f5afe9e79e007de42c4cf7fcb1813e1488a5497d0",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "problems/runtime-fail-libqtdbus-missing.md",
+      "snapshot": "provenance/snapshots/qt/problems/runtime-fail-libqtdbus-missing.md",
+      "sha256": "13d450158322481377d7c5809dbdf95ecc7ac91a99a78909e15107fcbc547b7a",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "problems/runtime-fail-sqlite-open-database.md",
+      "snapshot": "provenance/snapshots/qt/problems/runtime-fail-sqlite-open-database.md",
+      "sha256": "a2182215659d2b281b21be294f719ab9969f03b53631ff3513b2ae68d6845188",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "semantic/qt-harmonyos-golden-rules.md",
+      "snapshot": "provenance/snapshots/qt/semantic/qt-harmonyos-golden-rules.md",
+      "sha256": "35331155568d26135e0de7b38e3fa2d92a173c146e777cd5f42d6a15edfc4ce6",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

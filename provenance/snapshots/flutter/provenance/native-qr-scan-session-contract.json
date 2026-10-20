@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "native-qr-scan-session-contract",
+  "evidence": [
+    {
+      "project": "happy-coder",
+      "commit": "b89c764870fb6be5220fb8511422d71c880257bb",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/HappyQRCodePluginMethodHandlers.ets",
+        "ohos/entry/src/main/ets/plugins/HappyQRCodePluginScanSupport.ets",
+        "lib/harmony/src/qr_bridge_service.dart",
+        "lib/features/auth/presentation/scan_qr_screen/actions.dart",
+        "lib/features/auth/presentation/scan_qr_screen/scan_qr_screen.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Start ack before permission/result; Dart subscribes first but has no native listener handshake/finally on start exceptions. No native busy/generation, stop only bool; torch false with synthetic event. Fallback MobileScannerController eager in widget. Corrective guide. Presence does not establish service entitlement or device support.",
+      "url": "https://github.com/751848178/happy-coder-harmony/commit/b89c764870fb6be5220fb8511422d71c880257bb"
+    },
+    {
+      "project": "happy-coder",
+      "commit": "fd1ca96a0252426a5a933fd17e4e4c7c5cde3e8b",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/HappyQRCodePlugin.ets",
+        "ohos/entry/src/main/ets/plugins/HappyQRCodePluginScanSupport.ets"
+      ],
+      "kind": "diff",
+      "note": "Actual parent diff splits existing scanner into helpers; same bool-only stop and native default-UI operation retained.",
+      "url": "https://github.com/751848178/happy-coder-harmony/commit/fd1ca96a0252426a5a933fd17e4e4c7c5cde3e8b"
+    }
+  ],
+  "source_context": "\n\n2026-10-06 Happy Coder main b89c764870fb6be5220fb8511422d71c880257bb. No root app license identified, no implementation copied. Source/diff only, no builds, camera/Scan Kit/device/server/signing tests. Primary cross-check https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V14/scan-scanbarcode-V14 and Chinese default-scanning guide reviewed: product scanning UI, promise result, UI lifetime. Guide corrects source session/cancellation limitations rather than claiming they are implemented.\nStart ack before permission/result; Dart subscribes first but has no native listener handshake/finally on start exceptions. No native busy/generation, stop only bool; torch false with synthetic event. Fallback MobileScannerController eager in widget. Corrective guide. Presence does not establish service entitlement or device support.\nActual parent diff splits existing scanner into helpers; same bool-only stop and native default-UI operation retained."
+}

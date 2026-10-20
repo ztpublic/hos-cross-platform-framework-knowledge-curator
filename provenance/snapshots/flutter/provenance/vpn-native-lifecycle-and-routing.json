@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "vpn-native-lifecycle-and-routing",
+  "evidence": [
+    {
+      "project": "flclash",
+      "commit": "6df8ac10f897077db6340f759fcd7bc7e34cb8e5",
+      "paths": [
+        "lib/common/system.dart",
+        "lib/core/controller.dart",
+        "lib/plugins/service.dart",
+        "ohos/entry/src/main/ets/extensionAbility/VpnExtAbility.ets",
+        "ohos/core/src/main/cpp/napi_init.cpp",
+        "core/lib.go",
+        "plugins/setup/buildkit/build_tool/lib/src/go_builder.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/tljk/FlClash-ohos/commit/6df8ac10f897077db6340f759fcd7bc7e34cb8e5"
+    },
+    {
+      "project": "flclash",
+      "commit": "2af0660f2fa0d0516bf28f66287d8e29e957d5c0",
+      "paths": [
+        "ohos/entry/src/main/ets/extensionAbility/VpnExtAbility.ets",
+        "lib/views/config/network.dart",
+        "core/go.mod",
+        "lib/providers/state.dart",
+        "lib/models/clash_config.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/tljk/FlClash-ohos/commit/2af0660f2fa0d0516bf28f66287d8e29e957d5c0"
+    },
+    {
+      "project": "flclash",
+      "commit": "017c08b8f842fef37ffb3220605b2477380a6dc4",
+      "paths": [
+        "lib/providers/state.dart",
+        "lib/models/clash_config.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/tljk/FlClash-ohos/commit/017c08b8f842fef37ffb3220605b2477380a6dc4"
+    },
+    {
+      "project": "etohos",
+      "commit": "b78df29aec8aabc3fb1103055eabab9211412286",
+      "paths": [
+        "lib/methods.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/oh-package.json5"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/collaborative-creation/etohos/commit/b78df29aec8aabc3fb1103055eabab9211412286"
+    },
+    {
+      "project": "etohos",
+      "commit": "1ac26cded68de2f11c58ea412cb1df542404cc2f",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/collaborative-creation/etohos/commit/1ac26cded68de2f11c58ea412cb1df542404cc2f"
+    },
+    {
+      "project": "etohos",
+      "commit": "244e5f43a1937444cc05008698681e8205713857",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/collaborative-creation/etohos/commit/244e5f43a1937444cc05008698681e8205713857"
+    },
+    {
+      "project": "flclash-shenyingjun",
+      "commit": "36317efb708de60009aad8860074e0ed274e9ebe",
+      "paths": [
+        "ohos/entry/src/main/cpp/bridge.cpp",
+        "ohos/entry/src/main/ets/plugins/AppPlugin.ets",
+        "ohos/entry/src/main/ets/vpn/FlClashVpnAbility.ets"
+      ],
+      "note": "Selected native protect request queue, extension start/status acknowledgement and VPN creation/cleanup call sites inspected. Protect callback uses timeout/result correlation; timeout return does not prove route bypass. OS extension accepted != operational VPN; no runtime networking or complete permission audit.",
+      "kind": "snapshot",
+      "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS/commit/36317efb708de60009aad8860074e0ed274e9ebe"
+    }
+  ],
+  "source_context": "# Map VPN descriptors and routing semantics explicitly into OH\n\n## Platform difference\n\nAn Android-style shared VPN interface still needs OH-native authorization, tunnel/descriptor lifecycle and routing semantics.\n\n## Implementation\n\nFlClash implements a VpnExtensionAbility, IPC and N-API bridge into a Go core. Its gateway/bypass/gVisor changes survive, but temporary routeAddress and private-route additions are reverted later. Etohos instead orchestrates an EasyTier HAR from its UIAbility, derives prefix length from the core configuration and passes the created TUN descriptor into it.\n\n## Applicability\n\nThese are distinct process/lifetime architectures; a shared Dart interface does not imply identical native isolation, socket protection or cancellation behavior.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nEtohos' native HAR is an external local dependency whose internals were not audited. Its per-permission try/catch lets setup continue after denial/errors; this must not be treated as successful authorization. Describe retained routing configuration after the revert, not every historical parser option as active.\n\n## Verification\n\nTest consent/denial, descriptor ownership, route/gateway semantics, self-traffic exclusion, disconnect/reconnect and extension teardown with the intended signing/permissions.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [FlClash OH — 6df8ac10f8](https://github.com/tljk/FlClash-ohos/commit/6df8ac10f897077db6340f759fcd7bc7e34cb8e5) (diff): `lib/common/system.dart`, `lib/core/controller.dart`, `lib/plugins/service.dart`, `ohos/entry/src/main/ets/extensionAbility/VpnExtAbility.ets`, `ohos/core/src/main/cpp/napi_init.cpp`, `core/lib.go`, `plugins/setup/buildkit/build_tool/lib/src/go_builder.dart`. Source license recorded by the study: GPL-3.0.\n- [FlClash OH — 2af0660f2f](https://github.com/tljk/FlClash-ohos/commit/2af0660f2fa0d0516bf28f66287d8e29e957d5c0) (diff): `ohos/entry/src/main/ets/extensionAbility/VpnExtAbility.ets`, `lib/views/config/network.dart`, `core/go.mod`, `lib/providers/state.dart`, `lib/models/clash_config.dart`. Source license recorded by the study: GPL-3.0.\n- [FlClash OH — 017c08b8f8](https://github.com/tljk/FlClash-ohos/commit/017c08b8f842fef37ffb3220605b2477380a6dc4) (diff): `lib/providers/state.dart`, `lib/models/clash_config.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Etohos — b78df29aec](https://github.com/collaborative-creation/etohos/commit/b78df29aec8aabc3fb1103055eabab9211412286) (snapshot): `lib/methods.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/oh-package.json5`. Source license recorded by the study: LGPL-3.0.\n- [Etohos — 1ac26cded6](https://github.com/collaborative-creation/etohos/commit/1ac26cded68de2f11c58ea412cb1df542404cc2f) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: LGPL-3.0.\n- [Etohos — 244e5f43a1](https://github.com/collaborative-creation/etohos/commit/244e5f43a1937444cc05008698681e8205713857) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: LGPL-3.0.\n\n## Study provenance\n\n- [Etohos: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/etohos.md).\n- [FlClash OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/flclash.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nFlClash shenyingjun fork harmony: GPL-3.0 root; no app code copied. Compared current EntryAbility against registered tljk/FlClash-ohos pinned EntryAbility: substantially different custom NAPI/VPN/registration structure, distinct historical adaptation fixes, not URL alias and not independent upstream architecture corroboration. Selected parent diffs and current bridge sections only; complete transport/security/Go/native lifecycle not audited. No build/device/tunnel/proxy/provider runtime validation.\nSelected native protect request queue, extension start/status acknowledgement and VPN creation/cleanup call sites inspected. Protect callback uses timeout/result correlation; timeout return does not prove route bypass. OS extension accepted != operational VPN; no runtime networking or complete permission audit.",
+  "previous_document_sha256": "1d705bcdb033199c7bb924e2ec4330a8165bed382610f70591f3f769a6fe8568"
+}

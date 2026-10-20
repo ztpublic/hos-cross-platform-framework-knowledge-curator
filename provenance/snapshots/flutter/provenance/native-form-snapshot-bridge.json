@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "native-form-snapshot-bridge",
+  "evidence": [
+    {
+      "project": "nju-timetable",
+      "commit": "6b119f09839a40ec6401e3ca152f41665fa7a572",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/6b119f09839a40ec6401e3ca152f41665fa7a572"
+    },
+    {
+      "project": "nju-timetable",
+      "commit": "b9d20cf669820323109f77e5b6780d9fa34d38c6",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets",
+        "ohos/entry/src/main/ets/widget/models/FormData.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/b9d20cf669820323109f77e5b6780d9fa34d38c6"
+    },
+    {
+      "project": "picacomic",
+      "commit": "de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb",
+      "paths": [
+        "lib/utils/ohos_widget.dart",
+        "ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets",
+        "ohos/entry/src/main/ets/plugins/widget/WidgetBridge.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "c5ad9721174669e1bbf726b07138db6dc3d08ffc",
+      "paths": [
+        "pubspec.yaml",
+        "lib/providers/secure_storage_provider.dart",
+        "lib/services/database_service.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/services/update_service.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc"
+    },
+    {
+      "project": "toki",
+      "commit": "173696e4d5f26dbeb8f1570e09d58f33e562ed01",
+      "paths": [
+        "ohos/entry/src/main/ets/formextensionability/EntryFormAbility.ets",
+        "ohos/entry/src/main/resources/base/profile/form_config.json",
+        "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/173696e4d5f26dbeb8f1570e09d58f33e562ed01/ohos/entry/src/main/ets/formextensionability/EntryFormAbility.ets",
+      "note": "Card reads persisted snapshot/endAt/total, binds native Form data and recomputes countdown during onUpdateForm; tracks form IDs."
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "29e56aaf4f996aac73eadc6c22d875c6f0f6114a",
+      "paths": [
+        "ohos/entry/src/main/ets/cards/CourseCardDatabase.ets",
+        "ohos/entry/src/main/ets/cards/CourseCardStore.ets",
+        "ohos/entry/src/main/ets/cards/CourseFormAbility.ets",
+        "ohos/entry/src/main/ets/cards/CourseCardChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/29e56aaf4f996aac73eadc6c22d875c6f0f6114a",
+      "note": "Switches from display payload to read-only relationalStore domain queries, closes cursors/store, preserves string IDs, per-form files and relative refresh scheduling. Source assumes sqflite default rdb mapping; external plugin implementation and device cross-process access were not audited. The 200ms registration delay is not promoted as a guarantee."
+    }
+  ],
+  "source_context": "# Feed native Form cards through persisted Flutter snapshots\n\n## Platform difference\n\nAn OH home-screen Form has a native lifecycle separate from the running Flutter widget tree.\n\n## Implementation\n\nNJU computes course JSON in Flutter, sends it through a channel, persists it natively, tracks form IDs and updates Form data. Pica Comic applies a similar snapshot/action bridge to reading history, buffering incoming actions until Dart handlers are ready. NJU introduces typed form data and attempts refresh scheduling; its prior study flags a mismatch between the epoch-seconds argument it constructs and the relative-minute API contract.\n\n## Applicability\n\nUse a stable payload model and a native initial response so the card can render while Flutter is absent. The NJU scheduling caveat is inherited source/API analysis, not a device-reproduced failure; check the API contract for the chosen SDK.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA native refresh callback reading saved data does not independently compute tomorrow's Flutter dataset. Bugaoshan disabling its home-widget feature does not establish that OH cards are impossible; these other projects implement a native route.\n\n## Verification\n\nTest card addition with the app closed, data freshness across day boundaries, typed schema changes, refresh interval units, multiple form IDs, action delivery and card removal.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [南哪课表 / NJU Timetable — 6b119f0983](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/6b119f09839a40ec6401e3ca152f41665fa7a572) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets`. Source license recorded by the study: Apache-2.0.\n- [南哪课表 / NJU Timetable — b9d20cf669](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/b9d20cf669820323109f77e5b6780d9fa34d38c6) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets`, `ohos/entry/src/main/ets/widget/models/FormData.ets`. Source license recorded by the study: Apache-2.0.\n- [Pica Comic OH — de0d6973b7](https://github.com/nimmi114514/PicaComic_ohos/commit/de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb) (diff): `lib/utils/ohos_widget.dart`, `ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets`, `ohos/entry/src/main/ets/plugins/widget/WidgetBridge.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [不高山上 / Bugaoshan HarmonyOS — c5ad972117](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc) (diff): `pubspec.yaml`, `lib/providers/secure_storage_provider.dart`, `lib/services/database_service.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/services/update_service.dart`. Source license recorded by the study: AGPL-3.0.\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nToki OH discovery: Extension reuses absolute countdown end time to refresh without Flutter. It preserves other saved course fields and does not calculate the next day schedule; system refresh is not a continuously alive app timer. updateDuration=30 is configuration, not evidence of observed delivery interval. Source file writes and concurrent instance ownership were not runtime-tested. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "e405f4ee2dae842f92882f5bb81ca68367698e9ee8e2c6e5d7e2489da8a5113e"
+}

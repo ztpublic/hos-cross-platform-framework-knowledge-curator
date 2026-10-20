@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "id": "sandbox-paths-and-app-identity",
+  "evidence": [
+    {
+      "project": "nipaplay",
+      "commit": "181bf77691df7925b2b07cc09dc25f20fc08cd08",
+      "paths": [
+        "ohos/entry/src/main/cpp/CMakeLists.txt",
+        "cpp_native/CMakeLists.txt",
+        "lib/plugins/js_runtime_ohos.dart",
+        "lib/cpp_native/native_library.dart",
+        "lib/src/rust/rust_external_library_io.dart",
+        "rust/src/api/torrent.rs",
+        "packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets",
+        "lib/danmaku_next/next2_platform_support.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08"
+    },
+    {
+      "project": "localsend",
+      "commit": "574021ed4d3ce21ea1a850a52f123ab5fa0f50d6",
+      "paths": [
+        "app/lib/util/native/directories.dart",
+        "app/lib/pages/about/about_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/574021ed4d3ce21ea1a850a52f123ab5fa0f50d6"
+    },
+    {
+      "project": "localsend",
+      "commit": "682688e9118141b3c6be97fcc4cf595d0aeacae2",
+      "paths": [
+        "app/lib/util/native/pick_directory_path.dart",
+        "app/pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/682688e9118141b3c6be97fcc4cf595d0aeacae2"
+    },
+    {
+      "project": "inknote",
+      "commit": "1b9b9b430c743bf92e619d6b9d7016117a43dd7c",
+      "paths": [
+        "lib/main.dart",
+        "lib/src/notes/note_repository.dart",
+        "lib/src/notes/note_workspace.dart",
+        "rust/src/store.rs",
+        "rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "rust_builder/cargokit/cmake/cargokit.cmake",
+        "pubspec.yaml",
+        "README.md"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c"
+    },
+    {
+      "project": "draftmark",
+      "commit": "d560dccd1aae670ba1900ce9d07622f3e3cc4ad5",
+      "paths": [
+        "apps/draftmark/pubspec.yaml",
+        "apps/draftmark/lib/src/app/studio_controller.dart",
+        "apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart",
+        "crates/draftmark-bridge/Cargo.toml",
+        "crates/draftmark-bridge/src/compiler.rs",
+        "crates/draftmark-bridge/src/store.rs"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5"
+    },
+    {
+      "project": "wild",
+      "commit": "38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "paths": [
+        "lib/methods.dart",
+        "lib/pages/init_page.dart",
+        "ohos/entry/src/main/ets/plugin/MethodsPlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Leif-Wang-021/wild-ohos-standalone-backup/commit/38d05199f148c9931c25d5f69c49f626e2aa8a72",
+      "note": "Native filesDir is implemented but Dart dataRoot OH branch returns a fixed sandbox string; init_page passes that string into Rust init. Runtime-context resolution is a corrective recommendation, not a claimed successful source implementation."
+    },
+    {
+      "project": "pindou",
+      "commit": "b8364c5ecd38fb6ba833b42698ebef7250656897",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/StoragePathPlugin.ets",
+        "lib/data/services/app_storage_path_service.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/w6521939-ops/pindou-workshop/commit/b8364c5ecd38fb6ba833b42698ebef7250656897",
+      "note": "Runtime context.filesDir bridge actually consumed; failure uses systemTemp for project persistence, which cannot establish durable private storage."
+    },
+    {
+      "project": "todo-harmony",
+      "commit": "7630e14506cd12a95e1fa61f115c7fe3d0e6f082",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/services/storage_path.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Native getFilesDir channel settles unknown calls and supplies UIAbility context directory; Dart silently caches Directory.current after error. Corrective fallback guidance preserves explicit failure instead.",
+      "url": "https://gitcode.com/zouhaixin/todo_flutter_harmony/commit/7630e14506cd12a95e1fa61f115c7fe3d0e6f082"
+    },
+    {
+      "project": "operit2",
+      "commit": "675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4",
+      "paths": [
+        "apps/flutter/app/ohos/entry/src/main/ets/entryability/OperitRuntimeChannel.ets",
+        "apps/flutter/native/operit-flutter-bridge/src/platform_runtime/ohos.rs"
+      ],
+      "note": "UIAbility filesDir-derived roots passed into native runtime. Rust rejects global default root on OH; typed language metadata required. Storage roots cannot change after live native handle creation.",
+      "kind": "snapshot",
+      "url": "https://github.com/AAswordman/Operit2/commit/675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4"
+    },
+    {
+      "project": "yun-reader",
+      "commit": "9f717157b4399684c581258abd06bc02216faf2e",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/core/platform_paths.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Native support/documents handlers return filesDir; Dart null makes storage read-only/memory rather than guessing current directory.",
+      "url": "https://gitcode.com/jenken1209/yun/commit/9f717157b4399684c581258abd06bc02216faf2e"
+    },
+    {
+      "project": "operit2",
+      "commit": "135c9a9457aaf98debd1e03660fd897441a899e4",
+      "parent_commit": "1c82bd81d3922e9b0b0ad02174148bca95eeeedc",
+      "paths": [
+        "hosts/common/operit-host-data-rescue/src/lib.rs",
+        "hosts/common/operit-host-data-rescue/src/tests.rs"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/135c9a9457aaf98debd1e03660fd897441a899e4"
+    }
+  ],
+  "source_context": "# Keep native storage paths and application identity consistent\n\n## Platform difference\n\nNative code expecting desktop HOME or a hard-coded bundle-derived path may not use the writable storage intended for the OH app.\n\n## Implementation\n\nNipaPlay moves Rust torrent persistence away from HOME to an app-writable download-relative location. LocalSend repairs a Downloads path still containing the prior application identity and updates its distribution URL. InkNote supplies an application-support path to Rust and deliberately retains internal identifiers for continuity. Draftmark likewise initializes its Rust store below application-support storage; LocalSend's custom directory browser stays within its chosen app base.\n\n## Applicability\n\nChoose paths from the app context/platform path provider and pass them into native cores. Treat identifier changes as possible data/update continuity changes, not just branding.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA directory browser rooted in app Downloads is not a general system-folder picker. App-private output does not guarantee user-visible export. Retained identifiers are a project decision; do not copy another project's bundle name or signing configuration.\n\n## Verification\n\nTest writable initialization, restart, upgrade/identity transitions, path containment and native-core access; verify user export separately from private storage.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [NipaPlay Reload — 181bf77691](https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08) (diff): `ohos/entry/src/main/cpp/CMakeLists.txt`, `cpp_native/CMakeLists.txt`, `lib/plugins/js_runtime_ohos.dart`, `lib/cpp_native/native_library.dart`, `lib/src/rust/rust_external_library_io.dart`, `rust/src/api/torrent.rs`, `packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets`, `lib/danmaku_next/next2_platform_support.dart`. Source license recorded by the study: MIT.\n- [AloeSend / LocalSend OH — 574021ed4d](https://github.com/Aloereed/localsend-ohos/commit/574021ed4d3ce21ea1a850a52f123ab5fa0f50d6) (diff): `app/lib/util/native/directories.dart`, `app/lib/pages/about/about_page.dart`. Source license recorded by the study: Apache-2.0.\n- [AloeSend / LocalSend OH — 682688e911](https://github.com/Aloereed/localsend-ohos/commit/682688e9118141b3c6be97fcc4cf595d0aeacae2) (diff): `app/lib/util/native/pick_directory_path.dart`, `app/pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [InkNote / 墨笺 — 1b9b9b430c](https://gitcode.com/nutpi/InkNote/commit/1b9b9b430c743bf92e619d6b9d7016117a43dd7c) (diff): `lib/main.dart`, `lib/src/notes/note_repository.dart`, `lib/src/notes/note_workspace.dart`, `rust/src/store.rs`, `rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `rust_builder/cargokit/cmake/cargokit.cmake`, `pubspec.yaml`, `README.md`. Source license recorded by the study: MIT.\n- [Draftmark — d560dccd1a](https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5) (diff): `apps/draftmark/pubspec.yaml`, `apps/draftmark/lib/src/app/studio_controller.dart`, `apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart`, `crates/draftmark-bridge/Cargo.toml`, `crates/draftmark-bridge/src/compiler.rs`, `crates/draftmark-bridge/src/store.rs`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [Draftmark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/draftmark.md).\n- [InkNote / 墨笺: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/inknote.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Wild OH study: independent niuhuan/wild port, GPL-3.0 application; archived repository. Reviewed single initial adaptation commit against parent plus HEAD documentation. Consumer prose contains independently authored guidance, no application code copied. Source/diff inspection only; no build, signing, dependency resolution, device or website/service execution. README API 23/DevEco 6.1/arm64 success reports are maintainer claims. Vendored WebView ancestry and binary reproducibility were not audited.\nNative filesDir is implemented but Dart dataRoot OH branch returns a fixed sandbox string; init_page passes that string into Rust init. Runtime-context resolution is a corrective recommendation, not a claimed successful source implementation.\n\n2026-10-06 Pindou Workshop study: main cf66d71e648e00a8e649878bb954b39e7e21a63f, two commits. Complete root app snapshot read for selected OH storage/export/share contracts; subsequent screenshot commit carries no implementation delta. Independent app from same maintainer as registered Xingmu, distinct channel/domain source. No root license identified; no app code copied. Source inspection only; no dependency resolution, build, target device, system chooser/copy/persistence runtime verification. README device acceptance checklist and AppGallery image not curator runtime evidence.\nRuntime context.filesDir bridge actually consumed; failure uses systemTemp for project persistence, which cannot establish durable private storage.\n\nTodo Flutter Harmony: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nNative getFilesDir channel settles unknown calls and supplies UIAbility context directory; Dart silently caches Directory.current after error. Corrective fallback guidance preserves explicit failure instead.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nUIAbility filesDir-derived roots passed into native runtime. Rust rejects global default root on OH; typed language metadata required. Storage roots cannot change after live native handle creation.\n\nYun reader: single root import, MIT code/build/config; content separately CC BY-NC-SA 4.0. No code/content copied. Git checkout failed because git-lfs unavailable; pinned text sources inspected through git show. Bundled content LFS unavailable and not needed for source review. No successful build/runtime/device/public Files-app visibility claim.\nNative support/documents handlers return filesDir; Dart null makes storage read-only/memory rather than guessing current directory.",
+  "previous_document_sha256": "8852218bb2ccc0ab91ce96f889e147befd7886b8822de06af350a3a12da265f2",
+  "updates": [
+    {
+      "date": "2026-10-19",
+      "run": "2026-10-19-update-registered-projects.json",
+      "notes": "Selected native rescue fix stops rejecting every platform ancestor symlink, checks chosen absolute normalized root and below-root descendants. Tests cover linked platform prefixes and rejected below-root links; tests not run. Consumer separates platform-owned trusted root from untrusted descendants and does not claim path-based validation is TOCTOU-proof or blanket-permit symlinked payloads.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+    }
+  ]
+}

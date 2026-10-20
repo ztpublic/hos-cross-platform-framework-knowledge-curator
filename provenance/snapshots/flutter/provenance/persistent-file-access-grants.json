@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "persistent-file-access-grants",
+  "evidence": [
+    {
+      "project": "nipaplay",
+      "commit": "accc9fd58d72d759c9211be0f3dfeda01382ac41",
+      "paths": [
+        "packages/file_selector_ohos/ohos/src/main/ets/file_selector/LocalMediaAccess.ets",
+        "packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets",
+        "lib/services/harmony_local_media_service.dart",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/accc9fd58d72d759c9211be0f3dfeda01382ac41"
+    },
+    {
+      "project": "nipaplay",
+      "commit": "b1210fcfc5297cd7376c8929141709f5d976018d",
+      "paths": [
+        "lib/main.dart",
+        "lib/media_library/pick_local_media_directory.dart",
+        "lib/services/file_picker_service.dart",
+        "lib/services/scan_service.dart",
+        "lib/utils/video_player_state/video_player_state_player_setup.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/b1210fcfc5297cd7376c8929141709f5d976018d"
+    }
+  ],
+  "source_context": "# Persist and reactivate external-file grants before native I/O\n\n## Platform difference\n\nA previously selected external directory may become unreadable after restart, permission changes or volume removal; a stored path alone does not preserve access.\n\n## Implementation\n\nNipaPlay adds native directory capability checks, persisted URI policies and policy activation, then returns authorized paths for POSIX/Rust use. It restores grants before startup scans and reactivates access before playback. The later integration also prevents cleanup from treating an inaccessible folder as deleted media.\n\n## Applicability\n\nApplies to this pinned OH file-selector extension and devices supporting its directory authorization APIs. It is not a claim that every device or file authority supports persistent grants.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nGrant persistence, policy activation and underlying file existence are separate states. Do not silently erase library records when an external volume is disconnected or permission is revoked.\n\n## Verification\n\nTest restart, permission revocation, reconnect, missing files versus denied access and access from native libraries, not just the initial picker result.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [NipaPlay Reload — accc9fd58d](https://github.com/AimesSoft/NipaPlay-Reload/commit/accc9fd58d72d759c9211be0f3dfeda01382ac41) (diff): `packages/file_selector_ohos/ohos/src/main/ets/file_selector/LocalMediaAccess.ets`, `packages/file_selector_ohos/ohos/src/main/ets/file_selector/FileSelectorApiImpl.ets`, `lib/services/harmony_local_media_service.dart`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [NipaPlay Reload — b1210fcfc5](https://github.com/AimesSoft/NipaPlay-Reload/commit/b1210fcfc5297cd7376c8929141709f5d976018d) (diff): `lib/main.dart`, `lib/media_library/pick_local_media_directory.dart`, `lib/services/file_picker_service.dart`, `lib/services/scan_service.dart`, `lib/utils/video_player_state/video_player_state_player_setup.dart`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+  "previous_document_sha256": "e758f13b543a59dbd49dbb6b725ab60ed43135473a41ceace916d4211e25f4bf"
+}

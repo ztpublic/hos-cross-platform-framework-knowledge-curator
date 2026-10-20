@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "privileged-capability-gating",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/semantic/privileged-system-capabilities.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/semantic/privileged-system-capabilities.md",
+      "sha256": "8c33abc13283b11b94d982f93c668960f0c438aa8678f92102af9ee779b2912d",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "ohos-common-kb-public/problems/programmatic-hotspot-unavailable.md",
+      "snapshot": "provenance/snapshots/qt/ohos-common-kb-public/problems/programmatic-hotspot-unavailable.md",
+      "sha256": "5ea23c7fdbcf9ee8ae0b3a9e52e70ebde0292f1fac60fb285a0abb3242b59df7",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

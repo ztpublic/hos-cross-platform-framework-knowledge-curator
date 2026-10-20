@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "id": "window-mode-and-fullscreen-state",
+  "evidence": [
+    {
+      "project": "kazumi",
+      "commit": "e3c8d682319308eb2aa3ea6c0686267fa943ed75",
+      "paths": [
+        "lib/utils/utils.dart",
+        "ohos/entry/src/main/ets/entryability/MethodCall.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/e3c8d682319308eb2aa3ea6c0686267fa943ed75"
+    },
+    {
+      "project": "piliplus",
+      "commit": "496e9b681087313cd9f0229168e6792ddd574539",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/496e9b681087313cd9f0229168e6792ddd574539"
+    },
+    {
+      "project": "piliplus",
+      "commit": "8ffbf63b7341e1b4b530a7e0c584ca9d7904838b",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets",
+        "lib/harmony_adapt/harmony_channel.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/8ffbf63b7341e1b4b530a7e0c584ca9d7904838b"
+    },
+    {
+      "project": "simple-live",
+      "commit": "f747d35e2ab37993cc47f8a8afa660d487cc2251",
+      "paths": [
+        "simple_live_app/lib/modules/live_room/player/player_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/f747d35e2ab37993cc47f8a8afa660d487cc2251"
+    },
+    {
+      "project": "simple-live",
+      "commit": "579b64cb4fc829db75ac9ac159a80e888d97034d",
+      "paths": [
+        "simple_live_app/lib/modules/live_room/player/player_controller.dart",
+        "simple_live_app/lib/modules/live_room/live_room_page.dart",
+        "simple_live_app/lib/modules/live_room/player/player_controls.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/579b64cb4fc829db75ac9ac159a80e888d97034d"
+    },
+    {
+      "project": "simple-live",
+      "commit": "d73d4cf4584ce82aa0a1f149aeec56123cff729d",
+      "paths": [
+        "simple_live_app/lib/modules/live_room/player/player_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/d73d4cf4584ce82aa0a1f149aeec56123cff729d"
+    },
+    {
+      "project": "nipaplay",
+      "commit": "a984218732a0c3ae2fef82637842c3588e68e144",
+      "paths": [
+        "pubspec_overrides.ohos.yaml",
+        "tool/configure_flutter_dependencies.dart",
+        "packages/desktop_multi_window_ohos/lib/desktop_multi_window.dart",
+        "lib/plugins/js_runtime_io.dart",
+        "lib/src/rust/rust_external_library_io.dart",
+        "lib/utils/screen_orientation_manager.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/a984218732a0c3ae2fef82637842c3588e68e144"
+    },
+    {
+      "project": "gardendless",
+      "commit": "9bfb9cc49fdec2e812209c43c9524ee50c21445e",
+      "paths": [
+        "ohos/entry/src/main/ets/picker/DocumentPickerOrientation.ets",
+        "ohos/entry/src/main/ets/game/GameBridge.ets",
+        "ohos/entry/src/main/ets/pages/GamePage.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/9bfb9cc49fdec2e812209c43c9524ee50c21445e"
+    },
+    {
+      "project": "piliplusx",
+      "commit": "390893538e7ddbd29375a86110483c0e8b7e8f36",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart"
+      ],
+      "kind": "diff",
+      "note": "Separate miniwindow+landscape state drives temporary scale and native request, no ack wait.",
+      "url": "https://github.com/cnctem/PiliPlusX/commit/390893538e7ddbd29375a86110483c0e8b7e8f36"
+    },
+    {
+      "project": "piliplusx",
+      "commit": "9c35fb5a3ae414e86bb00ca142bb668a00f4772b",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "snapshot",
+      "note": "Native cached window handlers use landscape multiwindow; failures not broadly caught or generation-owned.",
+      "url": "https://github.com/cnctem/PiliPlusX/commit/9c35fb5a3ae414e86bb00ca142bb668a00f4772b"
+    },
+    {
+      "project": "kazumi",
+      "commit": "abb71af8dbeb73e0bd7191e6c4b22e5b4f70814d",
+      "parent_commit": "f4ccd34a6d2cdcb15939580a113d920205f12fc1",
+      "paths": [
+        "lib/services/platform/display_mode_service.dart",
+        "ohos/entry/src/main/ets/entryability/MethodCall.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/abb71af8dbeb73e0bd7191e6c4b22e5b4f70814d"
+    },
+    {
+      "project": "picacomic",
+      "commit": "09d6eb8ed510f5b89be82e0940a41aa25211c869",
+      "parent_commit": "9bc78394ef5d5be8971ccff09ba0a25d637566b0",
+      "paths": [
+        "lib/foundation/app_page_route.dart",
+        "lib/utils/history_reader_launcher.dart",
+        "test/history_reader_root_route_test.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/09d6eb8ed510f5b89be82e0940a41aa25211c869"
+    },
+    {
+      "project": "piliplus",
+      "commit": "954db95a56b0ff160677b846a00c0084101bd8d6",
+      "parent_commit": "a682979ea6cb316cf6cacf091c3fab78ab1beda3",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/954db95a56b0ff160677b846a00c0084101bd8d6"
+    },
+    {
+      "project": "pilinara",
+      "commit": "93a4da67a3b8bd63edf9951d8799c2d72e35141a",
+      "parent_commit": "055e055a88bf5321d56c1e3d1f1403952ed0de85",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/93a4da67a3b8bd63edf9951d8799c2d72e35141a"
+    }
+  ],
+  "source_context": "# Model OH window modes and transitions separately from device type\n\n## Platform difference\n\nWindow state, device category and orientation are separate inputs; an OH floating window is not necessarily the app's media miniwindow.\n\n## Implementation\n\nKazumi adds PC/2in1 detection and maps fullscreen to maximize/recover there. PiliPlus uses native free-window events to exclude normal desktop windows from its miniwindow scale and restricts only a problematic manual-PiP path. Simple Live experiments with waiting for orientation before fullscreen state, then deliberately restores immediate layout/letterboxing. NipaPlay bounds unanswered SystemChrome calls; Simple Live uses a manual-overlay fallback when exiting fullscreen.\n\n## Applicability\n\nWindow policies depend on product and embedding versions. The Simple Live reversal is a transition-design choice, not a contradiction to hide or a universal timing recipe.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not infer PC host-toolchain support from app support for PC devices. A channel timeout can occur even if the visual operation applied; distinguish requested and observed window state. Keep listeners scoped to the native lifecycle.\n\n## Verification\n\nTest phone, tablet/free-window and 2in1 modes, entry/exit races, system bar restoration, manual/automatic PiP and native callback loss.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Kazumi OH — e3c8d68231](https://github.com/ErBWs/Kazumi/commit/e3c8d682319308eb2aa3ea6c0686267fa943ed75) (diff): `lib/utils/utils.dart`, `ohos/entry/src/main/ets/entryability/MethodCall.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [PiliPlus OH — 496e9b6810](https://github.com/dev4harmony/PiliPlus/commit/496e9b681087313cd9f0229168e6792ddd574539) (diff): `lib/harmony_adapt/harmony_channel.dart`, `lib/plugin/pl_player/controller.dart`. Source license recorded by the study: GPL-3.0.\n- [PiliPlus OH — 8ffbf63b73](https://github.com/dev4harmony/PiliPlus/commit/8ffbf63b7341e1b4b530a7e0c584ca9d7904838b) (diff): `ohos/entry/src/main/ets/plugins/HarmonyChannel.ets`, `lib/harmony_adapt/harmony_channel.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — f747d35e2a](https://github.com/xuanxuan123xuan/dart_simple_live/commit/f747d35e2ab37993cc47f8a8afa660d487cc2251) (diff): `simple_live_app/lib/modules/live_room/player/player_controller.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — 579b64cb4f](https://github.com/xuanxuan123xuan/dart_simple_live/commit/579b64cb4fc829db75ac9ac159a80e888d97034d) (diff): `simple_live_app/lib/modules/live_room/player/player_controller.dart`, `simple_live_app/lib/modules/live_room/live_room_page.dart`, `simple_live_app/lib/modules/live_room/player/player_controls.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — d73d4cf458](https://github.com/xuanxuan123xuan/dart_simple_live/commit/d73d4cf4584ce82aa0a1f149aeec56123cff729d) (diff): `simple_live_app/lib/modules/live_room/player/player_controller.dart`. Source license recorded by the study: GPL-3.0.\n- [NipaPlay Reload — a984218732](https://github.com/AimesSoft/NipaPlay-Reload/commit/a984218732a0c3ae2fef82637842c3588e68e144) (diff): `pubspec_overrides.ohos.yaml`, `tool/configure_flutter_dependencies.dart`, `packages/desktop_multi_window_ohos/lib/desktop_multi_window.dart`, `lib/plugins/js_runtime_io.dart`, `lib/src/rust/rust_external_library_io.dart`, `lib/utils/screen_orientation_manager.dart`. Source license recorded by the study: MIT.\n- [GardendlessLoader — 9bfb9cc49f](https://github.com/Dey410/GardendlessLoader/commit/9bfb9cc49fdec2e812209c43c9524ee50c21445e) (diff): `ohos/entry/src/main/ets/picker/DocumentPickerOrientation.ets`, `ohos/entry/src/main/ets/game/GameBridge.ets`, `ohos/entry/src/main/ets/pages/GamePage.ets`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Keep viewport scaling and Flutter layout state coherent across native resizing](viewport-scale-and-layout-lifetime.md)\n- [Synchronize optional native shell state with Flutter readiness and preferences](native-shell-state-synchronization.md)\n\n## Study provenance\n\n- [GardendlessLoader: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/gardendless.md).\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 PiliPlusX ohos 9c35fb5a3ae414e86bb00ca142bb668a00f4772b. Root GPL-3.0 inspected, no implementation copied. Source/diff only; no builds, HCPP hit testing, native window transitions, gallery or volume/device tests. Miniwindow scale fixed0.75 scoped layout heuristic, unawaited channel setters and stale lastWindow possible; no native transition settlement proof. Gallery return true defers permission to plugin, not permission granted. Moving ref ohos plugin is not reproducible pin.\nSeparate miniwindow+landscape state drives temporary scale and native request, no ack wait.\nNative cached window handlers use landscape multiwindow; failures not broadly caught or generation-owned.",
+  "previous_document_sha256": "f367973cbfed554122584da3f6ea994f5d5c7f7bb2e3714fb1da0580aed4642c",
+  "updates": [
+    {
+      "date": "2026-10-19",
+      "run": "2026-10-19-update-registered-projects.json",
+      "notes": "Kazumi splits fullscreen/maximize/orientation from system-bar hiding and adds OH Dart dispatch; native handler acknowledges before asynchronous window promises finish, so consumer requires awaited native completion rather than asserting it. Pica widget/history reader launcher replaces pane-scoped route with root push and explicit nested loader removal, or root replacement when already there. Added upstream widget tests are source evidence only. Flutter Navigator.of docs corroborate root scope. Related media ports add WindowStage.setWindowRectAutoSave with error reporting; method existence at source does not establish API availability or restored geometry on every device.",
+      "licenses": {
+        "kazumi": "GPL-3.0",
+        "picacomic": "MIT",
+        "piliplus": "GPL-3.0",
+        "pilinara": "GPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+    }
+  ],
+  "reference_docs": [
+    {
+      "url": "https://api.flutter.dev/flutter/widgets/Navigator/of.html",
+      "checked_at": "2026-10-19"
+    }
+  ]
+}

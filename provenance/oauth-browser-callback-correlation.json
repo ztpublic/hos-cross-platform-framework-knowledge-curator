@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "oauth-browser-callback-correlation",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/oauth-browser-callback-correlation.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/oauth-browser-callback-correlation.md",
+      "sha256": "b3188fb8914afc05d34cfae92d7c3a354a10a8b66cb7bc394e8f0e5717bd7f94",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/oauth-browser-callback-correlation.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/oauth-browser-callback-correlation.json",
+      "sha256": "c0238e17f2a26333b96ed12ddacee949c01f7f02ff0619b56226ab0a3de47d16",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "oauth-browser-callback-correlation",
+    "evidence": [
+      {
+        "project": "lichess-oh",
+        "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+        "paths": [
+          "lib/src/model/auth/auth_repository.dart",
+          "lib/src/app_links_service.dart",
+          "lib/src/utils/ohos_stubs.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos/entry/src/main/ets/plugins/UrlLauncherPlugin.ets",
+          "ohos/entry/src/main/module.json5"
+        ],
+        "kind": "diff",
+        "note": "PKCE S256/state retained; external browser route added. Subscription starts after launch; resume cancellation 300ms; only onNewWant, initial getter null, global URI dedup; full callback URI logged native. Guide is corrective, no successful provider flow asserted.",
+        "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+      }
+    ],
+    "source_context": "\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nPKCE S256/state retained; external browser route added. Subscription starts after launch; resume cancellation 300ms; only onNewWant, initial getter null, global URI dedup; full callback URI logged native. Guide is corrective, no successful provider flow asserted."
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

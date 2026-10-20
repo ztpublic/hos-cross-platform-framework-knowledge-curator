@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "id": "external-handoff-file-uri",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/external-handoff-file-uri.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/external-handoff-file-uri.md",
+      "sha256": "4dd2f01d5663a76699822e0ab5beb3ac54fc072ee0fcbaa10efc9e7883b97679",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/external-handoff-file-uri.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/external-handoff-file-uri.json",
+      "sha256": "865f7cc176de4ca1ca14b4b9c749311a759ede22e0d6d08f0f87a5ceb36b16e2",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "external-handoff-file-uri",
+    "evidence": [
+      {
+        "project": "kazumi",
+        "commit": "314fbe31dc2853fe4049c68ff1cd54f9f1e82193",
+        "paths": [
+          "lib/services/player/external_playback_launcher.dart",
+          "ohos/entry/src/main/ets/entryability/MethodCall.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/ErBWs/Kazumi/commit/314fbe31dc2853fe4049c68ff1cd54f9f1e82193"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "c5ad9721174669e1bbf726b07138db6dc3d08ffc",
+        "paths": [
+          "pubspec.yaml",
+          "lib/providers/secure_storage_provider.dart",
+          "lib/services/database_service.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/services/update_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc"
+      },
+      {
+        "project": "nomark",
+        "commit": "8eecb8e390f54e7bafc8ae0db8a4348de4d2d445",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/pages/LoginWebPage.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445"
+      },
+      {
+        "project": "nju-timetable",
+        "commit": "3310989e381d317c91bee18509a984e390c40a3a",
+        "paths": [
+          "lib/Pages/Share/ShareView.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/3310989e381d317c91bee18509a984e390c40a3a"
+      },
+      {
+        "project": "nju-timetable",
+        "commit": "432355ff3dbf61b9fda610821079adc5ef615ab8",
+        "paths": [
+          "lib/Pages/Share/ShareView.dart",
+          "lib/Pages/Settings/SettingsView.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/432355ff3dbf61b9fda610821079adc5ef615ab8"
+      },
+      {
+        "project": "pindou",
+        "commit": "b8364c5ecd38fb6ba833b42698ebef7250656897",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/ExportSharePlugin.ets",
+          "lib/data/services/project_share_service.dart",
+          "lib/application/controllers/workshop_controller.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/w6521939-ops/pindou-workshop/commit/b8364c5ecd38fb6ba833b42698ebef7250656897",
+        "note": "sendData file URI/read grant constructed; no matching ability error message treated success without presentation proof. App share wrapper ignores boolean result. Guide corrects false success."
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "7c13a40e741a9a8fe1b7b962b5ec46119d8ae9bb",
+        "paths": [
+          "lib/utils/calendar_export_utils.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/7c13a40e741a9a8fe1b7b962b5ec46119d8ae9bb",
+        "note": "Dart enables OH import and sends cached path; native viewData text/calendar Want grants read access and returns opened. This is receiver handoff, not a calendar insertion API."
+      },
+      {
+        "project": "yun-reader",
+        "commit": "29bbf1469977d59c13a7029ccbe64f5e5b3e8190",
+        "parent_commit": "9f717157b4399684c581258abd06bc02216faf2e",
+        "paths": [
+          "lib/features/common/char_lookup.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "android/app/src/main/AndroidManifest.xml"
+        ],
+        "kind": "diff",
+        "url": "https://gitcode.com/jenken1209/yun/commit/29bbf1469977d59c13a7029ccbe64f5e5b3e8190"
+      }
+    ],
+    "source_context": "# Hand off exportable files through Wants with appropriate URI access\n\n## Platform difference\n\nLaunching a receiving app may require a readable file URI and access grant rather than passing a remote URL or private filesystem string.\n\n## Implementation\n\nKazumi writes an M3U8 wrapper and invokes viewData with read-URI permission and a receiver chooser; its Dart path is enabled only when a Referer header is unnecessary. Bugaoshan creates an ICS file and exposes it through the native calendar import channel. Nomark persists audio in private files storage before invoking system sharing.\n\n## Applicability\n\nThe receiver must exist and support the MIME/action/data contract. Direct calendar-plugin operations, such as NJU uses, are a separate integration path with their own permission/API checks.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nChannel success may mean the handoff was attempted, not that another app accepted or consumed the content. Preserve files for the receiver long enough and account for rejected or cancelled requests.\n\n## Verification\n\nTest installed/missing receivers, read access, cancellation, MIME/extension correctness, cleanup timing and URLs requiring authentication headers.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Kazumi OH — 314fbe31dc](https://github.com/ErBWs/Kazumi/commit/314fbe31dc2853fe4049c68ff1cd54f9f1e82193) (diff): `lib/services/player/external_playback_launcher.dart`, `ohos/entry/src/main/ets/entryability/MethodCall.ets`. Source license recorded by the study: GPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — c5ad972117](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc) (diff): `pubspec.yaml`, `lib/providers/secure_storage_provider.dart`, `lib/services/database_service.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/services/update_service.dart`. Source license recorded by the study: AGPL-3.0.\n- [无印字节 / Bytedance Nomark — 8eecb8e390](https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — 3310989e38](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/3310989e381d317c91bee18509a984e390c40a3a) (diff): `lib/Pages/Share/ShareView.dart`, `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [南哪课表 / NJU Timetable — 432355ff3d](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/432355ff3dbf61b9fda610821079adc5ef615ab8) (diff): `lib/Pages/Share/ShareView.dart`, `lib/Pages/Settings/SettingsView.dart`, `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Pindou Workshop study: main cf66d71e648e00a8e649878bb954b39e7e21a63f, two commits. Complete root app snapshot read for selected OH storage/export/share contracts; subsequent screenshot commit carries no implementation delta. Independent app from same maintainer as registered Xingmu, distinct channel/domain source. No root license identified; no app code copied. Source inspection only; no dependency resolution, build, target device, system chooser/copy/persistence runtime verification. README device acceptance checklist and AppGallery image not curator runtime evidence.\nsendData file URI/read grant constructed; no matching ability error message treated success without presentation proof. App share wrapper ignores boolean result. Guide corrects false success.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "previous_document_sha256": "6f3f20528c734995cd5cf5896341518a414ed4db7293779e68a2eaba6e0979ef",
+    "updates": [
+      {
+        "date": "2026-10-15",
+        "run": "2026-10-15-update-registered-projects.json",
+        "notes": "Single Yun reader commit adds code-point selection plus percent-encoded scheme URI and ArkTS viewData Want/startAbility on correct Flutter engine. No receiver implementation/source or target availability verified; source comments say no OH receiver at study time, not adopted as current external fact. ArkTS catches all failures into false and Dart collapses platform/missing-plugin outcomes; consumer requires finer outcomes before asserting uninstalled. Android visibility declarations are not OH evidence. UI/toc/reader/content/docx changes screened but do not add OH-native mechanisms.",
+        "licenses": {
+          "yun-reader": "MIT code/config; bundled content CC BY-NC-SA 4.0"
+        },
+        "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: calendar-file-handoff-completion, external-deep-action-contract",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohosextras-version-boundary",
+  "sources": [
+    {
+      "collection": "qt",
+      "original_path": "problems/build-fail-cmake-ohosextras.md",
+      "snapshot": "provenance/snapshots/qt/problems/build-fail-cmake-ohosextras.md",
+      "sha256": "4eb76fccd09ca85bb5c3d54c1aa25f0b6a423479de64c647450edcf63f7d0f58",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "problems/build-fail-closeeventrootcause-path.md",
+      "snapshot": "provenance/snapshots/qt/problems/build-fail-closeeventrootcause-path.md",
+      "sha256": "27cd75298b8d5abca923e34aaa149482e9cb737afda2a7fc9e21a94373b4e052",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "problems/build-fail-qtohosextras-camelcase-headers.md",
+      "snapshot": "provenance/snapshots/qt/problems/build-fail-qtohosextras-camelcase-headers.md",
+      "sha256": "b3a6c47db4cb01abdc34ec1dd07a5d6d90644225dcde1b9a14d1c22a186aa7e5",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "qt",
+      "original_path": "semantic/qt-harmonyos-golden-rules.md",
+      "snapshot": "provenance/snapshots/qt/semantic/qt-harmonyos-golden-rules.md",
+      "sha256": "35331155568d26135e0de7b38e3fa2d92a173c146e777cd5f42d6a15edfc4ce6",
+      "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "license": "MIT; see maintenance/licenses/qt-MIT.txt",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "id": "resumable-file-download-contract",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/resumable-file-download-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/resumable-file-download-contract.md",
+      "sha256": "07d7a61f87f842b918de364a8afdcb6e9b5134d4319b708da084951fbe2a64ca",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/resumable-file-download-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/resumable-file-download-contract.json",
+      "sha256": "6e2da346a805166186e2ddca766f0b31e23fc70e88033572bbd570446064db19",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "resumable-file-download-contract",
+    "evidence": [
+      {
+        "project": "ssh-codex",
+        "commit": "f7d7b9b3ea566cd59c925e0c0df7c674bdbd39a5",
+        "paths": [
+          "lib/src/transport/resumable_download.dart",
+          "lib/src/transport/ssh_connector.dart",
+          "lib/src/app_controller.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/f7d7b9b3ea566cd59c925e0c0df7c674bdbd39a5",
+        "note": "Introduces dedicated transfer SSH ownership, bounded SFTP pipeline, size/digest identity, retries, temporary staging and final save. End-to-end download is explicitly guarded by Android-only Attachments.supported; no OH native adapter is added."
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "0c116858501757aad20c7ebb389f69e49f866913",
+        "paths": [
+          "lib/src/transport/resumable_download.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/0c116858501757aad20c7ebb389f69e49f866913",
+        "note": "Bounds SFTP channel/file open and closes transfer connection on setup failure."
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "1e52f554f45932f3554c585cc8df4d6fef048be4",
+        "paths": [
+          "lib/src/transport/resumable_download.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/1e52f554f45932f3554c585cc8df4d6fef048be4",
+        "note": "Races pending SFTP identify/read with SSH closure. Resume state remains process-local; durable checkpoint advice is an alternative, not implemented evidence."
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "20d14a4e129f65abe49f70cb6ea9563b28f6f626",
+        "parent_commit": "44b2c1ed210f568c215208ccdbdf72c9b00d680b",
+        "paths": [
+          "lib/src/transport/resumable_download.dart",
+          "lib/src/transport/attachment_upload.dart",
+          "lib/src/attachments.dart",
+          "tool/android/AttachmentPicker.kt",
+          "tool/android/AttachmentDownloads.kt"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/20d14a4e129f65abe49f70cb6ea9563b28f6f626"
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "68e1083a53368e0e09f373a8622579bb62a4188c",
+        "parent_commit": "636688ce50a9807b19ded1e8b310000bc35619b5",
+        "paths": [
+          "lib/src/transport/attachment_upload.dart",
+          "lib/src/ui/task_view.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/68e1083a53368e0e09f373a8622579bb62a4188c"
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "776031fe4a75fcc3090aa5547c2f20e9cf398041",
+        "paths": [
+          "lib/src/transport/attachment_upload.dart",
+          "lib/src/ui/task_view.dart",
+          "lib/src/app_controller.dart",
+          "test/attachments_test.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/776031fe4a75fcc3090aa5547c2f20e9cf398041",
+        "parent_commit": "15da62eaf35373faadeb5078d9785fe2d33a34e8"
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "b55decc8d05fe07e33d7c88dd822d5789a8a3f44",
+        "paths": [
+          "lib/src/transport/attachment_upload.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/b55decc8d05fe07e33d7c88dd822d5789a8a3f44",
+        "parent_commit": "6fd6a8a1b818067a2ec7cc3bade0e4e6536873b7"
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "06ad94737f025be056f81501674691e2c75cba14",
+        "parent_commit": "d4e328a464dd88522c9456ff4ca1f01d574f7d96",
+        "paths": [
+          "lib/src/tasks/task_draft.dart",
+          "lib/src/app_controller.dart",
+          "lib/src/ui/task_view.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/06ad94737f025be056f81501674691e2c75cba14"
+      },
+      {
+        "project": "ssh-codex",
+        "commit": "d4527f5cb0728c45539dcf52b037a260e5a902a2",
+        "parent_commit": "06ad94737f025be056f81501674691e2c75cba14",
+        "paths": [
+          "lib/src/tasks/task_draft.dart",
+          "lib/src/app_controller.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/d4527f5cb0728c45539dcf52b037a260e5a902a2"
+      }
+    ],
+    "source_context": "\n\n2026-10-08 incremental update: ssh-codex 97b2e2cc694e02ba331da0e08904e9269b2faa2b; registry license MIT. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "updates": [
+      {
+        "date": "2026-10-15",
+        "run": "2026-10-15-update-registered-projects.json",
+        "notes": "20d14a4e12 streams local staged attachments via File.openRead into SSH stdin and changes caps to 1 GiB (4 attachments) while preview cap stays 10 MiB. Native picker/cache/save is Android-only and not an OH backend. Expected length validated before/during stream (does not detect same-size mutation). Verification timeout is separate 30-minute budget, read operation 30 seconds; source removes upload whole-transfer 60-second timeout without adding a new upload inactivity deadline, so consumer recommends retaining cancellation/stall bounds rather than copying unbounded lifetime. Remote shell cleanup traps and staging cleanup inspected; source transfer success still not verified on any device. Later 68e1083a53 fixes Stream<Uint8List> and typed total accumulator.",
+        "licenses": {
+          "ssh-codex": "MIT"
+        },
+        "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+      },
+      {
+        "date": "2026-10-16",
+        "run": "2026-10-16-update-registered-projects.json",
+        "notes": "Eager upload creates one remote token/path per attachment, reuses it across retries, stats remote length and resumes File.openRead(offset,expectedSize) with explicit acknowledged SFTP writes and final size equality. Host config is checked before/after opening dedicated connection. Task/generation/discarded state owns local staging and cancellation. Follow-up fixes SFTP variable null safety. Remote prefix/content identity is not verified: length alone and initial local stat do not detect same-size mutation; consumer requires immutable staging and identity validation or restart. No remote partial expiry policy demonstrated; recommends cleanup as a requirement. Write phase has cancellation and connection-close races but no explicit inactivity deadline. Retry owner state is in memory, not process-death recovery. Native attachment picker/export remains Android-only; no OH channel implementation or upload/device run established.",
+        "licenses": {
+          "ssh-codex": "MIT"
+        },
+        "validation_tier": "pinned source/history review and local KB integrity; isolated local SQLite mechanism experiment only where recorded; no upstream build/tests or OH/device execution"
+      },
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "TaskDraft application-owned store retains editor, staged attachments, upload target/cancellation and failed-send restoration across page navigation. Offline follow-up models waiting uploads and resumes on reconnect. No persistent process-death store added; consumer distinguishes navigation ownership from durable restart recovery. Host/config/generation and immutable-content/remote-prefix requirements from existing entry remain; underlying attachment_upload transport unchanged in new range. App tests source-inspected, not run; Android picker/native save still not OH implementation evidence.",
+        "licenses": {
+          "ssh-codex": "MIT"
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: bounded-upload-staging, resumable-upload-identity",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

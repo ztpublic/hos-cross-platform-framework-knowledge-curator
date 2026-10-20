@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "flutter-engine-cache-coherence",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/build-toolchain-and-evidence-tiers.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/build-toolchain-and-evidence-tiers.md",
+      "sha256": "f193fa46aa7d2d5600d94812ec2570c3097aa3e83ec6bb140ad327bb3529cc33",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/build-toolchain-and-evidence-tiers.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/build-toolchain-and-evidence-tiers.json",
+      "sha256": "98058f7a7aeefa860913c2fd1b3684da030b4f89b3bbd5187d954bcfe176c9f7",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

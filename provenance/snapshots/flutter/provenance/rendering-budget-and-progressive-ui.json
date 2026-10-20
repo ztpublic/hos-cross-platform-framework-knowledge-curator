@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "rendering-budget-and-progressive-ui",
+  "evidence": [
+    {
+      "project": "localsend",
+      "commit": "b93ff8e9ac016054fd1dd8247b8c59e67454282d",
+      "paths": [
+        "app/lib/config/theme.dart",
+        "app/lib/util/ui/visuals.dart",
+        "app/lib/widget/modern/modern_ui.dart",
+        "app/lib/provider/persistence_provider.dart",
+        "app/lib/provider/settings_provider.dart",
+        "app/lib/main.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/b93ff8e9ac016054fd1dd8247b8c59e67454282d"
+    },
+    {
+      "project": "venera",
+      "commit": "3c94c027542bc84f6fd3e79917815a1cde60ce5b",
+      "paths": [
+        "lib/pages/reader/images.dart",
+        "lib/pages/reader/reader.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/3c94c027542bc84f6fd3e79917815a1cde60ce5b"
+    },
+    {
+      "project": "toki",
+      "commit": "dbe75bcba8d6e86f6090046f4cbce6ceef06cd20",
+      "paths": [
+        "lib/core/widgets/glow_material.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/commit/dbe75bcba8d6e86f6090046f4cbce6ceef06cd20",
+      "note": "Adds raw pointer press animation to gradient material."
+    },
+    {
+      "project": "toki",
+      "commit": "59fc931379142cf6fec9f31fc4462a8745a4e436",
+      "paths": [
+        "lib/core/widgets/glow_material.dart",
+        "lib/main.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/commit/59fc931379142cf6fec9f31fc4462a8745a4e436",
+      "note": "Adds scroll notifier gate, stops active animation and clears press state on scrolling, unregisters listener on dispose."
+    },
+    {
+      "project": "ssemarket",
+      "commit": "d3052caef91d915442913d5531da58a2a39198b6",
+      "paths": [
+        "lib/shared/components/transitions/page_transitions.dart"
+      ],
+      "kind": "diff",
+      "note": "Parent diff reduces nested slide/parallax/fade to one slide. No frame measurements reviewed; reduced effect complexity is an option, not established OH performance diagnosis.",
+      "url": "https://github.com/howtomakeaname/SSEMarket-X/commit/d3052caef91d915442913d5531da58a2a39198b6"
+    },
+    {
+      "project": "nipaplay",
+      "commit": "adc9bb55852b89b5f89fd4e5228ceb6713406c18",
+      "paths": [
+        "lib/main.dart",
+        "lib/models/watch_history_database.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/adc9bb55852b89b5f89fd4e5228ceb6713406c18",
+      "note": "Defers optional service/token/connectivity/sync/cache tasks until first frame while retaining OH grant restoration before storage; coordinates startup scanning with launch playback and coalesces database opening. Post-frame work can still block; no performance measurements executed."
+    }
+  ],
+  "source_context": "# Provide lower-cost rendering and defer expensive work around transitions\n\n## Platform difference\n\nAn OH port can need explicit rendering-cost and scheduling choices while keeping its Flutter UI and content model.\n\n## Implementation\n\nLocalSend adds a user-selectable lightweight-effects mode that removes blur/BackdropFilter, reduces shadows and substitutes gradients. Venera defers heavy reader rebuilding until route transitions complete and channel-backed work until after a frame; it uses a conservative cache fallback if the memory-info plugin is absent.\n\n## Applicability\n\nThese are application-level strategies observed in OH-oriented forks, not evidence that Flutter effects are unavailable on the OS. The lightweight setting also affects shared visual components.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nNo benchmark was reproduced. Deferral can improve transition scheduling but must not starve content or dispatch work after disposal. A conservative cache fallback is not actual memory telemetry.\n\n## Verification\n\nMeasure frame time, memory and visual tradeoffs on representative hardware; test rapid navigation, fallback paths and user preference persistence.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [AloeSend / LocalSend OH — b93ff8e9ac](https://github.com/Aloereed/localsend-ohos/commit/b93ff8e9ac016054fd1dd8247b8c59e67454282d) (diff): `app/lib/config/theme.dart`, `app/lib/util/ui/visuals.dart`, `app/lib/widget/modern/modern_ui.dart`, `app/lib/provider/persistence_provider.dart`, `app/lib/provider/settings_provider.dart`, `app/lib/main.dart`. Source license recorded by the study: Apache-2.0.\n- [Venera OH (AzadKuu port) — 3c94c02754](https://github.com/AzadKuu/venera-ohos/commit/3c94c027542bc84f6fd3e79917815a1cde60ce5b) (diff): `lib/pages/reader/images.dart`, `lib/pages/reader/reader.dart`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nToki OH discovery: Source fix demonstrates interaction-aware reduction of repaint work; no frame measurements reproduced. Root scroll observer covers routes and writes a global boolean; consumer scope/ownership or active-count proposal improves overlapping-scroll correctness beyond this implementation. Primary raw-pointer/gesture distinction cross-checked at https://api.flutter.dev/flutter/widgets/Listener-class.html and https://docs.flutter.dev/ui/interactivity/gestures. Engine render-scale claims in PATCHES.md are external maintainer measurements, not curator runtime evidence. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only.\n\nSSEMarket-X: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nParent diff reduces nested slide/parallax/fade to one slide. No frame measurements reviewed; reduced effect complexity is an option, not established OH performance diagnosis.\n\n2026-10-08 incremental update: nipaplay adc9bb55852b89b5f89fd4e5228ceb6713406c18; registry license MIT. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "e30f0ca8020191f27a80b20bac388a4f7620f389f642d07d92679b1f95a8b3eb"
+}

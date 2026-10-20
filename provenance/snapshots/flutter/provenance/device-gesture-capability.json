@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "device-gesture-capability",
+  "evidence": [
+    {
+      "project": "venera",
+      "commit": "97bfb3100653a8e65e603108ec778073dd1cd8c0",
+      "paths": [
+        "lib/foundation/smart_grip.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/97bfb3100653a8e65e603108ec778073dd1cd8c0"
+    }
+  ],
+  "source_context": "# Expose device-specific holding-hand events as an optional capability\n\n## Platform difference\n\nA HarmonyOS device-specific sensor/gesture feature should augment a shared Flutter UI without becoming a prerequisite for basic operation.\n\n## Implementation\n\nVenera adds a native holding-hand event bridge and a Dart notifier that changes the side of its large-screen sidebar, together with a gesture permission declaration.\n\n## Applicability\n\nApplies only to devices/products/APIs providing the used native capability. The recorded source demonstrates integration intent, not permission grants or detection accuracy.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nPermission declaration alone is not capability detection. Retain a deterministic layout/manual choice when events are unavailable and clean up subscriptions with the feature lifecycle.\n\n## Verification\n\nTest supported and unsupported devices, denied permission, no events, repeated side changes and suspension/resumption without duplicate subscriptions.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Venera OH (AzadKuu port) — 97bfb31006](https://github.com/AzadKuu/venera-ohos/commit/97bfb3100653a8e65e603108ec778073dd1cd8c0) (diff): `lib/foundation/smart_grip.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+  "previous_document_sha256": "4a123e5589275b6a9bf576d899e4a582bca55f612daef77300241a7dc25ed283"
+}

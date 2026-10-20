@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "ffi-library-and-symbol-availability",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/ffi-library-and-symbol-availability.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/ffi-library-and-symbol-availability.md",
+      "sha256": "906cfe6d423892a6096b144021b750ebb84ae5804e5165f5217e3ab3870fcbe5",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/ffi-library-and-symbol-availability.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/ffi-library-and-symbol-availability.json",
+      "sha256": "1455a88bc4b7879c4349abf05946b10bd520600015ea7371df22165f79e1dd41",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "ffi-library-and-symbol-availability",
+    "evidence": [
+      {
+        "project": "mr",
+        "commit": "b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e",
+        "paths": [
+          ".github/workflows/build.yml",
+          "quickjs/ohos/CMakeLists.txt",
+          "lib/services/native/quickjs_runtime.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/DandanLLab/mr/commit/b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e"
+      },
+      {
+        "project": "picacomic",
+        "commit": "ca30fd26340edeae2b736abec6d7ae3f4c191765",
+        "paths": [
+          "flutter_qjs/lib/src/ffi.dart",
+          "tool/build_quickjs_ohos.sh"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/ca30fd26340edeae2b736abec6d7ae3f4c191765"
+      },
+      {
+        "project": "simple-live",
+        "commit": "8e6dec628868fc08ca771fb39f52e8cb09bd11da",
+        "paths": [
+          "third_party/dart_quickjs_compat/lib/dart_quickjs.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/8e6dec628868fc08ca771fb39f52e8cb09bd11da"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "181bf77691df7925b2b07cc09dc25f20fc08cd08",
+        "paths": [
+          "ohos/entry/src/main/cpp/CMakeLists.txt",
+          "cpp_native/CMakeLists.txt",
+          "lib/plugins/js_runtime_ohos.dart",
+          "lib/cpp_native/native_library.dart",
+          "lib/src/rust/rust_external_library_io.dart",
+          "rust/src/api/torrent.rs",
+          "packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets",
+          "lib/danmaku_next/next2_platform_support.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08"
+      },
+      {
+        "project": "venera",
+        "commit": "5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf",
+        "paths": [
+          "pubspec.yaml",
+          "lib/init.dart",
+          "lib/network/ohos_http_adapter.dart",
+          "lib/foundation/sqlite_connection.dart",
+          "lib/utils/background_download.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "third_party/flutter_qjs/lib/src/ffi.dart",
+          "third_party/sqlite3/lib/src/ffi/load_library.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf"
+      },
+      {
+        "project": "hlbmerge",
+        "commit": "47416f092fca969a19c92e316958ae716b253dcf",
+        "paths": [
+          "ffmpeg_xmake/pubspec.yaml",
+          "ffmpeg_xmake/ohos/build-profile.json5",
+          "ffmpeg_xmake/src/CMakeLists.txt",
+          "ffmpeg_xmake/lib/impl/ffmpeg_native.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/molihuan/hlbmerge_flutter/commit/47416f092fca969a19c92e316958ae716b253dcf",
+        "note": "OH FFI plugin declares ffiPlugin and native CMake route; loader opens libffmpeg_hl.so, wrapper links ffmpeg_core. Per-ABI generated xmake build directories are not available in checkout; no reproducibility or successful load claimed."
+      },
+      {
+        "project": "lichess-oh",
+        "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+        "paths": [
+          "third_party/multistockfish/lib/src/stockfish.dart",
+          "third_party/multistockfish/lib/src/bindings.dart",
+          "ohos/entry/libs/arm64-v8a/libmultistockfish_variant.so",
+          "ohos/entry/libs/x86_64/libmultistockfish_variant.so",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "note": "OH loader opens flavor-specific sonames, packaged variant/SQLite/C++ artifacts for two ABIs; other flavors not all present and native build inputs not audited. SQLite system hook is configuration evidence, not load test.",
+        "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+      },
+      {
+        "project": "flclash-shenyingjun",
+        "commit": "36317efb708de60009aad8860074e0ed274e9ebe",
+        "paths": [
+          "ohos/entry/src/main/cpp/bridge.cpp"
+        ],
+        "note": "Selected NAPI startEmbeddedCore dlopen/dlsym path checks libclash.so and startServerProcessDetached; launch returns before worker finishes. Source keeps ownership/library live until explicit stop. Full core symbol ABI and Go internals not audited.",
+        "kind": "snapshot",
+        "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS/commit/36317efb708de60009aad8860074e0ed274e9ebe"
+      }
+    ],
+    "source_context": "# Verify native library loading and the exact symbols a Dart wrapper uses\n\n## Platform difference\n\nA Dart FFI wrapper can compile while its OH shared library is missing, loaded from the wrong location or missing a lazily resolved symbol.\n\n## Implementation\n\nMR builds the shared QuickJS/native core for OH and selects libquickjs_c_bridge.so explicitly. Pica Comic expands loader candidates, adds process-symbol fallback and diagnostics. Simple Live removes a positive memoryLimit argument because its selected library lacks jsSetMemoryLimit, whose lookup is otherwise lazy. NipaPlay adds OH loaders and a QuickJS adapter rather than assuming the desktop loader works.\n\n## Applicability\n\nValidate each exact library/ABI/wrapper combination. A process-symbol fallback only helps when the expected symbol is actually exported in that process.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nSimple Live's workaround avoids the unresolved-symbol path but also removes that resource bound; it does not demonstrate equivalent limits elsewhere. Bundled arm64 libraries do not establish other architecture support.\n\n## Verification\n\nInspect symbol tables and packaged paths; execute optional wrapper operations that trigger lazy lookup, invalid inputs and resource exhaustion scenarios appropriate to the engine.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [MR — b7f23ee84b](https://github.com/DandanLLab/mr/commit/b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e) (diff): `.github/workflows/build.yml`, `quickjs/ohos/CMakeLists.txt`, `lib/services/native/quickjs_runtime.dart`. Source license recorded by the study: MIT.\n- [Pica Comic OH — ca30fd2634](https://github.com/nimmi114514/PicaComic_ohos/commit/ca30fd26340edeae2b736abec6d7ae3f4c191765) (diff): `flutter_qjs/lib/src/ffi.dart`, `tool/build_quickjs_ohos.sh`. Source license recorded by the study: MIT.\n- [Simple Live OH (maintained stable port) — 8e6dec6288](https://github.com/xuanxuan123xuan/dart_simple_live/commit/8e6dec628868fc08ca771fb39f52e8cb09bd11da) (diff): `third_party/dart_quickjs_compat/lib/dart_quickjs.dart`. Source license recorded by the study: GPL-3.0.\n- [NipaPlay Reload — 181bf77691](https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08) (diff): `ohos/entry/src/main/cpp/CMakeLists.txt`, `cpp_native/CMakeLists.txt`, `lib/plugins/js_runtime_ohos.dart`, `lib/cpp_native/native_library.dart`, `lib/src/rust/rust_external_library_io.dart`, `rust/src/api/torrent.rs`, `packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets`, `lib/danmaku_next/next2_platform_support.dart`. Source license recorded by the study: MIT.\n- [Venera OH (AzadKuu port) — 5e20a6ebb9](https://github.com/AzadKuu/venera-ohos/commit/5e20a6ebb9cd94a76ac3211a9f1c7c90e3ec4aaf) (diff): `pubspec.yaml`, `lib/init.dart`, `lib/network/ohos_http_adapter.dart`, `lib/foundation/sqlite_connection.dart`, `lib/utils/background_download.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `third_party/flutter_qjs/lib/src/ffi.dart`, `third_party/sqlite3/lib/src/ffi/load_library.dart`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 HLBmerge source study: pinned master 47416f092fca969a19c92e316958ae716b253dcf. Selected OH introduction and later FFmpeg import/dependency change compared against parents; later relevant file workflow snapshots reviewed. LICENSE.txt is Apache-2.0 but README separately forbids commercial use: recorded conflict, no resolution inferred and no implementation copied. ffmpeg_xmake is a tracked tree at HEAD despite .gitmodules stanza; no submodule initialization. Native build input/license audit is incomplete. No dependency resolution, native build, HAP packaging/signing/install or device/file-handoff validation performed.\nOH FFI plugin declares ffiPlugin and native CMake route; loader opens libffmpeg_hl.so, wrapper links ffmpeg_core. Per-ABI generated xmake build directories are not available in checkout; no reproducibility or successful load claimed.\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nOH loader opens flavor-specific sonames, packaged variant/SQLite/C++ artifacts for two ABIs; other flavors not all present and native build inputs not audited. SQLite system hook is configuration evidence, not load test.\n\nFlClash shenyingjun fork harmony: GPL-3.0 root; no app code copied. Compared current EntryAbility against registered tljk/FlClash-ohos pinned EntryAbility: substantially different custom NAPI/VPN/registration structure, distinct historical adaptation fixes, not URL alias and not independent upstream architecture corroboration. Selected parent diffs and current bridge sections only; complete transport/security/Go/native lifecycle not audited. No build/device/tunnel/proxy/provider runtime validation.\nSelected NAPI startEmbeddedCore dlopen/dlsym path checks libclash.so and startServerProcessDetached; launch returns before worker finishes. Source keeps ownership/library live until explicit stop. Full core symbol ABI and Go internals not audited.",
+    "previous_document_sha256": "f0c602bf894a791d40770a8e8ce410674583533914bae7a503ee14740a87bfc6"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

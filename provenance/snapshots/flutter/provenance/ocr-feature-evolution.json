@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "ocr-feature-evolution",
+  "evidence": [
+    {
+      "project": "bugaoshan",
+      "commit": "24585fd3ca55cf98834107929098001b80ab3729",
+      "paths": [
+        "lib/serivces/ocr_service.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/24585fd3ca55cf98834107929098001b80ab3729"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "a691ace11e4ea07ea317d50ae656967f9538259c",
+      "paths": [
+        "lib/main.dart",
+        "lib/services/ocr_service.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/a691ace11e4ea07ea317d50ae656967f9538259c"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "7ade12a6298469c22afad4b8532b3c45f51a1b79",
+      "paths": [
+        "lib/services/ocr_service.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/7ade12a6298469c22afad4b8532b3c45f51a1b79"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "79e3be2e73bcc7b87e987cf8c20fd0574a926ff2",
+      "paths": [
+        "lib/services/ocr_service.dart",
+        "pubspec.yaml",
+        ".github/workflows/build-ohos.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/79e3be2e73bcc7b87e987cf8c20fd0574a926ff2"
+    }
+  ],
+  "source_context": "# Reassess disabled OCR when its native dependency changes\n\n## Platform difference\n\nA disabled OH feature can reflect one dependency revision; later replacement of the native backend can restore an implementation path.\n\n## Implementation\n\nBugaoshan first throws before LiteRT initialization on OH, then removes OH configuration and later publishes a release without that OCR service. Upstream replaces LiteRT preprocessing with scu_ocr_lite and packaged-model loading; the subsequent OH merge restores the newer OCR service while retaining OH package overrides.\n\n## Applicability\n\nThis is a dependency/history lesson for Bugaoshan's recorded revisions. The source shows restoration of an app path, not measured accuracy, performance or comprehensive OH support of the replacement package.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nRemoving a guard while removing platform support does not prove the guarded operation started working. Do not keep reporting the older disabled state after the newer service has been integrated.\n\n## Verification\n\nTest model packaging, native initialization, recognizeAsync success/error paths, memory use and representative input accuracy on the chosen device/toolchain.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [不高山上 / Bugaoshan HarmonyOS — 24585fd3ca](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/24585fd3ca55cf98834107929098001b80ab3729) (diff): `lib/serivces/ocr_service.dart`, `pubspec.yaml`. Source license recorded by the study: AGPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — a691ace11e](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/a691ace11e4ea07ea317d50ae656967f9538259c) (diff): `lib/main.dart`, `lib/services/ocr_service.dart`. Source license recorded by the study: AGPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — 7ade12a629](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/7ade12a6298469c22afad4b8532b3c45f51a1b79) (diff): `lib/services/ocr_service.dart`, `pubspec.yaml`. Source license recorded by the study: AGPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — 79e3be2e73](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/79e3be2e73bcc7b87e987cf8c20fd0574a926ff2) (diff): `lib/services/ocr_service.dart`, `pubspec.yaml`, `.github/workflows/build-ohos.yml`. Source license recorded by the study: AGPL-3.0.\n\n## Related knowledge\n\n- [Select capabilities before constructing native-backed objects](capability-gated-backend-initialization.md)\n- [Resolve the whole OH plugin graph and its API generation](plugin-graph-source-and-api.md)\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+  "previous_document_sha256": "a0a80cdcbf82ffc4eaf42479c8b628cda6aa5acbb01b9a2ba20aab59b9d6079c"
+}

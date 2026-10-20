@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "chunked-native-file-transfer",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/chunked-native-file-transfer.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/chunked-native-file-transfer.md",
+      "sha256": "78ae101c85858d2faa734bc9fbb0422032ff6902d3775ca0ebaf3f36fa5fcaa5",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/chunked-native-file-transfer.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/chunked-native-file-transfer.json",
+      "sha256": "d0b801841ee7b1a161935a2cfc53d90e8b2b1a6e572b81d733f643400b99aae2",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "chunked-native-file-transfer",
+    "evidence": [
+      {
+        "project": "gardendless",
+        "commit": "7c271d9054d0c3b3003f725b2df37fb370adaaa8",
+        "paths": [
+          "assets/game_bridge/gp_next_core.js",
+          "assets/game_bridge/transport.js",
+          "ohos/entry/src/main/ets/game/GpNextNativeCore.ets",
+          "ohos/entry/src/main/ets/game/GameBridge.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/Dey410/GardendlessLoader/commit/7c271d9054d0c3b3003f725b2df37fb370adaaa8",
+        "note": "Adds sequential 96KiB chunks, 512MiB total ceiling, token/index/path/total checks, staging rename, abort and destruction cleanup. Source does not check short write counts, deletes state before rename, and materializes the input array. These are limitations; stricter byte/integer validation, session binding, target serialization and durable staging recommendations are generalizations, not source-tested guarantees."
+      },
+      {
+        "project": "operit2",
+        "commit": "9e72874652b8ac62a47f03c6240898c538041e30",
+        "parent_commit": "ee800cfcad5558c01ca394534715aee953fbaeab",
+        "paths": [
+          "core/crates/node/runtime/src/SpacePersistenceSyncService.rs",
+          "core/crates/node/runtime/src/RuntimePeerService.rs",
+          "core/crates/node/peer-link/src/lib.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/9e72874652b8ac62a47f03c6240898c538041e30"
+      },
+      {
+        "project": "operit2",
+        "commit": "e7b2d75b6e0ff56c8172542ab8fb64e4489d5f7a",
+        "parent_commit": "446fd217aff940db3ade926f279819e9e1ddff35",
+        "paths": [
+          "core/crates/persistence/store/src/SyncOperationStore.rs",
+          "core/crates/runtime/application/src/core/application/OperitApplication.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/e7b2d75b6e0ff56c8172542ab8fb64e4489d5f7a"
+      }
+    ],
+    "source_context": "\n\n2026-10-08 incremental update: gardendless 95395bf24d38ec0907d596fcf9400e00fd1148ca; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "reference_checks": [
+      {
+        "url": "https://github.com/openharmony/docs/blob/master/en/application-dev/file-management/app-file-access.md",
+        "observation": "Official file-management examples support descriptor writes, returned lengths and offset handling. Recommendations add actual write-count handling rather than assume source implementation handles short writes."
+      }
+    ],
+    "updates": [
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "Shared peer synchronization adds count-plus-encoded-byte budgets, per-connection ceiling/envelope headroom, contiguous whole-operation slices and specific oversized-operation capacity error. Short pages no longer imply completion; explicit empty exchange and bounded pages-per-pass drive progress. Later store export applies byte budget after compaction before merge. Not an OH IPC limit or independent native transfer implementation; existing chunking lesson extended at protocol budget boundary. Source constants and one-first-record policy not generalized as universal safe limits.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter.",
+    "Extracted independent contract into record-protocol-byte-budgets"
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

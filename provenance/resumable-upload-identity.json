@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "resumable-upload-identity",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/resumable-file-download-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/resumable-file-download-contract.md",
+      "sha256": "07d7a61f87f842b918de364a8afdcb6e9b5134d4319b708da084951fbe2a64ca",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/resumable-file-download-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/resumable-file-download-contract.json",
+      "sha256": "6e2da346a805166186e2ddca766f0b31e23fc70e88033572bbd570446064db19",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

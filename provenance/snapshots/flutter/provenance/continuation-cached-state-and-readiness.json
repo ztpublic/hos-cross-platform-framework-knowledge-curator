@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "continuation-cached-state-and-readiness",
+  "evidence": [
+    {
+      "project": "picacomic",
+      "commit": "636cb28c225a1d0e5dd8911d40236ca5fad18687",
+      "paths": [
+        "lib/main.dart",
+        "lib/utils/ohos_continuation.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/636cb28c225a1d0e5dd8911d40236ca5fad18687"
+    },
+    {
+      "project": "picacomic",
+      "commit": "3d20e5b1a1743410b45f5f2cd66b0750e09b4d46",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/ets/plugins/continuation/ContinuationPlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/3d20e5b1a1743410b45f5f2cd66b0750e09b4d46"
+    },
+    {
+      "project": "venera",
+      "commit": "3b544fb9ec1e7558c8976f33d2273d7aa2465b9a",
+      "paths": [
+        "lib/foundation/continuation.dart",
+        "lib/foundation/comic_source/comic_source.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/3b544fb9ec1e7558c8976f33d2273d7aa2465b9a"
+    },
+    {
+      "project": "venera",
+      "commit": "bf0a5d7ea09a52cb5f353103dad3c95b2a454874",
+      "paths": [
+        "lib/foundation/continuation.dart",
+        "lib/pages/reader/reader.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AzadKuu/venera-ohos/commit/bf0a5d7ea09a52cb5f353103dad3c95b2a454874"
+    }
+  ],
+  "source_context": "# Cache continuation state and restore it after application readiness\n\n## Platform difference\n\nOH continuation callbacks and incoming state operate on the native lifecycle, which may precede application services and routing readiness.\n\n## Implementation\n\nPica Comic removes premature startup route injection and changes onContinue from an async implementation to a synchronous callback using cached reader state. Venera waits for comic-source initialization before restoration, limits continuation to an active reader, updates mission state and clears stale cached state when the reader closes.\n\n## Applicability\n\nTransfer a serializable application snapshot with an explicit active/valid state. These projects integrate native continuation; availability still depends on the target product, API and devices.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not reconstruct required state through late asynchronous calls inside a callback expecting an immediate result. Inactive/stale payloads must be rejected. A channel and manifest are not proof of successful cross-device transfer.\n\n## Verification\n\nTest active and inactive readers, cold receiver startup, delayed content-source setup, invalid/missing source definitions, cancellation and state changes during a transfer.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Pica Comic OH — 636cb28c22](https://github.com/nimmi114514/PicaComic_ohos/commit/636cb28c225a1d0e5dd8911d40236ca5fad18687) (diff): `lib/main.dart`, `lib/utils/ohos_continuation.dart`. Source license recorded by the study: MIT.\n- [Pica Comic OH — 3d20e5b1a1](https://github.com/nimmi114514/PicaComic_ohos/commit/3d20e5b1a1743410b45f5f2cd66b0750e09b4d46) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/ets/plugins/continuation/ContinuationPlugin.ets`. Source license recorded by the study: MIT.\n- [Venera OH (AzadKuu port) — 3b544fb9ec](https://github.com/AzadKuu/venera-ohos/commit/3b544fb9ec1e7558c8976f33d2273d7aa2465b9a) (diff): `lib/foundation/continuation.dart`, `lib/foundation/comic_source/comic_source.dart`. Source license recorded by the study: GPL-3.0.\n- [Venera OH (AzadKuu port) — bf0a5d7ea0](https://github.com/AzadKuu/venera-ohos/commit/bf0a5d7ea09a52cb5f353103dad3c95b2a454874) (diff): `lib/foundation/continuation.dart`, `lib/pages/reader/reader.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Buffer incoming Wants until the Dart consumer is ready](incoming-wants-before-dart-ready.md)\n- [Feed native Form cards through persisted Flutter snapshots](native-form-snapshot-bridge.md)\n\n## Study provenance\n\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [Venera OH (AzadKuu port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/venera.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+  "previous_document_sha256": "6e407a92f736d4faa9aeed7bdb70004d1753af727fca9b1b3aef01e6de39b1d7"
+}

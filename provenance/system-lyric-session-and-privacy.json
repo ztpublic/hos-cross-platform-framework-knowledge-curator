@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "system-lyric-session-and-privacy",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/system-lyric-session-and-privacy.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/system-lyric-session-and-privacy.md",
+      "sha256": "a8a37cfb5482c5ac24a03c0e0848a6079ddf2a2fb4c068693aab9b05fa53c21b",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/system-lyric-session-and-privacy.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/system-lyric-session-and-privacy.json",
+      "sha256": "d5e2da4a5495874d334d915a79927e0fc6cf98e915051b2e18d08b1e9f2fc942",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "system-lyric-session-and-privacy",
+    "evidence": [
+      {
+        "project": "kikoflu",
+        "commit": "dbf5603772ac166b6d3d77326152e19b75242cf9",
+        "paths": [
+          "lib/src/providers/ohos_system_lyric_provider.dart",
+          "lib/src/services/ohos_system_lyric_service.dart",
+          "lib/main.dart",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/dbf5603772ac166b6d3d77326152e19b75242cf9"
+      }
+    ],
+    "source_context": "# Invalidate native lyric sessions and clear OS-facing metadata deliberately\n\n## Platform difference\n\nNative media/lyric surfaces can outlive a Flutter page or hold stale content after the application's track/session changes.\n\n## Implementation\n\nKikoFlu mounts a lyric synchronizer at application scope, queries capabilities and serializes/coalesces writes over its OH lyric channel. A native-session token/epoch invalidates cached writes. Track changes or missing tracks clear previous content; privacy mode hides the native surface before sending empty metadata to reduce transient exposure.\n\n## Applicability\n\nThe native implementation is expected in KikoFlu's pinned audio_service fork. This application checkout establishes the caller protocol and privacy ordering, not independently verified system lyric rendering.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nDo not treat hiding a Flutter widget as clearing system metadata. A stale queued update must not repopulate a new/private session. Capabilities and native visibility callbacks are part of the state model.\n\n## Verification\n\nTest track switches during queued writes, native session replacement, privacy toggles, process restart and plugin errors while inspecting the actual system surface.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [KikoFlu OH — dbf5603772](https://github.com/natsuz0ra/KikoFlu_ohos/commit/dbf5603772ac166b6d3d77326152e19b75242cf9) (diff): `lib/src/providers/ohos_system_lyric_provider.dart`, `lib/src/services/ohos_system_lyric_service.dart`, `lib/main.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+    "previous_document_sha256": "fa7941b5ad7d5605c89b408810a2a075b6ff18382b528de1488c7320f8377f06"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

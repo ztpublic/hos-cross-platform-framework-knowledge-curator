@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "arkui-density-and-inset-layout",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/viewport-scale-and-layout-lifetime.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/viewport-scale-and-layout-lifetime.md",
+      "sha256": "b7b7eb3a512c055ba13960c61262b2b38b83b103a0c44a98ae50844d2adb13b6",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/viewport-scale-and-layout-lifetime.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/viewport-scale-and-layout-lifetime.json",
+      "sha256": "b9a242e6a162131ef632f88b8a44286aa104a89b6861780dd58fcf3fc7294b4c",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

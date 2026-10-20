@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "native-linker-toolchain-workarounds",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-linker-toolchain-workarounds.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-linker-toolchain-workarounds.md",
+      "sha256": "112ccd58b6e954a27f3c82639566e8a59a7c7831d38bd9f28076ff96f9100b94",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-linker-toolchain-workarounds.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-linker-toolchain-workarounds.json",
+      "sha256": "fd868b8a8441d00d8d76566bfe65335a15342f1cee10f0eed55331644a4f7318",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "native-linker-toolchain-workarounds",
+    "evidence": [
+      {
+        "project": "mr",
+        "commit": "81105048ff6cfc472005b1cf13bfd885b45bba82",
+        "paths": [
+          "quickjs/ohos/CMakeLists.txt"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/DandanLLab/mr/commit/81105048ff6cfc472005b1cf13bfd885b45bba82"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "181bf77691df7925b2b07cc09dc25f20fc08cd08",
+        "paths": [
+          "ohos/entry/src/main/cpp/CMakeLists.txt",
+          "cpp_native/CMakeLists.txt",
+          "lib/plugins/js_runtime_ohos.dart",
+          "lib/cpp_native/native_library.dart",
+          "lib/src/rust/rust_external_library_io.dart",
+          "rust/src/api/torrent.rs",
+          "packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets",
+          "lib/danmaku_next/next2_platform_support.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08"
+      }
+    ],
+    "source_context": "# Scope native linker workarounds to the failing OH toolchain\n\n## Platform difference\n\nNative compiler/linker features that work on another target may interact differently with the selected OH SDK runtime objects and nested toolchain invocation.\n\n## Implementation\n\nMR changes --icf=safe to --icf=none after a reported crtn.o/SHT_LLVM_ADDRSIG incompatibility, while retaining other optimizations. NipaPlay skips a particular IPO/LTO probe in its OH CMake route because its nested toolchain invocation was reported broken.\n\n## Applicability\n\nThese are scoped build workarounds at the referenced revisions; they are not evidence that OH forbids ICF, LTO or native optimization generally.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nCopying flags without matching the diagnostic may hide another failure or change performance/size. A probe failure and failure of the final library link are different observations.\n\n## Verification\n\nReproduce the exact failing build command/toolchain, apply only the targeted workaround, inspect artifact compatibility and rerun functional/performance checks after SDK upgrades.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [MR — 81105048ff](https://github.com/DandanLLab/mr/commit/81105048ff6cfc472005b1cf13bfd885b45bba82) (diff): `quickjs/ohos/CMakeLists.txt`. Source license recorded by the study: MIT.\n- [NipaPlay Reload — 181bf77691](https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08) (diff): `ohos/entry/src/main/cpp/CMakeLists.txt`, `cpp_native/CMakeLists.txt`, `lib/plugins/js_runtime_ohos.dart`, `lib/cpp_native/native_library.dart`, `lib/src/rust/rust_external_library_io.dart`, `rust/src/api/torrent.rs`, `packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets`, `lib/danmaku_next/next2_platform_support.dart`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+    "previous_document_sha256": "bf844df91098bf25be692fc0e67b333bff0d57fde678f94b1ea1cf4764d97ad8"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

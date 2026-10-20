@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "native-web-login-cookie-completion",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-web-login-cookie-completion.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-web-login-cookie-completion.md",
+      "sha256": "9f81f5a1230427238cc535d3b5b0fdc70a6491f8a57f09bdc78e63e4dc861a2d",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-web-login-cookie-completion.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-web-login-cookie-completion.json",
+      "sha256": "10a30a21ff8aa4458b305494b73fa6d622c5a600ec5f103db9ca4c1685a2b482",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "native-web-login-cookie-completion",
+    "evidence": [
+      {
+        "project": "nomark",
+        "commit": "f7f107acfeae1a1c0da9c382d68690f1299d4211",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/pages/LoginWebPage.ets",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/f7f107acfeae1a1c0da9c382d68690f1299d4211"
+      },
+      {
+        "project": "nomark",
+        "commit": "8eecb8e390f54e7bafc8ae0db8a4348de4d2d445",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/pages/LoginWebPage.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445"
+      }
+    ],
+    "source_context": "# Complete native Web login only after the expected cookies exist\n\n## Platform difference\n\nWhen OH uses a native Web login page, Dart must receive a deliberate completion/cancellation result rather than assuming page load implies authenticated state.\n\n## Implementation\n\nNomark routes OH login into an ArkTS Web page and returns cookies through an emitter event, with an empty result on exit. Its follow-up adds configured cookie URLs/key allowlists, required success keys and polling for asynchronously written cookies, and clears the timer on completion. Non-OH paths keep their existing haptics/WebView implementation.\n\n## Applicability\n\nThe success contract must match the authentication service's actual cookies and redirects. Preserve a single owner for the request and prevent callbacks after page disposal.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nPolling does not prove service compatibility or session validity. Nomark stores session/cookie keys in native preferences; do not describe that as an audited encrypted keystore.\n\n## Verification\n\nTest redirects, delayed cookies, user back/cancel, missing success keys, repeat logins and timer/listener cleanup; independently verify any credential-storage requirement.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [无印字节 / Bytedance Nomark — f7f107acfe](https://github.com/chawu691/bytedance-nomark/commit/f7f107acfeae1a1c0da9c382d68690f1299d4211) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [无印字节 / Bytedance Nomark — 8eecb8e390](https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`. Source license recorded by the study: GPL-3.0.\n\n## Study provenance\n\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.",
+    "previous_document_sha256": "10446ad2ed33f93096654f87f7e0fa04cb330dd747eff36aa7bd7a2d7b174096"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

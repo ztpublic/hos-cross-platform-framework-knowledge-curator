@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "flutter-knowledge-import",
+      "kind": "knowledge-collection",
+      "url": "git@gitcode.com:gcw_3e5ciMtE/flutter-oh-knowledge.git",
+      "local_path": "/Users/mac/projects/flutter-experiment/flutter-oh-knowledge",
+      "observed_commit": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "analyzed_commit": null,
+      "import_scope": "Documents enumerated by maintenance/import-map.csv; not a fresh source-project review.",
+      "working_tree_status": " M INDEX.md\n M PROJECTS.md\n M knowledge/chunked-native-file-transfer.md\n M knowledge/database-backend-and-data-contract.md\n M knowledge/hdr-output-surface-and-capability.md\n M knowledge/resumable-file-download-contract.md\n M knowledge/sandbox-paths-and-app-identity.md\n M knowledge/video-surface-backend-contract.md\n M knowledge/viewport-scale-and-layout-lifetime.md\n M knowledge/window-mode-and-fullscreen-state.md\n M projects.json\n M provenance/chunked-native-file-transfer.json\n M provenance/database-backend-and-data-contract.json\n M provenance/hdr-output-surface-and-capability.json\n M provenance/resumable-file-download-contract.json\n M provenance/sandbox-paths-and-app-identity.json\n M provenance/video-surface-backend-contract.json\n M provenance/viewport-scale-and-layout-lifetime.json\n M provenance/window-mode-and-fullscreen-state.json\n?? UPDATE-2026-10-19.md\n?? knowledge/native-event-loop-handle-teardown.md\n?? knowledge/offline-data-rescue-startup-isolation.md\n?? provenance/native-event-loop-handle-teardown.json\n?? provenance/offline-data-rescue-startup-isolation.json\n?? runs/2026-10-19-update-awesome-blbl.json\n?? runs/2026-10-19-update-beecount-oh.json\n?? runs/2026-10-19-update-bugaoshan.json\n?? runs/2026-10-19-update-bujuan.json\n?? runs/2026-10-19-update-connssh.json\n?? runs/2026-10-19-update-dmzj-aloereed.json\n?? runs/2026-10-19-update-dmzj-handwer.json\n?? runs/2026-10-19-update-dorm-expense.json\n?? runs/2026-10-19-update-draftmark.json\n?? runs/2026-10-19-update-enjoy-plus.json\n?? runs/2026-10-19-update-etohos.json\n?? runs/2026-10-19-update-flclash-shenyingjun.json\n?? runs/2026-10-19-update-flclash.json\n?? runs/2026-10-19-update-fusheng-music.json\n?? runs/2026-10-19-update-gardendless.json\n?? runs/2026-10-19-update-happy-coder.json\n?? runs/2026-10-19-update-hlbmerge.json\n?? runs/2026-10-19-update-inknote.json\n?? runs/2026-10-19-update-jellyfin-music.json\n?? runs/2026-10-19-update-jimu-comate.json\n?? runs/2026-10-19-update-kazumi.json\n?? runs/2026-10-19-update-kelivo.json\n?? runs/2026-10-19-update-kikoflu.json\n?? runs/2026-10-19-update-lichess-oh.json\n?? runs/2026-10-19-update-localsend.json\n?? runs/2026-10-19-update-mi-workbench.json\n?? runs/2026-10-19-update-minecraft-box.json\n?? runs/2026-10-19-update-moviepilot.json\n?? runs/2026-10-19-update-mr.json\n?? runs/2026-10-19-update-neon.json\n?? runs/2026-10-19-update-nexora.json\n?? runs/2026-10-19-update-nipaplay.json\n?? runs/2026-10-19-update-nju-timetable.json\n?? runs/2026-10-19-update-nomark.json\n?? runs/2026-10-19-update-operit2.json\n?? runs/2026-10-19-update-oronbox.json\n?? runs/2026-10-19-update-petnote.json\n?? runs/2026-10-19-update-picacomic.json\n?? runs/2026-10-19-update-pilinara.json\n?? runs/2026-10-19-update-piliplus.json\n?? runs/2026-10-19-update-piliplusx.json\n?? runs/2026-10-19-update-pindou.json\n?? runs/2026-10-19-update-pixez.json\n?? runs/2026-10-19-update-qingnote.json\n?? runs/2026-10-19-update-registered-projects.json\n?? runs/2026-10-19-update-shuqi.json\n?? runs/2026-10-19-update-simple-live-yabi.json\n?? runs/2026-10-19-update-simple-live.json\n?? runs/2026-10-19-update-simple-shop.json\n?? runs/2026-10-19-update-snake.json\n?? runs/2026-10-19-update-ssemarket.json\n?? runs/2026-10-19-update-ssh-codex.json\n?? runs/2026-10-19-update-todo-harmony.json\n?? runs/2026-10-19-update-toki.json\n?? runs/2026-10-19-update-venera-harmony.json\n?? runs/2026-10-19-update-venera.json\n?? runs/2026-10-19-update-wild.json\n?? runs/2026-10-19-update-wildfire-chat.json\n?? runs/2026-10-19-update-xingmu.json\n?? runs/2026-10-19-update-yun-reader.json\n?? runs/2026-10-19-update-zhiji.json\n",
+      "frameworks": [
+        "flutter"
+      ],
+      "snapshot_identity": "Per-file SHA-256; HEAD alone does not describe imported working content.",
+      "imported_registry": {
+        "snapshot": "provenance/snapshots/flutter/projects.json",
+        "sha256": "81377d040be2cd067c60103420d95d7e1b587ca25a2186c8d796e39cba120a34",
+        "status": "source snapshot only; not independently reviewed here"
+      },
+      "collection_review": {
+        "status": "complete-for-mapped-documents",
+        "map": "maintenance/import-map.csv",
+        "identity": "per-file hashes, including local modifications",
+        "reviewed_on": "2026-10-20"
+      }
+    },
+    {
+      "id": "qt-knowledge-import",
+      "kind": "knowledge-collection",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_qt-skills.git",
+      "local_path": "/Users/mac/projects/qt-experiments/ohos_qt-skills",
+      "observed_commit": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+      "analyzed_commit": null,
+      "import_scope": "Documents enumerated by maintenance/import-map.csv; not a fresh source-project review.",
+      "working_tree_status": "",
+      "frameworks": [
+        "qt"
+      ],
+      "snapshot_identity": "Per-file SHA-256; HEAD alone does not describe imported working content.",
+      "collection_review": {
+        "status": "complete-for-mapped-documents",
+        "map": "maintenance/import-map.csv",
+        "identity": "per-file hashes, including local modifications",
+        "reviewed_on": "2026-10-20"
+      }
+    }
+  ]
+}

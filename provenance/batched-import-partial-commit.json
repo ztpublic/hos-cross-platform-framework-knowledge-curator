@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "batched-import-partial-commit",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/database-backend-and-data-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/database-backend-and-data-contract.md",
+      "sha256": "664a523cd465783c0931fd6a3c8017c53a1e66d94222646373ced9269042da44",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/database-backend-and-data-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/database-backend-and-data-contract.json",
+      "sha256": "84f810418df6c35518b5a4d79e605e45bd08478e8af0a2627395928d1d9e53f1",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

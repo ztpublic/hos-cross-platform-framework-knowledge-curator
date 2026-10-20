@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "id": "build-toolchain-and-evidence-tiers",
+  "evidence": [
+    {
+      "project": "ssh-codex",
+      "commit": "1913f8fdd28f72e80b478717f3ba0ccdc7e52292",
+      "paths": [
+        ".github/workflows/build.yml",
+        "tool/prepare_ohos.sh"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/1913f8fdd28f72e80b478717f3ba0ccdc7e52292"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "5c36f9c66d09b46fe5347b37c6663e0b8b7a8ef6",
+      "paths": [
+        ".github/workflows/release-ohos.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/5c36f9c66d09b46fe5347b37c6663e0b8b7a8ef6"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "bc270ee21c1547e79381459bea1e7258cde8e13a",
+      "paths": [
+        ".github/workflows/build-ohos.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/bc270ee21c1547e79381459bea1e7258cde8e13a"
+    },
+    {
+      "project": "mr",
+      "commit": "b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e",
+      "paths": [
+        ".github/workflows/build.yml",
+        "quickjs/ohos/CMakeLists.txt",
+        "lib/services/native/quickjs_runtime.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e"
+    },
+    {
+      "project": "mr",
+      "commit": "e84b55c0acd2c768013474358aa9910cefe35217",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/e84b55c0acd2c768013474358aa9910cefe35217"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "742d4b015db1cd59475c4665b003d084163e39bb",
+      "paths": [
+        ".github/workflows/flutter_analyze.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/lxdklp/MCB_OHOS/commit/742d4b015db1cd59475c4665b003d084163e39bb"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "4a309d5e1c94c827f2ff0d49be629e4e41e28fff",
+      "paths": [
+        ".github/workflows/flutter_analyze.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/lxdklp/MCB_OHOS/commit/4a309d5e1c94c827f2ff0d49be629e4e41e28fff"
+    },
+    {
+      "project": "zhiji",
+      "commit": "9173c74c57fadb591b66c4f4cf21aa955300076e",
+      "paths": [
+        "ohos/hvigorconfig.ts",
+        "ohos/oh-package.json5",
+        "ohos/entry/oh-package.json5",
+        "ohos/AppScope/app.json5",
+        "ohos/build-profile.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9173c74c57fadb591b66c4f4cf21aa955300076e"
+    },
+    {
+      "project": "zhiji",
+      "commit": "b15ab887b6c7147511125ec9d6a817749a3073b4",
+      "paths": [
+        "README.md"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/commit/b15ab887b6c7147511125ec9d6a817749a3073b4"
+    },
+    {
+      "project": "zhiji",
+      "commit": "9d32c0d028539a14f5a3c30619da9abcec008abd",
+      "paths": [
+        "LICENSE"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9d32c0d028539a14f5a3c30619da9abcec008abd"
+    },
+    {
+      "project": "toki",
+      "commit": "e7e536e7eaa9e72809541c015b1c6c370aaf7433",
+      "paths": [
+        "ohos/AppScope/app.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/commit/e7e536e7eaa9e72809541c015b1c6c370aaf7433",
+      "note": "Changes bundleName to formal application identity."
+    },
+    {
+      "project": "toki",
+      "commit": "822e431c5d1d1226258c8afd66fee860632c8e8b",
+      "paths": [
+        "README.md",
+        "ohos/build-profile.json5",
+        "PATCHES.md"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/822e431c5d1d1226258c8afd66fee860632c8e8b/README.md",
+      "note": "README records signing-profile mismatch; build config uses local signing material; patch documentation references external customized engine/HAR."
+    },
+    {
+      "project": "dorm-expense",
+      "commit": "8d10fded34b44b46b4bfed9791dfc5f09e91615f",
+      "paths": [
+        "scripts/build_hap.sh",
+        "lib/main.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Defines supplied to build and configured startup; PATH command presence and HAP invocation not build/installation/provider verification.",
+      "url": "https://github.com/Huanghuizhi2007/dorm-expense-manager/commit/8d10fded34b44b46b4bfed9791dfc5f09e91615f"
+    },
+    {
+      "project": "fusheng-music",
+      "commit": "3f5be6c98de8a7e6245c285832de1d527c9adca9",
+      "paths": [
+        ".github/workflows/build-ohos.yml"
+      ],
+      "kind": "diff",
+      "note": "Actual revert removes CI flutter create step; tracked host replaces generation workflow. CI source and continue-on-error analysis are not successful build/runtime evidence.",
+      "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/commit/3f5be6c98de8a7e6245c285832de1d527c9adca9"
+    },
+    {
+      "project": "operit2",
+      "commit": "16b688169aa4645b283859b7ab762c836f78bcef",
+      "paths": [
+        "tools/build_scripts/build_flutter_android.py"
+      ],
+      "note": "Parent diff writes Android flutter.sdk to the explicitly selected official SDK, avoiding shared OH FVM contamination. Current build differs; reviewed as historical corrective mechanism, no executed pipeline.",
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/16b688169aa4645b283859b7ab762c836f78bcef"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "bc15e2cc7bb1f94537f8b1af480652fba3172c68",
+      "paths": [
+        "ohos/tool/ohos_toolchain.py",
+        "ohos/flutter/toolchain.lock.json"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/bc15e2cc7bb1f94537f8b1af480652fba3172c68",
+      "note": "Replaces root-isolate-token resolver patch with read-only revision/hash validation of normal/product platform kernels. Custom verifier/lock later removed in b2f7bade; lesson is cache-consistency diagnosis, not mandatory use of the retired tool."
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "90706b12432711cc48f75ed70864708f15adaf35",
+      "paths": [
+        ".github/workflows/build-ohos.yml",
+        "ohos/hvigorfile.ts",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/90706b12432711cc48f75ed70864708f15adaf35",
+      "note": "Current source uses regular Flutter/Hvigor integration and unsigned release build; no build executed by curator."
+    },
+    {
+      "project": "gardendless",
+      "commit": "f321e2827e06e320a1495d2889477a0b7b6a3773",
+      "paths": [
+        ".github/workflows/build-mobile.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Dey410/GardendlessLoader/commit/f321e2827e06e320a1495d2889477a0b7b6a3773",
+      "note": "Pins OH framework checkout to detached verified revision rather than moving branch only."
+    }
+  ],
+  "source_context": "# Pin the OH build inputs and distinguish analysis, packaging and execution\n\n## Platform difference\n\nA passing analyzer or an uploaded HAP artifact does not establish a signed, installable, feature-tested OH application.\n\n## Implementation\n\nSSH Codex pins an OH toolchain, generates its host and publishes an explicitly unsigned arm64 HAP. KikoFlu checks exact CLI/SDK API-release metadata. Bugaoshan uses marker directories for analysis but keeps a separate self-hosted real-SDK HAP job. MR allows unsigned artifact upload even when a preceding build result fails. Minecraft Box deletes its experimental analysis workflow; Zhiji explicitly reports build-only status separately from execution.\n\n## Applicability\n\nPreserve the distinction between workflow source, an observed CI run, native packaging, signing, installation and functional execution. The backfill contains source evidence only.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nEmpty SDK markers do not provide a native compiler. A deleted workflow no longer verifies anything. Commit subjects claiming builds completed can describe unrelated diffs; check actual workflow artifacts and results.\n\n## Verification\n\nReproduce with pinned tools, inspect native build exit status and HAP identity/signature, then install and exercise features on target hardware. Record each completed tier separately.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Android SSH Codex — 1913f8fdd2](https://github.com/wkj2333666/Android-SSH-Codex/commit/1913f8fdd28f72e80b478717f3ba0ccdc7e52292) (diff): `.github/workflows/build.yml`, `tool/prepare_ohos.sh`. Source license recorded by the study: MIT.\n- [KikoFlu OH — 5c36f9c66d](https://github.com/natsuz0ra/KikoFlu_ohos/commit/5c36f9c66d09b46fe5347b37c6663e0b8b7a8ef6) (diff): `.github/workflows/release-ohos.yml`. Source license recorded by the study: GPL-3.0.\n- [不高山上 / Bugaoshan HarmonyOS — bc270ee21c](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/bc270ee21c1547e79381459bea1e7258cde8e13a) (diff): `.github/workflows/build-ohos.yml`. Source license recorded by the study: AGPL-3.0.\n- [MR — b7f23ee84b](https://github.com/DandanLLab/mr/commit/b7f23ee84b6cc8ebcb49910ead2be82a9ca0491e) (diff): `.github/workflows/build.yml`, `quickjs/ohos/CMakeLists.txt`, `lib/services/native/quickjs_runtime.dart`. Source license recorded by the study: MIT.\n- [MR — e84b55c0ac](https://github.com/DandanLLab/mr/commit/e84b55c0acd2c768013474358aa9910cefe35217) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [Minecraft Box OH — 742d4b015d](https://github.com/lxdklp/MCB_OHOS/commit/742d4b015db1cd59475c4665b003d084163e39bb) (diff): `.github/workflows/flutter_analyze.yml`. Source license recorded by the study: GPL-3.0.\n- [Minecraft Box OH — 4a309d5e1c](https://github.com/lxdklp/MCB_OHOS/commit/4a309d5e1c94c827f2ff0d49be629e4e41e28fff) (diff): `.github/workflows/flutter_analyze.yml`. Source license recorded by the study: GPL-3.0.\n- [知己油耗 / Zhiji Fuel Consumption — 9173c74c57](https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9173c74c57fadb591b66c4f4cf21aa955300076e) (diff): `ohos/hvigorconfig.ts`, `ohos/oh-package.json5`, `ohos/entry/oh-package.json5`, `ohos/AppScope/app.json5`, `ohos/build-profile.json5`. Source license recorded by the study: Apache-2.0.\n- [知己油耗 / Zhiji Fuel Consumption — b15ab887b6](https://github.com/LianbinZhou/zhiji_oil_consumption/commit/b15ab887b6c7147511125ec9d6a817749a3073b4) (diff): `README.md`. Source license recorded by the study: Apache-2.0.\n- [知己油耗 / Zhiji Fuel Consumption — 9d32c0d028](https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9d32c0d028539a14f5a3c30619da9abcec008abd) (diff): `LICENSE`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n- [知己油耗 / Zhiji Fuel Consumption: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/zhiji.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nToki OH discovery: Signing mismatch is a maintainer-reported blocker in README, not a reproduced local error. Application identity change verified in diff, but profile contents were not opened. External embedding patch sources/HARs are not included in this app repository; debug/release autofill patches and render-scale effects described in PATCHES.md cannot be verified from packaged output. No build, release signing or installation attempted. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only.\n\n2026-10-06 Dorm Expense main 8d10fded34b44b46b4bfed9791dfc5f09e91615f. No app-level license identified, no source code copied. Source/diff only; no Supabase calls, dependency resolution, HAP signing/install/PC device or browser tests. Build wrapper explicitly materializes temporary pubspec_overrides and restores absent state with trap; PATH flutter only existence checked, no toolchain-version proof. Generated plugin registrant referenced but not tracked, expected generated dependency must exist at build time.\nDefines supplied to build and configured startup; PATH command presence and HAP invocation not build/installation/provider verification.\n\nFu Sheng Music OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nActual revert removes CI flutter create step; tracked host replaces generation workflow. CI source and continue-on-error analysis are not successful build/runtime evidence.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nParent diff writes Android flutter.sdk to the explicitly selected official SDK, avoiding shared OH FVM contamination. Current build differs; reviewed as historical corrective mechanism, no executed pipeline.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. gardendless 95395bf24d38ec0907d596fcf9400e00fd1148ca; registry license GPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "6fc75f86bdb13a869de73b3ff4e024aa99a2490ebb5a2a323576deac748a4b16"
+}

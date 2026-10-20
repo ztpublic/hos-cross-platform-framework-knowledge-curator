@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "id": "plugin-graph-source-and-api",
+  "evidence": [
+    {
+      "project": "piliplus",
+      "commit": "9d557a4f3bdae6c188cef0abcfa3d8ee6ff5e13f",
+      "paths": [
+        "pubspec.yaml",
+        "lib/plugin/pl_player/utils/fullscreen.dart",
+        "lib/pages/save_panel/view.dart",
+        "lib/utils/image_utils.dart",
+        "lib/utils/utils.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/9d557a4f3bdae6c188cef0abcfa3d8ee6ff5e13f"
+    },
+    {
+      "project": "kazumi",
+      "commit": "c73c35b7f8f2d16c0b26f9952c72c03137eb50e4",
+      "paths": [
+        "pubspec.yaml",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/oh-package.json5",
+        "ohos/entry/src/main/module.json5",
+        "lib/request/interceptor.dart",
+        "lib/pages/player/player_item.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/c73c35b7f8f2d16c0b26f9952c72c03137eb50e4"
+    },
+    {
+      "project": "connssh",
+      "commit": "4ab72713091f5e5f270b53cafeaeb998852934a9",
+      "paths": [
+        "lib/sftp_page.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/4ab72713091f5e5f270b53cafeaeb998852934a9"
+    },
+    {
+      "project": "connssh",
+      "commit": "95174411f2b1daa888ac499d4717efc22075c00b",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/95174411f2b1daa888ac499d4717efc22075c00b"
+    },
+    {
+      "project": "enjoy-plus",
+      "commit": "4de1f4a50dd3b09d6fdca6ac46d803dadc262a5f",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://gitee.com/Megasu/enjoy_plus_ohos/commit/4de1f4a50dd3b09d6fdca6ac46d803dadc262a5f"
+    },
+    {
+      "project": "enjoy-plus",
+      "commit": "bff1a2b30c5b8564c5d8d6bc9b7cb6c702d60581",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://gitee.com/Megasu/enjoy_plus_ohos/commit/bff1a2b30c5b8564c5d8d6bc9b7cb6c702d60581"
+    },
+    {
+      "project": "enjoy-plus",
+      "commit": "84b20942e6bc5f7e0e0907217d68876eef46f693",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://gitee.com/Megasu/enjoy_plus_ohos/commit/84b20942e6bc5f7e0e0907217d68876eef46f693"
+    },
+    {
+      "project": "xingmu",
+      "commit": "544bc0b1124a267cec1937d14b9710e42fe9e417",
+      "paths": [
+        "pubspec.yaml",
+        "lib/features/video_lab/presentation/mp4_player_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/w6521939-ops/xingmu-flutter/commit/544bc0b1124a267cec1937d14b9710e42fe9e417"
+    },
+    {
+      "project": "mr",
+      "commit": "cae41962c2084b8bb8b4cfa2628cfc7800721da0",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/cae41962c2084b8bb8b4cfa2628cfc7800721da0"
+    },
+    {
+      "project": "mr",
+      "commit": "346916b69ed5378d64c063136ab9f13c22bf57e2",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/346916b69ed5378d64c063136ab9f13c22bf57e2"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "f8ea4e7b1403824955b117fd1ae61da356cbc99c",
+      "paths": [
+        "lib/src/platform/runtime_platform.dart",
+        "lib/main.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/f8ea4e7b1403824955b117fd1ae61da356cbc99c"
+    },
+    {
+      "project": "minecraft-box",
+      "commit": "1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f",
+      "paths": [
+        "lib/function/network.dart",
+        "pubspec.yaml",
+        "lib/server.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/lxdklp/MCB_OHOS/commit/1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f"
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "2ebb6357dd33512abbdd4ff50107bf52955a21e5",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/2ebb6357dd33512abbdd4ff50107bf52955a21e5",
+      "note": "GitCode monorepo package overrides introduced."
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock",
+        "lib/pages/import_page.dart",
+        "lib/pages/export_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "note": "Selects OH sqflite, file_selector and notification forks while adjusting caller APIs."
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "e48924ea546683c7e4d9cefdb9ab9dcb764dd6f8",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/e48924ea546683c7e4d9cefdb9ab9dcb764dd6f8",
+      "note": "Changes file_picker_ohos ref br_v10.3.8_ohos to app-facing file_picker ref br_v8.0.7_ohos; dependency version alignment observed, not resolved/tested."
+    },
+    {
+      "project": "bujuan",
+      "commit": "acec09e0d8cf72ae6fc9ea4443e96cdb850aea86",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AnmSleepalone/bujuan-harmony/commit/acec09e0d8cf72ae6fc9ea4443e96cdb850aea86",
+      "note": "OH audio_service/audioplayers/audio_session graph and path-provider sources selected, largely unpinned moving refs. No resolution performed."
+    },
+    {
+      "project": "jellyfin-music",
+      "commit": "7cad145082b7601d695572f0f9b7945daa6e80f6",
+      "paths": [
+        "pubspec.yaml",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "snapshot",
+      "url": "https://gitee.com/fly2464874018/flutter_music/commit/7cad145082b7601d695572f0f9b7945daa6e80f6",
+      "note": "OH host and selected just_audio_ohos/audio_session/sqflite dependencies exist, graph is incomplete due missing local audio backend; moving Git refs and transitive path_provider imports not resolved."
+    },
+    {
+      "project": "piliplusx",
+      "commit": "b54720409a5d4ec926beb0935477043e27c61d8e",
+      "paths": [
+        "pubspec.yaml",
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "note": "Custom volume bridge replaced by Git OH plugin/API; parent diff caller+dependency inspected.",
+      "url": "https://github.com/cnctem/PiliPlusX/commit/b54720409a5d4ec926beb0935477043e27c61d8e"
+    },
+    {
+      "project": "dmzj-aloereed",
+      "commit": "1622ef8929d93d837d514db221a35784441e9dc9",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "OH source packages selected, path_provider nested override, unpinned refs and partially stock system plugins; exact API graph must be resolved.",
+      "url": "https://github.com/Aloereed/flutter_dmzj_ohos/commit/1622ef8929d93d837d514db221a35784441e9dc9"
+    },
+    {
+      "project": "dmzj-handwer",
+      "commit": "87c15872996da2eefc6de0f5d2121e42845b1f67",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "note": "Source replacements include platform backend explicit path_provider_ohos plus app-facing package, caller downgrade considerations.",
+      "url": "https://gitee.com/handwer/flutter_dmzj_ohos/commit/87c15872996da2eefc6de0f5d2121e42845b1f67"
+    },
+    {
+      "project": "dorm-expense",
+      "commit": "9d293984ea1877c72ceb269e70cd4240daa40569",
+      "paths": [
+        "scripts/ohos/pubspec_overrides.yaml"
+      ],
+      "kind": "diff",
+      "note": "Target source overrides outside default filename require actual activation.",
+      "url": "https://github.com/Huanghuizhi2007/dorm-expense-manager/commit/9d293984ea1877c72ceb269e70cd4240daa40569"
+    },
+    {
+      "project": "dorm-expense",
+      "commit": "8d10fded34b44b46b4bfed9791dfc5f09e91615f",
+      "paths": [
+        "scripts/build_hap.sh",
+        "scripts/ohos/pubspec_overrides.yaml",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Wrapper copies override into active root filename then trap cleans; refuses overwrite existing root override.",
+      "url": "https://github.com/Huanghuizhi2007/dorm-expense-manager/commit/8d10fded34b44b46b4bfed9791dfc5f09e91615f"
+    },
+    {
+      "project": "mi-workbench",
+      "commit": "9b6478eab96dfd78c3b577608f473eca46342874",
+      "paths": [
+        "pubspec.yaml",
+        "packages/flutter_reactive_ble_stub/pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Git OH source overrides plus local BLE stub; stock compilation surface includes Platform.isOhos and OH notification types.",
+      "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/commit/9b6478eab96dfd78c3b577608f473eca46342874"
+    },
+    {
+      "project": "fusheng-music",
+      "commit": "623442052d81a97a2b6bff4cfddec0d600a62c62",
+      "paths": [
+        "pubspec.yaml",
+        "lib/services/user_api/user_api_runtime.dart"
+      ],
+      "kind": "diff",
+      "note": "Parent diff changes both declared JS package and import; adding an OH backend alone did not change caller imports. Selected API callers inspected, engine native binaries not audited.",
+      "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/commit/623442052d81a97a2b6bff4cfddec0d600a62c62"
+    },
+    {
+      "project": "fusheng-music",
+      "commit": "dfc5248cc32ac2f4597e03a76f9f61becd1d8ecf",
+      "paths": [
+        "pubspec.yaml",
+        "lib/screens/home/tab_mylist.dart"
+      ],
+      "kind": "diff",
+      "note": "Picker package/import paired replacement. Selected-file import still discards null paths and assumes returned path is readable.",
+      "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/commit/dfc5248cc32ac2f4597e03a76f9f61becd1d8ecf"
+    },
+    {
+      "project": "ssemarket",
+      "commit": "31c773ee7d4ef36ef3af4797258e42f9dd1cb3db",
+      "paths": [
+        "pubspec_overrides.yaml",
+        ".github/actions/setup-flutter/action.yml",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Conventional override file applies whenever present. Stock CI removes it before pub get. Comment alone is not target selection; preserve local overrides and use isolated/reversible setup.",
+      "url": "https://github.com/howtomakeaname/SSEMarket-X/commit/31c773ee7d4ef36ef3af4797258e42f9dd1cb3db"
+    },
+    {
+      "project": "jimu-comate",
+      "commit": "5d687359b56de3fc9b4f03107b91f80661a92d15",
+      "paths": [
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "note": "Active separate OH file-picker dependency, other OH overrides commented out, stock sqflite and webview retained. This is selected source evidence rather than full plugin graph/build qualification.",
+      "url": "https://github.com/aizhaiyu/jimu-comate/commit/5d687359b56de3fc9b4f03107b91f80661a92d15"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "4f368a2a0f61d2624352200918fe1db89d39e1a2",
+      "paths": [
+        "pubspec.yaml",
+        "ohos/tool/build_ohos.py"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/4f368a2a0f61d2624352200918fe1db89d39e1a2",
+      "note": "Moves OH federated platform packages into root declaration; custom tooling later retired."
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "b43fa08d34b336bd90db5378f7c3dbe4f1ae9d1b",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/b43fa08d34b336bd90db5378f7c3dbe4f1ae9d1b",
+      "note": "Changes platform packages to ordinary Git dependencies; source lock pins resolution, external packages/registration not built or audited."
+    },
+    {
+      "project": "nipaplay",
+      "commit": "a64be1fdefea833dfffd5464672eed1e9495e198",
+      "paths": [
+        "lib/player_abstraction/mdk_player_adapter_io.dart",
+        "packages/fvp-0.37.3/lib/src/video_player_mdk.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/a64be1fdefea833dfffd5464672eed1e9495e198",
+      "note": "Resolved OH fork requires stream status and asynchronous dispose contracts."
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock",
+        "pigeons/api.dart",
+        "lib/generate/pigeon/flutter_native_api.g.dart",
+        "ohos/entry/src/main/ets/pigeon/FlutterNativeApi.g.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/230e975e99b0c26da07d9b7dc519c04c31a2cad1",
+      "parent_commit": "47416f092fca969a19c92e316958ae716b253dcf"
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "a9e18b27fb11c546b6d3698e2213d6cd0dbd460f",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock",
+        "lib/ui/screen/main/home/view/desktop_home.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/a9e18b27fb11c546b6d3698e2213d6cd0dbd460f"
+    },
+    {
+      "project": "piliplus",
+      "commit": "0e17bf8fe04f37cd98eb3ae34fed883164e9c927",
+      "parent_commit": "6f89478d2768df1e778d1192870f82e6ccf02d66",
+      "paths": [
+        "pubspec.yaml",
+        "pubspec.lock",
+        "lib/plugin/pl_player/controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/0e17bf8fe04f37cd98eb3ae34fed883164e9c927"
+    },
+    {
+      "project": "operit2",
+      "commit": "f76b6803a45199189bf8fb6659e26e6fb81ad917",
+      "parent_commit": "c882145f58e9a33a53aeb3fd58497a7e2f315b46",
+      "paths": [
+        "apps/flutter/app/pubspec.yaml",
+        "apps/flutter/app/pubspec.lock"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/f76b6803a45199189bf8fb6659e26e6fb81ad917"
+    }
+  ],
+  "source_context": "# Resolve the whole OH plugin graph and its API generation\n\n## Platform difference\n\nAn unchanged package name does not imply an unchanged Dart API or an OH implementation in the resolved dependency graph.\n\n## Implementation\n\nPiliPlus switches share/orientation forks and adjusts callers to older APIs. Kazumi changes connectivity result handling, playback completion and PopScope alongside plugin sources. ConnSSH changes picker APIs and later repairs code_text_field selection. Enjoy Plus moves toast/preferences into overrides; its unpinned declarations rely on lockfile revisions. Xingmu pins a video-player fork behind a controller abstraction. MR fixes a missing monorepo subdirectory in CI-generated overrides. KikoFlu explicitly pins its native-capable forks.\n\n## Applicability\n\nResolution must consider app-facing packages, backend packages, Dart constraints and native dependencies. These examples include both older and newer API generations; no single version set fits all projects.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nAn override can solve source selection without ensuring semantic compatibility. A dependency local to another developer is not reproducible. A Git URL without a ref can change on a new resolution. Do not confuse package repository name with pubspec name.\n\n## Verification\n\nInspect resolved package sources and lockfile commits, trace the imported API into its backend, and test the exact methods the application uses on OH and other supported targets.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PiliPlus OH — 9d557a4f3b](https://github.com/dev4harmony/PiliPlus/commit/9d557a4f3bdae6c188cef0abcfa3d8ee6ff5e13f) (diff): `pubspec.yaml`, `lib/plugin/pl_player/utils/fullscreen.dart`, `lib/pages/save_panel/view.dart`, `lib/utils/image_utils.dart`, `lib/utils/utils.dart`. Source license recorded by the study: GPL-3.0.\n- [Kazumi OH — c73c35b7f8](https://github.com/ErBWs/Kazumi/commit/c73c35b7f8f2d16c0b26f9952c72c03137eb50e4) (diff): `pubspec.yaml`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/oh-package.json5`, `ohos/entry/src/main/module.json5`, `lib/request/interceptor.dart`, `lib/pages/player/player_item.dart`. Source license recorded by the study: GPL-3.0.\n- [ConnSSH OH — 4ab7271309](https://github.com/RWPteam/ConnSSH/commit/4ab72713091f5e5f270b53cafeaeb998852934a9) (diff): `lib/sftp_page.dart`, `pubspec.yaml`. Source license recorded by the study: BSD-3-Clause.\n- [ConnSSH OH — 95174411f2](https://github.com/RWPteam/ConnSSH/commit/95174411f2b1daa888ac499d4717efc22075c00b) (diff): `pubspec.yaml`. Source license recorded by the study: BSD-3-Clause.\n- [享+社区 / Enjoy Plus — 4de1f4a50d](https://gitee.com/Megasu/enjoy_plus_ohos/commit/4de1f4a50dd3b09d6fdca6ac46d803dadc262a5f) (diff): `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [享+社区 / Enjoy Plus — bff1a2b30c](https://gitee.com/Megasu/enjoy_plus_ohos/commit/bff1a2b30c5b8564c5d8d6bc9b7cb6c702d60581) (diff): `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [享+社区 / Enjoy Plus — 84b20942e6](https://gitee.com/Megasu/enjoy_plus_ohos/commit/84b20942e6bc5f7e0e0907217d68876eef46f693) (diff): `pubspec.yaml`. Source license recorded by the study: Apache-2.0.\n- [星幕 AI 漫剧工作室 — 544bc0b112](https://github.com/w6521939-ops/xingmu-flutter/commit/544bc0b1124a267cec1937d14b9710e42fe9e417) (diff): `pubspec.yaml`, `lib/features/video_lab/presentation/mp4_player_page.dart`. Source license recorded by the study: MIT.\n- [MR — cae41962c2](https://github.com/DandanLLab/mr/commit/cae41962c2084b8bb8b4cfa2628cfc7800721da0) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [MR — 346916b69e](https://github.com/DandanLLab/mr/commit/346916b69ed5378d64c063136ab9f13c22bf57e2) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [KikoFlu OH — f8ea4e7b14](https://github.com/natsuz0ra/KikoFlu_ohos/commit/f8ea4e7b1403824955b117fd1ae61da356cbc99c) (diff): `lib/src/platform/runtime_platform.dart`, `lib/main.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [Minecraft Box OH — 1a99d6ad8c](https://github.com/lxdklp/MCB_OHOS/commit/1a99d6ad8cb3c6250aaaf6c4bf6b29b13f86165f) (diff): `lib/function/network.dart`, `pubspec.yaml`, `lib/server.dart`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Separate Flutter/Dart version gaps from OH platform restrictions](sdk-version-versus-os-limitation.md)\n- [Record missing native dependency sources instead of treating wrappers as complete ports](native-dependency-completeness.md)\n- [Trace both backend selection and native handler registration](native-registration-and-handler-coverage.md)\n\n## Study provenance\n\n- [ConnSSH OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/connssh.md).\n- [享+社区 / Enjoy Plus: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/enjoy-plus.md).\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [星幕 AI 漫剧工作室: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/xingmu.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nBeeCount OH discovery: Pinned lock records: shared flutter_packages 589191e64525ec8f17a55dff5d2929a8699e8b7b, file_selector 1.0.0; sqflite 2.2.8+3 (see database provenance). Several manifest refs default to HEAD; lockfile records resolved commits, but native plugin code was not fetched or executed. Package resolution is not backend method coverage. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\n2026-10-06 HLBmerge source study: pinned master 47416f092fca969a19c92e316958ae716b253dcf. Selected OH introduction and later FFmpeg import/dependency change compared against parents; later relevant file workflow snapshots reviewed. LICENSE.txt is Apache-2.0 but README separately forbids commercial use: recorded conflict, no resolution inferred and no implementation copied. ffmpeg_xmake is a tracked tree at HEAD despite .gitmodules stanza; no submodule initialization. Native build input/license audit is incomplete. No dependency resolution, native build, HAP packaging/signing/install or device/file-handoff validation performed.\nChanges file_picker_ohos ref br_v10.3.8_ohos to app-facing file_picker ref br_v8.0.7_ohos; dependency version alignment observed, not resolved/tested.\n\n2026-10-06 Bujuan Harmony study, feature/new-ui at 74be86f5688164334e348520ff1c6f113f9a0807. Independent 2697a/bujuan fork. No application-level license text identified; README MIT badge is a claim, vendored pinput license only covers that component. No application code copied. Non-shallow clone, 33 reachable commits; selected adaptation and follow-up diffs inspected. Native playback is supplied by external moving Git dependencies, not audited here. Source/diff evidence only, no dependency resolution, build, signing/install, playback/card/background/device testing.\nOH audio_service/audioplayers/audio_session graph and path-provider sources selected, largely unpinned moving refs. No resolution performed.\n\n2026-10-06 JellyMusic Gitee master 7cad145082b7601d695572f0f9b7945daa6e80f6: 17 reachable commits, imported root has OH host. No app-level license tracked or identified; no source code copied. Initial filtered clone checkout failed on Gitee TLS; retry without proxy variables restored this newly-created research checkout and it is clean. No upstream setup/submodule scripts run. Source/diff only; missing local audio implementation prevents complete integration audit; no build/dependency resolution/device/remote Jellyfin or AI service testing.\nOH host and selected just_audio_ohos/audio_session/sqflite dependencies exist, graph is incomplete due missing local audio backend; moving Git refs and transitive path_provider imports not resolved.\n\n2026-10-06 PiliPlusX ohos 9c35fb5a3ae414e86bb00ca142bb668a00f4772b. Root GPL-3.0 inspected, no implementation copied. Source/diff only; no builds, HCPP hit testing, native window transitions, gallery or volume/device tests. Miniwindow scale fixed0.75 scoped layout heuristic, unawaited channel setters and stale lastWindow possible; no native transition settlement proof. Gallery return true defers permission to plugin, not permission granted. Moving ref ohos plugin is not reproducible pin.\nCustom volume bridge replaced by Git OH plugin/API; parent diff caller+dependency inspected.\n\n2026-10-06 DMZJ Aloereed main 8189765deb194e025ec91123215d872fe7ed9729. GPL-3.0 LICENSE conflicts with README noncommercial wording; no app code copied and no unrestricted licensing assertion. Source/diff only, no dependency resolution/build/device/content-provider tests. Native host + moving Git replacements are actual implementation evidence, not complete package/backend compatibility proof. Shared upstream app and identical host template not independent corroboration.\nOH source packages selected, path_provider nested override, unpinned refs and partially stock system plugins; exact API graph must be resolved.\n\n2026-10-06 DMZJ handwer my_ohos b52da988a5f3fc1e1c624ba7cd1b8ca9fe5b8184. GPL-3.0 LICENSE conflicts with noncommercial README; no implementation copied. Source/diff only, no build/plugin resolution/device/UI tests. Removing textScaler argument/system UI calls and pinning older widgets is source/toolchain workaround, not permanent OS limitation or feature-equivalent replacement. App domain/template overlaps Aloereed, not independent support proof.\nSource replacements include platform backend explicit path_provider_ohos plus app-facing package, caller downgrade considerations.\n\n2026-10-06 Dorm Expense main 8d10fded34b44b46b4bfed9791dfc5f09e91615f. No app-level license identified, no source code copied. Source/diff only; no Supabase calls, dependency resolution, HAP signing/install/PC device or browser tests. Build wrapper explicitly materializes temporary pubspec_overrides and restores absent state with trap; PATH flutter only existence checked, no toolchain-version proof. Generated plugin registrant referenced but not tracked, expected generated dependency must exist at build time.\nTarget source overrides outside default filename require actual activation.\nWrapper copies override into active root filename then trap cleans; refuses overwrite existing root override.\n\n2026-10-06 Mi Workbench main 9b6478eab96dfd78c3b577608f473eca46342874. No app-level LICENSE identified, no implementation copied. Source only, no compiler/build/dependency resolution/BLE/database/notification/device tests. Host registrant is intentionally empty .ts at ets/plugin while EntryAbility import ../ets/plugin resolves ets/ets/plugin, absent tracked path. Source may require regeneration, so host presence does not establish compile or backend registration. BLE stub plus OH UI disable is app policy, not universal OS inability; global override affects graph beyond runtime OS guard.\nGit OH source overrides plus local BLE stub; stock compilation surface includes Platform.isOhos and OH notification types.\n\nFu Sheng Music OH: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nParent diff changes both declared JS package and import; adding an OH backend alone did not change caller imports. Selected API callers inspected, engine native binaries not audited.\nPicker package/import paired replacement. Selected-file import still discards null paths and assumes returned path is readable.\n\nSSEMarket-X: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nConventional override file applies whenever present. Stock CI removes it before pub get. Comment alone is not target selection; preserve local overrides and use isolated/reversible setup.\n\nJimu Comate: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nActive separate OH file-picker dependency, other OH overrides commented out, stock sqflite and webview retained. This is selected source evidence rather than full plugin graph/build qualification.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. nipaplay adc9bb55852b89b5f89fd4e5228ceb6713406c18; registry license MIT. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "4f3066e73d2915dd0f8390d655018dc29fc51e31c7a4cd225be8f13bb85d411e",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "HLBmerge deletes vendored Pigeon 26.1.5, selects CPF-Flutter/flutter_packages packages/pigeon br_pigeon-v26.3.4_ohos and lock revision 8551426b0ef6f9f118f9393edb06b84d2721d4cf, and updates Dart/Kotlin/ArkTS generated output. Lockfile effective Dart lower bound changes 3.9.2 to 3.10.0 while root remains ^3.9.2; no single-package causality inferred. Next commit changes desktop_drop from molihuan Git fork 0.7.0 to hosted 0.8.4; dependency source change does not prove OH drag/drop metadata or runtime support. No generator/plugin remote fetch, dependency resolution or codegen execution.",
+      "licenses": {
+        "hlbmerge": "Apache-2.0 in LICENSE.txt; conflicting README noncommercial restriction"
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    },
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "HDR app moves all media-kit components to compatible fork/ref; custom constructor fields are not assumed upstream support. Operit2 f76b6803a4 narrows image >=4.10.0 <4.11.0 because selected image/archive/pdf/Dart combination lacks decodeLazy; observed dependency workaround, not OS restriction. Upstream package releases/API version claims in commit comments were not independently fetched; consumer keeps general API-versus-resolution mechanism and avoids global version recommendation.",
+      "licenses": {
+        "piliplus": "GPL-3.0",
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    }
+  ]
+}

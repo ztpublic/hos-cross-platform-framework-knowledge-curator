@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "id": "incoming-wants-before-dart-ready",
+  "evidence": [
+    {
+      "project": "localsend",
+      "commit": "6d336c627b0ff3efddd36aac352b0f9c8f0dcc36",
+      "paths": [
+        "app/lib/config/init.dart",
+        "app/lib/pages/home_page.dart",
+        "app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets",
+        "app/ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/6d336c627b0ff3efddd36aac352b0f9c8f0dcc36"
+    },
+    {
+      "project": "localsend",
+      "commit": "2a408c220cd1ec2101fed357867ab83dbac9efbc",
+      "paths": [
+        "app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets",
+        "app/lib/config/init.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/2a408c220cd1ec2101fed357867ab83dbac9efbc"
+    },
+    {
+      "project": "picacomic",
+      "commit": "636cb28c225a1d0e5dd8911d40236ca5fad18687",
+      "paths": [
+        "lib/main.dart",
+        "lib/utils/ohos_continuation.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/636cb28c225a1d0e5dd8911d40236ca5fad18687"
+    },
+    {
+      "project": "picacomic",
+      "commit": "de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb",
+      "paths": [
+        "lib/utils/ohos_widget.dart",
+        "ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets",
+        "ohos/entry/src/main/ets/plugins/widget/WidgetBridge.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb"
+    },
+    {
+      "project": "lichess-oh",
+      "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+      "paths": [
+        "lib/src/utils/ohos_stubs.dart",
+        "lib/src/app_links_service.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "note": "Broadcast has no replay, getOhosInitialLink returns null; no initial-Want mailbox/readiness handshake; unconditional stream listener compensates for false build flag. Negative evidence for existing delivery solution.",
+      "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+    },
+    {
+      "project": "happy-coder",
+      "commit": "b89c764870fb6be5220fb8511422d71c880257bb",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/HappyLinkingPlugin.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/app/widgets/happy_link_gate.dart",
+        "lib/app/platform/happy_link_bridge.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Initial getWant cached; warm listener caches, destructive take after auth bootstrap/onResume. Single slot can overwrite multiple links; take before consumer mounted/validated can lose payload; no persistent acknowledgement. Existing mailbox guide covers scoped improvement.",
+      "url": "https://github.com/751848178/happy-coder-harmony/commit/b89c764870fb6be5220fb8511422d71c880257bb"
+    },
+    {
+      "project": "operit2",
+      "commit": "675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4",
+      "paths": [
+        "apps/flutter/app/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "apps/flutter/app/ohos/entry/src/main/ets/entryability/OperitRuntimeChannel.ets",
+        "apps/flutter/app/lib/core/notifications/NotificationActivationService.dart"
+      ],
+      "note": "Cold onCreate and warm onNewWant enqueue notification activation; Dart installs gateway before drain/ready. Static queue/readiness/active instance not reset by destroy; unawaited emission drains before acknowledgement. JSON.parse outside guarded handler can throw. Recommended recreation/error guarantees exceed current implementation.",
+      "kind": "snapshot",
+      "url": "https://github.com/AAswordman/Operit2/commit/675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4"
+    },
+    {
+      "project": "operit2",
+      "commit": "2a6e09448f27b7cacde6fbc240166003af2bf76b",
+      "paths": [
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/MainActivity.kt",
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/NotificationActivationCodec.kt"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/2a6e09448f27b7cacde6fbc240166003af2bf76b",
+      "parent_commit": "21f1b14b011e9b6b45e82e1a3d757593035b1d1a"
+    },
+    {
+      "project": "operit2",
+      "commit": "099f39cf67725a55c87f12a2e216a796633a01f6",
+      "paths": [
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/HostEventHandoff.kt",
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/HostEventScheduler.kt"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/099f39cf67725a55c87f12a2e216a796633a01f6",
+      "parent_commit": "24871a85cdbcba6e2ae2a64e4917a2077675c3e6"
+    },
+    {
+      "project": "operit2",
+      "commit": "2f1d2adcd28512ef610dfd56e8f11f03537550f5",
+      "paths": [
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/HostEventHandoff.kt",
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/HostEventScheduler.kt",
+        "apps/flutter/app/android/app/src/main/kotlin/app/operit/AndroidPlatformChannel.kt",
+        "docs/android-host-event-schedules.md"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/2f1d2adcd28512ef610dfd56e8f11f03537550f5",
+      "parent_commit": "f2f832de6aca4a8f8f854d710920ad01a80c61d2"
+    }
+  ],
+  "source_context": "# Buffer incoming Wants until the Dart consumer is ready\n\n## Platform difference\n\nNative launch events can arrive before the Flutter engine and Dart subscriptions are ready.\n\n## Implementation\n\nLocalSend uses warm-launch EventChannel delivery and a cold-launch URI mailbox consumed during preInit. A follow-up clears stale mailboxes, decodes filenames and moves copy work into initialization. Pica Comic similarly retains incoming widget/continuation actions until application handlers are ready rather than injecting a route too early.\n\n## Applicability\n\nApplies to share targets, native cards and other external entrypoints. Keep an explicit ownership/consumption rule for pending payloads.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nLocalSend still does not explicitly await its asynchronous shared-data request before engine startup in the inspected change, so the mailbox is not proof of a race-free implementation. Avoid duplicate delivery and stale replay after unrelated launches.\n\n## Verification\n\nTest cold process start, already-running app, delayed engine initialization, repeated Wants, malformed URIs and process death between persistence and consumption.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [AloeSend / LocalSend OH — 6d336c627b](https://github.com/Aloereed/localsend-ohos/commit/6d336c627b0ff3efddd36aac352b0f9c8f0dcc36) (diff): `app/lib/config/init.dart`, `app/lib/pages/home_page.dart`, `app/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets`, `app/ohos/entry/src/main/module.json5`. Source license recorded by the study: Apache-2.0.\n- [AloeSend / LocalSend OH — 2a408c220c](https://github.com/Aloereed/localsend-ohos/commit/2a408c220cd1ec2101fed357867ab83dbac9efbc) (diff): `app/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets`, `app/lib/config/init.dart`. Source license recorded by the study: Apache-2.0.\n- [Pica Comic OH — 636cb28c22](https://github.com/nimmi114514/PicaComic_ohos/commit/636cb28c225a1d0e5dd8911d40236ca5fad18687) (diff): `lib/main.dart`, `lib/utils/ohos_continuation.dart`. Source license recorded by the study: MIT.\n- [Pica Comic OH — de0d6973b7](https://github.com/nimmi114514/PicaComic_ohos/commit/de0d6973b7e2f2c194ef6ef75079a66a5a20bbdb) (diff): `lib/utils/ohos_widget.dart`, `ohos/entry/src/main/ets/entryformability/EntryFormAbility.ets`, `ohos/entry/src/main/ets/plugins/widget/WidgetBridge.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n\n## Study provenance\n\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nBroadcast has no replay, getOhosInitialLink returns null; no initial-Want mailbox/readiness handshake; unconditional stream listener compensates for false build flag. Negative evidence for existing delivery solution.\n\n2026-10-06 Happy Coder main b89c764870fb6be5220fb8511422d71c880257bb. No root app license identified, no implementation copied. Source/diff only, no builds, camera/Scan Kit/device/server/signing tests. Primary cross-check https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V14/scan-scanbarcode-V14 and Chinese default-scanning guide reviewed: product scanning UI, promise result, UI lifetime. Guide corrects source session/cancellation limitations rather than claiming they are implemented.\nInitial getWant cached; warm listener caches, destructive take after auth bootstrap/onResume. Single slot can overwrite multiple links; take before consumer mounted/validated can lose payload; no persistent acknowledgement. Existing mailbox guide covers scoped improvement.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nCold onCreate and warm onNewWant enqueue notification activation; Dart installs gateway before drain/ready. Static queue/readiness/active instance not reset by destroy; unawaited emission drains before acknowledgement. JSON.parse outside guarded handler can throw. Recommended recreation/error guarantees exceed current implementation.",
+  "previous_document_sha256": "6939630ab366b675b08ed7b89f6938cec1309ef470a3f6690dcf420d44fccad3",
+  "updates": [
+    {
+      "date": "2026-10-16",
+      "run": "2026-10-16-update-registered-projects.json",
+      "notes": "Android follow-ups isolate malformed notification activation from ordinary launch, validate schedule data, surface failures and retain a bounded diagnostic record when consumed fires fail at startCore, background submission or delivery. Later changes keep retention under schedule lock, log cap drops and separate retentionError from the original failure. Handoff submission is not delivery; retained failure is diagnostic, not durable automatic retry/replay. Extended existing lifecycle ingress lesson at protocol/ownership boundary. No new OH Want/scheduler backend or runtime behavior established; OH requires its own delivery and persistence acceptance tests.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/history review and local KB integrity; isolated local SQLite mechanism experiment only where recorded; no upstream build/tests or OH/device execution"
+    }
+  ]
+}

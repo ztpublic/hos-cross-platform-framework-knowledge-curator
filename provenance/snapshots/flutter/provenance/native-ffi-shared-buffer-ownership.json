@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "native-ffi-shared-buffer-ownership",
+  "source_context": "Native ABI version 2 introduces SharedBuffer Bytes plus sealed state and receipt; Dart ordinary bytes copy once into native allocation, existing spans retain domain/owner, native ffi_submit synchronously clones ownership before asynchronous dispatch. Dart NativeFinalizer/session finalizer, external typed-data view finalizers, Finalizable keep-alive wrappers and weak view cache coordinate lifetimes. DartPort sends native external data with independent receipt handles and releases peers on failed post. SharedBuffer uses unsafe trusted-pointer preconditions; consumer describes ownership architecture, not audited memory safety. No OH ABI compilation, forced-GC/retain-count test or copy/performance measurement. Shared-buffer compatibility with browser/process boundaries explicitly excluded.",
+  "evidence": [
+    {
+      "project": "operit2",
+      "commit": "c6dceacb6069c823c92749d71f47986c55f712d9",
+      "parent_commit": "d9e345f49ec2d9822bc525abc9ab4bc631cc5845",
+      "paths": [
+        "apps/flutter/app/lib/core/bridge/FfiCoreTransport.dart",
+        "apps/flutter/native/operit-flutter-bridge/src/FfiTransport.rs",
+        "hosts/common/operit-host-native-common/src/SharedBuffer.rs",
+        "hosts/common/operit-host-native-common/src/DartPort.rs"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/c6dceacb6069c823c92749d71f47986c55f712d9"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-10-15",
+      "run": "2026-10-15-update-registered-projects.json",
+      "notes": "Native ABI version 2 introduces SharedBuffer Bytes plus sealed state and receipt; Dart ordinary bytes copy once into native allocation, existing spans retain domain/owner, native ffi_submit synchronously clones ownership before asynchronous dispatch. Dart NativeFinalizer/session finalizer, external typed-data view finalizers, Finalizable keep-alive wrappers and weak view cache coordinate lifetimes. DartPort sends native external data with independent receipt handles and releases peers on failed post. SharedBuffer uses unsafe trusted-pointer preconditions; consumer describes ownership architecture, not audited memory safety. No OH ABI compilation, forced-GC/retain-count test or copy/performance measurement. Shared-buffer compatibility with browser/process boundaries explicitly excluded.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+    }
+  ]
+}

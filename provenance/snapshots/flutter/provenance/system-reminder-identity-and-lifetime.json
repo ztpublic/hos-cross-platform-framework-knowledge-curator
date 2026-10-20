@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "system-reminder-identity-and-lifetime",
+  "evidence": [
+    {
+      "project": "toki",
+      "commit": "173696e4d5f26dbeb8f1570e09d58f33e562ed01",
+      "paths": [
+        "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+        "lib/core/reminder/reminder_service.dart",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/173696e4d5f26dbeb8f1570e09d58f33e562ed01/plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+      "note": "Root already contains ReminderAgent timer requests, durable dartId-to-reminderId preferences and separate process-owned countdown notification interval; no pre-import migration history."
+    },
+    {
+      "project": "toki",
+      "commit": "822e431c5d1d1226258c8afd66fee860632c8e8b",
+      "paths": [
+        "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+        "ohos/entry/src/main/module.json5",
+        "plugins/xiangjugong_ohos/ohos/src/main/module.json5"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/822e431c5d1d1226258c8afd66fee860632c8e8b/plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+      "note": "Reviewed timer request and cancellation/permissions/persistence routes at HEAD; no PUBLISH_AGENT_REMINDER declaration found in tracked host or HAR manifests."
+    }
+  ],
+  "source_context": "Toki OH discovery: System reminder API and notification enablement requirements checked against primary OpenHarmony docs: https://github.com/openharmony/docs/blob/master/en/application-dev/reference/apis-backgroundtasks-kit/js-apis-reminderAgentManager.md. Source cancels old ID before publication, ignores overdue requests while returning true, catches map read/write failures, and returns permission-request success even when denied. Native returned IDs are mapped; process setInterval does not establish process-exit survival. Shared Dart documentation mentions Android foreground-service semantics and extra schedule arguments that this OH implementation does not use. Consumer truthful expired/denied outcomes, serialized replace, compensation and restart reconciliation are safeguards beyond the observed source. Acceptance criteria were not executed. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only."
+}

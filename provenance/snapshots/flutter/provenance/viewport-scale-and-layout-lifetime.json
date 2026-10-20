@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "id": "viewport-scale-and-layout-lifetime",
+  "evidence": [
+    {
+      "project": "picacomic",
+      "commit": "8937bf2ed2bf2759e81d20dba51ed64b82f9f832",
+      "paths": [
+        "tool/patch_ohos_flutter_har.dart",
+        "tool/build_ohos_hap.sh",
+        "lib/utils/status_bar_tap.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/8937bf2ed2bf2759e81d20dba51ed64b82f9f832"
+    },
+    {
+      "project": "picacomic",
+      "commit": "767259e818f58bf2cac43cf00bea8d0c5826d2d7",
+      "paths": [
+        "lib/components/comics_list.dart",
+        "lib/foundation/state_controller.dart",
+        "lib/foundation/app_page_route.dart",
+        "lib/components/navigation_bar.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/767259e818f58bf2cac43cf00bea8d0c5826d2d7"
+    },
+    {
+      "project": "piliplus",
+      "commit": "7b518a5a475bf9d12fea8b9cebbb48b0c5da2b0c",
+      "paths": [
+        "lib/common/widgets/dialog/export_import.dart",
+        "lib/utils/image_utils.dart",
+        "lib/pages/login/geetest/geetest_webview_dialog.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/7b518a5a475bf9d12fea8b9cebbb48b0c5da2b0c"
+    },
+    {
+      "project": "nju-timetable",
+      "commit": "402d60cb5132936dadce0302c77b9bd5a22b3424",
+      "paths": [
+        "lib/Pages/AddCourse/AddCourseView.dart",
+        "lib/Utils/WidgetHelper.dart",
+        "ohos/entry/src/main/ets/pages/Index.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/402d60cb5132936dadce0302c77b9bd5a22b3424"
+    },
+    {
+      "project": "piliplusx",
+      "commit": "390893538e7ddbd29375a86110483c0e8b7e8f36",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "lib/common/widgets/scale_app.dart",
+        "lib/main.dart"
+      ],
+      "kind": "diff",
+      "note": "Consolidates scaling bindings/current scale read into single source. Removed separate binding; not proof of native hit-testing alignment.",
+      "url": "https://github.com/cnctem/PiliPlusX/commit/390893538e7ddbd29375a86110483c0e8b7e8f36"
+    },
+    {
+      "project": "operit2",
+      "commit": "e2da95e09c29175aed3bf519c784a62cebad907b",
+      "paths": [
+        "apps/flutter/thirdparty/webview_all/lib/src/webview_widget.dart",
+        "apps/flutter/thirdparty/webview_all_ohos/lib/src/ohos_webview_controller.dart",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/PageZoomScript.ts",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/WebViewPlatformView.ets",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/WebViewZoom.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/e2da95e09c29175aed3bf519c784a62cebad907b"
+    },
+    {
+      "project": "piliplus",
+      "commit": "437e005dac2a6fe4c5d2ac3fee43fd131bd8cd64",
+      "parent_commit": "237b5f38463a2d23faf1349bb37e8cc2425312da",
+      "paths": [
+        "ohos/entry/src/main/ets/pages/Index.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/437e005dac2a6fe4c5d2ac3fee43fd131bd8cd64"
+    },
+    {
+      "project": "piliplus",
+      "commit": "666d999d85c24ec80fc999fabcff045867790d0e",
+      "parent_commit": "35bc4ef5c09cd1f9b2476ae41d2a715126ae2146",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "lib/main.dart",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/666d999d85c24ec80fc999fabcff045867790d0e"
+    },
+    {
+      "project": "pilinara",
+      "commit": "79199b5f78ab76ba24388d113c8f5ab42eec5a04",
+      "parent_commit": "8f2ce1a37925f144e8d53b939073464f3a5dc57c",
+      "paths": [
+        "ohos/entry/src/main/ets/pages/Index.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/79199b5f78ab76ba24388d113c8f5ab42eec5a04"
+    },
+    {
+      "project": "pilinara",
+      "commit": "055e055a88bf5321d56c1e3d1f1403952ed0de85",
+      "parent_commit": "28a462b9fb16a1b45e044a87f5a20653c6f99901",
+      "paths": [
+        "lib/harmony_adapt/harmony_channel.dart",
+        "ohos/entry/src/main/ets/plugins/HarmonyChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliNara/commit/055e055a88bf5321d56c1e3d1f1403952ed0de85"
+    }
+  ],
+  "source_context": "# Keep viewport scaling and Flutter layout state coherent across native resizing\n\n## Platform difference\n\nNative viewport changes and embedded platform views can expose scaling, input and widget-lifetime assumptions in shared Flutter layouts.\n\n## Implementation\n\nPica Comic patches specific embedding sources to stabilize viewport DPI and separately preserves controllers/scroll positions across responsive reparenting. PiliPlus temporarily sets custom app scale to 1.0 for an OH CAPTCHA platform view and restores it on disposal. NJU opts out of bottom-inset Scaffold resizing on one form and ensures the native FlutterPage fills its container.\n\n## Applicability\n\nThese are different layers of one coordinate/lifetime contract: embedding metrics, platform-view coordinates and Dart state. Apply each fix only to its documented symptom/version.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA source-text HAR patch can drift or affect generated dependencies unexpectedly. A page-specific keyboard fix does not prove that OH keyboards or Flutter resizing are generally broken. Do not discard controllers merely because an adaptive layout changes parents.\n\n## Verification\n\nTest multiple densities, window changes, keyboard opening, hit testing, scroll position retention and restoration of any temporary scale changes.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Pica Comic OH — 8937bf2ed2](https://github.com/nimmi114514/PicaComic_ohos/commit/8937bf2ed2bf2759e81d20dba51ed64b82f9f832) (diff): `tool/patch_ohos_flutter_har.dart`, `tool/build_ohos_hap.sh`, `lib/utils/status_bar_tap.dart`. Source license recorded by the study: MIT.\n- [Pica Comic OH — 767259e818](https://github.com/nimmi114514/PicaComic_ohos/commit/767259e818f58bf2cac43cf00bea8d0c5826d2d7) (diff): `lib/components/comics_list.dart`, `lib/foundation/state_controller.dart`, `lib/foundation/app_page_route.dart`, `lib/components/navigation_bar.dart`. Source license recorded by the study: MIT.\n- [PiliPlus OH — 7b518a5a47](https://github.com/dev4harmony/PiliPlus/commit/7b518a5a475bf9d12fea8b9cebbb48b0c5da2b0c) (diff): `lib/common/widgets/dialog/export_import.dart`, `lib/utils/image_utils.dart`, `lib/pages/login/geetest/geetest_webview_dialog.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [南哪课表 / NJU Timetable — 402d60cb51](https://github.com/WheretoSleepinNJU/NJU-Class-Shedule-Flutter/commit/402d60cb5132936dadce0302c77b9bd5a22b3424) (diff): `lib/Pages/AddCourse/AddCourseView.dart`, `lib/Utils/WidgetHelper.dart`, `ohos/entry/src/main/ets/pages/Index.ets`. Source license recorded by the study: Apache-2.0.\n\n## Study provenance\n\n- [南哪课表 / NJU Timetable: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nju-timetable.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 PiliPlusX ohos 9c35fb5a3ae414e86bb00ca142bb668a00f4772b. Root GPL-3.0 inspected, no implementation copied. Source/diff only; no builds, HCPP hit testing, native window transitions, gallery or volume/device tests. Miniwindow scale fixed0.75 scoped layout heuristic, unawaited channel setters and stale lastWindow possible; no native transition settlement proof. Gallery return true defers permission to plugin, not permission granted. Moving ref ohos plugin is not reproducible pin.\nConsolidates scaling bindings/current scale read into single source. Removed separate binding; not proof of native hit-testing alignment.",
+  "previous_document_sha256": "bd212426e3472a5df74406676ff8904342523907f0dc30ff329a4c41991426a1",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "OH adapter sends page factor only, retaining application zoom in Flutter composition. CSS fallback saves inline zoom/priority/computed base, restores at one and retains main-frame policy separately from user scripts. Shared overlay scale cancellation is conditional on requiresNativeApplicationZoom and must not be generalized to OH. JavaScript-disabled, input coordinates and CSS/native layout equivalence untested.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    },
+    {
+      "date": "2026-10-19",
+      "run": "2026-10-19-update-registered-projects.json",
+      "notes": "Native Index replaces global px2vp with instance UIContext.px2vp and adds densityUpdate listener, re-reads physical window rect and unregisters exact callback. Later safe-area bridge merges TYPE_SYSTEM/TYPE_CUTOUT edges on every device instead of prior phone-only cutout policy; computes leading/trailing distances, converts once in Dart and merges by max. Consumer requires valid query/error fallback, documented window-mode capability and avoids treating theoretical PC-fix subject as runtime result. Official OpenHarmony UIContext/density observer/window docs checked. Related fork density patch identical; safe-area patch differs in surrounding app code, selected native mechanism compared rather than called identical. No display-size/multidisplay/input/device test.",
+      "licenses": {
+        "piliplus": "GPL-3.0",
+        "pilinara": "GPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+    }
+  ],
+  "reference_docs": [
+    {
+      "url": "https://github.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkui/arkts-apis-uicontext-uicontext.md",
+      "checked_at": "2026-10-19"
+    },
+    {
+      "url": "https://github.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkui/arkts-apis-uicontext-uiobserver.md",
+      "checked_at": "2026-10-19"
+    },
+    {
+      "url": "https://github.com/openharmony/docs/blob/master/en/application-dev/reference/apis-arkui/arkts-apis-window-Window.md",
+      "checked_at": "2026-10-19"
+    }
+  ]
+}

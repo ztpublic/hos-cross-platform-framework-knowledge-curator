@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "offline-data-rescue-startup-isolation",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/offline-data-rescue-startup-isolation.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/offline-data-rescue-startup-isolation.md",
+      "sha256": "4078b178112e6a5254d66224c829f951ba2491c4ae4d5d7c17c1ff022da2aa41",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/offline-data-rescue-startup-isolation.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/offline-data-rescue-startup-isolation.json",
+      "sha256": "1046a85ae8f83a3e85e6a1dc0b6f3bfa446d88bd08e08a6c7f25c82fc8181ee3",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "offline-data-rescue-startup-isolation",
+    "source_context": "Independent OH DataRescueAbility registers only picker and offline channel, queries launchMode before normal Dart service/logger/preference initialization. Native N-API worker calls maintenance Rust ABI without Core handle; structured response/free-string boundary inspected. Shared normal-runtime lease versus exclusive rescue lease prevents cooperating writers, pending durable publication blocks ordinary startup. Source implements authenticated/encrypted archive manifest, bounded reads, exact membership/hash verification, staged publication, retained roots and explicit journal resume. Multiple renames are not a whole-root atomic transaction. Separate ability does not itself establish separate process; normal holders must release leases. Source guards and crypto declarations are not an audit of race freedom, cryptography, power-loss durability or recovery completeness. Final OH factory and ability source rechecked. Later root validation allows platform symlinked ancestors while checking selected root/descendants. No OH recovery build or execution; app GPL-family/AGPL registry license retained; no app implementation copied.",
+    "evidence": [
+      {
+        "project": "operit2",
+        "commit": "e07e3f2da3f731066ce88c234ca00a0540b8f073",
+        "parent_commit": "ddfe39a24835b8bfe5efaffacdccedd338a4ffa7",
+        "paths": [
+          "apps/flutter/app/lib/main.dart",
+          "apps/flutter/app/lib/ui/rescue/DataRescueApp.dart",
+          "apps/flutter/app/ohos/entry/src/main/ets/entryability/DataRescueAbility.ets",
+          "apps/flutter/app/ohos/entry/src/main/module.json5",
+          "apps/flutter/app/ohos/entry/src/main/cpp/operit_runtime_ohos.cpp",
+          "apps/flutter/native/operit-flutter-bridge/src/NativeDataRescue.rs",
+          "apps/flutter/native/operit-flutter-bridge/src/platform_runtime/ohos.rs",
+          "core/crates/persistence/rescue/src/lib.rs",
+          "hosts/common/operit-host-data-rescue/src/lib.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/e07e3f2da3f731066ce88c234ca00a0540b8f073"
+      },
+      {
+        "project": "operit2",
+        "commit": "135c9a9457aaf98debd1e03660fd897441a899e4",
+        "parent_commit": "1c82bd81d3922e9b0b0ad02174148bca95eeeedc",
+        "paths": [
+          "hosts/common/operit-host-data-rescue/src/lib.rs",
+          "hosts/common/operit-host-data-rescue/src/tests.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/135c9a9457aaf98debd1e03660fd897441a899e4"
+      }
+    ],
+    "updates": [
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "Independent OH DataRescueAbility registers only picker and offline channel, queries launchMode before normal Dart service/logger/preference initialization. Native N-API worker calls maintenance Rust ABI without Core handle; structured response/free-string boundary inspected. Shared normal-runtime lease versus exclusive rescue lease prevents cooperating writers, pending durable publication blocks ordinary startup. Source implements authenticated/encrypted archive manifest, bounded reads, exact membership/hash verification, staged publication, retained roots and explicit journal resume. Multiple renames are not a whole-root atomic transaction. Separate ability does not itself establish separate process; normal holders must release leases. Source guards and crypto declarations are not an audit of race freedom, cryptography, power-loss durability or recovery completeness. Final OH factory and ability source rechecked. Later root validation allows platform symlinked ancestors while checking selected root/descendants. No OH recovery build or execution; app GPL-family/AGPL registry license retained; no app implementation copied.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

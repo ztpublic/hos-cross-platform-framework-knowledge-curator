@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "alternate-app-icon-contract",
+  "evidence": [
+    {
+      "project": "bugaoshan",
+      "commit": "4df1dea589d29bb5fb9002af2549d97e1ca5b2c7",
+      "paths": [
+        "ohos/AppScope/app.json5",
+        "ohos/entry/src/main/ets/platform/DynamicIconChannel.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/4df1dea589d29bb5fb9002af2549d97e1ca5b2c7",
+      "note": "Bundled alternateIcons and bundleManager APIs with API26 gate, busy guard, default empty name and asynchronous error handling. Source checks available/enabled values but does not re-query after changing; guidance adds reconciliation. Official Huawei unpacking documentation corroborates alternateIcons start at API26; API method definitions were inaccessible to the web text reader, so API behavior remains pinned source evidence."
+    }
+  ],
+  "source_context": "\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "reference_checks": [
+    {
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/unpacking-tool",
+      "observation": "Official search excerpt lists alternateIcons from API26.0.0; method-reference page returned no parseable text. No claim of device availability."
+    }
+  ]
+}

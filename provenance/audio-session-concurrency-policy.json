@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "audio-session-concurrency-policy",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/audio-session-concurrency-policy.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/audio-session-concurrency-policy.md",
+      "sha256": "1b7f5d7a9be5484cbf4c3fb4703967f79c29d0441ae3d169e779976786a6abcf",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/audio-session-concurrency-policy.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/audio-session-concurrency-policy.json",
+      "sha256": "3ccb35453e8989194da591e5e9dfe554f4d7489a178e36d355f1609a1b294791",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "audio-session-concurrency-policy",
+    "source_context": "App adds OH-specific ohosAudioConcurrencyMode at activation so mixWithOthers maps to concurrencyMixWithOthers. Its lock selects CPF-Flutter/flutter_audio_session bd97a32d519c94772a4693d92cca88b145c6f4f3, inspected directly: core.dart defaults null to concurrencyPauseOthers, forwards enum index through ohos.dart, native OhosAudioManager sets AudioSessionStrategy and calls activateAudioSession. Native setActive(false) updates flag and acknowledges without calling deactivateAudioSession; listener teardown is separate. Dart returns listener-registration result after awaiting activation. Native method dispatcher does not await the async setActive handler, so async error delivery is not established; requires adapter/runtime validation. App initSession runs unawaited from constructor and several playback callers do not await setActive; guidance recommends readiness and owned awaited activation rather than asserting existing correctness. No claim that the mixing preference defeats every system policy, guarantees deactivation, or proves audible co-playback. App GPL-3.0; inspected dependency root MIT; no implementation copied.",
+    "evidence": [
+      {
+        "project": "pilinara",
+        "commit": "ca601af17511028903198ec559e16e1582ccdb3f",
+        "parent_commit": "8378bf9189f7017ebac4f7f0ce1b136da3a58800",
+        "paths": [
+          "lib/services/audio_session.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliNara/commit/ca601af17511028903198ec559e16e1582ccdb3f"
+      },
+      {
+        "project": "pilinara",
+        "commit": "0bee4f3792b97baef94941be058a449025ce7ac7",
+        "paths": [
+          "pubspec.yaml",
+          "pubspec.lock",
+          "lib/plugin/pl_player/controller.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/dev4harmony/PiliNara/commit/0bee4f3792b97baef94941be058a449025ce7ac7"
+      }
+    ],
+    "dependency_evidence": {
+      "repository": "https://gitcode.com/CPF-Flutter/flutter_audio_session",
+      "commit": "bd97a32d519c94772a4693d92cca88b145c6f4f3",
+      "selected_by": "app lockfile",
+      "license": "MIT (root inspected)",
+      "kind": "snapshot",
+      "paths": [
+        {
+          "path": "lib/src/core.dart",
+          "sha256": "01f5ae7aee1f240993210873ca1803e9e9249325b10aac4fcf25108e84a3dbb4",
+          "url": "https://gitcode.com/CPF-Flutter/flutter_audio_session/blob/bd97a32d519c94772a4693d92cca88b145c6f4f3/lib/src/core.dart"
+        },
+        {
+          "path": "lib/src/ohos.dart",
+          "sha256": "e60ccdba0983d43e804829d68a9e937152cb4728939b891573a6c5451a244eb3",
+          "url": "https://gitcode.com/CPF-Flutter/flutter_audio_session/blob/bd97a32d519c94772a4693d92cca88b145c6f4f3/lib/src/ohos.dart"
+        },
+        {
+          "path": "ohos/src/main/ets/components/plugin/OhosAudioManager.ets",
+          "sha256": "5658ecb092443f30b7bf1ddbe70ac7be25aea2c8ad26d710dd81ba6193646c66",
+          "url": "https://gitcode.com/CPF-Flutter/flutter_audio_session/blob/bd97a32d519c94772a4693d92cca88b145c6f4f3/ohos/src/main/ets/components/plugin/OhosAudioManager.ets"
+        },
+        {
+          "path": "ohos/src/main/ets/components/plugin/AudioSessionPlugin.ets",
+          "sha256": "62ae4580d0477c795dbbfabc96b1d0dfc0f258c51f9613827961a83d7530ef4d",
+          "url": "https://gitcode.com/CPF-Flutter/flutter_audio_session/blob/bd97a32d519c94772a4693d92cca88b145c6f4f3/ohos/src/main/ets/components/plugin/AudioSessionPlugin.ets"
+        }
+      ]
+    },
+    "updates": [
+      {
+        "date": "2026-10-16",
+        "run": "2026-10-16-discover-pilinara.json",
+        "notes": "App adds OH-specific ohosAudioConcurrencyMode at activation so mixWithOthers maps to concurrencyMixWithOthers. Its lock selects CPF-Flutter/flutter_audio_session bd97a32d519c94772a4693d92cca88b145c6f4f3, inspected directly: core.dart defaults null to concurrencyPauseOthers, forwards enum index through ohos.dart, native OhosAudioManager sets AudioSessionStrategy and calls activateAudioSession. Native setActive(false) updates flag and acknowledges without calling deactivateAudioSession; listener teardown is separate. Dart returns listener-registration result after awaiting activation. Native method dispatcher does not await the async setActive handler, so async error delivery is not established; requires adapter/runtime validation. App initSession runs unawaited from constructor and several playback callers do not await setActive; guidance recommends readiness and owned awaited activation rather than asserting existing correctness. No claim that the mixing preference defeats every system policy, guarantees deactivation, or proves audible co-playback. App GPL-3.0; inspected dependency root MIT; no implementation copied.",
+        "licenses": {
+          "pilinara": "GPL-3.0 (root); third-party packages separately licensed; not fully audited"
+        },
+        "validation_tier": "pinned source, actual parent diffs and source-integrity/KB checks only; no dependency resolution, application tests/build or physical-device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Retained Flutter-specific API/embedding conditions."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "rtc-join-and-participant-correlation",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/rtc-join-and-participant-correlation.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/rtc-join-and-participant-correlation.md",
+      "sha256": "1afaa87dd9f4d345d4cf880f8f5fc62e9a17ced85e4fcda344219d5b50019bda",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/rtc-join-and-participant-correlation.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/rtc-join-and-participant-correlation.json",
+      "sha256": "bee45659945d2ba9c6b60bcce008a760aa0c60d131190f7983c82171dd3c8020",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rtc-join-and-participant-correlation",
+    "evidence": [
+      {
+        "project": "petnote",
+        "commit": "e74e136d3927cf86a9a8c09546c5a47d71595beb",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/PetNoteRtcPlugin.ets"
+        ],
+        "kind": "diff",
+        "note": "Separates expected and active IDs, but accepts arbitrary remote uid; guide adds authorized-peer correlation.",
+        "url": "https://github.com/juren233/PetNote/commit/e74e136d3927cf86a9a8c09546c5a47d71595beb"
+      },
+      {
+        "project": "petnote",
+        "commit": "cdfaa056579370fb543d0499128e72c65fc2f7cc",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/PetNoteRtcPlugin.ets",
+          "lib/rtc/method_channel_rtc_adapter.dart"
+        ],
+        "kind": "diff",
+        "note": "Migration changes credentials and renderer and adds asynchronous join completion/15s timeout, cancellation. Selected parent diff join sections; no generation/expected channel validation on callbacks.",
+        "url": "https://github.com/juren233/PetNote/commit/cdfaa056579370fb543d0499128e72c65fc2f7cc"
+      },
+      {
+        "project": "petnote",
+        "commit": "cbaa2910dda4798c3bdf7c6ada643b451c30d350",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/PetNoteRtcPlugin.ets",
+          "lib/rtc/method_channel_rtc_adapter.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Current result/timeout/media/call adapter source reviewed. Corrective guidance not implementation claim.",
+        "url": "https://github.com/juren233/PetNote/commit/cbaa2910dda4798c3bdf7c6ada643b451c30d350"
+      }
+    ],
+    "source_context": "\n\n2026-10-06 PetNote main cbaa2910dda4798c3bdf7c6ada643b451c30d350. No app-level LICENSE tracked; source-only guidance, no implementation copied. AGENTS/README development/build constraints inspected as upstream research data; no upstream setup/submodules or changes. No dependency resolution, builds, RTC provider, device, native dock, secure-store or keyboard tests. Guide corrects absent join-generation/channel/peer authorization guards. Source method pending result set before validation can remain after outer catch; old callback can settle new join. Secure-named native store is preferences plaintext; fallback settings key is not secure storage. Avoid-area patch validates text patterns but skips unsupported inputs with warning, not fail-closed build. Commit device/API/ABI claims unverified.\nSeparates expected and active IDs, but accepts arbitrary remote uid; guide adds authorized-peer correlation.\nMigration changes credentials and renderer and adds asynchronous join completion/15s timeout, cancellation. Selected parent diff join sections; no generation/expected channel validation on callbacks.\nCurrent result/timeout/media/call adapter source reviewed. Corrective guidance not implementation claim."
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

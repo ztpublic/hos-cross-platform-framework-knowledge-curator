@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "sqlite-read-write-transaction-contention",
+  "source_context": "Shared native SQLite changes rusqlite default deferred transactions to TransactionBehavior::Immediate before reading/writing. Source test uses independent connections and zero busy timeout to observe early writer contention. Final OH storage delegates RuntimeSqliteHost to this NativeRuntimeStorageHost; pinned snapshots establish applicability, not OH execution. SQLite official transaction, busy-handler and isolation documentation cross-checked for deadlock-related skipped busy handlers, stale WAL snapshots and transaction-state handling. Isolated local macOS Python SQLite experiment reproduces BUSY_SNAPSHOT and early BEGIN IMMEDIATE BUSY, then rollback/restart/reread; not upstream Rust or packaged OH validation. Original guidance only, no application implementation copied.",
+  "evidence": [
+    {
+      "project": "operit2",
+      "commit": "9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+      "paths": [
+        "hosts/common/operit-host-native-storage/src/lib.rs"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+      "parent_commit": "9ae1e558a66f96d81ff95a499bd39bda7da6c122"
+    },
+    {
+      "project": "operit2",
+      "commit": "c28151ca1675046151036f1db23e6430375fe243",
+      "paths": [
+        "hosts/ohos/src/storage.rs",
+        "hosts/ohos/src/lib.rs"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/AAswordman/Operit2/commit/c28151ca1675046151036f1db23e6430375fe243"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-10-16",
+      "run": "2026-10-16-update-registered-projects.json",
+      "notes": "Shared native SQLite changes rusqlite default deferred transactions to TransactionBehavior::Immediate before reading/writing. Source test uses independent connections and zero busy timeout to observe early writer contention. Final OH storage delegates RuntimeSqliteHost to this NativeRuntimeStorageHost; pinned snapshots establish applicability, not OH execution. SQLite official transaction, busy-handler and isolation documentation cross-checked for deadlock-related skipped busy handlers, stale WAL snapshots and transaction-state handling. Isolated local macOS Python SQLite experiment reproduces BUSY_SNAPSHOT and early BEGIN IMMEDIATE BUSY, then rollback/restart/reread; not upstream Rust or packaged OH validation. Original guidance only, no application implementation copied.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "pinned source/history review and local KB integrity; isolated local SQLite mechanism experiment only where recorded; no upstream build/tests or OH/device execution"
+    }
+  ],
+  "local_validation": {
+    "status": "passed",
+    "runtime": "Python standard-library SQLite on macOS; not OH or upstream Rust execution",
+    "sqlite_version": "3.53.4",
+    "stale_snapshot_write": "SQLITE_BUSY_SNAPSHOT",
+    "second_immediate_begin": "SQLITE_BUSY",
+    "restarted_transaction_reads_fresh_state": true,
+    "final_counter": 3
+  },
+  "reference_docs": [
+    {
+      "url": "https://www.sqlite.org/lang_transaction.html",
+      "purpose": "Deferred versus immediate transactions, contention and COMMIT state",
+      "checked_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.sqlite.org/c3ref/busy_handler.html",
+      "purpose": "Busy handler may be skipped to avoid deadlock",
+      "checked_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.sqlite.org/isolation.html",
+      "purpose": "WAL stale snapshot promotion and restarting transactions",
+      "checked_at": "2026-10-16"
+    }
+  ]
+}

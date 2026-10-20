@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "id": "file-export-contract",
+  "evidence": [
+    {
+      "project": "pixez",
+      "commit": "52881c1ac470a852ecd8b4edeb0b12eef6a12be2",
+      "paths": [
+        "lib/saf_plugin.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/52881c1ac470a852ecd8b4edeb0b12eef6a12be2"
+    },
+    {
+      "project": "pixez",
+      "commit": "77c603f5aa13f097d43f2da615e13cf1c55ab1b6",
+      "paths": [
+        "lib/exts.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/77c603f5aa13f097d43f2da615e13cf1c55ab1b6"
+    },
+    {
+      "project": "pixez",
+      "commit": "2174ed31815a36f247bb4b31447b754b8bfe24dc",
+      "paths": [
+        "lib/exts.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/bgli100/pixez-flutter-ohos/commit/2174ed31815a36f247bb4b31447b754b8bfe24dc"
+    },
+    {
+      "project": "connssh",
+      "commit": "1582e73d91651b471ecca138834729d238a295fe",
+      "paths": [
+        "lib/sftp_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/1582e73d91651b471ecca138834729d238a295fe"
+    },
+    {
+      "project": "connssh",
+      "commit": "94a10e14eafa5e9797e1d71112df5a4b4cd3642b",
+      "paths": [
+        "lib/pages/sftpview.dart",
+        "lib/services/backup_service.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/94a10e14eafa5e9797e1d71112df5a4b4cd3642b"
+    },
+    {
+      "project": "neon",
+      "commit": "f9a850b09ae60c8c91e6279fe8dbcb43485b597b",
+      "paths": [
+        "packages/neon_framework/lib/src/platform/ohos.dart",
+        "packages/neon_framework/pubspec.yaml",
+        "packages/neon_framework/example/pubspec_overrides.yaml",
+        "packages/neon_framework/example/ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/shokakucarrier/neon-ohos/commit/f9a850b09ae60c8c91e6279fe8dbcb43485b597b"
+    },
+    {
+      "project": "draftmark",
+      "commit": "d560dccd1aae670ba1900ce9d07622f3e3cc4ad5",
+      "paths": [
+        "apps/draftmark/pubspec.yaml",
+        "apps/draftmark/lib/src/app/studio_controller.dart",
+        "apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt",
+        "apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart",
+        "crates/draftmark-bridge/Cargo.toml",
+        "crates/draftmark-bridge/src/compiler.rs",
+        "crates/draftmark-bridge/src/store.rs"
+      ],
+      "kind": "diff",
+      "url": "https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5"
+    },
+    {
+      "project": "picacomic",
+      "commit": "44924164ea2fd8568d770480f61a8451e167c12c",
+      "paths": [
+        "lib/foundation/ohos_download_bridge.dart",
+        "lib/network/download.dart",
+        "ohos/entry/src/main/ets/plugins/download/DownloadBridgePlugin.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/44924164ea2fd8568d770480f61a8451e167c12c"
+    },
+    {
+      "project": "picacomic",
+      "commit": "7a27545e8d29d4c46e7e933dd2d7b4ae82431af5",
+      "paths": [
+        "pubspec.yaml",
+        "lib/foundation/app.dart",
+        "lib/pages/settings/comic_source_settings.dart",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/7a27545e8d29d4c46e7e933dd2d7b4ae82431af5"
+    },
+    {
+      "project": "zhiji",
+      "commit": "776c6c25d94915285b193755e2d2aad422be0f7b",
+      "paths": [
+        "lib/features/export/providers/export_provider.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/blob/776c6c25d94915285b193755e2d2aad422be0f7b/lib/features/export/providers/export_provider.dart"
+    },
+    {
+      "project": "draftmark",
+      "commit": "4132921b2cf679e6c8af16944c9299d14207c965",
+      "paths": [
+        "apps/draftmark/lib/src/app/studio_workspace.dart",
+        "crates/draftmark-bridge/src/compiler.rs"
+      ],
+      "kind": "snapshot",
+      "url": "https://gitcode.com/nutpi/Draftmark/blob/4132921b2cf679e6c8af16944c9299d14207c965/apps/draftmark/lib/src/app/studio_workspace.dart"
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "paths": [
+        "lib/pages/export_page.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/commit/e6c08687c6cd32d5fcfaf7dd9a6ff546ca2396e7",
+      "note": "Changes FilePicker.getDirectoryPath to file_selector getDirectoryPath with null cancellation handling."
+    },
+    {
+      "project": "beecount-oh",
+      "commit": "14e6b10648ef7ce88414d7a562be638609205924",
+      "paths": [
+        "lib/pages/export_page.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/pages/export_page.dart",
+      "note": "Writes CSV bytes via File(join(selectedDirectory, filename)); assumes a writable local directory, while iOS uses private staging and share."
+    },
+    {
+      "project": "hlbmerge",
+      "commit": "47416f092fca969a19c92e316958ae716b253dcf",
+      "paths": [
+        "lib/repository/settings_repository.dart",
+        "lib/ui/screen/main/preset/provider/preset_provider.dart",
+        "lib/ui/screen/main/file/provider/file_provider.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/molihuan/hlbmerge_flutter/commit/47416f092fca969a19c92e316958ae716b253dcf",
+      "note": "Default OH output uses application documents; selected directory strings persisted without retained native grant code; openFile launches file URI without explicit host handoff grant. Private generation is not proven user-visible export."
+    },
+    {
+      "project": "pindou",
+      "commit": "b8364c5ecd38fb6ba833b42698ebef7250656897",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/ExportSharePlugin.ets",
+        "lib/data/services/project_share_service.dart",
+        "lib/data/services/project_export_service.dart",
+        "lib/application/controllers/workshop_controller.dart"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/w6521939-ops/pindou-workshop/commit/b8364c5ecd38fb6ba833b42698ebef7250656897",
+      "note": "Separate generated staging file, native save picker, awaited fs.copy(sourceURI,targetURI), cancel empty result and suffix preservation. No picker concurrency/synchronous-exception guard or live destination verification."
+    },
+    {
+      "project": "jimu-comate",
+      "commit": "5d687359b56de3fc9b4f03107b91f80661a92d15",
+      "paths": [
+        "lib/providers/project_provider.dart",
+        "lib/services/project_service.dart"
+      ],
+      "kind": "snapshot",
+      "note": "Picker destination passed to export service as path; cancellation distinct from success but no proof of URI write/export interoperability. Service reads/writes selected file directly.",
+      "url": "https://github.com/aizhaiyu/jimu-comate/commit/5d687359b56de3fc9b4f03107b91f80661a92d15"
+    },
+    {
+      "project": "yun-reader",
+      "commit": "9f717157b4399684c581258abd06bc02216faf2e",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/core/platform_paths.dart",
+        "lib/storage/app_store.dart"
+      ],
+      "kind": "snapshot",
+      "note": "OH implements no saveExport channel. Dart fallback writes sandbox filesDir/documents/exports; native comment asserting Files app visibility is unverified. Internal write success is not public user export or persistent grant.",
+      "url": "https://gitcode.com/jenken1209/yun/commit/9f717157b4399684c581258abd06bc02216faf2e"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "7116115a69f318742cb5f16dddc832c9cb70002c",
+      "paths": [
+        "lib/utils/file_save.dart",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/7116115a69f318742cb5f16dddc832c9cb70002c",
+      "note": "Adds OH native picker save and typed bytes, busy guard, flush/close then result. Source writeSync return count is unchecked; short-write handling is recommended, not verified implemented behavior."
+    }
+  ],
+  "source_context": "# Distinguish selecting a destination from exporting its bytes\n\n## Platform difference\n\nAn OH picker result or an app-private output path is not by itself a completed, user-accessible export.\n\n## Implementation\n\nPixEz replaces Android SAF operations with OH picker read/write APIs. Pica Comic adds a native download-directory bridge and conditional migration from its earlier private download location, and imports scripts from picker paths/bytes. ConnSSH stages a download, invokes a save operation with bytes, attempts a destination write and preserves its temporary copy on failure/cancellation. Neon accepts data in its OH save interface but does not pass or write those bytes in the inspected implementation. Draftmark creates a PDF in its private export directory and displays the path; Zhiji similarly returns direct-file export paths. Those latter flows require a separate user-delivery acceptance decision.\n\n## Applicability\n\nChoose among private persistence, imported copy, user-selected export and system sharing explicitly. Preserve the app-facing save method contract across platforms.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nConnSSH buffers whole files, rejects batch download in its current OH path and mishandles empty byte arrays as failures; these are app tradeoffs, not filesystem laws. A returned URI is not necessarily suitable for File(path). PixEz first removes every dot from filenames and later restores the final extension dot: this is application sanitization policy, not proof that OH globally forbids dots.\n\n## Verification\n\nExport nonempty and zero-byte files, cancel the picker, fail a write, inspect the destination from another app, and test large files without assuming the staged copy is the final export.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PixEz OH — 52881c1ac4](https://github.com/bgli100/pixez-flutter-ohos/commit/52881c1ac470a852ecd8b4edeb0b12eef6a12be2) (diff): `lib/saf_plugin.dart`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [PixEz OH — 77c603f5aa](https://github.com/bgli100/pixez-flutter-ohos/commit/77c603f5aa13f097d43f2da615e13cf1c55ab1b6) (diff): `lib/exts.dart`. Source license recorded by the study: GPL-3.0.\n- [PixEz OH — 2174ed3181](https://github.com/bgli100/pixez-flutter-ohos/commit/2174ed31815a36f247bb4b31447b754b8bfe24dc) (diff): `lib/exts.dart`. Source license recorded by the study: GPL-3.0.\n- [ConnSSH OH — 1582e73d91](https://github.com/RWPteam/ConnSSH/commit/1582e73d91651b471ecca138834729d238a295fe) (diff): `lib/sftp_page.dart`. Source license recorded by the study: BSD-3-Clause.\n- [ConnSSH OH — 94a10e14ea](https://github.com/RWPteam/ConnSSH/commit/94a10e14eafa5e9797e1d71112df5a4b4cd3642b) (diff): `lib/pages/sftpview.dart`, `lib/services/backup_service.dart`. Source license recorded by the study: BSD-3-Clause.\n- [Neon OH — f9a850b09a](https://github.com/shokakucarrier/neon-ohos/commit/f9a850b09ae60c8c91e6279fe8dbcb43485b597b) (diff): `packages/neon_framework/lib/src/platform/ohos.dart`, `packages/neon_framework/pubspec.yaml`, `packages/neon_framework/example/pubspec_overrides.yaml`, `packages/neon_framework/example/ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: AGPL-3.0.\n- [Draftmark — d560dccd1a](https://gitcode.com/nutpi/Draftmark/commit/d560dccd1aae670ba1900ce9d07622f3e3cc4ad5) (diff): `apps/draftmark/pubspec.yaml`, `apps/draftmark/lib/src/app/studio_controller.dart`, `apps/draftmark/ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `apps/draftmark/rust_builder/ohos/src/main/cpp/CMakeLists.txt`, `apps/draftmark/rust_builder/cargokit/build_tool/lib/src/builder.dart`, `crates/draftmark-bridge/Cargo.toml`, `crates/draftmark-bridge/src/compiler.rs`, `crates/draftmark-bridge/src/store.rs`. Source license recorded by the study: Apache-2.0.\n- [Pica Comic OH — 44924164ea](https://github.com/nimmi114514/PicaComic_ohos/commit/44924164ea2fd8568d770480f61a8451e167c12c) (diff): `lib/foundation/ohos_download_bridge.dart`, `lib/network/download.dart`, `ohos/entry/src/main/ets/plugins/download/DownloadBridgePlugin.ets`. Source license recorded by the study: MIT.\n- [Pica Comic OH — 7a27545e8d](https://github.com/nimmi114514/PicaComic_ohos/commit/7a27545e8d29d4c46e7e933dd2d7b4ae82431af5) (diff): `pubspec.yaml`, `lib/foundation/app.dart`, `lib/pages/settings/comic_source_settings.dart`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`. Source license recorded by the study: MIT.\n- [知己油耗 / Zhiji Fuel Consumption — 776c6c25d9](https://github.com/LianbinZhou/zhiji_oil_consumption/blob/776c6c25d94915285b193755e2d2aad422be0f7b/lib/features/export/providers/export_provider.dart) (snapshot): `lib/features/export/providers/export_provider.dart`. Source license recorded by the study: Apache-2.0.\n- [Draftmark — 4132921b2c](https://gitcode.com/nutpi/Draftmark/blob/4132921b2cf679e6c8af16944c9299d14207c965/apps/draftmark/lib/src/app/studio_workspace.dart) (snapshot): `apps/draftmark/lib/src/app/studio_workspace.dart`, `crates/draftmark-bridge/src/compiler.rs`. Source license recorded by the study: Apache-2.0.\n\n## Related knowledge\n\n- [Persist and reactivate external-file grants before native I/O](persistent-file-access-grants.md)\n- [Import external resources into app-owned storage when direct access is unsuitable](sandbox-import-as-access-fallback.md)\n- [Complete picker requests on cancellation and serialize conflicting dialogs](picker-cancellation-concurrency.md)\n\n## Study provenance\n\n- [ConnSSH OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/connssh.md).\n- [Draftmark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/draftmark.md).\n- [Neon OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/neon.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [PixEz OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/pixez.md).\n- [知己油耗 / Zhiji Fuel Consumption: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/zhiji.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nBeeCount OH discovery: Corroborates the selection/write split but does not establish OH directory capability or URI-to-path conversion. Consumer guidance already cautions about URI interpretation. CSV write completion is awaited, but no external-app open or export runtime check was performed. BeeCount custom commercial source license v1.0: historical root LICENSE permits learning/research and limits commercial use; removed in cleanup while HEAD README continues to reference the upstream commercial source license. Knowledge is original guidance, with no copied application implementation. Validation: pinned source/diff inspection only; no pub resolution, analysis, build, installation or device run.\n\n2026-10-06 HLBmerge source study: pinned master 47416f092fca969a19c92e316958ae716b253dcf. Selected OH introduction and later FFmpeg import/dependency change compared against parents; later relevant file workflow snapshots reviewed. LICENSE.txt is Apache-2.0 but README separately forbids commercial use: recorded conflict, no resolution inferred and no implementation copied. ffmpeg_xmake is a tracked tree at HEAD despite .gitmodules stanza; no submodule initialization. Native build input/license audit is incomplete. No dependency resolution, native build, HAP packaging/signing/install or device/file-handoff validation performed.\nDefault OH output uses application documents; selected directory strings persisted without retained native grant code; openFile launches file URI without explicit host handoff grant. Private generation is not proven user-visible export.\n\n2026-10-06 Pindou Workshop study: main cf66d71e648e00a8e649878bb954b39e7e21a63f, two commits. Complete root app snapshot read for selected OH storage/export/share contracts; subsequent screenshot commit carries no implementation delta. Independent app from same maintainer as registered Xingmu, distinct channel/domain source. No root license identified; no app code copied. Source inspection only; no dependency resolution, build, target device, system chooser/copy/persistence runtime verification. README device acceptance checklist and AppGallery image not curator runtime evidence.\nSeparate generated staging file, native save picker, awaited fs.copy(sourceURI,targetURI), cancel empty result and suffix preservation. No picker concurrency/synchronous-exception guard or live destination verification.\n\nJimu Comate: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nPicker destination passed to export service as path; cancellation distinct from success but no proof of URI write/export interoperability. Service reads/writes selected file directly.\n\nYun reader: single root import, MIT code/build/config; content separately CC BY-NC-SA 4.0. No code/content copied. Git checkout failed because git-lfs unavailable; pinned text sources inspected through git show. Bundled content LFS unavailable and not needed for source review. No successful build/runtime/device/public Files-app visibility claim.\nOH implements no saveExport channel. Dart fallback writes sandbox filesDir/documents/exports; native comment asserting Files app visibility is unverified. Internal write success is not public user export or persistent grant.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "a83c5d1453b24d29a6d174ff8c2d076e195153432a20f337536f84d7d6767a86"
+}

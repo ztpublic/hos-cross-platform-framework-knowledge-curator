@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "flutter-native-material-state",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-shell-state-synchronization.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-shell-state-synchronization.md",
+      "sha256": "922c9f57880b68cc1b93cd40c6c351d56293370eb3afe0dc7e6bb9d46ebc5d63",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-shell-state-synchronization.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-shell-state-synchronization.json",
+      "sha256": "ed45e7fb4f6ba2285782d4e025ba537b12fdde782b65d58868184f44bb46a9cc",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "transformations": [
+    "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+  ],
+  "limitations": [
+    "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
+    "HarmonyOS PC acceptance checks are proposed, not performed."
+  ]
+}

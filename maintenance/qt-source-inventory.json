@@ -1,0 +1,962 @@
+[
+  {
+    "path": ".gitcode/ISSUE_TEMPLATE/kb-capability-request.md",
+    "sha256": "4f3440ae22aabd9ec9d3d0f160807888d4646f3a121df27af1a5c7c49d8f4471",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": ".gitcode/ISSUE_TEMPLATE/kb-content-fix.md",
+    "sha256": "329c17d63ee8564137046e90cef9c05d037b5cef6cce52e165f1016019d33832",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": ".gitcode/ISSUE_TEMPLATE/kb-knowledge-request.md",
+    "sha256": "7413862ef5b2e5c5625949087831d3029181c2852f26072eeccf7a05a4b83e1d",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": ".gitcode/ISSUE_TEMPLATE/qt-crossplatform-diff.md",
+    "sha256": "63affddaec6eaca5533e6344b18a6f145c485435b4cb566be06bc39adc1e8678",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": ".gitcode/ISSUE_TEMPLATE/qt-doc-inconsistency.md",
+    "sha256": "79dd7c1bbbc6df4ed4a350db84203740abc77fa9465dbdc0d9522e8f12adfc3b",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "a414167d2d1f513eb575830a8ffe8cda0cb90120d3e1872a98a1e2e20690dd80",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "CHANGELOG.md",
+    "sha256": "2f84d06e650676958b3d1b02b47bbec17aaa627abb24749ca252f54e306dbedf",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "CLAUDE.md",
+    "sha256": "a414167d2d1f513eb575830a8ffe8cda0cb90120d3e1872a98a1e2e20690dd80",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "sha256": "9b1d61e196b31303e757574ce44021e24ffc46867ac4ddca8a2906d24e2f3b6a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ENV.md",
+    "sha256": "1d94a75343f3359974cb8051739a1c5dea0d4b2b2631b8b36e935bcc58dfd47a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "README.md",
+    "sha256": "0eb06962479bcc0dd8b72278d82c405c60e01eb9fc1189141844684f7618f96c",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "SECURITY.md",
+    "sha256": "3e9aa34b33d3c15ba39a02d5baba5e2c678d43d942358e627e0bb78cb452c301",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "SETUP.md",
+    "sha256": "8229bafa7af9326c6262ba37ad382e99d39d75d5d4a9a0d112e5d50ea4e8e05c",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "TODO.md",
+    "sha256": "6d6c33ed55d8a4be3937fecf015cf94b40905b96dee9cba32365889072d16005",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "_index/_dashboard.md",
+    "sha256": "6f8e50b795bf40e657dc0f856595f53c87771763da0c26913efad195eba5a547",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "_index/_map.md",
+    "sha256": "4f438f6e9ad856b182aa2657f86ec1f750371669ed985d097535c9176ce1c999",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "_index/_tags.md",
+    "sha256": "f31a72c6c6961a006ea06094f6957e8ead6769d0f781e21d96e8311e929b5896",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "_index/_task-routing.md",
+    "sha256": "c16e7549231a3a994b1aa454d07bc83aa8ff1456195212599f478b2611ae2b8a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/_index.md",
+    "sha256": "f9850a7ba3b102d6e04e1b0db8163c4a0d84ccb7bce458f850d6e23f2332a4b3",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/coin3d-quarter-ohos.md",
+    "sha256": "0cf0b64e3058268e78e7f7e85c8eca1d4a643f2e184b869216027c94e209369d",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/ohostemplate-blockedbymodal-patch.md",
+    "sha256": "060f9850ac7b6f876fcd7fea5d35d3dcaea9de0577197b3d199217aeb456502d",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/qt-opensource-apps-harmonyos-survey.md",
+    "sha256": "4bce8039ba26b85267c9eb31c223f3431b90aa7a6a3fdd038d3ac46b0765d07d",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/quit-deadlock-tsfn.md",
+    "sha256": "71dfd9bc44b600875704d8bcbbdd23ad1d63de4c1b594981b3f2b7bc6d93d180",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "episodic/postmortems/saribbon-ohos.md",
+    "sha256": "e5f20a8464f0f66861ae9a0eb41fc0a595d577c6c8375bf7d3d8a2c934547f3a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/toolwindow-crossscreen-flicker.md",
+    "sha256": "585547d630a17731e32706c4c1516b4232eff209bf6bbf16745e1e6e164c5691",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "episodic/postmortems/wa-nativewindow-leave-bug.md",
+    "sha256": "3767c1707c637909209b00c610606eae22d5ece164ed657a62f0ccb1c8c1ce91",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/dlopen-rejects-writable-path.md",
+    "sha256": "cc5da740d51d84172ee8cdbf194cced44986f9353132637073aac7db2e619730",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/document-picker-uri-access-failure.md",
+    "sha256": "d2676774c2d5fa7b0cb216f9448ce81aab8b6ac69a007f0c164a5f14ba641673",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/executable-binary-eacces.md",
+    "sha256": "7b68a5b5281f0ad014f70dad13f5c3bf4f43ad12a6495b078f2003abe7b3d2bf",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/executable-memory-permission-denied.md",
+    "sha256": "ba4655cdf2b461c51bc7d5bc7a4b7a11c9d940cc1400e81c062abc64c8dc9c31",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/hap-device-sdk-version-mismatch.md",
+    "sha256": "d038aeccced949c791e0efdbc8b3efef169b4d758456e4368465085789cf8c9d",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/ohpm-install-timeout.md",
+    "sha256": "c293f94b051d6f968620a9b1da6c78e5ebade2a782a1be548030536dc50dc411",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/procfs-system-information-unavailable.md",
+    "sha256": "60c86b9dd58b030e17669de40eaef8d119598adc2446c51d24e7aa24d38fd700",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/programmatic-hotspot-unavailable.md",
+    "sha256": "5ea23c7fdbcf9ee8ae0b3a9e52e70ebde0292f1fac60fb285a0abb3242b59df7",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/problems/runtime-write-to-readonly-bundle-path.md",
+    "sha256": "b182e0e20c5ea0b2f80907ff1a0baa19b149df86e24a2dc270afee24946c5543",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/procedural/cpython-dynamic-embedding-ohos.md",
+    "sha256": "8940cb76c32a94fb9990e18469bdd014ecc76f733fd44dd7fe670e6d4974c650",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/procedural/deveco-cli-usage-rules.md",
+    "sha256": "c3ee0e95f0ec3ab2dd1404b9c7243ccf956763c8099188994e25111c573f02d7",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/procedural/ohos-gstreamer-cross-compile.md",
+    "sha256": "8d3dc721332748feb63386b9f488088bf67a306a429d99e03b507773a668da14",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/procedural/ohos-llvm-cross-compile.md",
+    "sha256": "dfd9d9c2286a96cc2c9d48a44a380168db6d50a93d48d8dde24b7eee27de1dbb",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/application-sandbox-paths.md",
+    "sha256": "25eab14a304797c72976c7b6d2932cdc233a9092f0184c2fab0874cde8ac2a1a",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/arkui-window-xcomponent-model.md",
+    "sha256": "a780bdb7fc345cf43a3bb728914b6bda853506115b8592d087eab17c134601bb",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/deveco-mcp-capabilities.md",
+    "sha256": "829d21fe1c0a27d0c2e626e3694eb3ef60fc94608eb634b354fee413c221c43a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/document-picker-uri-access.md",
+    "sha256": "bb155e40c2113502deb994aab642db3b209cfdb54251e8dfceed703d3c306454",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/hap-application-identity.md",
+    "sha256": "e395e7e6c018b57f3cb9ae538823e9e39c234a304de47c7b9ecd8789283c84ce",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/hap-native-project-structure.md",
+    "sha256": "f45d943477703963a4b4b27e59f18fb5b66869d4a8e3835ee490f1d9bfc7e9bf",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/harmonyos-development-fundamentals.md",
+    "sha256": "0622996e9668cb2f7bcd6c63c102e6ccca2d2674b5e3d99f6efe24eadda5f9ed",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/harmonyos-platform-limits.md",
+    "sha256": "f0742bf17ecc2b1eb32d8ae27f5a272f00127feeae8b9f81527146ca56d534fb",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/native-runtime-embedding.md",
+    "sha256": "4b83aa961d02ff9396ac15efe14103d63c5ebcca09861e84d0121ebf8d33c2c8",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/ohos-cross-compile-pitfalls.md",
+    "sha256": "bf6e9876eb8eb77d1bab497f73eea7dbd04ed4d0db5eaf31c70e10df0a549686",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/ohos-native-third-party-libraries.md",
+    "sha256": "c0ca1a6b97e2c90384ccd79aef85a6dc910f2734e9a5c95369f31f9cf8a4b2d2",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/privileged-system-capabilities.md",
+    "sha256": "8c33abc13283b11b94d982f93c668960f0c438aa8678f92102af9ee779b2912d",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/stage-uiability-lifecycle.md",
+    "sha256": "ae4465866c12a7d3e8a7d16319f3b104130973ec52360572520bf694b95b4775",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "ohos-common-kb-public/semantic/system-information-access-limits.md",
+    "sha256": "9be020e495c43bd5ff914aa9d72f0763810400d221679dbbc180a8cedb04b86f",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "preference/_index.md",
+    "sha256": "4a4911e891a0fa5d1dec0bd74830ba8171c6d52f031589627f4c1707d31a2e44",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "problems/_index.md",
+    "sha256": "44be09226aeb7ad543dc9aa5c1fa965f70605a17a9f33b0eba107ac886d5c4f5",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "problems/_lookup.md",
+    "sha256": "a87592cbf88efee5998f7212d4737fcec29a36001e75a84b85892a5dec5737fe",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "problems/build-fail-bash-path-escape.md",
+    "sha256": "1dd4365862427cb22f00ea9e38d0c364a874c041ac88b99977387b29778fcbeb",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-closeeventrootcause-path.md",
+    "sha256": "27cd75298b8d5abca923e34aaa149482e9cb737afda2a7fc9e21a94373b4e052",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-cmake-ohosextras.md",
+    "sha256": "4eb76fccd09ca85bb5c3d54c1aa25f0b6a423479de64c647450edcf63f7d0f58",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-duplicate-so.md",
+    "sha256": "8f868d53b635d62126d726d0821d6a9ee966ddc3fe9c6b3efd9b6f8576642e41",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-ffmpeg9-removed-api.md",
+    "sha256": "ce55a545da0e1833c03b984256ecafe169891f4cfd9422d6e769def5aaf0d5d3",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-glibc-internal-symbols-ohos-musl.md",
+    "sha256": "c11a0e782ec0a8ba056ea64621f2076642b48fee5152f51ea7d90c754380501f",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-hvigor-spawn-java-enoent.md",
+    "sha256": "63b5345d4f1d90ab8d3e3384f808a7474b6691d8c2d47ff3d148c550d7fdaf34",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-libuuid-missing-ohos-musl.md",
+    "sha256": "d96be87763492a6cf0cd902c749b8c16132a8c31408cf10bb704eabcb1eb9c65",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-magic-enum-bracket-depth.md",
+    "sha256": "b9fb7f018f9dfacfc388cfa983a22f4d7a38d5a77d85ef6bdce88e1380e90076",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-qinitresource-extern-c-main.md",
+    "sha256": "588df66c234adb0f767bb493cec8d09ed5621ffebbe7b70bbfd43c7cef50e168",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-qt515-icu-detection.md",
+    "sha256": "879da8ba42b7ae24776d4261bfa08823daa8ddce21c39ef43ee1172dc660066e",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-qt6-libcpp-musl-isystem.md",
+    "sha256": "5e48ebb4041f2592535f0aa334399f827660e3ced2be4eed66f2c9a5c5c6e0af",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-fail-qtohosextras-camelcase-headers.md",
+    "sha256": "b3a6c47db4cb01abdc34ec1dd07a5d6d90644225dcde1b9a14d1c22a186aa7e5",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-hvigor-native-skip.md",
+    "sha256": "19a75e7dc0aedb188bbfefab6a5187db0852a4b0c0560778f78cf9c4da6d8049",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/build-missing-qt5uitools-ohos.md",
+    "sha256": "46a6a1b6d97c5650eb6251b95a61318aa9d375b321faaa901e138119d7ea9b8c",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/deploy-fail-hvigor-cli-hap-crash.md",
+    "sha256": "5973221c85f05f106a487c862394a325010e6982866ef63d5d5e0ba25631a585",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/ohos-mainthread-mismatch.md",
+    "sha256": "af03216199348b5936dfc9cdbc4efecd1395dea02a47cff3dd97eb21d8769a45",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/ohos-qfiledialog-native-support.md",
+    "sha256": "66bc46c85a6f72f94abf18ac86badec02991de6ce5d515be014b69b591688001",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/render-black-rgba8-zink-mipmap.md",
+    "sha256": "b129793f4e6231c16b5b434f90eff6ef98eb1da9cadcb4dc35d3630657bbb0df",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-blocked-by-modal-window-no-parent.md",
+    "sha256": "fac3455829c1d2caf3b7855259d6606270faaec5d9d7b8ab24ee4b6e2cdfb5d8",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-arkts-template-modules-mismatch.md",
+    "sha256": "c6852a3025d17bbf5d0fc275d13401b1e825ad3a03bf5a56fe12c8ffdcee5988",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-libqohos-libqt5core-version-mismatch.md",
+    "sha256": "8ddd468af0b614b3665da95904ba649da962291a6cadd47aaf184cfdca334e82",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-libqohos-modules-mismatch.md",
+    "sha256": "7863aed31f3c3cf9fde257af4330a3f7b29c84e30ccdf6cb9b7ba2d5867b47e3",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-loadfile-textchanged-no-debounce.md",
+    "sha256": "412caf8f26194d1959eefe644f83212a74e12f79645ac1e8d46382210c711173",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-null-pointer-entry-shim.md",
+    "sha256": "bf1874752867df6e7a03cf7a729cad29f3f976da24c7ca42f4bf52969fc3c02e",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-ohos-deviceinfo-global-expression.md",
+    "sha256": "817fc288a4d7ced3078cc87431098501a65bf529d9e5b6bcd33a77b7f00e3fc3",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-crash-sandbox-readonly-path.md",
+    "sha256": "08948c2e9c10cb81b012b27b23b6cd78d0395081b5fee8156d8551c7afdb5df8",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-curl-chinese-garbled.md",
+    "sha256": "37454e0111a6d2a8b7799a62638065cd864a85fda87bb8d375636b227fc70959",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-fail-dlopen-writable-path.md",
+    "sha256": "6d2b4c65eebbf8a1783efce44d56a6109d1bcdbc84d2f868eb2175885c4c48e8",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-fail-file-dialog-invalid-default-uri.md",
+    "sha256": "39b49d1e9e526fb2be10a507c07e1e2a3d6579137746995fc569a6c2b373877a",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-fail-libqtdbus-missing.md",
+    "sha256": "13d450158322481377d7c5809dbdf95ecc7ac91a99a78909e15107fcbc547b7a",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-fail-qpa-plugin-not-found.md",
+    "sha256": "8dd69067955191b80cb9295f5afe9e79e007de42c4cf7fcb1813e1488a5497d0",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-fail-sqlite-open-database.md",
+    "sha256": "a2182215659d2b281b21be294f719ab9969f03b53631ff3513b2ae68d6845188",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-ffmpeg-versioned-soname-transitive-deps.md",
+    "sha256": "d35d7a396ed3721197d9aa0004139bf5908b879a142a38609a99b19fe4100a0d",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/runtime-style-dark-palette-pure-black.md",
+    "sha256": "cced634c0b523ea57bfa67c3e957457d42666b563783e2987a4036e163e81b19",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "problems/surfaceholder-nativexcomponent-incompatibility.md",
+    "sha256": "c99b46356c8853194bec4d165c70f0948adfc519ad0462a4376ca9875fdf7c53",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "procedural/_index.md",
+    "sha256": "e02fcf123a7ed814898f9f715257f452d444dbf5ca8a93b3d64876ebb0f7d3f2",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/demo-generation.md",
+    "sha256": "3c763594c1c6c7ade97d10fa37b7475dbbe37e461e030a072ee4960600e4934c",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/fetch-ohos-third-party-lib.md",
+    "sha256": "25ecdc645bdc417d56c4b6f2b6f9977a982358679600da135bee6f31e7c82305",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/framework-fix-verification.md",
+    "sha256": "fc28974375cc713640c06a0068a9baa955bf67380d8f401fde8f5e73a36f9a4c",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/framework-issue-analysis.md",
+    "sha256": "4ae365a3016a2ab7b13ca575fa4d2c51aa96a799404ef2e43af2426737ad3d3f",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/llvm-ohos-cross-compile.md",
+    "sha256": "6629344060fce8d63ac92964e0e15278cc1afcef7763d3200a2cf04e820881c5",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "procedural/qt-app-harmonyos-completion.md",
+    "sha256": "e1f8468ae08825430516ac3cd619205588734e2affab5567a6f042f5eaab0274",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-app-harmonyos-full-pipeline.md",
+    "sha256": "f82db9cddeb19fa9a2fb75d387ce9629832c8aaa21950e255cd6f28b37c9b1be",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-app-harmonyos-migration.md",
+    "sha256": "721e4d7bf147a2384d3c4ed9ca4510130b74008404c026c62a5b780d4f95f290",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-bug-report-generation.md",
+    "sha256": "e471ac80dabe49d3490cbd24359e73bb1a68850fefe553026564da2ff63241f1",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-bug-report-sample.md",
+    "sha256": "4702b94d93d09ce3519fc634208f0d41dc52f6686e35eeac7ab5fbe6941e634e",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-cef-ohos-dev-guide.md",
+    "sha256": "cf6e53fbcaeab7da13acba52c1b5935f419c554c1e5dac9e1f31064f5e8e8cd6",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt-ohos-run-test.md",
+    "sha256": "b8ede57b7dfdd1964e229ad8e1e3d9ac23541010b1f58b62d85c9148ec1e2733",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt6-ohos-manual-deploy.md",
+    "sha256": "a1b01684cb8f25d97da427a43bd584b0ac2204f7b7dd98b94013faa320b155f7",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "procedural/qt6-ohos-windows-cli-deploy.md",
+    "sha256": "de6141e01782b118810f1fc6757107b3f291a5475d621bf303dfc10ec11481dd",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/_index.md",
+    "sha256": "2e735cbb37db4afa135922bca83961adf9a861b12ddaf338548a780de764ccdc",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qdrag-cancel-cross-platform.md",
+    "sha256": "c32f6e90b7a3c945ee94d6e2d54e673822121ef004bc0fcd584f9e75ba088338",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-accessibility.md",
+    "sha256": "a3f247ef2850e7a191dc48b82d98dee28229273a2afbac2283ac86091c62af7c",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-api-mapping.md",
+    "sha256": "d1cd092c087eab61e26837ac19892720bca4fa697147f755ebf9e268a4b66ced",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-api.md",
+    "sha256": "0b39c88d8065606d4814328a96a097143bd3a39d70909cc62b72f668241edd31",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-build-run-workflow.md",
+    "sha256": "e278442555495c283b34510c080e1c3b52a8b47f87534276d434548b5fd1cb87",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-build.md",
+    "sha256": "00f1ff90612e459ba46870cf1bb1ffd14750fbb0b57efa6e8f312a6108eb2049",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-code-patterns.md",
+    "sha256": "5e5a4a6acd09bb040bd93cfe34d611b3198f8e5a9689ccc5692c4ae34402a025",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-dev-guide.md",
+    "sha256": "9f4d1d0990a8d5d15ddcbfa5e05258f4018fa9e6fc4fc438ac8c68c52020f4ae",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-golden-rules.md",
+    "sha256": "35331155568d26135e0de7b38e3fa2d92a173c146e777cd5f42d6a15edfc4ce6",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-lifecycle.md",
+    "sha256": "9388526789933e9d13680d61ddea375cb23eb192bcd714d78e759bca7cdef289",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-modules.md",
+    "sha256": "35b7542d469840b6a9d0b6b043ed2da46f3324721e62fbcf2e27e147876f3668",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-overview.md",
+    "sha256": "e560a1e3fe4a38fa3650360d1bf657bd10c6388f98e95da930dfcc9f0549bc95",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-platform-limits.md",
+    "sha256": "58bf4f94ff3c0ddc82c485a61461b70f9286dae9747a297c6131790fe2ba4553",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-porting-workflow.md",
+    "sha256": "b9782c41410e549440f40f7eed064993865b16e191ee2fd6699f3c58122efacb",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-project-structure.md",
+    "sha256": "8cde7214efa79e3f868f507e570e9b18a0920b9b5a507c3eca8e13afaff18b14",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-pyqt-status.md",
+    "sha256": "104e762da945b8756ded74824d46253e6e778ad90028fd72006c7eea0aed9af0",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-qt6-status.md",
+    "sha256": "ff34953c5238f1fd5450374f4c1e1600ee923414c19a0640e5fe0cf139b13755",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-harmonyos-system-tray.md",
+    "sha256": "795688fdde73e450878a500fb22dc97596bed927eb4740b9a43d2ec374e3951f",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-third-party-libs.md",
+    "sha256": "9d893bc0e76d85e2b3a3173dbdc2aa4600ca2d9d185afbcca8d9596cbc94752a",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-harmonyos-window-model.md",
+    "sha256": "4d9180792d596be6bd805f31f63ee6230c31f18d94d7d30d7ec2cba1474d9d07",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-ohos-extras-examples.md",
+    "sha256": "7e71b44751d5e320b20885d7e4494aa14cef498d7656b4915318b00172ac19c4",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-ohos-extras.md",
+    "sha256": "5044af870421d58848d3ba2de8f94039c932fc91e47ecc2ae9593bcb52019665",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt-ohos-js-thread-gateway.md",
+    "sha256": "e3f4f673c46cc794b2c88461140e3eda6874b2e404595fe973957b24976fb6cb",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "semantic/qt-ohos-project-analyzer-workflow.md",
+    "sha256": "4a76dd759f99ca59c2e47416bb5ea7ef6e43cfcc45cd635a0fd8e88d6ac31c05",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "semantic/qt515-vs-qt512-api-diff.md",
+    "sha256": "6a229c10ba836427325243390bb49968cc2eae58276f4875f45d8d840bd3e6bd",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/kb-init/SKILL.md",
+    "sha256": "582f6a3a5206db53c0eda32d077a1f0c2bc40fbc749f73c0c3c0501aeb43edfd",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/kb-init/references/deveco-install.md",
+    "sha256": "9d7e1bce0c9eaa4b82eed7f6d6038f9404bc2a4cf501ec28509e8b1df18db084",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/kb-init/references/env-variables.md",
+    "sha256": "e21d46f43878d724e0dce886b0c0fbc0292c42b8e07ab83b1a5b7aac1ee1662b",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/kb-init/references/qt-compile-guide.md",
+    "sha256": "d12bdc3f22b99c98607ffef18aa540491333e24b019e614cabf2c1a1afa27877",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/kb-init/references/qt-src-acquisition.md",
+    "sha256": "1e29c3735752e51387872673bef97ffce0cab599876c43a27e573d6135683cb3",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/SKILL.md",
+    "sha256": "7a0919c22dbb8f36b678f8ff7b6d0a44bf068c096b4d532a4c90c90743eb91ee",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/SP_DialogSaveAllButton.md",
+    "sha256": "0379b34a6c003a8a6b831bd5d7dc7c514c0f742bd490753a68c840a4d6e95f8e",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/delete_include.md",
+    "sha256": "a947d21a639554226067e8156aa744498ab9ec02d253d730be430fae8f53f18e",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/qt5.12.12/Qt-Ohos-5.12.12-Diff.md",
+    "sha256": "6d539686b769cf49bc693e42818e8add112c09fe36790293e538fa7988ce895c",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/qt5.12.12/Qt5.12.12鸿蒙化接口差异.md",
+    "sha256": "53a1d374c0722720fb197e3c7d5eb62978719b34df774b12b06a1f7cd69dd514",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/qt5.15.16/Qt-Ohos-5.15.16-Diff.md",
+    "sha256": "f01c62ef977b95a0c6c967093ef8112deceb0363d54cfdae2cb361f8a25deca2",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/qt5.15.16/Qt5.15.16鸿蒙化接口差异.md",
+    "sha256": "5aff18a403e5b1cc8584251a9e87e4755e05d3c5fcbd7e071f24bb32f85cce9b",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/docs/screen.md",
+    "sha256": "649825ae189ee4f984c0b8ccd964814386bdb2acd17557ec133867562d9874e7",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-compatiblesdkversion-mismatch.md",
+    "sha256": "6001124a82b1384d423a11bdd6bd7bf0226c8311245885ff9da3d3c29d0e276d",
+    "disposition": "incorporated",
+    "reason": "Exact source mapped to atomic entries."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-deveco-sdk-home-not-set.md",
+    "sha256": "ef91802bf3aaca954160f845fce882723fcde73c4c26296142f95028fce7e3e2",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-deveco-studio-reverts-external-edits.md",
+    "sha256": "d4aaeb18ae3357f2031dae8be45df5e1e9ef11ce0a12c201002165a587ec24fa",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-eperm-uv-cwd-stale-daemon.md",
+    "sha256": "0ab526d67fde8a41a286e51ec803c23b96e56bcb33ed5a1485f3c3977343041a",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-findpackage-qt6-fallback.md",
+    "sha256": "e1a95e9e007721f2f0aa68a46de9e7bd7b3d398fd8953d9f0f5b117ab929ffb6",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-ohpm-libentry-missing.md",
+    "sha256": "892031dd6fb11bb0508934f199ce36457ed29610cfd30829a956dd2c130c27ef",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-qtoshehtras-forwarding-header-missing.md",
+    "sha256": "553ce8ca3cfd80002a4ab27711d0439a05b24efb09d9251932a0f4d5e4a497b3",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-qwidget-screen-api-mismatch.md",
+    "sha256": "8e6fc39d05c128d644305a8122b5e308c0c34152bd74c03d4d63f3531399757b",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/fix-build-error/build-fix-sp-dialogsaveallbutton-api-mismatch.md",
+    "sha256": "e62094e2684bbaccfc62050cd108df42ed766448141bd80600d3bc99142898fc",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/templates/README.md",
+    "sha256": "20f7f510891479bc59e0d7a9dc10208d986423737a012bea080ef370d3f57085",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/templates/oh_modules/.ohpm/@ohos+hamock@1.0.0/oh_modules/@ohos/hamock/CHANGELOG.md",
+    "sha256": "b8b5ea6ca3e04aa79f4f0b1546daa344c1f4feb44284bb42ec6a12418d719803",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/templates/oh_modules/.ohpm/@ohos+hamock@1.0.0/oh_modules/@ohos/hamock/README.md",
+    "sha256": "e53086dca414f860e7b3c8b07375915753fac7d084f388ed83d315fd63cd47fa",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/templates/oh_modules/.ohpm/@ohos+hypium@1.0.16/oh_modules/@ohos/hypium/CHANGELOG.md",
+    "sha256": "a434b22d53f85414412668b50ba53ad9b84fc7395b175c1a7139d426d1d620f5",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  },
+  {
+    "path": "skills/qt-community-to-official/templates/oh_modules/.ohpm/@ohos+hypium@1.0.16/oh_modules/@ohos/hypium/README.md",
+    "sha256": "835f72db0cc7a63fe1e4a0e139412bbde23ccd93f93f05eefcba87f9a9a7db1e",
+    "disposition": "not-extracted",
+    "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "id": "continuous-background-task-contract",
+  "evidence": [
+    {
+      "project": "localsend",
+      "commit": "61e034bf72d58ee1686ac82f169288ee23cfe891",
+      "paths": [
+        "app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets",
+        "app/lib/pages/send_page.dart",
+        "app/lib/pages/progress_page.dart",
+        "app/ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/Aloereed/localsend-ohos/commit/61e034bf72d58ee1686ac82f169288ee23cfe891"
+    },
+    {
+      "project": "picacomic",
+      "commit": "0083f62582c59fc33d30e1bc1703e6e06d4e9f02",
+      "paths": [
+        "lib/foundation/ohos_background_download.dart",
+        "lib/network/download.dart",
+        "ohos/entry/src/main/ets/plugins/background_download/OhosBackgroundDownloadPlugin.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/0083f62582c59fc33d30e1bc1703e6e06d4e9f02"
+    },
+    {
+      "project": "connssh",
+      "commit": "dd6dd9d6530c01111ca8dc32e208d30880c5f215",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "lib/services/ssh_service.dart",
+        "lib/main.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/RWPteam/ConnSSH/commit/dd6dd9d6530c01111ca8dc32e208d30880c5f215"
+    },
+    {
+      "project": "kazumi",
+      "commit": "0eaba947e116e40884066d12750c38d977753950",
+      "paths": [
+        "pubspec_overrides.yaml",
+        "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+        "ohos/entry/src/main/module.json5",
+        "lib/utils/audio_controller.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/ErBWs/Kazumi/commit/0eaba947e116e40884066d12750c38d977753950"
+    },
+    {
+      "project": "simple-live",
+      "commit": "8afa0d32fed888bd95d066c21c8368cdbc557ef3",
+      "paths": [
+        "simple_live_app/ohos/entry/src/main/ets/plugins/OhosBackgroundPlaybackPlugin.ets",
+        "simple_live_app/ohos/entry/src/main/ets/plugins/OhosDocumentPlugin.ets",
+        "simple_live_app/ohos/entry/src/main/ets/plugins/OhosNetworkPlugin.ets",
+        "simple_live_app/lib/services/ohos_pip_service.dart",
+        "simple_live_app/ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/8afa0d32fed888bd95d066c21c8368cdbc557ef3"
+    },
+    {
+      "project": "piliplus",
+      "commit": "612ec1ff6029dcf3cc97c38e181ea8c7c414a921",
+      "paths": [
+        "lib/plugin/pl_player/controller.dart",
+        "ohos/entry/src/main/ets/plugins/BackgroundPlugin.ets",
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/612ec1ff6029dcf3cc97c38e181ea8c7c414a921"
+    },
+    {
+      "project": "kikoflu",
+      "commit": "729ca608c29771836b664491747406efb39ce118",
+      "paths": [
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/natsuz0ra/KikoFlu_ohos/commit/729ca608c29771836b664491747406efb39ce118"
+    },
+    {
+      "project": "etohos",
+      "commit": "1ac26cded68de2f11c58ea412cb1df542404cc2f",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/collaborative-creation/etohos/commit/1ac26cded68de2f11c58ea412cb1df542404cc2f"
+    },
+    {
+      "project": "etohos",
+      "commit": "2d2d40e86df7127aa2c491c6f31adf331d897215",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/collaborative-creation/etohos/commit/2d2d40e86df7127aa2c491c6f31adf331d897215"
+    },
+    {
+      "project": "ssh-codex",
+      "commit": "fd9395e237a4cf987c0c7b98aa1ff70e70b70a2d",
+      "paths": [
+        "lib/src/connection_keep_alive.dart",
+        "lib/src/app_controller.dart",
+        "tool/android/ConnectionService.kt"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/fd9395e237a4cf987c0c7b98aa1ff70e70b70a2d"
+    },
+    {
+      "project": "bujuan",
+      "commit": "74be86f5688164334e348520ff1c6f113f9a0807",
+      "paths": [
+        "ohos/entry/src/main/module.json5",
+        "lib/main.dart",
+        "pubspec.yaml"
+      ],
+      "kind": "snapshot",
+      "url": "https://github.com/AnmSleepalone/bujuan-harmony/commit/74be86f5688164334e348520ff1c6f113f9a0807",
+      "note": "Declares audioPlayback and KEEP_BACKGROUND_RUNNING; media service runtime uses external audio_service plugin. No app-owned native task start/stop implementation in host, external plugin lifecycle not inspected; declarations alone not proof of background playback."
+    },
+    {
+      "project": "simple-live-yabi",
+      "commit": "a3559fa2f504b1035fd04cff680c994c081971af",
+      "paths": [
+        "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+      ],
+      "kind": "diff",
+      "note": "Previously added AVSession class becomes registered; actual parent diff.",
+      "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/a3559fa2f504b1035fd04cff680c994c081971af"
+    },
+    {
+      "project": "simple-live-yabi",
+      "commit": "4fcb8b7d7ca996e8797218c3802818239ddb08ed",
+      "paths": [
+        "ohos/entry/src/main/ets/plugins/AVSessionPlugin.ets",
+        "lib/app/services/avsession_service.dart",
+        "ohos/entry/src/main/module.json5"
+      ],
+      "kind": "snapshot",
+      "note": "AVSession/native task code and audioPlayback declaration; preserved-context detach cleanup, no serialization/rollback and swallowed background failures.",
+      "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/4fcb8b7d7ca996e8797218c3802818239ddb08ed"
+    }
+  ],
+  "source_context": "# Treat native background tasks as a lifecycle contract\n\n## Platform difference\n\nDart timers, SSH keepalive packets and a playing widget do not themselves request continued execution from OH.\n\n## Implementation\n\nLocalSend and Pica Comic pair transfer-queue state with native dataTransfer task start/stop. ConnSSH connects SSH lifecycle to a native task and live-view notification. Kazumi adds audio-service integration, the ability background mode, permission and interruption handling together. Simple Live also manages AVSession metadata and play/pause commands. PiliPlus initially supplies a custom plugin, later replaced in its snapshot by an audio-service-based design.\n\n## Applicability\n\nChoose a background mode corresponding to the actual user-visible activity and validate the selected SDK/product requirements. KikoFlu's manifest-only change is one layer, not a full implementation.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nConnSSH returns channel success before its asynchronous native operation finishes; this is not proof of an accepted task. Etohos switches to a location mode/navigation callback: record that implementation without recommending location as a generic keepalive workaround. No reviewed source establishes guaranteed process survival.\n\n## Verification\n\nObserve actual native start/stop results, notifications/session controls, denial, disconnect, interruption and process teardown; verify all resources stop when their owning feature ends.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [AloeSend / LocalSend OH — 61e034bf72](https://github.com/Aloereed/localsend-ohos/commit/61e034bf72d58ee1686ac82f169288ee23cfe891) (diff): `app/ohos/entry/src/main/ets/entryability/DownloadPlugin.ets`, `app/lib/pages/send_page.dart`, `app/lib/pages/progress_page.dart`, `app/ohos/entry/src/main/module.json5`. Source license recorded by the study: Apache-2.0.\n- [Pica Comic OH — 0083f62582](https://github.com/nimmi114514/PicaComic_ohos/commit/0083f62582c59fc33d30e1bc1703e6e06d4e9f02) (diff): `lib/foundation/ohos_background_download.dart`, `lib/network/download.dart`, `ohos/entry/src/main/ets/plugins/background_download/OhosBackgroundDownloadPlugin.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: MIT.\n- [ConnSSH OH — dd6dd9d653](https://github.com/RWPteam/ConnSSH/commit/dd6dd9d6530c01111ca8dc32e208d30880c5f215) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/services/ssh_service.dart`, `lib/main.dart`. Source license recorded by the study: BSD-3-Clause.\n- [Kazumi OH — 0eaba947e1](https://github.com/ErBWs/Kazumi/commit/0eaba947e116e40884066d12750c38d977753950) (diff): `pubspec_overrides.yaml`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/module.json5`, `lib/utils/audio_controller.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — 8afa0d32fe](https://github.com/xuanxuan123xuan/dart_simple_live/commit/8afa0d32fed888bd95d066c21c8368cdbc557ef3) (diff): `simple_live_app/ohos/entry/src/main/ets/plugins/OhosBackgroundPlaybackPlugin.ets`, `simple_live_app/ohos/entry/src/main/ets/plugins/OhosDocumentPlugin.ets`, `simple_live_app/ohos/entry/src/main/ets/plugins/OhosNetworkPlugin.ets`, `simple_live_app/lib/services/ohos_pip_service.dart`, `simple_live_app/ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [PiliPlus OH — 612ec1ff60](https://github.com/dev4harmony/PiliPlus/commit/612ec1ff6029dcf3cc97c38e181ea8c7c414a921) (diff): `lib/plugin/pl_player/controller.dart`, `ohos/entry/src/main/ets/plugins/BackgroundPlugin.ets`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [KikoFlu OH — 729ca608c2](https://github.com/natsuz0ra/KikoFlu_ohos/commit/729ca608c29771836b664491747406efb39ce118) (diff): `ohos/entry/src/main/module.json5`. Source license recorded by the study: GPL-3.0.\n- [Etohos — 1ac26cded6](https://github.com/collaborative-creation/etohos/commit/1ac26cded68de2f11c58ea412cb1df542404cc2f) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `ohos/entry/src/main/module.json5`. Source license recorded by the study: LGPL-3.0.\n- [Etohos — 2d2d40e86d](https://github.com/collaborative-creation/etohos/commit/2d2d40e86df7127aa2c491c6f31adf331d897215) (diff): `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: LGPL-3.0.\n- [Android SSH Codex — fd9395e237](https://github.com/wkj2333666/Android-SSH-Codex/commit/fd9395e237a4cf987c0c7b98aa1ff70e70b70a2d) (diff): `lib/src/connection_keep_alive.dart`, `lib/src/app_controller.dart`, `tool/android/ConnectionService.kt`. Source license recorded by the study: MIT.\n\n## Related knowledge\n\n- [Separate foreground recovery and best-effort saves from background execution](foreground-recovery-and-save-lifetime.md)\n- [Invalidate native lyric sessions and clear OS-facing metadata deliberately](system-lyric-session-and-privacy.md)\n\n## Study provenance\n\n- [ConnSSH OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/connssh.md).\n- [Etohos: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/etohos.md).\n- [Kazumi OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kazumi.md).\n- [KikoFlu OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/kikoflu.md).\n- [AloeSend / LocalSend OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/localsend.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Bujuan Harmony study, feature/new-ui at 74be86f5688164334e348520ff1c6f113f9a0807. Independent 2697a/bujuan fork. No application-level license text identified; README MIT badge is a claim, vendored pinput license only covers that component. No application code copied. Non-shallow clone, 33 reachable commits; selected adaptation and follow-up diffs inspected. Native playback is supplied by external moving Git dependencies, not audited here. Source/diff evidence only, no dependency resolution, build, signing/install, playback/card/background/device testing.\nDeclares audioPlayback and KEEP_BACKGROUND_RUNNING; media service runtime uses external audio_service plugin. No app-owned native task start/stop implementation in host, external plugin lifecycle not inspected; declarations alone not proof of background playback.\n\n2026-10-06 Simple Live yabi main 4fcb8b7d7ca996e8797218c3802818239ddb08ed. Archived legacy Flutter port; README recommends separate ArkTS replacement. Root GPL-3.0 and media-kit component licenses inspected; no app code copied. Source/diff only, no builds/background/player/device/live-service tests. Background start/cleanup exceptions are swallowed; activate ack can succeed without task. AVSession metadata and PLAY precede actual content readiness, event listener starts after activate. Local native package declares pluginClass without tracked OH host implementation; libmpv.so.2 arm64 artifact only, reproducible native build not established.\nPreviously added AVSession class becomes registered; actual parent diff.\nAVSession/native task code and audioPlayback declaration; preserved-context detach cleanup, no serialization/rollback and swallowed background failures.",
+  "previous_document_sha256": "9e82442f5da25a8497a207fd30f6f845340798f3a98ece6cea80011b302cd0cc"
+}

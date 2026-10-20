@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "id": "secure-storage-backend-selection",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/secure-storage-backend-selection.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/secure-storage-backend-selection.md",
+      "sha256": "58f06b8e3d00ab1b70ac86ac911b6e8f89df52f44a58cbd3e58212954e2c1ee6",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/secure-storage-backend-selection.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/secure-storage-backend-selection.json",
+      "sha256": "2a7ed966730f493c2e12706d80a6f461ff158a9d8bc6011cc2f08367977d981c",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "secure-storage-backend-selection",
+    "evidence": [
+      {
+        "project": "ssh-codex",
+        "commit": "44823093e0d9d407332fdc30146fd98621e07b1c",
+        "paths": [
+          "lib/src/profiles/secure_key_value_store.dart",
+          "lib/src/profiles/profile_store.dart",
+          "lib/main.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/wkj2333666/Android-SSH-Codex/commit/44823093e0d9d407332fdc30146fd98621e07b1c"
+      },
+      {
+        "project": "bugaoshan",
+        "commit": "c5ad9721174669e1bbf726b07138db6dc3d08ffc",
+        "paths": [
+          "pubspec.yaml",
+          "lib/providers/secure_storage_provider.dart",
+          "lib/services/database_service.dart",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "lib/services/update_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc"
+      },
+      {
+        "project": "enjoy-plus",
+        "commit": "626944b6d9f6cf4064b58121e89320809b963e0c",
+        "paths": [
+          "lib/utils/token.dart"
+        ],
+        "kind": "diff",
+        "url": "https://gitee.com/Megasu/enjoy_plus_ohos/commit/626944b6d9f6cf4064b58121e89320809b963e0c"
+      },
+      {
+        "project": "nomark",
+        "commit": "f7f107acfeae1a1c0da9c382d68690f1299d4211",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/pages/LoginWebPage.ets",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/f7f107acfeae1a1c0da9c382d68690f1299d4211"
+      },
+      {
+        "project": "nomark",
+        "commit": "8eecb8e390f54e7bafc8ae0db8a4348de4d2d445",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/pages/LoginWebPage.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445"
+      },
+      {
+        "project": "minecraft-box",
+        "commit": "31241419009b80f0b1f6215c34573dc7b0078c1f",
+        "paths": [
+          ".fvmrc",
+          "lib/function/crypto_util.dart",
+          "pubspec.yaml",
+          "lib/server/add_server.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/lxdklp/MCB_OHOS/commit/31241419009b80f0b1f6215c34573dc7b0078c1f"
+      },
+      {
+        "project": "xingmu",
+        "commit": "ab1aef22fe4afaed13bd6b1982a1e7f51f641cc3",
+        "paths": [
+          "lib/features/keyring/domain/keyring_repository.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/w6521939-ops/xingmu-flutter/commit/ab1aef22fe4afaed13bd6b1982a1e7f51f641cc3"
+      },
+      {
+        "project": "toki",
+        "commit": "173696e4d5f26dbeb8f1570e09d58f33e562ed01",
+        "paths": [
+          "plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+          "lib/core/platform/impl/ohos/secure_store_ohos.dart"
+        ],
+        "kind": "snapshot",
+        "url": "https://github.com/WJKLL/Toki-HarmonyOS/blob/173696e4d5f26dbeb8f1570e09d58f33e562ed01/plugins/xiangjugong_ohos/ohos/src/main/ets/channels/XiangJuGongChannelsPlugin.ets",
+        "note": "Custom HUKS AES-256-GCM adapter stores Base64 output in preferences; Dart facade catches read failures as null."
+      },
+      {
+        "project": "petnote",
+        "commit": "cbaa2910dda4798c3bdf7c6ada643b451c30d350",
+        "paths": [
+          "ohos/entry/src/main/ets/plugins/PetNoteAiSecretStorePlugin.ets",
+          "lib/sync/sync_secret_store.dart"
+        ],
+        "kind": "snapshot",
+        "note": "Native secret store is preferences plaintext with flush; name and availability probe do not supply encryption guarantees.",
+        "url": "https://github.com/juren233/PetNote/commit/cbaa2910dda4798c3bdf7c6ada643b451c30d350"
+      },
+      {
+        "project": "petnote",
+        "commit": "e74e136d3927cf86a9a8c09546c5a47d71595beb",
+        "paths": [
+          "lib/sync/sync_service.dart"
+        ],
+        "kind": "diff",
+        "note": "Catches secure-store error and falls back settings key, preserves functionality but not security guarantee.",
+        "url": "https://github.com/juren233/PetNote/commit/e74e136d3927cf86a9a8c09546c5a47d71595beb"
+      },
+      {
+        "project": "operit2",
+        "commit": "9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+        "paths": [
+          "hosts/common/operit-host-native-storage/src/secrets.rs",
+          "hosts/common/operit-host-native-storage/src/lib.rs"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/9e95dd46161f4b3e78a1128a9f439e5418b6411c",
+        "parent_commit": "9ae1e558a66f96d81ff95a499bd39bda7da6c122"
+      }
+    ],
+    "source_context": "# Preserve credential-storage guarantees when selecting an OH backend\n\n## Platform difference\n\nAvailability of a preferences or encryption-shaped API does not establish equivalent protected credential storage on OH.\n\n## Implementation\n\nSSH Codex introduces an explicit SecureKeyValueStore dispatch between Android and OH, and Bugaoshan separately selects its OH secure-storage package. Enjoy Plus stores tokens in ordinary SharedPreferences; Nomark persists session/cookie keys in native preferences. Minecraft Box reaches a constant device-ID fallback on OH and derives deterministic encryption material, with a plaintext-on-error path. Xingmu's unused in-memory keyring module carries an AES label but implements XOR/Base64; it is a negative example, not an OH restriction.\n\n## Applicability\n\nUse the platform implementation whose security properties meet the app's requirements, and audit those properties separately. The reviewed secure-storage package selection is not an audit of its cryptography.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nNever generalize these application shortcuts into required HarmonyOS behavior. The Xingmu study found no construction outside the module, so no claim is made that active credentials pass through it. Preserve distinctions between session convenience storage and secrets.\n\n## Verification\n\nTest persistence and deletion, unavailable backend/error paths, access after restart and application reinstall policy; inspect the actual protected-storage mechanism rather than trusting class or algorithm names.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [Android SSH Codex — 44823093e0](https://github.com/wkj2333666/Android-SSH-Codex/commit/44823093e0d9d407332fdc30146fd98621e07b1c) (diff): `lib/src/profiles/secure_key_value_store.dart`, `lib/src/profiles/profile_store.dart`, `lib/main.dart`. Source license recorded by the study: MIT.\n- [不高山上 / Bugaoshan HarmonyOS — c5ad972117](https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/c5ad9721174669e1bbf726b07138db6dc3d08ffc) (diff): `pubspec.yaml`, `lib/providers/secure_storage_provider.dart`, `lib/services/database_service.dart`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`, `lib/services/update_service.dart`. Source license recorded by the study: AGPL-3.0.\n- [享+社区 / Enjoy Plus — 626944b6d9](https://gitee.com/Megasu/enjoy_plus_ohos/commit/626944b6d9f6cf4064b58121e89320809b963e0c) (diff): `lib/utils/token.dart`. Source license recorded by the study: Apache-2.0.\n- [无印字节 / Bytedance Nomark — f7f107acfe](https://github.com/chawu691/bytedance-nomark/commit/f7f107acfeae1a1c0da9c382d68690f1299d4211) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`, `pubspec.yaml`. Source license recorded by the study: GPL-3.0.\n- [无印字节 / Bytedance Nomark — 8eecb8e390](https://github.com/chawu691/bytedance-nomark/commit/8eecb8e390f54e7bafc8ae0db8a4348de4d2d445) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/pages/LoginWebPage.ets`. Source license recorded by the study: GPL-3.0.\n- [Minecraft Box OH — 3124141900](https://github.com/lxdklp/MCB_OHOS/commit/31241419009b80f0b1f6215c34573dc7b0078c1f) (diff): `.fvmrc`, `lib/function/crypto_util.dart`, `pubspec.yaml`, `lib/server/add_server.dart`. Source license recorded by the study: GPL-3.0.\n- [星幕 AI 漫剧工作室 — ab1aef22fe](https://github.com/w6521939-ops/xingmu-flutter/commit/ab1aef22fe4afaed13bd6b1982a1e7f51f641cc3) (diff): `lib/features/keyring/domain/keyring_repository.dart`. Source license recorded by the study: MIT.\n\n## Related knowledge\n\n- [Preserve transport policy across an OH HTTP adapter change](network-adapter-policy-propagation.md)\n- [Separate distributed device discovery, synchronization and data retrieval](distributed-device-discovery-versus-sync.md)\n\n## Study provenance\n\n- [不高山上 / Bugaoshan HarmonyOS: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/bugaoshan.md).\n- [享+社区 / Enjoy Plus: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/enjoy-plus.md).\n- [Minecraft Box OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/minecraft-box.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n- [Android SSH Codex: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/ssh-codex.md).\n- [星幕 AI 漫剧工作室: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/xingmu.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\nToki OH discovery: Do not endorse this crypto implementation as secure or usable. Source assumes first 16 output bytes form IV and passes HUKS_TAG_IV on decrypt; no explicit GCM AE tag extraction is present, key generation catches all errors, and missing/read/authentication failure are conflated in Dart. Primary protocol comparison: https://github.com/openharmony/docs/blob/master/en/application-dev/security/UniversalKeystoreKit/huks-encryption-decryption-arkts.md describes NONCE and AEAD requirements and shows HUKS_TAG_NONCE/HUKS_TAG_AE_TAG. No round-trip, tamper test, local SDK type check or device observation performed. Consumer guidance requires documented SDK-specific encoding rather than copying the observed assumption. No application-level license identified in pinned tracked files or README; third_party/vyuh_node_flow/LICENSE applies to the vendored component, not the entire app. No application implementation copied into consumer guidance. Validation tier: pinned source/diff and primary-document inspection only.\n\n2026-10-06 PetNote main cbaa2910dda4798c3bdf7c6ada643b451c30d350. No app-level LICENSE tracked; source-only guidance, no implementation copied. AGENTS/README development/build constraints inspected as upstream research data; no upstream setup/submodules or changes. No dependency resolution, builds, RTC provider, device, native dock, secure-store or keyboard tests. Guide corrects absent join-generation/channel/peer authorization guards. Source method pending result set before validation can remain after outer catch; old callback can settle new join. Secure-named native store is preferences plaintext; fallback settings key is not secure storage. Avoid-area patch validates text patterns but skips unsupported inputs with warning, not fail-closed build. Commit device/API/ABI claims unverified.\nNative secret store is preferences plaintext with flush; name and availability probe do not supply encryption guarantees.\nCatches secure-store error and falls back settings key, preserves functionality but not security guarantee.",
+    "previous_document_sha256": "e510fa8e484212806687bbd58f2200b31882deffbc5e9ec7b6d0e60811a946a2",
+    "updates": [
+      {
+        "date": "2026-10-16",
+        "run": "2026-10-16-update-registered-projects.json",
+        "notes": "New NativeFileSecretStore writes raw secret content to profile-local files through unique staging, sync and atomic replacement; Unix private directory/file modes and validated bounded keys provide filesystem controls, not encryption or HUKS/keystore protection. Missing and other read failures differ. Final source search finds class/exports/tests but no selected OH secret-store provider; availability of the exported class does not prove OH registration or active credential protection. No secrets were read and no runtime security audit performed.",
+        "licenses": {
+          "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/history review and local KB integrity; isolated local SQLite mechanism experiment only where recorded; no upstream build/tests or OH/device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: file-secret-store-guarantees",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

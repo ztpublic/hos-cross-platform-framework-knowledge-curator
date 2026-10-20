@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "id": "shared-source-platform-detection",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/shared-source-platform-detection.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/shared-source-platform-detection.md",
+      "sha256": "fe0fb0a302681d415cc6a4f5a2b9581e491925efb2237a8eb39aa8af38563e03",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/shared-source-platform-detection.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/shared-source-platform-detection.json",
+      "sha256": "43e90cd341a0d9627398ce46d56bff1bd1797a2052a46de52f11d0051b62d6f5",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "shared-source-platform-detection",
+    "evidence": [
+      {
+        "project": "piliplus",
+        "commit": "819bc7a2c5b1bb99a0b8f86ef82319d9a7da6993",
+        "paths": [
+          "lib/common/widgets/flutter/text_field/editable_text.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliPlus/commit/819bc7a2c5b1bb99a0b8f86ef82319d9a7da6993"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "a984218732a0c3ae2fef82637842c3588e68e144",
+        "paths": [
+          "pubspec_overrides.ohos.yaml",
+          "tool/configure_flutter_dependencies.dart",
+          "packages/desktop_multi_window_ohos/lib/desktop_multi_window.dart",
+          "lib/plugins/js_runtime_io.dart",
+          "lib/src/rust/rust_external_library_io.dart",
+          "lib/utils/screen_orientation_manager.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/a984218732a0c3ae2fef82637842c3588e68e144"
+      },
+      {
+        "project": "nomark",
+        "commit": "caf912bf8b73c7dac9262c4bd6a6243b43c85c0c",
+        "paths": [
+          "lib/services/platform_services.dart",
+          "ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets",
+          "ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets",
+          "ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c"
+      },
+      {
+        "project": "bujuan",
+        "commit": "ec2a6d1a7ae407e3db1ed50a7741be7f792ce345",
+        "paths": [
+          "plugin/pinput-5.0.2-ohos/lib/src/pinput_state.dart",
+          "plugin/pinput-5.0.2-ohos/HARMONYOS_PATCH.md",
+          "pubspec.yaml"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AnmSleepalone/bujuan-harmony/commit/ec2a6d1a7ae407e3db1ed50a7741be7f792ce345",
+        "note": "Vendored pinput assigns forcePressEnabled=false before old platform switches; README names late-init error. Literal OH enum reference avoided; other gesture/selection switches still need behavioral review."
+      },
+      {
+        "project": "lichess-oh",
+        "commit": "db0e6d67df2ccabd4e2cee41c895d0da5bf052ab",
+        "paths": [
+          "lib/main.dart",
+          "lib/src/app_links_service.dart",
+          "lib/src/model/auth/auth_repository.dart"
+        ],
+        "kind": "diff",
+        "note": "Source explicitly comments dart.library.ohos not set; runtime operatingSystem used elsewhere. Added guidance to verify defines rather than assume OS detection.",
+        "url": "https://github.com/RV64G/harmonyos-next/commit/db0e6d67df2ccabd4e2cee41c895d0da5bf052ab"
+      },
+      {
+        "project": "ssemarket",
+        "commit": "617082cb6bfac75d2c6b78cdfcb469f59d5f46ce",
+        "paths": [
+          "lib/shared/components/transitions/page_transitions.dart"
+        ],
+        "kind": "diff",
+        "note": "Follow-up parent diff removes direct TargetPlatform.ohos symbol after prior change introduced it. Enum string lookup is scoped and should be centralized/tested.",
+        "url": "https://github.com/howtomakeaname/SSEMarket-X/commit/617082cb6bfac75d2c6b78cdfcb469f59d5f46ce"
+      },
+      {
+        "project": "operit2",
+        "commit": "62bd46ebb01b2f27cbf625fafd8092389b7bd7db",
+        "paths": [
+          "tools/build_scripts/common.py",
+          "tools/build_scripts/build_flutter_android.py"
+        ],
+        "note": "Selected parent diff stages non-OH manifests and lock then restores in finally across stock targets. It reads lock after manifest mutation before try, so missing lock can leave staged content. This historical helper is no longer present at current HEAD; no current target-isolation guarantee. Prefer isolated build views or atomic restoration covering every mutation.",
+        "kind": "diff",
+        "url": "https://github.com/AAswordman/Operit2/commit/62bd46ebb01b2f27cbf625fafd8092389b7bd7db"
+      }
+    ],
+    "source_context": "# Avoid fork-only symbols in code compiled by stock Flutter\n\n## Platform difference\n\nA runtime platform guard cannot make an unknown fork-only Dart symbol compile under stock Flutter.\n\n## Implementation\n\nPiliPlus replaces an OH-only TargetPlatform enum reference with its OS abstraction in shared editable-text code. NipaPlay switches Platform.isOhos checks to operatingSystem string checks and provides a helper that copies its OH override file into the active pubspec_overrides.yaml. Nomark keeps its app-owned OH bridge in the native runner; this is a different packaging choice, not proof that stock Flutter builds OH.\n\n## Applicability\n\nUseful when a repository intentionally supports both stock Flutter development/CI and a Flutter OH build. Platform-specific imports and dependency APIs still require review, including web builds where dart:io cannot be imported unconditionally.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\npubspec_overrides.ohos.yaml is a project convention activated by a script, not automatic OS-specific pub resolution. A successfully analyzed common library does not certify OH toolchain support.\n\n## Verification\n\nRun the appropriate analyzer for each supported SDK and verify which override file is actually active in developer and CI environments.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PiliPlus OH — 819bc7a2c5](https://github.com/dev4harmony/PiliPlus/commit/819bc7a2c5b1bb99a0b8f86ef82319d9a7da6993) (diff): `lib/common/widgets/flutter/text_field/editable_text.dart`. Source license recorded by the study: GPL-3.0.\n- [NipaPlay Reload — a984218732](https://github.com/AimesSoft/NipaPlay-Reload/commit/a984218732a0c3ae2fef82637842c3588e68e144) (diff): `pubspec_overrides.ohos.yaml`, `tool/configure_flutter_dependencies.dart`, `packages/desktop_multi_window_ohos/lib/desktop_multi_window.dart`, `lib/plugins/js_runtime_io.dart`, `lib/src/rust/rust_external_library_io.dart`, `lib/utils/screen_orientation_manager.dart`. Source license recorded by the study: MIT.\n- [无印字节 / Bytedance Nomark — caf912bf8b](https://github.com/chawu691/bytedance-nomark/commit/caf912bf8b73c7dac9262c4bd6a6243b43c85c0c) (diff): `lib/services/platform_services.dart`, `ohos/entry/src/main/ets/plugins/NomarkPlatformPlugin.ets`, `ohos/entry/src/main/ets/plugins/GeneratedPluginRegistrant.ets`, `ohos/entry/src/main/ets/entryability/EntryAbility.ets`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Resolve the whole OH plugin graph and its API generation](plugin-graph-source-and-api.md)\n\n## Study provenance\n\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [无印字节 / Bytedance Nomark: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nomark.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Bujuan Harmony study, feature/new-ui at 74be86f5688164334e348520ff1c6f113f9a0807. Independent 2697a/bujuan fork. No application-level license text identified; README MIT badge is a claim, vendored pinput license only covers that component. No application code copied. Non-shallow clone, 33 reachable commits; selected adaptation and follow-up diffs inspected. Native playback is supplied by external moving Git dependencies, not audited here. Source/diff evidence only, no dependency resolution, build, signing/install, playback/card/background/device testing.\nVendored pinput assigns forcePressEnabled=false before old platform switches; README names late-init error. Literal OH enum reference avoided; other gesture/selection switches still need behavioral review.\n\n2026-10-06 Lichess OH prototype harmonyos-next at 3427b720583498e9e1f1980b9aaf6b9097f2daca. GPL-3.0 root and engine component license inspected; no implementation copied. Source/diff only; no build, dependency resolution, emulator/device, OAuth provider, Stockfish execution or push delivery tests. Author device claims in upstream issue https://github.com/lichess-org/mobile/issues/3278 are external reports, not curator verification. Primary OAuth reference https://www.rfc-editor.org/rfc/rfc8252.html reviewed for external user agents, public clients, PKCE and redirect handling. Listener-before-launch, native mailbox, explicit cancellation and single-settlement recommendations correct observed races; source does not fully implement them. Binary presence does not establish reproducible builds or all engine flavors.\nSource explicitly comments dart.library.ohos not set; runtime operatingSystem used elsewhere. Added guidance to verify defines rather than assume OS detection.\n\nSSEMarket-X: No app-root license identified in selected tracked tree; no app code copied. Source/diff review only; no pub resolution, build, runtime, device or accessibility test. External plugin implementations, native binaries and backend services not fully audited.\nFollow-up parent diff removes direct TargetPlatform.ohos symbol after prior change introduced it. Enum string lookup is scoped and should be centralized/tested.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nSelected parent diff stages non-OH manifests and lock then restores in finally across stock targets. It reads lock after manifest mutation before try, so missing lock can leave staged content. This historical helper is no longer present at current HEAD; no current target-isolation guarantee. Prefer isolated build views or atomic restoration covering every mutation.",
+    "previous_document_sha256": "d51716fb2984a7842e6ecc6e539d3895aaf12da541c371b01573bb87e454cb29"
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Retained Flutter-specific API/embedding conditions."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

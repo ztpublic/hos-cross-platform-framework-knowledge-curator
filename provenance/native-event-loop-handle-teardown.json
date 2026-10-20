@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "native-event-loop-handle-teardown",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/native-event-loop-handle-teardown.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/native-event-loop-handle-teardown.md",
+      "sha256": "4378000499e409b0958086cb5d91fac59432c374ecca8489cab7d79bc53fd1f3",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/native-event-loop-handle-teardown.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/native-event-loop-handle-teardown.json",
+      "sha256": "79cb7ed83e15d7a61d07fe0d1a44236cb925e29202ad972af9dbd1f4f1fdea59",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "native-event-loop-handle-teardown",
+    "source_context": "Selected diff removes duplicated initializer helpers and uses matched media_kit Initializer for WebP conversion. MpvHandleReleaser marks released once, detaches events, optionally quits, then schedules destroy after five seconds; creation continuation releases a handle returned after cancellation. Shutdown callback completes once and uses same release owner. Tests inspect scheduling order/idempotence only and were not executed. A five-second timer is a scoped source workaround, not proof all native event-loop users drained. Later app lock moves media_kit to a handle-destruction-fix fork, whose internals were not fetched/audited; do not claim crash fixed or all forks safe. PiliNara copied this exact patch (stable patch IDs equal), not independent corroboration. Consumer recommends explicit event-loop quiescence where available and labels a fixed delay as heuristic.",
+    "evidence": [
+      {
+        "project": "piliplus",
+        "commit": "e8087655de1b192a3b7dc752769adf9257c9b037",
+        "parent_commit": "5b6bde563be8bc318b1e876556c9ad4b854d5ea2",
+        "paths": [
+          "lib/plugin/pl_player/utils/mpv_handle_releaser.dart",
+          "lib/plugin/pl_player/widgets/mpv_convert_webp.dart",
+          "lib/media_kit_adapt/media_kit_adapt.dart",
+          "test/plugin/pl_player/utils/mpv_handle_releaser_test.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliPlus/commit/e8087655de1b192a3b7dc752769adf9257c9b037"
+      },
+      {
+        "project": "pilinara",
+        "commit": "c7825038277d4b2326ad82fd923b3bd82ef27237",
+        "parent_commit": "a5dec3467fec7b2cef860d325e205074afb8f3f9",
+        "paths": [
+          "lib/plugin/pl_player/utils/mpv_handle_releaser.dart",
+          "lib/plugin/pl_player/widgets/mpv_convert_webp.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliNara/commit/c7825038277d4b2326ad82fd923b3bd82ef27237"
+      }
+    ],
+    "updates": [
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "Selected diff removes duplicated initializer helpers and uses matched media_kit Initializer for WebP conversion. MpvHandleReleaser marks released once, detaches events, optionally quits, then schedules destroy after five seconds; creation continuation releases a handle returned after cancellation. Shutdown callback completes once and uses same release owner. Tests inspect scheduling order/idempotence only and were not executed. A five-second timer is a scoped source workaround, not proof all native event-loop users drained. Later app lock moves media_kit to a handle-destruction-fix fork, whose internals were not fetched/audited; do not claim crash fixed or all forks safe. PiliNara copied this exact patch (stable patch IDs equal), not independent corroboration. Consumer recommends explicit event-loop quiescence where available and labels a fixed delay as heuristic.",
+        "licenses": {
+          "piliplus": "GPL-3.0",
+          "pilinara": "GPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Single-contract entry retained.",
+    "Generalized runtime prose where the native contract does not depend on Flutter."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}

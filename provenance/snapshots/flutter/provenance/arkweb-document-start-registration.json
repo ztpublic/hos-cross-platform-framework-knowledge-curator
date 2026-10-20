@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "arkweb-document-start-registration",
+  "evidence": [
+    {
+      "project": "operit2",
+      "commit": "de5a48d6fd0f064fd83586974f28b6aa76bac7a3",
+      "paths": [
+        "apps/flutter/app/lib/ui/features/packages/screens/ToolPkgComposeDslWebView.dart",
+        "apps/flutter/thirdparty/webview_all_ohos/lib/src/ohos_webview_controller.dart",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/OhosWebView.ets",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/WebViewPlatformView.ets",
+        "apps/flutter/thirdparty/webview_all_ohos/ohos/src/main/ets/com.abandoft.webview_all_ohos/WebViewUserScripts.ets"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/AAswordman/Operit2/commit/de5a48d6fd0f064fd83586974f28b6aa76bac7a3"
+    }
+  ],
+  "source_context": "Initial source changes replace page-finished bridge installation with receiver-first, serialized document-start registration before navigation. ArkUI script state is acknowledged via FrameCallback.onIdle; pending frame callbacks/host waiters reject on disposal. This is an implementation observation, not proof that the chosen frame barrier guarantees injection ordering on every SDK. Source uses wildcard scriptRules and shared frame wrappers; origin restrictions, timeout/recoverable queue policy and current-document revocation are recommended hardening rather than established source behavior. No ArkWeb execution performed.",
+  "updates": [
+    {
+      "date": "2026-10-09",
+      "run": "2026-10-09-update-registered-projects.json",
+      "notes": "Initial source changes replace page-finished bridge installation with receiver-first, serialized document-start registration before navigation. ArkUI script state is acknowledged via FrameCallback.onIdle; pending frame callbacks/host waiters reject on disposal. This is an implementation observation, not proof that the chosen frame barrier guarantees injection ordering on every SDK. Source uses wildcard scriptRules and shared frame wrappers; origin restrictions, timeout/recoverable queue policy and current-document revocation are recommended hardening rather than established source behavior. No ArkWeb execution performed.",
+      "licenses": {
+        "operit2": "AGPL-3.0 (root); third-party components not fully audited."
+      },
+      "validation_tier": "source/history inspection; no dependency resolution, build, browser or device execution"
+    }
+  ]
+}

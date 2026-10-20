@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "id": "embedding-patches-and-dependency-order",
+  "evidence": [
+    {
+      "project": "mr",
+      "commit": "0de0a227c90bfe20f067b9723fb9ccf824d01ef8",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/0de0a227c90bfe20f067b9723fb9ccf824d01ef8"
+    },
+    {
+      "project": "mr",
+      "commit": "efce10363b979cc4effe4238ba57328952ed02f9",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/efce10363b979cc4effe4238ba57328952ed02f9"
+    },
+    {
+      "project": "mr",
+      "commit": "a1b5192bc97db50677bb6653aa890323c11f889f",
+      "paths": [
+        ".github/workflows/build.yml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/DandanLLab/mr/commit/a1b5192bc97db50677bb6653aa890323c11f889f"
+    },
+    {
+      "project": "picacomic",
+      "commit": "8937bf2ed2bf2759e81d20dba51ed64b82f9f832",
+      "paths": [
+        "tool/patch_ohos_flutter_har.dart",
+        "tool/build_ohos_hap.sh",
+        "lib/utils/status_bar_tap.dart"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/nimmi114514/PicaComic_ohos/commit/8937bf2ed2bf2759e81d20dba51ed64b82f9f832"
+    },
+    {
+      "project": "zhiji",
+      "commit": "9173c74c57fadb591b66c4f4cf21aa955300076e",
+      "paths": [
+        "ohos/hvigorconfig.ts",
+        "ohos/oh-package.json5",
+        "ohos/entry/oh-package.json5",
+        "ohos/AppScope/app.json5",
+        "ohos/build-profile.json5"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9173c74c57fadb591b66c4f4cf21aa955300076e"
+    },
+    {
+      "project": "flclash",
+      "commit": "1ea6002b9c2a9539e526d7e2cc118a6a2ef88dfb",
+      "paths": [
+        "lib/providers/action.dart",
+        "ohos/entry/src/main/ets/plugins/AppPlugin.ets",
+        "ohos/entry/src/main/ets/entryability/TempAbility.ets",
+        "pubspec.yaml",
+        ".github/flutter_ohos.patch",
+        ".github/workflows/build.yaml"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/tljk/FlClash-ohos/commit/1ea6002b9c2a9539e526d7e2cc118a6a2ef88dfb"
+    },
+    {
+      "project": "petnote",
+      "commit": "cbaa2910dda4798c3bdf7c6ada643b451c30d350",
+      "paths": [
+        "tooling/ohos-hvigor-plugin/src/plugin/flutter-hvigor-plugin.ts",
+        "ohos/hvigorfile.ts"
+      ],
+      "kind": "snapshot",
+      "note": "Controlled plugin injects patch before build path and later dependency materialization; matches native wrapper geometry to stable copies/scalar updates, clears related outputs. Mismatch warns/skips, guide recommends failing unexpected input.",
+      "url": "https://github.com/juren233/PetNote/commit/cbaa2910dda4798c3bdf7c6ada643b451c30d350"
+    },
+    {
+      "project": "operit2",
+      "commit": "675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4",
+      "paths": [
+        "tools/build_scripts/build_flutter_ohos.py"
+      ],
+      "note": "Current patch rebuilds temporary HAR only when required member and old fragment found; stages engine HAR then clears exact unpacked package cache. This is pinned scoped patch machinery, not endorsement of all replacement behaviors; only entrypoints and guards read, not every replacement.",
+      "kind": "snapshot",
+      "url": "https://github.com/AAswordman/Operit2/commit/675ccd0fefe86a9efb70c6b90c9ab7d41c5f4ff4"
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "899ac2fefe76ba09d08f11a6df4804bcb4b25754",
+      "paths": [
+        "ohos/flutter/patches/embedding/color-mode-update.patch"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/899ac2fefe76ba09d08f11a6df4804bcb4b25754",
+      "note": "Historical patch suppresses recovery restart on unhandled error; later removed in 76924382. Retain first-fault lesson without recommending permanent blanket recovery disablement."
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "3d7e7cedaf21c327d369cac7a605a0179dd849b4",
+      "paths": [
+        "ohos/flutter/patches/plugins/sqflite-main-thread-channel.patch"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/3d7e7cedaf21c327d369cac7a605a0179dd849b4",
+      "note": "Historical workaround removes worker/raw-message path and uses main-thread MethodChannel, potentially reintroducing large decode freezes. Patch later removed in a00c490c; not current recommendation."
+    },
+    {
+      "project": "bugaoshan",
+      "commit": "b2f7bade4c8d1e87be515aee3a509aba3f6226c8",
+      "paths": [
+        "ohos/hvigorfile.ts"
+      ],
+      "kind": "diff",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/b2f7bade4c8d1e87be515aee3a509aba3f6226c8",
+      "note": "Removes prior source overlays/custom bootstrap, tests and toolchain lock, retains regular host integration. Deleted paths are recorded in the run manifest; evidence pins surviving changed Hvigor integration."
+    }
+  ],
+  "source_context": "# Version and verify source patches to the OH embedding and native plugins\n\n## Platform difference\n\nAn embedding/plugin compiled against one OH API generation may need targeted changes for another; patch timing matters when sources are downloaded or generated during the build.\n\n## Implementation\n\nMR adds compatibility replacements for keyboard/window APIs, then moves patch application after native dependencies become available. It later patches WebView API signatures as a second compatibility layer. Pica Comic matches different embedding source layouts and patches both project HARs and installed copies for its viewport workaround. Zhiji moves from direct HAR declarations to flutter-hvigor-plugin source injection for its selected toolchain. FlClash patches its selected Flutter OH tooling to package NativeAssetsManifest.json while moving SQLite packaging to native-asset hooks; adopting hooks still required checking their OH build integration.\n\n## Applicability\n\nThese are source-version-specific mechanisms. Modern source injection and older manual HAR wiring should not be mixed without understanding the generated build graph.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nA replacement constant or removed call may reduce semantics while making compilation possible. Patching a downloaded cache without recording the input/replacement is not reproducible. Do not treat a text replacement matching nothing as successful.\n\n## Verification\n\nRecord input revisions and patch match counts, apply after dependencies exist, inspect the resulting source, rebuild and test affected keyboard/window/WebView behavior after every SDK change.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [MR — 0de0a227c9](https://github.com/DandanLLab/mr/commit/0de0a227c90bfe20f067b9723fb9ccf824d01ef8) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [MR — efce10363b](https://github.com/DandanLLab/mr/commit/efce10363b979cc4effe4238ba57328952ed02f9) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [MR — a1b5192bc9](https://github.com/DandanLLab/mr/commit/a1b5192bc97db50677bb6653aa890323c11f889f) (diff): `.github/workflows/build.yml`. Source license recorded by the study: MIT.\n- [Pica Comic OH — 8937bf2ed2](https://github.com/nimmi114514/PicaComic_ohos/commit/8937bf2ed2bf2759e81d20dba51ed64b82f9f832) (diff): `tool/patch_ohos_flutter_har.dart`, `tool/build_ohos_hap.sh`, `lib/utils/status_bar_tap.dart`. Source license recorded by the study: MIT.\n- [知己油耗 / Zhiji Fuel Consumption — 9173c74c57](https://github.com/LianbinZhou/zhiji_oil_consumption/commit/9173c74c57fadb591b66c4f4cf21aa955300076e) (diff): `ohos/hvigorconfig.ts`, `ohos/oh-package.json5`, `ohos/entry/oh-package.json5`, `ohos/AppScope/app.json5`, `ohos/build-profile.json5`. Source license recorded by the study: Apache-2.0.\n- [FlClash OH — 1ea6002b9c](https://github.com/tljk/FlClash-ohos/commit/1ea6002b9c2a9539e526d7e2cc118a6a2ef88dfb) (diff): `lib/providers/action.dart`, `ohos/entry/src/main/ets/plugins/AppPlugin.ets`, `ohos/entry/src/main/ets/entryability/TempAbility.ets`, `pubspec.yaml`, `.github/flutter_ohos.patch`, `.github/workflows/build.yaml`. Source license recorded by the study: GPL-3.0.\n\n## Related knowledge\n\n- [Pin the OH build inputs and distinguish analysis, packaging and execution](build-toolchain-and-evidence-tiers.md)\n- [Keep viewport scaling and Flutter layout state coherent across native resizing](viewport-scale-and-layout-lifetime.md)\n\n## Study provenance\n\n- [FlClash OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/flclash.md).\n- [MR: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/mr.md).\n- [Pica Comic OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/picacomic.md).\n- [知己油耗 / Zhiji Fuel Consumption: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/zhiji.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 PetNote main cbaa2910dda4798c3bdf7c6ada643b451c30d350. No app-level LICENSE tracked; source-only guidance, no implementation copied. AGENTS/README development/build constraints inspected as upstream research data; no upstream setup/submodules or changes. No dependency resolution, builds, RTC provider, device, native dock, secure-store or keyboard tests. Guide corrects absent join-generation/channel/peer authorization guards. Source method pending result set before validation can remain after outer catch; old callback can settle new join. Secure-named native store is preferences plaintext; fallback settings key is not secure storage. Avoid-area patch validates text patterns but skips unsupported inputs with warning, not fail-closed build. Commit device/API/ABI claims unverified.\nControlled plugin injects patch before build path and later dependency materialization; matches native wrapper geometry to stable copies/scalar updates, clears related outputs. Mismatch warns/skips, guide recommends failing unexpected input.\n\nOperit2 main: AGPL-3.0 root license; vendored plugin component licenses not fully audited; no application code copied. Screened OH-message and relevant path histories, selected actual parent diffs and native/Dart/Rust/build snapshots. No complete delta or browser/tool capability/security audit, no upstream scripts executed, dependency resolution/build/device/provider/runtime behavior unverified.\nCurrent patch rebuilds temporary HAR only when required member and old fragment found; stages engine HAR then clears exact unpacked package cache. This is pinned scoped patch machinery, not endorsement of all replacement behaviors; only entrypoints and guards read, not every replacement.\n\n2026-10-08 incremental update: bugaoshan 90706b12432711cc48f75ed70864708f15adaf35; registry license AGPL-3.0. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+  "previous_document_sha256": "dfd3fa44394a3a22e749d01e701278dce37bd71373599431bfcd0983a5d412ef"
+}

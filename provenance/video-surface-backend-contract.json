@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "id": "video-surface-backend-contract",
+  "sources": [
+    {
+      "collection": "flutter",
+      "original_path": "knowledge/video-surface-backend-contract.md",
+      "snapshot": "provenance/snapshots/flutter/knowledge/video-surface-backend-contract.md",
+      "sha256": "dd848c16f989152874fbc03223cc104c2e84738e3707d6287ce0e26fb6d6318f",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter",
+      "original_path": "provenance/video-surface-backend-contract.json",
+      "snapshot": "provenance/snapshots/flutter/provenance/video-surface-backend-contract.json",
+      "sha256": "d9a3e7bacc3553701f153873103aad77ce4ee1e74bb5097d1ea2c1c3db94c840",
+      "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
+      "license": "No database-level license found; upstream project license context retained in original provenance.",
+      "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "video-surface-backend-contract",
+    "evidence": [
+      {
+        "project": "piliplus",
+        "commit": "d2ec55dcc5ff03d781e1c23a35b410d951d1d48a",
+        "paths": [
+          "lib/plugin/pl_player/view.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliPlus/commit/d2ec55dcc5ff03d781e1c23a35b410d951d1d48a"
+      },
+      {
+        "project": "simple-live",
+        "commit": "4fbc6454348333b2f57425acd1020272d4c70382",
+        "paths": [
+          "simple_live_app/lib/modules/live_room/player/ohos_video_player.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/xuanxuan123xuan/dart_simple_live/commit/4fbc6454348333b2f57425acd1020272d4c70382"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "400573949c3b8405ca4f087d80570ed0817425c8",
+        "paths": [
+          "lib/main.dart",
+          "lib/player_abstraction/erika_player_adapter.dart",
+          "lib/player_abstraction/player_factory.dart",
+          "lib/settings/pages/player_settings_content.dart",
+          "lib/utils/player_kernel_manager.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/400573949c3b8405ca4f087d80570ed0817425c8"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "181bf77691df7925b2b07cc09dc25f20fc08cd08",
+        "paths": [
+          "ohos/entry/src/main/cpp/CMakeLists.txt",
+          "cpp_native/CMakeLists.txt",
+          "lib/plugins/js_runtime_ohos.dart",
+          "lib/cpp_native/native_library.dart",
+          "lib/src/rust/rust_external_library_io.dart",
+          "rust/src/api/torrent.rs",
+          "packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets",
+          "lib/danmaku_next/next2_platform_support.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "36a57063b9e9c34c055d077042ec49764fafb1b6",
+        "paths": [
+          "lib/utils/decoder_manager.dart",
+          "test/decoder_manager_platform_policy_test.dart",
+          "tool/ohos_mdk_smoke.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/36a57063b9e9c34c055d077042ec49764fafb1b6"
+      },
+      {
+        "project": "simple-live-yabi",
+        "commit": "a3559fa2f504b1035fd04cff680c994c081971af",
+        "paths": [
+          "media-kit/media_kit_video/lib/src/video_controller/ohos_video_controller/real.dart"
+        ],
+        "kind": "diff",
+        "note": "Removes seek on surface update, avoiding backend seeking live source during output reattachment. Device probe failure defaults to physical device, not proof of emulator support.",
+        "url": "https://github.com/yabi-zzh/simple-live-ohos/commit/a3559fa2f504b1035fd04cff680c994c081971af"
+      },
+      {
+        "project": "nipaplay",
+        "commit": "a64be1fdefea833dfffd5464672eed1e9495e198",
+        "paths": [
+          "lib/player_abstraction/mdk_player_adapter_io.dart",
+          "packages/fvp-0.37.3/lib/src/video_player_mdk.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/commit/a64be1fdefea833dfffd5464672eed1e9495e198",
+        "note": "Adapts callback-versus-stream status APIs, cancels listener, uses Future.sync for disposal and returns/awaits asynchronous wrapper disposal. Source coalesces disposeAsync. No native MDK resource-release test was run."
+      },
+      {
+        "project": "piliplus",
+        "commit": "a6a6600d8035d2e6bb219b9b8b675e994b2fab3b",
+        "parent_commit": "ebe1195d899aea59ca625e8773951a38868e52b5",
+        "paths": [
+          "lib/plugin/pl_player/controller.dart",
+          "lib/plugin/pl_player/view/view.dart",
+          "lib/plugin/pl_player/utils/player_rebuild_queue.dart",
+          "lib/pages/video/controller.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliPlus/commit/a6a6600d8035d2e6bb219b9b8b675e994b2fab3b"
+      },
+      {
+        "project": "pilinara",
+        "commit": "4ef89942e5fd331880e9482ebb50b3bc1385f4b4",
+        "parent_commit": "f4f275343ef16561c64bdcc609015c17c7a62711",
+        "paths": [
+          "lib/media_kit_adapt/simple_video.dart",
+          "lib/plugin/pl_player/controller.dart",
+          "lib/services/pip_overlay_service.dart",
+          "lib/services/live_pip_overlay_service.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliNara/commit/4ef89942e5fd331880e9482ebb50b3bc1385f4b4"
+      },
+      {
+        "project": "piliplus",
+        "commit": "e8087655de1b192a3b7dc752769adf9257c9b037",
+        "parent_commit": "5b6bde563be8bc318b1e876556c9ad4b854d5ea2",
+        "paths": [
+          "lib/plugin/pl_player/widgets/mpv_convert_webp.dart",
+          "lib/plugin/pl_player/utils/mpv_handle_releaser.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliPlus/commit/e8087655de1b192a3b7dc752769adf9257c9b037"
+      },
+      {
+        "project": "pilinara",
+        "commit": "a5dec3467fec7b2cef860d325e205074afb8f3f9",
+        "parent_commit": "338eefee14e5b12110586ff8c18acf61e424ed83",
+        "paths": [
+          "lib/plugin/pl_player/controller.dart",
+          "lib/plugin/pl_player/models/ohos_hdr_output.dart"
+        ],
+        "kind": "diff",
+        "url": "https://github.com/dev4harmony/PiliNara/commit/a5dec3467fec7b2cef860d325e205074afb8f3f9"
+      }
+    ],
+    "source_context": "# Keep video rendering consistent with the selected OH backend\n\n## Platform difference\n\nA media backend can need a particular texture/native-window integration; apparently equivalent Flutter wrappers can change whether frames appear.\n\n## Implementation\n\nPiliPlus bypasses a nested Transform/FittedBox path on OH after a reported matrix-related black screen. Simple Live reverts a direct Texture experiment and restores VideoPlayer. NipaPlay selects Erika/FVP-MDK paths, supplies a TextureRegistry-to-OHNativeWindow bridge, and leaves another renderer unavailable until its own native bridge exists. Its decoder list explicitly adds OH while retaining software candidates.\n\n## Applicability\n\nApply rendering workarounds only to the relevant backend/embedding versions. The projects choose different working sets; NipaPlay skipping MediaKit does not invalidate PiliPlus' different integration.\n\nThese observations apply to the pinned project revisions below, studied on 2026-09-30 and backfilled on 2026-10-06. Unspecified SDK/device compatibility remains unknown; this is not a fresh upstream assessment.\n\n## Pitfalls and limitations\n\nPlayer initialization or a selected hardware decoder label is not proof of a rendered or hardware-decoded frame. Bypassing the plugin widget can omit required lifecycle or surface behavior.\n\n## Verification\n\nTest actual first frames, resize/orientation, disposal/recreation, backend switching and codec fallback; collect native decoder evidence before making hardware-acceleration claims.\n\nEvidence tier: historical source/diff studies, with commit and path existence rechecked in local Git during this backfill. No application build, dependency resolution, signing, installation or device execution was performed. Proposed checks above are acceptance criteria, not completed tests.\n\n## Pinned evidence\n\n- [PiliPlus OH — d2ec55dcc5](https://github.com/dev4harmony/PiliPlus/commit/d2ec55dcc5ff03d781e1c23a35b410d951d1d48a) (diff): `lib/plugin/pl_player/view.dart`. Source license recorded by the study: GPL-3.0.\n- [Simple Live OH (maintained stable port) — 4fbc645434](https://github.com/xuanxuan123xuan/dart_simple_live/commit/4fbc6454348333b2f57425acd1020272d4c70382) (diff): `simple_live_app/lib/modules/live_room/player/ohos_video_player.dart`. Source license recorded by the study: GPL-3.0.\n- [NipaPlay Reload — 400573949c](https://github.com/AimesSoft/NipaPlay-Reload/commit/400573949c3b8405ca4f087d80570ed0817425c8) (diff): `lib/main.dart`, `lib/player_abstraction/erika_player_adapter.dart`, `lib/player_abstraction/player_factory.dart`, `lib/settings/pages/player_settings_content.dart`, `lib/utils/player_kernel_manager.dart`. Source license recorded by the study: MIT.\n- [NipaPlay Reload — 181bf77691](https://github.com/AimesSoft/NipaPlay-Reload/commit/181bf77691df7925b2b07cc09dc25f20fc08cd08) (diff): `ohos/entry/src/main/cpp/CMakeLists.txt`, `cpp_native/CMakeLists.txt`, `lib/plugins/js_runtime_ohos.dart`, `lib/cpp_native/native_library.dart`, `lib/src/rust/rust_external_library_io.dart`, `rust/src/api/torrent.rs`, `packages/fvp-0.37.3/ohos/src/main/ets/components/plugin/FvpPlugin.ets`, `lib/danmaku_next/next2_platform_support.dart`. Source license recorded by the study: MIT.\n- [NipaPlay Reload — 36a57063b9](https://github.com/AimesSoft/NipaPlay-Reload/commit/36a57063b9e9c34c055d077042ec49764fafb1b6) (diff): `lib/utils/decoder_manager.dart`, `test/decoder_manager_platform_policy_test.dart`, `tool/ohos_mdk_smoke.dart`. Source license recorded by the study: MIT.\n\n## Related knowledge\n\n- [Observe native playback events instead of inferring success from Dart intent](native-playback-state-observation.md)\n- [Keep viewport scaling and Flutter layout state coherent across native resizing](viewport-scale-and-layout-lifetime.md)\n\n## Study provenance\n\n- [NipaPlay Reload: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/nipaplay.md).\n- [PiliPlus OH: original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/piliplus.md).\n- [Simple Live OH (maintained stable port): original study and project-specific limitations](../../../../../flutter-projects-for-oh/analysis/projects/simple-live.md).\n\nThis entry synthesizes the existing study; the recorded source revisions were not updated during backfill.\n\n2026-10-06 Simple Live yabi main 4fcb8b7d7ca996e8797218c3802818239ddb08ed. Archived legacy Flutter port; README recommends separate ArkTS replacement. Root GPL-3.0 and media-kit component licenses inspected; no app code copied. Source/diff only, no builds/background/player/device/live-service tests. Background start/cleanup exceptions are swallowed; activate ack can succeed without task. AVSession metadata and PLAY precede actual content readiness, event listener starts after activate. Local native package declares pluginClass without tracked OH host implementation; libmpv.so.2 arm64 artifact only, reproducible native build not established.\nRemoves seek on surface update, avoiding backend seeking live source during output reattachment. Device probe failure defaults to physical device, not proof of emulator support.\n\n2026-10-08 incremental update: nipaplay adc9bb55852b89b5f89fd4e5228ceb6713406c18; registry license MIT. Source and parent-diff inspection only. All newly reachable commits were enumerated and path/behavior triaged, including merged branches; selected platform contracts and their later changes were inspected in depth. No app code copied, dependency resolution, upstream scripts, submodules, application tests/build, signing, installation or device execution. Guidance generalizes ownership/error contracts; proposed acceptance checks are not executed results. External dependency internals are unverified unless explicitly noted in evidence.",
+    "previous_document_sha256": "e91a75f667d629d6d715b14b80ec853d050ac720978c7f6432c9aeaf236f7c2a",
+    "updates": [
+      {
+        "date": "2026-10-15",
+        "run": "2026-10-15-update-registered-projects.json",
+        "notes": "Final HDR follow-up adds PlayerRebuildQueue shared with source loading, compares desired state at execution time, retains retryPending after failure, restores progress/rate/pause state, publishes controller generation and later playerRebuilt event; Video and SubtitleView generation keys replace init-only subscriptions. No native surface timing tested. PiP limitation is scoped to this chosen embedding/backend.",
+        "licenses": {
+          "piliplus": "GPL-3.0"
+        },
+        "validation_tier": "live Git/source history and local KB integrity only; no dependency resolution, build, browser or physical-device tests"
+      },
+      {
+        "date": "2026-10-16",
+        "run": "2026-10-16-discover-pilinara.json",
+        "notes": "Custom SimpleVideo originally adapts upstream texture renderer to separate width/height streams and nullable dimensions. Later fix listens to controller notifier and chooses OhosPlatformVideo when actual OhosVideoController.usePlatformView is true, instead of requiring texture ID. In-app VOD/live overlays also select texture path through same player rebuild queue, restoring on exit; queue reevaluates applied/desired state, has retryPending and dead-owner guard. Lightweight renderer source still subscribes once in initState; generic acceptance criteria require generation/rebind on controller replacement rather than claiming this file implements didUpdateWidget. Fork retains shared upstream ancestry; app-specific rendering integration adds selected evidence, not independent confirmation of copied native shell behavior.",
+        "licenses": {
+          "pilinara": "GPL-3.0 (root); third-party packages separately licensed; not fully audited"
+        },
+        "validation_tier": "pinned source, actual parent diffs and source-integrity/KB checks only; no dependency resolution, application tests/build or physical-device execution"
+      },
+      {
+        "date": "2026-10-19",
+        "run": "2026-10-19-update-registered-projects.json",
+        "notes": "Added pointer to distinct custom native-handle/event-loop teardown contract; later same-view in-app PiP policy can preserve platform-view HDR rather than forcing a rebuild. Widget/decoder success still distinct from native release/first-frame evidence.",
+        "licenses": {
+          "piliplus": "GPL-3.0",
+          "pilinara": "GPL-3.0 (root); third-party components not fully audited."
+        },
+        "validation_tier": "pinned source/parent diffs and local knowledge integrity only; no upstream tests, native build or device execution"
+      }
+    ]
+  },
+  "transformations": [
+    "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
+    "Separated independently actionable subsections: flutter-player-async-teardown, flutter-player-surface-reconstruction, flutter-native-video-output-selection",
+    "Retained Flutter-specific API/embedding conditions."
+  ],
+  "limitations": [
+    "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",
+    "PC validation not run; common classification does not claim implementation in all frameworks."
+  ]
+}
