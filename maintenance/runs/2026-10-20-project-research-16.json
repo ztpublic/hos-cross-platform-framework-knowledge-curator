@@ -1,0 +1,89 @@
+{
+  "mode": "discover",
+  "outcome": "exhausted",
+  "source_ids": [],
+  "entries_before": 187,
+  "entries_after": 187,
+  "query_families": [
+    "GitHub repository search by recency and topic across the five curated frameworks",
+    "Gitee and GitCode project searches for HarmonyOS PC ports",
+    "OpenHarmonyPCDeveloper organization and finished-HAP ports",
+    "Remaining candidate source screening"
+  ],
+  "candidates_screened": [
+    {
+      "project": "Tencent-TDS/KuiklyUI",
+      "framework": "kotlin-multiplatform",
+      "disposition": "analyzed",
+      "reason": "Added host-integration and resize-sync entries in the preceding batch."
+    },
+    {
+      "project": "FiveHair/pure_live",
+      "framework": "flutter",
+      "disposition": "analyzed",
+      "reason": "Added form-factor, versioned-so and TargetPlatform entries in the preceding batch."
+    },
+    {
+      "project": "HM-U3/vectorcraft-harmonyos",
+      "framework": "other",
+      "disposition": "rejected",
+      "reason": "ArkWeb/WASM port of a Rust engine; outside the five curated framework categories, so no framework-specific entry is warranted."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_nixnote2_electron",
+      "framework": "electron",
+      "disposition": "rejected",
+      "reason": "Finished Electron HAP using standard dialog/fs/clipboard IPC; its host, packaging and platform-gating mechanisms are already represented."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_kdesvn",
+      "framework": "electron",
+      "disposition": "rejected",
+      "reason": "Finished Electron HAP; app-specific SVN workflow and the same resfile/packaging contract."
+    },
+    {
+      "project": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+      "framework": "electron",
+      "disposition": "rejected",
+      "reason": "App-specific media client with LFS assets; no distinct PC integration mechanism beyond existing entries."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_markdownify",
+      "framework": "electron",
+      "disposition": "rejected",
+      "reason": "Finished MarkText HAP whose engine libraries are LFS pointers and whose main process is minified."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_QElectroTech",
+      "framework": "qt",
+      "disposition": "rejected",
+      "reason": "Host-only snapshot without the external business library; cannot ground a distinct Qt mechanism."
+    },
+    {
+      "project": "baochao-sxiaofan/kmp-ohos-bridge",
+      "framework": "kotlin-multiplatform",
+      "disposition": "rejected",
+      "reason": "No reviewable source content in the repository snapshot."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "rejected",
+      "reason": "Desktop casting client for external OH devices, not an application adapted to run on OH PC."
+    }
+  ],
+  "added_entries": [],
+  "extended_entries": [],
+  "split_entries": [],
+  "scope_note": "No further framework-level project with a distinct, source-backed mechanism was found. Remaining candidates are app-specific, incomplete, empty, or outside the five curated framework categories (ArkWeb/WASM, Python, native C++/Rust).",
+  "limitations": [
+    "Registry search is not mathematically exhaustive; private repositories, unindexed forks and newly published projects may exist.",
+    "No build, install or device run was performed during discovery.",
+    "The judgement is limited to the five supported framework categories and the evidence available at the recorded revisions."
+  ],
+  "verification": [
+    "kb.py check -> OK: 187 entries; metadata, provenance hashes, links and CSV index agree",
+    "Final GitHub recency/topic sweep reviewed; no new qualifying project",
+    "Gitee/GitCode searches and remaining candidate READMEs/source screened"
+  ]
+}
