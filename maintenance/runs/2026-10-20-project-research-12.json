@@ -1,0 +1,62 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "ohos-joplin"
+  ],
+  "entries_before": 178,
+  "entries_after": 180,
+  "query_families": [
+    "React Native/RNOH PC applications",
+    "GitCode OpenHarmony PC finished-HAP ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_joplin",
+      "framework": "react-native",
+      "disposition": "analyzed",
+      "reason": "RNOH HAP with offline bundle/asset/font providers, vendored local HARs and a documented missing-ReactCommon fix."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_kdesvn",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished Electron HAP; overlaps existing resfile/packaging findings."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Checkout incomplete; only README clipboard/font known issues reviewed."
+    },
+    {
+      "project": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "App-specific Electron port with LFS assets; not source-reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_QElectroTech",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Host-only snapshot without the business .so."
+    }
+  ],
+  "added_entries": [
+    "rnoh-offline-bundle-and-fonts",
+    "rnoh-har-reactcommon-extraction"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is AGPL-3.0-or-later; only generalized mechanisms were recorded and no source code was copied.",
+    "The repository was not cloned because its large assets are LFS-backed; evidence came from raw files at the recorded commit.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 180 entries",
+    "kb.py check -> OK: 180 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for offline bundle/font and ReactCommon terms",
+    "git diff review before commit"
+  ]
+}

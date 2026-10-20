@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-har-reactcommon-extraction",
+  "sources": [
+    {
+      "collection": "ohos-joplin",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/ohos-joplin/README.OpenHarmony_CN.md",
+      "sha256": "5fa6f52720a906fb8a170e5eb70c528c0c4846fe4e1dd41c0f40cacce941f58d",
+      "revision": "73046474f46269de177b78427b12f0c27888fe6b",
+      "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-joplin",
+      "original_path": "packages/app-mobile/harmony/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-joplin/packages/app-mobile/harmony/oh-package.json5",
+      "sha256": "4e898670f8f9a97a21f5a6050582ccc5a7d8de57a4da3d2a77a7836311eca90b",
+      "revision": "73046474f46269de177b78427b12f0c27888fe6b",
+      "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rnoh-har-reactcommon-extraction",
+    "project": "ohos-joplin",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_joplin",
+    "commit": "73046474f46269de177b78427b12f0c27888fe6b",
+    "paths": [
+      "README.OpenHarmony_CN.md",
+      "packages/app-mobile/harmony/oh-package.json5"
+    ],
+    "source_reported_validation": "The port notes document the missing ReactCommon directory, the exact CMake failure, the HAR extraction with strip-components and the recommendation to commit the restored tree. No build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the RNOH host, package manifest and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the RNOH bundle provider or HAR/native build contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The RNOH toolchain and LFS-backed HAR were not reproduced in this review.",
+    "The missing subtree and HAR layout are tied to the RNOH 0.82.29/ohpm combination."
+  ]
+}

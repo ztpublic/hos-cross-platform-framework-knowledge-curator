@@ -1,0 +1,33 @@
+{
+	"modelVersion": "6.0.1",
+	"name": "joplin-harmony",
+	"version": "3.7.0",
+	"description": "Joplin mobile host application for HarmonyOS/OpenHarmony via RNOH.",
+	"main": "",
+	"author": "Joplin",
+	"license": "AGPL-3.0-or-later",
+	"dependencies": {
+		"@rnoh/react-native-openharmony": "file:./local-har/react-native-openharmony-0.82.29.har",
+		"@react-native-ohos/clipboard": "file:../node_modules/@react-native-ohos/clipboard/harmony/clipboard.har",
+		"@react-native-ohos/netinfo": "file:../node_modules/@react-native-ohos/netinfo/harmony/netinfo.har",
+		"@react-native-ohos/react-native-device-info": "file:../node_modules/@react-native-ohos/react-native-device-info/harmony/device_info.har",
+		"@react-native-ohos/react-native-document-picker": "file:../node_modules/@react-native-ohos/react-native-document-picker/harmony/document_picker.har",
+		"@react-native-ohos/react-native-file-viewer": "file:../node_modules/@react-native-ohos/react-native-file-viewer/harmony/file_viewer.har",
+		"@react-native-ohos/react-native-image-picker": "file:../node_modules/@react-native-ohos/react-native-image-picker/harmony/image_picker.har",
+		"@react-native-ohos/react-native-inappbrowser-reborn": "file:../node_modules/@react-native-ohos/react-native-inappbrowser-reborn/harmony/inappbrowser.har",
+		"@react-native-ohos/react-native-localize": "file:../node_modules/@react-native-ohos/react-native-localize/harmony/rn_localize.har",
+		"@react-native-ohos/react-native-permissions": "file:../node_modules/@react-native-ohos/react-native-permissions/harmony/permissions.har",
+		"@react-native-ohos/react-native-safe-area-context": "file:../node_modules/@react-native-ohos/react-native-safe-area-context/harmony/safe_area.har",
+		"@react-native-ohos/react-native-share": "file:../node_modules/@react-native-ohos/react-native-share/harmony/react_native_share.har",
+		"@react-native-ohos/react-native-sqlite-storage": "file:../node_modules/@react-native-ohos/react-native-sqlite-storage/platforms/harmony/sqlite_storage.har",
+		"@react-native-ohos/react-native-svg": "file:../node_modules/@react-native-ohos/react-native-svg/harmony/svg.har",
+		"@react-native-ohos/react-native-webview": "file:../node_modules/@react-native-ohos/react-native-webview/harmony/rn_webview.har",
+		"@react-native-ohos/react-native-zip-archive": "file:../node_modules/@react-native-ohos/react-native-zip-archive/harmony/zipArchive_package.har"
+	},
+	"overrides": {
+		"@rnoh/react-native-openharmony": "file:./local-har/react-native-openharmony-0.82.29.har"
+	},
+	"devDependencies": {
+		"@ohos/hypium": "1.0.21"
+	}
+}

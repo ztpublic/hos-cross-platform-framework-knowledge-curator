@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-offline-bundle-and-fonts",
+  "sources": [
+    {
+      "collection": "ohos-joplin",
+      "original_path": "packages/app-mobile/harmony/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/ohos-joplin/packages/app-mobile/harmony/entry/src/main/ets/pages/Index.ets",
+      "sha256": "f461b078175c93546be17f55e59dc14a8b04349db3f181a124a62c42f635c73a",
+      "revision": "73046474f46269de177b78427b12f0c27888fe6b",
+      "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-joplin",
+      "original_path": "packages/app-mobile/harmony/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/ohos-joplin/packages/app-mobile/harmony/oh-package.json5",
+      "sha256": "4e898670f8f9a97a21f5a6050582ccc5a7d8de57a4da3d2a77a7836311eca90b",
+      "revision": "73046474f46269de177b78427b12f0c27888fe6b",
+      "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "ohos-joplin",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/ohos-joplin/README.OpenHarmony_CN.md",
+      "sha256": "5fa6f52720a906fb8a170e5eb70c528c0c4846fe4e1dd41c0f40cacce941f58d",
+      "revision": "73046474f46269de177b78427b12f0c27888fe6b",
+      "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "rnoh-offline-bundle-and-fonts",
+    "project": "ohos-joplin",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_joplin",
+    "commit": "73046474f46269de177b78427b12f0c27888fe6b",
+    "paths": [
+      "packages/app-mobile/harmony/entry/src/main/ets/pages/Index.ets",
+      "packages/app-mobile/harmony/oh-package.json5",
+      "README.OpenHarmony_CN.md"
+    ],
+    "source_reported_validation": "The host chains packaged Hermes, packaged JS, sandbox-file and Metro providers, maps icon font families to rawfile, and the build notes document an offline bundle task plus asset/font copying. No device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the RNOH host, package manifest and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the RNOH bundle provider or HAR/native build contract."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The RNOH toolchain and LFS-backed HAR were not reproduced in this review.",
+    "The bundle provider class names and the offline bundle script are RNOH/version specific."
+  ]
+}
