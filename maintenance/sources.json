@@ -574,6 +574,33 @@
       "coverage": "Source-reviewed RNOH offline bundle/asset/font packaging and a HAR ReactCommon extraction workaround.",
       "source_reported_validation": "The porting notes report a clone-and-run HAP and a CMake build after restoring ReactCommon; no build was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "notepad-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "analyzed_commit": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
+      "license_notice": "maintenance/licenses/notepad--GPL-3.0.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/notepad--_ohos",
+      "working_tree_status": "GitCode checkout incomplete (mass deletions); evidence read from HEAD blobs.",
+      "reviewed_paths": [
+        "Doc/src_qt_prj/notepad---main/src/cceditor/ccnotepad.cpp",
+        "Doc/src_qt_prj/notepad---main/src/main.cpp",
+        "README.md"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-external-clipboard-paste",
+        "qt-ohos-default-font-metrics"
+      ],
+      "last_run": "2026-10-20-project-research-13.json",
+      "coverage": "Recorded unresolved external-clipboard and default-font-metrics gaps from a Qt Widgets PC port.",
+      "source_reported_validation": "The port README reports core editing as working and explicitly lists external clipboard paste and oversized menu fonts as unresolved; no run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

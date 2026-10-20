@@ -1,0 +1,62 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "notepad-ohos"
+  ],
+  "entries_before": 180,
+  "entries_after": 182,
+  "query_families": [
+    "Qt Widgets PC ports with unresolved desktop-integration gaps",
+    "finished Electron HAPs and app-specific ports (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "OpenHarmonyPCDeveloper/notepad--_ohos",
+      "framework": "qt",
+      "disposition": "analyzed",
+      "reason": "Qt Widgets PC port with core editing working but external clipboard paste and oversized menu fonts explicitly unresolved."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_kdesvn",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished Electron HAP; overlaps existing resfile/packaging findings."
+    },
+    {
+      "project": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "App-specific Electron port with LFS assets; not source-reviewed."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_QElectroTech",
+      "framework": "qt",
+      "disposition": "deferred",
+      "reason": "Host-only snapshot without the business .so."
+    },
+    {
+      "project": "frankzhangv5/ScreenCast",
+      "framework": "qt",
+      "disposition": "rejected",
+      "reason": "Desktop casting client for external OH devices, not an app adapted to run on OH PC."
+    }
+  ],
+  "added_entries": [
+    "qt-ohos-external-clipboard-paste",
+    "qt-ohos-default-font-metrics"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "Both entries are unresolved observations; no remedy was validated and pc_validation remains not-run.",
+    "The repository has no top-level license; the upstream GPL-3.0 text is retained from the vendored NotePad-- tree.",
+    "The checkout was incomplete; evidence was read from HEAD blobs."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 182 entries",
+    "kb.py check -> OK: 182 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for clipboard and menu-font terms",
+    "git diff review before commit"
+  ]
+}

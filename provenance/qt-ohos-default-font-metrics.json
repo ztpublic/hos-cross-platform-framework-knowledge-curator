@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-default-font-metrics",
+  "sources": [
+    {
+      "collection": "notepad-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/notepad-ohos/README.md",
+      "sha256": "cfe7c10d6d60b414f0827ccb6ba89e1098a2a9f164a2f626c693cfec40b35344",
+      "revision": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "notepad-ohos",
+      "original_path": "Doc/src_qt_prj/notepad---main/src/main.cpp",
+      "snapshot": "provenance/snapshots/projects/notepad-ohos/Doc/src_qt_prj/notepad---main/src/main.cpp",
+      "sha256": "e6c1b52f1bce48cf48ab549897bd1719123894e6b398803a7b343c567f688f4e",
+      "revision": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "notepad-ohos",
+      "original_path": "Doc/src_qt_prj/notepad---main/src/cceditor/ccnotepad.cpp",
+      "snapshot": "provenance/snapshots/projects/notepad-ohos/Doc/src_qt_prj/notepad---main/src/cceditor/ccnotepad.cpp",
+      "sha256": "e84eeaaff0d11a43ec27af4e495074e8a7c0690cd9c3f25695aeea7152f3570a",
+      "revision": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "notepad-ohos",
+      "original_path": "Doc/NotePad--鸿蒙PC移植实践.md",
+      "snapshot": "provenance/snapshots/projects/notepad-ohos/Doc/NotePad--鸿蒙PC移植实践.md",
+      "sha256": "31af0e47a9b2dbad71e665ab2091dc8482b8778163342ee451e531b4fbfabd1b",
+      "revision": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
+      "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "qt-ohos-default-font-metrics",
+    "project": "notepad-ohos",
+    "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/notepad--_ohos",
+    "commit": "901ba4972ba90442008669dfa6eb916869d506e0",
+    "paths": [
+      "README.md",
+      "Doc/src_qt_prj/notepad---main/src/main.cpp"
+    ],
+    "source_reported_validation": "The port README lists oversized menu fonts as a known unresolved issue, and the source enables high-DPI attributes plus platform-specific font setup but no OH-specific font resolution. No fix or device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Recorded the observed integration gap and a bounded diagnostic plan; no successful remedy was invented.",
+    "Classified the entry as framework-specific because the gap depends on the Qt OH QPA clipboard/font contract."
+  ],
+  "limitations": [
+    "The observation is unresolved; no fix was validated and pc_validation remains not-run.",
+    "The native toolchain and device were not reproduced in this review.",
+    "The root cause (font database, DPI or scaling) remains unconfirmed and may differ by QPA/device."
+  ]
+}
