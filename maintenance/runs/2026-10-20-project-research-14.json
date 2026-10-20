@@ -1,0 +1,63 @@
+{
+  "mode": "discover",
+  "outcome": "batch-complete",
+  "source_ids": [
+    "pure-live-ohos"
+  ],
+  "entries_before": 182,
+  "entries_after": 185,
+  "query_families": [
+    "Flutter HarmonyOS PC forks and desktop interaction",
+    "Kotlin Multiplatform UI frameworks and registry scans (screening)"
+  ],
+  "candidates_screened": [
+    {
+      "project": "FiveHair/pure_live",
+      "framework": "flutter",
+      "disposition": "analyzed",
+      "reason": "Flutter OH fork with native 2in1 detection, desktop/mobile interaction split, versioned-so toolchain patch and TargetPlatform vendoring."
+    },
+    {
+      "project": "Tencent-TDS/KuiklyUI",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "Full KMP UI framework with HarmonyOS support; should be reviewed as a framework, not an app port."
+    },
+    {
+      "project": "baochao-sxiaofan/kmp-ohos-bridge",
+      "framework": "kotlin-multiplatform",
+      "disposition": "deferred",
+      "reason": "KMP shared logic as OH .so with N-API bridge; potentially valuable but not source-reviewed yet."
+    },
+    {
+      "project": "HM-U3/vectorcraft-harmonyos",
+      "framework": "flutter",
+      "disposition": "deferred",
+      "reason": "VectorCraft engine port for tablet/2in1; source qualification pending."
+    },
+    {
+      "project": "OpenHarmonyPCDeveloper/ohos_nixnote2_electron",
+      "framework": "electron",
+      "disposition": "deferred",
+      "reason": "Finished Electron HAP; overlaps existing packaging/window entries."
+    }
+  ],
+  "added_entries": [
+    "flutter-ohos-pc-form-factor",
+    "flutter-ohos-versioned-so-packaging",
+    "flutter-ohos-target-platform-vendoring"
+  ],
+  "extended_entries": [],
+  "split_entries": [],
+  "limitations": [
+    "The project is AGPL-3.0; only generalized mechanisms were recorded and no source code was copied.",
+    "The repository was read through raw files at the recorded commit rather than a clone; the TargetPlatform patch itself lives in vendored third_party trees that were not separately reviewed.",
+    "No build, install or device run was performed for this batch; pc_validation stays not-run."
+  ],
+  "verification": [
+    "kb.py index -> Indexed 185 entries",
+    "kb.py check -> OK: 185 entries; metadata, provenance hashes, links and CSV index agree",
+    "framework-filtered searches for form factor, versioned libs and TargetPlatform terms",
+    "git diff review before commit"
+  ]
+}

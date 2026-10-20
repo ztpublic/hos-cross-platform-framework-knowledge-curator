@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-pc-form-factor",
+  "sources": [
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "lib/core/platform/platform_utils.dart",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/lib/core/platform/platform_utils.dart",
+      "sha256": "9bb57e80cdf978fbb4bfff9b5f316c62e48d7b76eb0afd168fecb6379ac54181",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "ohos/entry/src/main/ets/entryability/MethodCall.ets",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/ohos/entry/src/main/ets/entryability/MethodCall.ets",
+      "sha256": "0a66c27436231b2deeb804e2a2642ceec76d4ed1aa0753b91ef7d3160e080e43",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "ohos/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/ohos/entry/src/main/module.json5",
+      "sha256": "92b2cd7a7358a034babf2d1901f521b601ad9dcb0ebf540858c9d1f39de3a760",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "README_OHOS.md",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/README_OHOS.md",
+      "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "flutter-ohos-pc-form-factor",
+    "project": "pure-live-ohos",
+    "repository": "https://github.com/FiveHair/pure_live",
+    "commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+    "paths": [
+      "lib/core/platform/platform_utils.dart",
+      "ohos/entry/src/main/ets/entryability/MethodCall.ets",
+      "ohos/entry/src/main/module.json5"
+    ],
+    "source_reported_validation": "The Dart platform layer queries a native channel for the OH device type, flags 2in1 as desktop, and implements native fullscreen/background behavior in the ArkTS plugin. The port notes describe mobile/tablet and PC interaction targets; no device run was performed here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the Flutter platform layer, SDK patch script and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Flutter OH SDK/toolchain or package platform enum."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The oh-flutter toolchain and the target devices were not reproduced in this review.",
+    "The device-type value and window APIs were verified on one OH device generation; recheck on another product/API."
+  ]
+}

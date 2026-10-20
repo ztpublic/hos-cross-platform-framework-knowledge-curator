@@ -601,6 +601,37 @@
       "coverage": "Recorded unresolved external-clipboard and default-font-metrics gaps from a Qt Widgets PC port.",
       "source_reported_validation": "The port README reports core editing as working and explicitly lists external clipboard paste and oversized menu fonts as unresolved; no run was rerun.",
       "checked_at": "2026-10-20"
+    },
+    {
+      "id": "pure-live-ohos",
+      "kind": "project",
+      "url": "https://github.com/FiveHair/pure_live",
+      "framework": "flutter",
+      "aliases": [],
+      "selected_ref": "ohos-support",
+      "observed_commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "analyzed_commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "license_notice": "maintenance/licenses/pure-live-AGPL-3.0.txt",
+      "local_path": "",
+      "working_tree_status": "Read from raw files at the recorded commit; large repository not cloned.",
+      "reviewed_paths": [
+        "README_OHOS.md",
+        "lib/core/platform/platform_utils.dart",
+        "ohos/entry/src/main/ets/entryability/MethodCall.ets",
+        "ohos/entry/src/main/module.json5",
+        "pubspec.yaml",
+        "tool/patch_ohflutter_tools.py"
+      ],
+      "knowledge_ids": [
+        "flutter-ohos-pc-form-factor",
+        "flutter-ohos-versioned-so-packaging",
+        "flutter-ohos-target-platform-vendoring"
+      ],
+      "last_run": "2026-10-20-project-research-14.json",
+      "coverage": "Source-reviewed Flutter OH PC form-factor detection, versioned native-library packaging and TargetPlatform vendoring.",
+      "source_reported_validation": "The port notes report a working HAP build and mobile/PC interaction split; no build or device run was rerun.",
+      "checked_at": "2026-10-20"
     }
   ]
 }

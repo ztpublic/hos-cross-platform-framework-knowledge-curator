@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-versioned-so-packaging",
+  "sources": [
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "tool/patch_ohflutter_tools.py",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/tool/patch_ohflutter_tools.py",
+      "sha256": "95487a69ddd729aab075d9ca65ba9e0ea9759ac0a4f7c921c5e2d8ff5a4a486a",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "README_OHOS.md",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/README_OHOS.md",
+      "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    }
+  ],
+  "upstream_provenance": {
+    "schema_version": 1,
+    "id": "flutter-ohos-versioned-so-packaging",
+    "project": "pure-live-ohos",
+    "repository": "https://github.com/FiveHair/pure_live",
+    "commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+    "paths": [
+      "tool/patch_ohflutter_tools.py",
+      "README_OHOS.md"
+    ],
+    "source_reported_validation": "The toolchain patch changes both native-asset copy filters to match `.so` plus numeric suffixes and documents the resulting libmpv white screen when versioned libraries are dropped. No build was rerun here."
+  },
+  "transformations": [
+    "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
+    "Derived one mechanism from the Flutter platform layer, SDK patch script and porting notes; no source code was copied.",
+    "Classified the entry as framework-specific because the remedy depends on the Flutter OH SDK/toolchain or package platform enum."
+  ],
+  "limitations": [
+    "Source-reported build and device results were not rerun; pc_validation remains not-run.",
+    "The oh-flutter toolchain and the target devices were not reproduced in this review.",
+    "The patch anchors and the AOT artifact alignment are specific to the oh-flutter 3.47.4/3.47.5 line."
+  ]
+}
