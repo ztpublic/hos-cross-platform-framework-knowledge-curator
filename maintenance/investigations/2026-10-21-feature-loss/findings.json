@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "findings": [
+    {
+      "id": "F01",
+      "project": "ohos-ktouch",
+      "feature": "Course/layout editors, custom lessons, full preferences and shortcut configuration",
+      "category": "deliberate-scope",
+      "verdict": "Explicit MVP cuts, not established OS prohibitions.",
+      "observed": "KTOUCH_HARMONY_MVP guards return before the KDE-backed flows; port notes explicitly choose small shims over a complete KDE port.",
+      "next_step": "Restore one flow with real dependencies or a scoped replacement; validate persistence and dialogs. Keyboard-system KCM must be evaluated separately.",
+      "source": {
+        "path": "src/ktouchcontext.cpp",
+        "line": 114,
+        "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+        "sha256": "5ca6d8c5fe86b6673a049562fe5abe489c29a15d397cba9bd5906f880f934427",
+        "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F02",
+      "project": "klayout-on-harmony-pc",
+      "feature": "Python/Ruby scripting bindings",
+      "category": "dependency-or-backend",
+      "verdict": "Selected build excludes bindings; fundamental impossibility is unproven.",
+      "observed": "Port notes and the patch identify a -nopython -noruby -without-qtbinding build. This review did not reconstruct every release invocation.",
+      "next_step": "Establish the exact release flags, then port/package the interpreter, extension ABI and resource closure. Embedded Python in another app is a counterexample to a blanket language ban, not proof of KLayout binding parity.",
+      "source": {
+        "path": "docs/PORTING-NOTES.md",
+        "line": 164,
+        "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+        "sha256": "acb95c36347612e6efbae055d0d594838bcfd4a4390a4d85e071687ab5620e0a",
+        "url": "https://github.com/yangy79/KLayout-on-Harmony-PC/blob/0189b4544a8065b2fad7ccb0fd1085c48964aacc/docs/PORTING-NOTES.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F03",
+      "project": "scidavis-for-harmonyos",
+      "feature": "Printing",
+      "category": "dependency-or-backend",
+      "verdict": "Unadapted integration; HarmonyOS PC printing exists.",
+      "observed": "README lists printing as unavailable without a causal diagnosis; the repository does not include the full native application implementation in the reviewed CMake entry.",
+      "next_step": "Trace Qt PrintSupport/QPA support or export PDF and integrate a native print handoff; test printer discovery, cancellation and actual output.",
+      "source": {
+        "path": "README.md",
+        "line": 28,
+        "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+        "sha256": "62f6c70314119a64bb191b816de3f29c10ddc3fd5e42e6b2914c2f48d984b8a3",
+        "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS/blob/a1e9e3d71f617691d98061fcf4c966132241fd07/README.md"
+      },
+      "official_refs": [
+        "O6",
+        "O7"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F04",
+      "project": "scidavis-for-harmonyos",
+      "feature": "3D plots and full scripting/advanced analysis",
+      "category": "unresolved",
+      "verdict": "Missing in this port; exact blocking dependency not established.",
+      "observed": "README lists unadapted functionality and explicitly reports insufficient maintenance resources. It does not provide a per-feature root cause.",
+      "next_step": "Acquire the actual native source/build inputs and inspect plotting/interpreter dependencies. FreeCAD is only a counterexample to an OS-wide 3D/Python ban.",
+      "source": {
+        "path": "README.md",
+        "line": 24,
+        "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+        "sha256": "62f6c70314119a64bb191b816de3f29c10ddc3fd5e42e6b2914c2f48d984b8a3",
+        "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS/blob/a1e9e3d71f617691d98061fcf4c966132241fd07/README.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F05",
+      "project": "freecad-on-harmonyos",
+      "feature": "Navigation cube and corner axes",
+      "category": "restored-or-counterexample",
+      "verdict": "Historical defensive disablement; restoration patches exist.",
+      "observed": "The debugging guide identifies FREECAD_OHOS guards around drawing calls, then restores calls and fixes the Qt/gl4es texture namespace boundary.",
+      "next_step": "Validate rendering, cube picking and rotation separately. The guide itself leaves the mixed FBO picking path unverified.",
+      "source": {
+        "path": "docs/sketcher-rendering-debug-playbook.md",
+        "line": 219,
+        "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+        "sha256": "52cf04896a1005d36aa85fed93dae5ea06d479a1cc7fd2eca7b10f15286ffdcd",
+        "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/docs/sketcher-rendering-debug-playbook.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F06",
+      "project": "freecad-on-harmonyos",
+      "feature": "Preferences UI",
+      "category": "restored-or-counterexample",
+      "verdict": "Port/dependency and window-parent bugs were repaired in source.",
+      "observed": "README identifies disabled QUiLoader plus missing PySide QtUiTools; a native UiTools patch exists. The debugging guide separately repairs popup parenting.",
+      "next_step": "Exercise form loading, popup/tooltip interaction and saved preferences on device; the author reports success, which was not rerun here.",
+      "source": {
+        "path": "patches/freecad-1.1.2/ohos-native-uitools.patch",
+        "line": 1,
+        "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+        "sha256": "4abe8cf6f0752d69536fddfd0016509267a3f55d05f86275a4d97ec9178f54de",
+        "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/patches/freecad-1.1.2/ohos-native-uitools.patch"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F07",
+      "project": "dsh-desktop-hos",
+      "feature": "Interactive PTY terminal and job control",
+      "category": "reported-restriction",
+      "verdict": "App-domain restriction reported on a specific device/runtime; not independently reproduced.",
+      "observed": "The specification reports SELinux denials for forkpty/openpty and missing application PTY APIs. It separately reports working non-PTY fork/exec/pipes and implements a resident shell.",
+      "next_step": "Reproduce PTY denial on the exact device/API/signing profile before calling it a confirmed restriction. Non-PTY command execution does not restore TTY semantics.",
+      "source": {
+        "path": "specs/010-tool-bash/spec.md",
+        "line": 15,
+        "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "sha256": "3ec153d0590d23d1384bdc2a5e2d7734bbde2a7e8188f830fc2f947a2e8e988e",
+        "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/specs/010-tool-bash/spec.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F08",
+      "project": "dsh-desktop-hos",
+      "feature": "Image attachments and sharp conversion",
+      "category": "restored-or-counterexample",
+      "verdict": "Missing libvips was partly replaced; image processing was not simply removed.",
+      "observed": "README and JS bridge code route conversions to the ArkTS image framework, permit bounded clean-file pass-through and reject unavailable conversions. Thumbnails remain absent.",
+      "next_step": "Test conversion, EXIF orientation, limits and no-bridge errors; investigate thumbnail work separately. Do not equate a sharp stub with complete feature loss.",
+      "source": {
+        "path": "scripts/lib/sharp-stub-body.js",
+        "line": 449,
+        "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "sha256": "1777f1b1923804949c86d2b04f19c0f899961a94468d16680c43cd1b12cada35",
+        "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/scripts/lib/sharp-stub-body.js"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F09",
+      "project": "dsh-desktop-hos",
+      "feature": "Bundled standalone Node/pnpm/Python executables",
+      "category": "unresolved",
+      "verdict": "Signing/distribution restriction asserted by the author; eligibility claim is not independently verified.",
+      "observed": "README attributes missing standalone runtimes to binary-certificate eligibility. It distinguishes optional system-installed pnpm from bundled product capability.",
+      "next_step": "Verify current HNP/ELF signing and account eligibility using official policy for this exact product. Embedded CPython libraries in FreeCAD are not the same packaging route.",
+      "source": {
+        "path": "README.md",
+        "line": 45,
+        "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "sha256": "2785939681d08d03ad65bce596a9ded3a7e8b19f6fd8b4d34eae3db7d776455b",
+        "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/README.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F10",
+      "project": "dsh-desktop-hos",
+      "feature": "Frameless application window",
+      "category": "deliberate-scope",
+      "verdict": "Explicit engineering tradeoff.",
+      "observed": "README says the frameless design was deferred because moving controls into the renderer costs more than it buys.",
+      "next_step": "Treat as product scope unless a concrete window-mode requirement justifies implementing and validating it.",
+      "source": {
+        "path": "README.md",
+        "line": 54,
+        "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "sha256": "2785939681d08d03ad65bce596a9ded3a7e8b19f6fd8b4d34eae3db7d776455b",
+        "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/README.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F11",
+      "project": "doubao-watermark-lab",
+      "feature": "Tray/status-bar integration",
+      "category": "restored-or-counterexample",
+      "verdict": "Already implemented at the reviewed revision.",
+      "observed": "The OH startup branch constructs Tray, sets its tooltip and installs a context menu. DSH also contains a StatusBarManager adapter.",
+      "next_step": "Validate icon, menu, hide/show and lifecycle on the relevant PC runtime. Do not infer full tray API parity from construction alone.",
+      "source": {
+        "path": "src/main.js",
+        "line": 1691,
+        "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+        "sha256": "d11a37730e89190a71a23860a4e247953ed1f39ff037a2b0a0bdc3aca63c3ec7",
+        "url": "https://github.com/littlestone0806/doubao-watermark-lab/blob/d255b093a4a0fc0ae6c63df2201b566d784f632f/src/main.js"
+      },
+      "official_refs": [
+        "O1"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F12",
+      "project": "doubao-watermark-lab",
+      "feature": "Desktop automatic updater",
+      "category": "dependency-or-backend",
+      "verdict": "Desktop update path is gated; a distribution integration question.",
+      "observed": "setupAutoUpdater explicitly returns when IS_OHOS is true; its comment defers the update channel to the application store.",
+      "next_step": "Select an approved signed-HAP distribution/update mechanism for the product; absence of electron-updater support does not mean applications cannot be updated.",
+      "source": {
+        "path": "src/main.js",
+        "line": 1634,
+        "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+        "sha256": "d11a37730e89190a71a23860a4e247953ed1f39ff037a2b0a0bdc3aca63c3ec7",
+        "url": "https://github.com/littlestone0806/doubao-watermark-lab/blob/d255b093a4a0fc0ae6c63df2201b566d784f632f/src/main.js"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F13",
+      "project": "ohos-jupyter",
+      "feature": "Terminal, debugger, LSP and extension installation in default mode",
+      "category": "dependency-or-backend",
+      "verdict": "Default server-mode reductions, not demonstrated OS impossibility.",
+      "observed": "staticLabServer disables terminal/debugger/LSP/completer extensions, returns terminal-unavailable responses and marks extension installation read-only. The README also offers Python/external-server modes.",
+      "next_step": "Build a per-mode matrix. An external server can supply server-side services subject to client support; a local PTY still requires its own policy/implementation assessment.",
+      "source": {
+        "path": "electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js",
+        "line": 72,
+        "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+        "sha256": "cc6325254ffefa7d5c1a7cee9b2e623920f7840f5ff1cd2a625b9637570520af",
+        "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F14",
+      "project": "ohos-jupyter",
+      "feature": "GPU acceleration",
+      "category": "runtime-workaround",
+      "verdict": "Runtime stability workaround.",
+      "observed": "README defaults OH Electron GPU composition off because of instability; frontend editing and Pyodide remain available.",
+      "next_step": "Reproduce on the pinned Electron/engine/GPU set before changing the default. This does not establish a lack of GPU capability in HarmonyOS.",
+      "source": {
+        "path": "README.md",
+        "line": 200,
+        "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+        "sha256": "b2fea3fc370e018aeb92940869d920cb9825300434cb7393ed8c0292c2babd34",
+        "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F15",
+      "project": "drawio-in-harmony",
+      "feature": "Single-instance events and newer Electron APIs",
+      "category": "dependency-or-backend",
+      "verdict": "Electron-port/version coverage gap; lifecycle integration is incomplete.",
+      "observed": "Feasibility notes distinguish an available Electron port from compatibility with all newer APIs. FEATURE_MATRIX still labels lifecycle/file routing as pending.",
+      "next_step": "Route duplicate launch and file intents through Ability/Want; verify cold/warm paths. The feasibility note is a lead, not independent testing of every Electron API.",
+      "source": {
+        "path": "FEASIBILITY.md",
+        "line": 33,
+        "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+        "sha256": "9c0492dd2682640b70abcba3a748eae0ab2d4c9233b2f87bb03df9c3184c2425",
+        "url": "https://github.com/Red-Sa1t/drawio-in-harmony/blob/df83eebf55bf15c5cbef6656d863eb94e6d33b28/FEASIBILITY.md"
+      },
+      "official_refs": [
+        "O9"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F16",
+      "project": "react-native-harmony-seed",
+      "feature": "Some WebView props",
+      "category": "dependency-or-backend",
+      "verdict": "RNOH adapter incompleteness, not a proven ArkWeb/OS prohibition.",
+      "observed": "Vendored adapter documentation has a property support matrix and issues for props not yet adapted to HarmonyOS.",
+      "next_step": "Choose a specific prop, inspect its native implementation and ArkWeb equivalent, then test that prop. Some iOS-only semantics may require redesign.",
+      "source": {
+        "path": "docs/rnoh/react-native-webview.md",
+        "line": 384,
+        "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+        "sha256": "d02c693a5a452744d8eb098dc1af22872c7ca83994e043f89f01623cad9b5be8",
+        "url": "https://github.com/kuma0605/react-native-harmony-seed/blob/74c23b6959e7d019e7a9d23c12296210cb6f1eb1/docs/rnoh/react-native-webview.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F17",
+      "project": "pure-live-ohos",
+      "feature": "Recording",
+      "category": "dependency-or-backend",
+      "verdict": "Missing FFmpeg backend artifact; source names replacement work.",
+      "observed": "README describes a vendored empty FFmpeg hook and says an OH FFmpeg build or system capability is needed.",
+      "next_step": "Implement a compatible recorder or native backend; validate codecs, stream protocols, output finalization and background lifecycle.",
+      "source": {
+        "path": "README_OHOS.md",
+        "line": 91,
+        "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+        "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+        "url": "https://github.com/FiveHair/pure_live/blob/e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2/README_OHOS.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F18",
+      "project": "pure-live-ohos",
+      "feature": "Scanning and Web login",
+      "category": "dependency-or-backend",
+      "verdict": "Missing/unselected plugin integrations.",
+      "observed": "README identifies mobile_scanner as a local Kotlin plugin and points to a CPF WebView adaptation as future work.",
+      "next_step": "Audit plugin-native coverage and select a compatible backend. No claim is made here that the named replacement is currently available or PC-validated.",
+      "source": {
+        "path": "README_OHOS.md",
+        "line": 98,
+        "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+        "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+        "url": "https://github.com/FiveHair/pure_live/blob/e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2/README_OHOS.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F19",
+      "project": "pure-live-ohos",
+      "feature": "Hardware video decode",
+      "category": "dependency-or-backend",
+      "verdict": "The selected libmpv build lacks the OH hardware-decoder backend.",
+      "observed": "README explicitly distinguishes CPU decode/GPU rendering and proposes an AVPlayer/video_player_ohos path absent from the upstream media_core backend.",
+      "next_step": "Check protocol, headers, HDR, subtitles and texture integration before selecting a hardware-backed player; GPU rendering is not evidence of hardware decode.",
+      "source": {
+        "path": "README_OHOS.md",
+        "line": 102,
+        "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+        "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+        "url": "https://github.com/FiveHair/pure_live/blob/e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2/README_OHOS.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F20",
+      "project": "pure-live-ohos",
+      "feature": "System PiP and PC tray",
+      "category": "dependency-or-backend",
+      "verdict": "Plugin/host integration work; the README already identifies a native PiP path.",
+      "observed": "Later README text names PiPWindow and missing Flutter texture bridging; an earlier blanket no-corresponding-PC-tray statement conflicts with native PC APIs and other reviewed adapters.",
+      "next_step": "Prototype PiP surface handoff separately from in-app mini-player; use a PC status-bar adapter and retain API/product gates.",
+      "source": {
+        "path": "README_OHOS.md",
+        "line": 101,
+        "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+        "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+        "url": "https://github.com/FiveHair/pure_live/blob/e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2/README_OHOS.md"
+      },
+      "official_refs": [
+        "O1"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F21",
+      "project": "kelivo",
+      "feature": "TTS settings",
+      "category": "dependency-or-backend",
+      "verdict": "Explicit app UI gate plus a dependency-support explanation.",
+      "observed": "The TTS settings callback only shows an OH-unsupported message. README attributes this and highlighting loss to Flutter dependency support.",
+      "next_step": "Map the TTS contract to an OH plugin/native speech service; confirm device/voice/API eligibility and every speak/stop/cancel call site. Settings navigation alone is not complete TTS coverage.",
+      "source": {
+        "path": "lib/features/settings/pages/settings_page.dart",
+        "line": 179,
+        "revision": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+        "sha256": "594dd78d5aa7b0d6d77e4d34f8f3ab61a3ec53303aa1ac41e528afe85ce94e24",
+        "url": "https://github.com/Chevey339/kelivo-ohos/blob/184b54e8bfdb672a566e9553bafc2090e99a5e29/lib/features/settings/pages/settings_page.dart"
+      },
+      "official_refs": [
+        "O2"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F22",
+      "project": "kelivo",
+      "feature": "Code-block syntax highlighting",
+      "category": "deliberate-scope",
+      "verdict": "Renderer simplification is visible; its exact technical necessity is unexplained.",
+      "observed": "MarkdownBody omits custom builders while keeping highlight imports and helpers. README lists code highlighting as not implemented.",
+      "next_step": "Reconnect a compatible builder and test languages, selection and long blocks. Classify the code-level omission separately from the author’s broad dependency explanation.",
+      "source": {
+        "path": "lib/shared/widgets/markdown_with_highlight.dart",
+        "line": 28,
+        "revision": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+        "sha256": "8cba48ee7154eb9b1c0ae8881363eff31146f466d3597ae28f67866850d68b92",
+        "url": "https://github.com/Chevey339/kelivo-ohos/blob/184b54e8bfdb672a566e9553bafc2090e99a5e29/lib/shared/widgets/markdown_with_highlight.dart"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F23",
+      "project": "beecount-oh",
+      "feature": "Reminder settings and scheduling",
+      "category": "dependency-or-backend",
+      "verdict": "Missing application factory branch, with a separate native service entitlement gate.",
+      "observed": "NotificationFactory supports Android/iOS only and throws for other targets; reminder settings are hidden despite an OH notification dependency.",
+      "next_step": "Implement an OH scheduling adapter and request required entitlement/permissions, or use an appropriate calendar alternative. Ordinary notifications do not prove scheduled-reminder support.",
+      "source": {
+        "path": "lib/utils/notification_factory.dart",
+        "line": 16,
+        "revision": "14e6b10648ef7ce88414d7a562be638609205924",
+        "sha256": "3c091c4706fd7f1fa980fde21721daf39dd12b1d6d96c44d022524bb28dd51ff",
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/utils/notification_factory.dart"
+      },
+      "official_refs": [
+        "O8"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F24",
+      "project": "bugaoshan",
+      "feature": "OCR",
+      "category": "restored-or-counterexample",
+      "verdict": "Historical platform guard was removed; current source selects another OCR backend.",
+      "observed": "The April diff adds a Harmony exception, the May diff removes it, and the pinned current OcrService loads scu_ocr_lite model bytes and calls recognizeAsync.",
+      "next_step": "Validate the pinned model/backend on the target. Restored source does not prove accuracy, speed or successful PC execution.",
+      "source": {
+        "path": "lib/services/ocr_service.dart",
+        "line": 1,
+        "revision": "90706b12432711cc48f75ed70864708f15adaf35",
+        "sha256": "2de33cbd9d7091907c2bc24df476106f35b75b37b6709892c38fb67c66216a70",
+        "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/blob/90706b12432711cc48f75ed70864708f15adaf35/lib/services/ocr_service.dart"
+      },
+      "official_refs": [
+        "O3"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F25",
+      "project": "piliplus",
+      "feature": "Music charts",
+      "category": "restored-or-counterexample",
+      "verdict": "Historical Flutter SDK mismatch, followed by source restoration.",
+      "observed": "The restoration diff replaces the commented fl_chart import and LineChart with active code and explicitly names the older OH Flutter baseline in removed comments.",
+      "next_step": "Exercise the chart on the current pinned SDK; do not carry the old disablement forward as an OS limitation.",
+      "source": {
+        "path": "lib/pages/music/view.dart",
+        "line": 1,
+        "revision": "0aba2c6db94ba9b4cf9c076b1d39179ee3d860b4",
+        "sha256": "e3a3759391e3ce9e503ef13dcc70d2feed6f732123ec0bdc66b1ae1ab755fade",
+        "url": "https://github.com/dev4harmony/PiliPlus/blob/0aba2c6db94ba9b4cf9c076b1d39179ee3d860b4/lib/pages/music/view.dart"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F26",
+      "project": "etohos",
+      "feature": "Cross-application system clipboard",
+      "category": "dependency-or-backend",
+      "verdict": "App-local fallback; its blanket OS-unsupported comment is contradicted by native documentation.",
+      "observed": "AppClipboard stores text in a static string and is used by custom copy/paste handling. It cannot exchange text with other applications.",
+      "next_step": "Use the framework clipboard bridge or native pasteboard with permitted user-triggered access; test cross-app read/write and denial.",
+      "source": {
+        "path": "lib/utils/text_field_utils.dart",
+        "line": 4,
+        "revision": "fdb07dbfd2869502db7603b83d69d9a9661c228a",
+        "sha256": "edc14649fefd1fefa9f4e4394973e2125e9afea8349a56735e942b2a718c368d",
+        "url": "https://github.com/collaborative-creation/etohos/blob/fdb07dbfd2869502db7603b83d69d9a9661c228a/lib/utils/text_field_utils.dart"
+      },
+      "official_refs": [
+        "O5"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F27",
+      "project": "oronbox",
+      "feature": "Accounts, network services and community features",
+      "category": "deliberate-scope",
+      "verdict": "Explicit offline Lite product scope.",
+      "observed": "README defines a standalone offline edition and lists removed account/community/network features.",
+      "next_step": "Treat restoration as a product/security/service-scope decision. The removals do not establish a HarmonyOS networking ban.",
+      "source": {
+        "path": "README.md",
+        "line": 26,
+        "revision": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+        "sha256": "6d589788e513e2a852aca3b39c3b30a8c0a9162c93d86cb8be263d016b9d40b6",
+        "url": "https://github.com/diana9905454/OronBox-Lite/blob/27afbb7da972e240a43043bb21ae2f1851bfe965/README.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F28",
+      "project": "oronbox",
+      "feature": "BLE paired/scanning-state queries and unpair semantics",
+      "category": "dependency-or-backend",
+      "verdict": "Adapter shortcuts; native semantics were not established by these return values.",
+      "observed": "isScanning/isPaired return false, pair returns true as a no-pair-required convention, and unpair ignores the operation. Actual scan/connect calls elsewhere use native channels.",
+      "next_step": "Separate not-needed, unsupported and unknown states. Audit native pairing APIs for the actual BLE workflow instead of reporting stub success as completed pairing.",
+      "source": {
+        "path": "lib/src/core/services/ohos_ble_channel.dart",
+        "line": 252,
+        "revision": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+        "sha256": "1d2b98ecd7fbe049bf213539dc6b39cdfa0d6dde1d29d431357a1a8f92ea6ec1",
+        "url": "https://github.com/diana9905454/OronBox-Lite/blob/27afbb7da972e240a43043bb21ae2f1851bfe965/lib/src/core/services/ohos_ble_channel.dart"
+      },
+      "official_refs": [
+        "O4"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F29",
+      "project": "mi-workbench",
+      "feature": "BLE scale scanning",
+      "category": "dependency-or-backend",
+      "verdict": "Local Flutter plugin stub and UI disablement.",
+      "observed": "OHOS_BUILD says flutter_reactive_ble is replaced with a local stub and disables scale scanning; it also states the port had not been compiled/device-validated by its author.",
+      "next_step": "Replace or implement the BLE plugin and device protocol, then validate on the intended scale and PC hardware. Official BLE APIs do not prove this scale protocol works.",
+      "source": {
+        "path": "OHOS_BUILD.md",
+        "line": 96,
+        "revision": "9b6478eab96dfd78c3b577608f473eca46342874",
+        "sha256": "cd33e0201bb22bc843137f0f341626325c96a9aec46b83045d08e89ce0edb995",
+        "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/blob/9b6478eab96dfd78c3b577608f473eca46342874/OHOS_BUILD.md"
+      },
+      "official_refs": [
+        "O4"
+      ],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F30",
+      "project": "neon",
+      "feature": "Camera, push and window-management features",
+      "category": "dependency-or-backend",
+      "verdict": "Application platform capability flags.",
+      "observed": "OhosNeonPlatform hard-codes all three capabilities false. No native rejection or per-feature root cause is supplied by that class.",
+      "next_step": "Audit each selected plugin and native service separately; distinguish Push Kit onboarding from local notifications and desktop window management from in-app navigation.",
+      "source": {
+        "path": "packages/neon_framework/lib/src/platform/ohos.dart",
+        "line": 29,
+        "revision": "4be2e195ebb82322c90bbd4cb1454276e9e84aa9",
+        "sha256": "13b6257de910be6be38ebdc66943ca166d7903bef3096cca8158d9a74fc2a069",
+        "url": "https://github.com/shokakucarrier/neon-ohos/blob/4be2e195ebb82322c90bbd4cb1454276e9e84aa9/packages/neon_framework/lib/src/platform/ohos.dart"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F31",
+      "project": "connssh",
+      "feature": "Batch SFTP download",
+      "category": "dependency-or-backend",
+      "verdict": "App-owned single-file guard; no OS-wide batch-I/O limit established.",
+      "observed": "_downloadForOhos immediately returns when filesToDownload.length > 1. A single-file OH export path exists below it.",
+      "next_step": "Design a sequential authorized export queue or folder-grant flow with cancellation/partial completion. A one-file picker operation is not proof that a batch workflow is impossible.",
+      "source": {
+        "path": "lib/pages/sftpview.dart",
+        "line": 1681,
+        "revision": "95174411f2b1daa888ac499d4717efc22075c00b",
+        "sha256": "badea6ffddd47c78176f414f4d3480fb744106b4303f87dd4e8eb21b6ce63119",
+        "url": "https://github.com/RWPteam/ConnSSH/blob/95174411f2b1daa888ac499d4717efc22075c00b/lib/pages/sftpview.dart"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F32",
+      "project": "fusheng-music",
+      "feature": "Material You dynamic colors",
+      "category": "dependency-or-backend",
+      "verdict": "Android-specific integration semantics; generic adaptive colors remain a different feature.",
+      "observed": "README removes dynamic_color and uses a fixed theme because its Material You integration is absent.",
+      "next_step": "Decide whether exact Android system-palette parity is required or an image-derived/application palette is acceptable. Do not equate those two contracts.",
+      "source": {
+        "path": "README.md",
+        "line": 23,
+        "revision": "a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950",
+        "sha256": "4dff99abc4f6017de3851ed0a986c18ad3ad29a616161422fe951439903ba699",
+        "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/blob/a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950/README.md"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    },
+    {
+      "id": "F33",
+      "project": "nipaplay",
+      "feature": "Gamepad input",
+      "category": "dependency-or-backend",
+      "verdict": "Explicit no-op plugin replacement.",
+      "observed": "The OH universal_gamepad replacement returns empty input/connection streams and an empty gamepad list.",
+      "next_step": "Investigate target-device input APIs and the plugin bridge. This review establishes a stub, not native gamepad availability or a guaranteed remedy.",
+      "source": {
+        "path": "packages/universal_gamepad_ohos_stub/lib/universal_gamepad.dart",
+        "line": 3,
+        "revision": "7e91f4efef6cee49b05c2ee300931481a438be31",
+        "sha256": "e2a7d45d4541c76e8758df8b92662e6df73ab1ac36b445cfa8126ddd692ec189",
+        "url": "https://github.com/AimesSoft/NipaPlay-Reload/blob/7e91f4efef6cee49b05c2ee300931481a438be31/packages/universal_gamepad_ohos_stub/lib/universal_gamepad.dart"
+      },
+      "official_refs": [],
+      "evidence_tier": "source-reviewed; native alternatives documentation-only",
+      "runtime_reproduced": false,
+      "author_competence": "not inferable"
+    }
+  ]
+}

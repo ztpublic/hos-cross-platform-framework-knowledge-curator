@@ -1,0 +1,2136 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "scope": "Pinned registered revisions, not a latest-branch update or runtime reproduction.",
+  "files": [
+    {
+      "project": "ohos-ktouch",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "path": "README.OpenHarmony_CN.md",
+      "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "d64ace8c952c62632dd87461ee50cc485558efc412d78794205489df935b6e40",
+      "line_count": 199,
+      "matching_lines": [
+        6,
+        25,
+        38,
+        42,
+        52,
+        54,
+        135,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        178,
+        182,
+        189,
+        196
+      ],
+      "excerpts": [
+        {
+          "line": 6,
+          "text": "> 关于功能支持，哪些能用、哪些未适配，文档里都按事实标注。"
+        },
+        {
+          "line": 25,
+          "text": "核心思路不是用 ArkUI 重写、也不是把 KF6 整体移植，而是“最快跑通设备可测版本（MVP）”："
+        },
+        {
+          "line": 38,
+          "text": "  编译为 `libentry.so`，编译宏为 `KTOUCH_HARMONY_MVP / OPENHARMONY / NAPI_DISABLE_CPP_EXCEPTIONS`。"
+        },
+        {
+          "line": 42,
+          "text": "- **KDE 兼容垫片**（`entry/src/main/cpp/openharmony_compat/`），仅覆盖 MVP 所需："
+        },
+        {
+          "line": 52,
+          "text": "  `keyboardlayout_us.xml` 及对应 schema；在 `KTOUCH_HARMONY_MVP` 下，`ResourceDataAccess`"
+        },
+        {
+          "line": 54,
+          "text": "- **MVP 裁剪**：通过源码中的 `#if defined(KTOUCH_HARMONY_MVP)` 守卫，禁用课程/布局编辑器、"
+        },
+        {
+          "line": 135,
+          "text": "- **未适配**：这是桌面端特有、或平台没有对应概念的能力，放到 OHOS 上要么没有对应的系统概念、要么交互习惯完全不同，所以按平台特点主动换了做法或没做。这里的「未适配」是取舍，不是没做完。"
+        },
+        {
+          "line": 165,
+          "text": "| 课程 / 键盘布局编辑器 | 未适配 | MVP 中禁用（`showResourceEditor` 直接返回） |"
+        },
+        {
+          "line": 166,
+          "text": "| 自定义课时编辑 | 未适配 | MVP 中禁用（`showCustomLessonDialog` 返回 false） |"
+        },
+        {
+          "line": 167,
+          "text": "| 完整偏好设置对话框 | 未适配 | MVP 中禁用（`showConfigDialog` 直接返回） |"
+        },
+        {
+          "line": 168,
+          "text": "| 快捷键配置 | 未适配 | MVP 中禁用（`configureShortcuts` 直接返回） |"
+        },
+        {
+          "line": 169,
+          "text": "| 键盘布局自动检测 / 键盘 KCM | 未适配 | 依赖 X11 / Plasma KCM，OpenHarmony 上不可用 |"
+        },
+        {
+          "line": 170,
+          "text": "| 全量多语言课程与键盘布局 | 未适配 | 当前仅内置 US 课程 + US 布局 |"
+        },
+        {
+          "line": 171,
+          "text": "| 声音反馈 | 未适配 | `sounds` 子目录在构建中未启用 |"
+        },
+        {
+          "line": 172,
+          "text": "| 完整国际化 / 翻译 | 未适配 | 垫片返回未翻译字符串，仅支持简单占位替换，未做完整翻译 |"
+        },
+        {
+          "line": 178,
+          "text": "- **完整 / 增强功能（T2）基本未适配**（编辑器、自定义课时、完整偏好、布局自动识别、全量课程、声音）。"
+        },
+        {
+          "line": 182,
+          "text": "> 一句话：**核心“练打字”已在真机可用，编辑/自定义/全量课程/系统级键盘配置等周边能力当前未适配**。"
+        },
+        {
+          "line": 189,
+          "text": "- 编辑器、自定义课时、完整偏好设置、快捷键配置、键盘 KCM 在当前版本被禁用。"
+        },
+        {
+          "line": 196,
+          "text": "- 扩充内置课程与键盘布局，从 US MVP 逐步覆盖更多语言。"
+        }
+      ]
+    },
+    {
+      "project": "ohos-ktouch",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "path": "src/ktouchcontext.cpp",
+      "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "5ca6d8c5fe86b6673a049562fe5abe489c29a15d397cba9bd5906f880f934427",
+      "line_count": 249,
+      "matching_lines": [
+        16,
+        25,
+        48,
+        56,
+        83,
+        97,
+        116,
+        134,
+        154,
+        173,
+        182,
+        197,
+        209,
+        241
+      ],
+      "excerpts": [
+        {
+          "line": 16,
+          "text": "#if !defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 25,
+          "text": "#if !defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 48,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 56,
+          "text": "#if !defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 83,
+          "text": "#elif defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 97,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 116,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 134,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 154,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 173,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 182,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 197,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 209,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        },
+        {
+          "line": 241,
+          "text": "#if defined(KTOUCH_HARMONY_MVP)"
+        }
+      ]
+    },
+    {
+      "project": "ohos-ktouch",
+      "revision": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "path": "harmony_pc/HARMONYOS_PORT.md",
+      "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+      "license": "GPL-2.0-or-later (KDE project; see LICENSES/GPL-2.0-or-later.txt).",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "b22f806e06c0bb3f65d43a6748cf9553424f3a3d69c6aa5a7cbe2a5f8bb2364e",
+      "line_count": 200,
+      "matching_lines": [
+        11,
+        38,
+        61,
+        64,
+        69,
+        86,
+        106,
+        113,
+        124,
+        183,
+        198
+      ],
+      "excerpts": [
+        {
+          "line": 11,
+          "text": "The first target is a HarmonyOS MVP, not a full KDE Frameworks port:"
+        },
+        {
+          "line": 38,
+          "text": "  shims used only by the Harmony MVP build."
+        },
+        {
+          "line": 61,
+          "text": "The Harmony MVP compile definitions are:"
+        },
+        {
+          "line": 64,
+          "text": "KTOUCH_HARMONY_MVP"
+        },
+        {
+          "line": 69,
+          "text": "The MVP source list includes the KTouch runtime, models, QML, images, profile"
+        },
+        {
+          "line": 86,
+          "text": "The shims in `openharmony_compat/` cover only what the MVP needs:"
+        },
+        {
+          "line": 106,
+          "text": "The MVP packages only enough data to launch and train:"
+        },
+        {
+          "line": 113,
+          "text": "Under `KTOUCH_HARMONY_MVP`, `ResourceDataAccess` reads from"
+        },
+        {
+          "line": 124,
+          "text": "  in the MVP. The menu keeps a fullscreen toggle."
+        },
+        {
+          "line": 183,
+          "text": "The host CMake check compiles all KTouch MVP sources, moc files, and rcc"
+        },
+        {
+          "line": 198,
+          "text": "- Expand packaged course and keyboard layout data beyond the US MVP set."
+        }
+      ]
+    },
+    {
+      "project": "scidavis-for-harmonyos",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "path": "README.md",
+      "repository": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS/blob/a1e9e3d71f617691d98061fcf4c966132241fd07/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "62f6c70314119a64bb191b816de3f29c10ddc3fd5e42e6b2914c2f48d984b8a3",
+      "line_count": 51,
+      "matching_lines": [
+        25
+      ],
+      "excerpts": [
+        {
+          "line": 25,
+          "text": "## 未适配 / 暂不可用"
+        }
+      ]
+    },
+    {
+      "project": "scidavis-for-harmonyos",
+      "revision": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "path": "entry/src/main/cpp/CMakeLists.txt",
+      "repository": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS",
+      "license": "GPL-2.0-or-later (repository README and LICENSE).",
+      "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS/blob/a1e9e3d71f617691d98061fcf4c966132241fd07/entry/src/main/cpp/CMakeLists.txt",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "52aca657464999610b4f0757b40e06bbbca214db000642027878fe372e86be5f",
+      "line_count": 5,
+      "matching_lines": [],
+      "excerpts": []
+    },
+    {
+      "project": "klayout-on-harmony-pc",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "path": "docs/PORTING-NOTES.md",
+      "repository": "https://github.com/yangy79/KLayout-on-Harmony-PC",
+      "license": "GPL-3.0",
+      "url": "https://github.com/yangy79/KLayout-on-Harmony-PC/blob/0189b4544a8065b2fad7ccb0fd1085c48964aacc/docs/PORTING-NOTES.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "acb95c36347612e6efbae055d0d594838bcfd4a4390a4d85e071687ab5620e0a",
+      "line_count": 314,
+      "matching_lines": [
+        11,
+        168
+      ],
+      "excerpts": [
+        {
+          "line": 11,
+          "text": "于是绝大部分平台分支自然落到\"通用/未实现\"路径，反而不会编进任何 POSIX/Linux 专有代码。"
+        },
+        {
+          "line": 168,
+          "text": "   > 本构建 `-nopython -noruby -without-qtbinding` 用不上。"
+        }
+      ]
+    },
+    {
+      "project": "klayout-on-harmony-pc",
+      "revision": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "path": "patches/klayout-0.30.10-ohos.patch",
+      "repository": "https://github.com/yangy79/KLayout-on-Harmony-PC",
+      "license": "GPL-3.0",
+      "url": "https://github.com/yangy79/KLayout-on-Harmony-PC/blob/0189b4544a8065b2fad7ccb0fd1085c48964aacc/patches/klayout-0.30.10-ohos.patch",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "49b8c6c67fd4a5d7c2d04f38a21708a999212dbdb812e9427e669a5b52cf8a56",
+      "line_count": 835,
+      "matching_lines": [
+        530,
+        646
+      ],
+      "excerpts": [
+        {
+          "line": 530,
+          "text": "+    //  + 追加进 argv），按用户要求已于 2026-09-12 移除。"
+        },
+        {
+          "line": 646,
+          "text": "+# 注：跳过 gsiDeclDbGDS2.cc（仅 Ruby/Python 绑定声明，本构建 -nopython -noruby"
+        }
+      ]
+    },
+    {
+      "project": "freecad-on-harmonyos",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "path": "README.md",
+      "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "957057461dcf83993a44b77df3d49de6d3accc340fb4a0df0ec40c12ceb249de",
+      "line_count": 172,
+      "matching_lines": [
+        24,
+        25
+      ],
+      "excerpts": [
+        {
+          "line": 24,
+          "text": "- Preferences 崩溃的根因是 OHOS 路径禁用了原生 `QUiLoader`，而精简 PySide6 又没有 QtUiTools Python 扩展。当前恢复目标端 Qt6 UiTools，并对加载失败的 form 增加空值防线。"
+        },
+        {
+          "line": 25,
+          "text": "- GUI 冷启动现使用同一 QAbility 内的无框 ArkUI 子窗显示 FreeCAD 官方 splash。系统 starting window 和桌面端 `QSplashScreen` 均被禁用；主窗宿主与 splash 使用相同几何，FreeCAD 发布 GUI-ready 标记后才抬起主窗并移除 splash，已在真机连续取帧验证。"
+        }
+      ]
+    },
+    {
+      "project": "freecad-on-harmonyos",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "path": "docs/sketcher-rendering-debug-playbook.md",
+      "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/docs/sketcher-rendering-debug-playbook.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "52cf04896a1005d36aa85fed93dae5ea06d479a1cc7fd2eca7b10f15286ffdcd",
+      "line_count": 319,
+      "matching_lines": [
+        154,
+        208,
+        209,
+        213,
+        219,
+        226,
+        227,
+        231,
+        233,
+        238,
+        242,
+        272
+      ],
+      "excerpts": [
+        {
+          "line": 154,
+          "text": "和右下角 feedback axis cross 仍由单独的 `ohos-enable-navicube-axiscross.patch`"
+        },
+        {
+          "line": 208,
+          "text": "现象：进 Preferences 后通知区被几十条 \"Numeric mode unsupported in the"
+        },
+        {
+          "line": 209,
+          "text": "posix collation implementation\" / \"Case insensitive sorting unsupported...\""
+        },
+        {
+          "line": 213,
+          "text": "根因：OHOS 的 Qt 构建没有 ICU，QCollator 退化为 POSIX 实现；该实现不支持"
+        },
+        {
+          "line": 219,
+          "text": "## 8.5 NaviCube 与角落坐标轴缺失/面片深灰（2026-09-04 晚）"
+        },
+        {
+          "line": 226,
+          "text": "1. **移植期被整体禁用**："
+        },
+        {
+          "line": 227,
+          "text": "   `View3DInventorViewer` 里 `drawAxisCross()` 和 `naviCube->drawNaviCube()`"
+        },
+        {
+          "line": 231,
+          "text": "   （`patches/freecad-1.1.2/ohos-enable-navicube-axiscross.patch`）。"
+        },
+        {
+          "line": 233,
+          "text": "   NaviCube 的面标签纹理用 Qt 的 `QOpenGLTexture` 创建——Qt 用自己的函数表"
+        },
+        {
+          "line": 238,
+          "text": "   修复（`patches/freecad-1.1.2/ohos-navicube-raw-gl-labels.patch`）："
+        },
+        {
+          "line": 242,
+          "text": "注意：NaviCube 的拾取用 Qt 的 `QOpenGLFramebufferObject`（同属 Qt 原生"
+        },
+        {
+          "line": 272,
+          "text": "禁用全部 GL4ES VBO、只在每帧末 `glFinish()`、只保护 scratch 数组、临时把一次性"
+        }
+      ]
+    },
+    {
+      "project": "freecad-on-harmonyos",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "path": "patches/freecad-1.1.2/ohos-enable-navicube-axiscross.patch",
+      "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/patches/freecad-1.1.2/ohos-enable-navicube-axiscross.patch",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "385260b981764f874d0403dcf4702f00b69772d3e9535a07c30cd2904fb3eb24",
+      "line_count": 54,
+      "matching_lines": [
+        9,
+        22,
+        23,
+        35,
+        48,
+        49
+      ],
+      "excerpts": [
+        {
+          "line": 9,
+          "text": "+    // drawAxisCross/drawNaviCube (attrib stack, matrix stack, glBegin/glEnd)."
+        },
+        {
+          "line": 22,
+          "text": "     if (naviCubeEnabled) {"
+        },
+        {
+          "line": 23,
+          "text": "         naviCube->drawNaviCube();"
+        },
+        {
+          "line": 35,
+          "text": "+    // drawAxisCross/drawNaviCube (attrib stack, matrix stack, glBegin/glEnd)."
+        },
+        {
+          "line": 48,
+          "text": "     if (naviCubeEnabled) {"
+        },
+        {
+          "line": 49,
+          "text": "         naviCube->drawNaviCube();"
+        }
+      ]
+    },
+    {
+      "project": "freecad-on-harmonyos",
+      "revision": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "path": "patches/freecad-1.1.2/ohos-native-uitools.patch",
+      "repository": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+      "license": "LGPL-2.1 (repository LICENSE); patched third-party components retain their own licenses.",
+      "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos/blob/24d78fcc76cc4af439c7c3268c7ba81e3c664c56/patches/freecad-1.1.2/ohos-native-uitools.patch",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "4abe8cf6f0752d69536fddfd0016509267a3f55d05f86275a4d97ec9178f54de",
+      "line_count": 64,
+      "matching_lines": [
+        33,
+        34
+      ],
+      "excerpts": [
+        {
+          "line": 33,
+          "text": "-# include <QUiLoader>"
+        },
+        {
+          "line": 34,
+          "text": "+# include <QtUiTools/QUiLoader>"
+        }
+      ]
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "path": "README.md",
+      "repository": "https://github.com/fellow99/dsh-desktop-hos",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "2785939681d08d03ad65bce596a9ded3a7e8b19f6fd8b4d34eae3db7d776455b",
+      "line_count": 596,
+      "matching_lines": [
+        44,
+        52,
+        175,
+        569,
+        582
+      ],
+      "excerpts": [
+        {
+          "line": 44,
+          "text": "| Image attachments — `sharp` replaced by a pure-JS container parser; conversions it cannot do are routed through the platform image framework by an ArkTS bridge (decode / EXIF / scale / re-encode) | ⚠️ clean 8-bit sRGB files pass through byte-identically; with no bridge reachable every conversion is refused with an explicit error; no thumbnails |"
+        },
+        {
+          "line": 52,
+          "text": "- **Images.** The stub parses PNG/JPEG/GIF/WebP container headers; anything it cannot convert is handed to the ArkTS bridge (decode, EXIF orientation, scale, re-encode to JPEG/WebP/PNG). Clean 8-bit sRGB input inside the limits passes through byte-identically at zero conversion cost. With no bridge reachable (plain Node), every conversion is refused with an explicit, attributed error. No thumbnails."
+        },
+        {
+          "line": 175,
+          "text": "- **Failure is loud.** If `plugins/` exists but a matched plugin has no readable `package.json`, or its name does not match `harmony-plugin-*`, the collect stage exits non-zero. If `plugins/` is absent or holds no `harmony-plugin-*` directory, the stage is a no-op with one log line."
+        },
+        {
+          "line": 569,
+          "text": "│   └── native/                    # landlock-run native module (Linux sandbox, cut in MVP)"
+        },
+        {
+          "line": 582,
+          "text": "- [docs/工程规划.md](docs/工程规划.md) — full engineering plan + final implementation record (Electron 37 landing, key adaptation changes, MVP trade-offs, cross-compilation optimization path)"
+        }
+      ]
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "path": "specs/010-tool-bash/spec.md",
+      "repository": "https://github.com/fellow99/dsh-desktop-hos",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/specs/010-tool-bash/spec.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "3ec153d0590d23d1384bdc2a5e2d7734bbde2a7e8188f830fc2f947a2e8e988e",
+      "line_count": 567,
+      "matching_lines": [
+        4,
+        11,
+        13,
+        18,
+        19,
+        20,
+        35,
+        53,
+        74,
+        99,
+        115,
+        166,
+        172,
+        328,
+        517,
+        529
+      ],
+      "excerpts": [
+        {
+          "line": 4,
+          "text": "> Status: Proposed（设计已定，未实现）"
+        },
+        {
+          "line": 11,
+          "text": "给 harness 内的模型（LLM）一个**命令执行工具**，即上游 dsh `tool-bash` 的鸿蒙等价物 —— 上游 `tool-bash` 在本平台当前**不可用**（`src-main/main.js:174-178` 的 `HARMONY_DISABLED_PRESET_ROWS` 显式禁用 `tool-bash` / `tool-fs-search` / `persistent-shell`）。"
+        },
+        {
+          "line": 13,
+          "text": "上游不可用不是一处开关没打开，而是**四层同时禁用 + 一层平台硬约束**的结果："
+        },
+        {
+          "line": 18,
+          "text": "| ② 配置层 | `profiles/desktop/cordis.patch.yml:36-43` 禁用 `subprocess` / `sandbox` / `bash-sandbox` / `permission` 四行 | `[源码]` |"
+        },
+        {
+          "line": 19,
+          "text": "| ③ bundle 层 | `dsh-web-app/cordis.patch.yml:368-371` 禁用 host 平面的 `tool-bash` / `tool-pwsh` | `[源码]`（已核对：`:368` 为 `- id: tool-bash`，`:371` 为 `- id: tool-pwsh`） |"
+        },
+        {
+          "line": 20,
+          "text": "| ④ preset 层 | `src-main/main.js:174-178` 的 `HARMONY_DISABLED_PRESET_ROWS` 禁用 `tool-bash`、`tool-fs-search`、`persistent-shell` | `[源码]` |"
+        },
+        {
+          "line": 35,
+          "text": "- **上游能力在鸿蒙上不可用，且原因分层。** 四层禁用 + PTY 硬约束必须一次讲清，否则会有人从\"配置层\"下手去重新启用 `subprocess`，走进死路。"
+        },
+        {
+          "line": 53,
+          "text": "- 与既有装配的接线：`collectPlugins()` 物化、`HARMONY_ENSURED_PRESET_ROWS` 双写、被禁用的上游 `tool-bash` 行的交互。"
+        },
+        {
+          "line": 74,
+          "text": "| 本工程源码与其引用的上游 dsh 源码 | 禁用链、配置文件、行号、preset 表、构建脚本 | `[源码]` + `file:line` |"
+        },
+        {
+          "line": 99,
+          "text": "| **L3 本工程配置选择** | `cordis.patch.yml` + agent preset 的 disabled 行 | `HARMONY_DISABLED_PRESET_ROWS` 对 `tool-bash` 的禁用 |"
+        },
+        {
+          "line": 115,
+          "text": "> **`build_selinux` 差异**：SELinux 构建下 `chcon` **被加入** symlink 集合、`restorecon` **被移除**。本规范以普通标准系统构建的 206 symlink 为准。"
+        },
+        {
+          "line": 166,
+          "text": "| `exec` / `execFile` 不可用 | ❌ | L1 | **不修**：`exec()` 从不回调（`[设备实测]`），禁用这两个 API |"
+        },
+        {
+          "line": 172,
+          "text": "**FR-1.3（禁用 API）** **不得**使用 `child_process.exec` / `execFile`；**不得**依赖 `'exit'` / `'close'` 事件作为完成信号。"
+        },
+        {
+          "line": 328,
+          "text": "**FR-4.8（`build_selinux` 差异）** `chcon` / `restorecon` 的可达性随 `build_selinux` 变化（前者加入、后者移除）；披露不得把它们当固定成员。"
+        },
+        {
+          "line": 517,
+          "text": "- **零上游改动（constitution §1.1）**：本模块**不**改 dsh 源码、**不**新增或删除 dsh 补丁、**不**改上游禁用的四层配置中的任何一层。"
+        },
+        {
+          "line": 529,
+          "text": "- **不**触碰 `profiles/desktop/cordis.patch.yml:36-43` 与 `dsh-web-app/cordis.patch.yml:368-371` 的禁用行；**不**删除 `src-main/main.js:174-178` 中 `tool-bash` 的禁用项（我们的行是**新增**一行 `exec`，不是解除禁用）。"
+        }
+      ]
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "path": "scripts/lib/sharp-stub-body.js",
+      "repository": "https://github.com/fellow99/dsh-desktop-hos",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/scripts/lib/sharp-stub-body.js",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "1777f1b1923804949c86d2b04f19c0f899961a94468d16680c43cd1b12cada35",
+      "line_count": 687,
+      "matching_lines": [
+        435,
+        438,
+        451,
+        459,
+        460,
+        579,
+        595,
+        625,
+        660
+      ],
+      "excerpts": [
+        {
+          "line": 435,
+          "text": "function stubUnsupported(operation, metadata) {"
+        },
+        {
+          "line": 438,
+          "text": "  error.code = 'SHARP_STUB_UNSUPPORTED';"
+        },
+        {
+          "line": 451,
+          "text": "function stubBridge() {"
+        },
+        {
+          "line": 459,
+          "text": "function stubBridgeAvailable() {"
+        },
+        {
+          "line": 460,
+          "text": "  return stubBridge() !== undefined"
+        },
+        {
+          "line": 579,
+          "text": "  if (!stubBridgeAvailable()) return undefined;"
+        },
+        {
+          "line": 595,
+          "text": "    const envelope = await stubBridge().callArkTSAsyncFunction('HarmonyImage.Convert', 'string', [request]);"
+        },
+        {
+          "line": 625,
+          "text": "      throw stubUnsupported(operation, stubMetadata(bytes));"
+        },
+        {
+          "line": 660,
+          "text": "      if (encoded === undefined) throw stubUnsupported('encode pixels', stubMetadata(bytes));"
+        }
+      ]
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "path": "web_engine/src/main/ets/adapter/ImageAdapter.ets",
+      "repository": "https://github.com/fellow99/dsh-desktop-hos",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/web_engine/src/main/ets/adapter/ImageAdapter.ets",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "e77eeaea9a361b5ffdf06cf2bb42a3583655c33d0910cc19833c4460634adb60",
+      "line_count": 208,
+      "matching_lines": [],
+      "excerpts": []
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "revision": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "path": "web_engine/src/main/ets/adapter/StatusBarManager.ets",
+      "repository": "https://github.com/fellow99/dsh-desktop-hos",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos/blob/2a69cf6de336255ebaa3f1aff017f45c5281cf23/web_engine/src/main/ets/adapter/StatusBarManager.ets",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "90178a53ecb974820dfd5e2302fb1f493abc6b9d1831e65d29068df5b4e400ad",
+      "line_count": 255,
+      "matching_lines": [
+        79,
+        105
+      ],
+      "excerpts": [
+        {
+          "line": 79,
+          "text": "      statusBarManager.addToStatusBar(this.ctxAdapter.getActiveContext(), {"
+        },
+        {
+          "line": 105,
+          "text": "      LogUtil.error(TAG, `addToStatusBar failed. err: ${JSON.stringify(err)}`);"
+        }
+      ]
+    },
+    {
+      "project": "doubao-watermark-lab",
+      "revision": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "path": "src/main.js",
+      "repository": "https://github.com/littlestone0806/doubao-watermark-lab",
+      "license": "MIT",
+      "url": "https://github.com/littlestone0806/doubao-watermark-lab/blob/d255b093a4a0fc0ae6c63df2201b566d784f632f/src/main.js",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "d11a37730e89190a71a23860a4e247953ed1f39ff037a2b0a0bdc3aca63c3ec7",
+      "line_count": 1748,
+      "matching_lines": [
+        217,
+        226,
+        406,
+        408,
+        696,
+        1153,
+        1179,
+        1184,
+        1270,
+        1386,
+        1391,
+        1691,
+        1700
+      ],
+      "excerpts": [
+        {
+          "line": 217,
+          "text": "      if (image.isEmpty()) return;"
+        },
+        {
+          "line": 226,
+          "text": "  if (!themedIcon || themedIcon.isEmpty()) return;"
+        },
+        {
+          "line": 406,
+          "text": "    callback(permission === 'clipboard-sanitized-write');"
+        },
+        {
+          "line": 408,
+          "text": "  persistentSession.setPermissionCheckHandler((_webContents, permission) => permission === 'clipboard-sanitized-write');"
+        },
+        {
+          "line": 696,
+          "text": "      if (previewImage.isEmpty()) continue;"
+        },
+        {
+          "line": 1153,
+          "text": "  if (sourceImage.isEmpty() || outputImage.isEmpty()) throw new Error('质检图片读取失败');"
+        },
+        {
+          "line": 1179,
+          "text": "    throw new Error('该文件格式不支持预览');"
+        },
+        {
+          "line": 1184,
+          "text": "  if (image.isEmpty()) throw new Error('无法读取处理结果');"
+        },
+        {
+          "line": 1270,
+          "text": "    throw new Error('该文件格式不支持涂抹');"
+        },
+        {
+          "line": 1386,
+          "text": "  ipcMain.handle('files:save-clipboard', async (_event, payload) => {"
+        },
+        {
+          "line": 1391,
+          "text": "    const directory = path.join(app.getPath('userData'), 'clipboard-inbox');"
+        },
+        {
+          "line": 1691,
+          "text": "  // 应用不使用系统菜单栏（macOS 顶部菜单与 Windows 窗口菜单一并移除）"
+        },
+        {
+          "line": 1700,
+          "text": "      ohosTray = new Tray(nativeImage.createFromPath(APP_ICON_PATH));"
+        }
+      ]
+    },
+    {
+      "project": "ohos-jupyter",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "path": "README.md",
+      "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "b2fea3fc370e018aeb92940869d920cb9825300434cb7393ed8c0292c2babd34",
+      "line_count": 277,
+      "matching_lines": [
+        85,
+        118,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        130,
+        209
+      ],
+      "excerpts": [
+        {
+          "line": 85,
+          "text": "> 说明：以下能力状态基于 HAP 构建链路与模拟器验证；带「未适配」标识的项为**按平台特点主动取舍或留待后续**，并非适配失败。真机验收进度见 §11。"
+        },
+        {
+          "line": 118,
+          "text": "这一档是桌面端用着顺手、但换个平台未必合适的功能，也是「未适配」集中的地方。"
+        },
+        {
+          "line": 122,
+          "text": "| 设备原生 CPython（`python -m jupyterlab`） | 未适配 | 默认 Pyodide 内核；可选 `external` 模式连接自备 Server |"
+        },
+        {
+          "line": 123,
+          "text": "| 系统菜单栏 | 未适配 | OHOS 无桌面菜单栏，功能由页面内按钮 / 快捷键替代 |"
+        },
+        {
+          "line": 124,
+          "text": "| 托盘 / 后台常驻 | 未适配 | 桌面专属概念，OHOS 无系统托盘，直接关掉 |"
+        },
+        {
+          "line": 125,
+          "text": "| 外部链接跳转 | 未适配 | OHOS 下未启用 `shell.openExternal` |"
+        },
+        {
+          "line": 126,
+          "text": "| 终端（Terminal） | 未适配 | 浏览器内核下无 PTY，Terminal 单元格受限 |"
+        },
+        {
+          "line": 127,
+          "text": "| 完整科学计算栈（numpy / scipy） | 未适配 | Pyodide 生态有限，wheel ABI 待适配 |"
+        },
+        {
+          "line": 128,
+          "text": "| 扩展插件市场 | 未适配 | 部分纯前端扩展可用，插件市场需另行适配 |"
+        },
+        {
+          "line": 130,
+          "text": "**小结**：T2 这层里标「未适配」的，都是顺着 OpenHarmony 的交互范式主动取舍掉的——它们要么在 OHOS 上没有对应的系统概念，要么换个平台用着别扭，所以没硬搬。这是「按平台特点做的选择」，不是「适配没做出来」。"
+        },
+        {
+          "line": 209,
+          "text": "**原因**：product 写成 `compatibleSdkVersion: \"6.1.0(23)\"` + `compatibleSdkVersionStage: \"beta1\"`，该组合禁用 lazy import。"
+        }
+      ]
+    },
+    {
+      "project": "ohos-jupyter",
+      "revision": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "path": "electron/src/main/resources/resfile/resources/app/src/js/staticLabServer.js",
+      "repository": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+      "license": "No repository-level license found; upstream and bundled components retain BSD-3-Clause and third-party licenses.",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "cc6325254ffefa7d5c1a7cee9b2e623920f7840f5ff1cd2a625b9637570520af",
+      "line_count": 2064,
+      "matching_lines": [
+        72,
+        105,
+        124,
+        267,
+        426,
+        702,
+        784,
+        838,
+        987,
+        992,
+        1091,
+        1123,
+        1324,
+        1385,
+        1448,
+        2025,
+        2037
+      ],
+      "excerpts": [
+        {
+          "line": 72,
+          "text": "const DEFAULT_DISABLED_EXTENSIONS = ["
+        },
+        {
+          "line": 105,
+          "text": "  '        raise NotImplementedError(\"Unsupported magic %\" + name)',"
+        },
+        {
+          "line": 124,
+          "text": "  '        raise NotImplementedError(\"Unsupported magic %\" + name)',"
+        },
+        {
+          "line": 267,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 426,
+          "text": "      this._sendEmpty(res, req.method === 'POST' ? 204 : 200);"
+        },
+        {
+          "line": 702,
+          "text": "      disabledExtensions: DEFAULT_DISABLED_EXTENSIONS,"
+        },
+        {
+          "line": 784,
+          "text": "    this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 838,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 987,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 992,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 1091,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 1123,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 1324,
+          "text": "        this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 1385,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 1448,
+          "text": "    this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 2025,
+          "text": "      this._sendEmpty(res, 204);"
+        },
+        {
+          "line": 2037,
+          "text": "  _sendEmpty(res, status) {"
+        }
+      ]
+    },
+    {
+      "project": "drawio-in-harmony",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "path": "FEASIBILITY.md",
+      "repository": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony/blob/df83eebf55bf15c5cbef6656d863eb94e6d33b28/FEASIBILITY.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "9c0492dd2682640b70abcba3a748eae0ab2d4c9233b2f87bb03df9c3184c2425",
+      "line_count": 119,
+      "matching_lines": [
+        9,
+        36,
+        37,
+        38,
+        46,
+        79
+      ],
+      "excerpts": [
+        {
+          "line": 9,
+          "text": "“已有 Electron 移植”和“与最新版 Electron 全部接口兼容”需要分别判断。前者有源码、构建流程及接口文档支撑；后者不成立：当前 SIG 文档明确列出不支持的接口，且公开运行时分支与 draw.io Desktop 当前使用的 Electron 存在明显版本差距。"
+        },
+        {
+          "line": 36,
+          "text": "| 剪贴板 | 支持表包含旧式 readText、writeText、write、writeImage 等 | 当前 draw.io 使用 Electron 44 的 ClipboardItem 和新版 write 形态，需要版本适配 |"
+        },
+        {
+          "line": 37,
+          "text": "| 单实例 | requestSingleInstanceLock 和 second-instance 标为不支持 | 将启动去重、二次打开文件和窗口路由交由 HarmonyOS Ability/Want 层适配 |"
+        },
+        {
+          "line": 38,
+          "text": "| 更新 | Electron 内置 autoUpdater 模块标为不支持 | draw.io 实际使用的是第三方 electron-updater，应另行处理其平台分支、初始化和 HAP 更新渠道 |"
+        },
+        {
+          "line": 46,
+          "text": "1. `src/main/electron.js` 静态导入 `ClipboardItem`，图片复制使用 `clipboard.write([new ClipboardItem(...)])`。上游 Electron 37.2.0 的主进程导出列表没有该导出。旧版运行时存在模块加载阶段失败的风险，应通过兼容模块调整导入及剪贴板实现，并保留原有 IPC 返回约定。"
+        },
+        {
+          "line": 79,
+          "text": "| D1：应用启动 | 核对 ESM 与依赖，处理 ClipboardItem 导入、单实例和 updater 初始化 | 断网进入真实 draw.io 编辑界面，创建并修改图形 |"
+        }
+      ]
+    },
+    {
+      "project": "drawio-in-harmony",
+      "revision": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "path": "FEATURE_MATRIX.md",
+      "repository": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "license": "GPL-3.0 (repository LICENSE).",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony/blob/df83eebf55bf15c5cbef6656d863eb94e6d33b28/FEATURE_MATRIX.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "f74d9adfa55b29f1665460cf8b8c8d35dee62dc24a7105c84418eb4a6e85e7f7",
+      "line_count": 64,
+      "matching_lines": [
+        49
+      ],
+      "excerpts": [
+        {
+          "line": 49,
+          "text": "| F39 | 单实例、文件关联、二次打开文件 | M/electron.js、HAP Ability/Want | 用鸿蒙生命周期和文件路由替代不支持的锁/事件 | 待迁移 |"
+        }
+      ]
+    },
+    {
+      "project": "react-native-harmony-seed",
+      "revision": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "path": "docs/rnoh/react-native-webview.md",
+      "repository": "https://github.com/kuma0605/react-native-harmony-seed",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/kuma0605/react-native-harmony-seed/blob/74c23b6959e7d019e7a9d23c12296210cb6f1eb1/docs/rnoh/react-native-webview.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "d02c693a5a452744d8eb098dc1af22872c7ca83994e043f89f01623cad9b5be8",
+      "line_count": 393,
+      "matching_lines": [
+        266,
+        343,
+        367,
+        384,
+        385,
+        386
+      ],
+      "excerpts": [
+        {
+          "line": 266,
+          "text": "> [!TIP] \"HarmonyOS Support\"列为 yes 表示 HarmonyOS 平台支持该属性；no 则表示不支持；partially 表示部分支持。使用方法跨平台一致，效果对标 iOS 或 Android 的效果。"
+        },
+        {
+          "line": 343,
+          "text": "> [!TIP] \"HarmonyOS Support\"列为 yes 表示 HarmonyOS 平台支持该属性；no 则表示不支持；partially 表示部分支持。使用方法跨平台一致，效果对标 iOS 或 Android 的效果。"
+        },
+        {
+          "line": 367,
+          "text": "> [!TIP] \"HarmonyOS Support\"列为 yes 表示 HarmonyOS 平台支持该属性；no 则表示不支持；partially 表示部分支持。使用方法跨平台一致，效果对标 iOS 或 Android 的效果。"
+        },
+        {
+          "line": 384,
+          "text": "- [ ] webview 部分属性未实现 HarmonyOS 化[issue#17](https://gitcode.com/openharmony-sig/rntpc_react-native-webview/issues/17)"
+        },
+        {
+          "line": 385,
+          "text": "- [ ] webview 部分属性未实现 HarmonyOS 化[issue#200](https://github.com/react-native-oh-library/react-native-webview/issues/200)"
+        },
+        {
+          "line": 386,
+          "text": "- [ ] V13.15.1 新增属性未实现 HarmonyOS 化[issue#2](https://gitcode.com/openharmony-sig/rntpc_react-native-webview/issues/2)"
+        }
+      ]
+    },
+    {
+      "project": "pure-live-ohos",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "path": "README_OHOS.md",
+      "repository": "https://github.com/FiveHair/pure_live",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "url": "https://github.com/FiveHair/pure_live/blob/e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2/README_OHOS.md",
+      "read_method": "preserved-source-snapshot",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/README_OHOS.md",
+      "status": "read",
+      "sha256": "094230dd84d60908daafc81b52f3613d358cd6b5e5065d101962fc02bca9e7b2",
+      "line_count": 129,
+      "matching_lines": [
+        8,
+        88,
+        90
+      ],
+      "excerpts": [
+        {
+          "line": 8,
+          "text": "  专有二进制的功能暂缺（见文末\"待适配\"）"
+        },
+        {
+          "line": 88,
+          "text": "| ffmpeg_kit_extended_flutter | vendor 空 hook（ohos 无官方产物，**录制功能暂缺**） |"
+        },
+        {
+          "line": 90,
+          "text": "| firebase 全家 | 无 ohos 实现，`FirebaseManager` 在 ohos 上直接抛 UnsupportedError（初始化入口已接 PlatformUtils 守卫） |"
+        }
+      ]
+    },
+    {
+      "project": "kelivo",
+      "revision": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+      "path": "README.md",
+      "repository": "https://github.com/Chevey339/kelivo-ohos",
+      "license": "unknown",
+      "url": "https://github.com/Chevey339/kelivo-ohos/blob/184b54e8bfdb672a566e9553bafc2090e99a5e29/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "ac7c1cd1d20b2c76ffc735adec4e9ecb80e281aed0c01050a9eb5efe80a7d2ff",
+      "line_count": 18,
+      "matching_lines": [],
+      "excerpts": []
+    },
+    {
+      "project": "kelivo",
+      "revision": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+      "path": "lib/features/settings/pages/settings_page.dart",
+      "repository": "https://github.com/Chevey339/kelivo-ohos",
+      "license": "unknown",
+      "url": "https://github.com/Chevey339/kelivo-ohos/blob/184b54e8bfdb672a566e9553bafc2090e99a5e29/lib/features/settings/pages/settings_page.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "594dd78d5aa7b0d6d77e4d34f8f3ab61a3ec53303aa1ac41e528afe85ce94e24",
+      "line_count": 393,
+      "matching_lines": [
+        183,
+        186
+      ],
+      "excerpts": [
+        {
+          "line": 183,
+          "text": "              // 鸿蒙版本暂不支持TTS服务"
+        },
+        {
+          "line": 186,
+          "text": "                  content: Text('ohos暂不支持'),"
+        }
+      ]
+    },
+    {
+      "project": "kelivo",
+      "revision": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+      "path": "lib/shared/widgets/markdown_with_highlight.dart",
+      "repository": "https://github.com/Chevey339/kelivo-ohos",
+      "license": "unknown",
+      "url": "https://github.com/Chevey339/kelivo-ohos/blob/184b54e8bfdb672a566e9553bafc2090e99a5e29/lib/shared/widgets/markdown_with_highlight.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "8cba48ee7154eb9b1c0ae8881363eff31146f466d3597ae28f67866850d68b92",
+      "line_count": 260,
+      "matching_lines": [
+        38,
+        259
+      ],
+      "excerpts": [
+        {
+          "line": 38,
+          "text": "        // 移除所有自定义builders，使用默认渲染"
+        },
+        {
+          "line": 259,
+          "text": "// 移除了自定义builders以避免兼容性问题，使用默认的markdown渲染"
+        }
+      ]
+    },
+    {
+      "project": "beecount-oh",
+      "revision": "14e6b10648ef7ce88414d7a562be638609205924",
+      "path": "lib/utils/notification_factory.dart",
+      "repository": "https://github.com/BeeKitStudio/beecount-openharmony",
+      "license": "BeeCount custom commercial source license v1.0; historical LICENSE plus HEAD README reference, source-available/restricted",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/utils/notification_factory.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "3c091c4706fd7f1fa980fde21721daf39dd12b1d6d96c44d022524bb28dd51ff",
+      "line_count": 54,
+      "matching_lines": [
+        24
+      ],
+      "excerpts": [
+        {
+          "line": 24,
+          "text": "      throw UnsupportedError('不支持的平台: ${Platform.operatingSystem}');"
+        }
+      ]
+    },
+    {
+      "project": "beecount-oh",
+      "revision": "14e6b10648ef7ce88414d7a562be638609205924",
+      "path": "lib/pages/mine_page.dart",
+      "repository": "https://github.com/BeeKitStudio/beecount-openharmony",
+      "license": "BeeCount custom commercial source license v1.0; historical LICENSE plus HEAD README reference, source-available/restricted",
+      "url": "https://github.com/BeeKitStudio/beecount-openharmony/blob/14e6b10648ef7ce88414d7a562be638609205924/lib/pages/mine_page.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "541f951b83cd630a71ef40225885193d3a078d7e81462c324ed1745ac67d6815",
+      "line_count": 1151,
+      "matching_lines": [
+        240
+      ],
+      "excerpts": [
+        {
+          "line": 240,
+          "text": "                          // 检查云服务配置，本地存储模式下禁用云功能"
+        }
+      ]
+    },
+    {
+      "project": "bugaoshan",
+      "revision": "90706b12432711cc48f75ed70864708f15adaf35",
+      "path": "lib/services/ocr_service.dart",
+      "repository": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/blob/90706b12432711cc48f75ed70864708f15adaf35/lib/services/ocr_service.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "2de33cbd9d7091907c2bc24df476106f35b75b37b6709892c38fb67c66216a70",
+      "line_count": 31,
+      "matching_lines": [
+        29
+      ],
+      "excerpts": [
+        {
+          "line": 29,
+          "text": "    return _instance!.recognizeAsync(imageBytes);"
+        }
+      ]
+    },
+    {
+      "project": "piliplus",
+      "revision": "0aba2c6db94ba9b4cf9c076b1d39179ee3d860b4",
+      "path": "lib/pages/music/view.dart",
+      "repository": "https://github.com/dev4harmony/PiliPlus",
+      "license": "GPL-3.0",
+      "url": "https://github.com/dev4harmony/PiliPlus/blob/0aba2c6db94ba9b4cf9c076b1d39179ee3d860b4/lib/pages/music/view.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "e3a3759391e3ce9e503ef13dcc70d2feed6f732123ec0bdc66b1ae1ab755fade",
+      "line_count": 692,
+      "matching_lines": [],
+      "excerpts": []
+    },
+    {
+      "project": "etohos",
+      "revision": "fdb07dbfd2869502db7603b83d69d9a9661c228a",
+      "path": "lib/utils/text_field_utils.dart",
+      "repository": "https://github.com/collaborative-creation/etohos",
+      "license": "LGPL-3.0",
+      "url": "https://github.com/collaborative-creation/etohos/blob/fdb07dbfd2869502db7603b83d69d9a9661c228a/lib/utils/text_field_utils.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "edc14649fefd1fefa9f4e4394973e2125e9afea8349a56735e942b2a718c368d",
+      "line_count": 141,
+      "matching_lines": [
+        5,
+        6,
+        7,
+        11,
+        16,
+        21,
+        26,
+        50,
+        66,
+        76,
+        82,
+        86,
+        92,
+        135
+      ],
+      "excerpts": [
+        {
+          "line": 5,
+          "text": "/// 用于鸿蒙等不支持系统剪贴板的平台"
+        },
+        {
+          "line": 6,
+          "text": "class AppClipboard {"
+        },
+        {
+          "line": 7,
+          "text": "  static String _clipboardData = '';"
+        },
+        {
+          "line": 11,
+          "text": "    _clipboardData = text;"
+        },
+        {
+          "line": 16,
+          "text": "    return _clipboardData;"
+        },
+        {
+          "line": 21,
+          "text": "    return _clipboardData.isNotEmpty;"
+        },
+        {
+          "line": 26,
+          "text": "    _clipboardData = '';"
+        },
+        {
+          "line": 50,
+          "text": "          AppClipboard.setData(selectedText);"
+        },
+        {
+          "line": 66,
+          "text": "          AppClipboard.setData(selectedText);"
+        },
+        {
+          "line": 76,
+          "text": "  if (AppClipboard.hasData()) {"
+        },
+        {
+          "line": 82,
+          "text": "          final clipboardText = AppClipboard.getData();"
+        },
+        {
+          "line": 86,
+          "text": "            clipboardText,"
+        },
+        {
+          "line": 92,
+          "text": "                offset: value.selection.start + clipboardText.length,"
+        },
+        {
+          "line": 135,
+          "text": "  /// 文本大小写设置（禁用自动大写）"
+        }
+      ]
+    },
+    {
+      "project": "oronbox",
+      "revision": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+      "path": "README.md",
+      "repository": "https://github.com/diana9905454/OronBox-Lite",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/diana9905454/OronBox-Lite/blob/27afbb7da972e240a43043bb21ae2f1851bfe965/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "6d589788e513e2a852aca3b39c3b30a8c0a9162c93d86cb8be263d016b9d40b6",
+      "line_count": 121,
+      "matching_lines": [
+        26,
+        43,
+        79,
+        81
+      ],
+      "excerpts": [
+        {
+          "line": 26,
+          "text": "OronBox Lite 是 [OronBox](https://github.com/zxor-org/OronBox) 的**鸿蒙单机离线精简版**，仅面向 HarmonyOS，仅通过**华为应用市场**分发。保留连接、管理 VelaOS / ZeppOS 设备与安装本地资源的完整能力，移除全部需要联网或账号的功能。"
+        },
+        {
+          "line": 43,
+          "text": "| Windows / Android / Linux / macOS / Web / iOS | ❌ 不支持 | Lite 只在鸿蒙端维护与分发 |"
+        },
+        {
+          "line": 79,
+          "text": "## 移除的功能"
+        },
+        {
+          "line": 81,
+          "text": "| 分类 | 移除内容 |"
+        }
+      ]
+    },
+    {
+      "project": "oronbox",
+      "revision": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+      "path": "lib/src/core/services/ohos_ble_channel.dart",
+      "repository": "https://github.com/diana9905454/OronBox-Lite",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/diana9905454/OronBox-Lite/blob/27afbb7da972e240a43043bb21ae2f1851bfe965/lib/src/core/services/ohos_ble_channel.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "1d2b98ecd7fbe049bf213539dc6b39cdfa0d6dde1d29d431357a1a8f92ea6ec1",
+      "line_count": 299,
+      "matching_lines": [
+        92,
+        97,
+        253,
+        265,
+        277
+      ],
+      "excerpts": [
+        {
+          "line": 92,
+          "text": "    throw UnsupportedError('Not supported on ohos');"
+        },
+        {
+          "line": 97,
+          "text": "    throw UnsupportedError('Not supported on ohos');"
+        },
+        {
+          "line": 253,
+          "text": "    // 鸿蒙端未实现配对状态查询，返回 false（pair 会静默忽略）。"
+        },
+        {
+          "line": 265,
+          "text": "    // 鸿蒙端未实现解除配对，静默忽略。"
+        },
+        {
+          "line": 277,
+          "text": "    // 鸿蒙端未实现已配对设备查询，返回空列表。"
+        }
+      ]
+    },
+    {
+      "project": "mi-workbench",
+      "revision": "9b6478eab96dfd78c3b577608f473eca46342874",
+      "path": "OHOS_BUILD.md",
+      "repository": "https://github.com/Aqbj-ui/mi_workbench_harmony",
+      "license": "No application-level license identified; no code copied",
+      "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/blob/9b6478eab96dfd78c3b577608f473eca46342874/OHOS_BUILD.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "cd33e0201bb22bc843137f0f341626325c96a9aec46b83045d08e89ce0edb995",
+      "line_count": 132,
+      "matching_lines": [
+        85,
+        104
+      ],
+      "excerpts": [
+        {
+          "line": 85,
+          "text": "| `lib/screens/device_screen.dart` | 顶部 import `dart:io`；`Platform.isOhos` 时显示「蓝牙秤鸿蒙版待适配」提示并禁用扫描按钮 |"
+        },
+        {
+          "line": 104,
+          "text": "`device_screen` 在鸿蒙上显示橙色提示卡「鸿蒙版暂不支持扫描」，体重仍可在「体重」页"
+        }
+      ]
+    },
+    {
+      "project": "mi-workbench",
+      "revision": "9b6478eab96dfd78c3b577608f473eca46342874",
+      "path": "lib/screens/device_screen.dart",
+      "repository": "https://github.com/Aqbj-ui/mi_workbench_harmony",
+      "license": "No application-level license identified; no code copied",
+      "url": "https://github.com/Aqbj-ui/mi_workbench_harmony/blob/9b6478eab96dfd78c3b577608f473eca46342874/lib/screens/device_screen.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "83b61512317ae5fc2f4d8da70ad61ca9d0d5695bc12b1e246b6358ff8374a59b",
+      "line_count": 210,
+      "matching_lines": [
+        120,
+        167,
+        192
+      ],
+      "excerpts": [
+        {
+          "line": 120,
+          "text": "            : '当前免费侧载暂不支持自动同步。手表/手环睡眠需在付费 Apple 开发者账号下启用 HealthKit 后读取；现在请用「手动记录睡眠」。'),"
+        },
+        {
+          "line": 167,
+          "text": "                : (Platform.isOhos ? '鸿蒙版暂不支持扫描' : '扫描附近设备')),"
+        },
+        {
+          "line": 192,
+          "text": "              '买手表/手环后，其睡眠数据经 iPhone 健康 App 聚合。当前免费侧载暂不支持自动读取，可手动记录。',"
+        }
+      ]
+    },
+    {
+      "project": "neon",
+      "revision": "4be2e195ebb82322c90bbd4cb1454276e9e84aa9",
+      "path": "packages/neon_framework/lib/src/platform/ohos.dart",
+      "repository": "https://github.com/shokakucarrier/neon-ohos",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/shokakucarrier/neon-ohos/blob/4be2e195ebb82322c90bbd4cb1454276e9e84aa9/packages/neon_framework/lib/src/platform/ohos.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "13b6257de910be6be38ebdc66943ca166d7903bef3096cca8158d9a74fc2a069",
+      "line_count": 54,
+      "matching_lines": [
+        30,
+        33,
+        36
+      ],
+      "excerpts": [
+        {
+          "line": 30,
+          "text": "  bool get canUseWindowManager => false;"
+        },
+        {
+          "line": 33,
+          "text": "  bool get canUseCamera => false;"
+        },
+        {
+          "line": 36,
+          "text": "  bool get canUsePushNotifications => false;"
+        }
+      ]
+    },
+    {
+      "project": "connssh",
+      "revision": "95174411f2b1daa888ac499d4717efc22075c00b",
+      "path": "lib/pages/sftpview.dart",
+      "repository": "https://github.com/RWPteam/ConnSSH",
+      "license": "BSD-3-Clause",
+      "url": "https://github.com/RWPteam/ConnSSH/blob/95174411f2b1daa888ac499d4717efc22075c00b/lib/pages/sftpview.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "badea6ffddd47c78176f414f4d3480fb744106b4303f87dd4e8eb21b6ce63119",
+      "line_count": 3738,
+      "matching_lines": [
+        25,
+        30,
+        57,
+        58,
+        425,
+        426,
+        623,
+        624,
+        989,
+        1007,
+        1318,
+        1352,
+        1467,
+        1585,
+        1683,
+        1684,
+        1908,
+        2031,
+        2630,
+        2641,
+        2642,
+        2655,
+        2656,
+        2657,
+        2671,
+        2682,
+        2683,
+        2696,
+        2697,
+        2698,
+        2772,
+        2780,
+        2786,
+        2794,
+        2831,
+        2850,
+        2852,
+        2853
+      ],
+      "excerpts": [
+        {
+          "line": 25,
+          "text": "class ClipboardItem {"
+        },
+        {
+          "line": 30,
+          "text": "  ClipboardItem({"
+        },
+        {
+          "line": 57,
+          "text": "  final List<ClipboardItem> _clipboardItems = [];"
+        },
+        {
+          "line": 58,
+          "text": "  bool _clipboardIsCut = false;"
+        },
+        {
+          "line": 425,
+          "text": "                  _clipboardItems.isNotEmpty ? _pasteFile : null,"
+        },
+        {
+          "line": 426,
+          "text": "                  _clipboardItems.isNotEmpty ? iconColor : disabledIconColor,"
+        },
+        {
+          "line": 623,
+          "text": "                  _clipboardItems.isNotEmpty ? _pasteFile : null,"
+        },
+        {
+          "line": 624,
+          "text": "                  _clipboardItems.isNotEmpty ? iconColor : disabledIconColor,"
+        },
+        {
+          "line": 989,
+          "text": "          allowMultiple: false,"
+        },
+        {
+          "line": 1007,
+          "text": "          allowMultiple: true,"
+        },
+        {
+          "line": 1318,
+          "text": "              '暂不支持下载目录: $filename',"
+        },
+        {
+          "line": 1352,
+          "text": "    if (filesToDownload.length == 1) {"
+        },
+        {
+          "line": 1467,
+          "text": "    int total = filesToDownload.length;"
+        },
+        {
+          "line": 1585,
+          "text": "    int total = filesToDownload.length;"
+        },
+        {
+          "line": 1683,
+          "text": "    if (filesToDownload.length > 1) {"
+        },
+        {
+          "line": 1684,
+          "text": "      _showToast('OHOS 暂不支持批量下载，请只选择一个文件');"
+        },
+        {
+          "line": 1908,
+          "text": "                Clipboard.setData(ClipboardData(text: savePath));"
+        },
+        {
+          "line": 2031,
+          "text": "              Clipboard.setData(ClipboardData(text: saveDir));"
+        },
+        {
+          "line": 2630,
+          "text": "    final newClipboardItems = <ClipboardItem>[];"
+        },
+        {
+          "line": 2641,
+          "text": "        newClipboardItems.add("
+        },
+        {
+          "line": 2642,
+          "text": "          ClipboardItem("
+        },
+        {
+          "line": 2655,
+          "text": "      _clipboardItems.clear();"
+        },
+        {
+          "line": 2656,
+          "text": "      _clipboardItems.addAll(newClipboardItems);"
+        },
+        {
+          "line": 2657,
+          "text": "      _clipboardIsCut = false;"
+        },
+        {
+          "line": 2671,
+          "text": "    final newClipboardItems = <ClipboardItem>[];"
+        },
+        {
+          "line": 2682,
+          "text": "        newClipboardItems.add("
+        },
+        {
+          "line": 2683,
+          "text": "          ClipboardItem("
+        },
+        {
+          "line": 2696,
+          "text": "      _clipboardItems.clear();"
+        },
+        {
+          "line": 2697,
+          "text": "      _clipboardItems.addAll(newClipboardItems);"
+        },
+        {
+          "line": 2698,
+          "text": "      _clipboardIsCut = true;"
+        },
+        {
+          "line": 2772,
+          "text": "    if (_clipboardItems.isEmpty) return;"
+        },
+        {
+          "line": 2780,
+          "text": "    int totalCount = _clipboardItems.length;"
+        },
+        {
+          "line": 2786,
+          "text": "      final item = _clipboardItems[i];"
+        },
+        {
+          "line": 2794,
+          "text": "        if (_clipboardIsCut) {"
+        },
+        {
+          "line": 2831,
+          "text": "        if (_clipboardIsCut) {"
+        },
+        {
+          "line": 2850,
+          "text": "        if (_clipboardIsCut) {"
+        }
+      ]
+    },
+    {
+      "project": "fusheng-music",
+      "revision": "a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950",
+      "path": "README.md",
+      "repository": "https://github.com/bmbxwbh/fu_sheng_music_ohos",
+      "license": "No app-root license identified in selected tracked tree; no app code copied.",
+      "url": "https://github.com/bmbxwbh/fu_sheng_music_ohos/blob/a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950/README.md",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "4dff99abc4f6017de3851ed0a986c18ad3ad29a616161422fe951439903ba699",
+      "line_count": 86,
+      "matching_lines": [
+        23,
+        33,
+        77,
+        78
+      ],
+      "excerpts": [
+        {
+          "line": 23,
+          "text": "| 动态取色 | `dynamic_color` | ❌ 移除（鸿蒙无 Material You） |"
+        },
+        {
+          "line": 33,
+          "text": "- ⚠️ 本地音乐（暂不支持自动扫描，可通过文件选择器导入）"
+        },
+        {
+          "line": 77,
+          "text": "3. 不支持系统动态取色（Material You / Monet）"
+        },
+        {
+          "line": 78,
+          "text": "4. 本地音乐扫描暂不支持，需手动通过文件选择器导入"
+        }
+      ]
+    },
+    {
+      "project": "nipaplay",
+      "revision": "7e91f4efef6cee49b05c2ee300931481a438be31",
+      "path": "packages/universal_gamepad_ohos_stub/lib/universal_gamepad.dart",
+      "repository": "https://github.com/AimesSoft/NipaPlay-Reload",
+      "license": "MIT",
+      "url": "https://github.com/AimesSoft/NipaPlay-Reload/blob/7e91f4efef6cee49b05c2ee300931481a438be31/packages/universal_gamepad_ohos_stub/lib/universal_gamepad.dart",
+      "read_method": "git-show-pinned-object",
+      "status": "read",
+      "sha256": "e2a7d45d4541c76e8758df8b92662e6df73ab1ac36b445cfa8126ddd692ec189",
+      "line_count": 120,
+      "matching_lines": [
+        3,
+        13,
+        16,
+        19,
+        22
+      ],
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "/// No-op HarmonyOS replacement for the native universal_gamepad plugin."
+        },
+        {
+          "line": 13,
+          "text": "  Stream<GamepadEvent> get events => const Stream<GamepadEvent>.empty();"
+        },
+        {
+          "line": 16,
+          "text": "      const Stream<GamepadConnectionEvent>.empty();"
+        },
+        {
+          "line": 19,
+          "text": "      const Stream<GamepadButtonEvent>.empty();"
+        },
+        {
+          "line": 22,
+          "text": "      const Stream<GamepadAxisEvent>.empty();"
+        }
+      ]
+    }
+  ],
+  "historical_diffs": [
+    {
+      "project": "bugaoshan",
+      "revision": "24585fd3ca55cf98834107929098001b80ab3729",
+      "paths": [
+        "lib/serivces/ocr_service.dart"
+      ],
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/24585fd3ca55cf98834107929098001b80ab3729",
+      "status": "read",
+      "diff_sha256": "0cec1f4986587b2b9692de8ceca65eb54041b7a930c3bdd88f0135acaaafde28",
+      "selected_diff_lines": [
+        "+    if (OS.isHarmony)",
+        "+      throw PlatformNotSupportedException(\"Harmony OS is not supported\");",
+        "+class PlatformNotSupportedException implements Exception {",
+        "+  PlatformNotSupportedException(this.message);"
+      ]
+    },
+    {
+      "project": "bugaoshan",
+      "revision": "a691ace11e4ea07ea317d50ae656967f9538259c",
+      "paths": [
+        "lib/services/ocr_service.dart"
+      ],
+      "url": "https://github.com/The-Brotherhood-of-SCU/Bugaoshan-HarmonyOS/commit/a691ace11e4ea07ea317d50ae656967f9538259c",
+      "status": "read",
+      "diff_sha256": "684bbc2577860d064204c8bdbf68adc5b8bb7f41b9cd74944671552318e5c464",
+      "selected_diff_lines": [
+        "-    if (OS.isHarmony) {",
+        "-      throw PlatformNotSupportedException(\"Harmony OS is not supported\");",
+        "-class PlatformNotSupportedException implements Exception {",
+        "-  PlatformNotSupportedException(this.message);"
+      ]
+    },
+    {
+      "project": "piliplus",
+      "revision": "3ef92124b8cc6746e8e9c183e4aaf94109d6bfcb",
+      "paths": [
+        "lib/pages/music/view.dart"
+      ],
+      "url": "https://github.com/dev4harmony/PiliPlus/commit/3ef92124b8cc6746e8e9c183e4aaf94109d6bfcb",
+      "status": "read",
+      "diff_sha256": "6224f6cf04814396baf123b3e4462e3c02a4da307244a308ee27c0f0da896bb9",
+      "selected_diff_lines": [
+        "-// TODO flutter 3.32.4-ohos-0.0.1使用fl_chart报错",
+        "-// import 'package:fl_chart/fl_chart.dart';",
+        "+import 'package:fl_chart/fl_chart.dart';",
+        "-              // TODO flutter 3.32.4-ohos-0.0.1使用fl_chart报错",
+        "-              // child: LineChart(",
+        "+              child: LineChart("
+      ]
+    }
+  ],
+  "source_preservation": [
+    {
+      "project": "ohos-ktouch",
+      "before": {
+        "head": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+        "tracked_status_sha256": "c972c62e70307dc488dd0f239a6324247208c805a32f1a65c5af95559ea0f697"
+      },
+      "after": {
+        "head": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+        "tracked_status_sha256": "c972c62e70307dc488dd0f239a6324247208c805a32f1a65c5af95559ea0f697"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "scidavis-for-harmonyos",
+      "before": {
+        "head": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "klayout-on-harmony-pc",
+      "before": {
+        "head": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "freecad-on-harmonyos",
+      "before": {
+        "head": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "dsh-desktop-hos",
+      "before": {
+        "head": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "doubao-watermark-lab",
+      "before": {
+        "head": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "ohos-jupyter",
+      "before": {
+        "head": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+        "tracked_status_sha256": "8f7868acd7c23e73b1ae3e46ee574ee5221867a8be842ae65c75cae2a88ce496"
+      },
+      "after": {
+        "head": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+        "tracked_status_sha256": "8f7868acd7c23e73b1ae3e46ee574ee5221867a8be842ae65c75cae2a88ce496"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "drawio-in-harmony",
+      "before": {
+        "head": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "react-native-harmony-seed",
+      "before": {
+        "head": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "kelivo",
+      "before": {
+        "head": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "184b54e8bfdb672a566e9553bafc2090e99a5e29",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "beecount-oh",
+      "before": {
+        "head": "14e6b10648ef7ce88414d7a562be638609205924",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "14e6b10648ef7ce88414d7a562be638609205924",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "bugaoshan",
+      "before": {
+        "head": "1d595c2f94a779c440e634eb75c7f43e940b848b",
+        "tracked_status_sha256": "7e38a6882b3c05e00d775cfa2b7dd7e504700d8e59403c9258642d621a23e7b4"
+      },
+      "after": {
+        "head": "1d595c2f94a779c440e634eb75c7f43e940b848b",
+        "tracked_status_sha256": "7e38a6882b3c05e00d775cfa2b7dd7e504700d8e59403c9258642d621a23e7b4"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "piliplus",
+      "before": {
+        "head": "70bf4a4ffee0c1098b099fe0401d10c2203638c7",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "70bf4a4ffee0c1098b099fe0401d10c2203638c7",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "etohos",
+      "before": {
+        "head": "fdb07dbfd2869502db7603b83d69d9a9661c228a",
+        "tracked_status_sha256": "e1380d8ce63ac3dd7feedd0580c191e0f437250ea0e1640b41e66c8858daa599"
+      },
+      "after": {
+        "head": "fdb07dbfd2869502db7603b83d69d9a9661c228a",
+        "tracked_status_sha256": "e1380d8ce63ac3dd7feedd0580c191e0f437250ea0e1640b41e66c8858daa599"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "oronbox",
+      "before": {
+        "head": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "27afbb7da972e240a43043bb21ae2f1851bfe965",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "mi-workbench",
+      "before": {
+        "head": "9b6478eab96dfd78c3b577608f473eca46342874",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "9b6478eab96dfd78c3b577608f473eca46342874",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "neon",
+      "before": {
+        "head": "4be2e195ebb82322c90bbd4cb1454276e9e84aa9",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "4be2e195ebb82322c90bbd4cb1454276e9e84aa9",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "connssh",
+      "before": {
+        "head": "95174411f2b1daa888ac499d4717efc22075c00b",
+        "tracked_status_sha256": "388edabd558837a5ea26279af0d6a8cf45b114ef1405ba4df07c310ac88b7e38"
+      },
+      "after": {
+        "head": "95174411f2b1daa888ac499d4717efc22075c00b",
+        "tracked_status_sha256": "388edabd558837a5ea26279af0d6a8cf45b114ef1405ba4df07c310ac88b7e38"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "fusheng-music",
+      "before": {
+        "head": "a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "a2add7ecf6d5d8e1ddd55bdf4c0e90931c6fb950",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    },
+    {
+      "project": "nipaplay",
+      "before": {
+        "head": "adc9bb55852b89b5f89fd4e5228ceb6713406c18",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "after": {
+        "head": "adc9bb55852b89b5f89fd4e5228ceb6713406c18",
+        "tracked_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "unchanged": true
+    }
+  ],
+  "limitations": [
+    "Source and documentation only; no app built, signed, installed or exercised.",
+    "Before/after fingerprints cover selected readable source repositories, tracked status and HEAD only; untracked files and index bytes were not audited.",
+    "Some earlier read-only object access fetched missing promisor blobs; no checkout/reset/clean was used.",
+    "Excerpts are navigation evidence, not complete source snapshots; git object revision and full-file SHA-256 identify the original bytes."
+  ]
+}

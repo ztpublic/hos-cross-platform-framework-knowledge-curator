@@ -1,0 +1,60 @@
+{
+  "accessed_on": "2026-10-21",
+  "extraction": "Primary publisher pages located through web search. Substantive search-index extracts were readable; several direct documentation opens returned a JS shell or timed out. No inaccessible full-page content was treated as read.",
+  "sources": [
+    {
+      "id": "O1",
+      "title": "PC status-bar API changes",
+      "url": "https://developer.huawei.com/consumer/en/doc/harmonyos-releases/js-apidiff-desktopextensionkit-6003",
+      "assessment": "Huawei documents addToStatusBar, icon/menu updates and DesktopExtensionKit. This rebuts an OS-wide absence claim; it does not establish full Electron Tray parity."
+    },
+    {
+      "id": "O2",
+      "title": "Core Speech Kit",
+      "url": "https://developer.huawei.com/consumer/cn/sdk/core-speech-kit/",
+      "assessment": "Huawei exposes text-to-speech as an SDK capability. Exact device, API, voice and plugin integration still need validation."
+    },
+    {
+      "id": "O3",
+      "title": "Core Vision OCR FAQ",
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-dev-faq/faqs-core-vision-3",
+      "assessment": "Huawei describes an application-facing textRecognition.recognizeText API. This is an alternative capability family, not a reproduced substitute for the project OCR model."
+    },
+    {
+      "id": "O4",
+      "title": "BLE connection and reconnection example",
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-industry-solutions/btreconnectdemo-0000002757080811",
+      "assessment": "Huawei documents BLE scanning, GATT connections and lifecycle handling. A missing Flutter plugin is not evidence of missing Bluetooth in the OS."
+    },
+    {
+      "id": "O5",
+      "title": "Clipboard collaboration example",
+      "url": "https://developer.huawei.com/consumer/en/doc/best-practices/bpta-continue",
+      "assessment": "Huawei documents the system pasteboard for local and cross-device copy/paste. Access rules and product support remain relevant."
+    },
+    {
+      "id": "O6",
+      "title": "Printing application architecture",
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-industry-solutions/practice-tools-app-architecture-v1-0000002041326514",
+      "assessment": "Huawei describes an ArkTS/C++ printing application with phone, tablet and 2-in-1 HAPs. This rebuts an OS-wide printing impossibility claim."
+    },
+    {
+      "id": "O7",
+      "title": "PC/tablet printing support",
+      "url": "https://consumer.huawei.com/cn/support/content/zh-cn16039714/",
+      "assessment": "Huawei documents printing on HarmonyOS 5.0+ PCs/tablets. It does not prove SciDAVis QPrinter integration."
+    },
+    {
+      "id": "O8",
+      "title": "Agent-powered reminders",
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/agent-powered-reminder",
+      "assessment": "Huawei documents reminders on PC/2in1 and other products, with controlled access, eligible app/scenario requirements, permission and notification authorization. Calendar Kit is a documented alternative."
+    },
+    {
+      "id": "O9",
+      "title": "Stage process model",
+      "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-v5/process-model-stage-V5",
+      "assessment": "Huawei documents 2in1 Ability/HAP process isolation. This is a lifecycle model, not unrestricted POSIX exec, PTY or permission to bundle executables."
+    }
+  ]
+}
