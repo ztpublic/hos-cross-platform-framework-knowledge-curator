@@ -1,0 +1,170 @@
+[package]
+name = "cc-switch"
+version = "3.19.2"
+description = "All-in-One Assistant for Claude Code, Codex & Gemini CLI"
+authors = ["Jason Young"]
+license = "MIT"
+repository = "https://github.com/farion1231/cc-switch"
+edition = "2021"
+rust-version = "1.85.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "cc_switch_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+doctest = false
+
+[features]
+default = []
+test-hooks = []
+
+[build-dependencies]
+# OHOS fork (yangyongzhen/tauri, feat/open-harmony) — 见文末 [patch.crates-io]
+# 版本钉 =2.6.3：patch 按精确版本替换（见 patch 段注释）
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+serde_json = { version = "1.0", features = ["preserve_order"] }
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+# OHOS fork：tray-icon feature 在 OHOS 目标下自动空转（fork 已按 target_env 门控依赖）
+# 版本钉 =2.11.5：patch 按精确版本替换，^2.11 会被 crates.io 更高版本绕过（见 patch 段注释）
+tauri = { version = "=2.11.5", features = ["tray-icon", "protocol-asset", "image-png"] }
+tauri-plugin-log = "2.9.0"
+tauri-plugin-store = "2.4.4"
+tauri-plugin-process = "2.3.1"
+# 强制 wry 用 OHOS patch 版本：registry 已有 0.56.1，^0.56.0 需求会解析到它而绕过 git patch
+wry = { version = "=0.56.0", default-features = false }
+dirs = "5.0"
+toml = "0.8"
+toml_edit = "0.22"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "stream", "socks"] }
+arboard = "3.6"
+flate2 = "1"
+brotli = "7"
+zstd = "0.13"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "sync"] }
+futures = "0.3"
+async-stream = "0.3"
+bytes = "1.5"
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors"] }
+hyper = { version = "1.0", features = ["full"] }
+hyper-util = { version = "0.1", features = ["tokio", "http1", "client-legacy"] }
+hyper-rustls = { version = "0.27", features = ["http1", "tls12", "ring", "webpki-tokio"] }
+http = "1"
+http-body = "1"
+http-body-util = "0.1"
+httparse = "1"
+tokio-rustls = "0.26"
+rustls = "0.23"
+webpki-roots = "0.26"
+rustls-native-certs = "0.8"
+regex = "1.10"
+rquickjs = { version = "0.8", features = ["array-buffer", "classes"] }
+thiserror = "2.0"
+anyhow = "1.0"
+zip = "2.2"
+serde_yaml = "0.9"
+tempfile = "3"
+url = "2.5"
+auto-launch = "0.5"
+once_cell = "1.21.3"
+base64 = "0.22"
+rusqlite = { version = "0.31", features = ["bundled", "backup", "hooks"] }
+indexmap = { version = "2", features = ["serde"] }
+rust_decimal = "1.33"
+uuid = { version = "1.11", features = ["v4"] }
+sha2 = "0.10"
+hmac = "0.12"
+json5 = "0.4"
+json-five = "0.3.1"
+sys-locale = "0.3"
+
+# ---- 桌面平台专属插件（OHOS 目标裁剪，命令层按 cfg(desktop) 降级）----
+[target.'cfg(not(target_env = "ohos"))'.dependencies]
+tauri-plugin-dialog = "2.7.2"
+tauri-plugin-fs = "2.5.1"
+tauri-plugin-opener = "2.5.4"
+tauri-plugin-updater = "2.10.1"
+tauri-plugin-deep-link = "2.4.9"
+tauri-plugin-window-state = "2.4.1"
+
+[target.'cfg(all(any(target_os = "macos", target_os = "windows", target_os = "linux"), not(target_env = "ohos")))'.dependencies]
+tauri-plugin-single-instance = "2.4.3"
+
+# ---- OHOS：napi 桥接（mobile_entry_point 宏展开必需）+ 内置 webpki 根证书 ----
+[target.'cfg(target_env = "ohos")'.dependencies]
+napi-derive-ohos = "1.1"
+napi-ohos = { version = "1.1", features = ["napi8"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls-webpki-roots", "json", "stream", "socks"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+# webkit2gtk 仅桌面 Linux（OHOS 的 target_os 也是 linux，必须排除）
+# 保留空段占位：桌面 Linux 依赖在下方条件段
+
+[target.'cfg(all(target_os = "linux", not(target_env = "ohos")))'.dependencies]
+webkit2gtk = { version = "2.0.1", features = ["v2_16"] }
+
+[target.'cfg(not(target_os = "windows"))'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winreg = "0.52"
+windows-sys = { version = "0.61", features = [
+    "Win32_Globalization",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_Shell",
+] }
+
+[target.'cfg(all(target_os = "windows", target_arch = "aarch64"))'.dependencies]
+rquickjs = { version = "0.8", features = ["bindgen"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.5"
+objc2-app-kit = { version = "0.2", features = ["NSColor"] }
+
+# Optimize release binary size to help reduce AppImage footprint
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = "s"
+# 使用 unwind 以便 panic hook 能捕获 backtrace（abort 会直接终止无法捕获）
+panic = "unwind"
+strip = "symbols"
+
+[dev-dependencies]
+serial_test = "3"
+tempfile = "3"
+
+# ---- OHOS fork 替换（yangyongzhen/tauri feat/open-harmony，官方基线 2.11.5）----
+# 用 [patch] 而非 path 依赖：cargo 解析器不会把 path 依赖当作
+# 其他 crate 的 tauri 版本候选（links="Tauri" 冲突），patch 是标准机制。
+# 全部用 git URL + rev 固定：不依赖本机路径，clone 即用；rev 保证可复现。
+# ⚠️ 依赖声明（tauri/tauri-build）必须钉 "=x.y.z" 精确版本：
+#    patch 只替换"解析器选中的精确版本"，若 crates.io 发了更高版本，
+#    semver 需求 ^2.11 会解析到新版而绕过 patch（本机无 OHOS 支持）。
+# wry/tao 必须一并 patch：fork 的 tauri-runtime-wry 用 registry 版本声明
+# （0.56.0/0.36.0），其 OHOS 支持在 tauri-apps 官方仓库的 feat/open-harmony
+# 分支（fork 根 Cargo.toml 的 workspace patch 不会跨 workspace 继承）。
+[patch.crates-io]
+tauri = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-build = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-macros = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-codegen = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-utils = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-runtime = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+tauri-runtime-wry = { git = "https://github.com/yangyongzhen/tauri", rev = "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b" }
+wry = { git = "https://github.com/tauri-apps/wry", rev = "6aaf4b84b6e420015c6a14f264f1c7399f150392" }
+tao = { git = "https://github.com/tauri-apps/tao", rev = "813572fbe582005e2fb513458bc212842745ceab" }
+
+# openharmony-ability main 已升级到 1.0.0-beta.1（webview 拆成独立插件 crate），
+# 而 wry/tauri 的 OHOS 分支仍要求 0.3.0 的 webview feature —— 用用户 fork 的
+# feat/0.3.0 分支（= upstream commit 295a276）patch 到不同 source
+# （cargo 不允许 patch 指向同源不同 rev）
+[patch."https://github.com/harmony-contrib/openharmony-ability.git"]
+openharmony-ability = { git = "https://github.com/yangyongzhen/openharmony-ability", rev = "295a276a699ba2352addc69b8cacb6acd3be6ab1" }
+openharmony-ability-derive = { git = "https://github.com/yangyongzhen/openharmony-ability", rev = "295a276a699ba2352addc69b8cacb6acd3be6ab1" }

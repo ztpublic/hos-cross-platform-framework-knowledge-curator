@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-window-keep-screen-on",
+  "sources": [
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/package.json",
+      "sha256": "46ae1b3607441faa14b11e5b84bf515ba9aa2dc7eb24e4de77de4b17e048286f",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets",
+      "sha256": "52061f528759c9b0a31af7a44466daed2656c540dffd547ddc2296416d7861e9",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-directory-polling-fallback",
+  "sources": [
+    {
+      "collection": "tex-ide-ohos",
+      "original_path": "miktex/Libraries/MiKTeX/Core/FileSystemWatcher/ohos/ohosFileSystemWatcher.cpp",
+      "snapshot": "provenance/snapshots/projects/tex-ide-ohos/2026-10-22/miktex/Libraries/MiKTeX/Core/FileSystemWatcher/ohos/ohosFileSystemWatcher.cpp",
+      "sha256": "2227defb426d6d0c976674e8eceb6a9f186ac2120b7fb63772bd30c1e5a17423",
+      "revision": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "tex-ide-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tex-ide-ohos/2026-10-22/README.md",
+      "sha256": "bc8b5e7bf7b3cde0b449cadbf54ee6a4cfa0d3a7a67dc8f1c1d7379ff305a518",
+      "revision": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "Reviewed implementation returns an empty scan on opendir failure and mutates snapshots outside the directory-list lock; the entry explicitly hardens these source limitations rather than claiming they were fixed or tested."
+  ]
+}

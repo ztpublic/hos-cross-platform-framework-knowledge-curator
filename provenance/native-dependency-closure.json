@@ -19,12 +19,43 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "673ae0197c94c90e40199859ff4d0034836e8f82e037f06e186b6594e77a7a77",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "HarmonyOS/entry/src/main/cpp/patch_needed.py",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/HarmonyOS/entry/src/main/cpp/patch_needed.py",
+      "sha256": "11fa06c6fc32a22ae90a7e92e2eda28176340c75bd6f41083abd175c51591711",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "cmake/fix_ohos_needed_paths.py",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/cmake/fix_ohos_needed_paths.py",
+      "sha256": "2a0e66a33881ee235831a50e97c95bb3a5568e21fbcaa43125b3435b80845448",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "transformations": [
     "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
     "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
-    "Did not promote unsafe empty native stubs or copied device-system libraries into the general solution; use complete dependencies or disable unavailable features."
+    "Did not promote unsafe empty native stubs or copied device-system libraries into the general solution; use complete dependencies or disable unavailable features.",
+    "Added independent Qt 6 OH application source evidence for absolute build-path DT_NEEDED caused by missing SONAME; source post-link rewriting was inspected, not executed."
   ],
   "limitations": [
     "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",

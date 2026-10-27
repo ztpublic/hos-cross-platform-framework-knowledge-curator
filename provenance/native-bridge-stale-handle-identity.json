@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-bridge-stale-handle-identity",
+  "sources": [
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "sha256": "4b3212cea064336fa434b09e386c559b771df5560dadf6756b5960b0a3f88a19",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "sha256": "f4c24786f10d7c420b0fe897d5c1d8fb7763a55201a9a12877193400e9b427c0",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "Upstream reports a deterministic forced-address-reuse harness and simulator stale-ID checks. Its real-run baseline did not reproduce allocator address reuse."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-harmonyshare-image-receive",
+  "sources": [
+    {
+      "collection": "marktext-ohos",
+      "original_path": "web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+      "sha256": "5b86ca2d22a70e6cd3c549655eec3f6cdba32984569c3e453746542ea25f87aa",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets",
+      "sha256": "ff2ddb61b938fa65e8a164a48628be44545c9e58f22272cfde2f7c9af905fc04",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/README.md",
+      "sha256": "a0d500b97da687fde888fa95430fc39656aae97481ed0f6c8eb2126bef495cbb",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Selected vendor adapter and binder only; renderer delivery, service privilege and physical-PC sharing were not executed. Source cleanup/error gaps are not claimed repaired."
+  ]
+}

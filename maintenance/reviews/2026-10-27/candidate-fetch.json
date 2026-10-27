@@ -1,0 +1,215 @@
+[
+  {
+    "id": "xi-qt-ohos",
+    "url": "https://gitcode.com/ohos-qt/xi-qt",
+    "selected_ref": "main",
+    "framework": "qt",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/xi-qt-ohos.git",
+    "observed_commit": "869846c167cf6ed99fc1720f7f6885c3165839be",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "qterminal-ohos",
+    "url": "https://gitcode.com/ohos-qt/qterminal",
+    "selected_ref": "main",
+    "framework": "qt",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/qterminal-ohos.git",
+    "observed_commit": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "strawberry-ohos",
+    "url": "https://gitcode.com/ohos-qt/strawberry",
+    "selected_ref": "main",
+    "framework": "qt",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/strawberry-ohos.git",
+    "observed_commit": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+    "screened_paths": [
+      "COPYING",
+      "README.md",
+      "README_original.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "letos-ohos",
+    "url": "https://gitcode.com/m0_52900670/letos",
+    "selected_ref": "main",
+    "framework": "qt",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/letos-ohos.git",
+    "observed_commit": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+    "screened_paths": [
+      "LICENSE",
+      "README.md",
+      "README_original.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "rnoh-keep-awake",
+    "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+    "selected_ref": "main",
+    "framework": "react-native",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-keep-awake.git",
+    "observed_commit": "b71e63120bab682874a9547efa2d94747fa2a59f",
+    "screened_paths": [
+      "LICENSE",
+      "README.OpenHarmony.md",
+      "README.OpenHarmony_CN.md",
+      "README.OpenSource",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "cc-switch-ohos",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/cc-switch-ohos.git",
+    "observed_commit": "ad4deb22727947307012441eee0a48202aebadf8",
+    "screened_paths": [
+      "LICENSE",
+      "README.md",
+      "README_DE.md",
+      "README_JA.md",
+      "README_ZH.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "rnoh-splash-screen",
+    "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+    "selected_ref": "master",
+    "framework": "react-native",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-splash-screen.git",
+    "observed_commit": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+    "screened_paths": [
+      "LICENSE",
+      "README.OpenSource",
+      "README.md",
+      "README_en.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "electron-shell",
+    "url": "https://github.com/fellow99/ElectronShell",
+    "selected_ref": "main",
+    "framework": "electron",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/electron-shell.git",
+    "observed_commit": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "flutter-add2app",
+    "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+    "selected_ref": "main",
+    "framework": "flutter",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-add2app.git",
+    "observed_commit": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "flutter-record-ohos",
+    "url": "https://github.com/bruce3x/flutter_record_ohos",
+    "selected_ref": "bruce/ohos-startstream-fix",
+    "framework": "flutter",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-record-ohos.git",
+    "observed_commit": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+    "screened_paths": [
+      "README.OpenHarmony.md",
+      "README.OpenHarmony_CN.md",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "flutter-app-links",
+    "url": "https://github.com/HarmonyCandies/app_links_ohos",
+    "selected_ref": "main",
+    "framework": "flutter",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-app-links.git",
+    "observed_commit": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "psychopy-ohos",
+    "url": "https://github.com/Aik358/psychopy-studio-harmonyos",
+    "selected_ref": "main",
+    "framework": "electron",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/psychopy-ohos.git",
+    "observed_commit": "703df012429d0df09287948f620e64ecb5be754a",
+    "screened_paths": [
+      "README-CN-v011.md",
+      "README-CN.md",
+      "README-v011.md",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "qtc-harmony-plugin",
+    "url": "https://github.com/liys-online/qtc-for-harmonyos",
+    "selected_ref": "main",
+    "framework": "qt",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/qtc-harmony-plugin.git",
+    "observed_commit": "ac809cebabe8310fdd13dbe84740bcac92042f21",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "tauri-plugins-ohos",
+    "url": "https://github.com/SJMC-Dev/tauri-plugins-workspace-ohos-experimental",
+    "selected_ref": "feat/open-harmony",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/tauri-plugins-ohos.git",
+    "observed_commit": "cc9ec9b4ad2f9ec9bd57c3503ded1bd94d092c48",
+    "screened_paths": [
+      "LICENSE.spdx",
+      "LICENSE_APACHE-2.0",
+      "LICENSE_MIT",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "coil-ohos",
+    "url": "https://github.com/crowforkotlin/coil",
+    "selected_ref": "ohos",
+    "framework": "kotlin-multiplatform",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/coil-ohos.git",
+    "observed_commit": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+    "screened_paths": [
+      "LICENSE.txt",
+      "README-ja.md",
+      "README-ko.md",
+      "README-ru.md",
+      "README-sv.md",
+      "README-tr.md",
+      "README-zh.md",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  }
+]

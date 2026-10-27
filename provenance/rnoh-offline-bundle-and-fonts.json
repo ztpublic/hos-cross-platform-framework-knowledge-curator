@@ -28,6 +28,46 @@
       "revision": "73046474f46269de177b78427b12f0c27888fe6b",
       "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
       "evidence_note": "Exact bytes fetched from the recorded commit through the GitCode raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "harmony/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/harmony/entry/src/main/ets/pages/Index.ets",
+      "sha256": "98a1cc1e000bb33ada9de60e6a9c805a2e4f0c3e755c61630c2f86eeee6b6892",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/harmony/entry/oh-package.json5",
+      "sha256": "a1e93166a275c76c2bbf810e255fc4038a1c6ac57e2c968b2f176389ccc82fb0",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/package.json",
+      "sha256": "26a9fb46acc10046ba4c1fe42bc0e984281905630b8ac061643bcddad6cea226",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "metro.config.js",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/metro.config.js",
+      "sha256": "0a5c0d4c4cb51f14c59892207ef20bf0cbeb93a1175ed152fdef23c5e5f14ab6",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "upstream_provenance": {
@@ -46,7 +86,8 @@
   "transformations": [
     "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
     "Derived one mechanism from the RNOH host, package manifest and porting notes; no source code was copied.",
-    "Classified the entry as framework-specific because the remedy depends on the RNOH bundle provider or HAR/native build contract."
+    "Classified the entry as framework-specific because the remedy depends on the RNOH bundle provider or HAR/native build contract.",
+    "Added API-26/RN-0.84 source example selecting a packaged JS fallback when the expected Hermes bytecode resource is absent. Source-reported PC success remains unexecuted; no broad inference of package/backend compatibility."
   ],
   "limitations": [
     "Source-reported build and device results were not rerun; pc_validation remains not-run.",

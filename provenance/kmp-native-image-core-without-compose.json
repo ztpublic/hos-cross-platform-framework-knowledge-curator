@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "kmp-native-image-core-without-compose",
+  "sources": [
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/build.gradle.kts",
+      "sha256": "aaa4408906bd76dac27879c8fd46a9d8aef06f5e2798dfc8af088b80dc1e4a77",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "settings.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/settings.gradle.kts",
+      "sha256": "5ef10f1d2550e710dab757a66eb8feb66e4083abdaa59c6c0b069cad7914cd4c",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "sha256": "b81c9f16612c12833e0410154ac565ddb3e3eae79fea8565566cae4ad7f1dcca",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/ets/workers/KamelWorker.ets",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/ets/workers/KamelWorker.ets",
+      "sha256": "8669b1c800d77bb8b64c292f5c89bc1e88e0d1286be3f804fd58721ef0c13eec",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "sha256": "5a5024143a4ded36cada3a6fd36d0de2e0e280126305ddaa47a81f392ea7bd97",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "No full Compose UI is provided by this adaptation. Source device/simulator reports were not rerun."
+  ]
+}

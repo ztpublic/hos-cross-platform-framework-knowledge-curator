@@ -1,0 +1,18 @@
+[
+  {
+    "id": "flutter-knowledge-import",
+    "url": "git@gitcode.com:gcw_3e5ciMtE/flutter-oh-knowledge.git",
+    "code": 0,
+    "log": "** WARNING: connection is not using a post-quantum key exchange algorithm.\n** This session may be vulnerable to \"store now, decrypt later\" attacks.\n** The server may need to be upgraded. See https://openssh.com/pq.html\n",
+    "refs": "refs/remotes/origin/HEAD 90817867e21831c68a778ed1f30311514f482394\nrefs/remotes/origin/main 90817867e21831c68a778ed1f30311514f482394\n",
+    "worktree_preserved": true
+  },
+  {
+    "id": "qt-knowledge-import",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_qt-skills.git",
+    "code": 0,
+    "log": "",
+    "refs": "refs/remotes/origin/HEAD e3f69039c6394ac7366449a9330b5749ce6a10b1\nrefs/remotes/origin/bitfun-release 746bf56de6322c17aaa1598497b2ad0e93104885\nrefs/remotes/origin/fix/kb-init-scripts dd92b6028ba0add3398d5b8aae411242bf8e28d0\nrefs/remotes/origin/lzh-add-qt-cef-graft-test 534f3fea4ee2c076668aff0ea4e3da22669b99e0\nrefs/remotes/origin/main e3f69039c6394ac7366449a9330b5749ce6a10b1\nrefs/remotes/origin/release/v2.1.0 769d39471b1261f2a84a649cb924408f0810dc66\nrefs/remotes/origin/sync/rewrite-2026-07-02 141b0ddef19fe8a0fd5dbe13d7368147928904af\nrefs/remotes/origin/sync/sync-2026-07-27 c46adbcfdb345ac005d79105e56d26ffc59b2565\nrefs/remotes/origin/sync/sync-2026-08-01 7c184cefce39e83664e45b8f03c497e5b67e9fc2\nrefs/remotes/origin/sync/sync-2026-08-18 48eac6f0b9df5a83271df20f908681cd7b70a074\nrefs/remotes/origin/sync/sync-2026-09-11 294439aafb704dc5443a870dc9acfb92cc4efaf6\nrefs/remotes/origin/trunk-flip-v3 12ba42f393486891005451a73152f24a7ff83beb\n",
+    "worktree_preserved": true
+  }
+]

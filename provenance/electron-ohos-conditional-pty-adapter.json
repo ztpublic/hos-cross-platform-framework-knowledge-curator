@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-conditional-pty-adapter",
+  "sources": [
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "native/src/ohpty.c",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/native/src/ohpty.c",
+      "sha256": "eece033ad2c92d68f31b730d8662819c8d236ce421662ad1188c2521f9a2557a",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/electron/src/main/module.json5",
+      "sha256": "809366c8016903ee2b7e2bbea221a1b75ca4ab18e83e4d0a66de11ddbcfd4fa9",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/README.md",
+      "sha256": "dae5aba7f6308e67796efdf2273878dbc8c7b02aa92afe40361699bbe3174c1c",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "No terminal or privileged identity was executed during curation. In-source TSFN/watcher failure paths still require audit; no claim of full node-pty equivalence."
+  ]
+}

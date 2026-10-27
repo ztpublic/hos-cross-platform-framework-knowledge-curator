@@ -26,7 +26,8 @@
   "pc_validation": "not-run",
   "applicability": "Shared platform/native contract; select an OH adapter and verify the stated SDK/product capabilities on PC.",
   "related": [
-    "gallery-image-format-preservation"
+    "gallery-image-format-preservation",
+    "qt-ohos-clipboard-gui-thread"
   ]
 }
 ---
@@ -45,7 +46,7 @@ Choose the OH media/clipboard operation first, then request only the permissions
 
 1. Specify the required data types: plain text versus clipboard files/images; one photo versus a batch of media assets.
 2. Select an OH-capable plugin or native API implementing those types. Use the system media creation/selection dialog where that is the intended access route.
-3. Declare permissions with appropriate user-facing reasons and request runtime grants only when needed. Keep Android-only permission branches on Android.
+3. Declare permissions with appropriate user-facing reasons and request runtime grants only when needed. For a backend that checks `READ_PASTEBOARD` but never requests it, use the owning UIAbility context with `abilityAccessCtrl.createAtManager().requestPermissionsFromUser(...)`, await the result, and handle denial. A manifest declaration alone leaves a user-grant permission ungranted. Keep Android-only permission branches on Android.
 4. Handle denied, empty and cancelled results distinctly. For batches, preserve per-item outcomes rather than reporting the entire batch as successful.
 5. Close native descriptors and release temporary resources on partial failure.
 

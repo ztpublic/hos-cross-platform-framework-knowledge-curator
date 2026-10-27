@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "ohos-native-form-factor-classification",
+  "sources": [
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "sha256": "20f63bd5bc3867915a27b3ac9635760302f1bc04df5d7258668eb567dce5fbf6",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/README.OpenHarmony_CN.md",
+      "sha256": "202c1e6445e74f804312ed003df4c4ab8b1b2588a02f2311d535291bd09050ab",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "pure-live-ohos",
+      "original_path": "ohos/entry/src/main/ets/entryability/MethodCall.ets",
+      "snapshot": "provenance/snapshots/projects/pure-live-ohos/ohos/entry/src/main/ets/entryability/MethodCall.ets",
+      "sha256": "0a66c27436231b2deeb804e2a2642ceec76d4ed1aa0753b91ef7d3160e080e43",
+      "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "license": "AGPL-3.0 (repository LICENSE).",
+      "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed.",
+    "Separated the common native device-type classification from the existing Flutter channel/window adapter, corroborated by an independently inspected RNOH Expo mapping."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

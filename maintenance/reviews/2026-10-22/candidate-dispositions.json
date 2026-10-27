@@ -1,0 +1,230 @@
+[
+  {
+    "project": "https://gitcode.com/oh-react-native/expo-device",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://github.com/HachimiWorld/FileKit-ohos",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/ohos-qt/flameshot",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/oh-tpc/Kamel",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/oh-tpc/kotlinx-io",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://github.com/walkman707/KuiklyMMKV",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://github.com/AimesSoft/liberika",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/ohos-qt/persepolis",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://github.com/hime88/react-native-skia-ohos",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+    "disposition": "source-reviewed-added",
+    "reason": "Added independently actionable knowledge with pinned snapshots and explicit PC evidence boundaries.",
+    "evidence_level": "Pinned implementation and target/build-input review"
+  },
+  {
+    "project": "gycrosskit/stately-ohos",
+    "disposition": "duplicate",
+    "reason": "Adaptation branch documentation mainly adds OH target/artifact integration already represented; default main explicitly is not the published OH implementation.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "gycrosskit/koin-ohos",
+    "disposition": "duplicate",
+    "reason": "Same target/dependency contract; read the explicit adaptation-branch README rather than treating main as the OH release.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "react-native-oh-library/react-native-ping",
+    "disposition": "insufficient",
+    "reason": "Top-level documentation offers no distinct PC integration remedy; not promoted from package name alone.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "OrdinaryManZ/HarmonyAdaptQtDemo",
+    "disposition": "insufficient",
+    "reason": "Current root has only a brief teaching README; no reviewable mechanism beyond existing Qt startup/packaging guidance.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "fellow99/oc-desktop-hos",
+    "disposition": "duplicate",
+    "reason": "Wrapper documentation repeats the known Electron OH runtime, native ABI, packaging and capability-gating family; not counted as independent runtime validation.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "fellow99/pi-desktop-hos",
+    "disposition": "duplicate",
+    "reason": "Same documented runtime/packaging family; no additional atom selected from the screened material.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "electerm/electerm-harmony",
+    "disposition": "different-host",
+    "reason": "Actual host is ArkTS/ArkWeb plus native Node backend, not proof of an Electron OH port; no new atom beyond represented embedding boundaries selected.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "liriliri/echo",
+    "disposition": "not-target",
+    "reason": "Desktop HDC controller for other OH devices, not evidence of an app running on OH PC.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "cuihairu/memex",
+    "disposition": "not-target",
+    "reason": "README separates Qt desktop from an ArkTS OH client whose compile leg is pending; no Qt OH port established.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "oh-tpc/Result",
+    "disposition": "duplicate",
+    "reason": "OH target and C-name/string bridge repeat reviewed KMP integration and ownership contracts; inspected docs retained, no independent feature claim.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "OpenHarmonyPCDeveloper/ohos_CodeCountTool",
+    "disposition": "duplicate",
+    "reason": "Actual Qt host/background worker and URI normalization are source-present; independently actionable platform mechanisms already represented.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "kmp-cmp-tpc/KMPCMPOHOS",
+    "disposition": "duplicate",
+    "reason": "OH target, native host and rawfile sample repeat the existing Compose host/resource contracts.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "weixin_52908342/OH-LiteIDE",
+    "disposition": "insufficient",
+    "reason": "README describes external business build and host/target qmake mismatch; no distinct reviewed implementation beyond existing Qt SDK coherence entry.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "OpenHarmonyPCDeveloper/ohos_QjackCtl",
+    "disposition": "insufficient",
+    "reason": "Host does not contain business source and explicitly lacks JACK backend; do not convert a working UI or NULL-returning shim into audio-routing success.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "HachimiWorld/haze-ohos",
+    "disposition": "insufficient",
+    "reason": "Default snapshot has no OH-labelled implementation paths; upstream README alone is not an OH adaptation recipe. Client uses a separate CPF fork.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "Aloereed/mpc-qt-ohos",
+    "disposition": "duplicate",
+    "reason": "Screened source inventory points to Qt/media packaging and platform stubs; no distinct mechanism beyond existing video/packaging entries selected.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "Cubeiic-HanXuan/cube-shell-cpp",
+    "disposition": "insufficient",
+    "reason": "CMake and plan disagree on PTY. Exported forkpty/QProcess symbols are source/link evidence, not sandbox terminal verification; existing capability/PTY entries cover the safe decision.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "oh-react-native/react-native-app-settings",
+    "disposition": "duplicate",
+    "reason": "Native implementation is product-specific settings startAbility with Promise acceptance, not completed permission modification; product gates/launch-result boundary already represented.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "OpenHarmonyPCDeveloper/ohos_kdevelop",
+    "disposition": "not-qt-port",
+    "reason": "Primary README describes a packaged Electron application despite Qt/KDevelop project identity; generic runtime/packaging contract is already represented.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "OpenHarmonyPCDeveloper/ohos_electron_porter",
+    "disposition": "duplicate",
+    "reason": "README describes automation of represented resfile/shim/template/permission steps; draw.io HAP build report is not feature/runtime verification.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "Joy777666/flojoy-studio-ohos",
+    "disposition": "different-host",
+    "reason": "Search record explicitly replaces Electron with ArkTS/ArkWeb and CPython. No new in-scope framework mechanism established; direct page fetch timed out.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "licq_workspace/kmp-cmp-harmony",
+    "disposition": "unavailable",
+    "reason": "Direct Gitee project page unavailable. Star-list description alone is not source evidence; no checkpoint or new knowledge claim.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "vnotex/vnote#2702",
+    "disposition": "not-implemented",
+    "reason": "Primary issue discusses a possible port; no source adaptation established.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "GitLab rzkn/qtbase",
+    "disposition": "duplicate-lead",
+    "reason": "Search surfaced a Qt source mirror, not a new app adaptation; no separate corroboration claimed.",
+    "evidence_level": "README/source inventory screening"
+  },
+  {
+    "project": "Codeberg HarmonyOS search",
+    "disposition": "unavailable",
+    "reason": "Robots restrictions prevented access; no negative claim about all hosted projects.",
+    "evidence_level": "README/source inventory screening"
+  }
+]

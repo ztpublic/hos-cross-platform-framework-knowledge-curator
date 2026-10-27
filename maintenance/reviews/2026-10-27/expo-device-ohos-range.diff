@@ -1,0 +1,181 @@
+diff --git a/CHANGELOG.OpenHarmony.md b/CHANGELOG.OpenHarmony.md
+new file mode 100644
+index 0000000..fb898a7
+--- /dev/null
++++ b/CHANGELOG.OpenHarmony.md
+@@ -0,0 +1,11 @@
++# CHANGELOG.OpenHarmony
++
++本文件只记录 OpenHarmony 适配版本的变化。上游各版本的变化以上游仓库的 CHANGELOG 为准，这里不重复搬运。
++
++## 57.0.2-ohos-1.0.0 / 上游 57.0.2
++
++- 首个 OpenHarmony 适配版本，适配基线为上游 `expo-device@57.0.2`。
++- 交付形态：包含 OpenHarmony 原生实现（ArkTS + HAR），需要 RNOH 自动链接与 ohpm 安装。
++- 许可证沿用上游 MIT License，原文保存在 `LICENSE`。
++- 验证：真机验证通过；6 个设备场景；ROM OpenHarmony-7.0.0.105。
++- 版本配套：React Native 0.84.1、React 19.2.3、RNOH 0.84.3、DevEco Studio 26.0.0 Release。
+diff --git a/OAT.xml b/OAT.xml
+new file mode 100644
+index 0000000..d593a4e
+--- /dev/null
++++ b/OAT.xml
+@@ -0,0 +1,79 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<configuration>
++    <oatconfig>
++        <licensefile>LICENSE</licensefile>
++        <policylist>
++            <policy name="projectPolicy" desc="">
++                <policyitem type="license" name="MIT" path=".*" desc="license under the MIT"/>
++            </policy>
++            <policy name="projectPolicy" desc="">
++                <policyitem type="compatibility" name="GPL-2.0+" path=".*" desc="Process that runs independently, invoked by the X process."/>
++                <policyitem type="compatibility" name="Apache-2.0" path=".*" desc="不影响兼容性"/>
++                <policyitem type="compatibility" name="BSDStyleLicense" path=".*" desc="不影响兼容性"/>
++                <policyitem type="compatibility" name="MIT" path=".*" desc="不影响兼容性"/>
++                <policyitem type="compatibility" name="ISC" path=".*" desc="不影响兼容性"/>
++                <policyitem type="compatibility" name="GPLStyleLicense" path=".*" desc="不影响兼容性"/>
++            </policy>
++        </policylist>
++        <filefilterlist>
++            <filefilter name="copyrightPolicyFilter" desc="Filters for compatibility，license header policies">
++                <filteritem type="filename" name="LICENSE" desc="版权文件，不添加版权头"/>
++                <filteritem type="filename" name="LICENSE.md" desc="版权文件，不添加版权头"/>
++                <filteritem type="filename" name="LICENCE" desc="版权文件，不添加版权头"/>
++                <filteritem type="filename" name="NOTICE" desc="NOTICE文件，不添加版权头"/>
++                <filteritem type="filename" name="*.json5" desc="hvigor配置文件，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filename" name="*/*.json5" desc="hvigor配置文件，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filepath" name="hvigorw" desc="工程模板，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="hvigorw.bat" desc="工程模板，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="harmony/src/main/cpp/generated/.*" desc="codegen自动生成，不手动修改"/>
++                <filteritem type="filepath" name="harmony/src/main/ets/generated/.*" desc="codegen自动生成，不手动修改"/>
++                <filteritem type="filepath" name=".*/hvigorfile.ts" desc="hvigor构建脚本，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filepath" name="node_modules/.*" desc="第三方依赖，不修改版权头"/>
++                <filteritem type="filepath" name="index.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="src/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="lib/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="dist/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="harmony/.*" desc="鸿蒙原生适配源码，版权头维护在 HAR 内"/>
++                <filteritem type="filepath" name="__tests__/.*" desc="测试文件，不添加版权头"/>
++                <filteritem type="filename" name="*.json" desc="配置文件，不添加版权头"/>
++                <filteritem type="filename" name="*.json5" desc="hvigor配置文件，不添加版权头"/>
++                <filteritem type="filename" name="*.md" desc="文档文件，不添加版权头"/>
++                <filteritem type="filename" name="*.cjs" desc="测试与构建脚本，不添加版权头"/>
++                <filteritem type="filename" name=".*" desc="配置文件，不添加版权头"/>
++            </filefilter>
++            <filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
++                <filteritem type="filename" name="LICENSE" desc="版权文件，不添加许可证头"/>
++                <filteritem type="filename" name="LICENSE.md" desc="版权文件，不添加许可证头"/>
++                <filteritem type="filename" name="LICENCE" desc="版权文件，不添加许可证头"/>
++                <filteritem type="filename" name="NOTICE" desc="NOTICE文件，不添加许可证头"/>
++                <filteritem type="filename" name="*.json5" desc="hvigor配置文件，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filename" name="*/*.json5" desc="hvigor配置文件，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filepath" name="hvigorw" desc="工程模板，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="hvigorw.bat" desc="工程模板，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="harmony/src/main/cpp/generated/.*" desc="codegen自动生成，不手动修改"/>
++                <filteritem type="filepath" name="harmony/src/main/ets/generated/.*" desc="codegen自动生成，不手动修改"/>
++                <filteritem type="filepath" name=".*/hvigorfile.ts" desc="hvigor构建脚本，DevEco Studio自动生成，不手动修改"/>
++                <filteritem type="filepath" name="node_modules/.*" desc="第三方依赖，不添加许可证头"/>
++                <filteritem type="filepath" name="index.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="src/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="lib/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="dist/.*" desc="第三方开源软件源码，不修改版权头，以防有修改版权风险"/>
++                <filteritem type="filepath" name="harmony/.*" desc="鸿蒙原生适配源码，许可证头维护在 HAR 内"/>
++                <filteritem type="filepath" name="__tests__/.*" desc="测试文件，不添加许可证头"/>
++                <filteritem type="filename" name="*.json" desc="配置文件，不添加许可证头"/>
++                <filteritem type="filename" name="*.json5" desc="hvigor配置文件，不添加许可证头"/>
++                <filteritem type="filename" name="*.md" desc="文档文件，不添加许可证头"/>
++                <filteritem type="filename" name="*.cjs" desc="测试与构建脚本，不添加许可证头"/>
++                <filteritem type="filename" name=".*" desc="配置文件，不添加许可证头"/>
++            </filefilter>
++            <filefilter name="binaryFileTypePolicyFilter" desc="Filters for copyright header policies">
++                <filteritem type="filename" name="*.png" desc="页面展示图标"/>
++                <filteritem type="filename" name="*.jpg" desc="页面展示图片"/>
++                <filteritem type="filename" name="*.har" desc="har文件"/>
++                <filteritem type="filename" name="*.tgz" desc="npm打包文件"/>
++                <filteritem type="filename" name="*.so" desc="预编译二进制"/>
++                <filteritem type="filename" name="*.zip" desc="压缩包"/>
++            </filefilter>
++        </filefilterlist>
++    </oatconfig>
++</configuration>
+diff --git a/README.OpenHarmony.md b/README.OpenHarmony.md
+index 391e830..dad90a5 100644
+--- a/README.OpenHarmony.md
++++ b/README.OpenHarmony.md
+@@ -98,6 +98,13 @@ Build combination: React Native 0.84.1, React 19.2.3, RNOH 0.84.3, Compile SDK 2
+ 
+ Metro success or a HAP build is not reported here as device verification.
+ 
++## Community & Support
++
++- Community: [CPF-RN OpenHarmony Community](https://atomgit.com/CPF-RN) — welcome to join: [https://atomgit.com/CPF-RN](https://atomgit.com/CPF-RN)
++- Organization: [oh-react-native](https://atomgit.com/oh-react-native)
++- HarmonyOS environment setup (RNOH docs): [Environment Setup](https://atomgit.com/CPF-RN/ohos_react_native/blob/main/docs/en/02-development/01-environment-and-tools/getting-started.md)
++- Adaptation list: [rn-ohos-adaptation-overview](https://atomgit.com/oh-react-native/rn-ohos-adaptation-overview)
++
+ ## License
+ 
+ [MIT](LICENSE).
+diff --git a/README.OpenHarmony_CN.md b/README.OpenHarmony_CN.md
+index 643a22d..bd68971 100644
+--- a/README.OpenHarmony_CN.md
++++ b/README.OpenHarmony_CN.md
+@@ -104,6 +104,13 @@ const uptime = await Device.getUptimeAsync();
+ 
+ README 不将 Metro 通过或 HAP 构建通过表述为真机通过。
+ 
++## 社区与支持
++
++- 社区：[CPF-RN 鸿蒙社区](https://atomgit.com/CPF-RN)，欢迎加入 CPF-RN 社区： [https://atomgit.com/CPF-RN](https://atomgit.com/CPF-RN)
++- 组织主页：[oh-react-native](https://atomgit.com/oh-react-native)
++- 鸿蒙开发环境搭建（RNOH 官方文档）：[环境搭建](https://atomgit.com/CPF-RN/ohos_react_native/blob/main/docs/zh-cn/02-%E5%BC%80%E5%8F%91/01-%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%B7%A5%E5%85%B7/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md)
++- 适配清单：[rn-ohos-adaptation-overview](https://atomgit.com/oh-react-native/rn-ohos-adaptation-overview)
++
+ ## 许可证
+ 
+ [MIT](LICENSE)。
+diff --git a/README.OpenSource b/README.OpenSource
+new file mode 100644
+index 0000000..6dd5d85
+--- /dev/null
++++ b/README.OpenSource
+@@ -0,0 +1,11 @@
++[
++    {
++        "Name": "expo-device",
++        "License": "MIT License",
++        "License File": "LICENSE",
++        "Version Number": "57.0.2",
++        "Owner": "",
++        "Upstream URL": "https://github.com/expo/expo/tree/9e5319c0f821a27b7924841903abae50e2b41790/packages/expo-device",
++        "Description": "A universal module that gets physical information about the device running the application"
++    }
++]
+diff --git "a/RN_expo-device+\344\273\243\347\240\201\346\243\200\346\237\245\346\212\245\345\221\212.md" "b/RN_expo-device+\344\273\243\347\240\201\346\243\200\346\237\245\346\212\245\345\221\212.md"
+index e5103d2..9bbad8f 100644
+--- "a/RN_expo-device+\344\273\243\347\240\201\346\243\200\346\237\245\346\212\245\345\221\212.md"
++++ "b/RN_expo-device+\344\273\243\347\240\201\346\243\200\346\237\245\346\212\245\345\221\212.md"
+@@ -13,5 +13,5 @@
+ ## 已完成验证
+ 
+ - 独立 tgz 消费、安装文件哈希、Metro source map、HAR 源码一致性和签名 HAP 构建通过。
+-- 2026-09-14 在 OpenHarmony-7.0.0.105 真机完成 6 个场景，截图、持续日志、HAP 哈希和场景索引保存在活动工作区 `evidence/batch20/expo-device/run-07`。
++- 2026-09-14 在 OpenHarmony-7.0.0.105 真机完成 6 个场景，截图、持续日志、HAP 哈希和场景索引保存在活动工作区 `本地活动目录`。
+ - 真机覆盖设备常量、异步查询、缓存稳定性、不可用能力拒绝、平台特性降级和组合摘要；其他设备与 ROM 未覆盖。
+diff --git a/spec.json b/spec.json
+index dc9c8be..afbd6b8 100644
+--- a/spec.json
++++ b/spec.json
+@@ -56,6 +56,8 @@
+     "date": "2026-09-14",
+     "system": "OpenHarmony-7.0.0.105",
+     "scenes": 6,
+-    "evidence": "evidence/batch20/expo-device/run-07"
+-  }
++    "evidence": null
++  },
++  "upstreamCommit": "9e5319c0f821a27b7924841903abae50e2b41790",
++  "upstreamCommitSource": "npm registry gitHead"
+ }

@@ -1,0 +1,61 @@
+{
+  "expo-device-ohos": [
+    "flutter-ohos-pc-form-factor",
+    "ohos-native-form-factor-classification"
+  ],
+  "filekit-ohos": [
+    "kmp-filekit-picker-descriptor-ownership",
+    "picker-cancellation-concurrency"
+  ],
+  "flameshot-ohos": [
+    "qt-ohos-save-picker-name-and-format",
+    "qt-ohos-window-stage-recreation"
+  ],
+  "flutter-embed-into-qt": [
+    "qt-flutter-ohos-embedded-node-host"
+  ],
+  "hachimi-world-ohos": [
+    "kmp-ohos-native-avsession-host",
+    "kmp-ohos-prepared-compose-resources",
+    "kmp-ohos-resource-environment-main-thread",
+    "native-avsession-metadata-asset-id"
+  ],
+  "kamel-ohos": [
+    "kmp-napi-string-allocator-ownership",
+    "kmp-native-image-core-without-compose",
+    "kmp-ohos-dependency-and-renderer",
+    "native-curl-explicit-ca-bundle"
+  ],
+  "kotlinx-io-ohos": [
+    "kmp-napi-string-allocator-ownership"
+  ],
+  "kuikly-mmkv": [
+    "native-c-wrapper-optional-string-lifetime"
+  ],
+  "kuiklyui": [
+    "kmp-kuikly-ohos-host",
+    "kmp-kuikly-ohos-resize-sync",
+    "native-ohos-worker-stack-budget"
+  ],
+  "liberika": [
+    "flutter-ohos-texture-native-window-lifetime",
+    "native-bridge-stale-handle-identity"
+  ],
+  "persepolis-ohos": [
+    "media-save-and-clipboard-permissions",
+    "qt-ohos-clipboard-gui-thread",
+    "qt-ohos-external-clipboard-paste",
+    "qt-pyqt-ohos-subwindow-adoption"
+  ],
+  "rnoh-skia-ohos": [
+    "rnoh-native-component-registration-parity"
+  ],
+  "tex-ide-ohos": [
+    "native-directory-polling-fallback"
+  ],
+  "vscodium-ohos": [
+    "electron-ohos-conditional-pty-adapter",
+    "electron-ohos-napi-symbol-owner",
+    "electron-ohos-non-pty-exec"
+  ]
+}

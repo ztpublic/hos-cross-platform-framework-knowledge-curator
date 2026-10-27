@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "mode": [
+    "update",
+    "discover",
+    "collection-inventory-review"
+  ],
+  "outcome": "complete-with-search-limitations",
+  "entries_before": 187,
+  "entries_after": 209,
+  "added_entries": [
+    "kmp-filekit-picker-descriptor-ownership",
+    "native-curl-explicit-ca-bundle",
+    "kmp-napi-string-allocator-ownership",
+    "kmp-native-image-core-without-compose",
+    "qt-ohos-clipboard-gui-thread",
+    "qt-pyqt-ohos-subwindow-adoption",
+    "native-ohos-worker-stack-budget",
+    "native-bridge-stale-handle-identity",
+    "flutter-ohos-texture-native-window-lifetime",
+    "qt-ohos-window-stage-recreation",
+    "qt-ohos-save-picker-name-and-format",
+    "native-directory-polling-fallback",
+    "kmp-ohos-prepared-compose-resources",
+    "kmp-ohos-resource-environment-main-thread",
+    "native-avsession-metadata-asset-id",
+    "kmp-ohos-native-avsession-host",
+    "native-c-wrapper-optional-string-lifetime",
+    "qt-flutter-ohos-embedded-node-host",
+    "rnoh-native-component-registration-parity",
+    "ohos-native-form-factor-classification",
+    "electron-ohos-napi-symbol-owner",
+    "electron-ohos-conditional-pty-adapter"
+  ],
+  "extended_entries": [
+    "picker-cancellation-concurrency",
+    "media-save-and-clipboard-permissions",
+    "qt-ohos-external-clipboard-paste",
+    "kmp-ohos-dependency-and-renderer",
+    "flutter-ohos-pc-form-factor",
+    "electron-ohos-non-pty-exec"
+  ],
+  "split_entries": [
+    "flutter-ohos-pc-form-factor"
+  ],
+  "merged_entries": [],
+  "new_source_ids": [
+    "expo-device-ohos",
+    "filekit-ohos",
+    "flameshot-ohos",
+    "flutter-embed-into-qt",
+    "hachimi-world-ohos",
+    "kamel-ohos",
+    "kotlinx-io-ohos",
+    "kuikly-mmkv",
+    "liberika",
+    "persepolis-ohos",
+    "rnoh-skia-ohos",
+    "tex-ide-ohos",
+    "vscodium-ohos"
+  ],
+  "source_ids": [
+    "compose-multiplatform-harmony",
+    "doubao-watermark-lab",
+    "drawio-in-harmony",
+    "dsh-desktop-hos",
+    "electron-egg-ohos",
+    "expo-device-ohos",
+    "filekit-ohos",
+    "flameshot-ohos",
+    "flutter-embed-into-qt",
+    "flutter-knowledge-import",
+    "freecad-on-harmonyos",
+    "hachimi-world-ohos",
+    "harmonykmp",
+    "kamel-ohos",
+    "klayout-on-harmony-pc",
+    "kotlinx-io-ohos",
+    "kuikly-mmkv",
+    "kuiklyui",
+    "liberika",
+    "notepad-ohos",
+    "ohos-electron-hap",
+    "ohos-joplin",
+    "ohos-jupyter",
+    "ohos-ktouch",
+    "ohos-pc-launcher",
+    "ohshark",
+    "persepolis-ohos",
+    "pure-live-ohos",
+    "qt-knowledge-import",
+    "react-native-harmony-seed",
+    "rnoh-skia-ohos",
+    "scidavis-for-harmonyos",
+    "tex-ide-ohos",
+    "vlc-qt6-ohos",
+    "vscodium-ohos"
+  ],
+  "registered_project_update": [
+    {
+      "source_id": "dsh-desktop-hos",
+      "selected_ref": "main",
+      "from_commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "to_commit": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
+      "outcome": "reviewed",
+      "commits": [
+        {
+          "commit": "35a1947e06f9a3516d01683228a9d385eaf5d694",
+          "subject": "docs(capability): 新增 0.2.1 能力清单，修正 skill 的 workflow 声明",
+          "disposition": "reviewed",
+          "reason": "Reviewed capability inventory and workflow declaration correction; documents runtime limitations already represented by capability-gating/non-PTY entries. No executable changes."
+        },
+        {
+          "commit": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
+          "subject": "docs(readme): 精简为介绍型，构建/签名/上架细节抽到 docs 指南",
+          "disposition": "duplicate",
+          "reason": "README/maintainer-guide relocation and links; no additional atomic remedy or executable changes."
+        }
+      ]
+    },
+    {
+      "source_id": "klayout-on-harmony-pc",
+      "selected_ref": "main",
+      "from_commit": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "to_commit": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "compose-multiplatform-harmony",
+      "selected_ref": "main",
+      "from_commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "to_commit": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "react-native-harmony-seed",
+      "selected_ref": "main",
+      "from_commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "to_commit": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "doubao-watermark-lab",
+      "selected_ref": "main",
+      "from_commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "to_commit": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "ohshark",
+      "selected_ref": "main",
+      "from_commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "to_commit": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "vlc-qt6-ohos",
+      "selected_ref": "main",
+      "from_commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "to_commit": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "freecad-on-harmonyos",
+      "selected_ref": "main",
+      "from_commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "to_commit": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "scidavis-for-harmonyos",
+      "selected_ref": "main",
+      "from_commit": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "to_commit": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "drawio-in-harmony",
+      "selected_ref": "main",
+      "from_commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "to_commit": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "harmonykmp",
+      "selected_ref": "main",
+      "from_commit": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "to_commit": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "ohos-electron-hap",
+      "selected_ref": "main",
+      "from_commit": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "to_commit": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "pure-live-ohos",
+      "selected_ref": "ohos-support",
+      "from_commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "to_commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "kuiklyui",
+      "selected_ref": "main",
+      "from_commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "to_commit": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "outcome": "reviewed",
+      "commits": [
+        {
+          "commit": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+          "subject": "docs: add 2.29.0 version description to changelog (#1814)",
+          "disposition": "reviewed",
+          "reason": "Reviewed full comparison and related source: new release notes identify the worker stack contract; no executable code changed in the range."
+        }
+      ]
+    },
+    {
+      "source_id": "ohos-pc-launcher",
+      "selected_ref": "master",
+      "from_commit": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "to_commit": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "electron-egg-ohos",
+      "selected_ref": "main",
+      "from_commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "to_commit": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "ohos-ktouch",
+      "selected_ref": "main",
+      "from_commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "to_commit": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "ohos-jupyter",
+      "selected_ref": "main",
+      "from_commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "to_commit": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "ohos-joplin",
+      "selected_ref": "main",
+      "from_commit": "73046474f46269de177b78427b12f0c27888fe6b",
+      "to_commit": "73046474f46269de177b78427b12f0c27888fe6b",
+      "outcome": "unchanged",
+      "commits": []
+    },
+    {
+      "source_id": "notepad-ohos",
+      "selected_ref": "main",
+      "from_commit": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "to_commit": "901ba4972ba90442008669dfa6eb916869d506e0",
+      "outcome": "unchanged",
+      "commits": []
+    }
+  ],
+  "collection_review": "maintenance/reviews/2026-10-22/collection-full-inventory.json",
+  "counts": {
+    "registered_projects_checked": 20,
+    "unchanged": 18,
+    "advanced": 2,
+    "new_commits_reviewed": 3,
+    "new_projects": 13,
+    "added_common": 7,
+    "added_framework_specific": 15,
+    "added_framework_labels": {
+      "kotlin-multiplatform": 6,
+      "qt": 5,
+      "flutter": 2,
+      "react-native": 1,
+      "electron": 2
+    },
+    "added_status": {
+      "scoped": 21,
+      "unresolved": 1
+    },
+    "snapshot_files": 80,
+    "shortlisted_candidates": 38
+  },
+  "candidate_dispositions": "maintenance/reviews/2026-10-22/candidate-dispositions.json",
+  "verification": [
+    "Indexed 209 entries",
+    "OK: 209 entries; metadata, provenance hashes, links and CSV index agree",
+    {
+      "query": "CURL_PEER_FAILED_VERIFICATION",
+      "framework": "kmp",
+      "first_result": "native-curl-explicit-ca-bundle"
+    },
+    {
+      "query": "files_3.ppm",
+      "framework": "qt",
+      "first_result": "qt-ohos-save-picker-name-and-format"
+    },
+    {
+      "query": "SkiaDomView",
+      "framework": "rn",
+      "first_result": "rnoh-native-component-registration-parity"
+    },
+    {
+      "query": "ecma_vm cannot run in multi-thread",
+      "framework": "kmp",
+      "first_result": "kmp-ohos-resource-environment-main-thread"
+    },
+    {
+      "query": "ptsname",
+      "framework": "electron",
+      "first_result": "electron-ohos-conditional-pty-adapter"
+    },
+    {
+      "query": "RTLD_NOLOAD",
+      "framework": "electron",
+      "first_result": "electron-ohos-napi-symbol-owner"
+    },
+    {
+      "query": "fromFileDescriptor",
+      "framework": "kmp",
+      "first_result": "kmp-filekit-picker-descriptor-ownership"
+    },
+    "git diff --check passed",
+    "Final consistency audit passed: 35 unique sources, 33 projects, exact commit disposition sets, 13 new analyzed checkpoints, collection analyzed_commit:null retained, all new PC validation fields not-run."
+  ],
+  "search_coverage": {
+    "registries": [
+      "GitHub",
+      "GitCode/AtomGit",
+      "Gitee"
+    ],
+    "supplementary": [
+      "GitLab",
+      "Codeberg"
+    ],
+    "families": [
+      "Framework and platform aliases across Flutter, Qt, Electron, RN/RNOH, KMP/CMP",
+      "PC/2in1, target/build inputs and platform integration",
+      "Follow-up source families, archived mirrors, and broad closure queries"
+    ],
+    "github_search_records": [
+      "maintenance/discovery-2026-10-22-github.json",
+      "maintenance/discovery-2026-10-22-github-followup.json"
+    ],
+    "closure": "maintenance/reviews/2026-10-22/closure-search.json",
+    "stop_reason": "After extracting the later Expo/VSCodium/RNOH leads, the final broad search produced known source families, upstream documentation, non-adaptations or unrelated HAP results, without an additional source-backed distinct mechanism."
+  },
+  "limitations": [
+    "This is practical saturation of documented public searches, not an exhaustive inventory of every registry, private repo, branch or unindexed fork.",
+    "Some Gitee pages and Codeberg access were unavailable; candidates are recorded without fabricated negative results.",
+    "The 60-project registry in the Flutter import remains imported provenance, not a fresh independent review of those 60 projects.",
+    "No source application setup, build, signing, installation, emulator, physical device or runtime test was performed.",
+    "One new optional-argument lifetime issue is unresolved; all new PC validation fields remain not-run."
+  ]
+}

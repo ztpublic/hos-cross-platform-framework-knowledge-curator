@@ -31,7 +31,8 @@
   "related": [
     "electron-ohos-runtime-and-jit",
     "async-bridge-shutdown-wait",
-    "native-event-loop-handle-teardown"
+    "native-event-loop-handle-teardown",
+    "electron-ohos-conditional-pty-adapter"
   ]
 }
 ---
@@ -57,7 +58,7 @@ Use a single long-lived, non-PTY shell with pipes. Frame each command with ungue
 
 ## Conditions and alternatives
 
-Non-PTY `fork` + `execve` + pipes work, but there is no TTY, no job control and no reliable process-exit event. Interactive programs and tools that require a terminal are not supported. Apps that do not need command execution should omit the feature entirely.
+In the runtime that motivated this adapter, non-PTY `fork` + `execve` + pipes work, but there is no TTY, no job control and no reliable process-exit event. This is not a product-wide prohibition: a separate runtime has a source-backed [conditional PTY adapter](electron-ohos-conditional-pty-adapter.md), with app-identity and permission limits. Validate the intended signed app context before choosing either route. Interactive programs and tools that require a terminal are not supported. Apps that do not need command execution should omit the feature entirely.
 
 ## Common mistakes
 

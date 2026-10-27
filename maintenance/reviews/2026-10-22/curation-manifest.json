@@ -1,0 +1,989 @@
+{
+  "date": "2026-10-22",
+  "added_entries": [
+    "kmp-filekit-picker-descriptor-ownership",
+    "native-curl-explicit-ca-bundle",
+    "kmp-napi-string-allocator-ownership",
+    "kmp-native-image-core-without-compose",
+    "qt-ohos-clipboard-gui-thread",
+    "qt-pyqt-ohos-subwindow-adoption",
+    "native-ohos-worker-stack-budget",
+    "native-bridge-stale-handle-identity",
+    "flutter-ohos-texture-native-window-lifetime",
+    "qt-ohos-window-stage-recreation",
+    "qt-ohos-save-picker-name-and-format",
+    "native-directory-polling-fallback",
+    "kmp-ohos-prepared-compose-resources",
+    "kmp-ohos-resource-environment-main-thread",
+    "native-avsession-metadata-asset-id",
+    "kmp-ohos-native-avsession-host",
+    "native-c-wrapper-optional-string-lifetime",
+    "qt-flutter-ohos-embedded-node-host",
+    "rnoh-native-component-registration-parity",
+    "ohos-native-form-factor-classification",
+    "electron-ohos-napi-symbol-owner",
+    "electron-ohos-conditional-pty-adapter"
+  ],
+  "extended_entries": [
+    "picker-cancellation-concurrency",
+    "media-save-and-clipboard-permissions",
+    "qt-ohos-external-clipboard-paste",
+    "kmp-ohos-dependency-and-renderer",
+    "flutter-ohos-pc-form-factor",
+    "electron-ohos-non-pty-exec"
+  ],
+  "split_entries": [
+    "flutter-ohos-pc-form-factor"
+  ],
+  "sources": {
+    "filekit-ohos": {
+      "repo": "HachimiWorld/FileKit-ohos",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "ref": "0.12.0-OH-1.0.0",
+      "framework": "kotlin-multiplatform",
+      "license": "MIT",
+      "local_path": ""
+    },
+    "liberika": {
+      "repo": "AimesSoft/liberika",
+      "url": "https://github.com/AimesSoft/liberika",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "ref": "main",
+      "framework": "flutter",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "local_path": ""
+    },
+    "kuiklyui": {
+      "repo": "Tencent-TDS/KuiklyUI",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "ref": "main",
+      "framework": "kotlin-multiplatform",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "local_path": ""
+    },
+    "dsh-desktop-hos": {
+      "repo": "fellow99/dsh-desktop-hos",
+      "url": "https://github.com/fellow99/dsh-desktop-hos",
+      "revision": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
+      "ref": "main",
+      "framework": "electron",
+      "license": "MIT",
+      "local_path": ""
+    },
+    "kamel-ohos": {
+      "bare": "Kamel",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "ref": "main",
+      "framework": "kotlin-multiplatform",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/Kamel.git"
+    },
+    "persepolis-ohos": {
+      "bare": "persepolis",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "ref": "main",
+      "framework": "qt",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/persepolis.git"
+    },
+    "kotlinx-io-ohos": {
+      "bare": "kotlinx-io",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "ref": "master",
+      "framework": "kotlin-multiplatform",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/kotlinx-io.git"
+    },
+    "result-ohos": {
+      "bare": "Result",
+      "url": "https://gitcode.com/oh-tpc/Result",
+      "revision": "062c5402975abeb04ccfa8a837b1f044f59002f3",
+      "ref": "master",
+      "framework": "kotlin-multiplatform",
+      "license": "MIT"
+    },
+    "flameshot-ohos": {
+      "bare": "flameshot",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "ref": "main",
+      "framework": "qt",
+      "license": "GPL-3.0-or-later",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/flameshot.git"
+    },
+    "tex-ide-ohos": {
+      "bare": "ohos_TeX_IDE",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "revision": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "ref": "main",
+      "framework": "qt",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/ohos_TeX_IDE.git"
+    },
+    "hachimi-world-ohos": {
+      "repo": "HachimiWorld/hachimi-world-client-ohos",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "ref": "ohos-dev",
+      "framework": "kotlin-multiplatform",
+      "license": "AGPL-3.0",
+      "local_path": ""
+    },
+    "kuikly-mmkv": {
+      "repo": "walkman707/KuiklyMMKV",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "ref": "main",
+      "framework": "kotlin-multiplatform",
+      "license": "Apache-2.0",
+      "local_path": ""
+    },
+    "flutter-embed-into-qt": {
+      "bare": "flutter_embed_into_qt-current",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "ref": "master",
+      "framework": "qt",
+      "frameworks": [
+        "qt",
+        "flutter"
+      ],
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/flutter_embed_into_qt-current.git"
+    },
+    "rnoh-skia-ohos": {
+      "repo": "hime88/react-native-skia-ohos",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "ref": "sig",
+      "framework": "react-native",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "local_path": ""
+    },
+    "expo-device-ohos": {
+      "bare": "expo-device",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "ref": "main",
+      "framework": "react-native",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/expo-device.git"
+    },
+    "vscodium-ohos": {
+      "bare": "hos_vscodium",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "ref": "main",
+      "framework": "electron",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/hos_vscodium.git"
+    }
+  },
+  "snapshots": [
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/PlatformFile.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/PlatformFile.ohos.kt",
+      "sha256": "7c58af78da3a799b79043cc1cb599b244c6fde330706e9cb51769b6066125064",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/OhosDescriptor.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/OhosDescriptor.kt",
+      "sha256": "41d199ba41fd87dbae9c1576c2aa052bff43b088d2679f750298fb5eb6aed27a",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "sha256": "29c1ee4ad529d8c1df52d93a7fab43529c3b0669a1342a562790425f591a3984",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-dialogs/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-dialogs/build.gradle.kts",
+      "sha256": "30764e7a81e1517e2a0dd7d8965eefdf4153dda20c9e8b4b979d04eb3ef64732",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "OHOS.zh-CN.md",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/OHOS.zh-CN.md",
+      "sha256": "a5a1829f6de9c00bc5e7ae3ca1c55be29512304605ab9df9672c5891f0177210",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/src/ohosMain/kotlin/io/kamel/core/cache/HttpClientFactory.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/src/ohosMain/kotlin/io/kamel/core/cache/HttpClientFactory.ohos.kt",
+      "sha256": "dd3326c4e36037fb73f973a073cfab599e0a2e1d36bd654a88e03a274011916b",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/src/commonMain/kotlin/io/kamel/core/Kamel.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/src/commonMain/kotlin/io/kamel/core/Kamel.kt",
+      "sha256": "e8f778ec00f57126a787a285168b474d16148602fce39eca84bbb66a1dbe73ca",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "sha256": "5a5024143a4ded36cada3a6fd36d0de2e0e280126305ddaa47a81f392ea7bd97",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "sha256": "b81c9f16612c12833e0410154ac565ddb3e3eae79fea8565566cae4ad7f1dcca",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "c5ac558871ec7ea5499079d38f5930606b7ebab7659cacd701ad0ece5930fd47",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kotlinx-io-ohos",
+      "original_path": "example/nativeApp/src/ohosArm64Main/kotlin/org/jetbrains/kotlinx/io/example/NativeBridge.kt",
+      "snapshot": "provenance/snapshots/projects/kotlinx-io-ohos/2026-10-22/example/nativeApp/src/ohosArm64Main/kotlin/org/jetbrains/kotlinx/io/example/NativeBridge.kt",
+      "sha256": "6792269e374c619611c1e6188d5736244bc08d85606b013b0105ede080ea2f0e",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kotlinx-io-ohos",
+      "original_path": "example/ohosApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/kotlinx-io-ohos/2026-10-22/example/ohosApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "c5762f7af42916bb243b2bc77685ba720db5f66e29887513cbc7aea94f5cd0d1",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/build.gradle.kts",
+      "sha256": "aaa4408906bd76dac27879c8fd46a9d8aef06f5e2798dfc8af088b80dc1e4a77",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "settings.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/settings.gradle.kts",
+      "sha256": "5ef10f1d2550e710dab757a66eb8feb66e4083abdaa59c6c0b069cad7914cd4c",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/ets/workers/KamelWorker.ets",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/ets/workers/KamelWorker.ets",
+      "sha256": "8669b1c800d77bb8b64c292f5c89bc1e88e0d1286be3f804fd58721ef0c13eec",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "sha256": "9e5aa9757ed568e5e6f140d783dcd52d2cec7d5a42d07b3169ab03289980a378",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "sha256": "385fb95564f9fad89eed8bf7d809c5bcdfa84b81d90478f3d3005705841dd1d8",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "sha256": "7c095371116c87af1b1ed27879beb4a06ad8b92bb0acf6c663c9f425798685b3",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/README.md",
+      "sha256": "a512dfb9340b5f5cfd95afe93cb3cb8c1fdf2740f08d12f9a56e92cb9b0c170d",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/CustomStackSizeThread.h",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/CustomStackSizeThread.h",
+      "sha256": "02c25add4f80d731709a2ac8f0ce9371ac51c84222a3547a61460954726037ba",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.h",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.h",
+      "sha256": "f6adc74f860bd33da92420828ade8f6c9e7bc88fa44fda36b6825348bbdb439d",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.cpp",
+      "sha256": "afe25d46df8723086c7e06e9ed8bf5b683a10703508a56fa8da9302a2567db88",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "docs/ChangeLog/2.29.0/changelog.md",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/docs/ChangeLog/2.29.0/changelog.md",
+      "sha256": "d03fd61e86a98f403c439bb2b1a96bb8d9d5b28f4c6fb3ed290ef7f117945fae",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "sha256": "4b3212cea064336fa434b09e386c559b771df5560dadf6756b5960b0a3f88a19",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "sha256": "f4c24786f10d7c420b0fe897d5c1d8fb7763a55201a9a12877193400e9b427c0",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/lib/src/erika_video_view.dart",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/lib/src/erika_video_view.dart",
+      "sha256": "9b845775b9350906eefce508d7b5b4f93d4552bf6cb219ac78ea505e33fffcc6",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "sha256": "082f6698bb51d2f311c6a3e211cf68409403e8d63850efd4c95b243b3c2a4b20",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/cpp/CMakeLists.txt",
+      "sha256": "3088888ac3414f321a5caa996e85d3a6fcfaf814936ada61847b34351bfc3035",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/pubspec.yaml",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/pubspec.yaml",
+      "sha256": "a16fbd0bccff66b4b4ccb308f89e5736a11df32803bca79042b20120c91efda4",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "gradle/libs.versions.toml",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/gradle/libs.versions.toml",
+      "sha256": "4c40ad9fda27863d7b121c97d11f51f872769227c3893a61b08718703460c0f4",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/README.OpenHarmony_CN.md",
+      "sha256": "76dd221dc31d396cd49f9211daa8c2ffc9e62031a86e5625fa09f4edcd5b6cb4",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/LICENSE",
+      "sha256": "a41675c6f02403d7845edd2488c5eafbe1dc5f20daac608e09f71c42fe9ff22b",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "samples/ohos-integration/README.md",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/samples/ohos-integration/README.md",
+      "sha256": "396f4d3beb08d7493fab3b94f0c34909c932537b66f4a3612eca830276c79dc1",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/LICENSE",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/README.md",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/README.md",
+      "sha256": "8b5cc09aaddd0cd2538860c4577ecb901c1c3ed51c7e7ec79ea607cf582dc0ca",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kotlinx-io-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/kotlinx-io-ohos/2026-10-22/LICENSE",
+      "sha256": "9e29096c161f416b13ff13696307880761a7f43aee10ca2823f8ba17c708f4ed",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flameshot-ohos",
+      "original_path": "HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "snapshot": "provenance/snapshots/projects/flameshot-ohos/2026-10-22/HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "sha256": "24578c9fcb100bf0812b35ac2fda202f9c718f6d1da5a3de52c8ebc7a9192429",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flameshot-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flameshot-ohos/2026-10-22/README.md",
+      "sha256": "0d09f208a249bb1c518909f5f478c794cf43c57f76006c935b2d8203e9bb3a06",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flameshot-ohos",
+      "original_path": "src/utils/screenshotsaver.cpp",
+      "snapshot": "provenance/snapshots/projects/flameshot-ohos/2026-10-22/src/utils/screenshotsaver.cpp",
+      "sha256": "9886ed4c8508d64686f822e55a907947f77847f2fb7cfecb214a6f6961f6824a",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "tex-ide-ohos",
+      "original_path": "miktex/Libraries/MiKTeX/Core/FileSystemWatcher/ohos/ohosFileSystemWatcher.cpp",
+      "snapshot": "provenance/snapshots/projects/tex-ide-ohos/2026-10-22/miktex/Libraries/MiKTeX/Core/FileSystemWatcher/ohos/ohosFileSystemWatcher.cpp",
+      "sha256": "2227defb426d6d0c976674e8eceb6a9f186ac2120b7fb63772bd30c1e5a17423",
+      "revision": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "tex-ide-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tex-ide-ohos/2026-10-22/README.md",
+      "sha256": "bc8b5e7bf7b3cde0b449cadbf54ee6a4cfa0d3a7a67dc8f1c1d7379ff305a518",
+      "revision": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/build.ohos.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/build.ohos.gradle.kts",
+      "sha256": "f6169108608b5ba5c4eb19bd5bf4530307f249fb3eccfb2334e38251ced12478",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "OHOS_MIGRATION.md",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/OHOS_MIGRATION.md",
+      "sha256": "6f5e075113698edb26b637897d56877741890246cfc47480d35f135881c103df",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/src/commonMain/kotlin/world/hachimi/app/util/StringResources.kt",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/src/commonMain/kotlin/world/hachimi/app/util/StringResources.kt",
+      "sha256": "d8686a7b1a3c5552bbaa99de194906a73d6d95f3b57119d52442286188d9a399",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/src/commonMain/kotlin/world/hachimi/app/model/GlobalStore.kt",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/src/commonMain/kotlin/world/hachimi/app/model/GlobalStore.kt",
+      "sha256": "6a517f01d0a39bf82ad5cf5a57b6a8793b620cad964fb704e5f8ad5f50201f77",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "345f841f862407f3bdfbdd8b0d3d6c98b3304c24c05f5536811d267667fdbc99",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/src/ohosMain/kotlin/world/hachimi/app/player/OhosMediaSession.kt",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/src/ohosMain/kotlin/world/hachimi/app/player/OhosMediaSession.kt",
+      "sha256": "4078acb36e932eefc79005999ddf3dc7299abc6ccd5531e2c5876a7b78be795a",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "2d1d453a669d6ddbdfed63f0ccd7038102e6ba2c025cf3755575744689d7d185",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "harmonyApp/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/harmonyApp/entry/src/main/module.json5",
+      "sha256": "1e1b927137f41a283ad748a661650033cc9a89d6121898a9c17915c5f5943c5c",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "ohosApp/mmkv_c_wrapper/src/main/cpp/mmkv_c_wrapper.cpp",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/ohosApp/mmkv_c_wrapper/src/main/cpp/mmkv_c_wrapper.cpp",
+      "sha256": "598b4dd9d85622b2970fe4dc38c30ec40615f0344532ada06bb850b86f6ae353",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "mmkvKotlin/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/mmkvKotlin/build.gradle.kts",
+      "sha256": "6a8367c0541d1b969e5822c7ef7bb9d0125614756ac79a9dd05755e7aa511998",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "mmkvKotlin/src/ohosArm64Main/kotlin/com/kuikly/thirdparty/kmp/lib/mmkv/MMKVImpl.kt",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/mmkvKotlin/src/ohosArm64Main/kotlin/com/kuikly/thirdparty/kmp/lib/mmkv/MMKVImpl.kt",
+      "sha256": "18764bcd46fd519a0268d361eab5bc1347d66ce2a72b55b0a2df4c51d227c5b7",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "ohosApp/mmkv_c_wrapper/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/ohosApp/mmkv_c_wrapper/src/main/cpp/CMakeLists.txt",
+      "sha256": "9ac1fb1add71323620e162b142c7193227312373e3a412df6bb21c0901e0eeba",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/README.md",
+      "sha256": "913f028dc237c97b03e8f8462113ba363b1f3d1ff8dba8965ce4552de97d3927",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/cpp/src/FlutterEmbeddedQWidget.cpp",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/cpp/src/FlutterEmbeddedQWidget.cpp",
+      "sha256": "d9837e82f3dfc1d9a055f348e116ed1f7b8e02a11994f12b05bca72c7f4e6053",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/cpp/src/EmbeddedBridge.cpp",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/cpp/src/EmbeddedBridge.cpp",
+      "sha256": "a7117bb29ef2635a4c473b3919a2f20897a40680a16b2aae9f9e40aa15539615",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/ets/flutter/EncapsulationXCompent.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/ets/flutter/EncapsulationXCompent.ets",
+      "sha256": "c851d1a31532c0d8572b54420d90a7fc3e64303277415d6a2e90fe1cbb011fe6",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/ets/flutter/MyFlutterWindow.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/ets/flutter/MyFlutterWindow.ets",
+      "sha256": "d271c316ec1e6fd29e8214ec205c452a5326eb22ce5cdd9c9bd453831af79caa",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/oh-package.json5",
+      "sha256": "7b863671e8bb75f03404ec029b27faaed0de438bec515fcdca2e8451316cdd99",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "example/qt-embed-demo/qtmodule/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/example/qt-embed-demo/qtmodule/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "b012aca95dab6359bc9d2e31c04df9a565db9580edd0c2a7445b05eb9875fbf4",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/cpp/SkiaPackage.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/cpp/SkiaPackage.cpp",
+      "sha256": "4cb0b99ccc8a0430a7cdc7cb1b2090a70d9b2dd31161b65b6b4be12c8828341c",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/cpp/CMakeLists.txt",
+      "sha256": "056e1e51a2317c88b23ddaa84996e9df0212414b71684a5ce9d5d0ea2f19a49f",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/ets/RNSkiaPackage.ts",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/ets/RNSkiaPackage.ts",
+      "sha256": "604aadf51ffc7549d7b030220a26878d4ef360c890c4096739dbe033f3e0fb6f",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "sha256": "034e2fb511ba38c34ac84cf2c0c756a085c01cbcd2293f0f4ac84463ca0e0e66",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "18917ff7b73344dfd97457448240c981bf6d729a071c3fc76e125a044da449b9",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/oh-package.json5",
+      "sha256": "6886dc6c259c5738bed2a01a2fa04aa67a02e1f8530dd9c4f0929198903ccb0d",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "sha256": "20f63bd5bc3867915a27b3ac9635760302f1bc04df5d7258668eb567dce5fbf6",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/README.OpenHarmony_CN.md",
+      "sha256": "202c1e6445e74f804312ed003df4c4ab8b1b2588a02f2311d535291bd09050ab",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/LICENSE",
+      "sha256": "6e888c69389bff8f7af6f0e8080f6d4b712657f4e20db04681ed66f50b6bf1a4",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "react-native-skia/LICENSE.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/react-native-skia/LICENSE.md",
+      "sha256": "8e891103555b17b2d8f4c0f80e1b6e9e78853530b75548939b539874d35e705a",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/LICENSE",
+      "sha256": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "native/src/napi-dyn.c",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/native/src/napi-dyn.c",
+      "sha256": "538717bb0f532089c55e8b902f3dab56c6010c2746cf1b3e5bf732a591e6c878",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "native/src/napi-dyn.h",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/native/src/napi-dyn.h",
+      "sha256": "6325f08d3769a79b7d3e6d2c005b10080bea09e55730a445f283b18747ad139c",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "native/build.sh",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/native/build.sh",
+      "sha256": "9f9ee794294742b71902d7d5ac9974989ccb9ffb7c9cf2d6318c4d71374120aa",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/README.md",
+      "sha256": "dae5aba7f6308e67796efdf2273878dbc8c7b02aa92afe40361699bbe3174c1c",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "native/src/ohpty.c",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/native/src/ohpty.c",
+      "sha256": "eece033ad2c92d68f31b730d8662819c8d236ce421662ad1188c2521f9a2557a",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "vscodium-ohos",
+      "original_path": "electron/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/vscodium-ohos/2026-10-22/electron/src/main/module.json5",
+      "sha256": "809366c8016903ee2b7e2bbea221a1b75ca4ab18e83e4d0a66de11ddbcfd4fa9",
+      "revision": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ]
+}

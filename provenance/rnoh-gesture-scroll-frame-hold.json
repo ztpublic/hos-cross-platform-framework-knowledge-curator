@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-gesture-scroll-frame-hold",
+  "sources": [
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+      "sha256": "06f1736ed77ef9a45a8f717084a40bbfce2f1f7eed81e985db499f35cbdc9eff",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+      "sha256": "459b4b8e33ff2b3a6a72af941596620a6e4fcf488c0e63412d3af82f9ea56bb0",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "sha256": "f35abe8dac73e4ca47e37b66c3b4e1f760da877cebe2b1b5403ca825d8e683ab",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+      "sha256": "518f743a3806f87471d956f8264f186d7d230397a5a37be8569e4ba777139391",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/package.json",
+      "sha256": "4aa7b363fe02d6ad82f46c51fab30d36959e65bdec024d38793a07306925b513",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

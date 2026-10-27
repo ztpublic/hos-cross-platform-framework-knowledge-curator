@@ -1,0 +1,111 @@
+[
+  {
+    "query": "startStream pcm16bits",
+    "framework": "flutter",
+    "scope": null,
+    "expected": "flutter-ohos-pcm-record-stream",
+    "returned_ids": [
+      "flutter-ohos-pcm-record-stream"
+    ],
+    "passed": true
+  },
+  {
+    "query": "WA_InputMethodEnabled",
+    "framework": "qt",
+    "scope": null,
+    "expected": "qt-ohos-terminal-direct-key-input",
+    "returned_ids": [
+      "qt-ohos-terminal-direct-key-input"
+    ],
+    "passed": true
+  },
+  {
+    "query": "Window.SessionManager",
+    "framework": "electron",
+    "scope": null,
+    "expected": "electron-ohos-sessionmanager-prerequisite",
+    "returned_ids": [
+      "electron-ohos-sessionmanager-prerequisite"
+    ],
+    "passed": true
+  },
+  {
+    "query": "ScrollFramesHold",
+    "framework": "rn",
+    "scope": null,
+    "expected": "rnoh-gesture-scroll-frame-hold",
+    "returned_ids": [
+      "rnoh-gesture-scroll-frame-hold"
+    ],
+    "passed": true
+  },
+  {
+    "query": "OhosImageDecoder",
+    "framework": "kmp",
+    "scope": null,
+    "expected": "kmp-ohos-coil-native-decoder",
+    "returned_ids": [
+      "kmp-ohos-coil-native-decoder"
+    ],
+    "passed": true
+  },
+  {
+    "query": "custom-protocol",
+    "framework": "tauri",
+    "scope": null,
+    "expected": "tauri-ohos-production-custom-protocol",
+    "returned_ids": [
+      "tauri-ohos-production-custom-protocol"
+    ],
+    "passed": true
+  },
+  {
+    "query": "NODE_IMAGE_SOURCE_SIZE",
+    "framework": "flutter",
+    "scope": null,
+    "expected": "native-arkui-node-attribute-api-guard",
+    "returned_ids": [
+      "native-arkui-node-attribute-api-guard"
+    ],
+    "passed": true
+  },
+  {
+    "query": "notifyOnly menuCode",
+    "framework": "tauri",
+    "scope": null,
+    "expected": "native-statusbar-event-routing",
+    "returned_ids": [
+      "native-statusbar-event-routing"
+    ],
+    "passed": true
+  },
+  {
+    "query": "localStorage",
+    "framework": "tauri",
+    "scope": "framework-specific",
+    "expected": "tauri-ohos-web-storage-fallback",
+    "returned_ids": [
+      "tauri-ohos-web-storage-fallback"
+    ],
+    "passed": true
+  },
+  {
+    "command": "kb.py index",
+    "output": "Indexed 236 entries",
+    "passed": true
+  },
+  {
+    "command": "kb.py check",
+    "output": "OK: 236 entries; metadata, provenance hashes, links and CSV index agree",
+    "passed": true
+  },
+  {
+    "command": "git diff --check",
+    "passed": true
+  },
+  {
+    "check": "Snapshot hashes, source identities and source worktree preservation",
+    "passed": true,
+    "snapshot_count": 111
+  }
+]

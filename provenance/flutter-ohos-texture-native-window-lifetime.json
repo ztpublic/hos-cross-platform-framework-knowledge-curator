@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-texture-native-window-lifetime",
+  "sources": [
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/lib/src/erika_video_view.dart",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/lib/src/erika_video_view.dart",
+      "sha256": "9b845775b9350906eefce508d7b5b4f93d4552bf6cb219ac78ea505e33fffcc6",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "sha256": "082f6698bb51d2f311c6a3e211cf68409403e8d63850efd4c95b243b3c2a4b20",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+      "sha256": "4b3212cea064336fa434b09e386c559b771df5560dadf6756b5960b0a3f88a19",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/ohos/src/main/cpp/CMakeLists.txt",
+      "sha256": "3088888ac3414f321a5caa996e85d3a6fcfaf814936ada61847b34351bfc3035",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/pubspec.yaml",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/packages/erika_flutter/pubspec.yaml",
+      "sha256": "a16fbd0bccff66b4b4ccb308f89e5736a11df32803bca79042b20120c91efda4",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-22/docs/investigations/pr-150-159/ohos-runtime.zh.md",
+      "sha256": "f4c24786f10d7c420b0fe897d5c1d8fb7763a55201a9a12877193400e9b427c0",
+      "revision": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

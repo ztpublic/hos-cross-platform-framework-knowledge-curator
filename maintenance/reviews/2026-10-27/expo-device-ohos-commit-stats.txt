@@ -1,0 +1,16 @@
+commit 563513a6d5365121886a6f3cca7d5a737a2ae692 9398b89f2fc3ed24fff81505420839b2ce1a72b1
+docs(ohos): add README.OpenSource and CHANGELOG.OpenHarmony, drop internal evidence paths
+
+ CHANGELOG.OpenHarmony.md                                      | 11 +++++++++++
+ README.OpenHarmony.md                                         |  7 +++++++
+ README.OpenHarmony_CN.md                                      |  7 +++++++
+ README.OpenSource                                             | 11 +++++++++++
+ ...40\201\346\243\200\346\237\245\346\212\245\345\221\212.md" |  2 +-
+ spec.json                                                     |  2 +-
+ 6 files changed, 38 insertions(+), 2 deletions(-)
+commit 931b46347a4eafc64b778b9ce4889891954572f1 563513a6d5365121886a6f3cca7d5a737a2ae692
+docs(ohos): add OAT.xml, canonical LICENSE and upstream commit identity
+
+ OAT.xml   | 79 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ spec.json |  4 +++-
+ 2 files changed, 82 insertions(+), 1 deletion(-)

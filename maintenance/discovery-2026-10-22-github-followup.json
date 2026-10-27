@@ -1,0 +1,302 @@
+[
+  {
+    "query": "ohos qt",
+    "repositories": [
+      {
+        "name": "Aloereed/vlc-qt6-ohos",
+        "ref": "main",
+        "size": 22159,
+        "url": "https://github.com/Aloereed/vlc-qt6-ohos"
+      },
+      {
+        "name": "Aloereed/mpc-qt-ohos",
+        "ref": "master",
+        "size": 18387,
+        "url": "https://github.com/Aloereed/mpc-qt-ohos"
+      },
+      {
+        "name": "lzh-xdu/QtOhosDemos",
+        "ref": "main",
+        "size": 20,
+        "url": "https://github.com/lzh-xdu/QtOhosDemos"
+      },
+      {
+        "name": "liangqi/ohos_qt-skills",
+        "ref": "main",
+        "size": 1445,
+        "url": "https://github.com/liangqi/ohos_qt-skills"
+      },
+      {
+        "name": "Li-Yaosong/qt-ohos-tests",
+        "ref": "main",
+        "size": 5408,
+        "url": "https://github.com/Li-Yaosong/qt-ohos-tests"
+      },
+      {
+        "name": "esokullu/vlc-qt6-ohos",
+        "ref": "main",
+        "size": 22159,
+        "url": "https://github.com/esokullu/vlc-qt6-ohos"
+      },
+      {
+        "name": "xiaomu120413/ohshark",
+        "ref": "main",
+        "size": 8282,
+        "url": "https://github.com/xiaomu120413/ohshark"
+      },
+      {
+        "name": "X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e",
+        "ref": "master",
+        "size": 0,
+        "url": "https://github.com/X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e"
+      }
+    ]
+  },
+  {
+    "query": "OpenHarmony electron",
+    "repositories": [
+      {
+        "name": "ohosvscode/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/ohosvscode/ohos_electron_hap"
+      },
+      {
+        "name": "fellow99/ElectronShell",
+        "ref": "main",
+        "size": 381,
+        "url": "https://github.com/fellow99/ElectronShell"
+      },
+      {
+        "name": "fellow99/dsh-desktop-hos",
+        "ref": "main",
+        "size": 16134,
+        "url": "https://github.com/fellow99/dsh-desktop-hos"
+      },
+      {
+        "name": "ohosvscode/YesPlayMusic",
+        "ref": "master",
+        "size": 43094,
+        "url": "https://github.com/ohosvscode/YesPlayMusic"
+      },
+      {
+        "name": "fellow99/oc-desktop-hos",
+        "ref": "main",
+        "size": 12851,
+        "url": "https://github.com/fellow99/oc-desktop-hos"
+      },
+      {
+        "name": "fellow99/pi-desktop-hos",
+        "ref": "main",
+        "size": 12692,
+        "url": "https://github.com/fellow99/pi-desktop-hos"
+      },
+      {
+        "name": "fellow99/opencode-workspace",
+        "ref": "main",
+        "size": 984,
+        "url": "https://github.com/fellow99/opencode-workspace"
+      },
+      {
+        "name": "fellow99/pi-workspace",
+        "ref": "main",
+        "size": 2119,
+        "url": "https://github.com/fellow99/pi-workspace"
+      },
+      {
+        "name": "zhu-xiao-hui/dsh-desktop-hos",
+        "ref": "main",
+        "size": 13223,
+        "url": "https://github.com/zhu-xiao-hui/dsh-desktop-hos"
+      },
+      {
+        "name": "daan-sudo/auto-pack",
+        "ref": "main",
+        "size": 33,
+        "url": "https://github.com/daan-sudo/auto-pack"
+      },
+      {
+        "name": "fellow99/deepseek-harness-workspace",
+        "ref": "main",
+        "size": 4707,
+        "url": "https://github.com/fellow99/deepseek-harness-workspace"
+      },
+      {
+        "name": "fellow99/dsh-desktop-ark",
+        "ref": "main",
+        "size": 1113,
+        "url": "https://github.com/fellow99/dsh-desktop-ark"
+      },
+      {
+        "name": "HU-WEITAO/EchoMusic_OHOS",
+        "ref": "main",
+        "size": 3231,
+        "url": "https://github.com/HU-WEITAO/EchoMusic_OHOS"
+      },
+      {
+        "name": "littlestone0806/doubao-watermark-lab",
+        "ref": "main",
+        "size": 87207,
+        "url": "https://github.com/littlestone0806/doubao-watermark-lab"
+      }
+    ]
+  },
+  {
+    "query": "kmp ohos",
+    "repositories": [
+      {
+        "name": "walkman707/KuiklyMMKV",
+        "ref": "main",
+        "size": 311,
+        "url": "https://github.com/walkman707/KuiklyMMKV"
+      },
+      {
+        "name": "qdsfdhvh/test-kmp-in-ohos",
+        "ref": "master",
+        "size": 149,
+        "url": "https://github.com/qdsfdhvh/test-kmp-in-ohos"
+      },
+      {
+        "name": "xiaqingpeng/HarmonyKMP",
+        "ref": "main",
+        "size": 50512,
+        "url": "https://github.com/xiaqingpeng/HarmonyKMP"
+      },
+      {
+        "name": "salehelper/KmpUniversalApp",
+        "ref": "main",
+        "size": 2070,
+        "url": "https://github.com/salehelper/KmpUniversalApp"
+      },
+      {
+        "name": "baochao-sxiaofan/kmp-ohos-bridge",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/baochao-sxiaofan/kmp-ohos-bridge"
+      },
+      {
+        "name": "bipinnatus2k/ohos-kmp-native",
+        "ref": "main",
+        "size": 61,
+        "url": "https://github.com/bipinnatus2k/ohos-kmp-native"
+      },
+      {
+        "name": "Jerricc/KuiklyMMKV",
+        "ref": "main",
+        "size": 311,
+        "url": "https://github.com/Jerricc/KuiklyMMKV"
+      },
+      {
+        "name": "OMGCA/Sakiko",
+        "ref": "main",
+        "size": 6869,
+        "url": "https://github.com/OMGCA/Sakiko"
+      },
+      {
+        "name": "HachimiWorld/haze-ohos",
+        "ref": "1.7.2-OH-1.0.0",
+        "size": 4038777,
+        "url": "https://github.com/HachimiWorld/haze-ohos"
+      },
+      {
+        "name": "HachimiWorld/FileKit-ohos",
+        "ref": "0.12.0-OH-1.0.0",
+        "size": 32883,
+        "url": "https://github.com/HachimiWorld/FileKit-ohos"
+      },
+      {
+        "name": "HachimiWorld/hachimi-world-client-ohos",
+        "ref": "ohos-dev",
+        "size": 5468,
+        "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos"
+      },
+      {
+        "name": "MiaoKukun/HarmonyKMP",
+        "ref": "main",
+        "size": 50512,
+        "url": "https://github.com/MiaoKukun/HarmonyKMP"
+      },
+      {
+        "name": "ChinaArJun/HarmonyKMP",
+        "ref": "main",
+        "size": 50505,
+        "url": "https://github.com/ChinaArJun/HarmonyKMP"
+      },
+      {
+        "name": "X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e",
+        "ref": "master",
+        "size": 0,
+        "url": "https://github.com/X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e"
+      }
+    ]
+  },
+  {
+    "query": "HarmonyOS PC flutter",
+    "repositories": [
+      {
+        "name": "erikwang2013/property-management-platform",
+        "ref": "main",
+        "size": 18573,
+        "url": "https://github.com/erikwang2013/property-management-platform"
+      },
+      {
+        "name": "php2py/property-management-platform-lite",
+        "ref": "main",
+        "size": 11397,
+        "url": "https://github.com/php2py/property-management-platform-lite"
+      },
+      {
+        "name": "erikwang2013/appointment-php",
+        "ref": "main",
+        "size": 8130,
+        "url": "https://github.com/erikwang2013/appointment-php"
+      },
+      {
+        "name": "iYting/property-management-platform",
+        "ref": "main",
+        "size": 18395,
+        "url": "https://github.com/iYting/property-management-platform"
+      },
+      {
+        "name": "xuey490/property-management-platform",
+        "ref": "main",
+        "size": 18395,
+        "url": "https://github.com/xuey490/property-management-platform"
+      },
+      {
+        "name": "xiaozhaofu/property-management-platform",
+        "ref": "main",
+        "size": 18030,
+        "url": "https://github.com/xiaozhaofu/property-management-platform"
+      },
+      {
+        "name": "samulli/property-management-platform",
+        "ref": "main",
+        "size": 20628,
+        "url": "https://github.com/samulli/property-management-platform"
+      },
+      {
+        "name": "Gnose/property-management-platform",
+        "ref": "main",
+        "size": 18395,
+        "url": "https://github.com/Gnose/property-management-platform"
+      },
+      {
+        "name": "lonelyxmas/property-management-platform",
+        "ref": "main",
+        "size": 18395,
+        "url": "https://github.com/lonelyxmas/property-management-platform"
+      },
+      {
+        "name": "lonelyxmas/appointment-php",
+        "ref": "main",
+        "size": 7009,
+        "url": "https://github.com/lonelyxmas/appointment-php"
+      }
+    ]
+  },
+  {
+    "query": "HarmonyOS 2in1 react native",
+    "repositories": []
+  }
+]

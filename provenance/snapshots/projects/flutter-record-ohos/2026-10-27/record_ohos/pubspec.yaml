@@ -1,0 +1,26 @@
+name: record_ohos
+description: Ohos specific implementation for record package called by record_platform_interface.
+version: 1.0.0
+homepage: https://gitcode.com/CPF-Flutter/fluttertpc_record
+
+environment:
+  sdk: '>=2.19.6 <4.0.0'
+  flutter: ">=3.7.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  record_platform_interface: ^1.0.2
+  uuid: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    implements: record
+    platforms:
+      ohos:
+        package: com.example.record_ohos
+        pluginClass: RecordOhosPlugin

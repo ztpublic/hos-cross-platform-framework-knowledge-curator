@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-pcm-record-stream",
+  "sources": [
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+      "sha256": "ca17185175ff410734794b8c30349a159351a66b8e1d849cd750a17d2b52e4d2",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+      "sha256": "1498a1de075f09ac4b5e9f30e2db34cfa201afe20f18531f16f045a4732227ef",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+      "sha256": "a0d70d5be719fb9cc6c1aed4ddcf69c544ba1bc578f5d3a409cd3cdfa9205b64",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+      "sha256": "1db39fd51f627461d3e6e5678b6cad1e2725ab8d525456a9ceaecb1a4b7855ab",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/pubspec.yaml",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/pubspec.yaml",
+      "sha256": "cf4f23b87e305a871432b3721c1e3f4456077a408f338b8c7bd8d01fe7da1ecd",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "No microphone or background behavior tested. The source wrapper has void disposal paths; complete teardown/error recovery and backpressure require application review."
+  ]
+}

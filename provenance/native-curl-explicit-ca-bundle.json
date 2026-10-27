@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "native-curl-explicit-ca-bundle",
+  "sources": [
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/src/ohosMain/kotlin/io/kamel/core/cache/HttpClientFactory.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/src/ohosMain/kotlin/io/kamel/core/cache/HttpClientFactory.ohos.kt",
+      "sha256": "dd3326c4e36037fb73f973a073cfab599e0a2e1d36bd654a88e03a274011916b",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "kamel-core/src/commonMain/kotlin/io/kamel/core/Kamel.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/kamel-core/src/commonMain/kotlin/io/kamel/core/Kamel.kt",
+      "sha256": "e8f778ec00f57126a787a285168b474d16148602fce39eca84bbb66a1dbe73ca",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+      "sha256": "5a5024143a4ded36cada3a6fd36d0de2e0e280126305ddaa47a81f392ea7bd97",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "The source attributes its failure to inaccessible system roots; this is not a universal claim about all HarmonyOS products or curl builds."
+  ]
+}

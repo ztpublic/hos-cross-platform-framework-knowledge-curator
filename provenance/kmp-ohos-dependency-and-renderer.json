@@ -28,6 +28,36 @@
       "revision": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
       "license": "No repository-level license found.",
       "evidence_note": "Exact file bytes from the cloned repository at the recorded commit. Source-reported results were not rerun."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "gradle/libs.versions.toml",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/gradle/libs.versions.toml",
+      "sha256": "4c40ad9fda27863d7b121c97d11f51f872769227c3893a61b08718703460c0f4",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "settings.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/settings.gradle.kts",
+      "sha256": "5ef10f1d2550e710dab757a66eb8feb66e4083abdaa59c6c0b069cad7914cd4c",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "README.OpenHarmony_CN.md",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/README.OpenHarmony_CN.md",
+      "sha256": "76dd221dc31d396cd49f9211daa8c2ffc9e62031a86e5625fa09f4edcd5b6cb4",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
     }
   ],
   "upstream_provenance": {
@@ -46,7 +76,8 @@
   "transformations": [
     "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
     "Derived one mechanism from the Gradle configuration, cinterop and NAPI/Kotlin bridge; no source code was copied.",
-    "Classified the entry as framework-specific because the remedy depends on the KMP adapter artifacts and the Kotlin/Native OH integration."
+    "Classified the entry as framework-specific because the remedy depends on the KMP adapter artifacts and the Kotlin/Native OH integration.",
+    "Extended the existing mechanism from independently reviewed source; original imported evidence and PC validation boundary retained."
   ],
   "limitations": [
     "Source-reported build and device results were not rerun; pc_validation remains not-run.",

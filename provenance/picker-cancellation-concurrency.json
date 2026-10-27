@@ -19,6 +19,16 @@
       "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
       "license": "No database-level license found; upstream project license context retained in original provenance.",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "sha256": "29c1ee4ad529d8c1df52d93a7fab43529c3b0669a1342a562790425f591a3984",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
     }
   ],
   "upstream_provenance": {
@@ -97,7 +107,8 @@
   "transformations": [
     "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
     "Single-contract entry retained.",
-    "Generalized runtime prose where the native contract does not depend on Flutter."
+    "Generalized runtime prose where the native contract does not depend on Flutter.",
+    "Extended the existing mechanism from independently reviewed source; original imported evidence and PC validation boundary retained."
   ],
   "limitations": [
     "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",

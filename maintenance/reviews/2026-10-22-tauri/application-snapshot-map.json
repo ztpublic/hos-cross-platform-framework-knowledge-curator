@@ -1,0 +1,203 @@
+{
+  "tauri-gproxy": {
+    "LICENSE": {
+      "collection": "tauri-gproxy",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/LICENSE",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "Cargo.toml": {
+      "collection": "tauri-gproxy",
+      "original_path": "Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/Cargo.toml",
+      "sha256": "00278b4ea6145a6fff50006582a73f5f5679ee83e68d21a563ca97cf56e9616a",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/Cargo.toml",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "README.md": {
+      "collection": "tauri-gproxy",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/README.md",
+      "sha256": "203d39b1c2e3bc934a36a9ad664ffa2958f8a6b4f6903879b1b2802a2489868a",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/README.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/README.md": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/README.md",
+      "sha256": "4f5f344911a7fd817313a3169ca5f54091de2bee1df7436b88960e9320c4c008",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/README.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/tauri-pins.json": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/tauri-pins.json",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/tauri-pins.json",
+      "sha256": "7f63664b66bdd078094e807fc5abb358fbc6875ba76e01057828edc294316637",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/tauri-pins.json",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/ability-har.json": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/ability-har.json",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/ability-har.json",
+      "sha256": "a05cd1c25806ba40bbfa16cd4c3792fb2c9eda6e5a5a021ae2f0de0d0b72c98f",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/ability-har.json",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/prepare-tauri.py": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/prepare-tauri.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-tauri.py",
+      "sha256": "b1acea8a987591c588d8b3d2c6db14873f889ae32324a89020306c90d8c173bd",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/prepare-tauri.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/prepare-har.py": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/prepare-har.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-har.py",
+      "sha256": "fb401dac14ee499f85deb84df2b257bad3d22de57fed360a56610bbfd493d233",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/prepare-har.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/configure-hap.py": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/configure-hap.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/configure-hap.py",
+      "sha256": "b386a742b8d9eb6be7e4ffb1a7b141ef396f55fc76575e3d1c35642af80f3932",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/configure-hap.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/package-hap.py": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/package-hap.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/package-hap.py",
+      "sha256": "2f30c542ae66aac357732ca2db0c4f386b9a3250f60d7ad38cfa15e46cdf2144",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/package-hap.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/build.sh": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/build.sh",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/build.sh",
+      "sha256": "678d5fb87d4cfae3792d0239d65a2c96c1a8c90b522a6f31da5e32a043e8ceec",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/build.sh",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/pack-mobile-native.py": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/pack-mobile-native.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/pack-mobile-native.py",
+      "sha256": "835839a14bca106246add1c76ea65341e442afdba32eac78120e55cc95846b16",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/pack-mobile-native.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "scripts/ohos/application/EntryAbility.ets": {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/application/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/application/EntryAbility.ets",
+      "sha256": "6ce1ed786a7785ae80faa89c189bfb5a35b1d246956a8176ad999f318e3e5470",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/application/EntryAbility.ets",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "crates/gproxy-host-tauri/Cargo.toml": {
+      "collection": "tauri-gproxy",
+      "original_path": "crates/gproxy-host-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/Cargo.toml",
+      "sha256": "7a2e707c712d7a72873b5b8c7978ecb86dab3c0aa00b24a74684ac7489805738",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/crates/gproxy-host-tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "crates/gproxy-host-tauri/src/lib.rs": {
+      "collection": "tauri-gproxy",
+      "original_path": "crates/gproxy-host-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/lib.rs",
+      "sha256": "8c623ddfe35d7e401a15bb78f319fb000d319f36e402569552681b55ca6b7b6b",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/crates/gproxy-host-tauri/src/lib.rs",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "crates/gproxy-host-tauri/src/ohos.rs": {
+      "collection": "tauri-gproxy",
+      "original_path": "crates/gproxy-host-tauri/src/ohos.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/ohos.rs",
+      "sha256": "1b8ed8680333292c6b05bb7663e5dd168775fb46fa8be24f7f25675fcbccb7e9",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/crates/gproxy-host-tauri/src/ohos.rs",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    }
+  },
+  "frankplus-tauri-ohos": {
+    "README.md": {
+      "collection": "frankplus-tauri-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/frankplus-tauri-ohos/2026-10-22/README.md",
+      "sha256": "b06853dacdfc010ec310c5930ae616a4b6c959036da7b970fb0334cf0e8b0cc6",
+      "revision": "7b1f158688978f87a257481cee3d743718446cff",
+      "license": "Root workspace declares Apache-2.0; no repository-level license notice found; unreviewed vendors retain separate terms.",
+      "url": "https://github.com/frankplus/tauri-ohos/blob/7b1f158688978f87a257481cee3d743718446cff/README.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "Cargo.toml": {
+      "collection": "frankplus-tauri-ohos",
+      "original_path": "Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/frankplus-tauri-ohos/2026-10-22/Cargo.toml",
+      "sha256": "f5ef67caf6191c0791949ec15c7b67668e0cb66844741beba0d9d4af657d25c9",
+      "revision": "7b1f158688978f87a257481cee3d743718446cff",
+      "license": "Root workspace declares Apache-2.0; no repository-level license notice found; unreviewed vendors retain separate terms.",
+      "url": "https://github.com/frankplus/tauri-ohos/blob/7b1f158688978f87a257481cee3d743718446cff/Cargo.toml",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    "docs/tauri_ohos_status_report.md": {
+      "collection": "frankplus-tauri-ohos",
+      "original_path": "docs/tauri_ohos_status_report.md",
+      "snapshot": "provenance/snapshots/projects/frankplus-tauri-ohos/2026-10-22/docs/tauri_ohos_status_report.md",
+      "sha256": "af685ff8089fb0824d092e18f77065628ebc7fdc11c89863b2bf9daf2f25c7cb",
+      "revision": "7b1f158688978f87a257481cee3d743718446cff",
+      "license": "Root workspace declares Apache-2.0; no repository-level license notice found; unreviewed vendors retain separate terms.",
+      "url": "https://github.com/frankplus/tauri-ohos/blob/7b1f158688978f87a257481cee3d743718446cff/docs/tauri_ohos_status_report.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    }
+  },
+  "new_common": [
+    "native-ohos-shared-library-elf-layout"
+  ],
+  "extended_tauri": [
+    "tauri-ohos-dependency-cohort",
+    "tauri-ohos-ability-host"
+  ]
+}

@@ -14,10 +14,14 @@
     "target_env",
     "target_os",
     "cfg",
-    "linux"
+    "linux",
+    "Tauri",
+    "GTK",
+    "WebKit2GTK",
+    "mobile cfg"
   ],
   "status": "scoped",
-  "evidence_tier": "imported-guidance",
+  "evidence_tier": "source-reviewed",
   "pc_validation": "not-run",
   "applicability": "Common native-layer knowledge for applications embedding Rust; not evidence that every UI framework supplies an OH Rust bridge.",
   "related": []
@@ -42,6 +46,8 @@ Inspect target_os, target_env and framework-injected cfg separately and gate by 
 4. Build each supported target and confirm runtime backend selection.
 
 ## Conditions and alternatives
+
+An OH Tauri adapter can define its framework `mobile` cfg from `CARGO_CFG_TARGET_ENV == "ohos"` while the compiler still reports `target_os = "linux"`. Desktop-only GTK/WebKit2GTK dependencies therefore need an explicit `not(target_env = "ohos")` condition. This framework classification describes its backend contract; it does not identify the physical device as a phone or remove the need for PC behavior checks.
 
 Common native-layer knowledge for applications embedding Rust; not evidence that every UI framework supplies an OH Rust bridge.
 

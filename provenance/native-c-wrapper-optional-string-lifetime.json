@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "native-c-wrapper-optional-string-lifetime",
+  "sources": [
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "ohosApp/mmkv_c_wrapper/src/main/cpp/mmkv_c_wrapper.cpp",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/ohosApp/mmkv_c_wrapper/src/main/cpp/mmkv_c_wrapper.cpp",
+      "sha256": "598b4dd9d85622b2970fe4dc38c30ec40615f0344532ada06bb850b86f6ae353",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "mmkvKotlin/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/mmkvKotlin/build.gradle.kts",
+      "sha256": "6a8367c0541d1b969e5822c7ef7bb9d0125614756ac79a9dd05755e7aa511998",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "mmkvKotlin/src/ohosArm64Main/kotlin/com/kuikly/thirdparty/kmp/lib/mmkv/MMKVImpl.kt",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/mmkvKotlin/src/ohosArm64Main/kotlin/com/kuikly/thirdparty/kmp/lib/mmkv/MMKVImpl.kt",
+      "sha256": "18764bcd46fd519a0268d361eab5bc1347d66ce2a72b55b0a2df4c51d227c5b7",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuikly-mmkv",
+      "original_path": "ohosApp/mmkv_c_wrapper/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuikly-mmkv/2026-10-22/ohosApp/mmkv_c_wrapper/src/main/cpp/CMakeLists.txt",
+      "sha256": "9ac1fb1add71323620e162b142c7193227312373e3a412df6bb21c0901e0eeba",
+      "revision": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "No source application was modified or built; source-level dangling optional-argument pointers remain unresolved."
+  ]
+}

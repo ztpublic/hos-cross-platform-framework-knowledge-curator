@@ -1,0 +1,114 @@
+[
+  {
+    "id": "dsh-desktop-hos",
+    "previous": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+    "observed": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
+    "selected_ref": "main",
+    "url": "https://github.com/fellow99/dsh-desktop-hos",
+    "changed": true
+  },
+  {
+    "id": "klayout-on-harmony-pc",
+    "previous": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+    "observed": "0189b4544a8065b2fad7ccb0fd1085c48964aacc",
+    "selected_ref": "main",
+    "url": "https://github.com/yangy79/KLayout-on-Harmony-PC",
+    "changed": false
+  },
+  {
+    "id": "compose-multiplatform-harmony",
+    "previous": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+    "observed": "c00cc1434124c9fae8bcb943e88c44a8b3f2c5d1",
+    "selected_ref": "main",
+    "url": "https://github.com/mucute/ComposeMultiplatformHarmony",
+    "changed": false
+  },
+  {
+    "id": "react-native-harmony-seed",
+    "previous": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+    "observed": "74c23b6959e7d019e7a9d23c12296210cb6f1eb1",
+    "selected_ref": "main",
+    "url": "https://github.com/kuma0605/react-native-harmony-seed",
+    "changed": false
+  },
+  {
+    "id": "doubao-watermark-lab",
+    "previous": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+    "observed": "d255b093a4a0fc0ae6c63df2201b566d784f632f",
+    "selected_ref": "main",
+    "url": "https://github.com/littlestone0806/doubao-watermark-lab",
+    "changed": false
+  },
+  {
+    "id": "ohshark",
+    "previous": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+    "observed": "7709f2691eb96a7fdae6ecbdf5273b055d5f425c",
+    "selected_ref": "main",
+    "url": "https://github.com/xiaomu120413/ohshark",
+    "changed": false
+  },
+  {
+    "id": "vlc-qt6-ohos",
+    "previous": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+    "observed": "26f09d950fe1f2cebdd3e60b9c9b047041cbe91c",
+    "selected_ref": "main",
+    "url": "https://github.com/Aloereed/vlc-qt6-ohos",
+    "changed": false
+  },
+  {
+    "id": "freecad-on-harmonyos",
+    "previous": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+    "observed": "24d78fcc76cc4af439c7c3268c7ba81e3c664c56",
+    "selected_ref": "main",
+    "url": "https://github.com/liang-xiaohui/freecad-on-harmonyos",
+    "changed": false
+  },
+  {
+    "id": "scidavis-for-harmonyos",
+    "previous": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+    "observed": "a1e9e3d71f617691d98061fcf4c966132241fd07",
+    "selected_ref": "main",
+    "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS",
+    "changed": false
+  },
+  {
+    "id": "drawio-in-harmony",
+    "previous": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+    "observed": "df83eebf55bf15c5cbef6656d863eb94e6d33b28",
+    "selected_ref": "main",
+    "url": "https://github.com/Red-Sa1t/drawio-in-harmony",
+    "changed": false
+  },
+  {
+    "id": "harmonykmp",
+    "previous": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+    "observed": "4b1ab9cc8976a4edf65a833cf7e0dae745ae0f4a",
+    "selected_ref": "main",
+    "url": "https://github.com/xiaqingpeng/HarmonyKMP",
+    "changed": false
+  },
+  {
+    "id": "ohos-electron-hap",
+    "previous": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+    "observed": "0da7eb4c57a21e6ca0cffac247fb26977cb42f9d",
+    "selected_ref": "main",
+    "url": "https://github.com/ohosvscode/ohos_electron_hap",
+    "changed": false
+  },
+  {
+    "id": "pure-live-ohos",
+    "previous": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+    "observed": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
+    "selected_ref": "ohos-support",
+    "url": "https://github.com/FiveHair/pure_live",
+    "changed": false
+  },
+  {
+    "id": "kuiklyui",
+    "previous": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "observed": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+    "selected_ref": "main",
+    "url": "https://github.com/Tencent-TDS/KuiklyUI",
+    "changed": true
+  }
+]

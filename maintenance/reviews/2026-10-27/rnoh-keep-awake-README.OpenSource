@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "@thehale/react-native-keep-awake",
+    "License": "Mozilla Public License Version 2.0",
+    "License File": "LICENSE",
+    "Version Number": "0.2.0",
+    "Owner": "maintainer@example.com",
+    "Upstream URL": "https://github.com/thehale/react-native-keep-awake",
+    "Description": "React Native library to keep the screen awake; HarmonyOS/OpenHarmony adaptation via RNOH TurboModule (window-level setWindowKeepScreenOn)"
+  }
+]

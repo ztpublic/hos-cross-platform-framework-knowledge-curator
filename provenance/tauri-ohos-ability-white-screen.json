@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-ability-white-screen",
+  "sources": [
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/oh-package.json5",
+      "sha256": "abf786ab3a3eb3ea7c6a3b6180cf8c99a737eded7c8240031689da314993d415",
+      "revision": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "url": "https://github.com/Islatri/tauri-ohos-test/blob/cc73aeea903ec135cf8c445fb46d98cd93403c7e/src-tauri/gen/ohos/entry/oh-package.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "sha256": "d934fa56649329902d1dcffafa5a4cfc51cb131505b4aa26d7a852435bb13205",
+      "revision": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "url": "https://github.com/Islatri/tauri-ohos-test/blob/cc73aeea903ec135cf8c445fb46d98cd93403c7e/src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+      "sha256": "abf786ab3a3eb3ea7c6a3b6180cf8c99a737eded7c8240031689da314993d415",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+      "sha256": "2bfc11871c46cd7e3e457be19fec9cb215944b293859ff4ad6960175398bb4f9",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "tauri-apps/tauri#15236",
+      "snapshot": "maintenance/reviews/2026-10-22-tauri/issue-15236.json",
+      "sha256": "76202a71d2628594c0f5169b60de1d8a763d039858ebcc9abb0ac799b7ba9f23",
+      "revision": "issue state retrieved 2026-10-22",
+      "license": "GitHub issue content; no software license inferred.",
+      "url": "https://github.com/tauri-apps/tauri/issues/15236",
+      "source_reported_validation": "Reporter attributes a HarmonyOS PC white-screen fix to changing @ohos-rs/ability 0.2.1 to 0.4.0-beta.0. Not reproduced here."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism from pinned source inputs; project identities and revisions retained only in provenance.",
+    "Recommendations and acceptance cases are source-derived and were not executed."
+  ],
+  "limitations": [
+    "No build, installation or PC runtime verification performed.",
+    "The white-screen remedy is source-reported, not curator runtime-tested. Lockfile mismatch consequences depend on actual package-manager resolution."
+  ]
+}

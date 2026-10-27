@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "kmp-filekit-picker-descriptor-ownership",
+  "sources": [
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/PlatformFile.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/PlatformFile.ohos.kt",
+      "sha256": "7c58af78da3a799b79043cc1cb599b244c6fde330706e9cb51769b6066125064",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/OhosDescriptor.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/OhosDescriptor.kt",
+      "sha256": "41d199ba41fd87dbae9c1576c2aa052bff43b088d2679f750298fb5eb6aed27a",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+      "sha256": "29c1ee4ad529d8c1df52d93a7fab43529c3b0669a1342a562790425f591a3984",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "filekit-dialogs/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/filekit-dialogs/build.gradle.kts",
+      "sha256": "30764e7a81e1517e2a0dd7d8965eefdf4153dda20c9e8b4b979d04eb3ef64732",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "filekit-ohos",
+      "original_path": "OHOS.zh-CN.md",
+      "snapshot": "provenance/snapshots/projects/filekit-ohos/2026-10-22/OHOS.zh-CN.md",
+      "sha256": "a5a1829f6de9c00bc5e7ae3ca1c55be29512304605ab9df9672c5891f0177210",
+      "revision": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "Upstream reports ARM64 simulator checks; no physical PC validation is inferred."
+  ]
+}

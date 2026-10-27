@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-sqlite-cinterop",
+  "sources": [
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/build.ohos.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/build.ohos.gradle.kts",
+      "sha256": "a281c71a62b3f4f00f7b75ecae98e40cb92f27df204acd7d38c7fccd330afd13",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/src/nativeMain/cinterop/sqlite3.def",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/src/nativeMain/cinterop/sqlite3.def",
+      "sha256": "74f883fe5d0fec4bb98739876941f325958896f78bea3d42b7af0ee0e4d07575",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt",
+      "sha256": "82cda4b25c0be947fcb9bd14e544a359906be43dd967866cab907fb8a11731cc",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "VBSQLite/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/VBSQLite/build.gradle.kts",
+      "sha256": "c9ecf3f612ba706baf6fb819fc0bc5b5618c00496ff5d79723655c0bd1cfffc6",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "VBSQLite/src/nativeInterop/cinterop/interop.def",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/VBSQLite/src/nativeInterop/cinterop/interop.def",
+      "sha256": "33e289f6852d57455d4a877bf668c65a109a5076dabafcab2a9471486b35fe2c",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "ohosApp/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/ohosApp/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "d7ceed78242db3f60718631af883c20d02756a00720a3e8094866443188e7b7c",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/README.md",
+      "sha256": "8316cc7196477214dfe8d0577f67c8b5534f6dc4a2f119c8b73e23c2ac9a82d7",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "VBSQLite Gradle uses suspicious -lsqlite3.h linker option and an enableOHOS gate. KuiklySQLite .def includes sqlite3.c; neither packaged binding nor binary closure was built. Treat source forms as integration evidence, not a copy-and-build recipe."
+  ]
+}

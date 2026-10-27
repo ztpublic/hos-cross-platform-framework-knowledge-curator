@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "kmp-napi-string-allocator-ownership",
+  "sources": [
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+      "sha256": "b81c9f16612c12833e0410154ac565ddb3e3eae79fea8565566cae4ad7f1dcca",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kamel-ohos",
+      "original_path": "example/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/kamel-ohos/2026-10-22/example/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "c5ac558871ec7ea5499079d38f5930606b7ebab7659cacd701ad0ece5930fd47",
+      "revision": "9a41666c6266521e56a1724ac35a42629f58a398",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kotlinx-io-ohos",
+      "original_path": "example/nativeApp/src/ohosArm64Main/kotlin/org/jetbrains/kotlinx/io/example/NativeBridge.kt",
+      "snapshot": "provenance/snapshots/projects/kotlinx-io-ohos/2026-10-22/example/nativeApp/src/ohosArm64Main/kotlin/org/jetbrains/kotlinx/io/example/NativeBridge.kt",
+      "sha256": "6792269e374c619611c1e6188d5736244bc08d85606b013b0105ede080ea2f0e",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kotlinx-io-ohos",
+      "original_path": "example/ohosApp/entry/src/main/cpp/napi_init.cpp",
+      "snapshot": "provenance/snapshots/projects/kotlinx-io-ohos/2026-10-22/example/ohosApp/entry/src/main/cpp/napi_init.cpp",
+      "sha256": "c5762f7af42916bb243b2bc77685ba720db5f66e29887513cbc7aea94f5cd0d1",
+      "revision": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

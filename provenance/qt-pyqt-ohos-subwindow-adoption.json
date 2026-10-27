@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "qt-pyqt-ohos-subwindow-adoption",
+  "sources": [
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "sha256": "9e5aa9757ed568e5e6f140d783dcd52d2cec7d5a42d07b3169ab03289980a378",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+      "sha256": "7c095371116c87af1b1ed27879beb4a06ad8b92bb0acf6c663c9f425798685b3",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/README.md",
+      "sha256": "a512dfb9340b5f5cfd95afe93cb3cb8c1fdf2740f08d12f9a56e92cb9b0c170d",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

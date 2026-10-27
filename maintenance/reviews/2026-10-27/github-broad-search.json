@@ -1,0 +1,2422 @@
+[
+  {
+    "query": "ohos in:name,description",
+    "repositories": [
+      {
+        "repository": "Tencent/MMKV",
+        "ref": "master",
+        "size": 48934,
+        "url": "https://github.com/Tencent/MMKV"
+      },
+      {
+        "repository": "LYiHub/privacy-radar-public",
+        "ref": "main",
+        "size": 307,
+        "url": "https://github.com/LYiHub/privacy-radar-public"
+      },
+      {
+        "repository": "wang-bin/avbuild",
+        "ref": "master",
+        "size": 1247,
+        "url": "https://github.com/wang-bin/avbuild"
+      },
+      {
+        "repository": "ohos-decompiler/abc-decompiler",
+        "ref": "master",
+        "size": 27773,
+        "url": "https://github.com/ohos-decompiler/abc-decompiler"
+      },
+      {
+        "repository": "ohos-rs/ohos-rs",
+        "ref": "ohos",
+        "size": 88866,
+        "url": "https://github.com/ohos-rs/ohos-rs"
+      },
+      {
+        "repository": "xdd666t/ohos_smart_dialog",
+        "ref": "main",
+        "size": 443,
+        "url": "https://github.com/xdd666t/ohos_smart_dialog"
+      },
+      {
+        "repository": "ohosvscode/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/ohosvscode/ohos_electron_hap"
+      },
+      {
+        "repository": "flypigJ/Tailscale-OHOS",
+        "ref": "main",
+        "size": 5761,
+        "url": "https://github.com/flypigJ/Tailscale-OHOS"
+      },
+      {
+        "repository": "ohos-rs/ohos-openssl",
+        "ref": "main",
+        "size": 57867,
+        "url": "https://github.com/ohos-rs/ohos-openssl"
+      },
+      {
+        "repository": "zxystd/Kotlin-OHOS",
+        "ref": "main",
+        "size": 65,
+        "url": "https://github.com/zxystd/Kotlin-OHOS"
+      },
+      {
+        "repository": "dev4harmony/PiliNara",
+        "ref": "ohos",
+        "size": 92450,
+        "url": "https://github.com/dev4harmony/PiliNara"
+      },
+      {
+        "repository": "mpv-ohos/libmpv-ohos-build",
+        "ref": "main",
+        "size": 15187,
+        "url": "https://github.com/mpv-ohos/libmpv-ohos-build"
+      },
+      {
+        "repository": "ohos-rs/ohos-native-bindings",
+        "ref": "master",
+        "size": 14773,
+        "url": "https://github.com/ohos-rs/ohos-native-bindings"
+      },
+      {
+        "repository": "xusiwei/ohos-ssd1306",
+        "ref": "master",
+        "size": 162,
+        "url": "https://github.com/xusiwei/ohos-ssd1306"
+      },
+      {
+        "repository": "oho-lang/oho-interpreter",
+        "ref": "main",
+        "size": 16,
+        "url": "https://github.com/oho-lang/oho-interpreter"
+      },
+      {
+        "repository": "openharmony-rs/ohos-sys",
+        "ref": "main",
+        "size": 3412,
+        "url": "https://github.com/openharmony-rs/ohos-sys"
+      },
+      {
+        "repository": "Chevey339/kelivo-ohos",
+        "ref": "master",
+        "size": 1403,
+        "url": "https://github.com/Chevey339/kelivo-ohos"
+      },
+      {
+        "repository": "jseparator/ovpn-ohos",
+        "ref": "main",
+        "size": 1490,
+        "url": "https://github.com/jseparator/ovpn-ohos"
+      },
+      {
+        "repository": "niuhuan/copi-ohos",
+        "ref": "main",
+        "size": 2838,
+        "url": "https://github.com/niuhuan/copi-ohos"
+      },
+      {
+        "repository": "tljk/FlClash-ohos",
+        "ref": "main",
+        "size": 71490,
+        "url": "https://github.com/tljk/FlClash-ohos"
+      },
+      {
+        "repository": "hqzing/ohos-node",
+        "ref": "main",
+        "size": 40,
+        "url": "https://github.com/hqzing/ohos-node"
+      },
+      {
+        "repository": "ohos-ports/ohos-ports",
+        "ref": "main",
+        "size": 512,
+        "url": "https://github.com/ohos-ports/ohos-ports"
+      },
+      {
+        "repository": "guoxiucai/ohos-scrcpy-app",
+        "ref": "main",
+        "size": 164974,
+        "url": "https://github.com/guoxiucai/ohos-scrcpy-app"
+      },
+      {
+        "repository": "0xZOne/ohos-flutter-add2app",
+        "ref": "main",
+        "size": 26812,
+        "url": "https://github.com/0xZOne/ohos-flutter-add2app"
+      },
+      {
+        "repository": "suibianqwe/Ehviewer_OHOS",
+        "ref": "main",
+        "size": 19453,
+        "url": "https://github.com/suibianqwe/Ehviewer_OHOS"
+      },
+      {
+        "repository": "openharmony-rs/setup-ohos-sdk",
+        "ref": "main",
+        "size": 33,
+        "url": "https://github.com/openharmony-rs/setup-ohos-sdk"
+      },
+      {
+        "repository": "axcom/fpc4ohos",
+        "ref": "master",
+        "size": 5901,
+        "url": "https://github.com/axcom/fpc4ohos"
+      },
+      {
+        "repository": "ohos-rs/websites",
+        "ref": "master",
+        "size": 1605,
+        "url": "https://github.com/ohos-rs/websites"
+      },
+      {
+        "repository": "yuruiyin/uniffi-demo",
+        "ref": "main",
+        "size": 95725,
+        "url": "https://github.com/yuruiyin/uniffi-demo"
+      },
+      {
+        "repository": "pangyu646182805/ohos_yd_weather",
+        "ref": "main",
+        "size": 501,
+        "url": "https://github.com/pangyu646182805/ohos_yd_weather"
+      },
+      {
+        "repository": "kotlin-for-ohos/kotlin-ohos-sample",
+        "ref": "main",
+        "size": 106,
+        "url": "https://github.com/kotlin-for-ohos/kotlin-ohos-sample"
+      },
+      {
+        "repository": "ohos-npm-ports/ohos-npm-ports",
+        "ref": "main",
+        "size": 500,
+        "url": "https://github.com/ohos-npm-ports/ohos-npm-ports"
+      },
+      {
+        "repository": "Aloereed/llama.cpp-server-ohos",
+        "ref": "master",
+        "size": 2883,
+        "url": "https://github.com/Aloereed/llama.cpp-server-ohos"
+      },
+      {
+        "repository": "TeamFlos/phira-ohos",
+        "ref": "main",
+        "size": 1223,
+        "url": "https://github.com/TeamFlos/phira-ohos"
+      },
+      {
+        "repository": "dgh1818/immich_ohos",
+        "ref": "v2.4.1-ohos-hdr",
+        "size": 715199,
+        "url": "https://github.com/dgh1818/immich_ohos"
+      },
+      {
+        "repository": "Aloereed/localsend-ohos",
+        "ref": "aloesend",
+        "size": 76723,
+        "url": "https://github.com/Aloereed/localsend-ohos"
+      },
+      {
+        "repository": "yrjwcharm/ohos_library",
+        "ref": "main",
+        "size": 126178,
+        "url": "https://github.com/yrjwcharm/ohos_library"
+      },
+      {
+        "repository": "openharmony-rs/ohos-sdk",
+        "ref": "main",
+        "size": 13,
+        "url": "https://github.com/openharmony-rs/ohos-sdk"
+      },
+      {
+        "repository": "PsjJourney/qq_amap_flutter_map",
+        "ref": "main",
+        "size": 864,
+        "url": "https://github.com/PsjJourney/qq_amap_flutter_map"
+      },
+      {
+        "repository": "fe-spark/EcoHub-for-OHOS",
+        "ref": "main",
+        "size": 1919,
+        "url": "https://github.com/fe-spark/EcoHub-for-OHOS"
+      },
+      {
+        "repository": "Aloereed/aloeplayer_ohos",
+        "ref": "main",
+        "size": 73113,
+        "url": "https://github.com/Aloereed/aloeplayer_ohos"
+      },
+      {
+        "repository": "HarmonyCandies/device_info_plus_ohos",
+        "ref": "main",
+        "size": 142,
+        "url": "https://github.com/HarmonyCandies/device_info_plus_ohos"
+      },
+      {
+        "repository": "aizhaiyu/ohos2026",
+        "ref": "main",
+        "size": 1778,
+        "url": "https://github.com/aizhaiyu/ohos2026"
+      },
+      {
+        "repository": "masukomi/oho",
+        "ref": "master",
+        "size": 3865,
+        "url": "https://github.com/masukomi/oho"
+      },
+      {
+        "repository": "nimmi114514/PicaComic_ohos",
+        "ref": "master",
+        "size": 142207,
+        "url": "https://github.com/nimmi114514/PicaComic_ohos"
+      },
+      {
+        "repository": "littlestone0806/WebApp-ohos",
+        "ref": "main",
+        "size": 603,
+        "url": "https://github.com/littlestone0806/WebApp-ohos"
+      },
+      {
+        "repository": "qpst4/XGesture",
+        "ref": "main",
+        "size": 37141,
+        "url": "https://github.com/qpst4/XGesture"
+      },
+      {
+        "repository": "ohos-decompiler/abcde",
+        "ref": "main",
+        "size": 2012,
+        "url": "https://github.com/ohos-decompiler/abcde"
+      },
+      {
+        "repository": "ohos-rs/example",
+        "ref": "main",
+        "size": 6112,
+        "url": "https://github.com/ohos-rs/example"
+      },
+      {
+        "repository": "SwimmingTiger/aria2-ohos",
+        "ref": "hnp",
+        "size": 17979,
+        "url": "https://github.com/SwimmingTiger/aria2-ohos"
+      },
+      {
+        "repository": "SageMik/sqlite3-ohos.dart",
+        "ref": "sqlite3-2.4.7",
+        "size": 10937,
+        "url": "https://github.com/SageMik/sqlite3-ohos.dart"
+      },
+      {
+        "repository": "ohos-decompiler/Awesome-HarmonyOS-Reverse-Engineering",
+        "ref": "main",
+        "size": 8,
+        "url": "https://github.com/ohos-decompiler/Awesome-HarmonyOS-Reverse-Engineering"
+      },
+      {
+        "repository": "likuai2010/ohos-napi",
+        "ref": "main",
+        "size": 35,
+        "url": "https://github.com/likuai2010/ohos-napi"
+      },
+      {
+        "repository": "yuanbaobaoo/zcode-ohos",
+        "ref": "main",
+        "size": 118318,
+        "url": "https://github.com/yuanbaobaoo/zcode-ohos"
+      },
+      {
+        "repository": "ErBWs/setup-ohos",
+        "ref": "main",
+        "size": 30,
+        "url": "https://github.com/ErBWs/setup-ohos"
+      },
+      {
+        "repository": "eclipse-oniro4openharmony/app-vlc-ohos",
+        "ref": "main",
+        "size": 2232,
+        "url": "https://github.com/eclipse-oniro4openharmony/app-vlc-ohos"
+      },
+      {
+        "repository": "ErBWs/ohos-sdk",
+        "ref": "main",
+        "size": 31,
+        "url": "https://github.com/ErBWs/ohos-sdk"
+      },
+      {
+        "repository": "sanchuanhehe/ohos-gcc",
+        "ref": "main",
+        "size": 285,
+        "url": "https://github.com/sanchuanhehe/ohos-gcc"
+      },
+      {
+        "repository": "weeble/ohos",
+        "ref": "master",
+        "size": 7311,
+        "url": "https://github.com/weeble/ohos"
+      },
+      {
+        "repository": "FinalScave/SweetLine",
+        "ref": "master",
+        "size": 66569,
+        "url": "https://github.com/FinalScave/SweetLine"
+      },
+      {
+        "repository": "richerfu/node-addon-api-ohos",
+        "ref": "main",
+        "size": 570,
+        "url": "https://github.com/richerfu/node-addon-api-ohos"
+      },
+      {
+        "repository": "walkman707/KuiklyMMKV",
+        "ref": "main",
+        "size": 311,
+        "url": "https://github.com/walkman707/KuiklyMMKV"
+      },
+      {
+        "repository": "banlang222/flutter_tts",
+        "ref": "main",
+        "size": 22007,
+        "url": "https://github.com/banlang222/flutter_tts"
+      },
+      {
+        "repository": "yabi-zzh/livify-ohos",
+        "ref": "main",
+        "size": 14061,
+        "url": "https://github.com/yabi-zzh/livify-ohos"
+      },
+      {
+        "repository": "Oh-OS/OhOS-Front",
+        "ref": "main",
+        "size": 29216,
+        "url": "https://github.com/Oh-OS/OhOS-Front"
+      },
+      {
+        "repository": "yabi-zzh/simple-live-ohos",
+        "ref": "main",
+        "size": 21461,
+        "url": "https://github.com/yabi-zzh/simple-live-ohos"
+      },
+      {
+        "repository": "HarmonyCandies/sensors_plus_ohos",
+        "ref": "main",
+        "size": 53,
+        "url": "https://github.com/HarmonyCandies/sensors_plus_ohos"
+      },
+      {
+        "repository": "shenyingjun5/FlClash-HarmonyOS",
+        "ref": "harmony",
+        "size": 55731,
+        "url": "https://github.com/shenyingjun5/FlClash-HarmonyOS"
+      },
+      {
+        "repository": "jhuix-ohos/ohos-native-build",
+        "ref": "main",
+        "size": 66,
+        "url": "https://github.com/jhuix-ohos/ohos-native-build"
+      },
+      {
+        "repository": "react-native-oh-library/react-native-ping",
+        "ref": "sig",
+        "size": 853,
+        "url": "https://github.com/react-native-oh-library/react-native-ping"
+      },
+      {
+        "repository": "hqzing/ohos-selfsign",
+        "ref": "main",
+        "size": 178,
+        "url": "https://github.com/hqzing/ohos-selfsign"
+      },
+      {
+        "repository": "bgli100/pixez-flutter-ohos",
+        "ref": "master",
+        "size": 223302,
+        "url": "https://github.com/bgli100/pixez-flutter-ohos"
+      },
+      {
+        "repository": "harmoninux/qemu-ohos-old",
+        "ref": "libqemu-ohos-10.2",
+        "size": 617895,
+        "url": "https://github.com/harmoninux/qemu-ohos-old"
+      },
+      {
+        "repository": "Gargantua7/kotlinx-datetime-ohos",
+        "ref": "master",
+        "size": 446,
+        "url": "https://github.com/Gargantua7/kotlinx-datetime-ohos"
+      },
+      {
+        "repository": "HarmonyCandies/flutter_platform_utils",
+        "ref": "main",
+        "size": 4,
+        "url": "https://github.com/HarmonyCandies/flutter_platform_utils"
+      },
+      {
+        "repository": "ohos-rs/oxc-ark",
+        "ref": "main",
+        "size": 1967,
+        "url": "https://github.com/ohos-rs/oxc-ark"
+      },
+      {
+        "repository": "shadowsocks/shadowsocks-ohos",
+        "ref": "main",
+        "size": 288,
+        "url": "https://github.com/shadowsocks/shadowsocks-ohos"
+      },
+      {
+        "repository": "lxdklp/MCB_OHOS",
+        "ref": "main",
+        "size": 20840,
+        "url": "https://github.com/lxdklp/MCB_OHOS"
+      },
+      {
+        "repository": "ljlVink/developtools_hdc",
+        "ref": "OpenHarmony-6.0-Release",
+        "size": 12819,
+        "url": "https://github.com/ljlVink/developtools_hdc"
+      },
+      {
+        "repository": "applibgroup/PinchToZoom",
+        "ref": "master",
+        "size": 1109,
+        "url": "https://github.com/applibgroup/PinchToZoom"
+      },
+      {
+        "repository": "Harmonybrew/ohos-python",
+        "ref": "main",
+        "size": 9,
+        "url": "https://github.com/Harmonybrew/ohos-python"
+      },
+      {
+        "repository": "obsidian/ohos",
+        "ref": "master",
+        "size": 1,
+        "url": "https://github.com/obsidian/ohos"
+      },
+      {
+        "repository": "sedatemickey/ohos-WebApp",
+        "ref": "main",
+        "size": 115,
+        "url": "https://github.com/sedatemickey/ohos-WebApp"
+      },
+      {
+        "repository": "Astra20230303/ohos",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/Astra20230303/ohos"
+      },
+      {
+        "repository": "Mohammed2049-source/ohos",
+        "ref": "main",
+        "size": 246,
+        "url": "https://github.com/Mohammed2049-source/ohos"
+      },
+      {
+        "repository": "ohos-rs/ohos-ffrt",
+        "ref": "main",
+        "size": 289,
+        "url": "https://github.com/ohos-rs/ohos-ffrt"
+      },
+      {
+        "repository": "shayne123666-prog/ohos",
+        "ref": "master",
+        "size": 20257,
+        "url": "https://github.com/shayne123666-prog/ohos"
+      },
+      {
+        "repository": "tdcare/ohos",
+        "ref": "main",
+        "size": 81,
+        "url": "https://github.com/tdcare/ohos"
+      },
+      {
+        "repository": "wangfengye/ohos",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/wangfengye/ohos"
+      },
+      {
+        "repository": "godothub/godot-ohos",
+        "ref": "main",
+        "size": 41,
+        "url": "https://github.com/godothub/godot-ohos"
+      },
+      {
+        "repository": "wiedymi/libghostty-ohos",
+        "ref": "main",
+        "size": 10172,
+        "url": "https://github.com/wiedymi/libghostty-ohos"
+      },
+      {
+        "repository": "JQ-miao/ohos",
+        "ref": "claude/awesome-taussig-538442",
+        "size": 370,
+        "url": "https://github.com/JQ-miao/ohos"
+      },
+      {
+        "repository": "dl1w1vojpi/ohos",
+        "ref": "main",
+        "size": 6327,
+        "url": "https://github.com/dl1w1vojpi/ohos"
+      },
+      {
+        "repository": "ipipip1735/ohos",
+        "ref": "main",
+        "size": 3293313,
+        "url": "https://github.com/ipipip1735/ohos"
+      },
+      {
+        "repository": "oneSilentMan/ohos",
+        "ref": "master",
+        "size": 71,
+        "url": "https://github.com/oneSilentMan/ohos"
+      },
+      {
+        "repository": "f96xv7eu/ohos",
+        "ref": "main",
+        "size": 2065,
+        "url": "https://github.com/f96xv7eu/ohos"
+      },
+      {
+        "repository": "harmony-contrib/ohos-qemu",
+        "ref": "main",
+        "size": 448,
+        "url": "https://github.com/harmony-contrib/ohos-qemu"
+      },
+      {
+        "repository": "Aloereed/flutter_rust_bridge_ohos",
+        "ref": "master",
+        "size": 160637,
+        "url": "https://github.com/Aloereed/flutter_rust_bridge_ohos"
+      },
+      {
+        "repository": "HarmonyCandies/geolocator_ohos",
+        "ref": "main",
+        "size": 85,
+        "url": "https://github.com/HarmonyCandies/geolocator_ohos"
+      },
+      {
+        "repository": "sjtuszh/OHOS",
+        "ref": "main",
+        "size": 148,
+        "url": "https://github.com/sjtuszh/OHOS"
+      }
+    ]
+  },
+  {
+    "query": "harmonyos in:name,description",
+    "repositories": [
+      {
+        "repository": "Awesome-HarmonyOS/HarmonyOS",
+        "ref": "master",
+        "size": 23807,
+        "url": "https://github.com/Awesome-HarmonyOS/HarmonyOS"
+      },
+      {
+        "repository": "gaoyaxin/HarmonyOS",
+        "ref": "master",
+        "size": 23445,
+        "url": "https://github.com/gaoyaxin/HarmonyOS"
+      },
+      {
+        "repository": "shuhongfan/HarmonyOS",
+        "ref": "master",
+        "size": 165057,
+        "url": "https://github.com/shuhongfan/HarmonyOS"
+      },
+      {
+        "repository": "waylau/harmonyos-tutorial",
+        "ref": "master",
+        "size": 170721,
+        "url": "https://github.com/waylau/harmonyos-tutorial"
+      },
+      {
+        "repository": "xiaobaigroup/ClashBox",
+        "ref": "main",
+        "size": 481789,
+        "url": "https://github.com/xiaobaigroup/ClashBox"
+      },
+      {
+        "repository": "likuai2010/auto-installer",
+        "ref": "main",
+        "size": 307089,
+        "url": "https://github.com/likuai2010/auto-installer"
+      },
+      {
+        "repository": "electerm/electerm",
+        "ref": "master",
+        "size": 36150,
+        "url": "https://github.com/electerm/electerm"
+      },
+      {
+        "repository": "nihui/opencv-mobile",
+        "ref": "master",
+        "size": 861,
+        "url": "https://github.com/nihui/opencv-mobile"
+      },
+      {
+        "repository": "Zitann/HarmonyOS-Haps",
+        "ref": "main",
+        "size": 72881,
+        "url": "https://github.com/Zitann/HarmonyOS-Haps"
+      },
+      {
+        "repository": "huaweicodelabs/harmonyos-codelabs",
+        "ref": "main",
+        "size": 126968,
+        "url": "https://github.com/huaweicodelabs/harmonyos-codelabs"
+      },
+      {
+        "repository": "OpenBMB/MiniCPM-V-Apps",
+        "ref": "main",
+        "size": 218256,
+        "url": "https://github.com/OpenBMB/MiniCPM-V-Apps"
+      },
+      {
+        "repository": "733gh/GH-HarmonyOS-Review-master",
+        "ref": "main",
+        "size": 229,
+        "url": "https://github.com/733gh/GH-HarmonyOS-Review-master"
+      },
+      {
+        "repository": "bjmashibing/HarmonyOS",
+        "ref": "master",
+        "size": 23824,
+        "url": "https://github.com/bjmashibing/HarmonyOS"
+      },
+      {
+        "repository": "AGenUI/AGenUI",
+        "ref": "main",
+        "size": 54103,
+        "url": "https://github.com/AGenUI/AGenUI"
+      },
+      {
+        "repository": "ausboyue/Wechat_HarmonyOS",
+        "ref": "main",
+        "size": 3589,
+        "url": "https://github.com/ausboyue/Wechat_HarmonyOS"
+      },
+      {
+        "repository": "TermonyHQ/Termony",
+        "ref": "master",
+        "size": 4273,
+        "url": "https://github.com/TermonyHQ/Termony"
+      },
+      {
+        "repository": "callstack/agent-device",
+        "ref": "main",
+        "size": 230309,
+        "url": "https://github.com/callstack/agent-device"
+      },
+      {
+        "repository": "Chenlvin/Melotopia-HMOS",
+        "ref": "master",
+        "size": 103119,
+        "url": "https://github.com/Chenlvin/Melotopia-HMOS"
+      },
+      {
+        "repository": "MonsterNone/tmall-miao",
+        "ref": "next",
+        "size": 569,
+        "url": "https://github.com/MonsterNone/tmall-miao"
+      },
+      {
+        "repository": "reactnativecn/react-native-update",
+        "ref": "master",
+        "size": 44682,
+        "url": "https://github.com/reactnativecn/react-native-update"
+      },
+      {
+        "repository": "733gh/OpenHarmony",
+        "ref": "master",
+        "size": 109,
+        "url": "https://github.com/733gh/OpenHarmony"
+      },
+      {
+        "repository": "to-alan/HarmonyOSInstallGMS",
+        "ref": "main",
+        "size": 139,
+        "url": "https://github.com/to-alan/HarmonyOSInstallGMS"
+      },
+      {
+        "repository": "OpenHarmonyOS/HarmonyOS",
+        "ref": "master",
+        "size": 23799,
+        "url": "https://github.com/OpenHarmonyOS/HarmonyOS"
+      },
+      {
+        "repository": "TencentCloud/TIMSDK",
+        "ref": "master",
+        "size": 1073027,
+        "url": "https://github.com/TencentCloud/TIMSDK"
+      },
+      {
+        "repository": "Chenlvin/CloudMusic-HarmonyOSNext",
+        "ref": "master",
+        "size": 38267,
+        "url": "https://github.com/Chenlvin/CloudMusic-HarmonyOSNext"
+      },
+      {
+        "repository": "wuxianlin/harmonyos_next_emulator_mod",
+        "ref": "master",
+        "size": 28308,
+        "url": "https://github.com/wuxianlin/harmonyos_next_emulator_mod"
+      },
+      {
+        "repository": "siyuan-note/siyuan-harmony",
+        "ref": "main",
+        "size": 749,
+        "url": "https://github.com/siyuan-note/siyuan-harmony"
+      },
+      {
+        "repository": "codematrixer/hmdriver2",
+        "ref": "master",
+        "size": 8864,
+        "url": "https://github.com/codematrixer/hmdriver2"
+      },
+      {
+        "repository": "awaLiny2333/LinysBrowser_NEXT",
+        "ref": "master",
+        "size": 230757,
+        "url": "https://github.com/awaLiny2333/LinysBrowser_NEXT"
+      },
+      {
+        "repository": "jd-opensource/arkdecompiler",
+        "ref": "master",
+        "size": 1916,
+        "url": "https://github.com/jd-opensource/arkdecompiler"
+      },
+      {
+        "repository": "automvc/bee",
+        "ref": "master",
+        "size": 27671,
+        "url": "https://github.com/automvc/bee"
+      },
+      {
+        "repository": "OHOTP/ohtotptoken",
+        "ref": "main",
+        "size": 14259,
+        "url": "https://github.com/OHOTP/ohtotptoken"
+      },
+      {
+        "repository": "Geocld/XStreaming",
+        "ref": "main",
+        "size": 141290,
+        "url": "https://github.com/Geocld/XStreaming"
+      },
+      {
+        "repository": "iwae/HarmonyOS-Inno",
+        "ref": "main",
+        "size": 1178,
+        "url": "https://github.com/iwae/HarmonyOS-Inno"
+      },
+      {
+        "repository": "733gh/HarmonyOS-Notes",
+        "ref": "master",
+        "size": 21288,
+        "url": "https://github.com/733gh/HarmonyOS-Notes"
+      },
+      {
+        "repository": "CN-Belief/HarmonyOS",
+        "ref": "main",
+        "size": 3,
+        "url": "https://github.com/CN-Belief/HarmonyOS"
+      },
+      {
+        "repository": "AbnerMing888/HarmonyOsRefresh",
+        "ref": "master",
+        "size": 11481,
+        "url": "https://github.com/AbnerMing888/HarmonyOsRefresh"
+      },
+      {
+        "repository": "Gramony/Gramony",
+        "ref": "dev",
+        "size": 10235,
+        "url": "https://github.com/Gramony/Gramony"
+      },
+      {
+        "repository": "k2-fsa/sherpa-onnx",
+        "ref": "master",
+        "size": 18624,
+        "url": "https://github.com/k2-fsa/sherpa-onnx"
+      },
+      {
+        "repository": "751496032/DSBridge-HarmonyOS",
+        "ref": "master",
+        "size": 870,
+        "url": "https://github.com/751496032/DSBridge-HarmonyOS"
+      },
+      {
+        "repository": "aidlearning/AidLearning-FrameWork",
+        "ref": "master",
+        "size": 80521,
+        "url": "https://github.com/aidlearning/AidLearning-FrameWork"
+      },
+      {
+        "repository": "jianjunxiao/wanandroid",
+        "ref": "master",
+        "size": 33735,
+        "url": "https://github.com/jianjunxiao/wanandroid"
+      },
+      {
+        "repository": "sensorsdata/sensors_analytics_flutter_plugin",
+        "ref": "master",
+        "size": 433,
+        "url": "https://github.com/sensorsdata/sensors_analytics_flutter_plugin"
+      },
+      {
+        "repository": "IKKI2000/harmonyos-fonts",
+        "ref": "main",
+        "size": 261959,
+        "url": "https://github.com/IKKI2000/harmonyos-fonts"
+      },
+      {
+        "repository": "HanversionOvO/OHSidian",
+        "ref": "main",
+        "size": 21105,
+        "url": "https://github.com/HanversionOvO/OHSidian"
+      },
+      {
+        "repository": "codematrixer/ui-viewer",
+        "ref": "master",
+        "size": 12464,
+        "url": "https://github.com/codematrixer/ui-viewer"
+      },
+      {
+        "repository": "cheinlu/HarmonyOS-groundhog-charging-system",
+        "ref": "master",
+        "size": 20424,
+        "url": "https://github.com/cheinlu/HarmonyOS-groundhog-charging-system"
+      },
+      {
+        "repository": "lkimuk/ReArk",
+        "ref": "main",
+        "size": 35202,
+        "url": "https://github.com/lkimuk/ReArk"
+      },
+      {
+        "repository": "HanversionOvO/OHcode",
+        "ref": "master",
+        "size": 913,
+        "url": "https://github.com/HanversionOvO/OHcode"
+      },
+      {
+        "repository": "issuimo/UnityResolve.hpp",
+        "ref": "main",
+        "size": 363,
+        "url": "https://github.com/issuimo/UnityResolve.hpp"
+      },
+      {
+        "repository": "hx1997/dayu",
+        "ref": "main",
+        "size": 5426,
+        "url": "https://github.com/hx1997/dayu"
+      },
+      {
+        "repository": "DengShiyingA/harmonyos-ai-skill",
+        "ref": "main",
+        "size": 2780,
+        "url": "https://github.com/DengShiyingA/harmonyos-ai-skill"
+      },
+      {
+        "repository": "CharonChui/HarmonyOSNextStudyNote",
+        "ref": "main",
+        "size": 256,
+        "url": "https://github.com/CharonChui/HarmonyOSNextStudyNote"
+      },
+      {
+        "repository": "aimilin6688/KeePassHO",
+        "ref": "main",
+        "size": 20356,
+        "url": "https://github.com/aimilin6688/KeePassHO"
+      },
+      {
+        "repository": "banggx/account_app_harmonyos",
+        "ref": "master",
+        "size": 8594,
+        "url": "https://github.com/banggx/account_app_harmonyos"
+      },
+      {
+        "repository": "AbnerMing888/HarmonyOsNet",
+        "ref": "master",
+        "size": 1245,
+        "url": "https://github.com/AbnerMing888/HarmonyOsNet"
+      },
+      {
+        "repository": "Abhi-Flex1/OpenTwit",
+        "ref": "main",
+        "size": 480,
+        "url": "https://github.com/Abhi-Flex1/OpenTwit"
+      },
+      {
+        "repository": "sensorsdata/react-native-sensors-analytics",
+        "ref": "master",
+        "size": 227,
+        "url": "https://github.com/sensorsdata/react-native-sensors-analytics"
+      },
+      {
+        "repository": "renbaoshuo/expo-harmony",
+        "ref": "master",
+        "size": 4998,
+        "url": "https://github.com/renbaoshuo/expo-harmony"
+      },
+      {
+        "repository": "HarmonyOS-Next/interview-handbook-project",
+        "ref": "next",
+        "size": 41107,
+        "url": "https://github.com/HarmonyOS-Next/interview-handbook-project"
+      },
+      {
+        "repository": "winehua/WineHua",
+        "ref": "master",
+        "size": 87955,
+        "url": "https://github.com/winehua/WineHua"
+      },
+      {
+        "repository": "ForestBook/TelegramHarmony",
+        "ref": "main",
+        "size": 441,
+        "url": "https://github.com/ForestBook/TelegramHarmony"
+      },
+      {
+        "repository": "XixianLiang/HarmonyOS-mcp-server",
+        "ref": "main",
+        "size": 766,
+        "url": "https://github.com/XixianLiang/HarmonyOS-mcp-server"
+      },
+      {
+        "repository": "asmjmp0/xpanda",
+        "ref": "main",
+        "size": 13246,
+        "url": "https://github.com/asmjmp0/xpanda"
+      },
+      {
+        "repository": "waylau/harmonyos-exam",
+        "ref": "main",
+        "size": 159,
+        "url": "https://github.com/waylau/harmonyos-exam"
+      },
+      {
+        "repository": "gtbluesky/fusion",
+        "ref": "main",
+        "size": 91936,
+        "url": "https://github.com/gtbluesky/fusion"
+      },
+      {
+        "repository": "iamhyc/Aigis",
+        "ref": "master",
+        "size": 4853,
+        "url": "https://github.com/iamhyc/Aigis"
+      },
+      {
+        "repository": "ohos-rs/ohos-openssl",
+        "ref": "main",
+        "size": 57867,
+        "url": "https://github.com/ohos-rs/ohos-openssl"
+      },
+      {
+        "repository": "zxystd/Kotlin-OHOS",
+        "ref": "main",
+        "size": 65,
+        "url": "https://github.com/zxystd/Kotlin-OHOS"
+      },
+      {
+        "repository": "wildfirechat/flutter-chat",
+        "ref": "master",
+        "size": 442292,
+        "url": "https://github.com/wildfirechat/flutter-chat"
+      },
+      {
+        "repository": "AppGalleryConnect/agc-template-market-harmonyos-demos",
+        "ref": "main",
+        "size": 3078102,
+        "url": "https://github.com/AppGalleryConnect/agc-template-market-harmonyos-demos"
+      },
+      {
+        "repository": "jiangfeng52/harmonyos-shell",
+        "ref": "main",
+        "size": 79555,
+        "url": "https://github.com/jiangfeng52/harmonyos-shell"
+      },
+      {
+        "repository": "likuai2010/moonlight-harmonyos",
+        "ref": "main",
+        "size": 82002,
+        "url": "https://github.com/likuai2010/moonlight-harmonyos"
+      },
+      {
+        "repository": "Joker-x-dev/HarmonyKit",
+        "ref": "main",
+        "size": 2312,
+        "url": "https://github.com/Joker-x-dev/HarmonyKit"
+      },
+      {
+        "repository": "seagazer/ccplayer",
+        "ref": "main",
+        "size": 41755,
+        "url": "https://github.com/seagazer/ccplayer"
+      },
+      {
+        "repository": "axcom/fpc4ohos",
+        "ref": "master",
+        "size": 5901,
+        "url": "https://github.com/axcom/fpc4ohos"
+      },
+      {
+        "repository": "kdada/Authenticator",
+        "ref": "main",
+        "size": 2091,
+        "url": "https://github.com/kdada/Authenticator"
+      },
+      {
+        "repository": "YuanChu-Tec/JMComic-HarmonyOS",
+        "ref": "main",
+        "size": 1670,
+        "url": "https://github.com/YuanChu-Tec/JMComic-HarmonyOS"
+      },
+      {
+        "repository": "HarmonyOS-Next/awesome-harmonyos",
+        "ref": "main",
+        "size": 98,
+        "url": "https://github.com/HarmonyOS-Next/awesome-harmonyos"
+      },
+      {
+        "repository": "sol5766/dshm",
+        "ref": "main",
+        "size": 12378,
+        "url": "https://github.com/sol5766/dshm"
+      },
+      {
+        "repository": "uu-code007/PixelFreeEffects",
+        "ref": "master",
+        "size": 1124385,
+        "url": "https://github.com/uu-code007/PixelFreeEffects"
+      },
+      {
+        "repository": "harmoninux/Harmonix",
+        "ref": "master",
+        "size": 5481,
+        "url": "https://github.com/harmoninux/Harmonix"
+      },
+      {
+        "repository": "FaceSDKPro/HelloFace",
+        "ref": "main",
+        "size": 5961,
+        "url": "https://github.com/FaceSDKPro/HelloFace"
+      },
+      {
+        "repository": "jhaizhou-ops/d2r-mobile",
+        "ref": "main",
+        "size": 10532,
+        "url": "https://github.com/jhaizhou-ops/d2r-mobile"
+      },
+      {
+        "repository": "SolidFaker/V2rayOH",
+        "ref": "main",
+        "size": 34,
+        "url": "https://github.com/SolidFaker/V2rayOH"
+      },
+      {
+        "repository": "SonicloudTech/sonicloud_opensdk",
+        "ref": "main",
+        "size": 120111,
+        "url": "https://github.com/SonicloudTech/sonicloud_opensdk"
+      },
+      {
+        "repository": "popsiclelmlm/Hey",
+        "ref": "main",
+        "size": 43240,
+        "url": "https://github.com/popsiclelmlm/Hey"
+      },
+      {
+        "repository": "HomoArk/Homogram",
+        "ref": "dev",
+        "size": 10802,
+        "url": "https://github.com/HomoArk/Homogram"
+      },
+      {
+        "repository": "zacksleo/awesome-harmonyos-flutter",
+        "ref": "master",
+        "size": 44502,
+        "url": "https://github.com/zacksleo/awesome-harmonyos-flutter"
+      },
+      {
+        "repository": "zhihu/appium-harmonyos-driver",
+        "ref": "main",
+        "size": 104,
+        "url": "https://github.com/zhihu/appium-harmonyos-driver"
+      },
+      {
+        "repository": "youfrweb/harmonyProject",
+        "ref": "master",
+        "size": 98740,
+        "url": "https://github.com/youfrweb/harmonyProject"
+      },
+      {
+        "repository": "EnjoySR/ArkDO",
+        "ref": "main",
+        "size": 12335,
+        "url": "https://github.com/EnjoySR/ArkDO"
+      },
+      {
+        "repository": "langwudong/browser",
+        "ref": "master",
+        "size": 5297,
+        "url": "https://github.com/langwudong/browser"
+      },
+      {
+        "repository": "linhay/harmony-next.skills",
+        "ref": "master",
+        "size": 28670,
+        "url": "https://github.com/linhay/harmony-next.skills"
+      },
+      {
+        "repository": "ForHarmonyOS/HarmonyOS",
+        "ref": "master",
+        "size": 0,
+        "url": "https://github.com/ForHarmonyOS/HarmonyOS"
+      },
+      {
+        "repository": "flypigJ/Tailscale-OHOS",
+        "ref": "main",
+        "size": 5761,
+        "url": "https://github.com/flypigJ/Tailscale-OHOS"
+      },
+      {
+        "repository": "AbnerMing888/HarmonyOsDialog",
+        "ref": "master",
+        "size": 2130,
+        "url": "https://github.com/AbnerMing888/HarmonyOsDialog"
+      },
+      {
+        "repository": "panhaichen-creator/LibreTV-for-HarmonyOS",
+        "ref": "main",
+        "size": 2106,
+        "url": "https://github.com/panhaichen-creator/LibreTV-for-HarmonyOS"
+      },
+      {
+        "repository": "hx1997/ark-bytecode-010editor-template",
+        "ref": "main",
+        "size": 140,
+        "url": "https://github.com/hx1997/ark-bytecode-010editor-template"
+      },
+      {
+        "repository": "kdada/godot",
+        "ref": "openharmony",
+        "size": 1411556,
+        "url": "https://github.com/kdada/godot"
+      }
+    ]
+  },
+  {
+    "query": "openharmony in:name,description",
+    "repositories": [
+      {
+        "repository": "fenwii/OpenHarmony",
+        "ref": "master",
+        "size": 782959,
+        "url": "https://github.com/fenwii/OpenHarmony"
+      },
+      {
+        "repository": "733gh/OpenHarmony",
+        "ref": "master",
+        "size": 109,
+        "url": "https://github.com/733gh/OpenHarmony"
+      },
+      {
+        "repository": "cfourney/OpenHarmony",
+        "ref": "master",
+        "size": 7369,
+        "url": "https://github.com/cfourney/OpenHarmony"
+      },
+      {
+        "repository": "Uotan-Dev/UotanToolboxNT",
+        "ref": "main",
+        "size": 12054,
+        "url": "https://github.com/Uotan-Dev/UotanToolboxNT"
+      },
+      {
+        "repository": "Wscats/openharmony-sheet",
+        "ref": "master",
+        "size": 22207,
+        "url": "https://github.com/Wscats/openharmony-sheet"
+      },
+      {
+        "repository": "OpenHarmony-NET/OpenHarmony.Avalonia",
+        "ref": "main",
+        "size": 90557,
+        "url": "https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia"
+      },
+      {
+        "repository": "harmony-on-android/HOA",
+        "ref": "master",
+        "size": 17283,
+        "url": "https://github.com/harmony-on-android/HOA"
+      },
+      {
+        "repository": "react-native-oh-library/RNOHDCS",
+        "ref": "main",
+        "size": 220626,
+        "url": "https://github.com/react-native-oh-library/RNOHDCS"
+      },
+      {
+        "repository": "fluttercandies/flutter_image_compress",
+        "ref": "main",
+        "size": 11741,
+        "url": "https://github.com/fluttercandies/flutter_image_compress"
+      },
+      {
+        "repository": "openharmony/docs",
+        "ref": "master",
+        "size": 4184044,
+        "url": "https://github.com/openharmony/docs"
+      },
+      {
+        "repository": "Yricky/abcde",
+        "ref": "main",
+        "size": 3325,
+        "url": "https://github.com/Yricky/abcde"
+      },
+      {
+        "repository": "mpv-ohos/libmpv-ohos-build",
+        "ref": "main",
+        "size": 15187,
+        "url": "https://github.com/mpv-ohos/libmpv-ohos-build"
+      },
+      {
+        "repository": "OpenHarmony-NET/OpenHarmony.NET.Runtime",
+        "ref": "main",
+        "size": 61010,
+        "url": "https://github.com/OpenHarmony-NET/OpenHarmony.NET.Runtime"
+      },
+      {
+        "repository": "OpenHarmony-NET/OpenHarmony.Blazor.Hybrid",
+        "ref": "main",
+        "size": 518,
+        "url": "https://github.com/OpenHarmony-NET/OpenHarmony.Blazor.Hybrid"
+      },
+      {
+        "repository": "fluttercandies/flutter_photo_manager",
+        "ref": "main",
+        "size": 3623,
+        "url": "https://github.com/fluttercandies/flutter_photo_manager"
+      },
+      {
+        "repository": "harmony-contrib/openharmony-ability",
+        "ref": "main",
+        "size": 1396,
+        "url": "https://github.com/harmony-contrib/openharmony-ability"
+      },
+      {
+        "repository": "OpenHarmony-NET/OpenHarmony.NDK.Bindings",
+        "ref": "main",
+        "size": 781,
+        "url": "https://github.com/OpenHarmony-NET/OpenHarmony.NDK.Bindings"
+      },
+      {
+        "repository": "react-native-oh-library/react-native-harmony-svg",
+        "ref": "sig",
+        "size": 35764,
+        "url": "https://github.com/react-native-oh-library/react-native-harmony-svg"
+      },
+      {
+        "repository": "gracienewd/openharmony-App-YunmoAi",
+        "ref": "master",
+        "size": 1580,
+        "url": "https://github.com/gracienewd/openharmony-App-YunmoAi"
+      },
+      {
+        "repository": "openharmony-rs/ohos-sys",
+        "ref": "main",
+        "size": 3412,
+        "url": "https://github.com/openharmony-rs/ohos-sys"
+      },
+      {
+        "repository": "Z-P-J/AnimeZ",
+        "ref": "main",
+        "size": 27468,
+        "url": "https://github.com/Z-P-J/AnimeZ"
+      },
+      {
+        "repository": "openharmonyinsight/openharmony-skills",
+        "ref": "main",
+        "size": 42121,
+        "url": "https://github.com/openharmonyinsight/openharmony-skills"
+      },
+      {
+        "repository": "BeeKitStudio/beecount-openharmony",
+        "ref": "main",
+        "size": 31054,
+        "url": "https://github.com/BeeKitStudio/beecount-openharmony"
+      },
+      {
+        "repository": "ohos-rs/ohos-native-bindings",
+        "ref": "master",
+        "size": 14773,
+        "url": "https://github.com/ohos-rs/ohos-native-bindings"
+      },
+      {
+        "repository": "seagazer/ccplayer",
+        "ref": "main",
+        "size": 41755,
+        "url": "https://github.com/seagazer/ccplayer"
+      },
+      {
+        "repository": "zxystd/Kotlin-OHOS",
+        "ref": "main",
+        "size": 65,
+        "url": "https://github.com/zxystd/Kotlin-OHOS"
+      },
+      {
+        "repository": "richerfu/tauri-demo",
+        "ref": "master",
+        "size": 1103,
+        "url": "https://github.com/richerfu/tauri-demo"
+      },
+      {
+        "repository": "openharmony/manifest",
+        "ref": "master",
+        "size": 22276,
+        "url": "https://github.com/openharmony/manifest"
+      },
+      {
+        "repository": "xiasi0/ha-oneconnect-bridge",
+        "ref": "main",
+        "size": 171,
+        "url": "https://github.com/xiasi0/ha-oneconnect-bridge"
+      },
+      {
+        "repository": "openharmony/communication_dsoftbus",
+        "ref": "master",
+        "size": 47476,
+        "url": "https://github.com/openharmony/communication_dsoftbus"
+      },
+      {
+        "repository": "lmxxf/nanoclaw-on-openharmony",
+        "ref": "main",
+        "size": 348,
+        "url": "https://github.com/lmxxf/nanoclaw-on-openharmony"
+      },
+      {
+        "repository": "hqzing/ohos-node",
+        "ref": "main",
+        "size": 40,
+        "url": "https://github.com/hqzing/ohos-node"
+      },
+      {
+        "repository": "openharmony/app_samples",
+        "ref": "master",
+        "size": 617982,
+        "url": "https://github.com/openharmony/app_samples"
+      },
+      {
+        "repository": "kdada/godot",
+        "ref": "openharmony",
+        "size": 1411556,
+        "url": "https://github.com/kdada/godot"
+      },
+      {
+        "repository": "openharmony-rs/setup-ohos-sdk",
+        "ref": "main",
+        "size": 33,
+        "url": "https://github.com/openharmony-rs/setup-ohos-sdk"
+      },
+      {
+        "repository": "openharmony/kernel_liteos_a",
+        "ref": "master",
+        "size": 9065,
+        "url": "https://github.com/openharmony/kernel_liteos_a"
+      },
+      {
+        "repository": "Aloereed/llama.cpp-server-ohos",
+        "ref": "master",
+        "size": 2883,
+        "url": "https://github.com/Aloereed/llama.cpp-server-ohos"
+      },
+      {
+        "repository": "openharmony/kernel_liteos_m",
+        "ref": "master",
+        "size": 14279,
+        "url": "https://github.com/openharmony/kernel_liteos_m"
+      },
+      {
+        "repository": "arthurcolle/openharmony-mlx",
+        "ref": "master",
+        "size": 10689,
+        "url": "https://github.com/arthurcolle/openharmony-mlx"
+      },
+      {
+        "repository": "jschwe/ServoDemo",
+        "ref": "main",
+        "size": 2801,
+        "url": "https://github.com/jschwe/ServoDemo"
+      },
+      {
+        "repository": "openharmony/build",
+        "ref": "master",
+        "size": 74710,
+        "url": "https://github.com/openharmony/build"
+      },
+      {
+        "repository": "xusiwei/ohos-ssd1306",
+        "ref": "master",
+        "size": 162,
+        "url": "https://github.com/xusiwei/ohos-ssd1306"
+      },
+      {
+        "repository": "jiegec/SPECCPU2017Harmony",
+        "ref": "master",
+        "size": 817,
+        "url": "https://github.com/jiegec/SPECCPU2017Harmony"
+      },
+      {
+        "repository": "originjs/openharmony-polyfill",
+        "ref": "main",
+        "size": 3631,
+        "url": "https://github.com/originjs/openharmony-polyfill"
+      },
+      {
+        "repository": "ZhuchaWenjiu/OpenHarmony",
+        "ref": "master",
+        "size": 438930,
+        "url": "https://github.com/ZhuchaWenjiu/OpenHarmony"
+      },
+      {
+        "repository": "eclipse-oniro4openharmony/eclipse-oniro4openharmony.github.io",
+        "ref": "main",
+        "size": 59159,
+        "url": "https://github.com/eclipse-oniro4openharmony/eclipse-oniro4openharmony.github.io"
+      },
+      {
+        "repository": "ohos-rs/ohos-rs",
+        "ref": "ohos",
+        "size": 88866,
+        "url": "https://github.com/ohos-rs/ohos-rs"
+      },
+      {
+        "repository": "frankrxd/OpenHarmony_Softbus_Report",
+        "ref": "master",
+        "size": 1378,
+        "url": "https://github.com/frankrxd/OpenHarmony_Softbus_Report"
+      },
+      {
+        "repository": "dashingcalico/OpenHarmony",
+        "ref": "master",
+        "size": 39288,
+        "url": "https://github.com/dashingcalico/OpenHarmony"
+      },
+      {
+        "repository": "Wscats/sheet",
+        "ref": "main",
+        "size": 2745,
+        "url": "https://github.com/Wscats/sheet"
+      },
+      {
+        "repository": "openharmony/arkui_ace_engine",
+        "ref": "master",
+        "size": 522712,
+        "url": "https://github.com/openharmony/arkui_ace_engine"
+      },
+      {
+        "repository": "openharmony/communication_ipc",
+        "ref": "master",
+        "size": 15937,
+        "url": "https://github.com/openharmony/communication_ipc"
+      },
+      {
+        "repository": "hqzing/dockerharmony",
+        "ref": "main",
+        "size": 46,
+        "url": "https://github.com/hqzing/dockerharmony"
+      },
+      {
+        "repository": "HarmonyCandies/device_info_plus_ohos",
+        "ref": "main",
+        "size": 142,
+        "url": "https://github.com/HarmonyCandies/device_info_plus_ohos"
+      },
+      {
+        "repository": "openharmony-rs/openharmony-docs",
+        "ref": "master",
+        "size": 4615166,
+        "url": "https://github.com/openharmony-rs/openharmony-docs"
+      },
+      {
+        "repository": "openharmony/graphic_graphic_2d",
+        "ref": "master",
+        "size": 187291,
+        "url": "https://github.com/openharmony/graphic_graphic_2d"
+      },
+      {
+        "repository": "openharmony-rs/ohos-sdk",
+        "ref": "main",
+        "size": 13,
+        "url": "https://github.com/openharmony-rs/ohos-sdk"
+      },
+      {
+        "repository": "openharmony/arkcompiler_runtime_core",
+        "ref": "master",
+        "size": 110431,
+        "url": "https://github.com/openharmony/arkcompiler_runtime_core"
+      },
+      {
+        "repository": "spacemit-com/docs-openharmony",
+        "ref": "main",
+        "size": 7733,
+        "url": "https://github.com/spacemit-com/docs-openharmony"
+      },
+      {
+        "repository": "react-native-oh-library/usage-docs",
+        "ref": "master",
+        "size": 16858,
+        "url": "https://github.com/react-native-oh-library/usage-docs"
+      },
+      {
+        "repository": "eclipse-oniro4openharmony/app-vlc-ohos",
+        "ref": "main",
+        "size": 2232,
+        "url": "https://github.com/eclipse-oniro4openharmony/app-vlc-ohos"
+      },
+      {
+        "repository": "openharmony/developtools_hdc_standard",
+        "ref": "master",
+        "size": 9404,
+        "url": "https://github.com/openharmony/developtools_hdc_standard"
+      },
+      {
+        "repository": "openharmony/arkcompiler_ets_runtime",
+        "ref": "master",
+        "size": 115069,
+        "url": "https://github.com/openharmony/arkcompiler_ets_runtime"
+      },
+      {
+        "repository": "OpenHarmony-NET/runtime",
+        "ref": "oh_v9.0.2",
+        "size": 976201,
+        "url": "https://github.com/OpenHarmony-NET/runtime"
+      },
+      {
+        "repository": "Applib-OpenHarmony/OpenHarmony-build",
+        "ref": "main",
+        "size": 128,
+        "url": "https://github.com/Applib-OpenHarmony/OpenHarmony-build"
+      },
+      {
+        "repository": "Wscats/flappy",
+        "ref": "main",
+        "size": 12461,
+        "url": "https://github.com/Wscats/flappy"
+      },
+      {
+        "repository": "Compose-for-OpenHarmony/HarmonyDom",
+        "ref": "main",
+        "size": 59,
+        "url": "https://github.com/Compose-for-OpenHarmony/HarmonyDom"
+      },
+      {
+        "repository": "openharmony/codelabs",
+        "ref": "master",
+        "size": 2058830,
+        "url": "https://github.com/openharmony/codelabs"
+      },
+      {
+        "repository": "OpenHarmony-NET/PublishAotCross",
+        "ref": "main",
+        "size": 202,
+        "url": "https://github.com/OpenHarmony-NET/PublishAotCross"
+      },
+      {
+        "repository": "openharmony/ai_engine",
+        "ref": "master",
+        "size": 5375,
+        "url": "https://github.com/openharmony/ai_engine"
+      },
+      {
+        "repository": "frankzhangv5/ScreenCast",
+        "ref": "main",
+        "size": 75523,
+        "url": "https://github.com/frankzhangv5/ScreenCast"
+      },
+      {
+        "repository": "harmonyos-dev/hos-sdk",
+        "ref": "master",
+        "size": 6,
+        "url": "https://github.com/harmonyos-dev/hos-sdk"
+      },
+      {
+        "repository": "openharmony/third_party_ffmpeg",
+        "ref": "master",
+        "size": 224115,
+        "url": "https://github.com/openharmony/third_party_ffmpeg"
+      },
+      {
+        "repository": "openharmony/communication_bluetooth",
+        "ref": "master",
+        "size": 96330,
+        "url": "https://github.com/openharmony/communication_bluetooth"
+      },
+      {
+        "repository": "XHXYT/Web-Telegram-for-OpenHarmony",
+        "ref": "main",
+        "size": 175,
+        "url": "https://github.com/XHXYT/Web-Telegram-for-OpenHarmony"
+      },
+      {
+        "repository": "openharmony/ark_runtime_core",
+        "ref": "master",
+        "size": 2989,
+        "url": "https://github.com/openharmony/ark_runtime_core"
+      },
+      {
+        "repository": "openharmony/ark_js_runtime",
+        "ref": "master",
+        "size": 9500,
+        "url": "https://github.com/openharmony/ark_js_runtime"
+      },
+      {
+        "repository": "WakingHours-GitHub/OpenHarmony",
+        "ref": "master",
+        "size": 65673,
+        "url": "https://github.com/WakingHours-GitHub/OpenHarmony"
+      },
+      {
+        "repository": "openharmony/multimedia_histreamer",
+        "ref": "master",
+        "size": 11369,
+        "url": "https://github.com/openharmony/multimedia_histreamer"
+      },
+      {
+        "repository": "eclipse-oniro4openharmony/oniro-app-builder",
+        "ref": "main",
+        "size": 2084,
+        "url": "https://github.com/eclipse-oniro4openharmony/oniro-app-builder"
+      },
+      {
+        "repository": "SwimmingTiger/aria2-ohos",
+        "ref": "hnp",
+        "size": 17979,
+        "url": "https://github.com/SwimmingTiger/aria2-ohos"
+      },
+      {
+        "repository": "openharmony/communication_wifi",
+        "ref": "master",
+        "size": 37632,
+        "url": "https://github.com/openharmony/communication_wifi"
+      },
+      {
+        "repository": "openharmony/kernel_linux",
+        "ref": "master",
+        "size": 2071393,
+        "url": "https://github.com/openharmony/kernel_linux"
+      },
+      {
+        "repository": "openharmony/developtools_hdc",
+        "ref": "master",
+        "size": 26251,
+        "url": "https://github.com/openharmony/developtools_hdc"
+      },
+      {
+        "repository": "ljq123ok/Hps2",
+        "ref": "master",
+        "size": 19640,
+        "url": "https://github.com/ljq123ok/Hps2"
+      },
+      {
+        "repository": "openharmony/device_qemu",
+        "ref": "master",
+        "size": 5504,
+        "url": "https://github.com/openharmony/device_qemu"
+      },
+      {
+        "repository": "this233/DualGraph-Agent-for-OpenHarmony",
+        "ref": "main",
+        "size": 24097,
+        "url": "https://github.com/this233/DualGraph-Agent-for-OpenHarmony"
+      },
+      {
+        "repository": "openharmony/account_os_account",
+        "ref": "master",
+        "size": 40565,
+        "url": "https://github.com/openharmony/account_os_account"
+      },
+      {
+        "repository": "openharmony/hiviewdfx_hilog",
+        "ref": "master",
+        "size": 2213,
+        "url": "https://github.com/openharmony/hiviewdfx_hilog"
+      },
+      {
+        "repository": "openharmony/ace_ace_engine",
+        "ref": "master",
+        "size": 23257,
+        "url": "https://github.com/openharmony/ace_ace_engine"
+      },
+      {
+        "repository": "austriancoder/third_party_mesa3d",
+        "ref": "openharmony-5.0",
+        "size": 484492,
+        "url": "https://github.com/austriancoder/third_party_mesa3d"
+      },
+      {
+        "repository": "mchaptel/OpenHarmony",
+        "ref": "master",
+        "size": 7126,
+        "url": "https://github.com/mchaptel/OpenHarmony"
+      },
+      {
+        "repository": "openharmony/kernel_linux_5.10",
+        "ref": "master",
+        "size": 1983424,
+        "url": "https://github.com/openharmony/kernel_linux_5.10"
+      },
+      {
+        "repository": "openharmony/third_party_musl",
+        "ref": "master",
+        "size": 21350,
+        "url": "https://github.com/openharmony/third_party_musl"
+      },
+      {
+        "repository": "seagazer/cclisten",
+        "ref": "dev",
+        "size": 28419,
+        "url": "https://github.com/seagazer/cclisten"
+      },
+      {
+        "repository": "openharmony/graphic_graphic_3d",
+        "ref": "master",
+        "size": 38879,
+        "url": "https://github.com/openharmony/graphic_graphic_3d"
+      },
+      {
+        "repository": "Eulogizethesun/openharmony-ability",
+        "ref": "ohdev",
+        "size": 2103,
+        "url": "https://github.com/Eulogizethesun/openharmony-ability"
+      },
+      {
+        "repository": "openharmony/hiviewdfx_faultloggerd",
+        "ref": "master",
+        "size": 10052,
+        "url": "https://github.com/openharmony/hiviewdfx_faultloggerd"
+      },
+      {
+        "repository": "Compose-for-OpenHarmony/compose-ez-ui",
+        "ref": "main",
+        "size": 207,
+        "url": "https://github.com/Compose-for-OpenHarmony/compose-ez-ui"
+      },
+      {
+        "repository": "openharmony-rs/hilog",
+        "ref": "main",
+        "size": 32,
+        "url": "https://github.com/openharmony-rs/hilog"
+      }
+    ]
+  },
+  {
+    "query": "鸿蒙 PC",
+    "repositories": [
+      {
+        "repository": "harmoninux/HiSH",
+        "ref": "master",
+        "size": 305384,
+        "url": "https://github.com/harmoninux/HiSH"
+      },
+      {
+        "repository": "xristosstarnetgames439-del/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/xristosstarnetgames439-del/HuiwenMCP"
+      },
+      {
+        "repository": "Xiaoyuan-114/zafu-pchospital-harmonyos",
+        "ref": "main",
+        "size": 69096,
+        "url": "https://github.com/Xiaoyuan-114/zafu-pchospital-harmonyos"
+      },
+      {
+        "repository": "zpc1314521/PCL2",
+        "ref": "main",
+        "size": 5251,
+        "url": "https://github.com/zpc1314521/PCL2"
+      },
+      {
+        "repository": "tigshop/Tigshop",
+        "ref": "master",
+        "size": 130160,
+        "url": "https://github.com/tigshop/Tigshop"
+      },
+      {
+        "repository": "LMV475/hap-installer",
+        "ref": "main",
+        "size": 5866,
+        "url": "https://github.com/LMV475/hap-installer"
+      },
+      {
+        "repository": "LinJ0866/pcb-app-detector",
+        "ref": "main",
+        "size": 5088,
+        "url": "https://github.com/LinJ0866/pcb-app-detector"
+      },
+      {
+        "repository": "ZW1-ing/ericIDE",
+        "ref": "main",
+        "size": 9038,
+        "url": "https://github.com/ZW1-ing/ericIDE"
+      },
+      {
+        "repository": "QinpanWan/AgentHub",
+        "ref": "main",
+        "size": 2356,
+        "url": "https://github.com/QinpanWan/AgentHub"
+      },
+      {
+        "repository": "QinpanWan/dsh-harmonyos-pc",
+        "ref": "main",
+        "size": 3686,
+        "url": "https://github.com/QinpanWan/dsh-harmonyos-pc"
+      },
+      {
+        "repository": "QinpanWan/codex-harmonyos",
+        "ref": "main",
+        "size": 59,
+        "url": "https://github.com/QinpanWan/codex-harmonyos"
+      },
+      {
+        "repository": "wilson-wf/clock",
+        "ref": "main",
+        "size": 82,
+        "url": "https://github.com/wilson-wf/clock"
+      },
+      {
+        "repository": "ystyle/dsh-harmonyos",
+        "ref": "main",
+        "size": 4127,
+        "url": "https://github.com/ystyle/dsh-harmonyos"
+      },
+      {
+        "repository": "zlhao1588/awesome-harmonyOS",
+        "ref": "main",
+        "size": 282,
+        "url": "https://github.com/zlhao1588/awesome-harmonyOS"
+      },
+      {
+        "repository": "SYTKILLER/Montage",
+        "ref": "main",
+        "size": 2788,
+        "url": "https://github.com/SYTKILLER/Montage"
+      },
+      {
+        "repository": "GarhinZhou/ohos-ghidra-webui",
+        "ref": "main",
+        "size": 86,
+        "url": "https://github.com/GarhinZhou/ohos-ghidra-webui"
+      },
+      {
+        "repository": "Yu-Peng-Tu/Kale-PC-Builder",
+        "ref": "main",
+        "size": 259,
+        "url": "https://github.com/Yu-Peng-Tu/Kale-PC-Builder"
+      },
+      {
+        "repository": "wilson-wf/Screen2GIF",
+        "ref": "main",
+        "size": 25,
+        "url": "https://github.com/wilson-wf/Screen2GIF"
+      },
+      {
+        "repository": "wwn-01/StudySpace",
+        "ref": "main",
+        "size": 2,
+        "url": "https://github.com/wwn-01/StudySpace"
+      },
+      {
+        "repository": "ChadBi/calendar",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/ChadBi/calendar"
+      },
+      {
+        "repository": "Bibapcs/ohos-node-jit-patch",
+        "ref": "main",
+        "size": 38,
+        "url": "https://github.com/Bibapcs/ohos-node-jit-patch"
+      },
+      {
+        "repository": "wildfirechat/hm-pc-chat",
+        "ref": "master",
+        "size": 92871,
+        "url": "https://github.com/wildfirechat/hm-pc-chat"
+      },
+      {
+        "repository": "0dot618/my_PCB_detection_harmony_app",
+        "ref": "main",
+        "size": 625470,
+        "url": "https://github.com/0dot618/my_PCB_detection_harmony_app"
+      },
+      {
+        "repository": "SwimmingTiger/cann-llm",
+        "ref": "main",
+        "size": 2938,
+        "url": "https://github.com/SwimmingTiger/cann-llm"
+      },
+      {
+        "repository": "Bibapcs/Biba-Harmony-Benchtools",
+        "ref": "main",
+        "size": 836834,
+        "url": "https://github.com/Bibapcs/Biba-Harmony-Benchtools"
+      },
+      {
+        "repository": "Anionex/pcb-defect-detection-app",
+        "ref": "master",
+        "size": 2429,
+        "url": "https://github.com/Anionex/pcb-defect-detection-app"
+      },
+      {
+        "repository": "hjc200720-pixel/Harmony-OS-PythonIDE",
+        "ref": "main",
+        "size": 3672,
+        "url": "https://github.com/hjc200720-pixel/Harmony-OS-PythonIDE"
+      },
+      {
+        "repository": "lugf027/test_harmony_pc_selection",
+        "ref": "master",
+        "size": 128,
+        "url": "https://github.com/lugf027/test_harmony_pc_selection"
+      },
+      {
+        "repository": "joinother/OpenSPH-HarmonyOS",
+        "ref": "main",
+        "size": 570010,
+        "url": "https://github.com/joinother/OpenSPH-HarmonyOS"
+      },
+      {
+        "repository": "daneeller/course-order",
+        "ref": "main",
+        "size": 347,
+        "url": "https://github.com/daneeller/course-order"
+      },
+      {
+        "repository": "hahaaa520/campus-arena",
+        "ref": "main",
+        "size": 1641,
+        "url": "https://github.com/hahaaa520/campus-arena"
+      },
+      {
+        "repository": "Ylang11/harmony-car",
+        "ref": "main",
+        "size": 3671,
+        "url": "https://github.com/Ylang11/harmony-car"
+      },
+      {
+        "repository": "eiheil2/AgentHub",
+        "ref": "main",
+        "size": 2170,
+        "url": "https://github.com/eiheil2/AgentHub"
+      },
+      {
+        "repository": "Mencaje/voxera-harmonyos",
+        "ref": "main",
+        "size": 26376,
+        "url": "https://github.com/Mencaje/voxera-harmonyos"
+      },
+      {
+        "repository": "4444wjt/harmony-refcheck",
+        "ref": "main",
+        "size": 738,
+        "url": "https://github.com/4444wjt/harmony-refcheck"
+      },
+      {
+        "repository": "dream-u/HuiwenMCP",
+        "ref": "main",
+        "size": 163,
+        "url": "https://github.com/dream-u/HuiwenMCP"
+      },
+      {
+        "repository": "liphios/HuiwenMCP",
+        "ref": "main",
+        "size": 163,
+        "url": "https://github.com/liphios/HuiwenMCP"
+      },
+      {
+        "repository": "fzzf123456/harmony-pc-hardware-list",
+        "ref": "main",
+        "size": 528,
+        "url": "https://github.com/fzzf123456/harmony-pc-hardware-list"
+      },
+      {
+        "repository": "FaintFlower/HiSH",
+        "ref": "master",
+        "size": 255286,
+        "url": "https://github.com/FaintFlower/HiSH"
+      },
+      {
+        "repository": "Obvodny/HiSH",
+        "ref": "master",
+        "size": 305378,
+        "url": "https://github.com/Obvodny/HiSH"
+      },
+      {
+        "repository": "czlee32/HiSH",
+        "ref": "master",
+        "size": 255322,
+        "url": "https://github.com/czlee32/HiSH"
+      },
+      {
+        "repository": "SparkEric/HiSH",
+        "ref": "master",
+        "size": 305381,
+        "url": "https://github.com/SparkEric/HiSH"
+      },
+      {
+        "repository": "Fenzhuanvip/HiSH",
+        "ref": "master",
+        "size": 55690,
+        "url": "https://github.com/Fenzhuanvip/HiSH"
+      },
+      {
+        "repository": "zhubowen-bot/HiSH",
+        "ref": "master",
+        "size": 305384,
+        "url": "https://github.com/zhubowen-bot/HiSH"
+      },
+      {
+        "repository": "hreyulog/HiSH",
+        "ref": "master",
+        "size": 24629,
+        "url": "https://github.com/hreyulog/HiSH"
+      },
+      {
+        "repository": "zonbao/HiSH",
+        "ref": "master",
+        "size": 255322,
+        "url": "https://github.com/zonbao/HiSH"
+      },
+      {
+        "repository": "EriDeLee/HiSH",
+        "ref": "master",
+        "size": 20783,
+        "url": "https://github.com/EriDeLee/HiSH"
+      },
+      {
+        "repository": "Sek1ro-oka/zafu-pchospital-harmonyos",
+        "ref": "main",
+        "size": 79240,
+        "url": "https://github.com/Sek1ro-oka/zafu-pchospital-harmonyos"
+      },
+      {
+        "repository": "HarmonyRun/ds-bot-app-HarmonyOS",
+        "ref": "harmonyos",
+        "size": 14960,
+        "url": "https://github.com/HarmonyRun/ds-bot-app-HarmonyOS"
+      },
+      {
+        "repository": "QinpanWan/whale-mcp-demo",
+        "ref": "main",
+        "size": 1,
+        "url": "https://github.com/QinpanWan/whale-mcp-demo"
+      },
+      {
+        "repository": "PWVolcano/zafu-pchospital-harmonyos",
+        "ref": "main",
+        "size": 21983,
+        "url": "https://github.com/PWVolcano/zafu-pchospital-harmonyos"
+      },
+      {
+        "repository": "abcdok/HiSH",
+        "ref": "master",
+        "size": 255285,
+        "url": "https://github.com/abcdok/HiSH"
+      },
+      {
+        "repository": "k138604/HiSH",
+        "ref": "master",
+        "size": 279858,
+        "url": "https://github.com/k138604/HiSH"
+      },
+      {
+        "repository": "TonyTsang81/HiSH",
+        "ref": "master",
+        "size": 28225,
+        "url": "https://github.com/TonyTsang81/HiSH"
+      },
+      {
+        "repository": "ly-ye/HiSH",
+        "ref": "master",
+        "size": 279858,
+        "url": "https://github.com/ly-ye/HiSH"
+      },
+      {
+        "repository": "V-dev-388/HiSH",
+        "ref": "master",
+        "size": 237286,
+        "url": "https://github.com/V-dev-388/HiSH"
+      },
+      {
+        "repository": "snoworwind/HiSH",
+        "ref": "master",
+        "size": 22785,
+        "url": "https://github.com/snoworwind/HiSH"
+      },
+      {
+        "repository": "huihui200739/harmony-sass",
+        "ref": "main",
+        "size": 4876,
+        "url": "https://github.com/huihui200739/harmony-sass"
+      },
+      {
+        "repository": "fastbiography-hue/litradar-harmonyos",
+        "ref": "main",
+        "size": 318,
+        "url": "https://github.com/fastbiography-hue/litradar-harmonyos"
+      },
+      {
+        "repository": "wwengg/granary",
+        "ref": "master",
+        "size": 2939,
+        "url": "https://github.com/wwengg/granary"
+      },
+      {
+        "repository": "liang-xiaohui/GitHarmony",
+        "ref": "main",
+        "size": 98,
+        "url": "https://github.com/liang-xiaohui/GitHarmony"
+      },
+      {
+        "repository": "FiveHair/pure_live",
+        "ref": "ohos-support",
+        "size": 155358,
+        "url": "https://github.com/FiveHair/pure_live"
+      },
+      {
+        "repository": "kingshare/toeic-wordgame",
+        "ref": "main",
+        "size": 1139,
+        "url": "https://github.com/kingshare/toeic-wordgame"
+      },
+      {
+        "repository": "Zinnober02/texlive-ohos",
+        "ref": "master",
+        "size": 42,
+        "url": "https://github.com/Zinnober02/texlive-ohos"
+      },
+      {
+        "repository": "mg1988/HiSH",
+        "ref": "master",
+        "size": 45996,
+        "url": "https://github.com/mg1988/HiSH"
+      },
+      {
+        "repository": "hwlearner/HiSH",
+        "ref": "master",
+        "size": 292882,
+        "url": "https://github.com/hwlearner/HiSH"
+      },
+      {
+        "repository": "SummerKaze/HiSH",
+        "ref": "master",
+        "size": 193223,
+        "url": "https://github.com/SummerKaze/HiSH"
+      },
+      {
+        "repository": "Boy-Grid-G/HiSH",
+        "ref": "master",
+        "size": 20674,
+        "url": "https://github.com/Boy-Grid-G/HiSH"
+      },
+      {
+        "repository": "aiminickwong/HiSH",
+        "ref": "master",
+        "size": 193211,
+        "url": "https://github.com/aiminickwong/HiSH"
+      },
+      {
+        "repository": "huaxunkeji/HiSH",
+        "ref": "master",
+        "size": 45996,
+        "url": "https://github.com/huaxunkeji/HiSH"
+      },
+      {
+        "repository": "yzxzero/HiSH",
+        "ref": "master",
+        "size": 173282,
+        "url": "https://github.com/yzxzero/HiSH"
+      },
+      {
+        "repository": "tzwolf/HiSH",
+        "ref": "master",
+        "size": 279782,
+        "url": "https://github.com/tzwolf/HiSH"
+      },
+      {
+        "repository": "feicong/HiSH",
+        "ref": "master",
+        "size": 279712,
+        "url": "https://github.com/feicong/HiSH"
+      },
+      {
+        "repository": "nickweiminhan/HiSH",
+        "ref": "master",
+        "size": 131858,
+        "url": "https://github.com/nickweiminhan/HiSH"
+      },
+      {
+        "repository": "oceanxm/HiSH",
+        "ref": "master",
+        "size": 279479,
+        "url": "https://github.com/oceanxm/HiSH"
+      },
+      {
+        "repository": "PXSR/HiSH",
+        "ref": "master",
+        "size": 46001,
+        "url": "https://github.com/PXSR/HiSH"
+      },
+      {
+        "repository": "honghaier250/HiSH",
+        "ref": "master",
+        "size": 20543,
+        "url": "https://github.com/honghaier250/HiSH"
+      },
+      {
+        "repository": "mofanx/HiSH",
+        "ref": "master",
+        "size": 131858,
+        "url": "https://github.com/mofanx/HiSH"
+      },
+      {
+        "repository": "Mu-L/HiSH",
+        "ref": "master",
+        "size": 44260,
+        "url": "https://github.com/Mu-L/HiSH"
+      },
+      {
+        "repository": "icode6s-hash/HiSH",
+        "ref": "master",
+        "size": 279780,
+        "url": "https://github.com/icode6s-hash/HiSH"
+      },
+      {
+        "repository": "657838683/HiSH",
+        "ref": "master",
+        "size": 279687,
+        "url": "https://github.com/657838683/HiSH"
+      },
+      {
+        "repository": "tudaojia/HiSH",
+        "ref": "master",
+        "size": 20597,
+        "url": "https://github.com/tudaojia/HiSH"
+      },
+      {
+        "repository": "mikeleishenm-droid/HiSH",
+        "ref": "master",
+        "size": 279787,
+        "url": "https://github.com/mikeleishenm-droid/HiSH"
+      },
+      {
+        "repository": "shujunqiao/HiSH-harmonyOS",
+        "ref": "master",
+        "size": 46001,
+        "url": "https://github.com/shujunqiao/HiSH-harmonyOS"
+      },
+      {
+        "repository": "bigdadwolf/HiSH",
+        "ref": "master",
+        "size": 279712,
+        "url": "https://github.com/bigdadwolf/HiSH"
+      },
+      {
+        "repository": "yuanniande/HiSH",
+        "ref": "master",
+        "size": 20323,
+        "url": "https://github.com/yuanniande/HiSH"
+      },
+      {
+        "repository": "heguoxing98/HiSH",
+        "ref": "master",
+        "size": 46001,
+        "url": "https://github.com/heguoxing98/HiSH"
+      },
+      {
+        "repository": "babyonline/HiSH",
+        "ref": "master",
+        "size": 20310,
+        "url": "https://github.com/babyonline/HiSH"
+      },
+      {
+        "repository": "wzk-12138/course-schedule",
+        "ref": "main",
+        "size": 139,
+        "url": "https://github.com/wzk-12138/course-schedule"
+      },
+      {
+        "repository": "mixin97/HuiwenMCP",
+        "ref": "main",
+        "size": 1704,
+        "url": "https://github.com/mixin97/HuiwenMCP"
+      },
+      {
+        "repository": "henan121212/HuiwenMCP",
+        "ref": "main",
+        "size": 370,
+        "url": "https://github.com/henan121212/HuiwenMCP"
+      },
+      {
+        "repository": "monshot/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/monshot/HuiwenMCP"
+      },
+      {
+        "repository": "WhileBourgogne/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/WhileBourgogne/HuiwenMCP"
+      },
+      {
+        "repository": "ttq666/HuiwenMCP",
+        "ref": "main",
+        "size": 803,
+        "url": "https://github.com/ttq666/HuiwenMCP"
+      },
+      {
+        "repository": "Quintonke/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/Quintonke/HuiwenMCP"
+      },
+      {
+        "repository": "github-lsb/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/github-lsb/HuiwenMCP"
+      },
+      {
+        "repository": "misfiteam/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/misfiteam/HuiwenMCP"
+      },
+      {
+        "repository": "femboyish/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/femboyish/HuiwenMCP"
+      },
+      {
+        "repository": "meetlifes/HuiwenMCP",
+        "ref": "main",
+        "size": 353,
+        "url": "https://github.com/meetlifes/HuiwenMCP"
+      },
+      {
+        "repository": "spaword/HuiwenMCP",
+        "ref": "main",
+        "size": 1755,
+        "url": "https://github.com/spaword/HuiwenMCP"
+      }
+    ]
+  }
+]

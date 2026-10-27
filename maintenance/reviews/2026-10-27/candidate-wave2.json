@@ -1,0 +1,79 @@
+[
+  {
+    "id": "gitee-kmp-harmony",
+    "url": "https://gitee.com/licq_workspace/kmp-cmp-harmony",
+    "selected_ref": "master",
+    "framework": "kotlin-multiplatform",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/gitee-kmp-harmony.git",
+    "outcome": "incomplete",
+    "error": "fatal: could not read Username for 'https://gitee.com': terminal prompts disabled\n"
+  },
+  {
+    "id": "rnoh-screens",
+    "url": "https://gitcode.com/CPF-RN/rntpc_react-native-screens",
+    "selected_ref": "master",
+    "framework": "react-native",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-screens.git",
+    "observed_commit": "9609029bf20b8ac3d6fcc5929bd03005fec3fd85",
+    "screened_paths": [
+      "LICENSE",
+      "README.OpenSource",
+      "README.md",
+      "README_en.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "vbsqlite-ohos",
+    "url": "https://github.com/Kuikly-contrib/VBSQLite",
+    "selected_ref": "main",
+    "framework": "kotlin-multiplatform",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/vbsqlite-ohos.git",
+    "observed_commit": "734e996936cccc5e582521db511259133b958526",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "kuikly-sqlite",
+    "url": "https://github.com/HD-L/KuiklyUISqlite",
+    "selected_ref": "main",
+    "framework": "kotlin-multiplatform",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/kuikly-sqlite.git",
+    "observed_commit": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "rnoh-gesture-handler",
+    "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+    "selected_ref": "master",
+    "framework": "react-native",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-gesture-handler.git",
+    "observed_commit": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+    "screened_paths": [
+      "LICENSE",
+      "README.OpenSource",
+      "README.md",
+      "README_en.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "marktext-ohos",
+    "url": "https://github.com/1440196924/MarkText-HM",
+    "selected_ref": "master",
+    "framework": "electron",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/marktext-ohos.git",
+    "observed_commit": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "canonical_tauri_accepted": true,
+    "symptom_retrieves_tauri": true,
+    "framework_filter_excludes_other_adapters": true,
+    "framework_search_includes_common": true,
+    "adapter_only_excludes_common": true,
+    "default_database_independent_of_cwd": true,
+    "case_insensitive_tauri_cli": true,
+    "runtime_label_still_rejected": true,
+    "all_snapshot_hashes_and_index_valid": true
+  },
+  "execution": "Database/skill helpers only; no source application commands executed.",
+  "skill_validation": "quick_validate.py passed under uv with an isolated PyYAML dependency."
+}

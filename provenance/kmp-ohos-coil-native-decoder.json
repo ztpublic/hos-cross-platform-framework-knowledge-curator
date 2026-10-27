@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-coil-native-decoder",
+  "sources": [
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt",
+      "sha256": "c1e954a79f685be6cefdecd0f7093ededece6aed781ff8de5ea12aca8fc534d0",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+      "sha256": "89287699f6aee30cb6c44a25c587d0373d6ca94c49a19b7c9184a32e1c069f7f",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/cinterop/image.def",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/cinterop/image.def",
+      "sha256": "d08136a7abfc8f12f4844e8f2ee65f4d0c6b05585e662ef6a27685a560671691",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/build.gradle.kts",
+      "sha256": "d99a371245d0dc7b382c082011e0f40a0bacae33e68b9727080417fc46178f1f",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "buildSrc/src/main/kotlin/coil3/multiplatform.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/buildSrc/src/main/kotlin/coil3/multiplatform.kt",
+      "sha256": "64895d828b16dde4388a98188910f44d7bf797a2b6e8cd9ae202c784c46a08a0",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Pixel format/size assumptions remain unaudited at runtime; do not copy the full source decoder as a proven remedy."
+  ]
+}

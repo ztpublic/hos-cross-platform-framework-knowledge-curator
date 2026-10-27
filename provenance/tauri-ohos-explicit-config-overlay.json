@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-explicit-config-overlay",
+  "sources": [
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-cli/src/mobile/open_harmony/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/src/mobile/open_harmony/build.rs",
+      "sha256": "e5baa48ee679e68d002e7768aedd4651c293bdb8bef94019b4ce47868d29ccb9",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-cli/src/mobile/open_harmony/build.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-cli/src/helpers/config.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/src/helpers/config.rs",
+      "sha256": "4a3e0acb0bdc400d845a3232009275b5b46584667b3b9cd248a582aeb37051b2",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-cli/src/helpers/config.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-utils/src/config/parse.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-utils/src/config/parse.rs",
+      "sha256": "cc38b1b51b6067a91b34970b5b386f6f3bffbb7e0baf5ffa954dce66bc7c84c4",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-utils/src/config/parse.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism from pinned source inputs; project identities and revisions retained only in provenance.",
+    "Recommendations and acceptance cases are source-derived and were not executed."
+  ],
+  "limitations": [
+    "No build, installation or PC runtime verification performed.",
+    "Observed source defect and proposed explicit-merge workaround were not reproduced with the CLI."
+  ]
+}

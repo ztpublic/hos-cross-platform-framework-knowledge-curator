@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "native-ohos-shared-library-elf-layout",
+  "sources": [
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/README.md",
+      "sha256": "4f5f344911a7fd817313a3169ca5f54091de2bee1df7436b88960e9320c4c008",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/README.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/package-hap.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/package-hap.py",
+      "sha256": "2f30c542ae66aac357732ca2db0c4f386b9a3250f60d7ad38cfa15e46cdf2144",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/package-hap.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/configure-hap.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/configure-hap.py",
+      "sha256": "b386a742b8d9eb6be7e4ffb1a7b141ef396f55fc76575e3d1c35642af80f3932",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/configure-hap.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/pack-mobile-native.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/pack-mobile-native.py",
+      "sha256": "835839a14bca106246add1c76ea65341e442afdba32eac78120e55cc95846b16",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/pack-mobile-native.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/build.sh",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/build.sh",
+      "sha256": "678d5fb87d4cfae3792d0239d65a2c96c1a8c90b522a6f31da5e32a043e8ceec",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/build.sh",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    }
+  ],
+  "transformations": [
+    "Extracted the ELF transformation/loading invariant as common native guidance; the consuming application uses Tauri.",
+    "Preserved format-specific bounds and loader assumptions; no application code copied."
+  ],
+  "limitations": [
+    "No compiler, ELF packer, signing, HAP installation or device tests performed.",
+    "The source reports emulator validation; physical HarmonyOS PC loading remains unverified.",
+    "The reported loader failure and remedy were not independently reproduced."
+  ]
+}

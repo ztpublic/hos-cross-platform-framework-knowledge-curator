@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-prepared-compose-resources",
+  "sources": [
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/build.ohos.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/build.ohos.gradle.kts",
+      "sha256": "f6169108608b5ba5c4eb19bd5bf4530307f249fb3eccfb2334e38251ced12478",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "OHOS_MIGRATION.md",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/OHOS_MIGRATION.md",
+      "sha256": "6f5e075113698edb26b637897d56877741890246cfc47480d35f135881c103df",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

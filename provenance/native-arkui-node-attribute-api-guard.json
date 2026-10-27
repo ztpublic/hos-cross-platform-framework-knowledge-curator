@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "native-arkui-node-attribute-api-guard",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp",
+      "sha256": "a9343d342ac475c898a39be9fb24ef5de8186707272167a3e767d8a18c65782f",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

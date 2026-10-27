@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-save-picker-name-and-format",
+  "sources": [
+    {
+      "collection": "flameshot-ohos",
+      "original_path": "src/utils/screenshotsaver.cpp",
+      "snapshot": "provenance/snapshots/projects/flameshot-ohos/2026-10-22/src/utils/screenshotsaver.cpp",
+      "sha256": "9886ed4c8508d64686f822e55a907947f77847f2fb7cfecb214a6f6961f6824a",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flameshot-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flameshot-ohos/2026-10-22/README.md",
+      "sha256": "0d09f208a249bb1c518909f5f478c794cf43c57f76006c935b2d8203e9bb3a06",
+      "revision": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run."
+  ]
+}

@@ -10,11 +10,22 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/src/lib.rs",
+      "sha256": "121c72ca300cd7f1948b4de2fbb0e0d83fca602cd3fc9212c3e79d8323d5ec5b",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "transformations": [
     "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
-    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
+    "Added source examples distinguishing a VM-thread FunctionRef call from worker ThreadsafeFunction dispatch. Process-global callback storage is example scope; teardown/replacement and lock reentrancy remain caller responsibilities."
   ],
   "limitations": [
     "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",

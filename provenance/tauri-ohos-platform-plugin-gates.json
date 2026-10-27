@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-platform-plugin-gates",
+  "sources": [
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.toml",
+      "sha256": "2451b1a2a3b7e3e29cf62252f1827442e968f3a70e88f44907147087861b1663",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.lock",
+      "sha256": "5072a0b916615aee10d581b3357ebd82dcea37eb44b676719de7c64e46e53a9f",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/src/lib.rs",
+      "sha256": "2df3be7d7a160bc49e1763f91b3903ea2aed35856c16736de34a139a3a1b3cd1",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/capabilities/ohos.json",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/capabilities/ohos.json",
+      "sha256": "be1c2d4f9636019bd36bbcfded68e5bddfd01add51624bdec3c0380f4818f810",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

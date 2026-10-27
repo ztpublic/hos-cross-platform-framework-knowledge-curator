@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-sessionmanager-prerequisite",
+  "sources": [
+    {
+      "collection": "electron-shell",
+      "original_path": "docs/ohos-sessionmanager-adaptation.md",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/docs/ohos-sessionmanager-adaptation.md",
+      "sha256": "4e940c7941ad6cdc50c3257fe6a2e451b8d493b73da067a2753f6263090d8aa4",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "web_engine/src/main/ets/ability/WebAbility.ets",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/web_engine/src/main/ets/ability/WebAbility.ets",
+      "sha256": "be558c4c040860f6cd3c4087d53ac3771af8bf989030dcf37d96b7e99cb02e34",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "web_engine/src/main/ets/components/WebNodeHandleWindow.ets",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/web_engine/src/main/ets/components/WebNodeHandleWindow.ets",
+      "sha256": "cf8d66a53282adc69b1e8ea4cf7844116eee1f06be403f61bca8f3ed0dc94b2b",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "electron/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/electron/oh-package.json5",
+      "sha256": "3443d712f7b4f04bad35cafdc2c3f533289a0c78dc6d117aef577ef5451c420b",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Native crash causality and same-HAP 2in1 success are source-reported; no native binary or device reproduction performed."
+  ]
+}

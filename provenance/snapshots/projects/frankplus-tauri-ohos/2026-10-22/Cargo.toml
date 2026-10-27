@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = [
+  "examples/*/src-tauri",
+  "vendor/tao",
+  "vendor/tao/tao-macros",
+  "vendor/wry",
+]
+
+[workspace.package]
+version = "2.0.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["Tauri Programme within The Commons Conservancy"]
+license = "Apache-2.0"
+homepage = "https://tauri.app"
+repository = "https://github.com/tauri-apps/tauri"
+categories = ["gui", "web-programming"]
+
+[patch.crates-io]
+tao = { path = "vendor/tao" }
+wry = { path = "vendor/wry" }
+tauri = { path = "vendor/tauri/crates/tauri" }
+tauri-build = { path = "vendor/tauri/crates/tauri-build" }
+

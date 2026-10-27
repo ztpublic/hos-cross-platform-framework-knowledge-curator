@@ -1,0 +1,1023 @@
+commit 915538279818a96de885cdae0e76e9efdade2542 4fc74af5b2fabfbf82557d0221923a0872b9e45e
+fix: embed in Bern hosts: target-named native deps, encoded file URIs
+
+ crates/erika/build.rs            | 25 +++++++----
+ crates/erika/src/core.rs         |  3 +-
+ crates/erika/src/source.rs       | 89 ++++++++++++++++++++++++++++++++++++++--
+ crates/erika_ffmpeg_sys/build.rs | 25 +++++++----
+ 4 files changed, 122 insertions(+), 20 deletions(-)
+commit 27bab58d9816a3b9dda67d22dcb16507d46835b0 915538279818a96de885cdae0e76e9efdade2542
+feat: add browser playback and native overlay improvements
+
+ .github/workflows/web.yml                          |  65 ++
+ .gitignore                                         |   2 +
+ CHANGELOG.md                                       |  21 +
+ Cargo.lock                                         |  31 +-
+ README.md                                          |  30 +-
+ crates/erika/Cargo.toml                            |  17 +-
+ crates/erika/build.rs                              |   4 +
+ crates/erika/src/core.rs                           |  63 ++
+ crates/erika/src/danmaku.rs                        | 494 ++++++++++++--
+ crates/erika/src/ffmpeg.rs                         | 107 ++-
+ crates/erika/src/font.rs                           |  33 +
+ crates/erika/src/lib.rs                            |  18 +
+ crates/erika/src/playback.rs                       |   7 +-
+ crates/erika/src/presenter.rs                      | 726 +++++++++++++++++++--
+ crates/erika/src/presenter/subtitle_resolution.rs  | 103 +++
+ crates/erika/src/renderer/metal/apple.rs           | 339 +++-------
+ crates/erika/src/renderer/metal/apple/danmaku.rs   | 424 ++++++++++++
+ crates/erika/src/renderer/presentation.rs          |  25 +
+ crates/erika/src/source.rs                         |   8 +-
+ crates/erika/src/subtitle.rs                       |  37 +-
+ crates/erika/src/web.rs                            | 310 +++++++++
+ crates/erika/src/web/media.c                       | 201 ++++++
+ crates/erika/testdata/chapters/chapters.ffmetadata |  32 +
+ crates/erika/testdata/chapters/chapters.mkv        | Bin 0 -> 66332 bytes
+ crates/erika/testdata/chapters/generate.sh         |   9 +
+ crates/erika/testdata/playback/README.md           |  10 +
+ crates/erika/testdata/web/subtitles.ass            |  11 +
+ crates/erika_capi/src/lib.rs                       |   1 +
+ crates/erika_ffmpeg_sys/build.rs                   |  39 ++
+ docs/README.md                                     |   6 +
+ docs/architecture.ja.md                            |   6 +
+ docs/architecture.md                               |   7 +
+ docs/architecture.zh.md                            |   5 +
+ docs/building.ja.md                                |   5 +
+ docs/building.md                                   |   6 +
+ docs/building.zh.md                                |   5 +
+ docs/danmaku_architecture.md                       |  11 +-
+ docs/integration.ja.md                             |  14 +
+ docs/integration.md                                |  16 +
+ docs/integration.zh.md                             |  12 +
+ docs/platform_matrix.zh.md                         |  21 +-
+ docs/web.md                                        | 300 +++++++++
+ docs/web.zh.md                                     | 240 +++++++
+ examples/web_player/index.html                     | 210 ++++++
+ packages/erika_web/README.md                       |  45 ++
+ packages/erika_web/audio.js                        |  59 ++
+ packages/erika_web/codecs.js                       | 134 ++++
+ packages/erika_web/index.d.ts                      | 103 +++
+ packages/erika_web/index.js                        | 368 +++++++++++
+ packages/erika_web/package.json                    |  13 +
+ packages/erika_web/renderer.js                     | 346 ++++++++++
+ packages/erika_web/source.js                       |  97 +++
+ packages/erika_web/tests/audio.test.mjs            |  95 +++
+ packages/erika_web/tests/browser.mjs               | 214 ++++++
+ packages/erika_web/tests/core.test.mjs             | 186 ++++++
+ packages/erika_web/worker.js                       | 530 +++++++++++++++
+ readme/README.en.md                                |  34 +-
+ readme/README.ja.md                                |  32 +-
+ readme/README.md                                   |   2 +
+ scripts/build_web.py                               | 108 +++
+ scripts/serve_web.py                               |  52 ++
+ scripts/web_test_fixtures.py                       |  13 +
+ xtask/src/main.rs                                  |  11 +
+ 63 files changed, 6024 insertions(+), 449 deletions(-)
+commit a80e890ae6590d6992c0136fcc84db4bcc96708d 4fc74af5b2fabfbf82557d0221923a0872b9e45e 27bab58d9816a3b9dda67d22dcb16507d46835b0
+Merge pull request #168 from AimesSoft/feat/bern-web-playback-20261023
+
+ .github/workflows/web.yml                          |  65 ++
+ .gitignore                                         |   2 +
+ CHANGELOG.md                                       |  21 +
+ Cargo.lock                                         |  31 +-
+ README.md                                          |  30 +-
+ crates/erika/Cargo.toml                            |  17 +-
+ crates/erika/build.rs                              |  29 +-
+ crates/erika/src/core.rs                           |  66 +-
+ crates/erika/src/danmaku.rs                        | 494 ++++++++++++--
+ crates/erika/src/ffmpeg.rs                         | 107 ++-
+ crates/erika/src/font.rs                           |  33 +
+ crates/erika/src/lib.rs                            |  18 +
+ crates/erika/src/playback.rs                       |   7 +-
+ crates/erika/src/presenter.rs                      | 726 +++++++++++++++++++--
+ crates/erika/src/presenter/subtitle_resolution.rs  | 103 +++
+ crates/erika/src/renderer/metal/apple.rs           | 339 +++-------
+ crates/erika/src/renderer/metal/apple/danmaku.rs   | 424 ++++++++++++
+ crates/erika/src/renderer/presentation.rs          |  25 +
+ crates/erika/src/source.rs                         |  89 ++-
+ crates/erika/src/subtitle.rs                       |  37 +-
+ crates/erika/src/web.rs                            | 310 +++++++++
+ crates/erika/src/web/media.c                       | 201 ++++++
+ crates/erika/testdata/chapters/chapters.ffmetadata |  32 +
+ crates/erika/testdata/chapters/chapters.mkv        | Bin 0 -> 66332 bytes
+ crates/erika/testdata/chapters/generate.sh         |   9 +
+ crates/erika/testdata/playback/README.md           |  10 +
+ crates/erika/testdata/web/subtitles.ass            |  11 +
+ crates/erika_capi/src/lib.rs                       |   1 +
+ crates/erika_ffmpeg_sys/build.rs                   |  64 +-
+ docs/README.md                                     |   6 +
+ docs/architecture.ja.md                            |   6 +
+ docs/architecture.md                               |   7 +
+ docs/architecture.zh.md                            |   5 +
+ docs/building.ja.md                                |   5 +
+ docs/building.md                                   |   6 +
+ docs/building.zh.md                                |   5 +
+ docs/danmaku_architecture.md                       |  11 +-
+ docs/integration.ja.md                             |  14 +
+ docs/integration.md                                |  16 +
+ docs/integration.zh.md                             |  12 +
+ docs/platform_matrix.zh.md                         |  21 +-
+ docs/web.md                                        | 300 +++++++++
+ docs/web.zh.md                                     | 240 +++++++
+ examples/web_player/index.html                     | 210 ++++++
+ packages/erika_web/README.md                       |  45 ++
+ packages/erika_web/audio.js                        |  59 ++
+ packages/erika_web/codecs.js                       | 134 ++++
+ packages/erika_web/index.d.ts                      | 103 +++
+ packages/erika_web/index.js                        | 368 +++++++++++
+ packages/erika_web/package.json                    |  13 +
+ packages/erika_web/renderer.js                     | 346 ++++++++++
+ packages/erika_web/source.js                       |  97 +++
+ packages/erika_web/tests/audio.test.mjs            |  95 +++
+ packages/erika_web/tests/browser.mjs               | 214 ++++++
+ packages/erika_web/tests/core.test.mjs             | 186 ++++++
+ packages/erika_web/worker.js                       | 530 +++++++++++++++
+ readme/README.en.md                                |  34 +-
+ readme/README.ja.md                                |  32 +-
+ readme/README.md                                   |   2 +
+ scripts/build_web.py                               | 108 +++
+ scripts/serve_web.py                               |  52 ++
+ scripts/web_test_fixtures.py                       |  13 +
+ xtask/src/main.rs                                  |  11 +
+ 63 files changed, 6142 insertions(+), 465 deletions(-)
+commit 5e45088f14923931c1803a5ba5f87a297584ec96 a80e890ae6590d6992c0136fcc84db4bcc96708d
+feat(diagnostics): keep a redacted log ring and timing counters in the engine
+
+ crates/erika/build.rs                       |   13 +
+ crates/erika/src/core.rs                    |   11 +
+ crates/erika/src/diagnostics.rs             | 1151 +++++++++++++++++++++++++++
+ crates/erika/src/ffmpeg.rs                  |  135 ++++
+ crates/erika/src/ffmpeg_log_bridge.c        |   64 ++
+ crates/erika/src/lib.rs                     |    2 +
+ crates/erika/src/overlay.rs                 |    5 +-
+ crates/erika/src/playback.rs                |   99 ++-
+ crates/erika/src/presenter.rs               |  259 +++++-
+ crates/erika/src/renderer/d3d11.rs          |   10 +-
+ crates/erika/src/renderer/metal/apple.rs    |    5 +-
+ crates/erika/src/renderer/metal/upscaler.rs |    7 +-
+ crates/erika/src/subtitle.rs                |   27 +-
+ crates/erika/src/trace.rs                   | 1135 ++++++++++++++++++++++++++
+ crates/erika/src/windows.rs                 |   15 +-
+ 15 files changed, 2911 insertions(+), 27 deletions(-)
+commit 6355b01b8ccb53e6214e2c63ce8121fe3338828b 55f23fee2a8b28c0712c390e3e00f8c179320177
+fix(decoder): report software decoding when FFmpeg drops VideoToolbox or D3D11VA after the decoder opened, instead of claiming the hardware backend with no fallback
+
+ CHANGELOG.md                 |   8 ++
+ crates/erika/src/ffmpeg.rs   | 205 +++++++++++++++++++++++++++++++++++++++++--
+ crates/erika/src/playback.rs | 112 ++++++++++++++++++++++-
+ 3 files changed, 317 insertions(+), 8 deletions(-)
+commit cee8f648a2864388dc7199e7dae9eda244247975 5e45088f14923931c1803a5ba5f87a297584ec96
+feat(capi): export diagnostics as JSON and make invoke_json a discoverable pass-through
+
+ CHANGELOG.md                                     |  23 +
+ crates/erika_capi/include/erika.h                |  51 +-
+ crates/erika_capi/src/android_jni.rs             |   5 +
+ crates/erika_capi/src/diagnostics.rs             | 266 ++++++++
+ crates/erika_capi/src/lib.rs                     |   2 +
+ crates/erika_capi/src/presenter_json.rs          | 787 ++++++++++++++++++++++-
+ docs/capi_reference.ja.md                        | 122 +++-
+ docs/capi_reference.md                           | 161 ++++-
+ docs/capi_reference.zh.md                        | 133 +++-
+ packages/erika_flutter/native/include/erika.h    |  51 +-
+ packages/erika_ohos/src/main/cpp/include/erika.h |  51 +-
+ 11 files changed, 1595 insertions(+), 57 deletions(-)
+commit 63f757dea8a079f89fc50b3ccbb4b6675c521ad9 6355b01b8ccb53e6214e2c63ce8121fe3338828b
+feat(export): export the picture shown at a media time as RGBA or PNG, headless, through erika_export_frame and ErikaPlayer.exportFrame
+
+ CHANGELOG.md                                       |   4 +
+ Cargo.lock                                         |   1 +
+ Cargo.toml                                         |   1 +
+ crates/erika/Cargo.toml                            |   1 +
+ crates/erika/src/export.rs                         | 444 ++++++++++++++++++++-
+ crates/erika/src/ffmpeg.rs                         |  29 ++
+ crates/erika_capi/include/erika.h                  |  45 +++
+ crates/erika_capi/src/lib.rs                       | 249 +++++++++++-
+ docs/capi_reference.ja.md                          |  11 +
+ docs/capi_reference.md                             |  38 ++
+ docs/capi_reference.zh.md                          |  31 ++
+ packages/erika_flutter/CHANGELOG.md                |   4 +
+ packages/erika_flutter/lib/src/erika_player.dart   | 136 +++++++
+ .../erika_flutter/lib/src/gif_export_native.dart   |   3 +
+ .../lib/src/gif_export_native_io.dart              | 174 +++++++-
+ .../lib/src/gif_export_native_stub.dart            |   4 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         | 135 +++++++
+ packages/erika_flutter/native/include/erika.h      |  45 +++
+ packages/erika_flutter/test/erika_player_test.dart |  76 ++++
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  45 +++
+ 20 files changed, 1472 insertions(+), 4 deletions(-)
+commit 5567d116c3dd9c4776c7cdcadfa9a82d08ad2341 cee8f648a2864388dc7199e7dae9eda244247975
+feat(flutter): add getDiagnosticsSnapshot, getLogs and invokeJson
+
+ docs/flutter_embedding.ja.md                       |  21 ++
+ docs/flutter_embedding.md                          |  24 ++
+ docs/flutter_embedding.zh.md                       |  18 ++
+ packages/erika_flutter/CHANGELOG.md                |   8 +
+ .../aimesoft/erika_flutter/ErikaFlutterPlugin.kt   |   4 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           | 164 +++++++++-
+ packages/erika_flutter/lib/src/erika_player.dart   | 159 ++++++++++
+ .../macos/Classes/ErikaFlutterPlugin.swift         | 164 +++++++++-
+ .../ets/components/plugin/ErikaFlutterPlugin.ets   |   1 +
+ packages/erika_flutter/test/diagnostics_test.dart  | 344 +++++++++++++++++++++
+ .../tvos/Classes/ErikaFlutterPlugin.swift          | 164 +++++++++-
+ 11 files changed, 1068 insertions(+), 3 deletions(-)
+commit 6b94ba4ab435a473e474f65a58280755d41d151f 63f757dea8a079f89fc50b3ccbb4b6675c521ad9
+perf(flutter): decode large JSON documents from getLogs, getDiagnosticsSnapshot and invokeJson on a background isolate
+
+ packages/erika_flutter/CHANGELOG.md              |  2 ++
+ packages/erika_flutter/lib/src/erika_player.dart | 23 ++++++++++++++++++++---
+ 2 files changed, 22 insertions(+), 3 deletions(-)
+commit 55f23fee2a8b28c0712c390e3e00f8c179320177 5567d116c3dd9c4776c7cdcadfa9a82d08ad2341
+test(flutter): compare the bundled header with the repository one only where the repository is there
+
+ packages/erika_flutter/test/diagnostics_test.dart | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+commit 81dc43302ea7eab28838a25a474a43eb621f8a3f 6b94ba4ab435a473e474f65a58280755d41d151f
+build(macos): check that an ERIKA_MACOS_CAPI_DYLIB override carries every architecture being built, and say which library is bundled
+
+ packages/erika_flutter/CHANGELOG.md                |  2 ++
+ packages/erika_flutter/README.ja.md                |  2 +-
+ packages/erika_flutter/README.md                   |  5 ++++-
+ packages/erika_flutter/README.zh.md                |  2 +-
+ packages/erika_flutter/macos/erika_flutter.podspec | 18 ++++++++++++++++++
+ 5 files changed, 26 insertions(+), 3 deletions(-)
+commit e01b1d7bc577c3fc767d3c80e11c66dcf9f90304 81dc43302ea7eab28838a25a474a43eb621f8a3f
+feat(export): take many pictures from one open media, tone map HDR exports to SDR, decode software video on several threads, and keep JSON calls off the Apple main thread
+
+ .github/workflows/ohos.yml                         |   7 +-
+ .github/workflows/release.yml                      |   7 +-
+ CHANGELOG.md                                       |  28 +
+ Cargo.lock                                         |  18 +
+ Cargo.toml                                         |   2 +
+ crates/erika/src/core.rs                           |  26 +
+ crates/erika/src/export.rs                         | 500 +++++++++--
+ crates/erika/src/export_color.rs                   | 954 +++++++++++++++++++++
+ crates/erika/src/ffmpeg.rs                         | 116 ++-
+ crates/erika/src/lib.rs                            |   2 +
+ crates/erika/src/playback.rs                       |  39 +-
+ crates/erika/src/presenter.rs                      |   4 +
+ crates/erika_capi/include/erika.h                  |  50 +-
+ crates/erika_capi/src/lib.rs                       | 366 +++++++-
+ crates/erika_capi/src/presenter_json.rs            | 424 ++++++++-
+ docs/capi_reference.ja.md                          |  29 +-
+ docs/capi_reference.md                             |  54 +-
+ docs/capi_reference.zh.md                          |  43 +-
+ docs/flutter_embedding.ja.md                       |  20 +
+ docs/flutter_embedding.md                          |  25 +
+ docs/flutter_embedding.zh.md                       |  17 +
+ examples/frame_export_bench/Cargo.toml             |  12 +
+ examples/frame_export_bench/src/main.rs            | 152 ++++
+ examples/playback_rate_check/Cargo.toml            |  12 +
+ examples/playback_rate_check/src/main.rs           | 125 +++
+ packages/erika_flutter/CHANGELOG.md                |  12 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           | 129 ++-
+ packages/erika_flutter/ios/erika_flutter.podspec   |  11 +
+ packages/erika_flutter/lib/src/erika_player.dart   | 201 ++++-
+ .../erika_flutter/lib/src/gif_export_native.dart   |   2 +
+ .../lib/src/gif_export_native_io.dart              | 320 +++++++
+ .../lib/src/gif_export_native_stub.dart            |  15 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         | 419 ++++++++-
+ packages/erika_flutter/native/include/erika.h      |  50 +-
+ .../test/apple_export_symbols_contract_test.dart   |  45 +
+ .../test/apple_json_bridge_contract_test.dart      |  71 ++
+ .../test/apple_output_mode_contract_test.dart      |  16 +-
+ packages/erika_flutter/test/erika_player_test.dart | 128 +++
+ .../test/frame_export_session_native_test.dart     |  87 ++
+ packages/erika_flutter/tvos/erika_flutter.podspec  |  11 +
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  50 +-
+ 41 files changed, 4365 insertions(+), 234 deletions(-)
+commit 19b7c7e400bae0ee1bdb4678b84f19ce11101fa7 a80e890ae6590d6992c0136fcc84db4bcc96708d 55f23fee2a8b28c0712c390e3e00f8c179320177
+Merge pull request #165 from AimesSoft/feat/agent-diagnostics
+
+ CHANGELOG.md                                       |   23 +
+ crates/erika/build.rs                              |   13 +
+ crates/erika/src/core.rs                           |   11 +
+ crates/erika/src/diagnostics.rs                    | 1151 ++++++++++++++++++++
+ crates/erika/src/ffmpeg.rs                         |  135 +++
+ crates/erika/src/ffmpeg_log_bridge.c               |   64 ++
+ crates/erika/src/lib.rs                            |    2 +
+ crates/erika/src/overlay.rs                        |    5 +-
+ crates/erika/src/playback.rs                       |   99 +-
+ crates/erika/src/presenter.rs                      |  259 ++++-
+ crates/erika/src/renderer/d3d11.rs                 |   10 +-
+ crates/erika/src/renderer/metal/apple.rs           |    5 +-
+ crates/erika/src/renderer/metal/upscaler.rs        |    7 +-
+ crates/erika/src/subtitle.rs                       |   27 +-
+ crates/erika/src/trace.rs                          | 1135 +++++++++++++++++++
+ crates/erika/src/windows.rs                        |   15 +-
+ crates/erika_capi/include/erika.h                  |   51 +-
+ crates/erika_capi/src/android_jni.rs               |    5 +
+ crates/erika_capi/src/diagnostics.rs               |  266 +++++
+ crates/erika_capi/src/lib.rs                       |    2 +
+ crates/erika_capi/src/presenter_json.rs            |  787 ++++++++++++-
+ docs/capi_reference.ja.md                          |  122 ++-
+ docs/capi_reference.md                             |  161 ++-
+ docs/capi_reference.zh.md                          |  133 ++-
+ docs/flutter_embedding.ja.md                       |   21 +
+ docs/flutter_embedding.md                          |   24 +
+ docs/flutter_embedding.zh.md                       |   18 +
+ packages/erika_flutter/CHANGELOG.md                |    8 +
+ .../aimesoft/erika_flutter/ErikaFlutterPlugin.kt   |    4 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           |  164 ++-
+ packages/erika_flutter/lib/src/erika_player.dart   |  159 +++
+ .../macos/Classes/ErikaFlutterPlugin.swift         |  164 ++-
+ packages/erika_flutter/native/include/erika.h      |   51 +-
+ .../ets/components/plugin/ErikaFlutterPlugin.ets   |    1 +
+ packages/erika_flutter/test/diagnostics_test.dart  |  346 ++++++
+ .../tvos/Classes/ErikaFlutterPlugin.swift          |  164 ++-
+ packages/erika_ohos/src/main/cpp/include/erika.h   |   51 +-
+ 37 files changed, 5576 insertions(+), 87 deletions(-)
+commit 6b7c440285ff56f3a9ae8422aac0c2434b50075c 19b7c7e400bae0ee1bdb4678b84f19ce11101fa7 81dc43302ea7eab28838a25a474a43eb621f8a3f
+Merge pull request #166 from AimesSoft/feat/agent-frames
+
+ CHANGELOG.md                                       |  12 +
+ Cargo.lock                                         |   1 +
+ Cargo.toml                                         |   1 +
+ crates/erika/Cargo.toml                            |   1 +
+ crates/erika/src/export.rs                         | 444 ++++++++++++++++++++-
+ crates/erika/src/ffmpeg.rs                         | 234 ++++++++++-
+ crates/erika/src/playback.rs                       | 112 +++++-
+ crates/erika_capi/include/erika.h                  |  45 +++
+ crates/erika_capi/src/lib.rs                       | 249 +++++++++++-
+ docs/capi_reference.ja.md                          |  11 +
+ docs/capi_reference.md                             |  38 ++
+ docs/capi_reference.zh.md                          |  31 ++
+ packages/erika_flutter/CHANGELOG.md                |   8 +
+ packages/erika_flutter/README.ja.md                |   2 +-
+ packages/erika_flutter/README.md                   |   5 +-
+ packages/erika_flutter/README.zh.md                |   2 +-
+ packages/erika_flutter/lib/src/erika_player.dart   | 159 +++++++-
+ .../erika_flutter/lib/src/gif_export_native.dart   |   3 +
+ .../lib/src/gif_export_native_io.dart              | 174 +++++++-
+ .../lib/src/gif_export_native_stub.dart            |   4 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         | 135 +++++++
+ packages/erika_flutter/macos/erika_flutter.podspec |  18 +
+ packages/erika_flutter/native/include/erika.h      |  45 +++
+ packages/erika_flutter/test/erika_player_test.dart |  76 ++++
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  45 +++
+ 25 files changed, 1837 insertions(+), 18 deletions(-)
+commit aecd35115277b4291bc158c35552b8108fd07aff 6b7c440285ff56f3a9ae8422aac0c2434b50075c e01b1d7bc577c3fc767d3c80e11c66dcf9f90304
+Merge pull request #167 from AimesSoft/feat/agent-followups
+
+ .github/workflows/ohos.yml                         |   7 +-
+ .github/workflows/release.yml                      |   7 +-
+ CHANGELOG.md                                       |  28 +
+ Cargo.lock                                         |  18 +
+ Cargo.toml                                         |   2 +
+ crates/erika/src/core.rs                           |  26 +
+ crates/erika/src/export.rs                         | 500 +++++++++--
+ crates/erika/src/export_color.rs                   | 954 +++++++++++++++++++++
+ crates/erika/src/ffmpeg.rs                         | 116 ++-
+ crates/erika/src/lib.rs                            |   2 +
+ crates/erika/src/playback.rs                       |  39 +-
+ crates/erika/src/presenter.rs                      |   4 +
+ crates/erika_capi/include/erika.h                  |  50 +-
+ crates/erika_capi/src/lib.rs                       | 366 +++++++-
+ crates/erika_capi/src/presenter_json.rs            | 424 ++++++++-
+ docs/capi_reference.ja.md                          |  29 +-
+ docs/capi_reference.md                             |  54 +-
+ docs/capi_reference.zh.md                          |  43 +-
+ docs/flutter_embedding.ja.md                       |  20 +
+ docs/flutter_embedding.md                          |  25 +
+ docs/flutter_embedding.zh.md                       |  17 +
+ examples/frame_export_bench/Cargo.toml             |  12 +
+ examples/frame_export_bench/src/main.rs            | 152 ++++
+ examples/playback_rate_check/Cargo.toml            |  12 +
+ examples/playback_rate_check/src/main.rs           | 125 +++
+ packages/erika_flutter/CHANGELOG.md                |  12 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           | 129 ++-
+ packages/erika_flutter/ios/erika_flutter.podspec   |  11 +
+ packages/erika_flutter/lib/src/erika_player.dart   | 201 ++++-
+ .../erika_flutter/lib/src/gif_export_native.dart   |   2 +
+ .../lib/src/gif_export_native_io.dart              | 320 +++++++
+ .../lib/src/gif_export_native_stub.dart            |  15 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         | 419 ++++++++-
+ packages/erika_flutter/native/include/erika.h      |  50 +-
+ .../test/apple_export_symbols_contract_test.dart   |  45 +
+ .../test/apple_json_bridge_contract_test.dart      |  71 ++
+ .../test/apple_output_mode_contract_test.dart      |  16 +-
+ packages/erika_flutter/test/erika_player_test.dart | 128 +++
+ .../test/frame_export_session_native_test.dart     |  87 ++
+ packages/erika_flutter/tvos/erika_flutter.podspec  |  11 +
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  50 +-
+ 41 files changed, 4365 insertions(+), 234 deletions(-)
+commit a63d7db41ef1920b9c8e4360265a24bc4c6e30bd a80e890ae6590d6992c0136fcc84db4bcc96708d
+fix(http): treat undelivered tail ranges as EOF (#163)
+
+ crates/erika/src/ffmpeg.rs |  47 ++++--
+ crates/erika/src/source.rs | 376 +++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 399 insertions(+), 24 deletions(-)
+commit 606d2d6afe156fb235c6e61296bd664cca614c80 aecd35115277b4291bc158c35552b8108fd07aff
+fix(ios): do not force-link C entry points the pinned native artifacts lack
+
+ packages/erika_flutter/ios/erika_flutter.podspec | 21 ++++++++++++++-------
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+commit b62bf8ab2dbe077c97cd46871210b55b406884b6 606d2d6afe156fb235c6e61296bd664cca614c80
+fix(tvos): the same optional entry points on tvOS, and the contract test names them without requiring the pinned artifacts to have them
+
+ .../test/apple_export_symbols_contract_test.dart   | 46 +++++++++++++++-------
+ packages/erika_flutter/tvos/erika_flutter.podspec  | 21 ++++++----
+ 2 files changed, 46 insertions(+), 21 deletions(-)
+commit d48e0d723a0ae32d11c9b168863d3c682d84b165 aecd35115277b4291bc158c35552b8108fd07aff
+fix(playback): deliver subtitle cues while paused and read back the cue a seek's keyframe skipped
+
+ crates/erika/src/core.rs     |  10 +++
+ crates/erika/src/ffmpeg.rs   |   6 ++
+ crates/erika/src/playback.rs | 152 ++++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 165 insertions(+), 3 deletions(-)
+commit 717c580472e063b2a595a2709e3c9e22196bdbfa d48e0d723a0ae32d11c9b168863d3c682d84b165
+feat(capi): the erika_play trace says why a play failed
+
+ crates/erika_capi/src/lib.rs | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+commit 684556cb2e515e7f03e74e871bc831797f1b7f63 aecd35115277b4291bc158c35552b8108fd07aff
+fix(danmaku): check glyph coverage before loading system fallback faces (#142)
+
+ CHANGELOG.md                |   7 ++
+ crates/erika/src/danmaku.rs | 249 +++++++++++++++++++++++++++++++++++++++-----
+ 2 files changed, 229 insertions(+), 27 deletions(-)
+commit e0e1c33cd56a63cd17635468c2744b6695124c53 aecd35115277b4291bc158c35552b8108fd07aff
+feat(capi): expose container chapters through the presenter JSON
+
+ crates/erika_capi/src/presenter_json.rs | 82 +++++++++++++++++++++++++++++++++
+ 1 file changed, 82 insertions(+)
+commit 4e56ab1ce2083bd47dc1fdb837eb948ec3b2f96a 27bab58d9816a3b9dda67d22dcb16507d46835b0
+chore: compile platform-only code only where it is used
+
+ crates/erika/src/audio.rs                 | 1 +
+ crates/erika/src/ffmpeg.rs                | 3 +++
+ crates/erika/src/playback.rs              | 4 ++++
+ crates/erika/src/renderer/frame.rs        | 1 +
+ crates/erika/src/renderer/presentation.rs | 2 ++
+ 5 files changed, 11 insertions(+)
+commit 32542884e3a990cc37d86659940da28d2ee26995 4e56ab1ce2083bd47dc1fdb837eb948ec3b2f96a
+test: run the MediaCodec seek-route test only on Android
+
+ crates/erika/src/playback.rs | 1 +
+ 1 file changed, 1 insertion(+)
+commit eb988e4f0a78382657f27661146bc8bf217ccbf7 4e56ab1ce2083bd47dc1fdb837eb948ec3b2f96a
+fix: keep MediaCodec seek routes and the PCM ring in test builds
+
+ crates/erika/src/audio/spsc.rs | 3 +++
+ crates/erika/src/playback.rs   | 8 +++++---
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+commit 01652932b2ca662b1492c9ad06fc970982a92b84 eb988e4f0a78382657f27661146bc8bf217ccbf7
+feat: plugin interface for player and danmaku calls
+
+ Cargo.lock                         |  10 ++
+ Cargo.toml                         |   1 +
+ crates/erika/Cargo.toml            |   1 +
+ crates/erika/src/lib.rs            |   1 +
+ crates/erika/src/plugin.rs         |  81 ++++++++++
+ crates/erika_plugin/Cargo.toml     |  13 ++
+ crates/erika_plugin/src/lib.rs     | 320 +++++++++++++++++++++++++++++++++++++
+ crates/erika_plugin/src/prelude.js | 221 +++++++++++++++++++++++++
+ 8 files changed, 648 insertions(+)
+commit 6660172287553e02af73246763e59dfa41179fdd 32542884e3a990cc37d86659940da28d2ee26995
+feat: frame the viewer's own danmaku and add random danmaku colors
+
+ crates/erika/src/danmaku.rs                      | 285 +++++++++++++++++++++--
+ crates/erika/src/web.rs                          |  24 +-
+ crates/erika_capi/include/erika.h                |   3 +
+ crates/erika_capi/src/lib.rs                     |  42 ++++
+ packages/erika_flutter/native/include/erika.h    |   3 +
+ packages/erika_ohos/src/main/cpp/include/erika.h |   3 +
+ packages/erika_web/index.d.ts                    |   5 +-
+ packages/erika_web/index.js                      |   4 +-
+ packages/erika_web/tests/core.test.mjs           |  10 +-
+ packages/erika_web/worker.js                     |   8 +-
+ 10 files changed, 361 insertions(+), 26 deletions(-)
+commit db10a15b9b6b6af6883c74513a7d9e53a1bee099 01652932b2ca662b1492c9ad06fc970982a92b84
+feat: measure the opening seconds of a video
+
+ crates/erika/src/lib.rs     |   2 +
+ crates/erika/src/opening.rs | 233 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 235 insertions(+)
+commit 70870e7c441fa7ae5d8797e720739c72866fe582 db10a15b9b6b6af6883c74513a7d9e53a1bee099 6660172287553e02af73246763e59dfa41179fdd
+Merge batch/danmaku: random colors, offsets and own danmaku borders
+
+ crates/erika/src/danmaku.rs                      | 285 +++++++++++++++++++++--
+ crates/erika/src/playback.rs                     |   1 +
+ crates/erika/src/web.rs                          |  24 +-
+ crates/erika_capi/include/erika.h                |   3 +
+ crates/erika_capi/src/lib.rs                     |  42 ++++
+ packages/erika_flutter/native/include/erika.h    |   3 +
+ packages/erika_ohos/src/main/cpp/include/erika.h |   3 +
+ packages/erika_web/index.d.ts                    |   5 +-
+ packages/erika_web/index.js                      |   4 +-
+ packages/erika_web/tests/core.test.mjs           |  10 +-
+ packages/erika_web/worker.js                     |   8 +-
+ 11 files changed, 362 insertions(+), 26 deletions(-)
+commit 70870e7c441fa7ae5d8797e720739c72866fe582 db10a15b9b6b6af6883c74513a7d9e53a1bee099 6660172287553e02af73246763e59dfa41179fdd
+Merge batch/danmaku: random colors, offsets and own danmaku borders
+
+ Cargo.lock                         |  10 ++
+ Cargo.toml                         |   1 +
+ crates/erika/Cargo.toml            |   1 +
+ crates/erika/src/audio/spsc.rs     |   3 +
+ crates/erika/src/lib.rs            |   3 +
+ crates/erika/src/opening.rs        | 233 +++++++++++++++++++++++++++
+ crates/erika/src/playback.rs       |   8 +-
+ crates/erika/src/plugin.rs         |  81 ++++++++++
+ crates/erika_plugin/Cargo.toml     |  13 ++
+ crates/erika_plugin/src/lib.rs     | 320 +++++++++++++++++++++++++++++++++++++
+ crates/erika_plugin/src/prelude.js | 221 +++++++++++++++++++++++++
+ 11 files changed, 891 insertions(+), 3 deletions(-)
+commit 15fd289807b9a5465a49d95129ebc36f712c0d14 70870e7c441fa7ae5d8797e720739c72866fe582
+fix: gate MediaCodec seek routes to Android now that their test is
+
+ crates/erika/src/playback.rs | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+commit 18e82048ec22d7018f1dc7735385b03d652db490 15fd289807b9a5465a49d95129ebc36f712c0d14
+test: drop an unused binding
+
+ crates/erika/src/core.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit 1390d15e17de0e8d80b6150593cc116ec8e63275 aecd35115277b4291bc158c35552b8108fd07aff e0e1c33cd56a63cd17635468c2744b6695124c53
+Merge pull request #172 from AimesSoft/feat/presenter-chapters
+
+ crates/erika_capi/src/presenter_json.rs | 82 +++++++++++++++++++++++++++++++++
+ 1 file changed, 82 insertions(+)
+commit f2541a95dcef301a9d1b3bbd24779451b059ef00 b62bf8ab2dbe077c97cd46871210b55b406884b6
+fix(apple): force-link the optional entry points the produced library defines
+
+ packages/erika_flutter/ios/erika_flutter.podspec   | 22 ++++++++++++++++-----
+ .../test/apple_export_symbols_contract_test.dart   | 13 +++++++++---
+ packages/erika_flutter/tvos/erika_flutter.podspec  | 23 ++++++++++++++++------
+ 3 files changed, 44 insertions(+), 14 deletions(-)
+commit d964d38e03f6bef1450f0218803dddd85bed0ac3 717c580472e063b2a595a2709e3c9e22196bdbfa
+fix(playback): find long cues after a seek and keep a track switch from dropping the new track's cues
+
+ .github/workflows/ci.yml                           |   3 +
+ crates/erika/src/playback.rs                       | 522 ++++++++++++++++++++-
+ crates/erika/testdata/subtitle-seek/.gitattributes |   2 +
+ crates/erika/testdata/subtitle-seek/README.md      |  15 +
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |   5 +
+ crates/erika/testdata/subtitle-seek/generate.sh    |  14 +
+ crates/erika/testdata/subtitle-seek/long.mkv       | Bin 0 -> 2787 bytes
+ crates/erika/testdata/subtitle-seek/long.srt       |  11 +
+ crates/erika/testdata/subtitle-seek/track-a.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/track-b.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/two-tracks.mkv | Bin 0 -> 3545 bytes
+ 11 files changed, 566 insertions(+), 20 deletions(-)
+commit 757898a4534be13e6ecab8ee3579c6d6d1b7bd91 d964d38e03f6bef1450f0218803dddd85bed0ac3
+fix(playback): read back the new track's cue that is on when the subtitle track is switched
+
+ crates/erika/src/playback.rs                       |  49 +++++++++++++++++++++
+ crates/erika/testdata/subtitle-seek/README.md      |   3 ++
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |   3 ++
+ crates/erika/testdata/subtitle-seek/generate.sh    |   6 ++-
+ crates/erika/testdata/subtitle-seek/switch-a.srt   |   3 ++
+ crates/erika/testdata/subtitle-seek/switch-b.srt   |   3 ++
+ .../erika/testdata/subtitle-seek/switch-track.mkv  | Bin 0 -> 3435 bytes
+ 7 files changed, 66 insertions(+), 1 deletion(-)
+commit b1e3cb3ceabfecade0a75af78c8273f5c6a9c344 1390d15e17de0e8d80b6150593cc116ec8e63275 f2541a95dcef301a9d1b3bbd24779451b059ef00
+Merge pull request #170 from AimesSoft/fix/ios-optional-symbols
+
+ packages/erika_flutter/ios/erika_flutter.podspec   | 37 +++++++++++----
+ .../test/apple_export_symbols_contract_test.dart   | 53 ++++++++++++++++------
+ packages/erika_flutter/tvos/erika_flutter.podspec  | 36 +++++++++++----
+ 3 files changed, 94 insertions(+), 32 deletions(-)
+commit b1e3cb3ceabfecade0a75af78c8273f5c6a9c344 1390d15e17de0e8d80b6150593cc116ec8e63275 f2541a95dcef301a9d1b3bbd24779451b059ef00
+Merge pull request #170 from AimesSoft/fix/ios-optional-symbols
+
+ crates/erika_capi/src/presenter_json.rs | 82 +++++++++++++++++++++++++++++++++
+ 1 file changed, 82 insertions(+)
+commit d2b2fc25819390f3118aeef9f32f037b01c1b09f b1e3cb3ceabfecade0a75af78c8273f5c6a9c344 757898a4534be13e6ecab8ee3579c6d6d1b7bd91
+Merge pull request #171 from AimesSoft/fix/paused-seek-subtitles
+
+ .github/workflows/ci.yml                           |   3 +
+ crates/erika/src/core.rs                           |  10 +
+ crates/erika/src/ffmpeg.rs                         |   6 +
+ crates/erika/src/playback.rs                       | 685 ++++++++++++++++++++-
+ crates/erika/testdata/subtitle-seek/.gitattributes |   2 +
+ crates/erika/testdata/subtitle-seek/README.md      |  18 +
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |   8 +
+ crates/erika/testdata/subtitle-seek/generate.sh    |  18 +
+ crates/erika/testdata/subtitle-seek/long.mkv       | Bin 0 -> 2787 bytes
+ crates/erika/testdata/subtitle-seek/long.srt       |  11 +
+ crates/erika/testdata/subtitle-seek/switch-a.srt   |   3 +
+ crates/erika/testdata/subtitle-seek/switch-b.srt   |   3 +
+ .../erika/testdata/subtitle-seek/switch-track.mkv  | Bin 0 -> 3435 bytes
+ crates/erika/testdata/subtitle-seek/track-a.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/track-b.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/two-tracks.mkv | Bin 0 -> 3545 bytes
+ crates/erika_capi/src/lib.rs                       |   7 +-
+ 17 files changed, 783 insertions(+), 5 deletions(-)
+commit d2b2fc25819390f3118aeef9f32f037b01c1b09f b1e3cb3ceabfecade0a75af78c8273f5c6a9c344 757898a4534be13e6ecab8ee3579c6d6d1b7bd91
+Merge pull request #171 from AimesSoft/fix/paused-seek-subtitles
+
+ crates/erika_capi/src/presenter_json.rs            | 82 ++++++++++++++++++++++
+ packages/erika_flutter/ios/erika_flutter.podspec   | 37 +++++++---
+ .../test/apple_export_symbols_contract_test.dart   | 53 ++++++++++----
+ packages/erika_flutter/tvos/erika_flutter.podspec  | 36 +++++++---
+ 4 files changed, 176 insertions(+), 32 deletions(-)
+commit 2e82d7d0e1c777260bb4f664224e078f1c771b6e d2b2fc25819390f3118aeef9f32f037b01c1b09f a63d7db41ef1920b9c8e4360265a24bc4c6e30bd
+Merge pull request #169 from 1824239290/fix/http-tail-empty-read-eof
+
+ crates/erika/src/ffmpeg.rs |  47 ++++--
+ crates/erika/src/source.rs | 376 +++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 399 insertions(+), 24 deletions(-)
+commit 2e82d7d0e1c777260bb4f664224e078f1c771b6e d2b2fc25819390f3118aeef9f32f037b01c1b09f a63d7db41ef1920b9c8e4360265a24bc4c6e30bd
+Merge pull request #169 from 1824239290/fix/http-tail-empty-read-eof
+
+ .github/workflows/ci.yml                           |    3 +
+ .github/workflows/ohos.yml                         |    7 +-
+ .github/workflows/release.yml                      |    7 +-
+ CHANGELOG.md                                       |   63 +
+ Cargo.lock                                         |   19 +
+ Cargo.toml                                         |    3 +
+ crates/erika/Cargo.toml                            |    1 +
+ crates/erika/build.rs                              |   13 +
+ crates/erika/src/core.rs                           |   47 +
+ crates/erika/src/diagnostics.rs                    | 1151 ++++++++++++++++++
+ crates/erika/src/export.rs                         |  776 +++++++++++-
+ crates/erika/src/export_color.rs                   |  954 +++++++++++++++
+ crates/erika/src/ffmpeg.rs                         |  487 +++++++-
+ crates/erika/src/ffmpeg_log_bridge.c               |   64 +
+ crates/erika/src/lib.rs                            |    4 +
+ crates/erika/src/overlay.rs                        |    5 +-
+ crates/erika/src/playback.rs                       |  935 +++++++++++++-
+ crates/erika/src/presenter.rs                      |  263 +++-
+ crates/erika/src/renderer/d3d11.rs                 |   10 +-
+ crates/erika/src/renderer/metal/apple.rs           |    5 +-
+ crates/erika/src/renderer/metal/upscaler.rs        |    7 +-
+ crates/erika/src/subtitle.rs                       |   27 +-
+ crates/erika/src/trace.rs                          | 1135 +++++++++++++++++
+ crates/erika/src/windows.rs                        |   15 +-
+ crates/erika/testdata/subtitle-seek/.gitattributes |    2 +
+ crates/erika/testdata/subtitle-seek/README.md      |   18 +
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |    8 +
+ crates/erika/testdata/subtitle-seek/generate.sh    |   18 +
+ crates/erika/testdata/subtitle-seek/long.mkv       |  Bin 0 -> 2787 bytes
+ crates/erika/testdata/subtitle-seek/long.srt       |   11 +
+ crates/erika/testdata/subtitle-seek/switch-a.srt   |    3 +
+ crates/erika/testdata/subtitle-seek/switch-b.srt   |    3 +
+ .../erika/testdata/subtitle-seek/switch-track.mkv  |  Bin 0 -> 3435 bytes
+ crates/erika/testdata/subtitle-seek/track-a.srt    |    7 +
+ crates/erika/testdata/subtitle-seek/track-b.srt    |    7 +
+ crates/erika/testdata/subtitle-seek/two-tracks.mkv |  Bin 0 -> 3545 bytes
+ crates/erika_capi/include/erika.h                  |  138 ++-
+ crates/erika_capi/src/android_jni.rs               |    5 +
+ crates/erika_capi/src/diagnostics.rs               |  266 ++++
+ crates/erika_capi/src/lib.rs                       |  582 ++++++++-
+ crates/erika_capi/src/presenter_json.rs            | 1271 +++++++++++++++++++-
+ docs/capi_reference.ja.md                          |  154 ++-
+ docs/capi_reference.md                             |  245 +++-
+ docs/capi_reference.zh.md                          |  199 ++-
+ docs/flutter_embedding.ja.md                       |   41 +
+ docs/flutter_embedding.md                          |   49 +
+ docs/flutter_embedding.zh.md                       |   35 +
+ examples/frame_export_bench/Cargo.toml             |   12 +
+ examples/frame_export_bench/src/main.rs            |  152 +++
+ examples/playback_rate_check/Cargo.toml            |   12 +
+ examples/playback_rate_check/src/main.rs           |  125 ++
+ packages/erika_flutter/CHANGELOG.md                |   28 +
+ packages/erika_flutter/README.ja.md                |    2 +-
+ packages/erika_flutter/README.md                   |    5 +-
+ packages/erika_flutter/README.zh.md                |    2 +-
+ .../aimesoft/erika_flutter/ErikaFlutterPlugin.kt   |    4 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           |  255 +++-
+ packages/erika_flutter/ios/erika_flutter.podspec   |   34 +-
+ packages/erika_flutter/lib/src/erika_player.dart   |  465 +++++++
+ .../erika_flutter/lib/src/gif_export_native.dart   |    5 +
+ .../lib/src/gif_export_native_io.dart              |  494 +++++++-
+ .../lib/src/gif_export_native_stub.dart            |   19 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         |  658 +++++++++-
+ packages/erika_flutter/macos/erika_flutter.podspec |   18 +
+ packages/erika_flutter/native/include/erika.h      |  138 ++-
+ .../ets/components/plugin/ErikaFlutterPlugin.ets   |    1 +
+ .../test/apple_export_symbols_contract_test.dart   |   70 ++
+ .../test/apple_json_bridge_contract_test.dart      |   71 ++
+ .../test/apple_output_mode_contract_test.dart      |   16 +-
+ packages/erika_flutter/test/diagnostics_test.dart  |  346 ++++++
+ packages/erika_flutter/test/erika_player_test.dart |  204 ++++
+ .../test/frame_export_session_native_test.dart     |   87 ++
+ .../tvos/Classes/ErikaFlutterPlugin.swift          |  164 ++-
+ packages/erika_flutter/tvos/erika_flutter.podspec  |   33 +-
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  138 ++-
+ 75 files changed, 12491 insertions(+), 130 deletions(-)
+commit ed216df2d4bc5bef3ccb0280ed7b73d97c0e1c3e 684556cb2e515e7f03e74e871bc831797f1b7f63
+fix(danmaku): preserve visible system fallback glyphs
+
+ CHANGELOG.md                |  8 +++---
+ crates/erika/src/danmaku.rs | 66 ++++++++++++++++++++++++++++++++++++++++-----
+ 2 files changed, 63 insertions(+), 11 deletions(-)
+commit 772f9d21e956005486feb5f22743c6b74be1d171 2e82d7d0e1c777260bb4f664224e078f1c771b6e ed216df2d4bc5bef3ccb0280ed7b73d97c0e1c3e
+Merge pull request #173 from 1824239290/fix/danmaku-system-fallback-memory
+
+ CHANGELOG.md                |   7 ++
+ crates/erika/src/danmaku.rs | 301 ++++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 281 insertions(+), 27 deletions(-)
+commit 772f9d21e956005486feb5f22743c6b74be1d171 2e82d7d0e1c777260bb4f664224e078f1c771b6e ed216df2d4bc5bef3ccb0280ed7b73d97c0e1c3e
+Merge pull request #173 from 1824239290/fix/danmaku-system-fallback-memory
+
+ .github/workflows/ci.yml                           |   3 +
+ crates/erika/src/core.rs                           |  10 +
+ crates/erika/src/ffmpeg.rs                         |  53 +-
+ crates/erika/src/playback.rs                       | 685 ++++++++++++++++++++-
+ crates/erika/src/source.rs                         | 376 ++++++++++-
+ crates/erika/testdata/subtitle-seek/.gitattributes |   2 +
+ crates/erika/testdata/subtitle-seek/README.md      |  18 +
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |   8 +
+ crates/erika/testdata/subtitle-seek/generate.sh    |  18 +
+ crates/erika/testdata/subtitle-seek/long.mkv       | Bin 0 -> 2787 bytes
+ crates/erika/testdata/subtitle-seek/long.srt       |  11 +
+ crates/erika/testdata/subtitle-seek/switch-a.srt   |   3 +
+ crates/erika/testdata/subtitle-seek/switch-b.srt   |   3 +
+ .../erika/testdata/subtitle-seek/switch-track.mkv  | Bin 0 -> 3435 bytes
+ crates/erika/testdata/subtitle-seek/track-a.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/track-b.srt    |   7 +
+ crates/erika/testdata/subtitle-seek/two-tracks.mkv | Bin 0 -> 3545 bytes
+ crates/erika_capi/src/lib.rs                       |   7 +-
+ crates/erika_capi/src/presenter_json.rs            |  82 +++
+ packages/erika_flutter/ios/erika_flutter.podspec   |  37 +-
+ .../test/apple_export_symbols_contract_test.dart   |  53 +-
+ packages/erika_flutter/tvos/erika_flutter.podspec  |  36 +-
+ 22 files changed, 1358 insertions(+), 61 deletions(-)
+commit 3d758e700bd77aef15c5299cbed39dc11adb765b 772f9d21e956005486feb5f22743c6b74be1d171
+release: prepare liberika 0.3.0 with Web artifacts
+
+ .github/workflows/release.yml       | 88 +++++++++++++++++++++++++++++++++++--
+ CHANGELOG.md                        | 50 +++++++++++++++------
+ Cargo.lock                          | 60 ++++++++++++-------------
+ Cargo.toml                          |  2 +-
+ README.md                           | 21 ++++-----
+ docs/README.md                      |  2 +-
+ docs/platform_matrix.zh.md          |  2 +-
+ docs/releasing.ja.md                | 15 ++++---
+ docs/releasing.md                   | 15 ++++---
+ docs/releasing.zh.md                | 15 ++++---
+ docs/web.md                         |  6 ++-
+ docs/web.zh.md                      |  4 +-
+ packages/erika_flutter/CHANGELOG.md | 27 ++++++++++--
+ packages/erika_ohos/CHANGELOG.md    | 26 ++++++++++-
+ packages/erika_ohos/README.md       |  4 +-
+ packages/erika_web/README.md        |  3 +-
+ readme/README.en.md                 | 22 +++++-----
+ readme/README.ja.md                 | 21 ++++-----
+ 18 files changed, 272 insertions(+), 111 deletions(-)
+commit 7d9ea2cf1493a73409bf8e33f81f9fc67f3974d7 772f9d21e956005486feb5f22743c6b74be1d171 3d758e700bd77aef15c5299cbed39dc11adb765b
+Merge pull request #174 from AimesSoft/codex/release-0.3.0
+
+ .github/workflows/release.yml       | 88 +++++++++++++++++++++++++++++++++++--
+ CHANGELOG.md                        | 50 +++++++++++++++------
+ Cargo.lock                          | 60 ++++++++++++-------------
+ Cargo.toml                          |  2 +-
+ README.md                           | 21 ++++-----
+ docs/README.md                      |  2 +-
+ docs/platform_matrix.zh.md          |  2 +-
+ docs/releasing.ja.md                | 15 ++++---
+ docs/releasing.md                   | 15 ++++---
+ docs/releasing.zh.md                | 15 ++++---
+ docs/web.md                         |  6 ++-
+ docs/web.zh.md                      |  4 +-
+ packages/erika_flutter/CHANGELOG.md | 27 ++++++++++--
+ packages/erika_ohos/CHANGELOG.md    | 26 ++++++++++-
+ packages/erika_ohos/README.md       |  4 +-
+ packages/erika_web/README.md        |  3 +-
+ readme/README.en.md                 | 22 +++++-----
+ readme/README.ja.md                 | 21 ++++-----
+ 18 files changed, 272 insertions(+), 111 deletions(-)
+commit 031a04e68d87c1586254170cf5c21ccb35b31e43 7d9ea2cf1493a73409bf8e33f81f9fc67f3974d7
+Update native artifact manifest for v0.3.0
+
+ examples/ohos_arkts/AppScope/app.json5             |  2 +-
+ examples/ohos_arkts/entry/oh-package.json5         |  2 +-
+ packages/erika_flutter/ios/erika_flutter.podspec   |  2 +-
+ packages/erika_flutter/macos/erika_flutter.podspec |  2 +-
+ packages/erika_flutter/native_artifacts.properties | 28 +++++++++++-----------
+ packages/erika_flutter/ohos/oh-package.json5       |  2 +-
+ packages/erika_flutter/pubspec.yaml                |  2 +-
+ packages/erika_flutter/tvos/erika_flutter.podspec  |  2 +-
+ packages/erika_ohos/oh-package.json5               |  2 +-
+ 9 files changed, 22 insertions(+), 22 deletions(-)
+commit e2aeb8361951c0233acd2b1e9d60dd77140fbfbf 031a04e68d87c1586254170cf5c21ccb35b31e43
+fix(swift): package dual-platform macOS runtime objects
+
+ .github/workflows/swift-sdk-binary.yml |  4 ++--
+ packaging/build_swift_xcframework.sh   | 28 +++++++++++++++++++++++++++-
+ 2 files changed, 29 insertions(+), 3 deletions(-)
+commit f83ccdb7bf9e759851d42e11af2e956dd5194c6b 031a04e68d87c1586254170cf5c21ccb35b31e43 e2aeb8361951c0233acd2b1e9d60dd77140fbfbf
+Merge pull request #176 from AimesSoft/codex/fix-swift-030
+
+ .github/workflows/swift-sdk-binary.yml |  4 ++--
+ packaging/build_swift_xcframework.sh   | 28 +++++++++++++++++++++++++++-
+ 2 files changed, 29 insertions(+), 3 deletions(-)
+commit e523ec0a9f45270aa189e562a5a1fe371bd6b159 18e82048ec22d7018f1dc7735385b03d652db490 f83ccdb7bf9e759851d42e11af2e956dd5194c6b
+Merge remote-tracking branch 'origin/main' into feat/erika-plugins-danmaku-20261025
+
+ .github/workflows/ci.yml                           |    3 +
+ .github/workflows/ohos.yml                         |    7 +-
+ .github/workflows/release.yml                      |   95 +-
+ .github/workflows/swift-sdk-binary.yml             |    4 +-
+ CHANGELOG.md                                       |   98 +-
+ Cargo.lock                                         |   75 +-
+ Cargo.toml                                         |    5 +-
+ README.md                                          |   21 +-
+ crates/erika/Cargo.toml                            |    1 +
+ crates/erika/build.rs                              |   13 +
+ crates/erika/src/core.rs                           |   47 +
+ crates/erika/src/danmaku.rs                        |  301 ++++-
+ crates/erika/src/diagnostics.rs                    | 1151 ++++++++++++++++++
+ crates/erika/src/export.rs                         |  776 +++++++++++-
+ crates/erika/src/export_color.rs                   |  954 +++++++++++++++
+ crates/erika/src/ffmpeg.rs                         |  534 +++++++-
+ crates/erika/src/ffmpeg_log_bridge.c               |   64 +
+ crates/erika/src/lib.rs                            |    4 +
+ crates/erika/src/overlay.rs                        |    5 +-
+ crates/erika/src/playback.rs                       |  935 +++++++++++++-
+ crates/erika/src/presenter.rs                      |  263 +++-
+ crates/erika/src/renderer/d3d11.rs                 |   10 +-
+ crates/erika/src/renderer/metal/apple.rs           |    5 +-
+ crates/erika/src/renderer/metal/upscaler.rs        |    7 +-
+ crates/erika/src/source.rs                         |  376 +++++-
+ crates/erika/src/subtitle.rs                       |   27 +-
+ crates/erika/src/trace.rs                          | 1135 +++++++++++++++++
+ crates/erika/src/windows.rs                        |   15 +-
+ crates/erika/testdata/subtitle-seek/.gitattributes |    2 +
+ crates/erika/testdata/subtitle-seek/README.md      |   18 +
+ crates/erika/testdata/subtitle-seek/SHA256SUMS     |    8 +
+ crates/erika/testdata/subtitle-seek/generate.sh    |   18 +
+ crates/erika/testdata/subtitle-seek/long.mkv       |  Bin 0 -> 2787 bytes
+ crates/erika/testdata/subtitle-seek/long.srt       |   11 +
+ crates/erika/testdata/subtitle-seek/switch-a.srt   |    3 +
+ crates/erika/testdata/subtitle-seek/switch-b.srt   |    3 +
+ .../erika/testdata/subtitle-seek/switch-track.mkv  |  Bin 0 -> 3435 bytes
+ crates/erika/testdata/subtitle-seek/track-a.srt    |    7 +
+ crates/erika/testdata/subtitle-seek/track-b.srt    |    7 +
+ crates/erika/testdata/subtitle-seek/two-tracks.mkv |  Bin 0 -> 3545 bytes
+ crates/erika_capi/include/erika.h                  |  138 ++-
+ crates/erika_capi/src/android_jni.rs               |    5 +
+ crates/erika_capi/src/diagnostics.rs               |  266 ++++
+ crates/erika_capi/src/lib.rs                       |  582 ++++++++-
+ crates/erika_capi/src/presenter_json.rs            | 1271 +++++++++++++++++++-
+ docs/README.md                                     |    2 +-
+ docs/capi_reference.ja.md                          |  154 ++-
+ docs/capi_reference.md                             |  245 +++-
+ docs/capi_reference.zh.md                          |  199 ++-
+ docs/flutter_embedding.ja.md                       |   41 +
+ docs/flutter_embedding.md                          |   49 +
+ docs/flutter_embedding.zh.md                       |   35 +
+ docs/platform_matrix.zh.md                         |    2 +-
+ docs/releasing.ja.md                               |   15 +-
+ docs/releasing.md                                  |   15 +-
+ docs/releasing.zh.md                               |   15 +-
+ docs/web.md                                        |    6 +-
+ docs/web.zh.md                                     |    4 +-
+ examples/frame_export_bench/Cargo.toml             |   12 +
+ examples/frame_export_bench/src/main.rs            |  152 +++
+ examples/ohos_arkts/AppScope/app.json5             |    2 +-
+ examples/ohos_arkts/entry/oh-package.json5         |    2 +-
+ examples/playback_rate_check/Cargo.toml            |   12 +
+ examples/playback_rate_check/src/main.rs           |  125 ++
+ packages/erika_flutter/CHANGELOG.md                |   49 +-
+ packages/erika_flutter/README.ja.md                |    2 +-
+ packages/erika_flutter/README.md                   |    5 +-
+ packages/erika_flutter/README.zh.md                |    2 +-
+ .../aimesoft/erika_flutter/ErikaFlutterPlugin.kt   |    4 +
+ .../ios/Classes/ErikaFlutterPlugin.swift           |  255 +++-
+ packages/erika_flutter/ios/erika_flutter.podspec   |   36 +-
+ packages/erika_flutter/lib/src/erika_player.dart   |  465 +++++++
+ .../erika_flutter/lib/src/gif_export_native.dart   |    5 +
+ .../lib/src/gif_export_native_io.dart              |  494 +++++++-
+ .../lib/src/gif_export_native_stub.dart            |   19 +
+ .../macos/Classes/ErikaFlutterPlugin.swift         |  658 +++++++++-
+ packages/erika_flutter/macos/erika_flutter.podspec |   20 +-
+ packages/erika_flutter/native/include/erika.h      |  138 ++-
+ packages/erika_flutter/native_artifacts.properties |   28 +-
+ packages/erika_flutter/ohos/oh-package.json5       |    2 +-
+ .../ets/components/plugin/ErikaFlutterPlugin.ets   |    1 +
+ packages/erika_flutter/pubspec.yaml                |    2 +-
+ .../test/apple_export_symbols_contract_test.dart   |   70 ++
+ .../test/apple_json_bridge_contract_test.dart      |   71 ++
+ .../test/apple_output_mode_contract_test.dart      |   16 +-
+ packages/erika_flutter/test/diagnostics_test.dart  |  346 ++++++
+ packages/erika_flutter/test/erika_player_test.dart |  204 ++++
+ .../test/frame_export_session_native_test.dart     |   87 ++
+ .../tvos/Classes/ErikaFlutterPlugin.swift          |  164 ++-
+ packages/erika_flutter/tvos/erika_flutter.podspec  |   35 +-
+ packages/erika_ohos/CHANGELOG.md                   |   26 +-
+ packages/erika_ohos/README.md                      |    4 +-
+ packages/erika_ohos/oh-package.json5               |    2 +-
+ packages/erika_ohos/src/main/cpp/include/erika.h   |  138 ++-
+ packages/erika_web/README.md                       |    3 +-
+ packaging/build_swift_xcframework.sh               |   28 +-
+ readme/README.en.md                                |   22 +-
+ readme/README.ja.md                                |   21 +-
+ 98 files changed, 13478 insertions(+), 301 deletions(-)
+commit e523ec0a9f45270aa189e562a5a1fe371bd6b159 18e82048ec22d7018f1dc7735385b03d652db490 f83ccdb7bf9e759851d42e11af2e956dd5194c6b
+Merge remote-tracking branch 'origin/main' into feat/erika-plugins-danmaku-20261025
+
+ Cargo.lock                                       |  10 +
+ Cargo.toml                                       |   1 +
+ crates/erika/Cargo.toml                          |   1 +
+ crates/erika/src/audio.rs                        |   1 +
+ crates/erika/src/audio/spsc.rs                   |   3 +
+ crates/erika/src/core.rs                         |   2 +-
+ crates/erika/src/danmaku.rs                      | 285 ++++++++++++++++++--
+ crates/erika/src/ffmpeg.rs                       |   3 +
+ crates/erika/src/lib.rs                          |   3 +
+ crates/erika/src/opening.rs                      | 233 +++++++++++++++++
+ crates/erika/src/playback.rs                     |   5 +
+ crates/erika/src/plugin.rs                       |  81 ++++++
+ crates/erika/src/renderer/frame.rs               |   1 +
+ crates/erika/src/renderer/presentation.rs        |   2 +
+ crates/erika/src/web.rs                          |  24 +-
+ crates/erika_capi/include/erika.h                |   3 +
+ crates/erika_capi/src/lib.rs                     |  42 +++
+ crates/erika_plugin/Cargo.toml                   |  13 +
+ crates/erika_plugin/src/lib.rs                   | 320 +++++++++++++++++++++++
+ crates/erika_plugin/src/prelude.js               | 221 ++++++++++++++++
+ packages/erika_flutter/native/include/erika.h    |   3 +
+ packages/erika_ohos/src/main/cpp/include/erika.h |   3 +
+ packages/erika_web/index.d.ts                    |   5 +-
+ packages/erika_web/index.js                      |   4 +-
+ packages/erika_web/tests/core.test.mjs           |  10 +-
+ packages/erika_web/worker.js                     |   8 +-
+ 26 files changed, 1260 insertions(+), 27 deletions(-)
+commit b1b92d6ec3298972060904dd64eeb08537bf8c19 e523ec0a9f45270aa189e562a5a1fe371bd6b159
+style: format the plugin interface and opening measurement; lock erika_plugin at the workspace version
+
+ Cargo.lock                     |  2 +-
+ crates/erika/src/ffmpeg.rs     |  5 ++++-
+ crates/erika/src/lib.rs        |  6 +++---
+ crates/erika/src/opening.rs    | 38 +++++++++++++++++++++++++++++++-------
+ crates/erika/src/plugin.rs     |  1 -
+ crates/erika_plugin/src/lib.rs | 22 +++++++++++++++++-----
+ 6 files changed, 56 insertions(+), 18 deletions(-)
+commit 66538a1fc91d80a14ccb5cd9e535d75cc490798e f83ccdb7bf9e759851d42e11af2e956dd5194c6b b1b92d6ec3298972060904dd64eeb08537bf8c19
+Merge pull request #177 from AimesSoft/feat/erika-plugins-danmaku-20261025
+
+ Cargo.lock                                       |  10 +
+ Cargo.toml                                       |   1 +
+ crates/erika/Cargo.toml                          |   1 +
+ crates/erika/src/audio.rs                        |   1 +
+ crates/erika/src/audio/spsc.rs                   |   3 +
+ crates/erika/src/core.rs                         |   2 +-
+ crates/erika/src/danmaku.rs                      | 285 ++++++++++++++++++-
+ crates/erika/src/ffmpeg.rs                       |   6 +
+ crates/erika/src/lib.rs                          |   3 +
+ crates/erika/src/opening.rs                      | 257 ++++++++++++++++++
+ crates/erika/src/playback.rs                     |   5 +
+ crates/erika/src/plugin.rs                       |  80 ++++++
+ crates/erika/src/renderer/frame.rs               |   1 +
+ crates/erika/src/renderer/presentation.rs        |   2 +
+ crates/erika/src/web.rs                          |  24 +-
+ crates/erika_capi/include/erika.h                |   3 +
+ crates/erika_capi/src/lib.rs                     |  42 +++
+ crates/erika_plugin/Cargo.toml                   |  13 +
+ crates/erika_plugin/src/lib.rs                   | 332 +++++++++++++++++++++++
+ crates/erika_plugin/src/prelude.js               | 221 +++++++++++++++
+ packages/erika_flutter/native/include/erika.h    |   3 +
+ packages/erika_ohos/src/main/cpp/include/erika.h |   3 +
+ packages/erika_web/index.d.ts                    |   5 +-
+ packages/erika_web/index.js                      |   4 +-
+ packages/erika_web/tests/core.test.mjs           |  10 +-
+ packages/erika_web/worker.js                     |   8 +-
+ 26 files changed, 1298 insertions(+), 27 deletions(-)
+commit c99c2481dbca2e0eaf59acc6c23523cacefcfc15 b1b92d6ec3298972060904dd64eeb08537bf8c19
+fix(metal): keep the subtitle alpha atlas within the device texture limit
+
+ crates/erika/src/renderer/metal/apple.rs | 551 +++++++++++++++++++++++++------
+ 1 file changed, 443 insertions(+), 108 deletions(-)
+commit 7efec7d344f14a607acdba3b771a98310359e82e 66538a1fc91d80a14ccb5cd9e535d75cc490798e
+fix(audio): preserve valid CoreAudio samples during partial underflow
+
+ crates/erika/src/apple.rs                          | 92 ++++++++++++++++++----
+ docs/investigations/doctorx-audio-2026-10-26.zh.md | 66 ++++++++++++++++
+ 2 files changed, 141 insertions(+), 17 deletions(-)
+commit f53b219c6a3130a8166cd2b661316288cd85f684 66538a1fc91d80a14ccb5cd9e535d75cc490798e 7efec7d344f14a607acdba3b771a98310359e82e
+Merge pull request #179 from AimesSoft/codex/doctorx-audio
+
+ crates/erika/src/apple.rs                          | 92 ++++++++++++++++++----
+ docs/investigations/doctorx-audio-2026-10-26.zh.md | 66 ++++++++++++++++
+ 2 files changed, 141 insertions(+), 17 deletions(-)
+commit b54a03d060802653c26b1e79e81a57b6e6341e74 f53b219c6a3130a8166cd2b661316288cd85f684 c99c2481dbca2e0eaf59acc6c23523cacefcfc15
+Merge pull request #178 from AimesSoft/fix/metal-overlay-atlas-limit
+
+ crates/erika/src/renderer/metal/apple.rs | 551 +++++++++++++++++++++++++------
+ 1 file changed, 443 insertions(+), 108 deletions(-)
+commit b54a03d060802653c26b1e79e81a57b6e6341e74 f53b219c6a3130a8166cd2b661316288cd85f684 c99c2481dbca2e0eaf59acc6c23523cacefcfc15
+Merge pull request #178 from AimesSoft/fix/metal-overlay-atlas-limit
+
+ crates/erika/src/apple.rs                          | 92 ++++++++++++++++++----
+ docs/investigations/doctorx-audio-2026-10-26.zh.md | 66 ++++++++++++++++
+ 2 files changed, 141 insertions(+), 17 deletions(-)
+commit 81395e6055ee3e374ceecb1682936fefea0851c6 b54a03d060802653c26b1e79e81a57b6e6341e74
+feat(windows): play in a static-CRT host through DirectComposition
+
+ crates/erika/build.rs                  |  28 ++++-
+ crates/erika/src/renderer/d3d11.rs     |  52 +++++++--
+ crates/erika/src/renderer/metal/mod.rs |   8 ++
+ crates/erika/src/source.rs             |  31 +++++-
+ crates/erika_ffmpeg_sys/build.rs       |  33 ++++--
+ docs/building.ja.md                    |   6 ++
+ docs/building.md                       |  11 ++
+ docs/building.zh.md                    |   6 ++
+ xtask/src/main.rs                      | 191 ++++++++++++++++++++++++++++-----
+ 9 files changed, 322 insertions(+), 44 deletions(-)
+commit cc297a7e15602ba0a185ed37879cd0ee5ed0601e 81395e6055ee3e374ceecb1682936fefea0851c6
+fix(wgpu): 字幕只画在画面以内，黑边只留给弹幕
+
+ crates/erika/src/renderer/wgpu.rs | 92 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 92 insertions(+)

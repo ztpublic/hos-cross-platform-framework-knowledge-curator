@@ -1,0 +1,297 @@
+{
+  "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/compare/323dce038f84001e48c1825ee6b06cdae0ad1303...277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+  "html_url": "https://github.com/Tencent-TDS/KuiklyUI/compare/323dce038f84001e48c1825ee6b06cdae0ad1303...277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+  "permalink_url": "https://github.com/Tencent-TDS/KuiklyUI/compare/Tencent-TDS:323dce0...Tencent-TDS:277b69d",
+  "diff_url": "https://github.com/Tencent-TDS/KuiklyUI/compare/323dce038f84001e48c1825ee6b06cdae0ad1303...277b69d1bb043ae6ce87415ad0d28df17de1a12c.diff",
+  "patch_url": "https://github.com/Tencent-TDS/KuiklyUI/compare/323dce038f84001e48c1825ee6b06cdae0ad1303...277b69d1bb043ae6ce87415ad0d28df17de1a12c.patch",
+  "base_commit": {
+    "sha": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "node_id": "C_kwDOOew4AdoAKDMyM2RjZTAzOGY4NDAwMWU0OGMxODI1ZWU2YjA2Y2RhZTBhZDEzMDM",
+    "commit": {
+      "author": {
+        "name": "ruifanyuan",
+        "email": "144208229+ruifanyuan@users.noreply.github.com",
+        "date": "2026-10-20T10:03:35Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-10-20T10:03:35Z"
+      },
+      "message": "perf(ohos): optimize utf transcoding with simdutf (#1806)\n\n* perf(ohos): optimize utf transcoding with simdutf\n\n- add a pinned private simdutf dependency and shared UTF helpers\n- align malformed UTF handling with Kotlin semantics\n- decode UTF-8 directly into Kotlin CharArray with strict mode\n- reuse UTF-16 lengths for paragraph offsets\n- register RapidJSON and simdutf under MIT\n\n* docs(ohos): clarify reserved strict utf decoding",
+      "tree": {
+        "sha": "8ec1f1a091ef994f7f6112e34dff3d23c2b8769a",
+        "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/trees/8ec1f1a091ef994f7f6112e34dff3d23c2b8769a"
+      },
+      "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/commits/323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq1zx3CRC1aQ7uu5UhlAAAstcQAFTkF6MgrBctEgCZ/aGi6kkR\njR7fhkjxtZit3Hxn5KsumSsOaic596Hp7ya5IculvY4a4u7E1rxngt63ZDaBHLxG\nVEdDdFTtQWrFlwDitbKQDLHatXs9be+n3iyHG0PSHRaeX60IcacohUzucfgNkGGT\n78YeMUaGsWPto2AufMxOeS+FJHJ3UnflKFmfaAVnRhOB/LHuyxF2eZVQgfBTI7S/\n/cK5gxK3UShIcZ1tr8B9v6NkD1vr6ACShh9zDmXSwelXCSGYjrrSKiMKEKlGji9S\nD5Q6vow8LoAccePYPIl4UFXrcI3D/Sy9inqz8GGVY6Hqy537OjO44tzsNsYPaWF0\nfPnkqmOCxJhbyMj45VJ8BDkNYrLMaBaW/sCCnB0EOuwSEy86z+3aXlF1xbIF0tKZ\nyWuwZSxlbs5KoQFvTgmnJlQWGQSuyxNbgNTNpyGs30oJQEcGbZ2uGic45ZVcKb0Q\n0Vws5n9bdXjlT6TCNpkFiFuWS9hGb6hu2GDrDotAJTlsO9s7E9UMmSIgHr2Gd22Q\nilWZfB7LYaRJ7iJgYyKEkFnDA7apfgIF2CyNl8qeqxuWWnotSFP7vmKYua9Gj06L\nm4VGls5TpEMysnPZV74JO42GMc9bORnoKo2/JhErUIEgX471CCa/JSCdJDXo+dTs\nBICeFmMd1RWKAlA/K04+\n=OwTA\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 8ec1f1a091ef994f7f6112e34dff3d23c2b8769a\nparent 55fdaeb520038ced2d743a41e097b969d3bb83b2\nauthor ruifanyuan <144208229+ruifanyuan@users.noreply.github.com> 1792490615 +0800\ncommitter GitHub <noreply@github.com> 1792490615 +0800\n\nperf(ohos): optimize utf transcoding with simdutf (#1806)\n\n* perf(ohos): optimize utf transcoding with simdutf\n\n- add a pinned private simdutf dependency and shared UTF helpers\n- align malformed UTF handling with Kotlin semantics\n- decode UTF-8 directly into Kotlin CharArray with strict mode\n- reuse UTF-16 lengths for paragraph offsets\n- register RapidJSON and simdutf under MIT\n\n* docs(ohos): clarify reserved strict utf decoding",
+        "verified_at": "2026-10-20T10:03:36Z"
+      }
+    },
+    "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "comments_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/323dce038f84001e48c1825ee6b06cdae0ad1303/comments",
+    "author": {
+      "login": "ruifanyuan",
+      "id": 144208229,
+      "node_id": "U_kgDOCJhxZQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144208229?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ruifanyuan",
+      "html_url": "https://github.com/ruifanyuan",
+      "followers_url": "https://api.github.com/users/ruifanyuan/followers",
+      "following_url": "https://api.github.com/users/ruifanyuan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ruifanyuan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ruifanyuan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ruifanyuan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ruifanyuan/orgs",
+      "repos_url": "https://api.github.com/users/ruifanyuan/repos",
+      "events_url": "https://api.github.com/users/ruifanyuan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ruifanyuan/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "55fdaeb520038ced2d743a41e097b969d3bb83b2",
+        "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/55fdaeb520038ced2d743a41e097b969d3bb83b2",
+        "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/55fdaeb520038ced2d743a41e097b969d3bb83b2"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "node_id": "C_kwDOOew4AdoAKDMyM2RjZTAzOGY4NDAwMWU0OGMxODI1ZWU2YjA2Y2RhZTBhZDEzMDM",
+    "commit": {
+      "author": {
+        "name": "ruifanyuan",
+        "email": "144208229+ruifanyuan@users.noreply.github.com",
+        "date": "2026-10-20T10:03:35Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-10-20T10:03:35Z"
+      },
+      "message": "perf(ohos): optimize utf transcoding with simdutf (#1806)\n\n* perf(ohos): optimize utf transcoding with simdutf\n\n- add a pinned private simdutf dependency and shared UTF helpers\n- align malformed UTF handling with Kotlin semantics\n- decode UTF-8 directly into Kotlin CharArray with strict mode\n- reuse UTF-16 lengths for paragraph offsets\n- register RapidJSON and simdutf under MIT\n\n* docs(ohos): clarify reserved strict utf decoding",
+      "tree": {
+        "sha": "8ec1f1a091ef994f7f6112e34dff3d23c2b8769a",
+        "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/trees/8ec1f1a091ef994f7f6112e34dff3d23c2b8769a"
+      },
+      "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/commits/323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq1zx3CRC1aQ7uu5UhlAAAstcQAFTkF6MgrBctEgCZ/aGi6kkR\njR7fhkjxtZit3Hxn5KsumSsOaic596Hp7ya5IculvY4a4u7E1rxngt63ZDaBHLxG\nVEdDdFTtQWrFlwDitbKQDLHatXs9be+n3iyHG0PSHRaeX60IcacohUzucfgNkGGT\n78YeMUaGsWPto2AufMxOeS+FJHJ3UnflKFmfaAVnRhOB/LHuyxF2eZVQgfBTI7S/\n/cK5gxK3UShIcZ1tr8B9v6NkD1vr6ACShh9zDmXSwelXCSGYjrrSKiMKEKlGji9S\nD5Q6vow8LoAccePYPIl4UFXrcI3D/Sy9inqz8GGVY6Hqy537OjO44tzsNsYPaWF0\nfPnkqmOCxJhbyMj45VJ8BDkNYrLMaBaW/sCCnB0EOuwSEy86z+3aXlF1xbIF0tKZ\nyWuwZSxlbs5KoQFvTgmnJlQWGQSuyxNbgNTNpyGs30oJQEcGbZ2uGic45ZVcKb0Q\n0Vws5n9bdXjlT6TCNpkFiFuWS9hGb6hu2GDrDotAJTlsO9s7E9UMmSIgHr2Gd22Q\nilWZfB7LYaRJ7iJgYyKEkFnDA7apfgIF2CyNl8qeqxuWWnotSFP7vmKYua9Gj06L\nm4VGls5TpEMysnPZV74JO42GMc9bORnoKo2/JhErUIEgX471CCa/JSCdJDXo+dTs\nBICeFmMd1RWKAlA/K04+\n=OwTA\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 8ec1f1a091ef994f7f6112e34dff3d23c2b8769a\nparent 55fdaeb520038ced2d743a41e097b969d3bb83b2\nauthor ruifanyuan <144208229+ruifanyuan@users.noreply.github.com> 1792490615 +0800\ncommitter GitHub <noreply@github.com> 1792490615 +0800\n\nperf(ohos): optimize utf transcoding with simdutf (#1806)\n\n* perf(ohos): optimize utf transcoding with simdutf\n\n- add a pinned private simdutf dependency and shared UTF helpers\n- align malformed UTF handling with Kotlin semantics\n- decode UTF-8 directly into Kotlin CharArray with strict mode\n- reuse UTF-16 lengths for paragraph offsets\n- register RapidJSON and simdutf under MIT\n\n* docs(ohos): clarify reserved strict utf decoding",
+        "verified_at": "2026-10-20T10:03:36Z"
+      }
+    },
+    "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/323dce038f84001e48c1825ee6b06cdae0ad1303",
+    "comments_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/323dce038f84001e48c1825ee6b06cdae0ad1303/comments",
+    "author": {
+      "login": "ruifanyuan",
+      "id": 144208229,
+      "node_id": "U_kgDOCJhxZQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144208229?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ruifanyuan",
+      "html_url": "https://github.com/ruifanyuan",
+      "followers_url": "https://api.github.com/users/ruifanyuan/followers",
+      "following_url": "https://api.github.com/users/ruifanyuan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ruifanyuan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ruifanyuan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ruifanyuan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ruifanyuan/orgs",
+      "repos_url": "https://api.github.com/users/ruifanyuan/repos",
+      "events_url": "https://api.github.com/users/ruifanyuan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ruifanyuan/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "55fdaeb520038ced2d743a41e097b969d3bb83b2",
+        "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/55fdaeb520038ced2d743a41e097b969d3bb83b2",
+        "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/55fdaeb520038ced2d743a41e097b969d3bb83b2"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 1,
+  "behind_by": 0,
+  "total_commits": 1,
+  "commits": [
+    {
+      "sha": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "node_id": "C_kwDOOew4AdoAKDI3N2I2OWQxYmIwNDNhZTZjZTg3NDE1YWQwZDI4ZGYxN2RlMWExMmM",
+      "commit": {
+        "author": {
+          "name": "xubin",
+          "email": "67296761+RoeKun@users.noreply.github.com",
+          "date": "2026-10-21T03:50:40Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-10-21T03:50:40Z"
+        },
+        "message": "docs: add 2.29.0 version description to changelog (#1814)\n\nSigned-off-by: valoxbwang <valoxbwang@tencent.com>\nCo-authored-by: RoeKun <RoeKun>",
+        "tree": {
+          "sha": "3bcbfe2936e9139ed14e7cb93fd5ca618d97b05b",
+          "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/trees/3bcbfe2936e9139ed14e7cb93fd5ca618d97b05b"
+        },
+        "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/git/commits/277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq2DaQCRC1aQ7uu5UhlAAA7kEQAF3nxs+cCSB40HgShw7yJknZ\nXVGqzLli2Izsz9z7toWgTjoyOWfrKIF9GWp68tza01lCpUG7Mn3CnoxowaFontdr\nRU5t5DMrt22kPM1/boKHYegA4poGBtiEI6LaHuQUmtw0PYPctacNt/HlgutevWoU\noBvD4WZI1n179VEzQOI85AW8YTf4fmkqdagz1EZKQy7xEpLewUPEzlSijM7MKW14\n+h6Ox18yg5J41g3KHpemyGmIZ8cRm9xI1vO91sDAeOeZ/+qXpZGZadTRnTR9URk9\n7RuItqgHhPfiPN1MagHZyQLuwtV72MojdJBluOpK9EVPCRu/94ECJ5FWTyDg6oeI\nqrPXVWVduxnUtNUI1xSUbdSFw6jvDKdPZL4qciMTbDPiaaHZU5nhwy2d7PqoNbKn\nulMYrgO6n6go+oOtxXrM/PA2u3WuA2DLU1qCb2VO3h/qixnRYZm4aL408wSaNc7n\no1zYYyXY0VBYryg64820p+7S+dMiJ3aQupX9nB1RcIFmj5UdWBxaxvcOWrxjPDcq\nebqxGmibVAV5E0QiXJURuY2K8uteQpW0oEZTkfiAtv5JN1rKgu0/gba7zwIBqdOT\ne2wy+oTB3URBltGwuLQT7r4RDwrmJTjXUsFSecVsXnN+Mq0ThEDwNIvUVuho6518\njYPh+5BpAxNSyVhcmqbU\n=+Q6h\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 3bcbfe2936e9139ed14e7cb93fd5ca618d97b05b\nparent 323dce038f84001e48c1825ee6b06cdae0ad1303\nauthor xubin <67296761+RoeKun@users.noreply.github.com> 1792554640 +0800\ncommitter GitHub <noreply@github.com> 1792554640 +0800\n\ndocs: add 2.29.0 version description to changelog (#1814)\n\nSigned-off-by: valoxbwang <valoxbwang@tencent.com>\nCo-authored-by: RoeKun <RoeKun>",
+          "verified_at": "2026-10-21T03:50:41Z"
+        }
+      },
+      "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "comments_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/277b69d1bb043ae6ce87415ad0d28df17de1a12c/comments",
+      "author": {
+        "login": "RoeKun",
+        "id": 67296761,
+        "node_id": "MDQ6VXNlcjY3Mjk2NzYx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/67296761?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/RoeKun",
+        "html_url": "https://github.com/RoeKun",
+        "followers_url": "https://api.github.com/users/RoeKun/followers",
+        "following_url": "https://api.github.com/users/RoeKun/following{/other_user}",
+        "gists_url": "https://api.github.com/users/RoeKun/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/RoeKun/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/RoeKun/subscriptions",
+        "organizations_url": "https://api.github.com/users/RoeKun/orgs",
+        "repos_url": "https://api.github.com/users/RoeKun/repos",
+        "events_url": "https://api.github.com/users/RoeKun/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/RoeKun/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+          "url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/commits/323dce038f84001e48c1825ee6b06cdae0ad1303",
+          "html_url": "https://github.com/Tencent-TDS/KuiklyUI/commit/323dce038f84001e48c1825ee6b06cdae0ad1303"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "c64a2803458dc3bdfa2c328a37ace93f167fcf45",
+      "filename": "docs/ChangeLog/2.29.0/changelog.md",
+      "status": "added",
+      "additions": 78,
+      "deletions": 0,
+      "changes": 78,
+      "blob_url": "https://github.com/Tencent-TDS/KuiklyUI/blob/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2FChangeLog%2F2.29.0%2Fchangelog.md",
+      "raw_url": "https://github.com/Tencent-TDS/KuiklyUI/raw/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2FChangeLog%2F2.29.0%2Fchangelog.md",
+      "contents_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/contents/docs%2FChangeLog%2F2.29.0%2Fchangelog.md?ref=277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "patch": "@@ -0,0 +1,78 @@\n+# 2.29.0 变更说明\n+\n+## Part 1 总体说明\n+\n+2.29.0 版本为 iPhone Duo 折叠屏提供了铰链与系统避让区域适，：页面内可获取铰链状态，以及折缝区、遮挡区的位置、尺寸与生效状态；系统区域变化后，页面可以重新计算布局避让。适配了 Xcode 27 的 iOS / macOS 工程要求；扩展了 iOS TurboDisplay 的差异更新能力；修正了富文本、阴影和 H5 交互问题。具体如下：\n+\n+- **iPhone Duo 折叠屏适配**（iOS）：提供了从系统信息接入到页面布局避让的完整链路，重点包括：\n+  - **适配机制**：通过 `hingeStatus` 获取合上、半开、全开状态，通过 `reservedRegions` 获取折缝区（`DIVISION`）和遮挡区（`OCCLUSION`）的坐标、尺寸与生效状态；这些数据会随 `rootViewSizeDidChanged` 在折叠、展开和旋转后更新。详细字段与用法见[页面数据](../../DevGuide/page-data.md)。\n+  - **组件使用方式**：`PagerData` 提供了安全区、铰链和避让区域数据供 `SafeArea`、导航栏以及普通 `View` / `Text` 等组件消费，把折缝与遮挡区域转化为页面布局边距。\n+  - **Demo 参考**：新增 `ReservedRegionDemo`，展示安全区、铰链状态和避让区域，区分生效与未生效的折缝，并用颜色标出系统区域；同时演示导航栏、顶部/左右/底部内容如何根据折缝和遮挡区域自动留出空间，为旋转、折叠/展开后的页面重排提供完整参考。\n+- **功能扩展与修复**：\n+  - 扩展 iOS TurboDisplay 的差异更新的手动控制：用户可通过 `TurboDisplayModule` 手动触发真实视图接管缓存首屏，避免默认时机过早执行；\n+  - 新增文本两端对齐，Span 局部字体设置能够正确保留，Surface 阴影改为正确的密度换算，Android 阴影不再被视图边界截断；H5 修复单行省略号、展开动画自动收起；Kotlin 1.9.22 下 JS 代码转换问题，鸿蒙线程运行时也得到加固。\n+- **Xcode 27 工程接入**（iOS、macOS）：Xcode 27 及以上版本要求 iOS 最低部署目标为 15.0、macOS 最低部署目标为 12.0。\n+\n+历史提交可见 [2.28.0...2.29.0](https://github.com/Tencent-TDS/KuiklyUI/compare/2.28.0...2.29.0)，完整条目见下方 Part 2。\n+\n+---\n+\n+## Part 2 变更汇总\n+\n+### Android\n+\n+- fix: preserve Android shadows beyond view bounds · [#1760](https://github.com/Tencent-TDS/KuiklyUI/pull/1760)\n+\n+### iOS\n+\n+- fix(iOS): keep text alignment when rebuilding attributedText in KRTextAreaView · [#1745](https://github.com/Tencent-TDS/KuiklyUI/pull/1745)\n+- fix(ios): implicit animation issue during border scaling · [#1749](https://github.com/Tencent-TDS/KuiklyUI/pull/1749)\n+- feat(ios): TurboDisplay support diff executation controlled by custom · [#1744](https://github.com/Tencent-TDS/KuiklyUI/pull/1744)\n+- feat(ios): support reserved regions and hinge status on iOS 27.1 · [#1765](https://github.com/Tencent-TDS/KuiklyUI/pull/1765)\n+\n+### 鸿蒙\n+\n+- fix(ohos): raise KRThread worker stack to 8MB · [#1778](https://github.com/Tencent-TDS/KuiklyUI/pull/1778)\n+- chore(ohos): delete performance invalid code · [#1788](https://github.com/Tencent-TDS/KuiklyUI/pull/1788)\n+\n+### Compose\n+\n+- fix(compose): serialize SpanStyle.fontFamily on rich text spans · [#1775](https://github.com/Tencent-TDS/KuiklyUI/pull/1775)\n+- feat(text): add justify align mode · [#1763](https://github.com/Tencent-TDS/KuiklyUI/pull/1763)\n+- fix: Surface shadowElevation double dp-to-px conversion · [#1785](https://github.com/Tencent-TDS/KuiklyUI/pull/1785)\n+\n+### H5\n+\n+- fix(web): 修复单行 textOverFlowTail 不显示省略号 · [#1747](https://github.com/Tencent-TDS/KuiklyUI/pull/1747)\n+- fix(h5): fix expand anim auto collapse bug · [#1748](https://github.com/Tencent-TDS/KuiklyUI/pull/1748)\n+- fix(h5): fix h5 jsValueToKotlin outlinedJsCode error for kotlin 1.9.22 · [#1754](https://github.com/Tencent-TDS/KuiklyUI/pull/1754)\n+\n+### 多端\n+\n+- fix: adapt iOS and macOS builds for Xcode 27 minimum deployment targets · [#1753](https://github.com/Tencent-TDS/KuiklyUI/pull/1753)\n+\n+### 其他\n+\n+- docs: update env-setup ide version notes · [#1751](https://github.com/Tencent-TDS/KuiklyUI/pull/1751)\n+- feat(demo): add chat bubble demo(左滑删除) · [#1758](https://github.com/Tencent-TDS/KuiklyUI/pull/1758)\n+- docs: fix page-data error · [#1777](https://github.com/Tencent-TDS/KuiklyUI/pull/1777)\n+\n+---\n+\n+## Part 3 破坏性变更\n+\n+## 条件性破坏性\n+\n+### Xcode 27 最低部署目标提升\n+\n+- 结果：使用 Xcode 27 及以上版本时，iOS 最低部署目标提升为 15.0，macOS 最低部署目标提升为 12.0。\n+- 影响：宿主 App target 或 Pods 中仍使用更低 Deployment Target 的 iOS / macOS 工程，升级后无法按新 SDK 构建。\n+- 迁移：将宿主 App target 与 Pods 中各 target 的 iOS Deployment Target 调整为 15.0 或更高，macOS Deployment Target 调整为 12.0 或更高。\n+- 说明文档：[iOS 接入](../../QuickStart/iOS.md)\n+\n+### Compose `Surface.shadowElevation` 行为修正\n+\n+- 结果：`Surface.shadowElevation` 从此前的双重 dp-to-px 换算修正为正确的密度换算，阴影大小与 `Box(Modifier.shadow(...))` 对齐。\n+- 影响：在 density 大于 1 的设备上，使用 `Surface` 及其内部组件阴影的页面，升级后阴影会比 2.28.0 及之前版本更小，这是修复过度放大的结果。\n+- 迁移：对使用 `Surface(shadowElevation = ...)` 的页面，以及 `Card`、`Button`、`Snackbar` 等相关组件进行视觉回归；无需修改调用方式。\n+- 说明文档：[Compose 基础组件](../../Compose/core-components.md)"
+    },
+    {
+      "sha": "7262607a1da5a269255a0b546cd6327358b20268",
+      "filename": "docs/ChangeLog/README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/Tencent-TDS/KuiklyUI/blob/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2FChangeLog%2FREADME.md",
+      "raw_url": "https://github.com/Tencent-TDS/KuiklyUI/raw/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2FChangeLog%2FREADME.md",
+      "contents_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/contents/docs%2FChangeLog%2FREADME.md?ref=277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "patch": "@@ -29,6 +29,7 @@ Kuikly 每个正式版本提供一份变更说明，其中包含三部分：\n \n ## 版本列表\n \n+- [2.29.0](./2.29.0/changelog.md)（2026-10-12）\n - [2.28.0](./2.28.0/changelog.md)（2026-09-16）\n - [2.27.0](./2.27.0/changelog.md)（2026-09-03）\n - [2.26.0](./2.26.0/changelog.md)（2026-08-27）"
+    },
+    {
+      "sha": "34b3841726bc9762b26e6a9edb465fe98e9b3009",
+      "filename": "docs/sidebar/zh.ts",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/Tencent-TDS/KuiklyUI/blob/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2Fsidebar%2Fzh.ts",
+      "raw_url": "https://github.com/Tencent-TDS/KuiklyUI/raw/277b69d1bb043ae6ce87415ad0d28df17de1a12c/docs%2Fsidebar%2Fzh.ts",
+      "contents_url": "https://api.github.com/repos/Tencent-TDS/KuiklyUI/contents/docs%2Fsidebar%2Fzh.ts?ref=277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "patch": "@@ -337,6 +337,7 @@ export const zhSidebar = sidebar({\n             collapsible: false,\n             children: [\n                 \"README.md\",\n+                { text: \"2.29.0\", link: \"/ChangeLog/2.29.0/changelog.md\" },\n                 { text: \"2.28.0\", link: \"/ChangeLog/2.28.0/changelog.md\" },\n                 { text: \"2.27.0\", link: \"/ChangeLog/2.27.0/changelog.md\" },\n                 { text: \"2.26.0\", link: \"/ChangeLog/2.26.0/changelog.md\" },"
+    }
+  ]
+}

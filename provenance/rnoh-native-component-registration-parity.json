@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-native-component-registration-parity",
+  "sources": [
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/cpp/SkiaPackage.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/cpp/SkiaPackage.cpp",
+      "sha256": "4cb0b99ccc8a0430a7cdc7cb1b2090a70d9b2dd31161b65b6b4be12c8828341c",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/cpp/CMakeLists.txt",
+      "sha256": "056e1e51a2317c88b23ddaa84996e9df0212414b71684a5ce9d5d0ea2f19a49f",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/skia/src/main/ets/RNSkiaPackage.ts",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/skia/src/main/ets/RNSkiaPackage.ts",
+      "sha256": "604aadf51ffc7549d7b030220a26878d4ef360c890c4096739dbe033f3e0fb6f",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/src/main/cpp/PackageProvider.cpp",
+      "sha256": "034e2fb511ba38c34ac84cf2c0c756a085c01cbcd2293f0f4ac84463ca0e0e66",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "18917ff7b73344dfd97457448240c981bf6d729a071c3fc76e125a044da449b9",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "rnoh-skia-ohos",
+      "original_path": "tester/harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-skia-ohos/2026-10-22/tester/harmony/entry/oh-package.json5",
+      "sha256": "6886dc6c259c5738bed2a01a2fa04aa67a02e1f8530dd9c4f0929198903ccb0d",
+      "revision": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "Source-only review of registration; no rendering, build or physical PC claim."
+  ]
+}

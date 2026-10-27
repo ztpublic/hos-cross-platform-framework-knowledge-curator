@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-gstreamer-plugin-registry",
+  "sources": [
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "src/engine/gststartup.cpp",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/src/engine/gststartup.cpp",
+      "sha256": "9b4d53ebd10efac899f2953392fb4a3318f67458a027f845fe368be0ea0ed8ef",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/README.md",
+      "sha256": "d6f041176c42bcb8cd95c7f0491ddea0a3a7ac7b85121857450c91f825a46d45",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

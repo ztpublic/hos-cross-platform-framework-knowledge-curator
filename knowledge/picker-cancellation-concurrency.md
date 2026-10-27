@@ -28,7 +28,9 @@
   "evidence_tier": "imported-guidance",
   "pc_validation": "not-run",
   "applicability": "Shared platform/native contract; select an OH adapter and verify the stated SDK/product capabilities on PC.",
-  "related": []
+  "related": [
+    "kmp-filekit-picker-descriptor-ownership"
+  ]
 }
 ---
 
@@ -48,7 +50,7 @@ Model cancellation as a normal result, settle each channel request once, and ser
 2. Acquire a picker-in-progress guard before presenting the dialog. Reject or queue another request explicitly.
 3. Handle empty selections and the API's documented cancellation result before resolving file metadata. Return immediately after completing the request.
 4. Translate permission and I/O failures into errors, not cancellation. Catch failures inside asynchronous native work.
-5. Release the guard, temporary files and any temporarily changed orientation in `finally`. On owner teardown, settle or invalidate its pending request so a late callback cannot reply twice.
+5. Release the presentation guard when the native dialog actually settles, and clean temporary files and presentation changes on the matching outcome. Cancelling a coroutine or timing out the caller may not dismiss system UI: keep the guard until that still-open dialog settles, discard its late selection, and close any abandoned descriptors. On owner teardown, cancel or invalidate the pending continuation so a late callback cannot reply twice.
 
 Protocol sketch:
 

@@ -1,0 +1,41 @@
+{
+  "issue": {
+    "url": "https://github.com/tauri-apps/tauri/issues/15236",
+    "title": "[bug] OpenHarmony app shows white screen when it's initialized by `cargo tauri ohos init`",
+    "issue_number": 15236,
+    "body": "### Describe the bug\n\nWhen building a Tauri application for OpenHarmony initialized with`cargo tauri ohos init`, the app shows a white screen after launch. This is caused by compatibility issues with the previous version of `@ohos-rs/ability`.\n\n- Platform:\n  - Tauri version: latest (in branch feat/open-harmony)\n  - HarmonyOS/OpenHarmony version: 6.0\n\nThis is the screenshot of this bug.\n\n![Image](https://github.com/user-attachments/assets/67d38ad9-c110-4b4f-aaec-f0a8a12d5a3f)\n\n\n### Reproduction\n\n1. Init and build a HarmonyOS tauri project\n```bash\ncargo install tauri-cli --git https://github.com/tauri-apps/tauri --branch feat/open-harmony\ncargo install ohrs\ncargo install create-tauri-app --locked\ncargo create-tauri-app\ncargo tauri ohos init\nnpm i\ncargo tauri ohos build\n```\n2. Install the .hap application to the HarmonyOS Device\n3. Open the application，then the blank white screen will be the only thing you can see in the application's window.\n\n### Expected behavior\n\nThe webview should render correctly and show the Tauri app content.\n\n### Full `tauri info` output\n\n```text\n[✔] Environment\n    - OS: Windows 10.0.26200 x86_64 (X64)\n    ✔ WebView2: 147.0.3912.60\n    ✔ MSVC: Visual Studio Community 2022\n    ✔ rustc: 1.96.0-nightly (bcded3316 2026-04-06)\n    ✔ cargo: 1.96.0-nightly (888f67534 2026-03-30)\n    ✔ rustup: 1.28.1 (f9edccde0 2025-03-05)\n    ✔ Rust toolchain: nightly-x86_64-pc-windows-msvc (overridden by environment variable RUSTUP_TOOLCHAIN)\n    - node: 25.8.1\n    - pnpm: 9.15.2\n    - npm: 11.11.0\n    - bun: 1.1.26\n    - deno: deno 2.7.11\n\n[-] Packages\n    - tauri 🦀: 2.8.5, (outdated, latest: 2.10.3)\n    - tauri-build 🦀: 2.4.1, (outdated, latest: 2.5.6)\n    - wry 🦀: git+https://github.com/richerfu/wry#3b3762817ec6d9b84db594cf11bb6dc3b95d3244 (0.53.3), (outdated, latest: 0.55.0)       \n    - tao 🦀: git+https://github.com/richerfu/tao?branch=feat-ohos-webview#fd7ce5c8dcc02df3f5a955eec317db62cbe5ea46 (0.34.3), (outdated, latest: 0.35.0)\n    - tauri-cli 🦀: 2.8.4 (outdated, latest: 2.10.1)\n    - @tauri-apps/api : not installed!\n    - @tauri-apps/cli : 2.8.4 (outdated, latest: 2.10.1)\n\n[-] Plugins\n    - tauri-plugin-log 🦀: 2.6.0, (outdated, latest: 2.8.0)\n    - @tauri-apps/plugin-log : not installed!\n\n[-] App\n    - build-type: bundle\n    - CSP: default-src 'self' customprotocol: asset:; connect-src ipc: http://ipc.localhost; font-src https://fonts.gstatic.com; style-src 'unsafe-inline' 'self' https://fonts.googleapis.com; img-src 'self' asset: http://asset.localhost blob: data:\n    - frontendDist: ../dist\n    - devUrl: http://localhost:1420/\n```\n\n### Stack trace\n\n```text\n\n```\n\n### Additional context\n\nThe issue is resolved by bumping `@ohos-rs/ability` from 0.2.1 to 0.4.0-beta.0. Verified on my HarmonyOS PC.\n\nTest repository: https://github.com/Islatri/tauri-ohos-test\n\nAnd I created a PR to solve this issue in PR #15237 .",
+    "state": "closed",
+    "user": {
+      "login": "Islatri",
+      "name": "Islatri",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/67158002?v=4",
+      "id": 67158002
+    },
+    "assignees": null,
+    "labels": [
+      {
+        "name": "type: bug",
+        "color": "B60205",
+        "description": ""
+      },
+      {
+        "name": "status: needs triage",
+        "color": "059372",
+        "description": "This issue needs to triage, applied to new issues"
+      }
+    ],
+    "milestone": null,
+    "state_reason": "completed",
+    "comments": 0,
+    "created_at": "2026-04-14T16:39:23Z",
+    "updated_at": "2026-04-15T00:12:48Z",
+    "closed_at": "2026-04-15T00:12:48Z",
+    "display_url": "https://github.com/tauri-apps/tauri/issues/15236",
+    "display_title": "[bug] OpenHarmony app shows white screen when it's initialized by `cargo tauri ohos init`"
+  },
+  "url": "https://github.com/tauri-apps/tauri/issues/15236",
+  "title": "[bug] OpenHarmony app shows white screen when it's initialized by `cargo tauri ohos init`",
+  "display_url": "https://github.com/tauri-apps/tauri/issues/15236",
+  "display_title": "[bug] OpenHarmony app shows white screen when it's initialized by `cargo tauri ohos init`"
+}

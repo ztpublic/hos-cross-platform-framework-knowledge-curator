@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-unicode-selection-boundaries",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/components/richtext/KRRichTextView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/components/richtext/KRRichTextView.cpp",
+      "sha256": "6cee811175a4a77ba19d687db91f28a7e81028f1538310a093f2b626344bf1ad",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/CMakeLists.txt",
+      "sha256": "9703dd106dc296a1e1f038b26a2c7062d3427357beba9f53b296382359a12ab9",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

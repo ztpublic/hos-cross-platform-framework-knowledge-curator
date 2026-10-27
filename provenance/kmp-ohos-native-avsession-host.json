@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-native-avsession-host",
+  "sources": [
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/src/ohosMain/kotlin/world/hachimi/app/player/OhosMediaSession.kt",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/src/ohosMain/kotlin/world/hachimi/app/player/OhosMediaSession.kt",
+      "sha256": "4078acb36e932eefc79005999ddf3dc7299abc6ccd5531e2c5876a7b78be795a",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "2d1d453a669d6ddbdfed63f0ccd7038102e6ba2c025cf3755575744689d7d185",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "harmonyApp/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/harmonyApp/entry/src/main/module.json5",
+      "sha256": "1e1b927137f41a283ad748a661650033cc9a89d6121898a9c17915c5f5943c5c",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "hachimi-world-ohos",
+      "original_path": "composeApp/build.ohos.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/hachimi-world-ohos/2026-10-22/composeApp/build.ohos.gradle.kts",
+      "sha256": "f6169108608b5ba5c4eb19bd5bf4530307f249fb3eccfb2334e38251ced12478",
+      "revision": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "No callback race, background-task regression or PC runtime test was run."
+  ]
+}

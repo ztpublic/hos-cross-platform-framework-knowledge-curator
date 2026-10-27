@@ -1,0 +1,465 @@
+diff --git a/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp
+new file mode 100644
+index 0000000..75c840f
+--- /dev/null
++++ b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp
+@@ -0,0 +1,198 @@
++/*
++ * Tencent is pleased to support the open source community by making KuiklyUI
++ * available.
++ * Copyright (C) 2026 Tencent. All rights reserved.
++ * Licensed under the License of KuiklyUI;
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ * https://github.com/Tencent-TDS/KuiklyUI/blob/main/LICENSE
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++#include "libohos_render/expand/events/common_event/KRCommonEventManager.h"
++
++#include <vector>
++
++#include "BasicServicesKit/oh_commonevent.h"
++#include "libohos_render/foundation/thread/KRMainThread.h"
++#include "libohos_render/manager/KRRenderManager.h"
++#include "libohos_render/utils/KRRenderLoger.h"
++#include "libohos_render/view/KRRenderView.h"
++
++namespace kuikly {
++
++namespace {
++constexpr char kCommonEventLogTag[] = "KRCommonEvent";
++
++/**
++ * 系统公共事件回调（线程不保证为渲染主线程）
++ */
++void OnSystemCommonEventReceived(const CommonEvent_RcvData *data) {
++    if (data == nullptr) {
++        return;
++    }
++    const char *event = OH_CommonEvent_GetEventFromRcvData(data);
++    if (event == nullptr) {
++        return;
++    }
++    CommonEventName name;
++    if (!CommonEventNameFromEventString(event, name)) {
++        KR_LOG_INFO_WITH_TAG(kCommonEventLogTag) << "ignore unregistered common event: " << event;
++        return;
++    }
++    // 公共事件回调线程既不是主线程也不是 kuikly worker 线程（实测为 FFRT worker），
++    // 因此必须用 KRMainThread::RunOnMainThread 投递；KRContextScheduler::ScheduleTaskOnMainThread
++    // 只接受主线程/worker 线程调用，第三方线程调用会断言失败。
++    KRMainThread::RunOnMainThread([name]() {
++        KRCommonEventManager::GetInstance().DispatchEventToInstances(name);
++    });
++}
++}  // namespace
++
++KRCommonEventManager &KRCommonEventManager::GetInstance() {
++    static KRCommonEventManager instance;
++    return instance;
++}
++
++void KRCommonEventManager::Subscribe(CommonEventName name, const std::string &instance_id) {
++    if (instance_id.empty()) {
++        return;
++    }
++    bool need_system_subscribe = false;
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        subscribed_instances_[name].insert(instance_id);
++        // 系统订阅尚未生效（首个订阅者，或此前订阅失败需要重试）
++        need_system_subscribe = system_subscribers_.find(name) == system_subscribers_.end();
++    }
++    if (need_system_subscribe) {
++        SubscribeSystemEvent(name);
++    }
++}
++
++void KRCommonEventManager::Unsubscribe(CommonEventName name, const std::string &instance_id) {
++    if (instance_id.empty()) {
++        return;
++    }
++    bool need_system_unsubscribe = false;
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        auto it = subscribed_instances_.find(name);
++        if (it == subscribed_instances_.end()) {
++            return;
++        }
++        it->second.erase(instance_id);
++        if (it->second.empty()) {
++            subscribed_instances_.erase(it);
++            need_system_unsubscribe = true;
++        }
++    }
++    if (need_system_unsubscribe) {
++        UnsubscribeSystemEvent(name);
++    }
++}
++
++bool KRCommonEventManager::SubscribeSystemEvent(CommonEventName name) {
++    const char *event_name = CommonEventNameToEventString(name);
++    if (event_name == nullptr || event_name[0] == '\0') {
++        return false;
++    }
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        if (system_subscribers_.find(name) != system_subscribers_.end()) {
++            return true;
++        }
++    }
++
++    const char *events[] = {event_name};
++    CommonEvent_SubscribeInfo *info = OH_CommonEvent_CreateSubscribeInfo(events, 1);
++    if (info == nullptr) {
++        KR_LOG_ERROR_WITH_TAG(kCommonEventLogTag) << "create subscribe info failed: " << event_name;
++        return false;
++    }
++    CommonEvent_Subscriber *subscriber = OH_CommonEvent_CreateSubscriber(info, OnSystemCommonEventReceived);
++    if (subscriber == nullptr) {
++        KR_LOG_ERROR_WITH_TAG(kCommonEventLogTag) << "create subscriber failed: " << event_name;
++        OH_CommonEvent_DestroySubscribeInfo(info);
++        return false;
++    }
++    const CommonEvent_ErrCode ret = OH_CommonEvent_Subscribe(subscriber);
++    if (ret != COMMONEVENT_ERR_OK) {
++        KR_LOG_ERROR_WITH_TAG(kCommonEventLogTag)
++            << "subscribe failed, event=" << event_name << ", ret=" << static_cast<int>(ret);
++        OH_CommonEvent_DestroySubscriber(subscriber);
++        OH_CommonEvent_DestroySubscribeInfo(info);
++        return false;
++    }
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        system_subscribers_[name] = subscriber;
++        system_subscribe_infos_[name] = info;
++    }
++    KR_LOG_INFO_WITH_TAG(kCommonEventLogTag) << "subscribe success, event=" << event_name;
++    return true;
++}
++
++void KRCommonEventManager::UnsubscribeSystemEvent(CommonEventName name) {
++    CommonEvent_Subscriber *subscriber = nullptr;
++    CommonEvent_SubscribeInfo *info = nullptr;
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        auto subscriber_it = system_subscribers_.find(name);
++        if (subscriber_it == system_subscribers_.end()) {
++            return;
++        }
++        subscriber = subscriber_it->second;
++        system_subscribers_.erase(subscriber_it);
++        auto info_it = system_subscribe_infos_.find(name);
++        if (info_it != system_subscribe_infos_.end()) {
++            info = info_it->second;
++            system_subscribe_infos_.erase(info_it);
++        }
++    }
++    if (subscriber != nullptr) {
++        const CommonEvent_ErrCode ret = OH_CommonEvent_UnSubscribe(subscriber);
++        if (ret != COMMONEVENT_ERR_OK) {
++            KR_LOG_ERROR_WITH_TAG(kCommonEventLogTag)
++                << "unsubscribe failed, event=" << CommonEventNameToEventString(name)
++                << ", ret=" << static_cast<int>(ret);
++        }
++        OH_CommonEvent_DestroySubscriber(subscriber);
++    }
++    if (info != nullptr) {
++        OH_CommonEvent_DestroySubscribeInfo(info);
++    }
++    KR_LOG_INFO_WITH_TAG(kCommonEventLogTag)
++        << "unsubscribe finish, event=" << CommonEventNameToEventString(name);
++}
++
++void KRCommonEventManager::DispatchEventToInstances(CommonEventName name) {
++    std::vector<std::string> instance_ids;
++    {
++        std::lock_guard<std::mutex> lock(mutex_);
++        auto it = subscribed_instances_.find(name);
++        if (it == subscribed_instances_.end()) {
++            return;
++        }
++        instance_ids.assign(it->second.begin(), it->second.end());
++    }
++    size_t dispatched = 0;
++    for (const auto &instance_id : instance_ids) {
++        auto render_view = KRRenderManager::GetInstance().GetRenderView(instance_id);
++        if (render_view == nullptr) {
++            // 实例尚未创建完成或已销毁，忽略
++            continue;
++        }
++        render_view->OnCommonEvent(name);
++        dispatched++;
++    }
++    KR_LOG_INFO_WITH_TAG(kCommonEventLogTag)
++        << "dispatch event=" << CommonEventNameToEventString(name) << ", registered=" << instance_ids.size()
++        << ", dispatched=" << dispatched;
++}
++
++}  // namespace kuikly
+diff --git a/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.h b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.h
+new file mode 100644
+index 0000000..26eb124
+--- /dev/null
++++ b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.h
+@@ -0,0 +1,86 @@
++/*
++ * Tencent is pleased to support the open source community by making KuiklyUI
++ * available.
++ * Copyright (C) 2026 Tencent. All rights reserved.
++ * Licensed under the License of KuiklyUI;
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ * https://github.com/Tencent-TDS/KuiklyUI/blob/main/LICENSE
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++#ifndef CORE_RENDER_OHOS_KRCOMMONEVENTMANAGER_H
++#define CORE_RENDER_OHOS_KRCOMMONEVENTMANAGER_H
++
++#include <map>
++#include <mutex>
++#include <set>
++#include <string>
++
++#include "libohos_render/expand/events/common_event/KRCommonEventName.h"
++
++// 系统 CommonEvent 句柄类型（定义于 BasicServicesKit/oh_commonevent.h），保持全局命名空间
++typedef void CommonEvent_Subscriber;
++typedef struct CommonEvent_SubscribeInfo CommonEvent_SubscribeInfo;
++
++namespace kuikly {
++
++/**
++ * 系统公共事件（CommonEvent）订阅管理器。
++ *
++ * 设计要点：
++ * - 进程内单例，按"事件名 → 已订阅实例集合"登记，实例集合由空变非空才向系统发起订阅，
++ *   由非空变空才向系统退订，避免空订阅常驻与重复订阅。
++ * - 系统回调所在线程不保证是渲染主线程，统一调度回主线程后再按 instanceId 分发。
++ * - 订阅失败（权限/系统限制等）视为系统级问题：记录错误日志后不再重试，也不参与上层行为决策。
++ */
++class KRCommonEventManager {
++ public:
++    static KRCommonEventManager &GetInstance();
++
++    KRCommonEventManager(const KRCommonEventManager &) = delete;
++    KRCommonEventManager &operator=(const KRCommonEventManager &) = delete;
++    KRCommonEventManager(const KRCommonEventManager &&) = delete;
++    KRCommonEventManager &operator=(const KRCommonEventManager &&) = delete;
++
++    /**
++     * 订阅某系统事件（按实例登记）
++     * @param name 事件枚举
++     * @param instance_id 渲染实例标识（KRRenderView 的 instanceId）
++     */
++    void Subscribe(CommonEventName name, const std::string &instance_id);
++
++    /**
++     * 退订某系统事件（移除该实例的登记）
++     * @param name 事件枚举
++     * @param instance_id 渲染实例标识
++     */
++    void Unsubscribe(CommonEventName name, const std::string &instance_id);
++
++    /**
++     * 将事件分发给当前登记的全部实例（要求渲染主线程调用）
++     */
++    void DispatchEventToInstances(CommonEventName name);
++
++ private:
++    KRCommonEventManager() = default;
++    ~KRCommonEventManager() = default;
++
++    bool SubscribeSystemEvent(CommonEventName name);
++    void UnsubscribeSystemEvent(CommonEventName name);
++
++    std::mutex mutex_;
++    // 事件 → 已登记的实例集合
++    std::map<CommonEventName, std::set<std::string>> subscribed_instances_;
++    // 事件 → 系统订阅句柄（仅订阅成功时存在）
++    std::map<CommonEventName, CommonEvent_Subscriber *> system_subscribers_;
++    std::map<CommonEventName, CommonEvent_SubscribeInfo *> system_subscribe_infos_;
++};
++
++}  // namespace kuikly
++
++#endif  // CORE_RENDER_OHOS_KRCOMMONEVENTMANAGER_H
+diff --git a/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventName.h b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventName.h
+new file mode 100644
+index 0000000..c59b425
+--- /dev/null
++++ b/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventName.h
+@@ -0,0 +1,62 @@
++/*
++ * Tencent is pleased to support the open source community by making KuiklyUI
++ * available.
++ * Copyright (C) 2026 Tencent. All rights reserved.
++ * Licensed under the License of KuiklyUI;
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ * https://github.com/Tencent-TDS/KuiklyUI/blob/main/LICENSE
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++#ifndef CORE_RENDER_OHOS_KRCOMMONEVENTNAME_H
++#define CORE_RENDER_OHOS_KRCOMMONEVENTNAME_H
++
++#include <cstring>
++
++namespace kuikly {
++
++/**
++ * 框架关注的系统公共事件（CommonEvent）。
++ * 新增事件时在此追加枚举值，并在 KRCommonEventManager 中登记系统事件名。
++ */
++enum class CommonEventName {
++    /** 用户点击系统状态栏（用于自定义实现 back-to-top） */
++    COMMON_EVENT_CLICK_STATUSBAR = 0,
++};
++
++/** 枚举值对应的系统事件名 */
++inline const char *CommonEventNameToEventString(CommonEventName name) {
++    switch (name) {
++    case CommonEventName::COMMON_EVENT_CLICK_STATUSBAR:
++        return "usual.event.CLICK_STATUSBAR";
++    default:
++        return "";
++    }
++}
++
++/** 系统事件名转枚举值，未登记的事件返回 false */
++inline bool CommonEventNameFromEventString(const char *event, CommonEventName &out) {
++    if (event == nullptr) {
++        return false;
++    }
++    constexpr CommonEventName kAllNames[] = {
++        CommonEventName::COMMON_EVENT_CLICK_STATUSBAR,
++    };
++    for (const auto name : kAllNames) {
++        const char *known_event = CommonEventNameToEventString(name);
++        if (known_event != nullptr && std::strcmp(known_event, event) == 0) {
++            out = name;
++            return true;
++        }
++    }
++    return false;
++}
++
++}  // namespace kuikly
++
++#endif  // CORE_RENDER_OHOS_KRCOMMONEVENTNAME_H
+diff --git a/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp b/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp
+index 413544b..949d2a3 100644
+--- a/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp
++++ b/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp
+@@ -18,6 +18,8 @@
+ #include <cstdio>
+ #include <functional>
+ #include "libohos_render/context/IKRRenderNativeContextHandler.h"
++#include "libohos_render/expand/events/common_event/KRCommonEventManager.h"
++#include "libohos_render/export/IKRRenderViewExport.h"
+ #include "libohos_render/manager/KRRenderManager.h"
+ #include "libohos_render/scheduler/IKRScheduler.h"
+ #include "libohos_render/scheduler/KRContextScheduler.h"
+@@ -83,6 +85,8 @@ KRRenderView::~KRRenderView() {
+     node_content_handle_ = nullptr;
+     native_resources_manager_ = nullptr;
+     method_arg_callback_map_.clear();
++    // 防御性注销：正常路径在 WillDestroy 中已注销，此处兜底避免订阅泄漏
++    UnsubscribeCommonEvents();
+ }
+ 
+ void KRRenderView::RemoveRootViewFromContentHandle(bool immediate){
+@@ -120,6 +124,7 @@ void KRRenderView::OnAttachToWindow(ArkUI_NodeContentHandle handle){
+ 
+ void KRRenderView::WillDestroy(const std::string &instanceId) {
+     DispatchInitState(KRInitState::kStateDestroy);
++    UnsubscribeCommonEvents();
+     core_->WillDealloc(instanceId);
+     // send event to call
+     // delay destroy for core
+@@ -287,6 +292,9 @@ void KRRenderView::Init(std::shared_ptr<KRRenderContextParams> context, ArkUI_Co
+     context_ = context;
+     ui_context_handle_ = ui_context_handle;
+     native_resources_manager_ = native_resources_manager;
++    // 早于 core 初始化订阅：页面视图树会在 core 初始化过程中被同步创建，
++    // 提前订阅可保证事件通道在首帧之前就绪（见 openspec change: ohos-custom-back-to-top）
++    SubscribeCommonEvents();
+     int performanceMonitorTypesMask = context->Config()->GetPerformanceMonitorTypesMask();
+     performance_manager_ = std::make_shared<KRPerformanceManager>(performanceMonitorTypesMask, context->PageName(), context->InstanceIdValue(), context->ExecuteMode());
+     performance_manager_->SetArkLaunchTime(launch_time);
+@@ -378,6 +386,12 @@ KRPoint KRRenderView::GetRootNodePositionInWindow() const {
+ }
+ 
+ void KRRenderView::DispatchInitState(KRInitState state) {
++    // 活跃状态（页面是否可见）单独维护，避免与性能埋点的 case 落穿逻辑耦合
++    if (state == KRInitState::kStateResume) {
++        is_active_ = true;
++    } else if (state == KRInitState::kStatePause || state == KRInitState::kStateDestroy) {
++        is_active_ = false;
++    }
+     switch (state) {
+     case KRInitState::kStateKRRenderViewInit:
+         performance_manager_->OnKRRenderViewInit();
+@@ -422,3 +436,47 @@ void KRRenderView::DispatchInitState(KRInitState state) {
+             NewKRRenderValue(static_cast<int>(state)), nullptr, nullptr, nullptr);
+     });
+ }
++
++void KRRenderView::SubscribeCommonEvents() {
++    if (is_common_event_subscribed_ || context_ == nullptr) {
++        return;
++    }
++    const std::string instance_id = context_->InstanceId();
++    if (instance_id.empty()) {
++        return;
++    }
++    is_common_event_subscribed_ = true;
++    kuikly::KRCommonEventManager::GetInstance().Subscribe(kuikly::CommonEventName::COMMON_EVENT_CLICK_STATUSBAR,
++                                                          instance_id);
++}
++
++void KRRenderView::UnsubscribeCommonEvents() {
++    if (!is_common_event_subscribed_ || context_ == nullptr) {
++        return;
++    }
++    is_common_event_subscribed_ = false;
++    kuikly::KRCommonEventManager::GetInstance().Unsubscribe(kuikly::CommonEventName::COMMON_EVENT_CLICK_STATUSBAR,
++                                                            context_->InstanceId());
++}
++
++void KRRenderView::OnCommonEvent(kuikly::CommonEventName name) {
++    KREnsureMainThread();
++
++    if (name != kuikly::CommonEventName::COMMON_EVENT_CLICK_STATUSBAR) {
++        return;
++    }
++    if (!is_active_) {
++        KR_LOG_INFO_WITH_TAG("KRCommonEvent")
++            << "skip " << kuikly::CommonEventNameToEventString(name) << ", instance is not active";
++        return;
++    }
++    if (core_ == nullptr) {
++        return;
++    }
++    // 遍历本实例视图树，由滚动容器自行决定回顶行为
++    core_->ForEachRenderView([](const std::shared_ptr<IKRRenderViewExport> &view) {
++        if (view != nullptr) {
++            view->OnStatusBarClicked();
++        }
++    });
++}

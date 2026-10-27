@@ -1,0 +1,898 @@
+/*
+ * Tencent is pleased to support the open source community by making KuiklyUI
+ * available.
+ * Copyright (C) 2025 Tencent. All rights reserved.
+ * Licensed under the License of KuiklyUI;
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * https://github.com/Tencent-TDS/KuiklyUI/blob/main/LICENSE
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include "libohos_render/expand/components/richtext/KRRichTextView.h"
+
+#include <algorithm>
+#include <multimedia/image_framework/image/pixelmap_native.h>
+#include <native_drawing/drawing_brush.h>
+#include <native_drawing/drawing_path.h>
+#include <native_drawing/drawing_pen.h>
+#include <native_drawing/drawing_pixel_map.h>
+#include <native_drawing/drawing_point.h>
+#include <native_drawing/drawing_rect.h>
+#include <native_drawing/drawing_sampling_options.h>
+#include <native_drawing/drawing_shader_effect.h>
+#include <unicode/ubrk.h>
+#include "libohos_render/expand/components/base/KRCustomUserCallback.h"
+#include "libohos_render/expand/components/richtext/KRCustomEmojiPixmapCache.h"
+#include "libohos_render/expand/components/richtext/KRRichTextShadow.h"
+#include "libohos_render/foundation/KRConfig.h"
+#include "libohos_render/foundation/thread/KRMainThread.h"
+#include "libohos_render/foundation/KRPoint.h"
+#include "libohos_render/export/IKRRenderViewExport.h"
+#include "libohos_render/utils/KRConvertUtil.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+// Remove this declaration if compatable api is raised to 14 and above
+extern size_t OH_Drawing_GetDrawingArraySize(OH_Drawing_Array* drawingArray) __attribute__((weak));
+extern OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode,
+    const char* ellipsis) __attribute__((weak));
+extern void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canvas, double x, double y) __attribute__((weak));
+extern OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size_t index) __attribute__((weak));
+extern void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line) __attribute__((weak));
+// Weak extern for selection - API compatibility (OH_Drawing_TypographyGetLineCount/GetLineInfo provided by SDK)
+extern OH_Drawing_Range* OH_Drawing_TypographyGetLineTextRange(OH_Drawing_Typography* typography, int index,
+    bool includeNewLine) __attribute__((weak));
+extern size_t OH_Drawing_GetStartFromRange(OH_Drawing_Range* range) __attribute__((weak));
+extern size_t OH_Drawing_GetEndFromRange(OH_Drawing_Range* range) __attribute__((weak));
+#ifdef __cplusplus
+}
+#endif
+
+static const char * kPropNameLineBreakMargin = "lineBreakMargin";
+static const char * kPropNameClick = "click";
+static const char * kPropNameLongPress = "longPress";
+
+ArkUI_NodeHandle KRRichTextView::CreateNode() {
+    if (KR_TEXT_RENDER_V2_ENABLED){
+        return kuikly::util::GetNodeApi()->createNode(ARKUI_NODE_TEXT);
+    } else {
+        return kuikly::util::GetNodeApi()->createNode(ARKUI_NODE_CUSTOM);
+    }
+}
+
+void KRRichTextView::OnDestroy() {
+    kuikly::util::GetNodeApi()->resetAttribute(GetNode(), NODE_TEXT_CONTENT_WITH_STYLED_STRING);
+
+    IKRRenderViewExport::OnDestroy();
+    auto self = shared_from_this();
+    KREventDispatchCenter::GetInstance().UnregisterCustomEvent(self);
+    shadow_ = nullptr;
+}
+
+bool KRRichTextView::ReuseEnable() {
+    return true;
+}
+
+void KRRichTextView::SetRenderViewFrame(const KRRect &frame) {
+    IKRRenderViewExport::SetRenderViewFrame(frame);
+}
+
+void KRRichTextView::OnCustomEvent(ArkUI_NodeCustomEvent *event, const ArkUI_NodeCustomEventType &event_type) {
+    if (event_type == ARKUI_NODE_CUSTOM_EVENT_ON_FOREGROUND_DRAW) {
+        OnForegroundDraw(event);
+    }
+}
+
+void KRRichTextView::DidInit() {
+    IKRRenderViewExport::DidInit();
+}
+
+void KRRichTextView::SetShadow(const std::shared_ptr<IKRRenderShadowExport> &shadow) {
+    shadow_ = shadow;
+
+    auto textShadow = std::dynamic_pointer_cast<KRRichTextShadow>(shadow);
+    // 决策 6C：image span（由 PostProcessor("richtext") 拆段产生）只在 V1（老 typography）
+    // OnForegroundDraw 路径下能被绘制——因为 V2 的 StyledString 是交给 ArkUI 节点直接
+    // 渲染，SDK 当前没暴露插入图片绘制 hook 的入口。这个判定已收敛到
+    // shadow->StyledStringEnabled()（含 image span 时返 false），本处只读一个结果。
+    bool use_styled_string = textShadow && textShadow->StyledStringEnabled();
+    bool has_image_span = textShadow && textShadow->HasImageSpans();
+    if(use_styled_string){
+        ArkUI_AttributeItem item;
+        if(std::shared_ptr<KRParagraph> paragraph = std::dynamic_pointer_cast<KRRichTextShadow>(shadow)->GetParagraph()){
+            item.object = paragraph->GetStyledString();
+            kuikly::util::GetNodeApi()->setAttribute(GetNode(), NODE_TEXT_CONTENT_WITH_STYLED_STRING, &item);
+            // Note:
+            // The ownership of the styled string is not going to be transferred,
+            // by setting the style item to the note by calling 
+            // setAttribute with NODE_TEXT_CONTENT_WITH_STYLED_STRING.
+            // Besides, it is not reference counted,
+            // we need to make sure it is alive after setting it to the node.
+            paragraph_ = paragraph;
+        }
+    }else {
+        KREventDispatchCenter::GetInstance().RegisterCustomEvent(shared_from_this(), ARKUI_NODE_CUSTOM_EVENT_ON_FOREGROUND_DRAW);
+        kuikly::util::GetNodeApi()->markDirty(GetNode(), NODE_NEED_RENDER);
+    }
+    // 注册 image span 解码完成回调：weak 引用 view，避免悬挂访问；解码完成在主线程被
+    // 调用（shadow 端已用 KRMainThread::RunOnMainThread 切换），这里直接 markDirty 即可。
+    if (textShadow && has_image_span) {
+        std::weak_ptr<IKRRenderViewExport> weak_self = shared_from_this();
+        textShadow->SetImageLoadedCallback(
+            [weak_self](const std::string & /*uri*/) {
+                auto strong = weak_self.lock();
+                if (!strong) {
+                    return;
+                }
+                kuikly::util::GetNodeApi()->markDirty(strong->GetNode(), NODE_NEED_RENDER);
+            });
+    } else if (textShadow) {
+        textShadow->SetImageLoadedCallback(nullptr);
+    }
+}
+
+void KRRichTextView::DidMoveToParentView() {
+    IKRRenderViewExport::DidMoveToParentView();
+    auto self = shared_from_this();
+    KREventDispatchCenter::GetInstance().RegisterCustomEvent(self, ARKUI_NODE_CUSTOM_EVENT_ON_FOREGROUND_DRAW);
+}
+
+void KRRichTextView::DidRemoveFromParentView() {
+    kuikly::util::GetNodeApi()->resetAttribute(GetNode(), NODE_TEXT_CONTENT_WITH_STYLED_STRING);
+    IKRRenderViewExport::DidRemoveFromParentView();
+    shadow_ = nullptr;
+    paragraph_ = nullptr;
+    last_draw_frame_width_ = -1.0;
+}
+
+void KRRichTextView::OnForegroundDraw(ArkUI_NodeCustomEvent *event) {
+    if (shadow_ == nullptr || GetFrame().width == 0) {
+        KR_LOG_ERROR << "OnForegroundDraw, shadow or frame not ready, shadow:" << shadow_.get()
+                     << ", frame width:" << GetFrame().width;
+        return;
+    }
+    if (auto rootView = GetRootView().lock()) {
+        if (rootView->IsPerformMainTasking()) {
+            std::weak_ptr<IKRRenderViewExport> weakSelf = shared_from_this();
+            KRMainThread::RunOnMainThreadForNextLoop([weakSelf] {
+                if(auto strongSelf = weakSelf.lock()){
+                    kuikly::util::GetNodeApi()->markDirty(strongSelf->GetNode(), NODE_NEED_RENDER);
+                }
+            });
+#ifndef NDEBUG
+            KR_LOG_ERROR << "OnForegroundDraw, IsPerformMainTasking Skip:" << shadow_.get();
+#endif
+            return;
+        }
+    }
+    auto richTextShadow = reinterpret_cast<KRRichTextShadow *>(shadow_.get());
+    if (richTextShadow == nullptr) {
+        KR_LOG_ERROR << "OnForegroundDraw, richTextShadow null";
+        return;
+    }
+    // 拿一份 typography 的强引用并保持到本函数返回。这样即使主线程中途因
+    // Kotlin 同步回调递归进入 ReleaseLastTypography()/SetMainThreadTypography(新)，
+    // 被替换下来的旧 typography 也不会在本调用栈还在使用它的期间被销毁。
+    KRTypographyHandle textTypoHandle = richTextShadow->MainThreadTypographyHandle();
+    OH_Drawing_Typography *textTypo = textTypoHandle ? textTypoHandle.get() : nullptr;
+    if (textTypo == nullptr) {
+        KR_LOG_ERROR << "OnForegroundDraw, textTypo null, shadow:" << richTextShadow;
+        return;
+    }
+    double drawOffsetY = richTextShadow->DrawOffsetY();
+    OH_Drawing_TextAlign textAlign = richTextShadow->TextAlign();
+    auto textTypoSize = richTextShadow->MainMeasureSize();
+    // 在容器前景上绘制额外图形，实现图形显示在子组件之上。
+    auto *drawContext = OH_ArkUI_NodeCustomEvent_GetDrawContextInDraw(event);
+    auto *drawingHandle = reinterpret_cast<OH_Drawing_Canvas *>(OH_ArkUI_DrawContext_GetCanvas(drawContext));
+    auto frameWidth = GetFrame().width;
+    bool needReLayout = false;
+    if (last_draw_frame_width_ > 0 && fabs(last_draw_frame_width_ - frameWidth) > 0.01) {
+        needReLayout = true;
+    }
+    if (fabs(textTypoSize.width - frameWidth) > 1 || textAlign != TEXT_ALIGN_LEFT) {
+        needReLayout = true;
+    }
+    if (needReLayout) {
+        auto dpi = KRConfig::GetDpi();
+        OH_Drawing_TypographyLayout(textTypo, frameWidth * dpi);
+        last_draw_frame_width_ = frameWidth;
+        if (textAlign != TEXT_ALIGN_LEFT) {
+            richTextShadow->ResetTextAlign();
+        }
+    }
+
+    if (!selection_rects_.selection_rects.empty()) {
+        double density = KRConfig::GetDpi();
+        OH_Drawing_Brush *backgroundBrush = OH_Drawing_BrushCreate();
+        OH_Drawing_BrushSetColor(backgroundBrush, 0x33007DFF);
+        OH_Drawing_CanvasAttachBrush(drawingHandle, backgroundBrush);
+        OH_Drawing_Path *backgroundPath = OH_Drawing_PathCreate();
+        for (const KRRect &rect : selection_rects_.selection_rects) {
+            OH_Drawing_PathReset(backgroundPath);
+            OH_Drawing_PathMoveTo(backgroundPath, rect.x * density, rect.y * density);
+            OH_Drawing_PathLineTo(backgroundPath, (rect.x + rect.width) * density, rect.y * density);
+            OH_Drawing_PathLineTo(backgroundPath, (rect.x + rect.width) * density,
+                                  (rect.y + rect.height) * density);
+            OH_Drawing_PathLineTo(backgroundPath, rect.x * density, (rect.y + rect.height) * density);
+            OH_Drawing_PathClose(backgroundPath);
+            OH_Drawing_CanvasDrawPath(drawingHandle, backgroundPath);
+        }
+        OH_Drawing_CanvasDetachBrush(drawingHandle);
+        OH_Drawing_BrushDestroy(backgroundBrush);
+        OH_Drawing_PathDestroy(backgroundPath);
+    }
+
+    if(OH_Drawing_TextLinePaint && line_break_margin_ > 0 && richTextShadow->DidExceedMaxLines()){
+        auto text_lines = richTextShadow->GetTextLines();
+        size_t line_count = OH_Drawing_GetDrawingArraySize(text_lines);
+        for(int i = 0; i < line_count; ++i){
+            OH_Drawing_TextLine* line = OH_Drawing_GetTextLineByIndex(text_lines, i);
+
+            if(i + 1 == line_count && richTextShadow->DidExceedMaxLines()){
+                OH_Drawing_TextLine *truncated_text_line = OH_Drawing_TextLineCreateTruncatedLine(line, (frameWidth - line_break_margin_) * KRConfig::GetDpi(), ELLIPSIS_MODAL_TAIL, "...");
+                OH_Drawing_TextLinePaint( truncated_text_line, drawingHandle, 0, -drawOffsetY);
+                OH_Drawing_DestroyTextLine(truncated_text_line);
+            }else{
+                OH_Drawing_TextLinePaint( line, drawingHandle, 0, -drawOffsetY);
+            }
+        }
+        if(line_count > 0){
+            return;
+        }
+    }
+    // fallback
+    OH_Drawing_TypographyPaint(textTypo, drawingHandle, 0, -drawOffsetY);
+
+    // ===== Phase 4: 绘制由 PostProcessor("richtext") 产生的 image span =====
+    // 时机：紧跟 OH_Drawing_TypographyPaint 之后；图片画在文字上层是预期效果——表情
+    // 通常带轻微阴影/抗锯齿，需要覆盖排版底色。坐标系：placeholder rect 为 px（已乘 dpi），
+    // canvas 同样 px；drawOffsetY 也是 px，保持与 TypographyPaint 一致即可。
+    // 业务声明的 ImageSpan（spanPropsMap 自带 placeholderWidth）不在 image_draw_records_
+    // 中，不会被本块绘制——它们继续走"父节点 ImageView" 老链路。
+    const auto &image_records = richTextShadow->GetImageDrawRecords();
+    if (!image_records.empty()) {
+        OH_Drawing_TextBox *placeholder_rects = OH_Drawing_TypographyGetRectsForPlaceholders(textTypo);
+        if (placeholder_rects) {
+            int rect_count = OH_Drawing_GetSizeOfTextBox(placeholder_rects);
+            // 复用一份 sampling options：emoji 缩放优先 LINEAR，避免最近邻产生锯齿。
+            OH_Drawing_SamplingOptions *sampling = OH_Drawing_SamplingOptionsCreate(
+                FILTER_MODE_LINEAR, MIPMAP_MODE_NONE);
+            for (const auto &rec : image_records) {
+                if (rec.placeholder_index < 0 || rec.placeholder_index >= rect_count) {
+                    continue;
+                }
+                // 持有 shared_ptr 强引用：在本地变量 pm_holder 存活期间，即便此刻被并发
+                // Evict / TrimLocked 从 cache 中移除，底层 pixmap 仍保活直到本作用域结束
+                // ——彻底消除原本"裸指针 + 锁外使用"的悬挂访问风险。
+                auto pm_holder = KRCustomEmojiPixmapCache::GetInstance().Get(rec.src_uri);
+                OH_PixelmapNative *pm = pm_holder.get();
+                if (!pm) {
+                    // 解码尚未就绪：本帧空过；KRCustomEmojiPixmapCache 解码完成后会通过
+                    // ImageLoadedCallback 跳转到 view 这里的 markDirty 触发下一帧重绘。
+                    // 第一次绘制 → 解码 → markDirty → 第二次绘制命中本路径，体感几乎无延迟。
+                    continue;
+                }
+                OH_Drawing_PixelMap *draw_pm = OH_Drawing_PixelMapGetFromOhPixelMapNative(pm);
+                if (!draw_pm) {
+                    continue;
+                }
+                // 取 placeholder 在 typography 内的 px 矩形，注意：drawOffsetY 与
+                // TypographyPaint 时一致（向上平移）。
+                float left = OH_Drawing_GetLeftFromTextBox(placeholder_rects, rec.placeholder_index);
+                float top = OH_Drawing_GetTopFromTextBox(placeholder_rects, rec.placeholder_index);
+                float right = OH_Drawing_GetRightFromTextBox(placeholder_rects, rec.placeholder_index);
+                float bottom = OH_Drawing_GetBottomFromTextBox(placeholder_rects, rec.placeholder_index);
+                // src 矩形：整张图（pixmap 原始像素尺寸）。
+                OH_Pixelmap_ImageInfo *info = nullptr;
+                OH_PixelmapImageInfo_Create(&info);
+                uint32_t img_w = 0, img_h = 0;
+                if (info && OH_PixelmapNative_GetImageInfo(pm, info) == IMAGE_SUCCESS) {
+                    OH_PixelmapImageInfo_GetWidth(info, &img_w);
+                    OH_PixelmapImageInfo_GetHeight(info, &img_h);
+                }
+                if (info) {
+                    OH_PixelmapImageInfo_Release(info);
+                }
+                if (img_w == 0 || img_h == 0) {
+                    // 没拿到尺寸时不绘制，避免 src=(0,0,0,0) 导致的未定义行为。
+                    OH_Drawing_PixelMapDissolve(draw_pm);
+                    continue;
+                }
+                OH_Drawing_Rect *src = OH_Drawing_RectCreate(0, 0, static_cast<float>(img_w),
+                                                              static_cast<float>(img_h));
+                OH_Drawing_Rect *dst = OH_Drawing_RectCreate(left, top - drawOffsetY,
+                                                              right, bottom - drawOffsetY);
+                OH_Drawing_CanvasDrawPixelMapRect(drawingHandle, draw_pm, src, dst, sampling);
+                OH_Drawing_RectDestroy(src);
+                OH_Drawing_RectDestroy(dst);
+                // PixelMapGetFromOhPixelMapNative 返回的 OH_Drawing_PixelMap 与 native pixmap
+                // 形成关联；按 SDK 规范，使用完毕后必须 Dissolve 解除关联，但 native 对象
+                // 由 KRCustomEmojiPixmapCache（进程级单例）持续持有，不在此 release。
+                OH_Drawing_PixelMapDissolve(draw_pm);
+            }
+            if (sampling) {
+                OH_Drawing_SamplingOptionsDestroy(sampling);
+            }
+            OH_Drawing_TypographyDestroyTextBox(placeholder_rects);
+        }
+    }
+}
+
+void KRRichTextView::ToSetProp(const std::string &prop_key, const KRAnyValue &prop_value,
+                               const KRRenderCallback event_callback) {
+    if (kuikly::util::isEqual(prop_key, kPropNameClick)) {
+        std::weak_ptr<KRRichTextView> weakSelf = std::dynamic_pointer_cast<KRRichTextView>(shared_from_this());
+        KRRenderCallback middleManCallback = [weakSelf, event_callback](KRAnyValue res) {
+            auto strongSelf = weakSelf.lock();
+            if (strongSelf == nullptr){
+                return;
+            }
+            if (auto richTextShadow = std::dynamic_pointer_cast<KRRichTextShadow>(strongSelf->shadow_)) {
+                event_callback(richTextShadow->BuildEventParams(res));
+            } else {
+                event_callback(res);
+            }
+        };
+        IKRRenderViewExport::ToSetProp(prop_key, prop_value, middleManCallback);
+    } else if (kuikly::util::isEqual(prop_key, kPropNameLongPress)) {
+        std::weak_ptr<KRRichTextView> weakSelf = std::dynamic_pointer_cast<KRRichTextView>(shared_from_this());
+        KRRenderCallback middleManCallback = [weakSelf, event_callback](KRAnyValue res) {
+            auto strongSelf = weakSelf.lock();
+            if (strongSelf == nullptr) {
+                return;
+            }
+            if (auto richTextShadow = std::dynamic_pointer_cast<KRRichTextShadow>(strongSelf->shadow_)) {
+                event_callback(richTextShadow->BuildLongPressEventParams(res));
+            } else {
+                event_callback(res);
+            }
+        };
+        IKRRenderViewExport::ToSetProp(prop_key, prop_value, middleManCallback);
+    } else if(prop_key == kPropNameLineBreakMargin) {
+        line_break_margin_ = prop_value->toFloat();
+    }else {
+        IKRRenderViewExport::ToSetProp(prop_key, prop_value, event_callback);
+    }
+}
+
+void KRRichTextView::ClearSelection() {
+    selection_rects_.start = 0;
+    selection_rects_.end = 0;
+    selection_rects_.selection_rects.clear();
+    SetSelected(false);
+    SetNeedsDisplay();
+}
+
+void KRRichTextView::SetSelectionAll() {
+    KRParagraphInfo info = GetParagraphInfo();
+    selection_rects_ = info.GetSelectionRectsAll();
+    SetSelected(true);
+    SetNeedsDisplay();
+}
+
+const KRParagraphSelectionInfo &KRRichTextView::GetSelectionInfo() {
+    return selection_rects_;
+}
+
+const KRParagraphSelectionInfo &KRRichTextView::SetSelection(KRPoint start, KRPoint end, int type) {
+    KRParagraphInfo info = GetParagraphInfo();
+    selection_rects_ = info.GetSelectionRects2(start, end, type);
+    SetSelected(true);
+    SetNeedsDisplay();
+    return selection_rects_;
+}
+
+static int GetOffsetInLine(KRLineInfo &info, KRPoint point_in, SelectionStrategy &which_part, bool &first_in_line,
+                           bool &last_in_line) {
+    float density = KRConfig::GetDpi();
+    KRPoint point(point_in.x * density, point_in.y * density);
+
+    float min_distance = 100000;
+    int index = -1;
+
+    info.ForEach([&index, &min_distance, point](int i, KRRect rect) {
+        float dist = std::fabs(point.x - rect.x - rect.width / 2);
+        if (dist < min_distance) {
+            min_distance = dist;
+            index = i;
+        }
+    });
+    first_in_line = index == info.FrontIndex();
+    last_in_line = index == info.BackIndex();
+    if (index == -1) {
+        index = info.FrontIndex();
+    }
+
+    auto rect = info.Get(index);
+    which_part = point.x - rect.x - rect.width / 2 > 0 ? SelectionStrategy::Trailing : SelectionStrategy::Leading;
+    return index;
+}
+
+static bool IsLineTerminator(char16_t c) {
+    return c == u'\n' || c == u'\r' || c == u'\u2028' || c == u'\u2029' || c == u'\u0085';
+}
+
+// Returns the ICU break segment [begin, end) containing `offset`. When `words_only` is set,
+// segments that are not words (whitespace / punctuation) are reported as not found.
+static std::pair<int, int> GetBreakIteratorBoundary(UBreakIteratorType type, const std::u16string &text, int offset,
+                                                    bool words_only) {
+    const int length = static_cast<int>(text.size());
+    if (offset < 0 || offset >= length) {
+        return std::make_pair(offset, offset);
+    }
+    UErrorCode status = U_ZERO_ERROR;
+    UBreakIterator *iterator = ubrk_open(type, nullptr, text.data(), length, &status);
+    if (U_FAILURE(status) || iterator == nullptr) {
+        KR_LOG_ERROR << "ubrk_open failed, type:" << type << ", status:" << status;
+        if (iterator) {
+            ubrk_close(iterator);
+        }
+        return std::make_pair(offset, offset);
+    }
+    int end = ubrk_following(iterator, offset);
+    if (end == UBRK_DONE) {
+        end = length;
+    }
+    // Rule status describes the segment that ends at the boundary just returned.
+    int32_t rule_status = ubrk_getRuleStatus(iterator);
+    int begin = ubrk_preceding(iterator, end);
+    if (begin == UBRK_DONE) {
+        begin = 0;
+    }
+    ubrk_close(iterator);
+    if (words_only && rule_status >= UBRK_WORD_NONE && rule_status < UBRK_WORD_NONE_LIMIT) {
+        return std::make_pair(offset, offset);
+    }
+    return std::make_pair(begin, end);
+}
+
+std::pair<int, int> KRParagraphInfo::GetCharacterBoundary(int offset) {
+    auto boundary = GetBreakIteratorBoundary(UBRK_CHARACTER, text_content_, offset, false);
+    if (boundary.first >= boundary.second) {
+        return std::make_pair(offset, offset + 1);
+    }
+    return boundary;
+}
+
+std::pair<int, int> KRParagraphInfo::GetWordBoundary(int offset) {
+    return GetBreakIteratorBoundary(UBRK_WORD, text_content_, offset, true);
+}
+
+// Trailing spaces / line terminators stay inside the sentence, aligned with iOS and Android.
+std::pair<int, int> KRParagraphInfo::GetSentenceBoundary(int offset) {
+    return GetBreakIteratorBoundary(UBRK_SENTENCE, text_content_, offset, false);
+}
+
+// A paragraph is delimited by line terminators, which are not part of the returned range.
+// Touching a terminator selects the paragraph that it ends.
+std::pair<int, int> KRParagraphInfo::GetParagraphBoundary(int offset) {
+    const int length = static_cast<int>(text_content_.size());
+    if (offset < 0 || offset >= length) {
+        return std::make_pair(offset, offset);
+    }
+    int begin = offset;
+    while (begin > 0 && !IsLineTerminator(text_content_[begin - 1])) {
+        --begin;
+    }
+    int end = offset;
+    while (end < length && !IsLineTerminator(text_content_[end])) {
+        ++end;
+    }
+    return std::make_pair(begin, end);
+}
+
+// Returns the half-open interval [begin, end) of the span that contains `offset`.
+// span_offsets_ entries are tuples of (span_index, begin_offset, end_offset) where
+// end_offset is exclusive. When no span contains `offset`, returns an empty range
+// (offset, offset) so callers can treat span_start == span_end as "no span found".
+std::pair<int, int> KRParagraphInfo::GetSpanBoundary(int offset) {
+    for (const auto &span_off : span_offsets_) {
+        int begin = std::get<1>(span_off);
+        int end = std::get<2>(span_off);
+        if (offset >= begin && offset < end) {
+            return std::make_pair(begin, end);
+        }
+    }
+    return std::make_pair(offset, offset);
+}
+
+std::pair<int, int> KRParagraphInfo::GetBoundary(int type, int offset) {
+    std::pair<int, int> boundary(offset, offset);
+    switch (type) {
+        case KRTextSelectionType::WORD:
+            boundary = GetWordBoundary(offset);
+            break;
+        case KRTextSelectionType::SENTENCE:
+            boundary = GetSentenceBoundary(offset);
+            break;
+        case KRTextSelectionType::PARAGRAPH:
+            boundary = GetParagraphBoundary(offset);
+            break;
+        case KRTextSelectionType::SPAN:
+            boundary = GetSpanBoundary(offset);
+            break;
+        default:
+            break;
+    }
+    // Every type falls back to the grapheme cluster under the touch point, aligned with Android / iOS.
+    if (boundary.first >= boundary.second) {
+        boundary = GetCharacterBoundary(offset);
+    }
+    return boundary;
+}
+
+KRParagraphSelectionInfo KRParagraphInfo::GetSelectionRectsAll() {
+    float density = KRConfig::GetDpi();
+    std::vector<KRRect> selected_rect_list;
+
+    for (size_t line_index = 0; line_index < line_info_list_.size(); ++line_index) {
+        const KRLineInfo &line_info = line_info_list_[line_index];
+
+        const KRRect start_rect = line_info.Front();
+        const KRRect end_rect = line_info.Back();
+        KRRect result(start_rect.x / density, line_info.line_metrics_.y / density,
+                      (end_rect.x - start_rect.x + end_rect.width) / density,
+                      line_info.line_metrics_.height / density);
+
+        selected_rect_list.push_back(result);
+    }
+    KRParagraphSelectionInfo info;
+    info.start = 0;
+    info.text_content = text_content_;
+    info.span_offsets = span_offsets_;
+    info.end = line_info_list_.empty() ? 0 : line_info_list_.back().line_metrics_.endIndex;
+    info.selection_rects = selected_rect_list;
+    return info;
+}
+
+KRParagraphSelectionInfo KRParagraphInfo::GetSelectionRects2(KRPoint p0, KRPoint p1, int type) {
+    float density = KRConfig::GetDpi();
+    auto points = std::array{p0, p1};
+    int line_numbers[2];
+    int point_index = 0;
+    for (auto p : points) {
+        KRPoint point(p.x * density, p.y * density);
+        float min_distance = 100000;
+        int which_line = -1;
+        for (size_t line_index = 0; line_index < line_info_list_.size(); ++line_index) {
+            const KRLineInfo &line_info = line_info_list_[line_index];
+            float center = line_info.line_metrics_.y + line_info.line_metrics_.height / 2;
+            float distance = std::fabs(center - point.y);
+            if (distance < min_distance) {
+                min_distance = distance;
+                which_line = static_cast<int>(line_index);
+            }
+        }
+        line_numbers[point_index] = which_line >= 0 ? which_line : 0;
+        ++point_index;
+    }
+
+    if (line_numbers[0] > line_numbers[1]) {
+        std::swap(line_numbers[0], line_numbers[1]);
+        std::swap(points[0], points[1]);
+    }
+
+    int first_line_text_offset = -1;
+    bool first_line_text_is_first_in_line = true;
+    bool first_line_text_is_last_in_line = true;
+    SelectionStrategy which_part_of_first_line_text = SelectionStrategy::Leading;
+    int last_line_text_offset = -1;
+    bool last_line_text_is_first_in_line = true;
+    bool last_line_text_is_last_in_line = true;
+    SelectionStrategy which_part_of_last_line_text = SelectionStrategy::Trailing;
+    std::vector<KRRect> rects;
+    {
+        auto line_info = line_info_list_[line_numbers[0]];
+        KRPoint first_point(points[0].x * density, points[0].y * density);
+        if (first_point.y < line_info_list_[line_numbers[0]].line_metrics_.y) {
+            first_line_text_offset = line_info_list_[line_numbers[0]].line_metrics_.startIndex;
+        } else {
+            first_line_text_offset = GetOffsetInLine(line_info, points[0], which_part_of_first_line_text,
+                                                     first_line_text_is_first_in_line, first_line_text_is_last_in_line);
+        }
+    }
+
+    {
+        auto line_info = line_info_list_[line_numbers[1]];
+        KRPoint last_point(points[1].x * density, points[1].y * density);
+        if (last_point.y > line_info_list_[line_numbers[1]].line_metrics_.y +
+                              line_info_list_[line_numbers[1]].line_metrics_.height) {
+            last_line_text_offset = line_info_list_[line_numbers[1]].BackOffset();
+        } else {
+            last_line_text_offset = GetOffsetInLine(line_info, points[1], which_part_of_last_line_text,
+                                                    last_line_text_is_first_in_line, last_line_text_is_last_in_line);
+        }
+    }
+
+    if (first_line_text_offset > last_line_text_offset) {
+        std::swap(first_line_text_offset, last_line_text_offset);
+        std::swap(first_line_text_is_first_in_line, last_line_text_is_first_in_line);
+        std::swap(first_line_text_is_last_in_line, last_line_text_is_last_in_line);
+    }
+
+    // Expand the touched offset to the range described by `type`. Handle dragging reuses CHARACTER with two
+    // distinct points, so CHARACTER only expands when both points coincide (i.e. createSelection).
+    bool expand_by_type = type == KRTextSelectionType::WORD || type == KRTextSelectionType::SENTENCE ||
+                          type == KRTextSelectionType::PARAGRAPH || type == KRTextSelectionType::SPAN ||
+                          (type == KRTextSelectionType::CHARACTER && p0 == p1);
+    int range_start = -1;
+    int range_end = -1;
+    if (expand_by_type && first_line_text_offset >= 0) {
+        auto [boundary_start, boundary_end] = GetBoundary(type, first_line_text_offset);
+        // Map [boundary_start, boundary_end) onto glyph offsets: start/end may fall inside a cluster
+        // or on glyphs without a rect box (e.g. line terminators). The start line must lock onto the
+        // FIRST matching line so a soft-wrap boundary never pushes it one line too far.
+        int first_line = -1;
+        int first_offset = -1;
+        int last_line = -1;
+        int last_offset = -1;
+        for (size_t i = 0; i < line_info_list_.size(); ++i) {
+            if (first_line < 0) {
+                int offset = line_info_list_[i].FirstIndexInRange(boundary_start, boundary_end);
+                if (offset >= 0) {
+                    first_line = static_cast<int>(i);
+                    first_offset = offset;
+                }
+            }
+            int offset = line_info_list_[i].LastIndexInRange(boundary_start, boundary_end);
+            if (offset >= 0) {
+                last_line = static_cast<int>(i);
+                last_offset = offset;
+            }
+        }
+        if (first_line >= 0 && last_line >= 0) {
+            range_start = boundary_start;
+            range_end = boundary_end;
+            line_numbers[0] = first_line;
+            line_numbers[1] = last_line;
+            // last_line_text_offset stays inclusive (the last selected glyph).
+            first_line_text_offset = first_offset;
+            last_line_text_offset = last_offset;
+
+            // The is_first/is_last/which_part flags were derived from the raw touch points and no longer
+            // describe the expanded range. Reset them so the rect-building logic always takes the
+            // "has-width" branches and yields a non-zero-width selection rect.
+            first_line_text_is_first_in_line = false;
+            first_line_text_is_last_in_line = false;
+            last_line_text_is_first_in_line = false;
+            last_line_text_is_last_in_line = false;
+            which_part_of_first_line_text = SelectionStrategy::Leading;
+            which_part_of_last_line_text = SelectionStrategy::Trailing;
+        }
+    }
+
+    float first_char_width = -1;
+    float last_char_width = -1;
+    if (line_numbers[0] == line_numbers[1]) {
+        if (last_line_text_is_first_in_line && first_line_text_is_first_in_line &&
+            which_part_of_last_line_text == which_part_of_first_line_text) {
+            auto line_info = line_info_list_[line_numbers[0]];
+            const KRRect &start_rect = line_info.Get(first_line_text_offset);
+            KRRect result(start_rect.x / density, line_info.line_metrics_.y / density, 0,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            first_char_width = start_rect.width;
+        } else {
+            auto line_info = line_info_list_[line_numbers[0]];
+            const KRRect start_rect = line_info.Get(first_line_text_offset);
+            const KRRect end_rect = line_info.Get(last_line_text_offset);
+            KRRect result(start_rect.x / density, line_info.line_metrics_.y / density,
+                          (end_rect.x - start_rect.x + end_rect.width) / density,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            first_char_width = start_rect.width;
+            last_char_width = end_rect.width;
+        }
+    } else {
+        if (!(first_line_text_is_last_in_line && which_part_of_first_line_text == SelectionStrategy::Trailing)) {
+            auto line_info = line_info_list_[line_numbers[0]];
+            const KRRect &start_rect = line_info.Get(first_line_text_offset);
+            const KRRect &end_rect = line_info.Back();
+            KRRect result(start_rect.x / density, line_info.line_metrics_.y / density,
+                          (end_rect.x - start_rect.x + end_rect.width) / density,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            first_char_width = start_rect.width;
+        } else {
+            auto line_info = line_info_list_[line_numbers[0]];
+            const KRRect &end_rect = line_info.Back();
+            KRRect result((end_rect.x + end_rect.width) / density, line_info.line_metrics_.y / density, 0,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            first_char_width = end_rect.width;
+        }
+        for (int i = line_numbers[0] + 1; i < line_numbers[1]; ++i) {
+            auto line_info = line_info_list_[i];
+            KRRect result(line_info.line_metrics_.x / density, line_info.line_metrics_.y / density,
+                          line_info.line_metrics_.width / density, line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            if (first_char_width < 0) {
+                first_char_width = line_info.Front().width;
+            } else {
+                last_char_width = line_info.Back().width;
+            }
+        }
+        if (!(last_line_text_is_first_in_line && which_part_of_last_line_text == SelectionStrategy::Leading)) {
+            auto line_info = line_info_list_[line_numbers[1]];
+            const KRRect &end_rect = line_info.Get(last_line_text_offset);
+            const KRRect &start_rect = line_info.Front();
+            KRRect result(start_rect.x / density, line_info.line_metrics_.y / density,
+                          (end_rect.x - start_rect.x + end_rect.width) / density,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            last_char_width = end_rect.width;
+        } else {
+            auto line_info = line_info_list_[line_numbers[1]];
+            const KRRect &end_rect = line_info.Get(last_line_text_offset);
+            const KRRect &start_rect = line_info.Front();
+            KRRect result(start_rect.x / density, line_info.line_metrics_.y / density, 0,
+                          line_info.line_metrics_.height / density);
+            rects.push_back(result);
+            last_char_width = end_rect.width;
+        }
+    }
+
+    KRParagraphSelectionInfo info;
+    info.text_content = text_content_;
+    info.span_offsets = span_offsets_;
+    if (range_start >= 0) {
+        info.start = range_start;
+        info.end = range_end;
+    } else {
+        info.start = first_line_text_offset;
+        info.end = rects.empty() || rects.front().width <= 0 ? last_line_text_offset : last_line_text_offset + 1;
+    }
+    info.selection_rects = rects;
+    info.first_char_width = first_char_width > 0 ? first_char_width / density : 0;
+    info.last_char_width = last_char_width > 0 ? last_char_width / density : 0;
+    return info;
+}
+
+KRParagraphInfo KRRichTextView::GetParagraphInfo() {
+    KRParagraphInfo paragraph_info;
+    auto richTextShadow = reinterpret_cast<KRRichTextShadow *>(shadow_.get());
+    if (richTextShadow) {
+        OH_Drawing_Typography *textTypo = richTextShadow->MainThreadTypography();
+        paragraph_info.typography_ = textTypo;
+    }
+
+    auto textShadow = std::dynamic_pointer_cast<KRRichTextShadow>(shadow_);
+    if (!textShadow) {
+        return paragraph_info;
+    }
+    OH_Drawing_Typography *textTypo = textShadow->MainThreadTypography();
+    if (textTypo == nullptr) {
+        return paragraph_info;
+    }
+
+    auto frame = GetFrame();
+    paragraph_info.width_ = frame.width;
+    paragraph_info.height_ = frame.height;
+
+    paragraph_info.text_content_ = textShadow->GetTextContent();
+    paragraph_info.span_offsets_ = textShadow->span_offsets_;
+    size_t lineCount = OH_Drawing_TypographyGetLineCount(textTypo);
+    for (size_t i = 0; i < lineCount; ++i) {
+        KRLineInfo line_info;
+        OH_Drawing_TypographyGetLineInfo(textTypo, i, true, true, &line_info.line_metrics_);
+        OH_Drawing_Range *text_range =
+            OH_Drawing_TypographyGetLineTextRange ? OH_Drawing_TypographyGetLineTextRange(textTypo, i, true) : nullptr;
+        if (text_range && OH_Drawing_GetStartFromRange && OH_Drawing_GetEndFromRange) {
+            size_t text_start = OH_Drawing_GetStartFromRange(text_range);
+            size_t text_end = OH_Drawing_GetEndFromRange(text_range);
+            (void)text_start;
+            (void)text_end;
+        }
+
+        int advance_count = 1;
+        for (int index = line_info.line_metrics_.startIndex; index < line_info.line_metrics_.endIndex;
+             index += advance_count) {
+            advance_count = 1;
+
+            OH_Drawing_TextBox *boxes = nullptr;
+            size_t count = 0;
+            // A single glyph may span multiple code units (surrogate pairs / combining
+            // marks). Grow the query range up to kMaxAdvancePerGlyph code units until the
+            // typography engine yields at least one rect box for the range.
+            constexpr int kMaxAdvancePerGlyph = 4;
+            while (advance_count < kMaxAdvancePerGlyph) {
+                boxes = OH_Drawing_TypographyGetRectsForRange(textTypo, index, index + advance_count,
+                                                              RECT_HEIGHT_STYLE_TIGHT, RECT_WIDTH_STYLE_TIGHT);
+                count = OH_Drawing_GetSizeOfTextBox(boxes);
+                if (count > 0) {
+                    break;
+                }
+                ++advance_count;
+            }
+
+            if (count == 1) {
+                for (size_t bi = 0; bi < count; ++bi) {
+                    float left = OH_Drawing_GetLeftFromTextBox(boxes, bi);
+                    float right = OH_Drawing_GetRightFromTextBox(boxes, bi);
+                    float top = OH_Drawing_GetTopFromTextBox(boxes, bi);
+                    float bottom = OH_Drawing_GetBottomFromTextBox(boxes, bi);
+                    float width = right - left;
+                    float height = bottom - top;
+                    line_info.Insert(index, KRRect(left, top, width, height));
+                }
+            }
+            if (boxes) {
+                OH_Drawing_TypographyDestroyTextBox(boxes);
+            }
+        }
+        paragraph_info.line_info_list_.emplace_back(line_info);
+    }
+
+    return paragraph_info;
+}
+
+int KRParagraphSelectionInfo::TextIndexForTypographyOffset(int offset) const {
+    if (offset <= 0 || span_offsets.empty()) {
+        return offset < 0 ? 0 : offset;
+    }
+    int text_index = 0;
+    for (const auto &span : span_offsets) {
+        int begin = std::get<1>(span);
+        int end = std::get<2>(span);
+        if (offset <= begin) {
+            return text_index;
+        }
+        if (offset < end) {
+            return text_index + (offset - begin);
+        }
+        text_index += end - begin;
+    }
+    return text_index;
+}
+
+std::u16string KRRichTextView::GetSelectedContent(std::u16string &pre, std::u16string &post) {
+    const std::u16string &str16 = selection_rects_.text_content;
+    const size_t n = str16.size();
+    size_t sel_end = std::min(static_cast<size_t>(selection_rects_.TextIndexForTypographyOffset(selection_rects_.end)), n);
+    size_t sel_start =
+        std::min(static_cast<size_t>(selection_rects_.TextIndexForTypographyOffset(selection_rects_.start)), sel_end);
+    if (sel_start > 0) {
+        pre = str16.substr(0, sel_start);
+    }
+    if (sel_end < n) {
+        post = str16.substr(sel_end);
+    }
+    return str16.substr(sel_start, sel_end - sel_start);
+}
+
+bool KRRichTextView::UpdateSelection(std::shared_ptr<IKRRenderViewExport> ancestor_view, KRPoint ancestor_point1,
+                                     KRPoint ancestor_point2, int type) {
+    bool has_intersection = false;
+
+    auto [frame, selection_frame] = GetSelectionFrameInAncestorCoordinate(ancestor_view, ancestor_point1,
+                                                                          ancestor_point2, type);
+    if (selection_frame.IsValid()) {
+        has_intersection = selection_frame.IsIntersect(frame);
+    } else {
+        KRRect reverse_frame(std::min(ancestor_point1.x, ancestor_point2.x),
+                             std::min(ancestor_point1.y, ancestor_point2.y),
+                             std::abs(ancestor_point1.x - ancestor_point2.x),
+                             std::abs(ancestor_point1.y - ancestor_point2.y));
+        has_intersection = reverse_frame.IsIntersect(frame);
+    }
+
+    if (has_intersection) {
+        KRPoint start = selection_frame.Origin();
+        KRPoint end(selection_frame.x + selection_frame.width, selection_frame.y + selection_frame.height);
+        KRPoint view_start = ConvertPointToChildCoordinate(start, ancestor_view->GetNode(), GetNode());
+        KRPoint view_end = ConvertPointToChildCoordinate(end, ancestor_view->GetNode(), GetNode());
+
+        SetSelection(view_start, view_end, type);
+    }
+
+    SetSelected(has_intersection);
+
+    return has_intersection;
+}

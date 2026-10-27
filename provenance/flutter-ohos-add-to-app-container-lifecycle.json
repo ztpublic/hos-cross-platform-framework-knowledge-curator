@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-add-to-app-container-lifecycle",
+  "sources": [
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "ede82b2df889e92a6d2c69e8398fd401cc72f157bd995b17de526b02dbcbd7a7",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+      "sha256": "3357284d528be97e1c7bd21e1ff21ce1970231deded2e79008b9ff405868ab72",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/modules/flutter_module/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/modules/flutter_module/oh-package.json5",
+      "sha256": "28bb42be17ad15d74f0cd7a345bfb20f33a0b716f540aa0b7b79fbd7cebb9b5f",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

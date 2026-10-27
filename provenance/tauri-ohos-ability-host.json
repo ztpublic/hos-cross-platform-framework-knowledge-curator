@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-ability-host",
+  "sources": [
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/Cargo.toml",
+      "sha256": "44df1be57055b93430ee3546c594ccb75cdc0e9a2d94471cfa97e5c40619d426",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/src/lib.rs",
+      "sha256": "1aaf7147ddbdc2b535fc5cfaed321372c47e65a6989898c3544683a7225483fb",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/src/lib.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "d4cf61c756a2e5cbd6eb9fdb29d90e102b4cb129181a6102a6b52cfff5589ba2",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/src/main/module.json5",
+      "sha256": "ba20a3b83ae56253c21b32916273379cf5390eb4ccb7af61433c8639aac4dd50",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/gen/ohos/entry/src/main/module.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "79470c4f35173d034c7969abf2026527445615ed437fe44abf284b6302be29c2",
+      "revision": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "url": "https://github.com/Islatri/tauri-ohos-test/blob/cc73aeea903ec135cf8c445fb46d98cd93403c7e/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-macros/src/mobile.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-macros/src/mobile.rs",
+      "sha256": "19b6bdc4365ff79b47aaf3ac606d3dd1181d9a7fe0b065bed8de7799a236345a",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-macros/src/mobile.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/src/ohos.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/src/ohos.rs",
+      "sha256": "91b5f502c56f225e2a83af6a7722f0159bed16b56fcb303aaabfb7d6ef23b7b2",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri/src/ohos.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/application/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/application/EntryAbility.ets",
+      "sha256": "6ce1ed786a7785ae80faa89c189bfb5a35b1d246956a8176ad999f318e3e5470",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/application/EntryAbility.ets",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "crates/gproxy-host-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/lib.rs",
+      "sha256": "8c623ddfe35d7e401a15bb78f319fb000d319f36e402569552681b55ca6b7b6b",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/crates/gproxy-host-tauri/src/lib.rs",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "crates/gproxy-host-tauri/src/ohos.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/ohos.rs",
+      "sha256": "1b8ed8680333292c6b05bb7663e5dd168775fb46fa8be24f7f25675fcbccb7e9",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/crates/gproxy-host-tauri/src/ohos.rs",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/configure-hap.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/configure-hap.py",
+      "sha256": "b386a742b8d9eb6be7e4ffb1a7b141ef396f55fc76575e3d1c35642af80f3932",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/configure-hap.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "3a2a53489e5b67675e18930b0744b1baf87a500eb6f0b8e25a85cb88a6170634",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/oh-package.json5",
+      "sha256": "abf786ab3a3eb3ea7c6a3b6180cf8c99a737eded7c8240031689da314993d415",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism from pinned source inputs; project identities and revisions retained only in provenance.",
+    "Recommendations and acceptance cases are source-derived and were not executed.",
+    "Added a distinct full application using a shared experimental fork; related fork-family evidence is not an independent runtime corroboration.",
+    "Added an application host whose pinned implementation extends RustAbility and names its cdylib. Do not substitute newer NativeAbility terminology across dependency generations."
+  ],
+  "limitations": [
+    "No build, installation or PC runtime verification performed.",
+    "The two observed host API generations are not claimed interchangeable.",
+    "Application documentation reports emulator execution only; its README calls the host RustAbility while the pinned EntryAbility source uses NativeAbility. Source code governs the class identity."
+  ]
+}

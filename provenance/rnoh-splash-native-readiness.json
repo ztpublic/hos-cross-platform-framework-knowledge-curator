@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-splash-native-readiness",
+  "sources": [
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "sha256": "2eb0c85054e0851f34160f11ca37272fb76127661766483b938398ecbb153b59",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "1188a4d9c8ef3d70fe6fb252f64c7dd415c4854e93eed090602522491d776d74",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "harmony/splash_screen/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/harmony/splash_screen/oh-package.json5",
+      "sha256": "27dcb08c2c2513e53551b3751c97b5c6dba2e6f487dfd7a96eaece0eba18ed2e",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

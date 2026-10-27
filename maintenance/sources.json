@@ -9,7 +9,7 @@
       "observed_commit": "0d01beb7f49ca9642107dc143da14e432841458c",
       "analyzed_commit": null,
       "import_scope": "Documents enumerated by maintenance/import-map.csv; not a fresh source-project review.",
-      "working_tree_status": " M INDEX.md\n M PROJECTS.md\n M knowledge/chunked-native-file-transfer.md\n M knowledge/database-backend-and-data-contract.md\n M knowledge/hdr-output-surface-and-capability.md\n M knowledge/resumable-file-download-contract.md\n M knowledge/sandbox-paths-and-app-identity.md\n M knowledge/video-surface-backend-contract.md\n M knowledge/viewport-scale-and-layout-lifetime.md\n M knowledge/window-mode-and-fullscreen-state.md\n M projects.json\n M provenance/chunked-native-file-transfer.json\n M provenance/database-backend-and-data-contract.json\n M provenance/hdr-output-surface-and-capability.json\n M provenance/resumable-file-download-contract.json\n M provenance/sandbox-paths-and-app-identity.json\n M provenance/video-surface-backend-contract.json\n M provenance/viewport-scale-and-layout-lifetime.json\n M provenance/window-mode-and-fullscreen-state.json\n?? UPDATE-2026-10-19.md\n?? knowledge/native-event-loop-handle-teardown.md\n?? knowledge/offline-data-rescue-startup-isolation.md\n?? provenance/native-event-loop-handle-teardown.json\n?? provenance/offline-data-rescue-startup-isolation.json\n?? runs/2026-10-19-update-awesome-blbl.json\n?? runs/2026-10-19-update-beecount-oh.json\n?? runs/2026-10-19-update-bugaoshan.json\n?? runs/2026-10-19-update-bujuan.json\n?? runs/2026-10-19-update-connssh.json\n?? runs/2026-10-19-update-dmzj-aloereed.json\n?? runs/2026-10-19-update-dmzj-handwer.json\n?? runs/2026-10-19-update-dorm-expense.json\n?? runs/2026-10-19-update-draftmark.json\n?? runs/2026-10-19-update-enjoy-plus.json\n?? runs/2026-10-19-update-etohos.json\n?? runs/2026-10-19-update-flclash-shenyingjun.json\n?? runs/2026-10-19-update-flclash.json\n?? runs/2026-10-19-update-fusheng-music.json\n?? runs/2026-10-19-update-gardendless.json\n?? runs/2026-10-19-update-happy-coder.json\n?? runs/2026-10-19-update-hlbmerge.json\n?? runs/2026-10-19-update-inknote.json\n?? runs/2026-10-19-update-jellyfin-music.json\n?? runs/2026-10-19-update-jimu-comate.json\n?? runs/2026-10-19-update-kazumi.json\n?? runs/2026-10-19-update-kelivo.json\n?? runs/2026-10-19-update-kikoflu.json\n?? runs/2026-10-19-update-lichess-oh.json\n?? runs/2026-10-19-update-localsend.json\n?? runs/2026-10-19-update-mi-workbench.json\n?? runs/2026-10-19-update-minecraft-box.json\n?? runs/2026-10-19-update-moviepilot.json\n?? runs/2026-10-19-update-mr.json\n?? runs/2026-10-19-update-neon.json\n?? runs/2026-10-19-update-nexora.json\n?? runs/2026-10-19-update-nipaplay.json\n?? runs/2026-10-19-update-nju-timetable.json\n?? runs/2026-10-19-update-nomark.json\n?? runs/2026-10-19-update-operit2.json\n?? runs/2026-10-19-update-oronbox.json\n?? runs/2026-10-19-update-petnote.json\n?? runs/2026-10-19-update-picacomic.json\n?? runs/2026-10-19-update-pilinara.json\n?? runs/2026-10-19-update-piliplus.json\n?? runs/2026-10-19-update-piliplusx.json\n?? runs/2026-10-19-update-pindou.json\n?? runs/2026-10-19-update-pixez.json\n?? runs/2026-10-19-update-qingnote.json\n?? runs/2026-10-19-update-registered-projects.json\n?? runs/2026-10-19-update-shuqi.json\n?? runs/2026-10-19-update-simple-live-yabi.json\n?? runs/2026-10-19-update-simple-live.json\n?? runs/2026-10-19-update-simple-shop.json\n?? runs/2026-10-19-update-snake.json\n?? runs/2026-10-19-update-ssemarket.json\n?? runs/2026-10-19-update-ssh-codex.json\n?? runs/2026-10-19-update-todo-harmony.json\n?? runs/2026-10-19-update-toki.json\n?? runs/2026-10-19-update-venera-harmony.json\n?? runs/2026-10-19-update-venera.json\n?? runs/2026-10-19-update-wild.json\n?? runs/2026-10-19-update-wildfire-chat.json\n?? runs/2026-10-19-update-xingmu.json\n?? runs/2026-10-19-update-yun-reader.json\n?? runs/2026-10-19-update-zhiji.json\n",
+      "working_tree_status": "M INDEX.md\n M PROJECTS.md\n M knowledge/chunked-native-file-transfer.md\n M knowledge/database-backend-and-data-contract.md\n M knowledge/hdr-output-surface-and-capability.md\n M knowledge/resumable-file-download-contract.md\n M knowledge/sandbox-paths-and-app-identity.md\n M knowledge/video-surface-backend-contract.md\n M knowledge/viewport-scale-and-layout-lifetime.md\n M knowledge/window-mode-and-fullscreen-state.md\n M projects.json\n M provenance/chunked-native-file-transfer.json\n M provenance/database-backend-and-data-contract.json\n M provenance/hdr-output-surface-and-capability.json\n M provenance/resumable-file-download-contract.json\n M provenance/sandbox-paths-and-app-identity.json\n M provenance/video-surface-backend-contract.json\n M provenance/viewport-scale-and-layout-lifetime.json\n M provenance/window-mode-and-fullscreen-state.json\n?? UPDATE-2026-10-19.md\n?? knowledge/native-event-loop-handle-teardown.md\n?? knowledge/offline-data-rescue-startup-isolation.md\n?? provenance/native-event-loop-handle-teardown.json\n?? provenance/offline-data-rescue-startup-isolation.json\n?? runs/2026-10-19-update-awesome-blbl.json\n?? runs/2026-10-19-update-beecount-oh.json\n?? runs/2026-10-19-update-bugaoshan.json\n?? runs/2026-10-19-update-bujuan.json\n?? runs/2026-10-19-update-connssh.json\n?? runs/2026-10-19-update-dmzj-aloereed.json\n?? runs/2026-10-19-update-dmzj-handwer.json\n?? runs/2026-10-19-update-dorm-expense.json\n?? runs/2026-10-19-update-draftmark.json\n?? runs/2026-10-19-update-enjoy-plus.json\n?? runs/2026-10-19-update-etohos.json\n?? runs/2026-10-19-update-flclash-shenyingjun.json\n?? runs/2026-10-19-update-flclash.json\n?? runs/2026-10-19-update-fusheng-music.json\n?? runs/2026-10-19-update-gardendless.json\n?? runs/2026-10-19-update-happy-coder.json\n?? runs/2026-10-19-update-hlbmerge.json\n?? runs/2026-10-19-update-inknote.json\n?? runs/2026-10-19-update-jellyfin-music.json\n?? runs/2026-10-19-update-jimu-comate.json\n?? runs/2026-10-19-update-kazumi.json\n?? runs/2026-10-19-update-kelivo.json\n?? runs/2026-10-19-update-kikoflu.json\n?? runs/2026-10-19-update-lichess-oh.json\n?? runs/2026-10-19-update-localsend.json\n?? runs/2026-10-19-update-mi-workbench.json\n?? runs/2026-10-19-update-minecraft-box.json\n?? runs/2026-10-19-update-moviepilot.json\n?? runs/2026-10-19-update-mr.json\n?? runs/2026-10-19-update-neon.json\n?? runs/2026-10-19-update-nexora.json\n?? runs/2026-10-19-update-nipaplay.json\n?? runs/2026-10-19-update-nju-timetable.json\n?? runs/2026-10-19-update-nomark.json\n?? runs/2026-10-19-update-operit2.json\n?? runs/2026-10-19-update-oronbox.json\n?? runs/2026-10-19-update-petnote.json\n?? runs/2026-10-19-update-picacomic.json\n?? runs/2026-10-19-update-pilinara.json\n?? runs/2026-10-19-update-piliplus.json\n?? runs/2026-10-19-update-piliplusx.json\n?? runs/2026-10-19-update-pindou.json\n?? runs/2026-10-19-update-pixez.json\n?? runs/2026-10-19-update-qingnote.json\n?? runs/2026-10-19-update-registered-projects.json\n?? runs/2026-10-19-update-shuqi.json\n?? runs/2026-10-19-update-simple-live-yabi.json\n?? runs/2026-10-19-update-simple-live.json\n?? runs/2026-10-19-update-simple-shop.json\n?? runs/2026-10-19-update-snake.json\n?? runs/2026-10-19-update-ssemarket.json\n?? runs/2026-10-19-update-ssh-codex.json\n?? runs/2026-10-19-update-todo-harmony.json\n?? runs/2026-10-19-update-toki.json\n?? runs/2026-10-19-update-venera-harmony.json\n?? runs/2026-10-19-update-venera.json\n?? runs/2026-10-19-update-wild.json\n?? runs/2026-10-19-update-wildfire-chat.json\n?? runs/2026-10-19-update-xingmu.json\n?? runs/2026-10-19-update-yun-reader.json\n?? runs/2026-10-19-update-zhiji.json",
       "frameworks": [
         "flutter"
       ],
@@ -20,11 +20,17 @@
         "status": "source snapshot only; not independently reviewed here"
       },
       "collection_review": {
-        "status": "complete-for-mapped-documents",
+        "status": "complete-for-current-local-inventory",
+        "reviewed_on": "2026-10-27",
         "map": "maintenance/import-map.csv",
-        "identity": "per-file hashes, including local modifications",
-        "reviewed_on": "2026-10-20"
-      }
+        "inventory_review": "maintenance/reviews/2026-10-27/collection-inventory.json",
+        "identity": "exact local per-file SHA-256, including modified/untracked content",
+        "outcome": "Mapped consumer/provenance content unchanged; two newly inventoried Flutter generated indexes are orchestration material, not reimports."
+      },
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "remote_observed_commit": "90817867e21831c68a778ed1f30311514f482394",
+      "remote_relationship": "Remote main is an ancestor of the newer imported local HEAD; preserve exact local snapshots and analyzed_commit:null."
     },
     {
       "id": "qt-knowledge-import",
@@ -40,11 +46,16 @@
       ],
       "snapshot_identity": "Per-file SHA-256; HEAD alone does not describe imported working content.",
       "collection_review": {
-        "status": "complete-for-mapped-documents",
+        "status": "complete-for-current-local-inventory",
+        "reviewed_on": "2026-10-27",
         "map": "maintenance/import-map.csv",
-        "identity": "per-file hashes, including local modifications",
-        "reviewed_on": "2026-10-20"
-      }
+        "inventory_review": "maintenance/reviews/2026-10-27/collection-inventory.json",
+        "identity": "exact local per-file SHA-256, including modified/untracked content",
+        "outcome": "Mapped consumer/provenance content unchanged; two newly inventoried Flutter generated indexes are orchestration material, not reimports."
+      },
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "remote_observed_commit": "e3f69039c6394ac7366449a9330b5749ce6a10b1"
     },
     {
       "id": "dsh-desktop-hos",
@@ -53,8 +64,8 @@
       "framework": "electron",
       "aliases": [],
       "selected_ref": "main",
-      "observed_commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
-      "analyzed_commit": "2a69cf6de336255ebaa3f1aff017f45c5281cf23",
+      "observed_commit": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
+      "analyzed_commit": "ef585fdecc33723fa82370184c7b0b7a6ef3ce70",
       "license": "MIT",
       "local_path": "/Users/mac/projects/harmonyos-kb-research/dsh-desktop-hos",
       "working_tree_status": "",
@@ -75,11 +86,12 @@
         "electron-ohos-native-addon-abi",
         "electron-ohos-non-pty-exec"
       ],
-      "last_run": "2026-10-20-project-research-1.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Electron runtime/JIT, native-addon ABI and non-PTY command execution.",
       "source_reported_validation": "Device measurements on HarmonyOS 6.1.0.135 (API 24) for Electron startup, JIT, native addons and non-PTY execution; not rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/dsh-desktop-hos-MIT.txt"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/dsh-desktop-hos-MIT.txt",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "klayout-on-harmony-pc",
@@ -107,11 +119,12 @@
         "qt-ohos-link-gc-static-registration",
         "qt-ohos-system-lib-duplication"
       ],
-      "last_run": "2026-10-20-project-research-1.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Qt application startup, resource and plugin loading, linker retention and system-library packaging.",
       "source_reported_validation": "A release HAP on a 2in1 device loaded 25 plugins, registered formats and opened layouts; not rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/klayout-GPL-3.0.txt"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/klayout-GPL-3.0.txt",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohos-pc-launcher",
@@ -133,11 +146,12 @@
       "knowledge_ids": [
         "qt-ohos-secondary-ability-process"
       ],
-      "last_run": "2026-10-20-project-research-2.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed a Qt dual-process PC launch architecture.",
       "source_reported_validation": "The README describes a dual-process PC launch architecture; no device run was rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/ohos-pc-launcher-BSD.txt"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/ohos-pc-launcher-BSD.txt",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "compose-multiplatform-harmony",
@@ -165,10 +179,11 @@
         "kmp-ohos-compose-target",
         "kmp-ohos-compose-host"
       ],
-      "last_run": "2026-10-20-project-research-2.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed an OH-adapted Compose Multiplatform target and ArkTS host.",
       "source_reported_validation": "The README and notes describe a working OH HAP; no build was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "react-native-harmony-seed",
@@ -198,10 +213,11 @@
         "rnoh-js-bundle-platform",
         "rnoh-ohos-package-adaptation"
       ],
-      "last_run": "2026-10-20-project-research-2.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed an RNOH native host, harmony Metro bundle and OH package adaptation.",
       "source_reported_validation": "The README describes an RNOH seed application; no build or device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "doubao-watermark-lab",
@@ -227,11 +243,12 @@
         "electron-ohos-builder-packaging",
         "electron-ohos-platform-capability-gates"
       ],
-      "last_run": "2026-10-20-project-research-3.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed an Electron OH packaging pipeline and platform feature gates.",
       "source_reported_validation": "The documentation reports a working 2in1/tablet HAP; no build was rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/doubao-watermark-lab-MIT.txt"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/doubao-watermark-lab-MIT.txt",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohshark",
@@ -258,11 +275,12 @@
         "qt6-ohos-subwindow-surfaces",
         "qt6-ohos-subwindow-input"
       ],
-      "last_run": "2026-10-20-project-research-3.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Qt 6 OH high-DPI, subwindow surface and subwindow input integration.",
       "source_reported_validation": "The porting record reports OCR/injected-input verification on a 2in1 device; no run was rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/ohshark-Qt-LGPL-NOTICE.md"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/ohshark-Qt-LGPL-NOTICE.md",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "vlc-qt6-ohos",
@@ -292,10 +310,11 @@
         "qt6-ohos-subtitle-overlay",
         "qt6-ohos-avsession-bridge"
       ],
-      "last_run": "2026-10-20-project-research-4.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Qt 6 native video texture, subtitle overlay and AVSession integration.",
       "source_reported_validation": "The porting notes report hardware-texture playback, SRT/external/embedded ASS subtitles, AVSession controls and background audio on a 2in1 device; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "freecad-on-harmonyos",
@@ -329,11 +348,12 @@
         "qt6-ohos-gl4es-draw-batching",
         "qt6-ohos-single-ability-splash"
       ],
-      "last_run": "2026-10-20-project-research-5.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Qt 6 GL translation state, draw batching and single-Ability splash startup.",
       "source_reported_validation": "The porting notes report a working 3D GUI, Preferences, splash cold-start frames and large-model rotation on a 2in1 device; no run was rerun.",
-      "checked_at": "2026-10-20",
-      "license_notice": "maintenance/licenses/freecad-LGPL-2.1.txt"
+      "checked_at": "2026-10-27",
+      "license_notice": "maintenance/licenses/freecad-LGPL-2.1.txt",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "scidavis-for-harmonyos",
@@ -359,10 +379,11 @@
         "qt-ohos-embedded-file-dialogs",
         "qt-ohos-arkts-chrome-insets"
       ],
-      "last_run": "2026-10-20-project-research-6.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed a Qt/ArkTS hybrid work-folder grant, embedded file dialogs and ArkTS chrome insets.",
       "source_reported_validation": "The README reports working file operations, embedded dialogs and 2in1 UI on API 26; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "electron-egg-ohos",
@@ -390,10 +411,11 @@
         "electron-ohos-resfile-injection",
         "electron-ohos-process-isolation"
       ],
-      "last_run": "2026-10-20-project-research-7.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed an ElectronEgg HAP resource-injection pipeline and multi-process ability split.",
       "source_reported_validation": "The adaptation record reports T0/T1 device runs and classifies multi-window/multi-instance as untested T2; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohos-ktouch",
@@ -422,10 +444,11 @@
         "qt-ohos-qml-module-bundling",
         "qt-ohos-kde-shims"
       ],
-      "last_run": "2026-10-20-project-research-8.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed QML module bundling and a KF6 compatibility shim layer for a Qt/KDE PC port.",
       "source_reported_validation": "The port notes report a device-tested core typing flow and a 36M HAP; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "drawio-in-harmony",
@@ -452,10 +475,11 @@
         "electron-ohos-older-runtime-shims",
         "electron-ohos-statusbar-openurl"
       ],
-      "last_run": "2026-10-20-project-research-9.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed an Electron version-gap shim layer and status-bar/open-url host integration.",
       "source_reported_validation": "The adaptation notes report targeted unit tests and a validated host; no device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohos-jupyter",
@@ -482,10 +506,11 @@
         "electron-ohos-local-static-server",
         "electron-ohos-private-hnp"
       ],
-      "last_run": "2026-10-20-project-research-9.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed a loopback static-server runtime and private-HNP packaging for a web IDE.",
       "source_reported_validation": "The build notes report a signed HAP and simulator verification; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "harmonykmp",
@@ -514,10 +539,11 @@
         "kmp-ohos-dependency-and-renderer",
         "kmp-ohos-rawfile-resources"
       ],
-      "last_run": "2026-10-20-project-research-10.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed OH-specific KMP artifact selection, Compose renderer choice and rawfile resource loading.",
       "source_reported_validation": "The README reports Android/iOS/OH targets and the build configuration is present; no build or device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohos-electron-hap",
@@ -543,10 +569,11 @@
         "electron-ohos-window-types",
         "electron-ohos-main-inspect"
       ],
-      "last_run": "2026-10-20-project-research-11.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Electron OH subwindow/floating-window host logic and main-process inspection setup.",
       "source_reported_validation": "The template documents the window/debug workflows and provides host adapters; no build or device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "ohos-joplin",
@@ -559,7 +586,7 @@
       "analyzed_commit": "73046474f46269de177b78427b12f0c27888fe6b",
       "license": "AGPL-3.0-or-later (repository LICENSE; subdirectories may override).",
       "license_notice": "maintenance/licenses/ohos-joplin-AGPL-3.0.txt",
-      "local_path": "",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/ohos-joplin.git",
       "working_tree_status": "Not cloned (large LFS assets); evidence read from raw files at the recorded commit.",
       "reviewed_paths": [
         "README.OpenHarmony_CN.md",
@@ -570,10 +597,11 @@
         "rnoh-offline-bundle-and-fonts",
         "rnoh-har-reactcommon-extraction"
       ],
-      "last_run": "2026-10-20-project-research-12.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed RNOH offline bundle/asset/font packaging and a HAR ReactCommon extraction workaround.",
       "source_reported_validation": "The porting notes report a clone-and-run HAP and a CMake build after restoring ReactCommon; no build was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "notepad-ohos",
@@ -597,10 +625,11 @@
         "qt-ohos-external-clipboard-paste",
         "qt-ohos-default-font-metrics"
       ],
-      "last_run": "2026-10-20-project-research-13.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Recorded unresolved external-clipboard and default-font-metrics gaps from a Qt Widgets PC port.",
       "source_reported_validation": "The port README reports core editing as working and explicitly lists external clipboard paste and oversized menu fonts as unresolved; no run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "pure-live-ohos",
@@ -613,7 +642,7 @@
       "analyzed_commit": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
       "license": "AGPL-3.0 (repository LICENSE).",
       "license_notice": "maintenance/licenses/pure-live-AGPL-3.0.txt",
-      "local_path": "",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/pure-live-ohos.git",
       "working_tree_status": "Read from raw files at the recorded commit; large repository not cloned.",
       "reviewed_paths": [
         "README_OHOS.md",
@@ -628,10 +657,11 @@
         "flutter-ohos-versioned-so-packaging",
         "flutter-ohos-target-platform-vendoring"
       ],
-      "last_run": "2026-10-20-project-research-14.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed Flutter OH PC form-factor detection, versioned native-library packaging and TargetPlatform vendoring.",
       "source_reported_validation": "The port notes report a working HAP build and mobile/PC interaction split; no build or device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
     },
     {
       "id": "kuiklyui",
@@ -640,11 +670,11 @@
       "framework": "kotlin-multiplatform",
       "aliases": [],
       "selected_ref": "main",
-      "observed_commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
-      "analyzed_commit": "323dce038f84001e48c1825ee6b06cdae0ad1303",
+      "observed_commit": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "analyzed_commit": "7af1515cb9e093b07d65b5780347de06bee865e6",
       "license": "KuiklyUI License (custom; see LICENSE).",
       "license_notice": "maintenance/licenses/kuiklyui-LICENSE.txt",
-      "local_path": "",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/kuiklyui.git",
       "working_tree_status": "Read through the GitHub contents API at the recorded commit; repository not cloned.",
       "reviewed_paths": [
         "2.0_ohos_demo_build.sh",
@@ -658,10 +688,1208 @@
         "kmp-kuikly-ohos-host",
         "kmp-kuikly-ohos-resize-sync"
       ],
-      "last_run": "2026-10-20-project-research-15.json",
+      "last_run": "2026-10-27-update-and-discovery.json",
       "coverage": "Source-reviewed KuiklyUI OH host integration (Kotlin .so + renderer HAR/NAPI) and synchronous resize handling.",
       "source_reported_validation": "The demo build script and host delegate describe the integration; no build or device run was rerun.",
-      "checked_at": "2026-10-20"
+      "checked_at": "2026-10-27",
+      "incremental_review": {
+        "previous_analyzed_commit": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+        "observed_commit": "7af1515cb9e093b07d65b5780347de06bee865e6",
+        "commit_count": 12,
+        "dispositions": "maintenance/reviews/2026-10-27/commit-dispositions.json",
+        "coverage": "Every reachable commit screened with merge-aware changed paths; relevant native/host/dependency/shared-code diffs and final snapshots reviewed. This is not a line-by-line audit of all generic business/media code."
+      },
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "expo-device-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "931b46347a4eafc64b778b9ce4889891954572f1",
+      "analyzed_commit": "931b46347a4eafc64b778b9ce4889891954572f1",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/expo-device.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "LICENSE",
+        "README.OpenHarmony_CN.md",
+        "harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts"
+      ],
+      "knowledge_ids": [
+        "flutter-ohos-pc-form-factor",
+        "ohos-native-form-factor-classification"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "incremental_review": {
+        "previous_analyzed_commit": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+        "observed_commit": "931b46347a4eafc64b778b9ce4889891954572f1",
+        "commit_count": 2,
+        "dispositions": "maintenance/reviews/2026-10-27/commit-dispositions.json",
+        "coverage": "Every reachable commit screened with merge-aware changed paths; relevant native/host/dependency/shared-code diffs and final snapshots reviewed. This is not a line-by-line audit of all generic business/media code."
+      },
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "filekit-ohos",
+      "kind": "project",
+      "url": "https://github.com/HachimiWorld/FileKit-ohos",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "0.12.0-OH-1.0.0",
+      "observed_commit": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "analyzed_commit": "f44915a297d555a614b965f2245c09ade5183c8a",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/filekit-ohos.git",
+      "working_tree_status": "No checkout; pinned source text read through GitHub connector.",
+      "reviewed_paths": [
+        "LICENSE",
+        "OHOS.zh-CN.md",
+        "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/OhosDescriptor.kt",
+        "filekit-core/src/ohosMain/kotlin/io/github/vinceglb/filekit/PlatformFile.ohos.kt",
+        "filekit-dialogs/build.gradle.kts",
+        "filekit-dialogs/src/ohosMain/kotlin/io/github/vinceglb/filekit/dialogs/OhosSystemDialogs.kt",
+        "samples/ohos-integration/README.md"
+      ],
+      "knowledge_ids": [
+        "kmp-filekit-picker-descriptor-ownership",
+        "picker-cancellation-concurrency"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "flameshot-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/ohos-qt/flameshot",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "analyzed_commit": "6ce0dbe9354c02e65b8eb688a495c6a3c4bd34b9",
+      "license": "GPL-3.0-or-later",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/flameshot.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+        "README.md",
+        "src/utils/screenshotsaver.cpp"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-save-picker-name-and-format",
+        "qt-ohos-window-stage-recreation"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "flutter-embed-into-qt",
+      "kind": "project",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "framework": "qt",
+      "aliases": [
+        "https://gitee.com/openharmony-sig/flutter_embed_into_qt",
+        "https://gitee.com/getmoon/flutter_embed_into_qt"
+      ],
+      "selected_ref": "master",
+      "observed_commit": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "analyzed_commit": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/flutter_embed_into_qt-current.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "LICENSE",
+        "README.md",
+        "example/qt-embed-demo/qtmodule/src/main/ets/entryability/EntryAbility.ets",
+        "flutter_embed_into_qt/embedded/oh-package.json5",
+        "flutter_embed_into_qt/embedded/src/main/cpp/src/EmbeddedBridge.cpp",
+        "flutter_embed_into_qt/embedded/src/main/cpp/src/FlutterEmbeddedQWidget.cpp",
+        "flutter_embed_into_qt/embedded/src/main/ets/flutter/EncapsulationXCompent.ets",
+        "flutter_embed_into_qt/embedded/src/main/ets/flutter/MyFlutterWindow.ets"
+      ],
+      "knowledge_ids": [
+        "qt-flutter-ohos-embedded-node-host"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "frameworks": [
+        "qt",
+        "flutter"
+      ],
+      "alias_note": "Archived lineage points to the current GitCode repository; old Gitee revisions are not counted as independent corroboration.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "hachimi-world-ohos",
+      "kind": "project",
+      "url": "https://github.com/HachimiWorld/hachimi-world-client-ohos",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "ohos-dev",
+      "observed_commit": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "analyzed_commit": "7d7bfa45badf4c1a39810eb9708d1f0abda8d494",
+      "license": "AGPL-3.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/hachimi-world-ohos.git",
+      "working_tree_status": "No checkout; pinned source text read through GitHub connector.",
+      "reviewed_paths": [
+        "LICENSE",
+        "OHOS_MIGRATION.md",
+        "composeApp/build.ohos.gradle.kts",
+        "composeApp/src/commonMain/kotlin/world/hachimi/app/model/GlobalStore.kt",
+        "composeApp/src/commonMain/kotlin/world/hachimi/app/util/StringResources.kt",
+        "composeApp/src/ohosMain/kotlin/world/hachimi/app/player/OhosMediaSession.kt",
+        "harmonyApp/entry/src/main/cpp/napi_init.cpp",
+        "harmonyApp/entry/src/main/ets/entryability/EntryAbility.ets",
+        "harmonyApp/entry/src/main/module.json5"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-native-avsession-host",
+        "kmp-ohos-prepared-compose-resources",
+        "kmp-ohos-resource-environment-main-thread",
+        "native-avsession-metadata-asset-id"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "kamel-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/oh-tpc/Kamel",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "612405078c1bc4bfd540820fb0c3e087f6cef443",
+      "analyzed_commit": "612405078c1bc4bfd540820fb0c3e087f6cef443",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/Kamel.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "LICENSE",
+        "README.OpenHarmony_CN.md",
+        "example/harmonyApp/entry/src/main/cpp/napi_init.cpp",
+        "example/harmonyApp/entry/src/main/ets/pages/Index.ets",
+        "example/harmonyApp/entry/src/main/ets/workers/KamelWorker.ets",
+        "example/nativeApp/src/ohosMain/kotlin/Bridge.kt",
+        "gradle/libs.versions.toml",
+        "kamel-core/build.gradle.kts",
+        "kamel-core/src/commonMain/kotlin/io/kamel/core/Kamel.kt",
+        "kamel-core/src/ohosMain/kotlin/io/kamel/core/cache/HttpClientFactory.ohos.kt",
+        "settings.gradle.kts"
+      ],
+      "knowledge_ids": [
+        "kmp-napi-string-allocator-ownership",
+        "kmp-native-image-core-without-compose",
+        "kmp-ohos-dependency-and-renderer",
+        "native-curl-explicit-ca-bundle"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "incremental_review": {
+        "previous_analyzed_commit": "9a41666c6266521e56a1724ac35a42629f58a398",
+        "observed_commit": "612405078c1bc4bfd540820fb0c3e087f6cef443",
+        "commit_count": 3,
+        "dispositions": "maintenance/reviews/2026-10-27/commit-dispositions.json",
+        "coverage": "Every reachable commit screened with merge-aware changed paths; relevant native/host/dependency/shared-code diffs and final snapshots reviewed. This is not a line-by-line audit of all generic business/media code."
+      },
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "kotlinx-io-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "master",
+      "observed_commit": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "analyzed_commit": "97d2c325f6846ff2764f1509577e0aa1036f1bfc",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/kotlinx-io.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "LICENSE",
+        "example/nativeApp/src/ohosArm64Main/kotlin/org/jetbrains/kotlinx/io/example/NativeBridge.kt",
+        "example/ohosApp/entry/src/main/cpp/napi_init.cpp"
+      ],
+      "knowledge_ids": [
+        "kmp-napi-string-allocator-ownership"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "kuikly-mmkv",
+      "kind": "project",
+      "url": "https://github.com/walkman707/KuiklyMMKV",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "analyzed_commit": "e1d6192802707ad3ef12b499065f121cfc2fad5c",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/kuikly-mmkv.git",
+      "working_tree_status": "No checkout; pinned source text read through GitHub connector.",
+      "reviewed_paths": [
+        "LICENSE",
+        "mmkvKotlin/build.gradle.kts",
+        "mmkvKotlin/src/ohosArm64Main/kotlin/com/kuikly/thirdparty/kmp/lib/mmkv/MMKVImpl.kt",
+        "ohosApp/mmkv_c_wrapper/src/main/cpp/CMakeLists.txt",
+        "ohosApp/mmkv_c_wrapper/src/main/cpp/mmkv_c_wrapper.cpp"
+      ],
+      "knowledge_ids": [
+        "native-c-wrapper-optional-string-lifetime"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "liberika",
+      "kind": "project",
+      "url": "https://github.com/AimesSoft/liberika",
+      "framework": "flutter",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "analyzed_commit": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "license": "MPL-2.0; individual components retain their licenses.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/liberika.git",
+      "working_tree_status": "No checkout; pinned source text read through GitHub connector.",
+      "reviewed_paths": [
+        "LICENSE",
+        "docs/investigations/pr-150-159/ohos-runtime.zh.md",
+        "packages/erika_flutter/README.md",
+        "packages/erika_flutter/lib/src/erika_video_view.dart",
+        "packages/erika_flutter/ohos/src/main/cpp/CMakeLists.txt",
+        "packages/erika_flutter/ohos/src/main/cpp/erika_flutter_plugin.cpp",
+        "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+        "packages/erika_flutter/pubspec.yaml"
+      ],
+      "knowledge_ids": [
+        "flutter-ohos-texture-native-window-lifetime",
+        "native-bridge-stale-handle-identity"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "incremental_review": {
+        "previous_analyzed_commit": "4fc74af5b2fabfbf82557d0221923a0872b9e45e",
+        "observed_commit": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+        "commit_count": 54,
+        "dispositions": "maintenance/reviews/2026-10-27/commit-dispositions.json",
+        "coverage": "Every reachable commit screened with merge-aware changed paths; relevant native/host/dependency/shared-code diffs and final snapshots reviewed. This is not a line-by-line audit of all generic business/media code."
+      },
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "persepolis-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "analyzed_commit": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/persepolis.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "HarmonyOS/entry/src/main/ets/pages/SubWindowNativeNode.ets",
+        "HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+        "HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+        "README.md"
+      ],
+      "knowledge_ids": [
+        "media-save-and-clipboard-permissions",
+        "qt-ohos-clipboard-gui-thread",
+        "qt-ohos-external-clipboard-paste",
+        "qt-pyqt-ohos-subwindow-adoption"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "rnoh-skia-ohos",
+      "kind": "project",
+      "url": "https://github.com/hime88/react-native-skia-ohos",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "sig",
+      "observed_commit": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "analyzed_commit": "a9c799e33238ee13ea25853f805d91fde7094939",
+      "license": "MIT for the reviewed React Native Skia adapter; vendored components retain their notices.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-skia-ohos.git",
+      "working_tree_status": "No checkout; pinned source text read through GitHub connector.",
+      "reviewed_paths": [
+        "react-native-skia/LICENSE.md",
+        "tester/harmony/entry/oh-package.json5",
+        "tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+        "tester/harmony/entry/src/main/cpp/PackageProvider.cpp",
+        "tester/harmony/skia/src/main/cpp/CMakeLists.txt",
+        "tester/harmony/skia/src/main/cpp/SkiaPackage.cpp",
+        "tester/harmony/skia/src/main/ets/RNSkiaPackage.ts"
+      ],
+      "knowledge_ids": [
+        "rnoh-native-component-registration-parity"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "tex-ide-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_TeX_IDE",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "analyzed_commit": "87adaaedca76c355ff835e1ad2308c820d2804f5",
+      "license": "Application GPL-3.0; reviewed MiKTeX watcher carries GPL-2.0-or-later.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/ohos_TeX_IDE.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "README.md",
+        "miktex/Libraries/MiKTeX/Core/FileSystemWatcher/ohos/ohosFileSystemWatcher.cpp"
+      ],
+      "knowledge_ids": [
+        "native-directory-polling-fallback"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "vscodium-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/mdvista/hos_vscodium-opensource",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "analyzed_commit": "917701c94d7c077a8f2df5958b25f1dc58890bce",
+      "license": "No explicit license established for the custom native bridge sources; bundled VSCodium/Electron and dependencies retain their upstream licenses.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-22/hos_vscodium.git",
+      "working_tree_status": "Bare research clone; no source setup/build/checkout executed.",
+      "reviewed_paths": [
+        "README.md",
+        "electron/src/main/module.json5",
+        "native/build.sh",
+        "native/src/napi-dyn.c",
+        "native/src/napi-dyn.h",
+        "native/src/ohpty.c"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-conditional-pty-adapter",
+        "electron-ohos-napi-symbol-owner",
+        "electron-ohos-non-pty-exec"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Complete snapshot review for the listed mechanisms and paths; not an audit of every historical commit or application feature.",
+      "source_reported_validation": "See entry provenance and retained source documents; no reported build/device result was rerun.",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "tauri-demo",
+      "kind": "project",
+      "url": "https://github.com/richerfu/tauri-demo",
+      "framework": "tauri",
+      "aliases": [],
+      "fork_family": "tauri-open-harmony",
+      "selected_ref": "master",
+      "observed_commit": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "analyzed_commit": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/tauri-demo",
+      "reviewed_paths": [
+        "README.md",
+        "src-tauri/Cargo.toml",
+        "src-tauri/Cargo.lock",
+        "src-tauri/src/lib.rs",
+        "src-tauri/capabilities/default.json",
+        "src-tauri/gen/ohos/entry/oh-package.json5",
+        "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/gen/ohos/entry/src/main/module.json5",
+        "src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+        "src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+        "src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+        "src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+        "src-tauri/tauri-plugin-ohos-demo/build.rs",
+        "src-tauri/tauri-plugin-ohos-demo/permissions/default.toml"
+      ],
+      "knowledge_ids": [
+        "tauri-ohos-dependency-cohort",
+        "tauri-ohos-ability-host",
+        "tauri-ohos-plugin-command-registration",
+        "rust-ohos-target-cfg"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Selected OH integration paths only; no whole-repository history review.",
+      "source_reported_validation": "Source claims retained in README/issue snapshots; none rerun.",
+      "review_status": "complete-for-listed-paths-after-index-check",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "tauri-ohos-test",
+      "kind": "project",
+      "url": "https://github.com/Islatri/tauri-ohos-test",
+      "framework": "tauri",
+      "aliases": [],
+      "fork_family": "tauri-open-harmony",
+      "selected_ref": "main",
+      "observed_commit": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "analyzed_commit": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/tauri-ohos-test",
+      "reviewed_paths": [
+        "README.md",
+        "LICENSE",
+        "src-tauri/Cargo.toml",
+        "src-tauri/Cargo.lock",
+        "src-tauri/gen/ohos/entry/oh-package.json5",
+        "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/capabilities/default.json",
+        "src/App.vue"
+      ],
+      "knowledge_ids": [
+        "tauri-ohos-dependency-cohort",
+        "tauri-ohos-ability-host",
+        "tauri-ohos-ability-white-screen"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Selected OH integration paths only; no whole-repository history review.",
+      "source_reported_validation": "Source claims retained in README/issue snapshots; none rerun.",
+      "review_status": "complete-for-listed-paths-after-index-check",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "tauri-open-harmony",
+      "kind": "project",
+      "url": "https://github.com/tauri-apps/tauri",
+      "framework": "tauri",
+      "aliases": [
+        "https://github.com/SJMC-Dev/tauri-ohos-experimental"
+      ],
+      "fork_family": "tauri-open-harmony",
+      "selected_ref": "feat/open-harmony",
+      "observed_commit": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "analyzed_commit": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/tauri-open-harmony",
+      "reviewed_paths": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE-2.0",
+        "Cargo.toml",
+        "crates/tauri/Cargo.toml",
+        "crates/tauri/build.rs",
+        "crates/tauri/src/ohos.rs",
+        "crates/tauri-macros/src/mobile.rs",
+        "crates/tauri-runtime-wry/Cargo.toml",
+        "crates/tauri-cli/src/mobile/open_harmony/build.rs",
+        "crates/tauri-cli/src/mobile/open_harmony/project.rs",
+        "crates/tauri-cli/src/mobile/open_harmony/mod.rs",
+        "crates/tauri-cli/src/helpers/config.rs",
+        "crates/tauri-utils/src/config/parse.rs",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/hvigorfile.ts"
+      ],
+      "knowledge_ids": [
+        "tauri-ohos-dependency-cohort",
+        "tauri-ohos-ability-host",
+        "tauri-ohos-ability-white-screen",
+        "tauri-ohos-explicit-config-overlay",
+        "rust-ohos-target-cfg"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Selected OH integration paths only; no whole-repository history review.",
+      "source_reported_validation": "Source claims retained in README/issue snapshots; none rerun.",
+      "review_status": "complete-for-listed-paths-after-index-check",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json",
+      "alias_evidence": "maintenance/reviews/2026-10-27/fork-comparisons.json; identical selected-ref commit, not independent runtime evidence"
+    },
+    {
+      "id": "tauri-harmony-toolchain",
+      "kind": "toolchain",
+      "url": "https://github.com/LeenHawk/tauri-harmony",
+      "framework": "tauri",
+      "aliases": [],
+      "fork_family": "LeenHawk experimental Tauri stack",
+      "selected_ref": "main",
+      "observed_commit": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "analyzed_commit": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/tauri-harmony",
+      "reviewed_paths": [
+        "README.md",
+        "LICENSE",
+        "tauri-pins.json",
+        "scripts/env.sh",
+        "scripts/ohos.cmake"
+      ],
+      "knowledge_ids": [
+        "tauri-ohos-dependency-cohort",
+        "ohos-native-toolchain-inputs"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Selected OH integration paths only; no whole-repository history review.",
+      "source_reported_validation": "Source claims retained in README/issue snapshots; none rerun.",
+      "review_status": "complete-for-listed-paths-after-index-check",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "tauri-gproxy",
+      "kind": "project",
+      "url": "https://github.com/LeenHawk/gproxy",
+      "framework": "tauri",
+      "aliases": [],
+      "fork_family": "LeenHawk experimental Tauri stack",
+      "selected_ref": "main",
+      "observed_commit": "3a81a1ed640a95f4d7fc0fd35a5f7bd40165b6e8",
+      "analyzed_commit": "3a81a1ed640a95f4d7fc0fd35a5f7bd40165b6e8",
+      "license": "AGPL-3.0-or-later",
+      "license_notice": "maintenance/licenses/tauri-gproxy-AGPL-3.0-or-later.txt",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/tauri-gproxy",
+      "reviewed_paths": [
+        "LICENSE",
+        "Cargo.toml",
+        "README.md",
+        "scripts/ohos/README.md",
+        "scripts/ohos/tauri-pins.json",
+        "scripts/ohos/ability-har.json",
+        "scripts/ohos/prepare-tauri.py",
+        "scripts/ohos/prepare-har.py",
+        "scripts/ohos/configure-hap.py",
+        "scripts/ohos/package-hap.py",
+        "scripts/ohos/build.sh",
+        "scripts/pack-mobile-native.py",
+        "scripts/ohos/application/EntryAbility.ets",
+        "crates/gproxy-host-tauri/Cargo.toml",
+        "crates/gproxy-host-tauri/src/lib.rs",
+        "crates/gproxy-host-tauri/src/ohos.rs"
+      ],
+      "knowledge_ids": [
+        "native-ohos-shared-library-elf-layout",
+        "tauri-ohos-dependency-cohort",
+        "tauri-ohos-ability-host"
+      ],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Selected OH runtime/host/dependency/ELF packaging mechanisms only. Background service implementations were not reviewed.",
+      "source_reported_validation": "Documentation reports HAP execution on an emulator and CI builds, not physical-device startup/tray/background survival. None rerun.",
+      "review_status": "complete-for-listed-paths-after-index-check",
+      "incremental_review": {
+        "previous_analyzed_commit": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+        "observed_commit": "3a81a1ed640a95f4d7fc0fd35a5f7bd40165b6e8",
+        "commit_count": 50,
+        "dispositions": "maintenance/reviews/2026-10-27/commit-dispositions.json",
+        "coverage": "Every reachable commit screened with merge-aware changed paths; relevant native/host/dependency/shared-code diffs and final snapshots reviewed. This is not a line-by-line audit of all generic business/media code."
+      },
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "frankplus-tauri-ohos",
+      "kind": "project",
+      "url": "https://github.com/frankplus/tauri-ohos",
+      "framework": "tauri",
+      "aliases": [],
+      "fork_family": "Separate vendored prototype, not deduplicated against tauri-apps branch",
+      "selected_ref": "main",
+      "observed_commit": "7b1f158688978f87a257481cee3d743718446cff",
+      "analyzed_commit": null,
+      "license": "Root workspace declares Apache-2.0; no repository-level license notice found.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/frankplus-tauri-ohos",
+      "reviewed_paths": [
+        "README.md",
+        "Cargo.toml",
+        "docs/tauri_ohos_status_report.md"
+      ],
+      "knowledge_ids": [],
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "checked_at": "2026-10-27",
+      "coverage": "Partial documentation and root manifest screening; backend review deferred because vendor gitlinks are uninitialized and .gitmodules is absent.",
+      "source_reported_validation": "Status report claims rendering and IPC success; historical XComponent and current Ability lifecycle sections coexist. Not reproduced or promoted into guidance.",
+      "review_status": "partial retained: unchanged vendor gitlinks and absent .gitmodules; backend resolution still incomplete",
+      "last_ref_audit": "maintenance/reviews/2026-10-27/ref-audit.json"
+    },
+    {
+      "id": "bitfun-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "framework": "tauri",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "analyzed_commit": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/bitfun-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+        "src/apps/ohos/entry/src/main/module.json5",
+        "src/apps/ohos/oh-rs-ability/oh-package.json5"
+      ],
+      "knowledge_ids": [
+        "native-statusbar-event-routing"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/bitfun-ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "cc-switch-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "framework": "tauri",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "ad4deb22727947307012441eee0a48202aebadf8",
+      "analyzed_commit": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/cc-switch-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "README.md",
+        "src-tauri/Cargo.lock",
+        "src-tauri/Cargo.toml",
+        "src-tauri/capabilities/ohos.json",
+        "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+        "src-tauri/gen/ohos/entry/oh-package.json5",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/src/lib.rs",
+        "src/index.html"
+      ],
+      "knowledge_ids": [
+        "tauri-ohos-ability-host",
+        "tauri-ohos-dependency-cohort",
+        "tauri-ohos-platform-plugin-gates",
+        "tauri-ohos-web-storage-fallback"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/cc-switch-ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "coil-ohos",
+      "kind": "project",
+      "url": "https://github.com/crowforkotlin/coil",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "ohos",
+      "observed_commit": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "analyzed_commit": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/coil-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "buildSrc/src/main/kotlin/coil3/multiplatform.kt",
+        "coil-core/build.gradle.kts",
+        "coil-core/src/ohosArm64Main/cinterop/image.def",
+        "coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+        "coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-coil-native-decoder"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/coil-ohos-LICENSE.txt"
+      ]
+    },
+    {
+      "id": "electron-shell",
+      "kind": "project",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "analyzed_commit": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/electron-shell.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "docs/ohos-sessionmanager-adaptation.md",
+        "electron/oh-package.json5",
+        "web_engine/src/main/ets/ability/WebAbility.ets",
+        "web_engine/src/main/ets/components/WebNodeHandleWindow.ets"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-sessionmanager-prerequisite"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed."
+    },
+    {
+      "id": "flutter-add2app",
+      "kind": "project",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "framework": "flutter",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "analyzed_commit": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-add2app.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+        "ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+        "ohos_app/modules/flutter_module/oh-package.json5"
+      ],
+      "knowledge_ids": [
+        "flutter-ohos-add-to-app-container-lifecycle"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed."
+    },
+    {
+      "id": "flutter-app-links",
+      "kind": "project",
+      "url": "https://github.com/HarmonyCandies/app_links_ohos",
+      "framework": "flutter",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "analyzed_commit": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-app-links.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets"
+      ],
+      "knowledge_ids": [
+        "incoming-wants-before-runtime-ready"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/flutter-app-links-LICENSE"
+      ]
+    },
+    {
+      "id": "flutter-record-ohos",
+      "kind": "project",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "framework": "flutter",
+      "aliases": [],
+      "selected_ref": "bruce/ohos-startstream-fix",
+      "observed_commit": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "analyzed_commit": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/flutter-record-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+        "record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+        "record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+        "record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+        "record_ohos/pubspec.yaml"
+      ],
+      "knowledge_ids": [
+        "flutter-ohos-pcm-record-stream"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/flutter-record-ohos-record_ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "harmony-tauri-app",
+      "kind": "project",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "framework": "tauri",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "analyzed_commit": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/harmony-tauri-app.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "src-tauri/Cargo.lock",
+        "src-tauri/Cargo.toml",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/src/lib.rs",
+        "src-tauri/tauri.conf.json"
+      ],
+      "knowledge_ids": [
+        "napi-thread-and-handle-lifetime",
+        "tauri-ohos-production-custom-protocol"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed."
+    },
+    {
+      "id": "kuikly-sqlite",
+      "kind": "project",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "analyzed_commit": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/kuikly-sqlite.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "kuiklySqlite/build.ohos.gradle.kts",
+        "kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt",
+        "kuiklySqlite/src/nativeMain/cinterop/sqlite3.def"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-sqlite-cinterop"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/kuikly-sqlite-LICENSE"
+      ]
+    },
+    {
+      "id": "letos-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "analyzed_commit": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/letos-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+        "HarmonyOS/entry/src/main/cpp/patch_needed.py"
+      ],
+      "knowledge_ids": [
+        "native-dependency-closure"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/letos-ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "marktext-ohos",
+      "kind": "project",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "framework": "electron",
+      "aliases": [],
+      "selected_ref": "master",
+      "observed_commit": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "analyzed_commit": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/marktext-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "README.md",
+        "web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+        "web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets"
+      ],
+      "knowledge_ids": [
+        "electron-ohos-harmonyshare-image-receive"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/marktext-ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "qterminal-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "analyzed_commit": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/qterminal-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "README.md",
+        "src/mainwindow.cpp",
+        "src/termwidget.cpp"
+      ],
+      "knowledge_ids": [
+        "qt-ohos-terminal-direct-key-input"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/qterminal-ohos-LICENSE"
+      ]
+    },
+    {
+      "id": "rnoh-gesture-handler",
+      "kind": "project",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "master",
+      "observed_commit": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "analyzed_commit": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-gesture-handler.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+        "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+        "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+        "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+        "react-native-harmony-gesture-handler/package.json"
+      ],
+      "knowledge_ids": [
+        "rnoh-gesture-scroll-frame-hold"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/rnoh-gesture-handler-LICENSE"
+      ]
+    },
+    {
+      "id": "rnoh-keep-awake",
+      "kind": "project",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "analyzed_commit": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-keep-awake.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets",
+        "package.json"
+      ],
+      "knowledge_ids": [
+        "rnoh-window-keep-screen-on"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/rnoh-keep-awake-LICENSE"
+      ]
+    },
+    {
+      "id": "rnoh-on-harmony-pc",
+      "kind": "project",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "analyzed_commit": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-on-harmony-pc.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "harmony/entry/oh-package.json5",
+        "harmony/entry/src/main/ets/pages/Index.ets",
+        "metro.config.js",
+        "package.json"
+      ],
+      "knowledge_ids": [
+        "rnoh-offline-bundle-and-fonts"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed."
+    },
+    {
+      "id": "rnoh-splash-screen",
+      "kind": "project",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "master",
+      "observed_commit": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "analyzed_commit": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-splash-screen.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+        "harmony/splash_screen/oh-package.json5",
+        "harmony/splash_screen/src/main/ets/SplashScreen.ts"
+      ],
+      "knowledge_ids": [
+        "native-subwindow-async-transaction",
+        "rnoh-splash-native-readiness"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/rnoh-splash-screen-LICENSE"
+      ]
+    },
+    {
+      "id": "strawberry-ohos",
+      "kind": "project",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "framework": "qt",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "analyzed_commit": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/strawberry-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "CMakeLists.txt",
+        "README.md",
+        "cmake/fix_ohos_needed_paths.py",
+        "src/engine/gstengine.cpp",
+        "src/engine/gststartup.cpp"
+      ],
+      "knowledge_ids": [
+        "native-dependency-closure",
+        "native-gstreamer-explicit-audio-sink",
+        "native-gstreamer-plugin-registry"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/strawberry-ohos-COPYING"
+      ]
+    },
+    {
+      "id": "tsl-editor",
+      "kind": "project",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "framework": "react-native",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "analyzed_commit": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/tsl-editor.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+        "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+        "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+        "apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets"
+      ],
+      "knowledge_ids": [
+        "rnoh-relationalstore-sql-contract"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed.",
+      "license_notices": [
+        "maintenance/licenses/tsl-editor-LICENSE"
+      ]
+    },
+    {
+      "id": "vbsqlite-ohos",
+      "kind": "project",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "framework": "kotlin-multiplatform",
+      "aliases": [],
+      "selected_ref": "main",
+      "observed_commit": "734e996936cccc5e582521db511259133b958526",
+      "analyzed_commit": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/vbsqlite-ohos.git",
+      "working_tree_status": "bare research repository; no checkout",
+      "reviewed_paths": [
+        "README.md",
+        "VBSQLite/build.gradle.kts",
+        "VBSQLite/src/nativeInterop/cinterop/interop.def",
+        "ohosApp/entry/src/main/cpp/CMakeLists.txt"
+      ],
+      "knowledge_ids": [
+        "kmp-ohos-sqlite-cinterop"
+      ],
+      "checked_at": "2026-10-27",
+      "last_run": "2026-10-27-update-and-discovery.json",
+      "coverage": "Complete selected-mechanism source review at the pinned snapshot; no whole-repository/history or feature-completeness claim.",
+      "source_reported_validation": "Any build/device/PC claims in retained source documents are author reports only; no application build or runtime test was executed."
     }
   ]
 }

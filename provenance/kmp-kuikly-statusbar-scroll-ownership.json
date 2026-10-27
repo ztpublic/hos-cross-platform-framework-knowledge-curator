@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "kmp-kuikly-statusbar-scroll-ownership",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/components/scroller/KRScrollerView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/components/scroller/KRScrollerView.cpp",
+      "sha256": "88a5482d1963ab74f0b1ffdcd898fb1bfa6ca0c97b58fa467c9413dec918c7d8",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp",
+      "sha256": "b0c5d28d67cfe593025be7b8d89d153dbc1ab57dc39dea3204cac282a0728b5a",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp",
+      "sha256": "d8abc6dd10c3486c25e275f1a29c5f9060185adf1be1078e1f9a7e96dc0825f2",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

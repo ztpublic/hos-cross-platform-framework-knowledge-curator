@@ -14,10 +14,15 @@
     "sysroot",
     "Clang",
     "cross compile",
-    "交叉编译"
+    "交叉编译",
+    "Cargo",
+    "CC_aarch64_unknown_linux_ohos",
+    "CARGO_TARGET_AARCH64_UNKNOWN_LINUX_OHOS_LINKER",
+    "host build.rs",
+    "CMAKE_TOOLCHAIN_FILE"
   ],
   "status": "scoped",
-  "evidence_tier": "imported-guidance",
+  "evidence_tier": "source-reviewed",
   "pc_validation": "not-run",
   "applicability": "The exact CMake/toolchain variable names belong to the selected SDK. Android or desktop Linux binaries are not interchangeable with OH artifacts.",
   "related": [
@@ -44,6 +49,8 @@ Use a coherent OH target compiler/sysroot/runtime and resolve host generators se
 4. Inspect resulting ELF architecture, RPATH, exported ABI and dependencies before integrating it into the framework package.
 
 ## Conditions and alternatives
+
+For Rust builds with native dependencies, scope `CC_<target_with_underscores>`, `CXX_<target_with_underscores>`, `AR_<target_with_underscores>` and `CARGO_TARGET_<UPPERCASE_TARGET_WITH_UNDERSCORES>_LINKER` to the OH target. Use an SDK Clang wrapper with the correct `--target` and `--sysroot`, and pass target-specific bindgen/CMake inputs where the consuming crate supports them. Avoid globally replacing `CC`/`CXX`, which can cross-compile host `build.rs` dependencies by accident. Keep the host frontend Node environment separate from any SDK Node required for Hvigor; switch only for the consuming build phase. These variable names follow the reviewed Cargo/native-crate workflow and must be checked against the actual dependency build scripts.
 
 The exact CMake/toolchain variable names belong to the selected SDK. Android or desktop Linux binaries are not interchangeable with OH artifacts.
 

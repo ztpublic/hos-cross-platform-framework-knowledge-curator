@@ -1,0 +1,597 @@
+[
+  {
+    "query": "\"tauri\" \"OpenHarmony\" fork:false",
+    "repositories": [
+      {
+        "repo": "richerfu/tauri-demo",
+        "ref": "master",
+        "size": 1103
+      },
+      {
+        "repo": "LeenHawk/tauri-harmony",
+        "ref": "main",
+        "size": 17
+      },
+      {
+        "repo": "bernardotmr/tauri-demo",
+        "ref": "main",
+        "size": 1931
+      },
+      {
+        "repo": "Jesse205/F-OH-PWA",
+        "ref": "main",
+        "size": 8892
+      },
+      {
+        "repo": "bernardotmr/bernardotmr.github.io",
+        "ref": "main",
+        "size": 1930
+      }
+    ]
+  },
+  {
+    "query": "\"Kotlin Multiplatform\" \"OpenHarmony\" fork:false",
+    "repositories": [
+      {
+        "repo": "PoseidonMRT/KMPSupportOpenHarmonyDemo",
+        "ref": "main",
+        "size": 86
+      },
+      {
+        "repo": "123ningwang/KuiklyLoadView",
+        "ref": "main",
+        "size": 2928
+      }
+    ]
+  },
+  {
+    "query": "\"electron\" \"ohos\" fork:false",
+    "repositories": [
+      {
+        "repo": "ohosvscode/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152
+      },
+      {
+        "repo": "ohosvscode/electron-ohos-napi-shim",
+        "ref": "main",
+        "size": 268
+      },
+      {
+        "repo": "HU-WEITAO/EchoMusic_OHOS",
+        "ref": "main",
+        "size": 3231
+      },
+      {
+        "repo": "xiaogouyo/dsh-harmonyos",
+        "ref": "main",
+        "size": 11555
+      }
+    ]
+  },
+  {
+    "query": "\"qt\" \"2in1\" fork:false",
+    "repositories": [
+      {
+        "repo": "forwardz666/SciDAVis-for-HarmonyOS",
+        "ref": "main",
+        "size": 255795
+      },
+      {
+        "repo": "yangy79/KLayout-on-Harmony-PC",
+        "ref": "main",
+        "size": 2801
+      },
+      {
+        "repo": "OrdinaryManZ/HarmonyAdaptQtDemo",
+        "ref": "main",
+        "size": 8820
+      }
+    ]
+  },
+  {
+    "query": "\"flutter\" \"harmonyos\" fork:false",
+    "repositories": [
+      {
+        "repo": "TencentCloud/TIMSDK",
+        "ref": "master",
+        "size": 1073027
+      },
+      {
+        "repo": "sensorsdata/sensors_analytics_flutter_plugin",
+        "ref": "master",
+        "size": 433
+      },
+      {
+        "repo": "callstack/agent-device",
+        "ref": "main",
+        "size": 230309
+      },
+      {
+        "repo": "gtbluesky/fusion",
+        "ref": "main",
+        "size": 91936
+      },
+      {
+        "repo": "Chevey339/kelivo",
+        "ref": "master",
+        "size": 195481
+      },
+      {
+        "repo": "wildfirechat/flutter-chat",
+        "ref": "master",
+        "size": 442292
+      },
+      {
+        "repo": "zacksleo/awesome-harmonyos-flutter",
+        "ref": "master",
+        "size": 44502
+      },
+      {
+        "repo": "SonicloudTech/sonicloud_opensdk",
+        "ref": "main",
+        "size": 120111
+      },
+      {
+        "repo": "jianguo888/flutter_bloc_super",
+        "ref": "master",
+        "size": 101124
+      },
+      {
+        "repo": "dev4harmony/PiliNara",
+        "ref": "ohos",
+        "size": 92450
+      },
+      {
+        "repo": "itenfay/Awesome",
+        "ref": "master",
+        "size": 750
+      },
+      {
+        "repo": "easemob/im_flutter_sdk_oh",
+        "ref": "main",
+        "size": 60906
+      },
+      {
+        "repo": "jianguo888/Flutter-xiaomi-su7-App",
+        "ref": "master",
+        "size": 9745
+      },
+      {
+        "repo": "HarmonyCandies/sign_in_with_huawei",
+        "ref": "main",
+        "size": 38
+      },
+      {
+        "repo": "xuegao-tzx/Fllama",
+        "ref": "main",
+        "size": 23946
+      },
+      {
+        "repo": "mlscience-svg/SIPFlutterPlugin",
+        "ref": "main",
+        "size": 57307
+      },
+      {
+        "repo": "collaborative-creation/etohos",
+        "ref": "main",
+        "size": 1569
+      },
+      {
+        "repo": "zhengzaihong/uikit",
+        "ref": "master",
+        "size": 15876
+      },
+      {
+        "repo": "HarmonyCandies/umeng_common_sdk_ohos",
+        "ref": "main",
+        "size": 37
+      },
+      {
+        "repo": "MeowTechOpenSource/HarmonyOS-UI-Flutter",
+        "ref": "master",
+        "size": 131
+      },
+      {
+        "repo": "JalorOo/ohos_ui",
+        "ref": "master",
+        "size": 290
+      },
+      {
+        "repo": "yabi-zzh/simple-live-ohos",
+        "ref": "main",
+        "size": 21461
+      },
+      {
+        "repo": "AimesSoft/liberika",
+        "ref": "main",
+        "size": 11609
+      },
+      {
+        "repo": "GuoguoDad/jdMall_Harmony",
+        "ref": "main",
+        "size": 37465
+      },
+      {
+        "repo": "FlutterAds/flutter_ohos_ads",
+        "ref": "master",
+        "size": 41
+      },
+      {
+        "repo": "zhengzaihong/router_lifecycle",
+        "ref": "master",
+        "size": 814
+      },
+      {
+        "repo": "HarmonyOSDeveloper/MySunflower",
+        "ref": "main",
+        "size": 25306
+      },
+      {
+        "repo": "jianguo888/flutter_snake_game",
+        "ref": "master",
+        "size": 285
+      },
+      {
+        "repo": "erikwang2013/property-management-platform",
+        "ref": "main",
+        "size": 18573
+      },
+      {
+        "repo": "point258/kazuhomo",
+        "ref": "main",
+        "size": 1784
+      },
+      {
+        "repo": "nutpi-ohos/gitbook-harmonyos-flutter",
+        "ref": "master",
+        "size": 23599
+      },
+      {
+        "repo": "w6521939-ops/xingmu-flutter",
+        "ref": "main",
+        "size": 26042
+      },
+      {
+        "repo": "Static1014/harmony_plugin",
+        "ref": "main",
+        "size": 90
+      },
+      {
+        "repo": "ssttonn/flutter_wear_engine_connectivity",
+        "ref": "master",
+        "size": 29
+      },
+      {
+        "repo": "shaohushuo/harmony_ui",
+        "ref": "main",
+        "size": 19714
+      },
+      {
+        "repo": "lxdklp/MCB_OHOS",
+        "ref": "main",
+        "size": 20840
+      },
+      {
+        "repo": "zacksleo/flutter-for-ohos-in-action",
+        "ref": "main",
+        "size": 32731
+      },
+      {
+        "repo": "howtomakeaname/SSEMarket-X",
+        "ref": "main",
+        "size": 2802
+      },
+      {
+        "repo": "chawu691/bytedance-nomark",
+        "ref": "main",
+        "size": 5221
+      },
+      {
+        "repo": "HuajiFruit/share_plus_ohos",
+        "ref": "main",
+        "size": 20
+      },
+      {
+        "repo": "iakii/frb_ohos_starter",
+        "ref": "master",
+        "size": 7933
+      },
+      {
+        "repo": "natsuz0ra/fluttertpc_just_audio",
+        "ref": "main",
+        "size": 1881
+      },
+      {
+        "repo": "ramonouyang/flutter_local_notifications_ohos",
+        "ref": "main",
+        "size": 22
+      },
+      {
+        "repo": "jianguo888/Smart_Home",
+        "ref": "master",
+        "size": 5480
+      },
+      {
+        "repo": "WikG1018/site-mark",
+        "ref": "main",
+        "size": 17818
+      },
+      {
+        "repo": "sunwl1010-alt/tech-review-documentation",
+        "ref": "main",
+        "size": 360
+      },
+      {
+        "repo": "HuajiFruit/package_info_plus_ohos",
+        "ref": "main",
+        "size": 10
+      },
+      {
+        "repo": "vbalagovic/flutter-harmonyos",
+        "ref": "main",
+        "size": 1
+      },
+      {
+        "repo": "natsuz0ra/fluttertpc_audio_service",
+        "ref": "main",
+        "size": 2337
+      },
+      {
+        "repo": "virg00/ffmpeg_kit_flutter_ohos",
+        "ref": "main",
+        "size": 85318
+      },
+      {
+        "repo": "mingxian9527/flutter-harmonyos-examples",
+        "ref": "master",
+        "size": 460
+      },
+      {
+        "repo": "JungleTestLabs/opencalc-flutter-harmonyos",
+        "ref": "main",
+        "size": 293
+      },
+      {
+        "repo": "ramonouyang/permission_handler_ohos",
+        "ref": "main",
+        "size": 39
+      },
+      {
+        "repo": "ramonouyang/image_picker_ohos",
+        "ref": "main",
+        "size": 33
+      },
+      {
+        "repo": "ramonouyang/file_selector_ohos",
+        "ref": "main",
+        "size": 28
+      },
+      {
+        "repo": "ycj0808/flutter_harmony_starter",
+        "ref": "main",
+        "size": 489
+      },
+      {
+        "repo": "dakkidaze/mangacopy-ohos",
+        "ref": "main",
+        "size": 1006
+      },
+      {
+        "repo": "anfun-lab/flutter_harmony_starter",
+        "ref": "main",
+        "size": 512
+      },
+      {
+        "repo": "Dcelysia/yueying",
+        "ref": "main",
+        "size": 132533
+      },
+      {
+        "repo": "HarmonyCandies/update_manager_ohos",
+        "ref": "main",
+        "size": 28
+      },
+      {
+        "repo": "sidbuds/ai-interview-harmonyos-flutter",
+        "ref": "master",
+        "size": 39776
+      },
+      {
+        "repo": "ramonouyang/package_info_plus_ohos",
+        "ref": "main",
+        "size": 20
+      },
+      {
+        "repo": "Aqbj-ui/mi_workbench_harmony",
+        "ref": "main",
+        "size": 140
+      },
+      {
+        "repo": "rowan766/flutter-road-maintenance",
+        "ref": "main",
+        "size": 108
+      },
+      {
+        "repo": "jackwangfeng/mp-flutter",
+        "ref": "main",
+        "size": 4219
+      },
+      {
+        "repo": "igitea/igitea",
+        "ref": "main",
+        "size": 5428
+      },
+      {
+        "repo": "zhengzaihong/rxnet",
+        "ref": "master",
+        "size": 42204
+      },
+      {
+        "repo": "yanglukai/account_kit_ohos",
+        "ref": "main",
+        "size": 38
+      },
+      {
+        "repo": "Harmony-Ai-Tool/Flutter-adaptation-for-HarmonyOS",
+        "ref": "main",
+        "size": 5
+      },
+      {
+        "repo": "ClosedHarmony/material_ui",
+        "ref": "main",
+        "size": 3061
+      },
+      {
+        "repo": "rwecho/MobileStarter",
+        "ref": "main",
+        "size": 3000
+      },
+      {
+        "repo": "ClosedHarmony/cupertino_ui",
+        "ref": "main",
+        "size": 760
+      },
+      {
+        "repo": "LiangchenLab/nexus-flutter",
+        "ref": "main",
+        "size": 0
+      },
+      {
+        "repo": "itzkowitzhause811-cyber/enterprise-ai-flutter-client",
+        "ref": "main",
+        "size": 33349
+      },
+      {
+        "repo": "wkj2333666/Android-SSH-Codex",
+        "ref": "main",
+        "size": 990
+      },
+      {
+        "repo": "andy380743909/flutter-omni-template",
+        "ref": "master",
+        "size": 430
+      },
+      {
+        "repo": "ppswdev/dev_samples",
+        "ref": "main",
+        "size": 22492
+      },
+      {
+        "repo": "ufomaker/cardprint-app",
+        "ref": "main",
+        "size": 14827
+      },
+      {
+        "repo": "diana9905454/OronBox-Lite",
+        "ref": "main",
+        "size": 1714
+      },
+      {
+        "repo": "Kline-x/novel-reader-flutter",
+        "ref": "main",
+        "size": 338921
+      },
+      {
+        "repo": "tapcub/tapcub-sdk",
+        "ref": "main",
+        "size": 383
+      },
+      {
+        "repo": "ramonouyang/huawei_ml_text_ohos",
+        "ref": "main",
+        "size": 43
+      },
+      {
+        "repo": "guan19191/interview-notes",
+        "ref": "main",
+        "size": 761
+      },
+      {
+        "repo": "91learnIT/Awesome-HarmonyOS",
+        "ref": "main",
+        "size": 408
+      },
+      {
+        "repo": "trainlytic/lili-demo",
+        "ref": "master",
+        "size": 1054
+      },
+      {
+        "repo": "simon2137/traccar-manager-harmony",
+        "ref": "main",
+        "size": 1644
+      },
+      {
+        "repo": "WJKLL/Toki-HarmonyOS",
+        "ref": "main",
+        "size": 1837
+      },
+      {
+        "repo": "JamesGZM/flutter_share_bridge",
+        "ref": "master",
+        "size": 2395
+      },
+      {
+        "repo": "ClosedHarmony/flutter_secure_storage_ohos",
+        "ref": "main",
+        "size": 15
+      },
+      {
+        "repo": "yinxing2008/game_2048",
+        "ref": "master",
+        "size": 9090
+      },
+      {
+        "repo": "ClosedHarmony/share_plus_ohos",
+        "ref": "main",
+        "size": 7
+      },
+      {
+        "repo": "ClosedHarmony/local_auth_ohos",
+        "ref": "main",
+        "size": 9
+      },
+      {
+        "repo": "123litiany/harmonyos-app-skill",
+        "ref": "main",
+        "size": 26
+      },
+      {
+        "repo": "bmbxwbh/fu_sheng_music_ohos",
+        "ref": "main",
+        "size": 332
+      },
+      {
+        "repo": "Wgga/huawei_kit",
+        "ref": "main",
+        "size": 39
+      },
+      {
+        "repo": "LianbinZhou/zhiji_oil_consumption",
+        "ref": "main",
+        "size": 760
+      },
+      {
+        "repo": "runoob-coder/hm_symbol_flutter",
+        "ref": "master",
+        "size": 2009
+      },
+      {
+        "repo": "hanyin111/qiyou",
+        "ref": "main",
+        "size": 17580
+      },
+      {
+        "repo": "huimingchen081-beep/eternity-app",
+        "ref": "main",
+        "size": 3231
+      },
+      {
+        "repo": "jlinklab/jlink-fcloudsdk-flutter-demo",
+        "ref": "main",
+        "size": 2132
+      }
+    ]
+  }
+]

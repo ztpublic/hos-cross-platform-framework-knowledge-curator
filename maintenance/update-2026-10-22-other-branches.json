@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ohos-pc-launcher",
+    "url": "https://gitee.com/dingtalkrepo/ohos-pc-launcher",
+    "previous": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+    "observed": "32bda56b4a10ebfeab875cb25566a5e8fb2a5d11",
+    "error": "",
+    "returncode": 0
+  },
+  {
+    "id": "electron-egg-ohos",
+    "url": "https://gitcode.com/wallace5303/electron-egg-ohos",
+    "previous": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+    "observed": "dd01a12db46e77d2879c823fe6b70a594bad3df0",
+    "error": "warning: redirecting to https://gitcode.com/wallace5303/electron-egg-ohos.git/\n",
+    "returncode": 0
+  },
+  {
+    "id": "ohos-ktouch",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch",
+    "previous": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+    "observed": "3a986f032d3663e51dd8af773e2c9b80f072da9c",
+    "error": "warning: redirecting to https://gitcode.com/OpenHarmonyPCDeveloper/ohos_KTouch.git/\n",
+    "returncode": 0
+  },
+  {
+    "id": "ohos-jupyter",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter",
+    "previous": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+    "observed": "18b16874b08679a929f0a578d5afd2ff528ab8ef",
+    "error": "warning: redirecting to https://gitcode.com/OpenHarmonyPCDeveloper/ohos_jupyter.git/\n",
+    "returncode": 0
+  },
+  {
+    "id": "ohos-joplin",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_joplin",
+    "previous": "73046474f46269de177b78427b12f0c27888fe6b",
+    "observed": "73046474f46269de177b78427b12f0c27888fe6b",
+    "error": "warning: redirecting to https://gitcode.com/OpenHarmonyPCDeveloper/ohos_joplin.git/\n",
+    "returncode": 0
+  },
+  {
+    "id": "notepad-ohos",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/notepad--_ohos",
+    "previous": "901ba4972ba90442008669dfa6eb916869d506e0",
+    "observed": "901ba4972ba90442008669dfa6eb916869d506e0",
+    "error": "warning: redirecting to https://gitcode.com/OpenHarmonyPCDeveloper/notepad--_ohos.git/\n",
+    "returncode": 0
+  }
+]

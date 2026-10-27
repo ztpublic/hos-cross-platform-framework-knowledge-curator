@@ -19,6 +19,26 @@
       "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
       "license": "No database-level license found; upstream project license context retained in original provenance.",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/lib/src/erika_player.dart",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-27/packages/erika_flutter/lib/src/erika_player.dart",
+      "sha256": "de6a11755b432b4b08905d2b0ecce173b0f9fb80d1fe309e9429466052364cb9",
+      "revision": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-27/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "sha256": "491b68ef25d3a54a0956f617784633a5486bfa12972b00a94b1f5b9a019bc5e4",
+      "revision": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "upstream_provenance": {
@@ -98,7 +118,8 @@
   "transformations": [
     "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
     "Separated independently actionable subsections: startup-work-prerequisites",
-    "Retained Flutter-specific API/embedding conditions."
+    "Retained Flutter-specific API/embedding conditions.",
+    "Reviewed new shared Dart JSON parsing for diagnostics/logs through a background isolate, plus OH method forwarding. This corroborates moving pure data decoding off the UI isolate, not invoking platform channels from an arbitrary isolate."
   ],
   "limitations": [
     "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",

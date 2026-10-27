@@ -29,7 +29,8 @@
   "related": [
     "flutter-ohos-versioned-so-packaging",
     "native-shell-state-synchronization",
-    "window-mode-and-fullscreen-state"
+    "window-mode-and-fullscreen-state",
+    "ohos-native-form-factor-classification"
   ]
 }
 ---
@@ -56,7 +57,7 @@ Expose the OH device type from the native side, flag 2in1 as PC, and include it 
 
 ## Conditions and alternatives
 
-The device type is reported by the platform and may not distinguish every PC-like product. A width breakpoint is a fallback for layout, not for form-factor-specific window APIs. Some OH APIs (landscape multi-window, maximize) are version-gated.
+Use the shared [native form-factor classification](ohos-native-form-factor-classification.md) for the OS category and unknown-value contract. Use the shared [native form-factor classification](ohos-native-form-factor-classification.md) for the OS category and unknown-value contract. The device type is reported by the platform and may not distinguish every PC-like product. A width breakpoint is a fallback for layout, not for form-factor-specific window APIs. Some OH APIs (landscape multi-window, maximize) are version-gated.
 
 ## Common mistakes
 

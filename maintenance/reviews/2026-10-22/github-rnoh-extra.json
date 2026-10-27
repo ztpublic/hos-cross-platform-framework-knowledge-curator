@@ -1,0 +1,20 @@
+[
+  {
+    "repo": "hime88/react-native-skia-ohos",
+    "ref": "a9c799e33238ee13ea25853f805d91fde7094939",
+    "path": "react-native-skia/LICENSE.md",
+    "content": "Copyright 2021-present, Shopify Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "repo": "hime88/react-native-skia-ohos",
+    "ref": "a9c799e33238ee13ea25853f805d91fde7094939",
+    "path": "tester/harmony/entry/oh-package.json5",
+    "content": "{\n  \"license\": \"ISC\",\n  \"devDependencies\": {},\n  \"name\": \"entry\",\n  \"description\": \"example description\",\n  \"repository\": '',\n  \"version\": \"1.0.0\",\n  \"dependencies\": {\n    \"@react-native-oh-tpl/react-native-reanimated\": \"file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har\",\n    \"@react-native-oh-tpl/react-native-skia\": \"file:../skia\"\n  }\n}\n"
+  },
+  {
+    "repo": "hime88/react-native-skia-ohos",
+    "ref": "a9c799e33238ee13ea25853f805d91fde7094939",
+    "path": "tester/harmony/entry/src/main/cpp/CMakeLists.txt",
+    "content": "project(rnapp)\ncmake_minimum_required(VERSION 3.4.1)\nset(CMAKE_SKIP_BUILD_RPATH TRUE)\nset(RNOH_APP_DIR \"${CMAKE_CURRENT_SOURCE_DIR}\")\nset(NODE_MODULES \"${CMAKE_CURRENT_SOURCE_DIR}/../../../../../node_modules\")\nset(RNOH_CPP_DIR \"${CMAKE_CURRENT_SOURCE_DIR}/../../../../oh_modules/@rnoh/react-native-openharmony/src/main/cpp\")\nset(RNOH_GENERATED_DIR \"${CMAKE_CURRENT_SOURCE_DIR}/generated\")\nset(LOG_VERBOSITY_LEVEL 1)\nset(CMAKE_ASM_FLAGS \"-Wno-error=unused-command-line-argument -Qunused-arguments\")\nset(CMAKE_CXX_FLAGS \"-fstack-protector-strong -Wl,-z,relro,-z,now,-z,noexecstack -fPIE -pie\")\nset(WITH_HITRACE_SYSTRACE 1) # for other CMakeLists.txt files to use\nadd_compile_definitions(WITH_HITRACE_SYSTRACE)\n\nadd_subdirectory(\"${RNOH_CPP_DIR}\" ./rn)\nadd_subdirectory(\"${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules/@react-native-oh-tpl/react-native-reanimated/src/main/cpp\" ./reanimated)\nadd_subdirectory(\"${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules/@react-native-oh-tpl/react-native-skia/src/main/cpp\" ./skia)\n\nadd_library(rnoh_app SHARED\n    \"./PackageProvider.cpp\"\n    \"${RNOH_CPP_DIR}/RNOHAppNapiBridge.cpp\"\n)\ntarget_link_libraries(rnoh_app PUBLIC rnoh)\ntarget_link_libraries(rnoh_app PUBLIC rnoh_reanimated)\ntarget_link_libraries(rnoh_app PUBLIC rnoh_skia)\n"
+  }
+]

@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-22-tauri-discovery",
+  "date": "2026-10-22",
+  "mode": "discover/analyze and skill coverage update",
+  "framework": "tauri",
+  "outcome": "complete-for-selected-mechanisms; one prototype partial; remaining discovery leads deferred",
+  "source_ids": [
+    "tauri-demo",
+    "tauri-ohos-test",
+    "tauri-open-harmony",
+    "tauri-harmony-toolchain",
+    "tauri-gproxy",
+    "frankplus-tauri-ohos"
+  ],
+  "source_reviews": [
+    {
+      "id": "tauri-demo",
+      "selected_ref": "master",
+      "observed_commit": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "analyzed_commit": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "reviewed_paths": [
+        "README.md",
+        "src-tauri/Cargo.toml",
+        "src-tauri/Cargo.lock",
+        "src-tauri/src/lib.rs",
+        "src-tauri/capabilities/default.json",
+        "src-tauri/gen/ohos/entry/oh-package.json5",
+        "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/gen/ohos/entry/src/main/module.json5",
+        "src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+        "src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+        "src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+        "src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+        "src-tauri/tauri-plugin-ohos-demo/build.rs",
+        "src-tauri/tauri-plugin-ohos-demo/permissions/default.toml"
+      ],
+      "coverage": "Selected OH integration paths only; no whole-repository history review."
+    },
+    {
+      "id": "tauri-ohos-test",
+      "selected_ref": "main",
+      "observed_commit": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "analyzed_commit": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "reviewed_paths": [
+        "README.md",
+        "LICENSE",
+        "src-tauri/Cargo.toml",
+        "src-tauri/Cargo.lock",
+        "src-tauri/gen/ohos/entry/oh-package.json5",
+        "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+        "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+        "src-tauri/capabilities/default.json",
+        "src/App.vue"
+      ],
+      "coverage": "Selected OH integration paths only; no whole-repository history review."
+    },
+    {
+      "id": "tauri-open-harmony",
+      "selected_ref": "feat/open-harmony",
+      "observed_commit": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "analyzed_commit": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "reviewed_paths": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE-2.0",
+        "Cargo.toml",
+        "crates/tauri/Cargo.toml",
+        "crates/tauri/build.rs",
+        "crates/tauri/src/ohos.rs",
+        "crates/tauri-macros/src/mobile.rs",
+        "crates/tauri-runtime-wry/Cargo.toml",
+        "crates/tauri-cli/src/mobile/open_harmony/build.rs",
+        "crates/tauri-cli/src/mobile/open_harmony/project.rs",
+        "crates/tauri-cli/src/mobile/open_harmony/mod.rs",
+        "crates/tauri-cli/src/helpers/config.rs",
+        "crates/tauri-utils/src/config/parse.rs",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+        "crates/tauri-cli/templates/mobile/open-harmony/entry/hvigorfile.ts"
+      ],
+      "coverage": "Selected OH integration paths only; no whole-repository history review."
+    },
+    {
+      "id": "tauri-harmony-toolchain",
+      "selected_ref": "main",
+      "observed_commit": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "analyzed_commit": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "reviewed_paths": [
+        "README.md",
+        "LICENSE",
+        "tauri-pins.json",
+        "scripts/env.sh",
+        "scripts/ohos.cmake"
+      ],
+      "coverage": "Selected OH integration paths only; no whole-repository history review."
+    },
+    {
+      "id": "tauri-gproxy",
+      "selected_ref": "main",
+      "observed_commit": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "analyzed_commit": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "reviewed_paths": [
+        "LICENSE",
+        "Cargo.toml",
+        "README.md",
+        "scripts/ohos/README.md",
+        "scripts/ohos/tauri-pins.json",
+        "scripts/ohos/ability-har.json",
+        "scripts/ohos/prepare-tauri.py",
+        "scripts/ohos/prepare-har.py",
+        "scripts/ohos/configure-hap.py",
+        "scripts/ohos/package-hap.py",
+        "scripts/ohos/build.sh",
+        "scripts/pack-mobile-native.py",
+        "scripts/ohos/application/EntryAbility.ets",
+        "crates/gproxy-host-tauri/Cargo.toml",
+        "crates/gproxy-host-tauri/src/lib.rs",
+        "crates/gproxy-host-tauri/src/ohos.rs"
+      ],
+      "coverage": "Selected OH runtime/host/dependency/ELF packaging mechanisms only. Background service implementations were not reviewed."
+    },
+    {
+      "id": "frankplus-tauri-ohos",
+      "selected_ref": "main",
+      "observed_commit": "7b1f158688978f87a257481cee3d743718446cff",
+      "analyzed_commit": null,
+      "reviewed_paths": [
+        "README.md",
+        "Cargo.toml",
+        "docs/tauri_ohos_status_report.md"
+      ],
+      "coverage": "Partial documentation and root manifest screening; backend review deferred because vendor gitlinks are uninitialized and .gitmodules is absent."
+    }
+  ],
+  "candidates": [
+    {
+      "repository": "Islatri/tauri-ohos-test",
+      "selected_ref": "main",
+      "disposition": "reviewed-selected-mechanisms",
+      "source_id": "tauri-ohos-test"
+    },
+    {
+      "repository": "LeeLiangmin/tauri-ohos",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "david921518/tauri-mobile",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "frankplus/tauri-ohos",
+      "selected_ref": "main",
+      "disposition": "partial-deferred",
+      "source_id": "frankplus-tauri-ohos",
+      "reason": "Reviewed root manifest and documentation; backend vendor gitlinks have no .gitmodules and were not resolved. analyzed_commit remains null."
+    },
+    {
+      "repository": "linlinjinzhen/tauri-ohos-test",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "SJMC-Dev/tauri-ohos-experimental",
+      "selected_ref": "feat/open-harmony",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "SJMC-Dev/tauri-plugins-workspace-ohos-experimental",
+      "selected_ref": "feat/open-harmony",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "2doright/airslate-pc-server",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "LeenHawk/tauri-harmony",
+      "selected_ref": "main",
+      "disposition": "reviewed-selected-mechanisms",
+      "source_id": "tauri-harmony-toolchain"
+    },
+    {
+      "repository": "Linmoqian/tauri-harmonyos",
+      "selected_ref": "dev",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "nanhapy/sms-bridge",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "omidnw/vorynth",
+      "selected_ref": "master",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "bluedeer000/clipboard-sync",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "Jesse205/F-OH-PWA",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "lookapu/HarmonyAgent",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "richerfu/tauri-demo",
+      "selected_ref": "master",
+      "disposition": "reviewed-selected-mechanisms",
+      "source_id": "tauri-demo"
+    },
+    {
+      "repository": "bernardotmr/tauri-demo",
+      "selected_ref": "main",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "jimmy54/tauri-demo",
+      "selected_ref": "master",
+      "disposition": "discovery-only-deferred",
+      "reason": "Metadata lead only; no adaptation qualification, mirror/fork deduplication, or runtime conclusion. Bounded run selected sources with concrete host/runtime/build mechanisms."
+    },
+    {
+      "repository": "tauri-apps/tauri",
+      "selected_ref": "feat/open-harmony",
+      "disposition": "reviewed-selected-mechanisms",
+      "source_id": "tauri-open-harmony"
+    },
+    {
+      "repository": "LeenHawk/gproxy",
+      "selected_ref": "main",
+      "disposition": "reviewed-selected-mechanisms",
+      "source_id": "tauri-gproxy"
+    }
+  ],
+  "added_entries": [
+    "tauri-ohos-dependency-cohort",
+    "tauri-ohos-ability-host",
+    "tauri-ohos-ability-white-screen",
+    "tauri-ohos-plugin-command-registration",
+    "tauri-ohos-explicit-config-overlay",
+    "native-ohos-shared-library-elf-layout"
+  ],
+  "extended_existing_entries": [
+    "ohos-native-toolchain-inputs",
+    "rust-ohos-target-cfg"
+  ],
+  "extended_new_entries_with_full_app_evidence": [
+    "tauri-ohos-dependency-cohort",
+    "tauri-ohos-ability-host"
+  ],
+  "counts": {
+    "added": 6,
+    "added_common": 1,
+    "added_tauri_specific": 5,
+    "extended_existing_common": 2,
+    "merged_entries": 0,
+    "split_entries": 0,
+    "qualified_sources_reviewed": 5,
+    "partial_sources": 1,
+    "bounded_candidate_records": 20,
+    "database_entries_before": 209,
+    "database_entries_after": 215
+  },
+  "snapshot_maps": [
+    "maintenance/reviews/2026-10-22-tauri/snapshot-map.json",
+    "maintenance/reviews/2026-10-22-tauri/application-snapshot-map.json",
+    "maintenance/reviews/2026-10-22-tauri/source-entry-map.json"
+  ],
+  "verification_performed": [
+    "Pre-edit database check: 209 entries",
+    "Regenerated index and validated metadata, hashes, links and CSV: 215 entries",
+    "Skill quick_validate.py passed using uv with PyYAML",
+    "Canonical and case-insensitive Tauri filters; symptom retrieval; common inclusion and adapter-only exclusion; reject runtime labels; default database independent of cwd"
+  ],
+  "limitations": [
+    "No source setup/build/migration scripts executed; no dependency installation in source projects, app builds, signing, HAP installation, emulator or physical-device checks.",
+    "Source-reported PC white-screen fix and emulator claims are historical reports, not curator validation. All PC validation remains not-run.",
+    "Selected-path reviews do not claim full repository/history coverage or released upstream Tauri OH support.",
+    "Fork-family dependency reuse is not independent runtime corroboration.",
+    "OH overlay workaround is source-derived and unexecuted; package-manager lockfile behavior was not reproduced.",
+    "Discovery lead inventory is not an exhaustive ecosystem survey; metadata-only candidates are unqualified.",
+    "Initial workspace already had other modified/untracked curation files; they were retained."
+  ],
+  "skill_changes": [
+    "SKILL.md description/canonical category/search syntax",
+    "scripts/kb.py FRAMEWORKS includes tauri",
+    "references/schema.md category enumeration",
+    "references/research.md Tauri adaptation qualification",
+    "references/authoring.md Tauri classification boundary"
+  ]
+}

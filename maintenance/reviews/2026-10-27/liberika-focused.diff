@@ -1,0 +1,271 @@
+diff --git a/crates/erika/build.rs b/crates/erika/build.rs
+index a1f79ff..a1f9411 100644
+--- a/crates/erika/build.rs
++++ b/crates/erika/build.rs
+@@ -4,6 +4,11 @@ use std::path::PathBuf;
+ use std::process::Command;
+ 
+ fn main() {
++    println!("cargo:rustc-check-cfg=cfg(erika_shared_ffmpeg)");
++    // Browser C dependencies are built and packaged by `cargo run -p xtask -- web build`.
++    if env::var("CARGO_CFG_TARGET_ARCH").as_deref() == Ok("wasm32") {
++        return;
++    }
+     println!("cargo:rerun-if-changed=build.rs");
+     println!("cargo:rerun-if-env-changed=ERIKA_NATIVE_PROFILE");
+     println!("cargo:rerun-if-env-changed=ERIKA_NATIVE_TARGET");
+@@ -29,6 +34,18 @@ fn main() {
+     let ffmpeg_version_major = emit_ffmpeg_version_cfg();
+     enforce_bundled_ffmpeg_version(ffmpeg_version_major);
+ 
++    // FFmpeg av_log bridge feeding the diagnostics log ring. A distro FFmpeg is
++    // a shared library other components of the host process may configure, so
++    // capture there is opt-in (see trace::FfmpegLogCapture::SharedLibrary).
++    if use_system_libraries("ERIKA_FFMPEG_DIR") {
++        println!("cargo:rustc-cfg=erika_shared_ffmpeg");
++    }
++    println!("cargo:rerun-if-changed=src/ffmpeg_log_bridge.c");
++    cc::Build::new()
++        .file("src/ffmpeg_log_bridge.c")
++        .warnings(true)
++        .compile("erika_ffmpeg_log_bridge");
++
+     let target_os = env::var("CARGO_CFG_TARGET_OS").ok();
+     if target_os.as_deref() == Some("linux")
+         && env::var("CARGO_CFG_TARGET_ENV").as_deref() != Ok("ohos")
+@@ -376,14 +393,10 @@ fn ffmpeg_dist_dir() -> PathBuf {
+         return workspace_root()
+             .join("third_party/dist")
+             .join(target)
+-            .join(native_profile())
++            .join(native_profile_dir())
+             .join("ffmpeg");
+     }
+-    let mut dist = workspace_root().join("third_party/dist");
+-    if let Some(target) = inferred_native_target() {
+-        dist = dist.join(target);
+-    }
+-    dist.join(native_profile()).join("ffmpeg")
++    native_dist_root().join(native_profile_dir()).join("ffmpeg")
+ }
+ 
+ fn native_dep_dir(env_name: &str, name: &str) -> PathBuf {
+@@ -394,20 +407,51 @@ fn native_dep_dir(env_name: &str, name: &str) -> PathBuf {
+         return workspace_root()
+             .join("third_party/dist")
+             .join(target)
+-            .join(native_profile())
++            .join(native_profile_dir())
+             .join(name);
+     }
+-    let mut dist = workspace_root().join("third_party/dist");
++    native_dist_root().join(native_profile_dir()).join(name)
++}
++
++/// The dist directory `xtask deps build` filled for this target: the one
++/// named after the target triple when it was built (`--target
++/// aarch64-apple-darwin`), else the host build's.
++fn native_dist_root() -> PathBuf {
++    let dist = workspace_root().join("third_party/dist");
+     if let Some(target) = inferred_native_target() {
+-        dist = dist.join(target);
++        return dist.join(target);
++    }
++    if let Ok(target) = env::var("TARGET") {
++        let built = dist.join(target);
++        if built.join(native_profile_dir()).is_dir() {
++            return built;
++        }
+     }
+-    dist.join(native_profile()).join(name)
++    dist
+ }
+ 
+ fn native_profile() -> String {
+     env::var("ERIKA_NATIVE_PROFILE").unwrap_or_else(|_| "lgpl".to_string())
+ }
+ 
++/// Rust links the MSVC C runtime statically (`-C target-feature=+crt-static`),
++/// so the native libraries must too: `xtask deps build --crt static`.
++fn static_crt() -> bool {
++    env::var("CARGO_CFG_TARGET_ENV").as_deref() == Ok("msvc")
++        && env::var("CARGO_CFG_TARGET_FEATURE")
++            .is_ok_and(|features| features.split(',').any(|feature| feature == "crt-static"))
++}
++
++/// The dist directory of the profile, which a static C runtime build keeps
++/// apart.
++fn native_profile_dir() -> String {
++    if static_crt() {
++        format!("{}-crt-static", native_profile())
++    } else {
++        native_profile()
++    }
++}
++
+ fn inferred_native_target() -> Option<String> {
+     let os = env::var("CARGO_CFG_TARGET_OS").ok()?;
+     let arch = env::var("CARGO_CFG_TARGET_ARCH").ok()?;
+diff --git a/crates/erika_ffmpeg_sys/build.rs b/crates/erika_ffmpeg_sys/build.rs
+index 37e8518..634342b 100644
+--- a/crates/erika_ffmpeg_sys/build.rs
++++ b/crates/erika_ffmpeg_sys/build.rs
+@@ -175,6 +175,9 @@ fn configure_bundled_ffmpeg() -> Vec<PathBuf> {
+         println!("cargo:rustc-link-lib=framework=VideoToolbox");
+         println!("cargo:rustc-link-lib=iconv");
+         println!("cargo:rustc-link-lib=bz2");
++        if env::var("CARGO_CFG_TARGET_OS").as_deref() == Ok("macos") {
++            link_macos_compiler_runtime();
++        }
+     } else if env::var("CARGO_CFG_TARGET_OS").as_deref() == Ok("windows") {
+         for lib in [
+             "bcrypt",
+@@ -212,6 +215,42 @@ fn configure_bundled_ffmpeg() -> Vec<PathBuf> {
+     vec![include_dir]
+ }
+ 
++/// FFmpeg's VideoToolbox availability checks call __isPlatformVersionAtLeast.
++/// Clang/Swift link compiler-rt automatically, but Rust's -nodefaultlibs does
++/// not. Carry this dependency with FFmpeg so standalone Rust hosts link too.
++fn link_macos_compiler_runtime() {
++    println!("cargo:rerun-if-env-changed=DEVELOPER_DIR");
++    let output = std::process::Command::new("xcrun")
++        .args([
++            "--sdk",
++            "macosx",
++            "clang",
++            "--print-file-name=libclang_rt.osx.a",
++        ])
++        .output()
++        .expect("locate the macOS Clang runtime with xcrun");
++    assert!(
++        output.status.success(),
++        "cannot locate the macOS Clang runtime: {}",
++        String::from_utf8_lossy(&output.stderr)
++    );
++    let archive = PathBuf::from(
++        String::from_utf8(output.stdout)
++            .expect("Clang runtime path is UTF-8")
++            .trim(),
++    );
++    assert!(
++        archive.is_file(),
++        "macOS Clang runtime not found: {}",
++        archive.display()
++    );
++    println!(
++        "cargo:rustc-link-search=native={}",
++        archive.parent().expect("Clang runtime directory").display()
++    );
++    println!("cargo:rustc-link-lib=static=clang_rt.osx");
++}
++
+ fn generate_bindings(include_dirs: &[PathBuf]) {
+     ensure_libclang_path();
+ 
+@@ -507,14 +546,10 @@ fn ffmpeg_dist_dir() -> PathBuf {
+         return workspace_root()
+             .join("third_party/dist")
+             .join(target)
+-            .join(native_profile())
++            .join(native_profile_dir())
+             .join("ffmpeg");
+     }
+-    let mut dist = workspace_root().join("third_party/dist");
+-    if let Some(target) = inferred_native_target() {
+-        dist = dist.join(target);
+-    }
+-    dist.join(native_profile()).join("ffmpeg")
++    native_dist_root().join(native_profile_dir()).join("ffmpeg")
+ }
+ 
+ fn native_dep_dir(env_name: &str, name: &str) -> PathBuf {
+@@ -525,26 +560,58 @@ fn native_dep_dir(env_name: &str, name: &str) -> PathBuf {
+         return workspace_root()
+             .join("third_party/dist")
+             .join(target)
+-            .join(native_profile())
++            .join(native_profile_dir())
+             .join(name);
+     }
+-    let mut dist = workspace_root().join("third_party/dist");
++    native_dist_root().join(native_profile_dir()).join(name)
++}
++
++/// The dist directory `xtask deps build` filled for this target: the one
++/// named after the target triple when it was built (`--target
++/// aarch64-apple-darwin`), else the host build's.
++fn native_dist_root() -> PathBuf {
++    let dist = workspace_root().join("third_party/dist");
+     if let Some(target) = inferred_native_target() {
+-        dist = dist.join(target);
++        return dist.join(target);
+     }
+-    dist.join(native_profile()).join(name)
++    if let Ok(target) = env::var("TARGET") {
++        let built = dist.join(target);
++        if built.join(native_profile_dir()).is_dir() {
++            return built;
++        }
++    }
++    dist
+ }
+ 
+ fn native_profile() -> String {
+     env::var("ERIKA_NATIVE_PROFILE").unwrap_or_else(|_| "lgpl".to_string())
+ }
+ 
++/// Rust links the MSVC C runtime statically (`-C target-feature=+crt-static`),
++/// so the native libraries must too: `xtask deps build --crt static`.
++fn static_crt() -> bool {
++    env::var("CARGO_CFG_TARGET_ENV").as_deref() == Ok("msvc")
++        && env::var("CARGO_CFG_TARGET_FEATURE")
++            .is_ok_and(|features| features.split(',').any(|feature| feature == "crt-static"))
++}
++
++/// The dist directory of the profile, which a static C runtime build keeps
++/// apart.
++fn native_profile_dir() -> String {
++    if static_crt() {
++        format!("{}-crt-static", native_profile())
++    } else {
++        native_profile()
++    }
++}
++
+ fn xtask_build_hint() -> String {
+     let profile = native_profile();
++    let crt = if static_crt() { " --crt static" } else { "" };
+     if let Some(target) = inferred_native_target() {
+-        format!("cargo run -p xtask -- deps build --profile {profile} --target {target}")
++        format!("cargo run -p xtask -- deps build --profile {profile} --target {target}{crt}")
+     } else {
+-        format!("cargo run -p xtask -- deps build --profile {profile}")
++        format!("cargo run -p xtask -- deps build --profile {profile}{crt}")
+     }
+ }
+ 
+diff --git a/packages/erika_flutter/ohos/oh-package.json5 b/packages/erika_flutter/ohos/oh-package.json5
+index c5bc096..aae54df 100644
+--- a/packages/erika_flutter/ohos/oh-package.json5
++++ b/packages/erika_flutter/ohos/oh-package.json5
+@@ -1,6 +1,6 @@
+ {
+   "name": "erika_flutter",
+-  "version": "0.2.1",
++  "version": "0.3.0",
+   "description": "liberika media engine Flutter plugin for OpenHarmony",
+   "main": "index.ets",
+   "author": "Aimesoft",
+diff --git a/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets b/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets
+index f309470..4b3adc4 100644
+--- a/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets
++++ b/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets
+@@ -912,6 +912,7 @@ export default class ErikaFlutterPlugin implements FlutterPlugin, MethodCallHand
+       'setDanmakuTrackOffset', 'setDanmakuGlobalOffset',
+       'danmakuTracks', 'clearDanmaku', 'setDanmakuEnabled',
+       'setDanmakuConfig', 'selectAudioTrack', 'selectSubtitleTrack', 'tracks',
++      'getDiagnosticsSnapshot', 'getLogs', 'invokeJson',
+     ].includes(method);
+   }
+ }

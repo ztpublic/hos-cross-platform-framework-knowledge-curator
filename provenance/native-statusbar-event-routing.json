@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "native-statusbar-event-routing",
+  "sources": [
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+      "sha256": "3c40c8a4d5c3b80f90555bfa756fda19df99757f0ba8126562fad959e92aa592",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "7b4e54e0243096a7983419e8aa3939d0bc58a12512a77c4f316e2711efd3b5d0",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/module.json5",
+      "sha256": "570b73c6c291074cb2b49261ce5906f29efa5711f5529601ee7eb9e140135344",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/oh-rs-ability/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/oh-rs-ability/oh-package.json5",
+      "sha256": "2a7ec1f6bebf60f6e3cd5eef45ccdd5eb1209477f020ddc143227794a42cef76",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Selected native service only; no claim of full application feature review, generic tray support or runtime-tested teardown."
+  ]
+}

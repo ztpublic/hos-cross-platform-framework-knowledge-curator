@@ -1,0 +1,1208 @@
+[
+  {
+    "query": "tauri ohos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "Islatri/tauri-ohos-test",
+        "ref": "main",
+        "size": 6922,
+        "url": "https://github.com/Islatri/tauri-ohos-test"
+      },
+      {
+        "repository": "LeeLiangmin/tauri-ohos",
+        "ref": "main",
+        "size": 37,
+        "url": "https://github.com/LeeLiangmin/tauri-ohos"
+      },
+      {
+        "repository": "david921518/tauri-mobile",
+        "ref": "main",
+        "size": 9,
+        "url": "https://github.com/david921518/tauri-mobile"
+      },
+      {
+        "repository": "frankplus/tauri-ohos",
+        "ref": "main",
+        "size": 13329,
+        "url": "https://github.com/frankplus/tauri-ohos"
+      },
+      {
+        "repository": "linlinjinzhen/tauri-ohos-test",
+        "ref": "main",
+        "size": 6850,
+        "url": "https://github.com/linlinjinzhen/tauri-ohos-test"
+      },
+      {
+        "repository": "SJMC-Dev/tauri-ohos-experimental",
+        "ref": "feat/open-harmony",
+        "size": 109236,
+        "url": "https://github.com/SJMC-Dev/tauri-ohos-experimental"
+      },
+      {
+        "repository": "SJMC-Dev/tauri-plugins-workspace-ohos-experimental",
+        "ref": "feat/open-harmony",
+        "size": 18663,
+        "url": "https://github.com/SJMC-Dev/tauri-plugins-workspace-ohos-experimental"
+      }
+    ]
+  },
+  {
+    "query": "electron harmonyos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "electerm/electerm",
+        "ref": "master",
+        "size": 36150,
+        "url": "https://github.com/electerm/electerm"
+      },
+      {
+        "repository": "liriliri/echo",
+        "ref": "master",
+        "size": 6177,
+        "url": "https://github.com/liriliri/echo"
+      },
+      {
+        "repository": "ohosvscode/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/ohosvscode/ohos_electron_hap"
+      },
+      {
+        "repository": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+        "ref": "main",
+        "size": 69027,
+        "url": "https://github.com/5-Super-Rookie-5/bilibili-electron-HarmonyOS"
+      },
+      {
+        "repository": "ljlVink/ohos-cherrystudio-electron-base",
+        "ref": "main",
+        "size": 17689,
+        "url": "https://github.com/ljlVink/ohos-cherrystudio-electron-base"
+      },
+      {
+        "repository": "xiaogouyo/dsh-harmonyos",
+        "ref": "main",
+        "size": 11555,
+        "url": "https://github.com/xiaogouyo/dsh-harmonyos"
+      },
+      {
+        "repository": "fellow99/dsh-desktop-hos",
+        "ref": "main",
+        "size": 16134,
+        "url": "https://github.com/fellow99/dsh-desktop-hos"
+      },
+      {
+        "repository": "fellow99/ElectronShell",
+        "ref": "main",
+        "size": 389,
+        "url": "https://github.com/fellow99/ElectronShell"
+      },
+      {
+        "repository": "Douuble/ElectronicDiary-HarmonyOS",
+        "ref": "main",
+        "size": 2040,
+        "url": "https://github.com/Douuble/ElectronicDiary-HarmonyOS"
+      },
+      {
+        "repository": "ohosvscode/YesPlayMusic",
+        "ref": "master",
+        "size": 43094,
+        "url": "https://github.com/ohosvscode/YesPlayMusic"
+      },
+      {
+        "repository": "Groupguanfang/electron-harmonyOS",
+        "ref": "main",
+        "size": 11022,
+        "url": "https://github.com/Groupguanfang/electron-harmonyOS"
+      },
+      {
+        "repository": "mitayou/hm-tools",
+        "ref": "master",
+        "size": 1881,
+        "url": "https://github.com/mitayou/hm-tools"
+      },
+      {
+        "repository": "fellow99/pi-desktop-hos",
+        "ref": "main",
+        "size": 12692,
+        "url": "https://github.com/fellow99/pi-desktop-hos"
+      },
+      {
+        "repository": "fellow99/oc-desktop-hos",
+        "ref": "main",
+        "size": 12919,
+        "url": "https://github.com/fellow99/oc-desktop-hos"
+      },
+      {
+        "repository": "CCDawn/Codex-Dynamic-Skin",
+        "ref": "main",
+        "size": 32593,
+        "url": "https://github.com/CCDawn/Codex-Dynamic-Skin"
+      },
+      {
+        "repository": "SummerKaze/bilibili-electron-HarmonyOS",
+        "ref": "main",
+        "size": 20043,
+        "url": "https://github.com/SummerKaze/bilibili-electron-HarmonyOS"
+      },
+      {
+        "repository": "Gayhubers/bilibili-electron-HarmonyOS",
+        "ref": "main",
+        "size": 20043,
+        "url": "https://github.com/Gayhubers/bilibili-electron-HarmonyOS"
+      },
+      {
+        "repository": "Aik358/psychopy-studio-harmonyos",
+        "ref": "main",
+        "size": 112273,
+        "url": "https://github.com/Aik358/psychopy-studio-harmonyos"
+      },
+      {
+        "repository": "VladimirOS5/nexus-IDE",
+        "ref": "main",
+        "size": 329,
+        "url": "https://github.com/VladimirOS5/nexus-IDE"
+      },
+      {
+        "repository": "zhu-xiao-hui/dsh-desktop-hos",
+        "ref": "main",
+        "size": 13223,
+        "url": "https://github.com/zhu-xiao-hui/dsh-desktop-hos"
+      },
+      {
+        "repository": "fellow99/opencode-workspace",
+        "ref": "main",
+        "size": 987,
+        "url": "https://github.com/fellow99/opencode-workspace"
+      },
+      {
+        "repository": "HU-WEITAO/EchoMusic_OHOS",
+        "ref": "main",
+        "size": 3231,
+        "url": "https://github.com/HU-WEITAO/EchoMusic_OHOS"
+      },
+      {
+        "repository": "wieszheng/openx",
+        "ref": "master",
+        "size": 30790,
+        "url": "https://github.com/wieszheng/openx"
+      },
+      {
+        "repository": "fellow99/pi-workspace",
+        "ref": "main",
+        "size": 2131,
+        "url": "https://github.com/fellow99/pi-workspace"
+      },
+      {
+        "repository": "lzzhij/dsh-harmony",
+        "ref": "main",
+        "size": 906,
+        "url": "https://github.com/lzzhij/dsh-harmony"
+      },
+      {
+        "repository": "wieszheng/sparkles",
+        "ref": "master",
+        "size": 29367,
+        "url": "https://github.com/wieszheng/sparkles"
+      },
+      {
+        "repository": "littlestone0806/doubao-watermark-lab",
+        "ref": "main",
+        "size": 87207,
+        "url": "https://github.com/littlestone0806/doubao-watermark-lab"
+      },
+      {
+        "repository": "fellow99/deepseek-harness-workspace",
+        "ref": "main",
+        "size": 4718,
+        "url": "https://github.com/fellow99/deepseek-harness-workspace"
+      },
+      {
+        "repository": "Groupguanfang/ohos_electron_hap",
+        "ref": "main",
+        "size": 17585,
+        "url": "https://github.com/Groupguanfang/ohos_electron_hap"
+      },
+      {
+        "repository": "laogong5i0-2/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/laogong5i0-2/ohos_electron_hap"
+      },
+      {
+        "repository": "algoideas/ohos_electron_hap",
+        "ref": "main",
+        "size": 17585,
+        "url": "https://github.com/algoideas/ohos_electron_hap"
+      },
+      {
+        "repository": "zeyuli9423/ohos_electron_hap",
+        "ref": "main",
+        "size": 17585,
+        "url": "https://github.com/zeyuli9423/ohos_electron_hap"
+      },
+      {
+        "repository": "yutingzhao1991/ohos_electron_hap",
+        "ref": "main",
+        "size": 29065,
+        "url": "https://github.com/yutingzhao1991/ohos_electron_hap"
+      },
+      {
+        "repository": "caidingding233/hmos-electron-template",
+        "ref": "main",
+        "size": 17585,
+        "url": "https://github.com/caidingding233/hmos-electron-template"
+      },
+      {
+        "repository": "jimmy54/ohos_electron_hap",
+        "ref": "main",
+        "size": 17588,
+        "url": "https://github.com/jimmy54/ohos_electron_hap"
+      },
+      {
+        "repository": "flyinke/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/flyinke/ohos_electron_hap"
+      },
+      {
+        "repository": "tonycoder-hub/ohos_electron_hap",
+        "ref": "main",
+        "size": 28154,
+        "url": "https://github.com/tonycoder-hub/ohos_electron_hap"
+      },
+      {
+        "repository": "13033129822/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/13033129822/ohos_electron_hap"
+      },
+      {
+        "repository": "mucahidkincir/ohos_electron_hap",
+        "ref": "main",
+        "size": 28152,
+        "url": "https://github.com/mucahidkincir/ohos_electron_hap"
+      },
+      {
+        "repository": "donggecheng5-stack/ohos-cherrystudio-electron-base",
+        "ref": "main",
+        "size": 17689,
+        "url": "https://github.com/donggecheng5-stack/ohos-cherrystudio-electron-base"
+      },
+      {
+        "repository": "ideadroit/ohos-cherrystudio-electron-base",
+        "ref": "main",
+        "size": 17689,
+        "url": "https://github.com/ideadroit/ohos-cherrystudio-electron-base"
+      },
+      {
+        "repository": "fellow99/dsh-desktop-ark",
+        "ref": "main",
+        "size": 1197,
+        "url": "https://github.com/fellow99/dsh-desktop-ark"
+      },
+      {
+        "repository": "Daydreamcgy/huawei-music-win",
+        "ref": "main",
+        "size": 68605,
+        "url": "https://github.com/Daydreamcgy/huawei-music-win"
+      },
+      {
+        "repository": "jinpenglu74/doubao-watermark-lab",
+        "ref": "main",
+        "size": 87161,
+        "url": "https://github.com/jinpenglu74/doubao-watermark-lab"
+      },
+      {
+        "repository": "Pakchuii/PC-PAD-LINKED",
+        "ref": "main",
+        "size": 12473,
+        "url": "https://github.com/Pakchuii/PC-PAD-LINKED"
+      },
+      {
+        "repository": "306026185/page-eyes-agent",
+        "ref": "master",
+        "size": 96521,
+        "url": "https://github.com/306026185/page-eyes-agent"
+      }
+    ]
+  },
+  {
+    "query": "qt harmonyos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "Aloereed/vlc-qt6-ohos",
+        "ref": "main",
+        "size": 22159,
+        "url": "https://github.com/Aloereed/vlc-qt6-ohos"
+      },
+      {
+        "repository": "liys-online/qtc-for-harmonyos",
+        "ref": "main",
+        "size": 13703,
+        "url": "https://github.com/liys-online/qtc-for-harmonyos"
+      },
+      {
+        "repository": "AppFactory-EastWest/skill-qt-harmonyos",
+        "ref": "main",
+        "size": 12,
+        "url": "https://github.com/AppFactory-EastWest/skill-qt-harmonyos"
+      },
+      {
+        "repository": "Sorrime/HarmonyOS-Qt",
+        "ref": "master",
+        "size": 70,
+        "url": "https://github.com/Sorrime/HarmonyOS-Qt"
+      },
+      {
+        "repository": "esokullu/vlc-qt6-ohos",
+        "ref": "main",
+        "size": 22159,
+        "url": "https://github.com/esokullu/vlc-qt6-ohos"
+      },
+      {
+        "repository": "Li-Yaosong/qtc-for-harmonyos",
+        "ref": "main",
+        "size": 13617,
+        "url": "https://github.com/Li-Yaosong/qtc-for-harmonyos"
+      },
+      {
+        "repository": "sammary114/shotcut-on-harmonyos-pc",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/sammary114/shotcut-on-harmonyos-pc"
+      },
+      {
+        "repository": "forwardz666/SciDAVis-for-HarmonyOS",
+        "ref": "main",
+        "size": 255795,
+        "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS"
+      },
+      {
+        "repository": "xiaomu120413/ohshark",
+        "ref": "main",
+        "size": 8282,
+        "url": "https://github.com/xiaomu120413/ohshark"
+      },
+      {
+        "repository": "yangy79/KLayout-on-Harmony-PC",
+        "ref": "main",
+        "size": 2801,
+        "url": "https://github.com/yangy79/KLayout-on-Harmony-PC"
+      },
+      {
+        "repository": "OrdinaryManZ/HarmonyAdaptQtDemo",
+        "ref": "main",
+        "size": 8820,
+        "url": "https://github.com/OrdinaryManZ/HarmonyAdaptQtDemo"
+      },
+      {
+        "repository": "cuihairu/memex",
+        "ref": "main",
+        "size": 58356,
+        "url": "https://github.com/cuihairu/memex"
+      },
+      {
+        "repository": "calm6666/CicadaPlayerNext",
+        "ref": "1.0.0",
+        "size": 82396,
+        "url": "https://github.com/calm6666/CicadaPlayerNext"
+      },
+      {
+        "repository": "XingHaiOvO/APNG-Generator",
+        "ref": "main",
+        "size": 384,
+        "url": "https://github.com/XingHaiOvO/APNG-Generator"
+      }
+    ]
+  },
+  {
+    "query": "compose ohos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "chashaochang/CMPLiquidGlass",
+        "ref": "kmp",
+        "size": 280933,
+        "url": "https://github.com/chashaochang/CMPLiquidGlass"
+      },
+      {
+        "repository": "jiahui1114/ComposeMediaPlayer-Ohos",
+        "ref": "master",
+        "size": 14178,
+        "url": "https://github.com/jiahui1114/ComposeMediaPlayer-Ohos"
+      },
+      {
+        "repository": "crowforkotlin/coil",
+        "ref": "ohos",
+        "size": 128299,
+        "url": "https://github.com/crowforkotlin/coil"
+      },
+      {
+        "repository": "xiaqingpeng/HarmonyKMP",
+        "ref": "main",
+        "size": 50512,
+        "url": "https://github.com/xiaqingpeng/HarmonyKMP"
+      },
+      {
+        "repository": "HachimiWorld/haze-ohos",
+        "ref": "1.7.2-OH-1.0.0",
+        "size": 4038777,
+        "url": "https://github.com/HachimiWorld/haze-ohos"
+      },
+      {
+        "repository": "shen601020/http_ohos",
+        "ref": "master",
+        "size": 2810,
+        "url": "https://github.com/shen601020/http_ohos"
+      },
+      {
+        "repository": "HachimiWorld/FileKit-ohos",
+        "ref": "0.12.0-OH-1.0.0",
+        "size": 32883,
+        "url": "https://github.com/HachimiWorld/FileKit-ohos"
+      },
+      {
+        "repository": "MiaoKukun/HarmonyKMP",
+        "ref": "main",
+        "size": 50512,
+        "url": "https://github.com/MiaoKukun/HarmonyKMP"
+      },
+      {
+        "repository": "ChinaArJun/HarmonyKMP",
+        "ref": "main",
+        "size": 50505,
+        "url": "https://github.com/ChinaArJun/HarmonyKMP"
+      }
+    ]
+  },
+  {
+    "query": "flutter ohos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "Tencent/MMKV",
+        "ref": "master",
+        "size": 48934,
+        "url": "https://github.com/Tencent/MMKV"
+      },
+      {
+        "repository": "dev4harmony/PiliPlus",
+        "ref": "ohos",
+        "size": 103470,
+        "url": "https://github.com/dev4harmony/PiliPlus"
+      },
+      {
+        "repository": "dev4harmony/PiliNara",
+        "ref": "ohos",
+        "size": 92450,
+        "url": "https://github.com/dev4harmony/PiliNara"
+      },
+      {
+        "repository": "0xZOne/ohos-flutter-add2app",
+        "ref": "main",
+        "size": 26812,
+        "url": "https://github.com/0xZOne/ohos-flutter-add2app"
+      },
+      {
+        "repository": "wang-bin/fvp",
+        "ref": "master",
+        "size": 663,
+        "url": "https://github.com/wang-bin/fvp"
+      },
+      {
+        "repository": "PsjJourney/qq_amap_flutter_map",
+        "ref": "main",
+        "size": 864,
+        "url": "https://github.com/PsjJourney/qq_amap_flutter_map"
+      },
+      {
+        "repository": "guoxiucai/ohos-scrcpy-app",
+        "ref": "main",
+        "size": 164974,
+        "url": "https://github.com/guoxiucai/ohos-scrcpy-app"
+      },
+      {
+        "repository": "Aloereed/aloeplayer_ohos",
+        "ref": "main",
+        "size": 73113,
+        "url": "https://github.com/Aloereed/aloeplayer_ohos"
+      },
+      {
+        "repository": "Aloereed/localsend-ohos",
+        "ref": "aloesend",
+        "size": 76723,
+        "url": "https://github.com/Aloereed/localsend-ohos"
+      },
+      {
+        "repository": "niuhuan/harmony-next-flutter-pipeline-docker",
+        "ref": "main",
+        "size": 22,
+        "url": "https://github.com/niuhuan/harmony-next-flutter-pipeline-docker"
+      },
+      {
+        "repository": "bgli100/pixez-flutter-ohos",
+        "ref": "master",
+        "size": 223302,
+        "url": "https://github.com/bgli100/pixez-flutter-ohos"
+      },
+      {
+        "repository": "collaborative-creation/etohos",
+        "ref": "main",
+        "size": 1569,
+        "url": "https://github.com/collaborative-creation/etohos"
+      },
+      {
+        "repository": "banlang222/flutter_tts",
+        "ref": "main",
+        "size": 22007,
+        "url": "https://github.com/banlang222/flutter_tts"
+      },
+      {
+        "repository": "HarmonyCandies/sensors_plus_ohos",
+        "ref": "main",
+        "size": 53,
+        "url": "https://github.com/HarmonyCandies/sensors_plus_ohos"
+      },
+      {
+        "repository": "HarmonyCandies/flutter_platform_utils",
+        "ref": "main",
+        "size": 4,
+        "url": "https://github.com/HarmonyCandies/flutter_platform_utils"
+      },
+      {
+        "repository": "yabi-zzh/simple-live-ohos",
+        "ref": "main",
+        "size": 21461,
+        "url": "https://github.com/yabi-zzh/simple-live-ohos"
+      },
+      {
+        "repository": "Aloereed/flutter_rust_bridge_ohos",
+        "ref": "master",
+        "size": 160637,
+        "url": "https://github.com/Aloereed/flutter_rust_bridge_ohos"
+      },
+      {
+        "repository": "FlutterAds/flutter_ohos_ads",
+        "ref": "master",
+        "size": 41,
+        "url": "https://github.com/FlutterAds/flutter_ohos_ads"
+      },
+      {
+        "repository": "lxdklp/MCB_OHOS",
+        "ref": "main",
+        "size": 20840,
+        "url": "https://github.com/lxdklp/MCB_OHOS"
+      },
+      {
+        "repository": "HarmonyCandies/connectivity_plus_ohos",
+        "ref": "main",
+        "size": 39,
+        "url": "https://github.com/HarmonyCandies/connectivity_plus_ohos"
+      },
+      {
+        "repository": "HandwerSTD/pixez-flutter_ohos",
+        "ref": "my_ohos",
+        "size": 182545,
+        "url": "https://github.com/HandwerSTD/pixez-flutter_ohos"
+      },
+      {
+        "repository": "liyufengrex/flutter_ohos",
+        "ref": "main",
+        "size": 81,
+        "url": "https://github.com/liyufengrex/flutter_ohos"
+      },
+      {
+        "repository": "nexhub-app/NexHub",
+        "ref": "main",
+        "size": 48709,
+        "url": "https://github.com/nexhub-app/NexHub"
+      },
+      {
+        "repository": "HarmonyCandies/umeng_common_sdk_ohos",
+        "ref": "main",
+        "size": 37,
+        "url": "https://github.com/HarmonyCandies/umeng_common_sdk_ohos"
+      },
+      {
+        "repository": "JalorOo/ohos_ui",
+        "ref": "master",
+        "size": 290,
+        "url": "https://github.com/JalorOo/ohos_ui"
+      },
+      {
+        "repository": "HarmonyCandies/app_links_ohos",
+        "ref": "main",
+        "size": 35,
+        "url": "https://github.com/HarmonyCandies/app_links_ohos"
+      },
+      {
+        "repository": "banlang222/flutter_email_sender",
+        "ref": "main",
+        "size": 93,
+        "url": "https://github.com/banlang222/flutter_email_sender"
+      },
+      {
+        "repository": "banlang222/flutter_ringtone_player",
+        "ref": "main",
+        "size": 3529,
+        "url": "https://github.com/banlang222/flutter_ringtone_player"
+      },
+      {
+        "repository": "zhongdaiqi/flutter-ohos-builder",
+        "ref": "main",
+        "size": 140,
+        "url": "https://github.com/zhongdaiqi/flutter-ohos-builder"
+      },
+      {
+        "repository": "zacksleo/flutter-ohos-demo",
+        "ref": "master",
+        "size": 1029,
+        "url": "https://github.com/zacksleo/flutter-ohos-demo"
+      },
+      {
+        "repository": "zhongdaiqi/flutter-ohos-app-template",
+        "ref": "main",
+        "size": 65,
+        "url": "https://github.com/zhongdaiqi/flutter-ohos-app-template"
+      },
+      {
+        "repository": "dev-zl/flutter-hms-location-ohos",
+        "ref": "main",
+        "size": 1095,
+        "url": "https://github.com/dev-zl/flutter-hms-location-ohos"
+      },
+      {
+        "repository": "dev-zl/flutter-hms-map-ohos",
+        "ref": "main",
+        "size": 3436,
+        "url": "https://github.com/dev-zl/flutter-hms-map-ohos"
+      },
+      {
+        "repository": "LQYaphets/flutter_inappwebview_ohos",
+        "ref": "master",
+        "size": 32414,
+        "url": "https://github.com/LQYaphets/flutter_inappwebview_ohos"
+      },
+      {
+        "repository": "iakii/flutter_2_ohos",
+        "ref": "master",
+        "size": 4875,
+        "url": "https://github.com/iakii/flutter_2_ohos"
+      },
+      {
+        "repository": "HelloZeroNick/fqapp",
+        "ref": "ohos",
+        "size": 14223,
+        "url": "https://github.com/HelloZeroNick/fqapp"
+      },
+      {
+        "repository": "YunFeng-Huang/flutter_quill-10.8.5",
+        "ref": "main",
+        "size": 2435,
+        "url": "https://github.com/YunFeng-Huang/flutter_quill-10.8.5"
+      },
+      {
+        "repository": "Aloereed/flutter_dmzj_ohos",
+        "ref": "main",
+        "size": 4242,
+        "url": "https://github.com/Aloereed/flutter_dmzj_ohos"
+      },
+      {
+        "repository": "HarmonyCandies/network_info_plus_ohos",
+        "ref": "main",
+        "size": 42,
+        "url": "https://github.com/HarmonyCandies/network_info_plus_ohos"
+      },
+      {
+        "repository": "dakkidaze/mangacopy-ohos",
+        "ref": "main",
+        "size": 1006,
+        "url": "https://github.com/dakkidaze/mangacopy-ohos"
+      },
+      {
+        "repository": "bruce3x/flutter_fluttertoast_ohos",
+        "ref": "bruce/fix/br_v9.0.0_ohos",
+        "size": 22128,
+        "url": "https://github.com/bruce3x/flutter_fluttertoast_ohos"
+      },
+      {
+        "repository": "hanlin19900610/flutter_ohos_kit",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/hanlin19900610/flutter_ohos_kit"
+      },
+      {
+        "repository": "shokakucarrier/neon-ohos",
+        "ref": "main",
+        "size": 69610,
+        "url": "https://github.com/shokakucarrier/neon-ohos"
+      },
+      {
+        "repository": "Aloereed/media-kit-ohos",
+        "ref": "main",
+        "size": 78622,
+        "url": "https://github.com/Aloereed/media-kit-ohos"
+      },
+      {
+        "repository": "Aloereed/mikan_flutter_ohos",
+        "ref": "master",
+        "size": 495356,
+        "url": "https://github.com/Aloereed/mikan_flutter_ohos"
+      },
+      {
+        "repository": "zhongdaiqi/flutter_flutter",
+        "ref": "3.22.0-ohos",
+        "size": 1943302,
+        "url": "https://github.com/zhongdaiqi/flutter_flutter"
+      },
+      {
+        "repository": "XHXYT/pixez-flutter-ohos",
+        "ref": "main",
+        "size": 3397,
+        "url": "https://github.com/XHXYT/pixez-flutter-ohos"
+      },
+      {
+        "repository": "banlang222/flutter_opencc_ffi",
+        "ref": "main",
+        "size": 4514,
+        "url": "https://github.com/banlang222/flutter_opencc_ffi"
+      },
+      {
+        "repository": "flutter4harmony/flutter_settings_ui-3.0.1",
+        "ref": "main",
+        "size": 2839,
+        "url": "https://github.com/flutter4harmony/flutter_settings_ui-3.0.1"
+      },
+      {
+        "repository": "iptton-ai/record_ohos",
+        "ref": "main",
+        "size": 8,
+        "url": "https://github.com/iptton-ai/record_ohos"
+      },
+      {
+        "repository": "bruce3x/flutter_sqflite_ohos",
+        "ref": "br_v2.4.2_ohos",
+        "size": 6207,
+        "url": "https://github.com/bruce3x/flutter_sqflite_ohos"
+      },
+      {
+        "repository": "HarmonyOS-AI/ohos-prebuilt-libs",
+        "ref": "main",
+        "size": 1,
+        "url": "https://github.com/HarmonyOS-AI/ohos-prebuilt-libs"
+      },
+      {
+        "repository": "xuanxuan123xuan/flutter_packages",
+        "ref": "master",
+        "size": 541149,
+        "url": "https://github.com/xuanxuan123xuan/flutter_packages"
+      },
+      {
+        "repository": "liuzenm/flutter_plugin_record_ohos",
+        "ref": "master",
+        "size": 29561,
+        "url": "https://github.com/liuzenm/flutter_plugin_record_ohos"
+      },
+      {
+        "repository": "FlutterOH/fluoh",
+        "ref": "main",
+        "size": 3629,
+        "url": "https://github.com/FlutterOH/fluoh"
+      },
+      {
+        "repository": "xuanxuan123xuan/flutter_flutter_ohos",
+        "ref": "oh-3.41.9-release",
+        "size": 475083,
+        "url": "https://github.com/xuanxuan123xuan/flutter_flutter_ohos"
+      },
+      {
+        "repository": "drainlin/fluttertpc_just_audio",
+        "ref": "main",
+        "size": 1785,
+        "url": "https://github.com/drainlin/fluttertpc_just_audio"
+      },
+      {
+        "repository": "lijianqiang12/TPNS-Flutter-Plugin",
+        "ref": "master",
+        "size": 4131,
+        "url": "https://github.com/lijianqiang12/TPNS-Flutter-Plugin"
+      },
+      {
+        "repository": "bruce3x/flutter_plus_plugins",
+        "ref": "br_sensors_plus-v7.0.0_ohos",
+        "size": 29916,
+        "url": "https://github.com/bruce3x/flutter_plus_plugins"
+      },
+      {
+        "repository": "yrjwcharm/flutter_ohos",
+        "ref": "main",
+        "size": 656,
+        "url": "https://github.com/yrjwcharm/flutter_ohos"
+      },
+      {
+        "repository": "AAswordman/flutter-ohos",
+        "ref": "oh-3.41.9-release",
+        "size": 474744,
+        "url": "https://github.com/AAswordman/flutter-ohos"
+      },
+      {
+        "repository": "shaohushuo/fluttertoast_ohos",
+        "ref": "master",
+        "size": 230,
+        "url": "https://github.com/shaohushuo/fluttertoast_ohos"
+      },
+      {
+        "repository": "FiveHair/fluttertpc_device_info_plus",
+        "ref": "ohos-macos-fix",
+        "size": 335,
+        "url": "https://github.com/FiveHair/fluttertpc_device_info_plus"
+      },
+      {
+        "repository": "rsanjuan87/flutter-ohos",
+        "ref": "master",
+        "size": 2144780,
+        "url": "https://github.com/rsanjuan87/flutter-ohos"
+      },
+      {
+        "repository": "richshaw2015/flutter_tts_ohos",
+        "ref": "main",
+        "size": 22009,
+        "url": "https://github.com/richshaw2015/flutter_tts_ohos"
+      },
+      {
+        "repository": "HuajiFruit/image_gallery_saver_plus_ohos",
+        "ref": "main",
+        "size": 422,
+        "url": "https://github.com/HuajiFruit/image_gallery_saver_plus_ohos"
+      },
+      {
+        "repository": "yuhenglong/flutter_ohos",
+        "ref": "main",
+        "size": 22,
+        "url": "https://github.com/yuhenglong/flutter_ohos"
+      },
+      {
+        "repository": "lm83680/agora_rtc",
+        "ref": "master",
+        "size": 31055,
+        "url": "https://github.com/lm83680/agora_rtc"
+      },
+      {
+        "repository": "FlutterOH/source",
+        "ref": "main",
+        "size": 172,
+        "url": "https://github.com/FlutterOH/source"
+      },
+      {
+        "repository": "bruce3x/flutter_sentry_ohos",
+        "ref": "bruce/fix/br_3.35_ohos",
+        "size": 20792,
+        "url": "https://github.com/bruce3x/flutter_sentry_ohos"
+      },
+      {
+        "repository": "tangfuhao/flutter-packages-ohos",
+        "ref": "main",
+        "size": 64152,
+        "url": "https://github.com/tangfuhao/flutter-packages-ohos"
+      },
+      {
+        "repository": "LQYaphets/fluttertpc_record_ohos",
+        "ref": "master",
+        "size": 8767,
+        "url": "https://github.com/LQYaphets/fluttertpc_record_ohos"
+      },
+      {
+        "repository": "AKI-YU/flutter_inappwebview-ohos",
+        "ref": "main",
+        "size": 7670,
+        "url": "https://github.com/AKI-YU/flutter_inappwebview-ohos"
+      },
+      {
+        "repository": "belier-cn/flutter_ohos_packages",
+        "ref": "main",
+        "size": 827,
+        "url": "https://github.com/belier-cn/flutter_ohos_packages"
+      },
+      {
+        "repository": "shaohushuo/flutter_downloader_ohos",
+        "ref": "master",
+        "size": 97,
+        "url": "https://github.com/shaohushuo/flutter_downloader_ohos"
+      },
+      {
+        "repository": "0xZOne/webview_flutter_ohos",
+        "ref": "main",
+        "size": 1600,
+        "url": "https://github.com/0xZOne/webview_flutter_ohos"
+      },
+      {
+        "repository": "nature0101/flutter_ohos_demo",
+        "ref": "main",
+        "size": 163,
+        "url": "https://github.com/nature0101/flutter_ohos_demo"
+      },
+      {
+        "repository": "moyearzhou/flutter_sqflite_ohos",
+        "ref": "main",
+        "size": 6023,
+        "url": "https://github.com/moyearzhou/flutter_sqflite_ohos"
+      },
+      {
+        "repository": "JamesBondMine/flutter_ohos_demo",
+        "ref": "main",
+        "size": 29526,
+        "url": "https://github.com/JamesBondMine/flutter_ohos_demo"
+      },
+      {
+        "repository": "bruce3x/flutter_record_ohos",
+        "ref": "bruce/ohos-startstream-fix",
+        "size": 9053,
+        "url": "https://github.com/bruce3x/flutter_record_ohos"
+      },
+      {
+        "repository": "bruce3x/flutter_inappwebview_ohos",
+        "ref": "master",
+        "size": 33241,
+        "url": "https://github.com/bruce3x/flutter_inappwebview_ohos"
+      },
+      {
+        "repository": "rsanjuan87/flutter-ohos-samples",
+        "ref": "master",
+        "size": 1033250,
+        "url": "https://github.com/rsanjuan87/flutter-ohos-samples"
+      },
+      {
+        "repository": "bruce3x/flutter_packages_ohos",
+        "ref": "master",
+        "size": 566167,
+        "url": "https://github.com/bruce3x/flutter_packages_ohos"
+      },
+      {
+        "repository": "rsanjuan87/flutter-ohos-packages",
+        "ref": "br_camera-v0.11.0+2_ohos",
+        "size": 708362,
+        "url": "https://github.com/rsanjuan87/flutter-ohos-packages"
+      },
+      {
+        "repository": "ramonouyang/flutter_local_notifications_ohos",
+        "ref": "main",
+        "size": 22,
+        "url": "https://github.com/ramonouyang/flutter_local_notifications_ohos"
+      },
+      {
+        "repository": "wowbby/flutter_floor_ohos",
+        "ref": "main",
+        "size": 10,
+        "url": "https://github.com/wowbby/flutter_floor_ohos"
+      },
+      {
+        "repository": "rx123rx/flutter_ohos_demo",
+        "ref": "main",
+        "size": 69,
+        "url": "https://github.com/rx123rx/flutter_ohos_demo"
+      },
+      {
+        "repository": "xiaomaiTD/flutter_get_ohos",
+        "ref": "master",
+        "size": 34445,
+        "url": "https://github.com/xiaomaiTD/flutter_get_ohos"
+      },
+      {
+        "repository": "dgh1818/flutter_engine_ohos",
+        "ref": "oh-3.35.7-dev-hdr",
+        "size": 754938,
+        "url": "https://github.com/dgh1818/flutter_engine_ohos"
+      },
+      {
+        "repository": "NanCunChild/flutter_inappwebview",
+        "ref": "master",
+        "size": 32334,
+        "url": "https://github.com/NanCunChild/flutter_inappwebview"
+      },
+      {
+        "repository": "shaohushuo/flutter_tts_ohos",
+        "ref": "master",
+        "size": 33,
+        "url": "https://github.com/shaohushuo/flutter_tts_ohos"
+      },
+      {
+        "repository": "banlang222/flutter_ohos_utils",
+        "ref": "main",
+        "size": 415,
+        "url": "https://github.com/banlang222/flutter_ohos_utils"
+      },
+      {
+        "repository": "ClosedHarmony/flutter_webview_ohos",
+        "ref": "main",
+        "size": 1642,
+        "url": "https://github.com/ClosedHarmony/flutter_webview_ohos"
+      },
+      {
+        "repository": "lm83680/app_links",
+        "ref": "main",
+        "size": 72,
+        "url": "https://github.com/lm83680/app_links"
+      },
+      {
+        "repository": "HeZeBang/br_mobile_scanner_ohos",
+        "ref": "br_v6.0.10_ohos_techpie",
+        "size": 19381,
+        "url": "https://github.com/HeZeBang/br_mobile_scanner_ohos"
+      },
+      {
+        "repository": "yueying0083/amap_flutter_location",
+        "ref": "main",
+        "size": 94,
+        "url": "https://github.com/yueying0083/amap_flutter_location"
+      },
+      {
+        "repository": "HelloZeroNick/libflutter-ohos-build",
+        "ref": "main",
+        "size": 24,
+        "url": "https://github.com/HelloZeroNick/libflutter-ohos-build"
+      },
+      {
+        "repository": "jackwangfeng/mp-flutter",
+        "ref": "main",
+        "size": 4219,
+        "url": "https://github.com/jackwangfeng/mp-flutter"
+      },
+      {
+        "repository": "virg00/ffmpeg_kit_flutter_ohos",
+        "ref": "main",
+        "size": 85318,
+        "url": "https://github.com/virg00/ffmpeg_kit_flutter_ohos"
+      },
+      {
+        "repository": "rsanjuan87/flutter-ohos-engine",
+        "ref": "3.7.12-ohos-1.0.1-candidate.4",
+        "size": 497342,
+        "url": "https://github.com/rsanjuan87/flutter-ohos-engine"
+      }
+    ]
+  },
+  {
+    "query": "react-native ohos",
+    "archive_filter_applied": null,
+    "repositories": [
+      {
+        "repository": "react-native-oh-library/react-native-ping",
+        "ref": "sig",
+        "size": 853,
+        "url": "https://github.com/react-native-oh-library/react-native-ping"
+      },
+      {
+        "repository": "yrjwcharm/react-native-ohos",
+        "ref": "main",
+        "size": 44456,
+        "url": "https://github.com/yrjwcharm/react-native-ohos"
+      },
+      {
+        "repository": "yrjwcharm/react-native-ohos-docviewer",
+        "ref": "master",
+        "size": 93,
+        "url": "https://github.com/yrjwcharm/react-native-ohos-docviewer"
+      },
+      {
+        "repository": "yrjwcharm/react-native-ohos-svgaplayer",
+        "ref": "main",
+        "size": 3987,
+        "url": "https://github.com/yrjwcharm/react-native-ohos-svgaplayer"
+      },
+      {
+        "repository": "AuroraMaster/ohos_react_native",
+        "ref": "main",
+        "size": 95393,
+        "url": "https://github.com/AuroraMaster/ohos_react_native"
+      },
+      {
+        "repository": "CarSmallGuo/ohos_react_native",
+        "ref": "0.72.5-ohos-5.0-release",
+        "size": 80654,
+        "url": "https://github.com/CarSmallGuo/ohos_react_native"
+      },
+      {
+        "repository": "linhandev/ohos_react_native",
+        "ref": "0.77.1-rc.1-ohos",
+        "size": 102502,
+        "url": "https://github.com/linhandev/ohos_react_native"
+      },
+      {
+        "repository": "yuangerep/react-native-ping",
+        "ref": "sig",
+        "size": 838,
+        "url": "https://github.com/yuangerep/react-native-ping"
+      },
+      {
+        "repository": "xinxintop/react-native-ping",
+        "ref": "sig",
+        "size": 852,
+        "url": "https://github.com/xinxintop/react-native-ping"
+      },
+      {
+        "repository": "dreamrjj/react-native-modalbox-ohos",
+        "ref": "sig",
+        "size": 883,
+        "url": "https://github.com/dreamrjj/react-native-modalbox-ohos"
+      },
+      {
+        "repository": "jingjing123jingjing/react-native-ping",
+        "ref": "sig",
+        "size": 853,
+        "url": "https://github.com/jingjing123jingjing/react-native-ping"
+      },
+      {
+        "repository": "AuroraMaster/react-native-ohos-library",
+        "ref": "master",
+        "size": 20707,
+        "url": "https://github.com/AuroraMaster/react-native-ohos-library"
+      },
+      {
+        "repository": "CarSmallGuo/ohos_react_native_new",
+        "ref": "0.72-6.1-release",
+        "size": 361844,
+        "url": "https://github.com/CarSmallGuo/ohos_react_native_new"
+      },
+      {
+        "repository": "CarSmallGuo/ohos_react_native_flash",
+        "ref": "0.72-6.1-release",
+        "size": 356293,
+        "url": "https://github.com/CarSmallGuo/ohos_react_native_flash"
+      },
+      {
+        "repository": "chenwenhui133/react-native-ping",
+        "ref": "sig",
+        "size": 850,
+        "url": "https://github.com/chenwenhui133/react-native-ping"
+      },
+      {
+        "repository": "PureHarmonyProject/rive-ohos",
+        "ref": "main",
+        "size": 0,
+        "url": "https://github.com/PureHarmonyProject/rive-ohos"
+      },
+      {
+        "repository": "helloJincheng/react-native-ohos",
+        "ref": "main",
+        "size": 44456,
+        "url": "https://github.com/helloJincheng/react-native-ohos"
+      },
+      {
+        "repository": "hime88/react-native-skia-ohos",
+        "ref": "sig",
+        "size": 312902,
+        "url": "https://github.com/hime88/react-native-skia-ohos"
+      },
+      {
+        "repository": "yaawww/react-native-ohos-svgaplayer",
+        "ref": "main",
+        "size": 3987,
+        "url": "https://github.com/yaawww/react-native-ohos-svgaplayer"
+      }
+    ]
+  }
+]

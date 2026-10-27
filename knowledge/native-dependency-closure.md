@@ -49,6 +49,8 @@ Trace NEEDED entries and required exports recursively, then package supported AB
 
 Applies to native libraries consumed by any framework; module directory conventions and library versions remain backend-specific.
 
+Inspect the exact `DT_NEEDED` strings as well as missing filenames. A dependency built without a SONAME can put an absolute development-machine path into the consumer. Prefer rebuilding/relinking with a stable intended loader name; if a scoped post-link rewrite is necessary, preserve ELF layout and re-inspect every dependency before packaging. Renaming the packaged file alone does not rewrite the consumer.
+
 ## Common mistakes
 
 Empty stubs can have incompatible signatures and silently remove functionality. Pulling a device system library is not a portable general packaging solution.

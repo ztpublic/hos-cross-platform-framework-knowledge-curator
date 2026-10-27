@@ -1,0 +1,45 @@
+[package]
+name = "tauri-ohos-test"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_ohos_test_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony", features = [
+] }
+
+[dependencies]
+tauri = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony", features = [
+] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+napi-ohos = { version = "1.2" }
+napi-derive-ohos = "1.2"
+tauri-plugin-fs = "2"
+
+
+[patch.crates-io]
+wry = { git = "https://github.com/tauri-apps/wry", branch = "feat/open-harmony" }
+tao = { git = "https://github.com/tauri-apps/tao", branch = "feat/open-harmony" }
+openharmony-ability = { git = "https://github.com/harmony-contrib/openharmony-ability.git" }
+openharmony-ability-derive = { git = "https://github.com/harmony-contrib/openharmony-ability.git" }
+
+
+tauri = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony" }
+tauri-runtime = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony" }
+tauri-utils = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony", features = [
+    "resources",
+] }
+tauri-macros = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony" }
+tauri-runtime-wry = { git = "https://github.com/tauri-apps/tauri", branch = "feat/open-harmony" }

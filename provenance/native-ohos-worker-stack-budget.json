@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "native-ohos-worker-stack-budget",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/CustomStackSizeThread.h",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/CustomStackSizeThread.h",
+      "sha256": "02c25add4f80d731709a2ac8f0ce9371ac51c84222a3547a61460954726037ba",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.h",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.h",
+      "sha256": "f6adc74f860bd33da92420828ade8f6c9e7bc88fa44fda36b6825348bbdb439d",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/core-render-ohos/src/main/cpp/libohos_render/foundation/thread/KRThread.cpp",
+      "sha256": "afe25d46df8723086c7e06e9ed8bf5b683a10703508a56fa8da9302a2567db88",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "docs/ChangeLog/2.29.0/changelog.md",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-22/docs/ChangeLog/2.29.0/changelog.md",
+      "sha256": "d03fd61e86a98f403c439bb2b1a96bb8d9d5b28f4c6fb3ed290ef7f117945fae",
+      "revision": "277b69d1bb043ae6ce87415ad0d28df17de1a12c",
+      "license": "KuiklyUI License (custom; retained notice).",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results.",
+    "Generalized a native platform invariant from the reviewed integration; no independent cross-framework verification claimed."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "New changelog linked to an already-present implementation; no performance or crash reproduction was run during curation."
+  ]
+}

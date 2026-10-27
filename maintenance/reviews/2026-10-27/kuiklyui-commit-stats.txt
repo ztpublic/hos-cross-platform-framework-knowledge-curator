@@ -1,0 +1,167 @@
+commit 6f17df08d07bdcf282ac772908ebefa328be2308 277b69d1bb043ae6ce87415ad0d28df17de1a12c
+feat(ohos): add an LLDB formatter for KRJSON words (#1818)
+
+ .../cpp/libohos_render/api/include/Kuikly/KRJSON.h |   1 +
+ .../src/main/cpp/libohos_render/utils/json/Box.h   |   1 +
+ .../cpp/libohos_render/utils/json/krjson_lldb.py   | 936 +++++++++++++++++++++
+ devDocs/krjson-lldb.md                             |  58 ++
+ 4 files changed, 996 insertions(+)
+commit 3e4b3736de217cdc8f807ef2944a3fc61c7ba419 6f17df08d07bdcf282ac772908ebefa328be2308
+feat(scroller): add iOS 26 scroll edge effect attrs on Scroller/List (#1823)
+
+ .../Extension/Components/KRScrollView.m            | 26 ++++++++++++++++++++++
+ .../com/tencent/kuikly/core/views/ScrollerView.kt  | 24 ++++++++++++++++++++
+ docs/API/components/ios26-liquid-glass.md          | 17 +++++++-------
+ docs/API/components/scroller.md                    | 24 ++++++++++++++++++++
+ 4 files changed, 83 insertions(+), 8 deletions(-)
+commit e7ba8f001e0d48295d3568772310a1e411c11574 3e4b3736de217cdc8f807ef2944a3fc61c7ba419
+feat(ohos): support all text selection types (#1815)
+
+ core-render-ohos/src/main/cpp/CMakeLists.txt       |   1 +
+ .../expand/components/richtext/KRRichTextView.cpp  | 191 +++++++++++++++------
+ .../expand/components/richtext/KRRichTextView.h    |  18 ++
+ .../kuikly/demo/pages/compose/TextSelectionDemo.kt |  78 ++++++++-
+ 4 files changed, 237 insertions(+), 51 deletions(-)
+commit 6b65fb295e915aabe88795081a1cf6a2262f0b63 e7ba8f001e0d48295d3568772310a1e411c11574
+fix(ios): keep fontWeight and italic on font resolution fallback and add font family alias adapter (#1796)
+
+ .../Extension/BridgeProtocol/KuiklyRenderBridge.h  |   9 ++
+ core-render-ios/Extension/Category/KRConvertUtil.m | 108 ++++++++++++-----
+ .../Handler/KuiklyRenderLayerHandler.mm            |   7 +-
+ .../debug/BugReproIosGenericFontWeightPage.kt      | 134 +++++++++++++++++++++
+ docs/API/components/text.md                        |   2 +-
+ docs/QuickStart/iOS.md                             |  93 ++++++++++++++
+ 6 files changed, 322 insertions(+), 31 deletions(-)
+commit 844f8e9c7757dbb25bb2df4c83c5128c87a435c8 6b65fb295e915aabe88795081a1cf6a2262f0b63
+feat(ios): add UINavigationBar and UIToolbar Kuikly components (#1822)
+
+ .../UINavigationBar/KRUIBarButtonItem.h            |   30 +
+ .../UINavigationBar/KRUIBarButtonItem.m            |  432 +++++++
+ .../UINavigationBar/KRUIBarButtonItemContentHost.h |   30 +
+ .../UINavigationBar/KRUIBarButtonItemContentHost.m |  411 +++++++
+ .../UINavigationBar/KRUIBarButtonItemKit.h         |   37 +
+ .../UINavigationBar/KRUIBarButtonItemKit.m         |  126 ++
+ .../AdvancedComps/UINavigationBar/KRUIBarImage.h   |   39 +
+ .../AdvancedComps/UINavigationBar/KRUIBarImage.m   |  207 ++++
+ .../UINavigationBar/KRUINavigationBar.h            |   30 +
+ .../UINavigationBar/KRUINavigationBar.m            | 1232 ++++++++++++++++++++
+ .../KRUINavigationBarItemPlacement.h               |   63 +
+ .../KRUINavigationBarItemPlacement.m               |  723 ++++++++++++
+ .../UINavigationBar/KRUINavigationBarKit.h         |   65 ++
+ .../UINavigationBar/KRUINavigationBarKit.m         |  177 +++
+ .../UINavigationBar/KRUINavigationBarTitleHost.h   |   30 +
+ .../UINavigationBar/KRUINavigationBarTitleHost.m   |  226 ++++
+ .../AdvancedComps/UIToolbar/KRUIToolbar.h          |   35 +
+ .../AdvancedComps/UIToolbar/KRUIToolbar.m          |  535 +++++++++
+ .../AdvancedComps/UIToolbar/KRUIToolbarItem.h      |   30 +
+ .../AdvancedComps/UIToolbar/KRUIToolbarItem.m      |  466 ++++++++
+ .../UIToolbar/KRUIToolbarItemContentHost.h         |   30 +
+ .../UIToolbar/KRUIToolbarItemContentHost.m         |  379 ++++++
+ core-render-ios/include/CSSNativeAnimationV2.h     |    1 +
+ core-render-ios/include/KRUIBarButtonItem.h        |    1 +
+ .../include/KRUIBarButtonItemContentHost.h         |    1 +
+ core-render-ios/include/KRUIBarButtonItemKit.h     |    1 +
+ core-render-ios/include/KRUIBarImage.h             |    1 +
+ core-render-ios/include/KRUINavigationBar.h        |    1 +
+ .../include/KRUINavigationBarItemPlacement.h       |    1 +
+ core-render-ios/include/KRUINavigationBarKit.h     |    1 +
+ .../include/KRUINavigationBarTitleHost.h           |    1 +
+ core-render-ios/include/KRUIToolbar.h              |    1 +
+ core-render-ios/include/KRUIToolbarItem.h          |    1 +
+ .../include/KRUIToolbarItemContentHost.h           |    1 +
+ .../com/tencent/kuikly/core/base/ViewConst.kt      |    9 +-
+ .../kuikly/core/views/ios/UIBarButtonItem.kt       |  195 ++++
+ .../kuikly/core/views/ios/UIKitChromePlatform.kt   |   20 +
+ .../kuikly/core/views/ios/UIKitChromeTypes.kt      |  103 ++
+ .../kuikly/core/views/ios/UINavigationBar.kt       |  239 ++++
+ .../kuikly/core/views/ios/UINavigationBarMount.kt  |  139 +++
+ .../kuikly/core/views/ios/UINavigationBarTitle.kt  |   61 +
+ .../core/views/ios/UINavigationBarTitleText.kt     |  177 +++
+ .../com/tencent/kuikly/core/views/ios/UIToolbar.kt |  174 +++
+ .../tencent/kuikly/core/views/ios/UIToolbarItem.kt |  128 ++
+ .../kuikly/core/views/ios/UIToolbarItemContent.kt  |   72 ++
+ .../demo/pages/demo/UINavigationBarDemoPage.kt     | 1187 +++++++++++++++++++
+ docs/API/components/ios-uikit-chrome.md            |  205 ++++
+ docs/sidebar/zh.ts                                 |    2 +-
+ .../Controller/KuiklyRenderViewController.m        |   69 +-
+ 49 files changed, 8109 insertions(+), 16 deletions(-)
+commit dc92c10487ab82117563154a4e5b00584926c1b9 844f8e9c7757dbb25bb2df4c83c5128c87a435c8
+feat(ohos): implement custom status-bar back-to-top (#1769)
+
+ core-render-ohos/src/main/cpp/CMakeLists.txt       |   2 +
+ .../main/cpp/libohos_render/core/KRRenderCore.cpp  |   8 +
+ .../main/cpp/libohos_render/core/KRRenderCore.h    |   6 +
+ .../expand/components/scroller/KRScrollerView.cpp  |  55 +++++-
+ .../expand/components/scroller/KRScrollerView.h    |   6 +
+ .../events/common_event/KRCommonEventManager.cpp   | 198 +++++++++++++++++++
+ .../events/common_event/KRCommonEventManager.h     |  86 ++++++++
+ .../expand/events/common_event/KRCommonEventName.h |  62 ++++++
+ .../libohos_render/export/IKRRenderViewExport.h    |   5 +
+ .../main/cpp/libohos_render/layer/IKRRenderLayer.h |   6 +
+ .../libohos_render/layer/KRRenderLayerHandler.cpp  |  18 ++
+ .../libohos_render/layer/KRRenderLayerHandler.h    |   6 +
+ .../main/cpp/libohos_render/view/IKRRenderView.h   |   7 +
+ .../main/cpp/libohos_render/view/KRRenderView.cpp  |  58 ++++++
+ .../main/cpp/libohos_render/view/KRRenderView.h    |  11 ++
+ .../demo/pages/demo/OhosBackToTopDemoPage.kt       | 220 +++++++++++++++++++++
+ .../.openspec.yaml                                 |   2 +
+ .../2026-09-22-ohos-custom-back-to-top/design.md   | 125 ++++++++++++
+ .../2026-09-22-ohos-custom-back-to-top/proposal.md |  58 ++++++
+ .../specs/ohos-back-to-top/spec.md                 | 159 +++++++++++++++
+ .../2026-09-22-ohos-custom-back-to-top/tasks.md    |  50 +++++
+ openspec/specs/ohos-back-to-top/spec.md            | 158 +++++++++++++++
+ 22 files changed, 1305 insertions(+), 1 deletion(-)
+commit 6bafd925343aabfae2f66afec317dffa6b2d9eb4 dc92c10487ab82117563154a4e5b00584926c1b9
+fix: render rich text span backgroundColor on Android, iOS and OHOS (#1774)
+
+ .../expand/component/text/KRRichTextBuilder.kt     |  10 ++
+ .../Extension/AdvancedComps/KRRichTextView.h       |   1 +
+ .../Extension/AdvancedComps/KRRichTextView.m       |   6 +
+ .../components/richtext/KRRichTextShadow.cpp       |  12 ++
+ .../kuikly/demo/pages/compose/ComposeAllSample.kt  |   1 +
+ .../pages/compose/RichTextSpanBackgroundDemo.kt    | 174 ++++++++++++++++++++
+ .../demo/RichTextSpanBackgroundExamplePage.kt      | 181 +++++++++++++++++++++
+ .../demo/pages/demo/catalog/ExampleIndexPage.kt    |   7 +
+ docs/API/components/rich-text.md                   |   9 +-
+ 9 files changed, 400 insertions(+), 1 deletion(-)
+commit f5073377414078e505cc584d1b2d5aad6e75d05f 6bafd925343aabfae2f66afec317dffa6b2d9eb4
+fix(ios): replace Text measure TextStorage with CoreText to resolve kugou anr issue (#1820)
+
+ .../Extension/AdvancedComps/KRRichTextView.m       |  11 +-
+ core-render-ios/Extension/Vendor/KRLabel.h         |   5 +
+ core-render-ios/Extension/Vendor/KRLabel.m         | 238 ++++++++++++++++++++-
+ 3 files changed, 246 insertions(+), 8 deletions(-)
+commit f353dbd50f23198d6dd33a6e5b2bd2340d960ea0 f5073377414078e505cc584d1b2d5aad6e75d05f
+fix(ohos): skip NODE_IMAGE_SOURCE_SIZE below API 21 (#1828)
+
+ core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp | 7 +++++++
+ core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.h   | 1 +
+ 2 files changed, 8 insertions(+)
+commit 6267a797cd2fac5bdd0ca28b0c318c0244f02574 f353dbd50f23198d6dd33a6e5b2bd2340d960ea0
+fix(android): stop recycling cached bitmaps in KRMemoryCacheModule.onDestroy (#1830)
+
+ .../android/expand/module/KRMemoryCacheModule.kt   | 11 +--
+ .../demo/pages/debug/BugReproRecycledBitmapPage.kt | 78 ++++++++++++++++++++++
+ 2 files changed, 79 insertions(+), 10 deletions(-)
+commit ef1aefb6edb3fcc5e8ab46df66046e51bf03976e 6267a797cd2fac5bdd0ca28b0c318c0244f02574
+feat(demo): add fold adaptive settings split demo (#1832)
+
+ .../demo/pages/fold/FoldAdaptiveSettingsDemo.kt    | 1558 ++++++++++++++++++++
+ .../kuikly/demo/pages/fold/FoldSplitPageStack.kt   | 1426 ++++++++++++++++++
+ 2 files changed, 2984 insertions(+)
+commit 7af1515cb9e093b07d65b5780347de06bee865e6 ef1aefb6edb3fcc5e8ab46df66046e51bf03976e
+chore(demo): add fold adaptation demos under pages/fold (#1833)
+
+ .../kuikly/demo/pages/fold/FoldAdaptiveMailDemo.kt | 613 +++++++++++++++++++++
+ .../demo/pages/fold/FoldAppNavComposePage.kt       | 135 +++++
+ .../kuikly/demo/pages/fold/FoldAppNavPage.kt       | 135 +++++
+ .../kuikly/demo/pages/fold/FoldAvoidComposePage.kt | 311 +++++++++++
+ .../kuikly/demo/pages/fold/FoldAvoidPage.kt        | 252 +++++++++
+ .../tencent/kuikly/demo/pages/fold/FoldChrome.kt   | 287 ++++++++++
+ .../kuikly/demo/pages/fold/FoldComposeChrome.kt    | 395 +++++++++++++
+ .../kuikly/demo/pages/fold/FoldFeedComposePage.kt  | 229 ++++++++
+ .../tencent/kuikly/demo/pages/fold/FoldFeedPage.kt | 174 ++++++
+ .../tencent/kuikly/demo/pages/fold/FoldGuide.kt    | 234 ++++++++
+ .../demo/pages/fold/FoldReadingComposePage.kt      | 197 +++++++
+ .../kuikly/demo/pages/fold/FoldReadingPage.kt      | 192 +++++++
+ 12 files changed, 3154 insertions(+)

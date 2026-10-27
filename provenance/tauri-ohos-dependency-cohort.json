@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-dependency-cohort",
+  "sources": [
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/Cargo.toml",
+      "sha256": "44df1be57055b93430ee3546c594ccb75cdc0e9a2d94471cfa97e5c40619d426",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/Cargo.lock",
+      "sha256": "9b9bb5128c89497a5ff30162d5b3ae2bc9f77e643f2042640c80e6c99ef3e7c9",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/Cargo.lock",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/oh-package.json5",
+      "sha256": "35a2544c6bcfe65a101988da40db4370372a2df216fcca0e8ec7241e520b7dbf",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/gen/ohos/entry/oh-package.json5",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/Cargo.toml",
+      "sha256": "21f0d08bdcfe33e110eab7216c18edab045eaba86261720de1ae9dee7848af89",
+      "revision": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "url": "https://github.com/Islatri/tauri-ohos-test/blob/cc73aeea903ec135cf8c445fb46d98cd93403c7e/src-tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-ohos-test",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/Cargo.lock",
+      "sha256": "fd94f8769aa3ef2907fa7f85b584154e77ee0675249ff64bc62a55a027594ac6",
+      "revision": "cc73aeea903ec135cf8c445fb46d98cd93403c7e",
+      "license": "MIT",
+      "url": "https://github.com/Islatri/tauri-ohos-test/blob/cc73aeea903ec135cf8c445fb46d98cd93403c7e/src-tauri/Cargo.lock",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/Cargo.toml",
+      "sha256": "293fac2cb78826e284326813181c2dde9456e5ab9f870f8a8fa035849aca2fe9",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/Cargo.toml",
+      "sha256": "b8d75c22aa66456a626ed356568f248dc5eeb8429d1b01e7d73e12ad415c9dcf",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/build.rs",
+      "sha256": "80f6b0d8391c8de748844cedc6f5d382aa126ac4c09607098a64497fbbaee60f",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri/build.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-harmony-toolchain",
+      "original_path": "tauri-pins.json",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/tauri-pins.json",
+      "sha256": "7f63664b66bdd078094e807fc5abb358fbc6875ba76e01057828edc294316637",
+      "revision": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "url": "https://github.com/LeenHawk/tauri-harmony/blob/39c84a15cb5945b2704a34550a6832e516721e03/tauri-pins.json",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-harmony-toolchain",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/README.md",
+      "sha256": "d72533067f1941bbed773241586aab99314d56a547e186d0967024c01c701458",
+      "revision": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "url": "https://github.com/LeenHawk/tauri-harmony/blob/39c84a15cb5945b2704a34550a6832e516721e03/README.md",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/prepare-tauri.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-tauri.py",
+      "sha256": "b1acea8a987591c588d8b3d2c6db14873f889ae32324a89020306c90d8c173bd",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/prepare-tauri.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/prepare-har.py",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-har.py",
+      "sha256": "fb401dac14ee499f85deb84df2b257bad3d22de57fed360a56610bbfd493d233",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/prepare-har.py",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/ability-har.json",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/ability-har.json",
+      "sha256": "a05cd1c25806ba40bbfa16cd4c3792fb2c9eda6e5a5a021ae2f0de0d0b72c98f",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/ability-har.json",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/tauri-pins.json",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/tauri-pins.json",
+      "sha256": "7f63664b66bdd078094e807fc5abb358fbc6875ba76e01057828edc294316637",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/tauri-pins.json",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "tauri-gproxy",
+      "original_path": "scripts/ohos/README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/README.md",
+      "sha256": "4f5f344911a7fd817313a3169ca5f54091de2bee1df7436b88960e9320c4c008",
+      "revision": "0efa615891ea0e27c4a277a3ff86f7c2ee4f1313",
+      "license": "AGPL-3.0-or-later",
+      "url": "https://github.com/LeenHawk/gproxy/blob/0efa615891ea0e27c4a277a3ff86f7c2ee4f1313/scripts/ohos/README.md",
+      "evidence_note": "Pinned source review only; no source script or app workflow executed."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.toml",
+      "sha256": "2451b1a2a3b7e3e29cf62252f1827442e968f3a70e88f44907147087861b1663",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.lock",
+      "sha256": "5072a0b916615aee10d581b3357ebd82dcea37eb44b676719de7c64e46e53a9f",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "sha256": "4910613c764db40db3235b6a9b44edfc0a6a73d7996873da5c6bd5ae44b648c6",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism from pinned source inputs; project identities and revisions retained only in provenance.",
+    "Recommendations and acceptance cases are source-derived and were not executed.",
+    "Added a distinct full application using a shared experimental fork; related fork-family evidence is not an independent runtime corroboration.",
+    "Added a full-application consumer with exact Tauri/tao/wry/Ability pins. Shared fork revisions are duplicate dependency lineage, not independent runtime corroboration."
+  ],
+  "limitations": [
+    "No build, installation or PC runtime verification performed.",
+    "Dependency manifests and lockfiles were inspected; transitive backend sources were not all independently cloned or built.",
+    "Application documentation reports emulator execution only; its README calls the host RustAbility while the pinned EntryAbility source uses NativeAbility. Source code governs the class identity."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-web-storage-fallback",
+  "sources": [
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src/index.html",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src/index.html",
+      "sha256": "b87a40cf3b45e512765f89deb28c7d0af844185288257ea9c7ffe4fc48026f1e",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/README.md",
+      "sha256": "d82c82cae9aa3da8f09738f1877d3200249be33716dd5da121c56b3b9e139028",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

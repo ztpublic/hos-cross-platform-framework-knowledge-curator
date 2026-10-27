@@ -1,0 +1,5 @@
+{
+  "observed_commit": "7b1f158688978f87a257481cee3d743718446cff",
+  "tree": "160000 commit 0d104a1796d49d0b424ac3caac0160dbf1f6f03b\tvendor/tao\n160000 commit aa9a4197122072d8f6977fdbeda56a762714fb88\tvendor/tauri\n160000 commit 523835f7c1353202b7d72f79399985b23b663dcf\tvendor/wry\n",
+  "finding": "Vendor entries are gitlinks, uninitialized in the checkout; .gitmodules is absent. Documentation claims are not independent backend source review."
+}

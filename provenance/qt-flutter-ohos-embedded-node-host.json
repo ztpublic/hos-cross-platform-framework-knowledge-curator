@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "qt-flutter-ohos-embedded-node-host",
+  "sources": [
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/README.md",
+      "sha256": "913f028dc237c97b03e8f8462113ba363b1f3d1ff8dba8965ce4552de97d3927",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/cpp/src/FlutterEmbeddedQWidget.cpp",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/cpp/src/FlutterEmbeddedQWidget.cpp",
+      "sha256": "d9837e82f3dfc1d9a055f348e116ed1f7b8e02a11994f12b05bca72c7f4e6053",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/cpp/src/EmbeddedBridge.cpp",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/cpp/src/EmbeddedBridge.cpp",
+      "sha256": "a7117bb29ef2635a4c473b3919a2f20897a40680a16b2aae9f9e40aa15539615",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/ets/flutter/EncapsulationXCompent.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/ets/flutter/EncapsulationXCompent.ets",
+      "sha256": "c851d1a31532c0d8572b54420d90a7fc3e64303277415d6a2e90fe1cbb011fe6",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/src/main/ets/flutter/MyFlutterWindow.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/src/main/ets/flutter/MyFlutterWindow.ets",
+      "sha256": "d271c316ec1e6fd29e8214ec205c452a5326eb22ce5cdd9c9bd453831af79caa",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "flutter_embed_into_qt/embedded/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/flutter_embed_into_qt/embedded/oh-package.json5",
+      "sha256": "7b863671e8bb75f03404ec029b27faaed0de438bec515fcdca2e8451316cdd99",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "flutter-embed-into-qt",
+      "original_path": "example/qt-embed-demo/qtmodule/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-embed-into-qt/2026-10-22/example/qt-embed-demo/qtmodule/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "b012aca95dab6359bc9d2e31c04df9a565db9580edd0c2a7445b05eb9875fbf4",
+      "revision": "560e6f12aa994e09bfcc5671a4b59c4154cb6713",
+      "license": "Apache-2.0",
+      "url": "https://gitcode.com/openharmony-sig/flutter_embed_into_qt",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism; project identities and research history remain in provenance.",
+    "Acceptance checks and defensive implementation advice are recommendations, not executed results."
+  ],
+  "limitations": [
+    "Only source text was reviewed; pc_validation is not-run.",
+    "Gitee is archived; the current canonical GitCode master was reviewed. No source setup/build instructions were executed.",
+    "The source does not prove complete destruction, queue-failure cleanup or a safe multi-window global UIContext."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "0.82.30",
+    "@ppd/ffrt": "1.1.5",
+    "@react-native-ohos/react-native-svg": "file:../../node_modules/@react-native-ohos/react-native-svg/harmony/svg.har",
+    "pako_arkts": "^1.0.4"
+  },
+  "devDependencies": {},
+  "dynamicDependencies": {}
+}

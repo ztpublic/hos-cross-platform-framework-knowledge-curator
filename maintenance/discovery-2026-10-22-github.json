@@ -1,0 +1,814 @@
+{
+  "queries": [
+    {
+      "query": "HarmonyOS Qt",
+      "repositories": [
+        {
+          "name": "Aloereed/vlc-qt6-ohos",
+          "ref": "main",
+          "size": 22159,
+          "url": "https://github.com/Aloereed/vlc-qt6-ohos"
+        },
+        {
+          "name": "liys-online/qtc-for-harmonyos",
+          "ref": "main",
+          "size": 13703,
+          "url": "https://github.com/liys-online/qtc-for-harmonyos"
+        },
+        {
+          "name": "AppFactory-EastWest/skill-qt-harmonyos",
+          "ref": "main",
+          "size": 12,
+          "url": "https://github.com/AppFactory-EastWest/skill-qt-harmonyos"
+        },
+        {
+          "name": "Sorrime/HarmonyOS-Qt",
+          "ref": "master",
+          "size": 70,
+          "url": "https://github.com/Sorrime/HarmonyOS-Qt"
+        },
+        {
+          "name": "esokullu/vlc-qt6-ohos",
+          "ref": "main",
+          "size": 22159,
+          "url": "https://github.com/esokullu/vlc-qt6-ohos"
+        },
+        {
+          "name": "Li-Yaosong/qtc-for-harmonyos",
+          "ref": "main",
+          "size": 13617,
+          "url": "https://github.com/Li-Yaosong/qtc-for-harmonyos"
+        },
+        {
+          "name": "sammary114/shotcut-on-harmonyos-pc",
+          "ref": "main",
+          "size": 0,
+          "url": "https://github.com/sammary114/shotcut-on-harmonyos-pc"
+        },
+        {
+          "name": "forwardz666/SciDAVis-for-HarmonyOS",
+          "ref": "main",
+          "size": 255795,
+          "url": "https://github.com/forwardz666/SciDAVis-for-HarmonyOS"
+        },
+        {
+          "name": "xiaomu120413/ohshark",
+          "ref": "main",
+          "size": 8282,
+          "url": "https://github.com/xiaomu120413/ohshark"
+        },
+        {
+          "name": "yangy79/KLayout-on-Harmony-PC",
+          "ref": "main",
+          "size": 2801,
+          "url": "https://github.com/yangy79/KLayout-on-Harmony-PC"
+        },
+        {
+          "name": "OrdinaryManZ/HarmonyAdaptQtDemo",
+          "ref": "main",
+          "size": 8820,
+          "url": "https://github.com/OrdinaryManZ/HarmonyAdaptQtDemo"
+        },
+        {
+          "name": "cuihairu/memex",
+          "ref": "main",
+          "size": 57486,
+          "url": "https://github.com/cuihairu/memex"
+        },
+        {
+          "name": "calm6666/CicadaPlayerNext",
+          "ref": "1.0.0",
+          "size": 82396,
+          "url": "https://github.com/calm6666/CicadaPlayerNext"
+        },
+        {
+          "name": "XingHaiOvO/APNG-Generator",
+          "ref": "main",
+          "size": 384,
+          "url": "https://github.com/XingHaiOvO/APNG-Generator"
+        }
+      ]
+    },
+    {
+      "query": "HarmonyOS electron",
+      "repositories": [
+        {
+          "name": "electerm/electerm",
+          "ref": "master",
+          "size": 36089,
+          "url": "https://github.com/electerm/electerm"
+        },
+        {
+          "name": "liriliri/echo",
+          "ref": "master",
+          "size": 6177,
+          "url": "https://github.com/liriliri/echo"
+        },
+        {
+          "name": "ohosvscode/ohos_electron_hap",
+          "ref": "main",
+          "size": 28152,
+          "url": "https://github.com/ohosvscode/ohos_electron_hap"
+        },
+        {
+          "name": "5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+          "ref": "main",
+          "size": 69027,
+          "url": "https://github.com/5-Super-Rookie-5/bilibili-electron-HarmonyOS"
+        },
+        {
+          "name": "ljlVink/ohos-cherrystudio-electron-base",
+          "ref": "main",
+          "size": 17689,
+          "url": "https://github.com/ljlVink/ohos-cherrystudio-electron-base"
+        },
+        {
+          "name": "fellow99/ElectronShell",
+          "ref": "main",
+          "size": 381,
+          "url": "https://github.com/fellow99/ElectronShell"
+        },
+        {
+          "name": "fellow99/dsh-desktop-hos",
+          "ref": "main",
+          "size": 16134,
+          "url": "https://github.com/fellow99/dsh-desktop-hos"
+        },
+        {
+          "name": "Douuble/ElectronicDiary-HarmonyOS",
+          "ref": "main",
+          "size": 2040,
+          "url": "https://github.com/Douuble/ElectronicDiary-HarmonyOS"
+        },
+        {
+          "name": "ohosvscode/YesPlayMusic",
+          "ref": "master",
+          "size": 43094,
+          "url": "https://github.com/ohosvscode/YesPlayMusic"
+        },
+        {
+          "name": "Groupguanfang/electron-harmonyOS",
+          "ref": "main",
+          "size": 11022,
+          "url": "https://github.com/Groupguanfang/electron-harmonyOS"
+        },
+        {
+          "name": "xiaogouyo/dsh-harmonyos",
+          "ref": "main",
+          "size": 11555,
+          "url": "https://github.com/xiaogouyo/dsh-harmonyos"
+        },
+        {
+          "name": "mitayou/hm-tools",
+          "ref": "master",
+          "size": 1881,
+          "url": "https://github.com/mitayou/hm-tools"
+        },
+        {
+          "name": "fellow99/oc-desktop-hos",
+          "ref": "main",
+          "size": 12851,
+          "url": "https://github.com/fellow99/oc-desktop-hos"
+        },
+        {
+          "name": "fellow99/pi-desktop-hos",
+          "ref": "main",
+          "size": 12692,
+          "url": "https://github.com/fellow99/pi-desktop-hos"
+        },
+        {
+          "name": "CCDawn/Codex-Dynamic-Skin",
+          "ref": "main",
+          "size": 32593,
+          "url": "https://github.com/CCDawn/Codex-Dynamic-Skin"
+        },
+        {
+          "name": "SummerKaze/bilibili-electron-HarmonyOS",
+          "ref": "main",
+          "size": 20043,
+          "url": "https://github.com/SummerKaze/bilibili-electron-HarmonyOS"
+        },
+        {
+          "name": "Gayhubers/bilibili-electron-HarmonyOS",
+          "ref": "main",
+          "size": 20043,
+          "url": "https://github.com/Gayhubers/bilibili-electron-HarmonyOS"
+        },
+        {
+          "name": "Aik358/psychopy-studio-harmonyos",
+          "ref": "main",
+          "size": 112273,
+          "url": "https://github.com/Aik358/psychopy-studio-harmonyos"
+        },
+        {
+          "name": "VladimirOS5/nexus-IDE",
+          "ref": "main",
+          "size": 329,
+          "url": "https://github.com/VladimirOS5/nexus-IDE"
+        },
+        {
+          "name": "zhu-xiao-hui/dsh-desktop-hos",
+          "ref": "main",
+          "size": 13223,
+          "url": "https://github.com/zhu-xiao-hui/dsh-desktop-hos"
+        },
+        {
+          "name": "fellow99/opencode-workspace",
+          "ref": "main",
+          "size": 984,
+          "url": "https://github.com/fellow99/opencode-workspace"
+        },
+        {
+          "name": "wieszheng/openx",
+          "ref": "master",
+          "size": 30790,
+          "url": "https://github.com/wieszheng/openx"
+        },
+        {
+          "name": "fellow99/pi-workspace",
+          "ref": "main",
+          "size": 2119,
+          "url": "https://github.com/fellow99/pi-workspace"
+        },
+        {
+          "name": "lzzhij/dsh-harmony",
+          "ref": "main",
+          "size": 906,
+          "url": "https://github.com/lzzhij/dsh-harmony"
+        },
+        {
+          "name": "wieszheng/sparkles",
+          "ref": "master",
+          "size": 29367,
+          "url": "https://github.com/wieszheng/sparkles"
+        },
+        {
+          "name": "littlestone0806/doubao-watermark-lab",
+          "ref": "main",
+          "size": 87207,
+          "url": "https://github.com/littlestone0806/doubao-watermark-lab"
+        },
+        {
+          "name": "fellow99/deepseek-harness-workspace",
+          "ref": "main",
+          "size": 4707,
+          "url": "https://github.com/fellow99/deepseek-harness-workspace"
+        },
+        {
+          "name": "Groupguanfang/ohos_electron_hap",
+          "ref": "main",
+          "size": 17585,
+          "url": "https://github.com/Groupguanfang/ohos_electron_hap"
+        },
+        {
+          "name": "laogong5i0-2/ohos_electron_hap",
+          "ref": "main",
+          "size": 28152,
+          "url": "https://github.com/laogong5i0-2/ohos_electron_hap"
+        },
+        {
+          "name": "yutingzhao1991/ohos_electron_hap",
+          "ref": "main",
+          "size": 29065,
+          "url": "https://github.com/yutingzhao1991/ohos_electron_hap"
+        }
+      ]
+    },
+    {
+      "query": "ohos react-native",
+      "repositories": [
+        {
+          "name": "react-native-oh-library/react-native-ping",
+          "ref": "sig",
+          "size": 853,
+          "url": "https://github.com/react-native-oh-library/react-native-ping"
+        },
+        {
+          "name": "yrjwcharm/react-native-ohos",
+          "ref": "main",
+          "size": 44456,
+          "url": "https://github.com/yrjwcharm/react-native-ohos"
+        },
+        {
+          "name": "yrjwcharm/react-native-ohos-docviewer",
+          "ref": "master",
+          "size": 93,
+          "url": "https://github.com/yrjwcharm/react-native-ohos-docviewer"
+        },
+        {
+          "name": "yrjwcharm/react-native-ohos-svgaplayer",
+          "ref": "main",
+          "size": 3987,
+          "url": "https://github.com/yrjwcharm/react-native-ohos-svgaplayer"
+        },
+        {
+          "name": "AuroraMaster/ohos_react_native",
+          "ref": "main",
+          "size": 95393,
+          "url": "https://github.com/AuroraMaster/ohos_react_native"
+        },
+        {
+          "name": "CarSmallGuo/ohos_react_native",
+          "ref": "0.72.5-ohos-5.0-release",
+          "size": 80654,
+          "url": "https://github.com/CarSmallGuo/ohos_react_native"
+        },
+        {
+          "name": "linhandev/ohos_react_native",
+          "ref": "0.77.1-rc.1-ohos",
+          "size": 102502,
+          "url": "https://github.com/linhandev/ohos_react_native"
+        },
+        {
+          "name": "yuangerep/react-native-ping",
+          "ref": "sig",
+          "size": 838,
+          "url": "https://github.com/yuangerep/react-native-ping"
+        },
+        {
+          "name": "xinxintop/react-native-ping",
+          "ref": "sig",
+          "size": 852,
+          "url": "https://github.com/xinxintop/react-native-ping"
+        },
+        {
+          "name": "dreamrjj/react-native-modalbox-ohos",
+          "ref": "sig",
+          "size": 883,
+          "url": "https://github.com/dreamrjj/react-native-modalbox-ohos"
+        },
+        {
+          "name": "jingjing123jingjing/react-native-ping",
+          "ref": "sig",
+          "size": 853,
+          "url": "https://github.com/jingjing123jingjing/react-native-ping"
+        },
+        {
+          "name": "CarSmallGuo/ohos_react_native_new",
+          "ref": "0.72-6.1-release",
+          "size": 361844,
+          "url": "https://github.com/CarSmallGuo/ohos_react_native_new"
+        },
+        {
+          "name": "AuroraMaster/react-native-ohos-library",
+          "ref": "master",
+          "size": 20707,
+          "url": "https://github.com/AuroraMaster/react-native-ohos-library"
+        },
+        {
+          "name": "CarSmallGuo/ohos_react_native_flash",
+          "ref": "0.72-6.1-release",
+          "size": 356293,
+          "url": "https://github.com/CarSmallGuo/ohos_react_native_flash"
+        },
+        {
+          "name": "chenwenhui133/react-native-ping",
+          "ref": "sig",
+          "size": 850,
+          "url": "https://github.com/chenwenhui133/react-native-ping"
+        },
+        {
+          "name": "PureHarmonyProject/rive-ohos",
+          "ref": "main",
+          "size": 0,
+          "url": "https://github.com/PureHarmonyProject/rive-ohos"
+        },
+        {
+          "name": "helloJincheng/react-native-ohos",
+          "ref": "main",
+          "size": 44456,
+          "url": "https://github.com/helloJincheng/react-native-ohos"
+        },
+        {
+          "name": "hime88/react-native-skia-ohos",
+          "ref": "sig",
+          "size": 312902,
+          "url": "https://github.com/hime88/react-native-skia-ohos"
+        },
+        {
+          "name": "yaawww/react-native-ohos-svgaplayer",
+          "ref": "main",
+          "size": 3987,
+          "url": "https://github.com/yaawww/react-native-ohos-svgaplayer"
+        }
+      ]
+    },
+    {
+      "query": "ohos kotlin multiplatform",
+      "repositories": [
+        {
+          "name": "gycrosskit/stately-ohos",
+          "ref": "main",
+          "size": 1530,
+          "url": "https://github.com/gycrosskit/stately-ohos"
+        },
+        {
+          "name": "gycrosskit/koin-ohos",
+          "ref": "main",
+          "size": 45127,
+          "url": "https://github.com/gycrosskit/koin-ohos"
+        },
+        {
+          "name": "HachimiWorld/FileKit-ohos",
+          "ref": "0.12.0-OH-1.0.0",
+          "size": 32883,
+          "url": "https://github.com/HachimiWorld/FileKit-ohos"
+        },
+        {
+          "name": "baochao-sxiaofan/kmp-ohos-bridge",
+          "ref": "main",
+          "size": 0,
+          "url": "https://github.com/baochao-sxiaofan/kmp-ohos-bridge"
+        },
+        {
+          "name": "xiaqingpeng/HarmonyKMP",
+          "ref": "main",
+          "size": 50512,
+          "url": "https://github.com/xiaqingpeng/HarmonyKMP"
+        },
+        {
+          "name": "MiaoKukun/HarmonyKMP",
+          "ref": "main",
+          "size": 50512,
+          "url": "https://github.com/MiaoKukun/HarmonyKMP"
+        },
+        {
+          "name": "ChinaArJun/HarmonyKMP",
+          "ref": "main",
+          "size": 50505,
+          "url": "https://github.com/ChinaArJun/HarmonyKMP"
+        }
+      ]
+    },
+    {
+      "query": "鸿蒙 PC",
+      "repositories": [
+        {
+          "name": "harmoninux/HiSH",
+          "ref": "master",
+          "size": 305379,
+          "url": "https://github.com/harmoninux/HiSH"
+        },
+        {
+          "name": "xristosstarnetgames439-del/HuiwenMCP",
+          "ref": "main",
+          "size": 353,
+          "url": "https://github.com/xristosstarnetgames439-del/HuiwenMCP"
+        },
+        {
+          "name": "Xiaoyuan-114/zafu-pchospital-harmonyos",
+          "ref": "main",
+          "size": 67576,
+          "url": "https://github.com/Xiaoyuan-114/zafu-pchospital-harmonyos"
+        },
+        {
+          "name": "zpc1314521/PCL2",
+          "ref": "main",
+          "size": 5251,
+          "url": "https://github.com/zpc1314521/PCL2"
+        },
+        {
+          "name": "tigshop/Tigshop",
+          "ref": "master",
+          "size": 130160,
+          "url": "https://github.com/tigshop/Tigshop"
+        },
+        {
+          "name": "LMV475/hap-installer",
+          "ref": "main",
+          "size": 5866,
+          "url": "https://github.com/LMV475/hap-installer"
+        },
+        {
+          "name": "ZW1-ing/ericIDE",
+          "ref": "main",
+          "size": 9038,
+          "url": "https://github.com/ZW1-ing/ericIDE"
+        },
+        {
+          "name": "QinpanWan/AgentHub",
+          "ref": "main",
+          "size": 2356,
+          "url": "https://github.com/QinpanWan/AgentHub"
+        },
+        {
+          "name": "LinJ0866/pcb-app-detector",
+          "ref": "main",
+          "size": 5088,
+          "url": "https://github.com/LinJ0866/pcb-app-detector"
+        },
+        {
+          "name": "QinpanWan/codex-harmonyos",
+          "ref": "main",
+          "size": 59,
+          "url": "https://github.com/QinpanWan/codex-harmonyos"
+        },
+        {
+          "name": "QinpanWan/dsh-harmonyos-pc",
+          "ref": "main",
+          "size": 3686,
+          "url": "https://github.com/QinpanWan/dsh-harmonyos-pc"
+        },
+        {
+          "name": "wilson-wf/clock",
+          "ref": "main",
+          "size": 82,
+          "url": "https://github.com/wilson-wf/clock"
+        },
+        {
+          "name": "ystyle/dsh-harmonyos",
+          "ref": "main",
+          "size": 4127,
+          "url": "https://github.com/ystyle/dsh-harmonyos"
+        },
+        {
+          "name": "zlhao1588/awesome-harmonyOS",
+          "ref": "main",
+          "size": 282,
+          "url": "https://github.com/zlhao1588/awesome-harmonyOS"
+        },
+        {
+          "name": "SYTKILLER/Montage",
+          "ref": "main",
+          "size": 1202,
+          "url": "https://github.com/SYTKILLER/Montage"
+        },
+        {
+          "name": "GarhinZhou/ohos-ghidra-webui",
+          "ref": "main",
+          "size": 86,
+          "url": "https://github.com/GarhinZhou/ohos-ghidra-webui"
+        },
+        {
+          "name": "Yu-Peng-Tu/Kale-PC-Builder",
+          "ref": "main",
+          "size": 259,
+          "url": "https://github.com/Yu-Peng-Tu/Kale-PC-Builder"
+        },
+        {
+          "name": "wilson-wf/Screen2GIF",
+          "ref": "main",
+          "size": 25,
+          "url": "https://github.com/wilson-wf/Screen2GIF"
+        },
+        {
+          "name": "wwn-01/StudySpace",
+          "ref": "main",
+          "size": 2,
+          "url": "https://github.com/wwn-01/StudySpace"
+        },
+        {
+          "name": "ChadBi/calendar",
+          "ref": "main",
+          "size": 0,
+          "url": "https://github.com/ChadBi/calendar"
+        },
+        {
+          "name": "Bibapcs/ohos-node-jit-patch",
+          "ref": "main",
+          "size": 38,
+          "url": "https://github.com/Bibapcs/ohos-node-jit-patch"
+        },
+        {
+          "name": "wildfirechat/hm-pc-chat",
+          "ref": "master",
+          "size": 92871,
+          "url": "https://github.com/wildfirechat/hm-pc-chat"
+        },
+        {
+          "name": "0dot618/my_PCB_detection_harmony_app",
+          "ref": "main",
+          "size": 625470,
+          "url": "https://github.com/0dot618/my_PCB_detection_harmony_app"
+        },
+        {
+          "name": "Bibapcs/Biba-Harmony-Benchtools",
+          "ref": "main",
+          "size": 836834,
+          "url": "https://github.com/Bibapcs/Biba-Harmony-Benchtools"
+        },
+        {
+          "name": "Anionex/pcb-defect-detection-app",
+          "ref": "master",
+          "size": 2429,
+          "url": "https://github.com/Anionex/pcb-defect-detection-app"
+        },
+        {
+          "name": "hjc200720-pixel/Harmony-OS-PythonIDE",
+          "ref": "main",
+          "size": 3672,
+          "url": "https://github.com/hjc200720-pixel/Harmony-OS-PythonIDE"
+        },
+        {
+          "name": "lugf027/test_harmony_pc_selection",
+          "ref": "master",
+          "size": 128,
+          "url": "https://github.com/lugf027/test_harmony_pc_selection"
+        },
+        {
+          "name": "SwimmingTiger/cann-llm",
+          "ref": "main",
+          "size": 2938,
+          "url": "https://github.com/SwimmingTiger/cann-llm"
+        },
+        {
+          "name": "joinother/OpenSPH-HarmonyOS",
+          "ref": "main",
+          "size": 570010,
+          "url": "https://github.com/joinother/OpenSPH-HarmonyOS"
+        },
+        {
+          "name": "daneeller/course-order",
+          "ref": "main",
+          "size": 347,
+          "url": "https://github.com/daneeller/course-order"
+        }
+      ]
+    },
+    {
+      "query": "HarmonyOS flutter",
+      "repositories": [
+        {
+          "name": "TencentCloud/TIMSDK",
+          "ref": "master",
+          "size": 1073027,
+          "url": "https://github.com/TencentCloud/TIMSDK"
+        },
+        {
+          "name": "sensorsdata/sensors_analytics_flutter_plugin",
+          "ref": "master",
+          "size": 433,
+          "url": "https://github.com/sensorsdata/sensors_analytics_flutter_plugin"
+        },
+        {
+          "name": "callstack/agent-device",
+          "ref": "main",
+          "size": 221217,
+          "url": "https://github.com/callstack/agent-device"
+        },
+        {
+          "name": "gtbluesky/fusion",
+          "ref": "main",
+          "size": 91936,
+          "url": "https://github.com/gtbluesky/fusion"
+        },
+        {
+          "name": "wildfirechat/flutter-chat",
+          "ref": "master",
+          "size": 442292,
+          "url": "https://github.com/wildfirechat/flutter-chat"
+        },
+        {
+          "name": "Chevey339/kelivo",
+          "ref": "master",
+          "size": 58824,
+          "url": "https://github.com/Chevey339/kelivo"
+        },
+        {
+          "name": "zacksleo/awesome-harmonyos-flutter",
+          "ref": "master",
+          "size": 44502,
+          "url": "https://github.com/zacksleo/awesome-harmonyos-flutter"
+        },
+        {
+          "name": "SonicloudTech/sonicloud_opensdk",
+          "ref": "main",
+          "size": 120111,
+          "url": "https://github.com/SonicloudTech/sonicloud_opensdk"
+        },
+        {
+          "name": "dev4harmony/PiliPlus",
+          "ref": "ohos",
+          "size": 103470,
+          "url": "https://github.com/dev4harmony/PiliPlus"
+        },
+        {
+          "name": "jianguo888/flutter_bloc_super",
+          "ref": "master",
+          "size": 101124,
+          "url": "https://github.com/jianguo888/flutter_bloc_super"
+        },
+        {
+          "name": "dev4harmony/PiliNara",
+          "ref": "ohos",
+          "size": 92450,
+          "url": "https://github.com/dev4harmony/PiliNara"
+        },
+        {
+          "name": "itenfay/Awesome",
+          "ref": "master",
+          "size": 750,
+          "url": "https://github.com/itenfay/Awesome"
+        },
+        {
+          "name": "Aloereed/localsend-ohos",
+          "ref": "aloesend",
+          "size": 76402,
+          "url": "https://github.com/Aloereed/localsend-ohos"
+        },
+        {
+          "name": "easemob/im_flutter_sdk_oh",
+          "ref": "main",
+          "size": 60906,
+          "url": "https://github.com/easemob/im_flutter_sdk_oh"
+        },
+        {
+          "name": "jianguo888/Flutter-xiaomi-su7-App",
+          "ref": "master",
+          "size": 9745,
+          "url": "https://github.com/jianguo888/Flutter-xiaomi-su7-App"
+        },
+        {
+          "name": "HarmonyCandies/sign_in_with_huawei",
+          "ref": "main",
+          "size": 38,
+          "url": "https://github.com/HarmonyCandies/sign_in_with_huawei"
+        },
+        {
+          "name": "xuegao-tzx/Fllama",
+          "ref": "main",
+          "size": 23946,
+          "url": "https://github.com/xuegao-tzx/Fllama"
+        },
+        {
+          "name": "mlscience-svg/SIPFlutterPlugin",
+          "ref": "main",
+          "size": 56070,
+          "url": "https://github.com/mlscience-svg/SIPFlutterPlugin"
+        },
+        {
+          "name": "collaborative-creation/etohos",
+          "ref": "main",
+          "size": 1569,
+          "url": "https://github.com/collaborative-creation/etohos"
+        },
+        {
+          "name": "Aloereed/flutter_rust_bridge_ohos",
+          "ref": "master",
+          "size": 160637,
+          "url": "https://github.com/Aloereed/flutter_rust_bridge_ohos"
+        },
+        {
+          "name": "zhengzaihong/uikit",
+          "ref": "master",
+          "size": 15876,
+          "url": "https://github.com/zhengzaihong/uikit"
+        },
+        {
+          "name": "HarmonyCandies/umeng_common_sdk_ohos",
+          "ref": "main",
+          "size": 37,
+          "url": "https://github.com/HarmonyCandies/umeng_common_sdk_ohos"
+        },
+        {
+          "name": "MeowTechOpenSource/HarmonyOS-UI-Flutter",
+          "ref": "master",
+          "size": 131,
+          "url": "https://github.com/MeowTechOpenSource/HarmonyOS-UI-Flutter"
+        },
+        {
+          "name": "JalorOo/ohos_ui",
+          "ref": "master",
+          "size": 290,
+          "url": "https://github.com/JalorOo/ohos_ui"
+        },
+        {
+          "name": "yabi-zzh/simple-live-ohos",
+          "ref": "main",
+          "size": 21461,
+          "url": "https://github.com/yabi-zzh/simple-live-ohos"
+        },
+        {
+          "name": "AimesSoft/liberika",
+          "ref": "main",
+          "size": 11336,
+          "url": "https://github.com/AimesSoft/liberika"
+        },
+        {
+          "name": "GuoguoDad/jdMall_Harmony",
+          "ref": "main",
+          "size": 37465,
+          "url": "https://github.com/GuoguoDad/jdMall_Harmony"
+        },
+        {
+          "name": "FlutterAds/flutter_ohos_ads",
+          "ref": "master",
+          "size": 41,
+          "url": "https://github.com/FlutterAds/flutter_ohos_ads"
+        },
+        {
+          "name": "HarmonyOSDeveloper/MySunflower",
+          "ref": "main",
+          "size": 25306,
+          "url": "https://github.com/HarmonyOSDeveloper/MySunflower"
+        },
+        {
+          "name": "zhengzaihong/router_lifecycle",
+          "ref": "master",
+          "size": 814,
+          "url": "https://github.com/zhengzaihong/router_lifecycle"
+        }
+      ]
+    }
+  ]
+}

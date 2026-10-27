@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-terminal-direct-key-input",
+  "sources": [
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "src/termwidget.cpp",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/src/termwidget.cpp",
+      "sha256": "8a1d07451b0bfecd48e3dc18f9bbd7e20cee4f9d32911a77405853a1c8ff0822",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "src/mainwindow.cpp",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/src/mainwindow.cpp",
+      "sha256": "37061e73540c813d552fb14e4b62976631aa882f015bf11df1e715096a192178",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/README.md",
+      "sha256": "c4b07e0c1cf0b8f115800dd0c499aa7e084e4c1c765d481ab55905b86c461dcb",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

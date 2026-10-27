@@ -28,7 +28,9 @@
   "applicability": "Qt 5 OH apps whose paste path goes through the QPA clipboard. The bridge, permissions and MIME behavior are runtime/QPA-version specific; no remedy is established here.",
   "related": [
     "qt-drag-data-readiness",
-    "qt6-ohos-subwindow-input"
+    "qt6-ohos-subwindow-input",
+    "qt-ohos-clipboard-gui-thread",
+    "media-save-and-clipboard-permissions"
   ]
 }
 ---
@@ -55,7 +57,7 @@ This is an unresolved integration gap. Do not add an application-level clipboard
 
 ## Conditions and alternatives
 
-There is no confirmed general remedy in the reviewed source. The failure may be in the QPA bridge, the system pasteboard policy or the app's paste binding. An app-level custom pasteboard bridge would change semantics and should be a last resort.
+There is no confirmed general remedy for this unresolved editor failure. When diagnosis identifies a worker-thread QClipboard call or an unrequested pasteboard grant, apply the separately scoped [GUI-thread clipboard contract](qt-ohos-clipboard-gui-thread.md) and [operation-specific permission checks](media-save-and-clipboard-permissions.md). These conditions were found in a different integration and do not establish that they repair this editor's bridge, MIME or paste binding. An app-level custom pasteboard bridge would change semantics and should be a last resort.
 
 ## Common mistakes
 

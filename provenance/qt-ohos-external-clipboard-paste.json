@@ -37,6 +37,26 @@
       "revision": "901ba4972ba90442008669dfa6eb916869d506e0",
       "license": "No repository-level license; upstream NotePad-- license is GPL-3.0 under Doc/src_qt_prj/notepad---main/LICENSE.",
       "evidence_note": "Blob bytes read from the recorded HEAD object because the GitCode checkout was incomplete. Source-reported results were not rerun."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/resources/resfile/persepolis/launcher.py",
+      "sha256": "9e5aa9757ed568e5e6f140d783dcd52d2cec7d5a42d07b3169ab03289980a378",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
+    },
+    {
+      "collection": "persepolis-ohos",
+      "original_path": "HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "snapshot": "provenance/snapshots/projects/persepolis-ohos/2026-10-22/HarmonyOS/entry/src/main/ets/qability/QAbility.ets",
+      "sha256": "385fb95564f9fad89eed8bf7d809c5bcdfa84b81d90478f3d3005705841dd1d8",
+      "revision": "6930d745a6ad44a51da06b1fe263beb3a5a29ef9",
+      "license": "GPL-3.0 (README attribution; no repository-level license file).",
+      "url": "https://gitcode.com/ohos-qt/persepolis",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
     }
   ],
   "upstream_provenance": {
@@ -54,7 +74,8 @@
   "transformations": [
     "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
     "Recorded the observed integration gap and a bounded diagnostic plan; no successful remedy was invented.",
-    "Classified the entry as framework-specific because the gap depends on the Qt OH QPA clipboard/font contract."
+    "Classified the entry as framework-specific because the gap depends on the Qt OH QPA clipboard/font contract.",
+    "Extended the existing mechanism from independently reviewed source; original imported evidence and PC validation boundary retained."
   ],
   "limitations": [
     "The observation is unresolved; no fix was validated and pc_validation remains not-run.",

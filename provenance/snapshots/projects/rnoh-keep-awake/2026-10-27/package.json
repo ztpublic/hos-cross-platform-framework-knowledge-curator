@@ -1,0 +1,44 @@
+{
+  "name": "@react-native-ohos-demo/keep-awake",
+  "version": "0.2.0",
+  "description": "HarmonyOS (RNOH) adaptation of @thehale/react-native-keep-awake — prevent the screen from going to sleep.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": [
+    "react-native",
+    "harmonyos",
+    "openharmony",
+    "rnoh",
+    "keep-awake",
+    "screen"
+  ],
+  "license": "MPL-2.0",
+  "author": "rnoh-lab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://atomgit.com/oh-react-native/react-native-keep-awake.git"
+  },
+  "homepage": "https://atomgit.com/oh-react-native/react-native-keep-awake#readme",
+  "bugs": {
+    "url": "https://atomgit.com/oh-react-native/react-native-keep-awake/issues"
+  },
+  "harmony": {
+    "alias": "react-native-keep-awake",
+    "autolinking": {
+      "ohPackageName": "@rnoh/react-native-keep-awake",
+      "etsPackageClassName": "KeepAwakePackage",
+      "cppPackageClassName": "ReactNativeKeepAwakePackage",
+      "cmakeLibraryTargetName": "rnoh__react_native_keep_awake"
+    }
+  },
+  "files": [
+    "src",
+    "index.ts",
+    "harmony"
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {}
+}

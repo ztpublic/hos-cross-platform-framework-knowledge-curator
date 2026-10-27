@@ -1,0 +1,378 @@
+[
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/Cargo.lock",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/Cargo.lock",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/Cargo.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/Cargo.toml",
+    "entry_ids": [
+      "tauri-ohos-ability-host",
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/capabilities/default.json",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/capabilities/default.json",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/oh-package.json5",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/gen/ohos/entry/src/main/module.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/gen/ohos/entry/src/main/module.json5",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/src/lib.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/src/lib.rs",
+    "entry_ids": [
+      "tauri-ohos-ability-host",
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/build.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/build.rs",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/permissions/default.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/permissions/default.toml",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+    "entry_ids": [
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-demo",
+    "source_path": "src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+    "entry_ids": [
+      "rust-ohos-target-cfg",
+      "tauri-ohos-plugin-command-registration"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "crates/gproxy-host-tauri/src/lib.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/lib.rs",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "crates/gproxy-host-tauri/src/ohos.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/crates/gproxy-host-tauri/src/ohos.rs",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/README.md",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/README.md",
+    "entry_ids": [
+      "native-ohos-shared-library-elf-layout",
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/ability-har.json",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/ability-har.json",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/application/EntryAbility.ets",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/application/EntryAbility.ets",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/build.sh",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/build.sh",
+    "entry_ids": [
+      "native-ohos-shared-library-elf-layout"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/configure-hap.py",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/configure-hap.py",
+    "entry_ids": [
+      "native-ohos-shared-library-elf-layout",
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/package-hap.py",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/package-hap.py",
+    "entry_ids": [
+      "native-ohos-shared-library-elf-layout"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/prepare-har.py",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-har.py",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/prepare-tauri.py",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/prepare-tauri.py",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/ohos/tauri-pins.json",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/ohos/tauri-pins.json",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-gproxy",
+    "source_path": "scripts/pack-mobile-native.py",
+    "snapshot": "provenance/snapshots/projects/tauri-gproxy/2026-10-22/scripts/pack-mobile-native.py",
+    "entry_ids": [
+      "native-ohos-shared-library-elf-layout"
+    ]
+  },
+  {
+    "source_id": "tauri-harmony-toolchain",
+    "source_path": "README.md",
+    "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/README.md",
+    "entry_ids": [
+      "ohos-native-toolchain-inputs",
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-harmony-toolchain",
+    "source_path": "scripts/env.sh",
+    "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/scripts/env.sh",
+    "entry_ids": [
+      "ohos-native-toolchain-inputs"
+    ]
+  },
+  {
+    "source_id": "tauri-harmony-toolchain",
+    "source_path": "scripts/ohos.cmake",
+    "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/scripts/ohos.cmake",
+    "entry_ids": [
+      "ohos-native-toolchain-inputs"
+    ]
+  },
+  {
+    "source_id": "tauri-harmony-toolchain",
+    "source_path": "tauri-pins.json",
+    "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/tauri-pins.json",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "src-tauri/Cargo.lock",
+    "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/Cargo.lock",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "src-tauri/Cargo.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/Cargo.toml",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/oh-package-lock.json5",
+    "entry_ids": [
+      "tauri-ohos-ability-white-screen"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/oh-package.json5",
+    "entry_ids": [
+      "tauri-ohos-ability-white-screen"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+    "snapshot": "provenance/snapshots/projects/tauri-ohos-test/2026-10-22/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-ohos-test",
+    "source_path": "tauri-apps/tauri#15236",
+    "snapshot": "maintenance/reviews/2026-10-22-tauri/issue-15236.json",
+    "entry_ids": [
+      "tauri-ohos-ability-white-screen"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "Cargo.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/Cargo.toml",
+    "entry_ids": [
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-cli/src/helpers/config.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/src/helpers/config.rs",
+    "entry_ids": [
+      "tauri-ohos-explicit-config-overlay"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-cli/src/mobile/open_harmony/build.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/src/mobile/open_harmony/build.rs",
+    "entry_ids": [
+      "tauri-ohos-explicit-config-overlay"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package-lock.json5",
+    "entry_ids": [
+      "tauri-ohos-ability-white-screen"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-cli/templates/mobile/open-harmony/entry/oh-package.json5",
+    "entry_ids": [
+      "tauri-ohos-ability-white-screen"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-macros/src/mobile.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-macros/src/mobile.rs",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-runtime-wry/Cargo.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-runtime-wry/Cargo.toml",
+    "entry_ids": [
+      "rust-ohos-target-cfg"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri-utils/src/config/parse.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-utils/src/config/parse.rs",
+    "entry_ids": [
+      "tauri-ohos-explicit-config-overlay"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri/Cargo.toml",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/Cargo.toml",
+    "entry_ids": [
+      "rust-ohos-target-cfg",
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri/build.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/build.rs",
+    "entry_ids": [
+      "rust-ohos-target-cfg",
+      "tauri-ohos-dependency-cohort"
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "source_path": "crates/tauri/src/ohos.rs",
+    "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/src/ohos.rs",
+    "entry_ids": [
+      "tauri-ohos-ability-host"
+    ]
+  }
+]

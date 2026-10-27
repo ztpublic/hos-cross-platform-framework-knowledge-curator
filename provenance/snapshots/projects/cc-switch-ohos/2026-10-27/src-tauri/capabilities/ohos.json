@@ -1,0 +1,20 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "ohos",
+  "description": "OpenHarmony 平台能力（ArkWeb 无系统托盘/原生对话框/自更新）",
+  "windows": ["main"],
+  "platforms": ["openHarmony"],
+  "permissions": [
+    "core:default",
+    "log:default",
+    "process:allow-restart",
+    "store:default",
+    "core:window:allow-set-skip-taskbar",
+    "core:window:allow-start-dragging",
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-is-maximized",
+    "core:window:allow-close",
+    "core:window:allow-set-decorations"
+  ]
+}

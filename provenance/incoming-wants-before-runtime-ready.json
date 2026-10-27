@@ -28,6 +28,16 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter-app-links",
+      "original_path": "ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-app-links/2026-10-27/ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets",
+      "sha256": "302cc7941f93e7b3b55d03faccaa621fec440ca92e47b74306f2fdf3ddbb46c7",
+      "revision": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "license": "MIT",
+      "url": "https://github.com/HarmonyCandies/app_links_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "upstream_provenance": {
@@ -171,7 +181,8 @@
     "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
     "Separated independently actionable subsections: scheduled-event-delivery-stages",
     "Generalized runtime prose where the native contract does not depend on Flutter.",
-    "Merged matching Qt-collection platform evidence without copying its orchestration policies."
+    "Merged matching Qt-collection platform evidence without copying its orchestration policies.",
+    "Added AbilityAware launchWant/onNewWant implementation evidence. The source caches initial/latest URI only; it does not prove FIFO delivery of all pre-listener Wants, nor lifecycle-reset correctness."
   ],
   "limitations": [
     "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",

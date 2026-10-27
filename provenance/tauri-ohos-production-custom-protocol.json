@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-production-custom-protocol",
+  "sources": [
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/Cargo.toml",
+      "sha256": "2d1cecf59b23ffaf7933f4930955df6c6a7a69496f6a4bbb7914990558e9a9b3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/Cargo.lock",
+      "sha256": "fd32fc858ee787d9c1b02a7fd38367aec417ac1c1c5a0a57471b32f5675dd7f3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/tauri.conf.json",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/tauri.conf.json",
+      "sha256": "6ce2338c97d63e87ab5c39dd3651746ebba9ca116ed6c5a050437fdc8ed3dca3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "d4cf61c756a2e5cbd6eb9fdb29d90e102b4cb129181a6102a6b52cfff5589ba2",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-27/crates/tauri/build.rs",
+      "sha256": "80f6b0d8391c8de748844cedc6f5d382aa126ac4c09607098a64497fbbaee60f",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0; existing notices retained.",
+      "url": "https://github.com/tauri-apps/tauri",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

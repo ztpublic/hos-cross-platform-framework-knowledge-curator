@@ -1,0 +1,53 @@
+commit db19ceab23cd2726cdfa96cb506fbe2677c50a45 9a41666c6266521e56a1724ac35a42629f58a398
+docs: rename example/harmonyApp to example/ohos and add OpenHarmony READMEs
+
+ README.OpenHarmony.md                              |  10 +-
+ README.OpenHarmony_CN.md                           |  32 ++---
+ README.md                                          |   4 +-
+ example/README.OpenHarmony.md                      | 101 ++++++++++++++++
+ example/README.OpenHarmony_CN.md                   | 101 ++++++++++++++++
+ example/nativeApp/build.gradle.kts                 |   4 +-
+ example/{harmonyApp => ohos}/.clang-tidy           |   0
+ example/{harmonyApp => ohos}/.clangd               |   0
+ example/{harmonyApp => ohos}/AppScope/app.json5    |   0
+ .../AppScope/resources/base/element/string.json    |   0
+ .../AppScope/resources/base/media/app_icon.png     | Bin
+ example/ohos/README.OpenHarmony.md                 | 129 +++++++++++++++++++++
+ example/ohos/README.OpenHarmony_CN.md              | 129 +++++++++++++++++++++
+ example/{harmonyApp => ohos}/build-profile.json5   |   0
+ .../{harmonyApp => ohos}/entry/build-profile.json5 |   0
+ example/{harmonyApp => ohos}/entry/hvigorfile.ts   |   0
+ .../entry/obfuscation-rules.txt                    |   0
+ .../entry/oh-package-lock.json5                    |   0
+ .../{harmonyApp => ohos}/entry/oh-package.json5    |   0
+ .../entry/src/main/cpp/CMakeLists.txt              |   0
+ .../entry/src/main/cpp/include/libohoskamel_api.h  |   0
+ .../entry/src/main/cpp/napi_init.cpp               |   0
+ .../src/main/cpp/types/libkamel_napi/index.d.ts    |   0
+ .../main/cpp/types/libkamel_napi/oh-package.json5  |   0
+ .../src/main/ets/entryability/EntryAbility.ets     |   0
+ .../entry/src/main/ets/pages/Index.ets             |   0
+ .../entry/src/main/ets/workers/KamelWorker.ets     |   0
+ .../entry/src/main/module.json5                    |   0
+ .../src/main/resources/base/element/color.json     |   0
+ .../src/main/resources/base/element/string.json    |   0
+ .../entry/src/main/resources/base/media/icon.png   | Bin
+ .../main/resources/base/profile/main_pages.json    |   0
+ .../entry/src/main/resources/rawfile/cacert.pem    |   0
+ .../hvigor/hvigor-config.json5                     |   0
+ example/{harmonyApp => ohos}/hvigorconfig.ts       |   0
+ example/{harmonyApp => ohos}/hvigorfile.ts         |   0
+ example/{harmonyApp => ohos}/oh-package-lock.json5 |   0
+ example/{harmonyApp => ohos}/oh-package.json5      |   0
+ 38 files changed, 485 insertions(+), 25 deletions(-)
+commit a3614f4b84e472c26e1c68c3a19d1561328d7d82 db19ceab23cd2726cdfa96cb506fbe2677c50a45
+docs: add CHANGELOG.md and README.OpenSource
+
+ CHANGELOG.md      | 14 ++++++++++++++
+ README.OpenSource | 11 +++++++++++
+ 2 files changed, 25 insertions(+)
+commit 612405078c1bc4bfd540820fb0c3e087f6cef443 a3614f4b84e472c26e1c68c3a19d1561328d7d82
+docs: correct README.OpenSource metadata
+
+ README.OpenSource | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)

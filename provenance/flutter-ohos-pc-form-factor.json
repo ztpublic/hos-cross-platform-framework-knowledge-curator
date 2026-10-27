@@ -37,6 +37,16 @@
       "revision": "e55f82c8d78d54cdd90aeab0db7dc6a7b10b9fc2",
       "license": "AGPL-3.0 (repository LICENSE).",
       "evidence_note": "Exact bytes fetched from the recorded commit through the GitHub raw endpoint. Source-reported results were not rerun."
+    },
+    {
+      "collection": "expo-device-ohos",
+      "original_path": "harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "snapshot": "provenance/snapshots/projects/expo-device-ohos/2026-10-22/harmony/expo_device/src/main/ets/ExpoDeviceTurboModule.ts",
+      "sha256": "20f63bd5bc3867915a27b3ac9635760302f1bc04df5d7258668eb567dce5fbf6",
+      "revision": "9398b89f2fc3ed24fff81505420839b2ce1a72b1",
+      "license": "MIT",
+      "url": "https://gitcode.com/oh-react-native/expo-device",
+      "evidence_note": "Source text reviewed during curation. No build, install, simulator or device execution performed."
     }
   ],
   "upstream_provenance": {
@@ -55,7 +65,8 @@
   "transformations": [
     "Generalized project-specific names, local paths, dates and build narration out of the consumer entry.",
     "Derived one mechanism from the Flutter platform layer, SDK patch script and porting notes; no source code was copied.",
-    "Classified the entry as framework-specific because the remedy depends on the Flutter OH SDK/toolchain or package platform enum."
+    "Classified the entry as framework-specific because the remedy depends on the Flutter OH SDK/toolchain or package platform enum.",
+    "Extended the existing mechanism from independently reviewed source; original imported evidence and PC validation boundary retained."
   ],
   "limitations": [
     "Source-reported build and device results were not rerun; pc_validation remains not-run.",

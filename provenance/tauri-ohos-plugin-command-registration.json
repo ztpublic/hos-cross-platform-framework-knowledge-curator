@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "tauri-ohos-plugin-command-registration",
+  "sources": [
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+      "sha256": "f8fb4b799ab451514a07eeb67fde4d19cefac6f46fb633df17edcf7f0ee75fb7",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/src/lib.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+      "sha256": "052601a781bfc8782d2f00d6610684767352de7b902e18d58ed011f6f545326a",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/src/commands.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/build.rs",
+      "sha256": "8fe77811b380a4da11e0b603fa20719a6ed81f26999b22e82346e9827f4919b2",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/build.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/permissions/default.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/permissions/default.toml",
+      "sha256": "ac6f912c4b81dce6822cadb0c458100b59dab36113534f5970c624045b690dcb",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/permissions/default.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+      "sha256": "96c382532403eacbb62dc7ebd901c7f2c5e2c0e3cfbb8c48cd366b71403d6fcf",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/guest-js/index.ts",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "sha256": "c238c4f1763c6b42a915db4af16df7b201fe820502f0ce9fba925dc146922bf7",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/src/lib.rs",
+      "sha256": "1aaf7147ddbdc2b535fc5cfaed321372c47e65a6989898c3544683a7225483fb",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/src/lib.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/capabilities/default.json",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/capabilities/default.json",
+      "sha256": "3bdefec47b9c86b93abd8ad669d1b4cb2fc00c03e069456536324ea2881dcd77",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/capabilities/default.json",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    }
+  ],
+  "transformations": [
+    "Extracted one independently actionable mechanism from pinned source inputs; project identities and revisions retained only in provenance.",
+    "Recommendations and acceptance cases are source-derived and were not executed."
+  ],
+  "limitations": [
+    "No build, installation or PC runtime verification performed.",
+    "The reviewed demo plugin supplies command/state scaffolding and compile-time platform data; it does not implement a privileged OH service."
+  ]
+}

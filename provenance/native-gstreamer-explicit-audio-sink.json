@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "native-gstreamer-explicit-audio-sink",
+  "sources": [
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "src/engine/gstengine.cpp",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/src/engine/gstengine.cpp",
+      "sha256": "cbffaddbffd41930129c0a72e2424a89ed564426c97898d4785e8a8d46f66e83",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/CMakeLists.txt",
+      "sha256": "819f32b7e146d99ae15ded8bfac59837c55c278cc1962ad507c4f981d2466cc7",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/README.md",
+      "sha256": "d6f041176c42bcb8cd95c7f0491ddea0a3a7ac7b85121857450c91f825a46d45",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

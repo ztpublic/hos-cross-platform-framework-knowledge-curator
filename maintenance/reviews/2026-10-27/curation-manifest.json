@@ -1,0 +1,1170 @@
+{
+  "added": [
+    "native-arkui-node-attribute-api-guard",
+    "native-unicode-selection-boundaries",
+    "kmp-kuikly-statusbar-scroll-ownership",
+    "native-subwindow-async-transaction",
+    "rnoh-splash-native-readiness",
+    "rnoh-window-keep-screen-on",
+    "flutter-ohos-pcm-record-stream",
+    "flutter-ohos-add-to-app-container-lifecycle",
+    "tauri-ohos-web-storage-fallback",
+    "tauri-ohos-platform-plugin-gates",
+    "electron-ohos-sessionmanager-prerequisite",
+    "native-gstreamer-plugin-registry",
+    "native-gstreamer-explicit-audio-sink",
+    "qt-ohos-terminal-direct-key-input",
+    "kmp-ohos-coil-native-decoder",
+    "kmp-ohos-sqlite-cinterop",
+    "rnoh-gesture-scroll-frame-hold",
+    "electron-ohos-harmonyshare-image-receive",
+    "tauri-ohos-production-custom-protocol",
+    "native-statusbar-event-routing",
+    "rnoh-relationalstore-sql-contract"
+  ],
+  "extended": [
+    "incoming-wants-before-runtime-ready",
+    "napi-thread-and-handle-lifetime",
+    "native-dependency-closure",
+    "rendering-budget-and-progressive-ui",
+    "rnoh-offline-bundle-and-fonts",
+    "tauri-ohos-ability-host",
+    "tauri-ohos-dependency-cohort"
+  ],
+  "source_ids": [
+    "bitfun-ohos",
+    "cc-switch-ohos",
+    "coil-ohos",
+    "electron-shell",
+    "flutter-add2app",
+    "flutter-app-links",
+    "flutter-record-ohos",
+    "harmony-tauri-app",
+    "kuikly-sqlite",
+    "kuiklyui",
+    "letos-ohos",
+    "liberika",
+    "marktext-ohos",
+    "qterminal-ohos",
+    "rnoh-gesture-handler",
+    "rnoh-keep-awake",
+    "rnoh-on-harmony-pc",
+    "rnoh-splash-screen",
+    "strawberry-ohos",
+    "tauri-open-harmony",
+    "tsl-editor",
+    "vbsqlite-ohos"
+  ],
+  "snapshots": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp",
+      "sha256": "a9343d342ac475c898a39be9fb24ef5de8186707272167a3e767d8a18c65782f",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/components/richtext/KRRichTextView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/components/richtext/KRRichTextView.cpp",
+      "sha256": "6cee811175a4a77ba19d687db91f28a7e81028f1538310a093f2b626344bf1ad",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/CMakeLists.txt",
+      "sha256": "9703dd106dc296a1e1f038b26a2c7062d3427357beba9f53b296382359a12ab9",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/components/scroller/KRScrollerView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/components/scroller/KRScrollerView.cpp",
+      "sha256": "88a5482d1963ab74f0b1ffdcd898fb1bfa6ca0c97b58fa467c9413dec918c7d8",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp",
+      "sha256": "b0c5d28d67cfe593025be7b8d89d153dbc1ab57dc39dea3204cac282a0728b5a",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-10-27/core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp",
+      "sha256": "d8abc6dd10c3486c25e275f1a29c5f9060185adf1be1078e1f9a7e96dc0825f2",
+      "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "sha256": "2eb0c85054e0851f34160f11ca37272fb76127661766483b938398ecbb153b59",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "1188a4d9c8ef3d70fe6fb252f64c7dd415c4854e93eed090602522491d776d74",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "harmony/splash_screen/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/harmony/splash_screen/oh-package.json5",
+      "sha256": "27dcb08c2c2513e53551b3751c97b5c6dba2e6f487dfd7a96eaece0eba18ed2e",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/package.json",
+      "sha256": "46ae1b3607441faa14b11e5b84bf515ba9aa2dc7eb24e4de77de4b17e048286f",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets",
+      "sha256": "52061f528759c9b0a31af7a44466daed2656c540dffd547ddc2296416d7861e9",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+      "sha256": "ca17185175ff410734794b8c30349a159351a66b8e1d849cd750a17d2b52e4d2",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+      "sha256": "1498a1de075f09ac4b5e9f30e2db34cfa201afe20f18531f16f045a4732227ef",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+      "sha256": "a0d70d5be719fb9cc6c1aed4ddcf69c544ba1bc578f5d3a409cd3cdfa9205b64",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+      "sha256": "1db39fd51f627461d3e6e5678b6cad1e2725ab8d525456a9ceaecb1a4b7855ab",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/pubspec.yaml",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/pubspec.yaml",
+      "sha256": "cf4f23b87e305a871432b3721c1e3f4456077a408f338b8c7bd8d01fe7da1ecd",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "ede82b2df889e92a6d2c69e8398fd401cc72f157bd995b17de526b02dbcbd7a7",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+      "sha256": "3357284d528be97e1c7bd21e1ff21ce1970231deded2e79008b9ff405868ab72",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "ohos_app/modules/flutter_module/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/ohos_app/modules/flutter_module/oh-package.json5",
+      "sha256": "28bb42be17ad15d74f0cd7a345bfb20f33a0b716f540aa0b7b79fbd7cebb9b5f",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src/index.html",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src/index.html",
+      "sha256": "b87a40cf3b45e512765f89deb28c7d0af844185288257ea9c7ffe4fc48026f1e",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/README.md",
+      "sha256": "d82c82cae9aa3da8f09738f1877d3200249be33716dd5da121c56b3b9e139028",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.toml",
+      "sha256": "2451b1a2a3b7e3e29cf62252f1827442e968f3a70e88f44907147087861b1663",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/Cargo.lock",
+      "sha256": "5072a0b916615aee10d581b3357ebd82dcea37eb44b676719de7c64e46e53a9f",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/src/lib.rs",
+      "sha256": "2df3be7d7a160bc49e1763f91b3903ea2aed35856c16736de34a139a3a1b3cd1",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/capabilities/ohos.json",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/capabilities/ohos.json",
+      "sha256": "be1c2d4f9636019bd36bbcfded68e5bddfd01add51624bdec3c0380f4818f810",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "docs/ohos-sessionmanager-adaptation.md",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/docs/ohos-sessionmanager-adaptation.md",
+      "sha256": "4e940c7941ad6cdc50c3257fe6a2e451b8d493b73da067a2753f6263090d8aa4",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "web_engine/src/main/ets/ability/WebAbility.ets",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/web_engine/src/main/ets/ability/WebAbility.ets",
+      "sha256": "be558c4c040860f6cd3c4087d53ac3771af8bf989030dcf37d96b7e99cb02e34",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "web_engine/src/main/ets/components/WebNodeHandleWindow.ets",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/web_engine/src/main/ets/components/WebNodeHandleWindow.ets",
+      "sha256": "cf8d66a53282adc69b1e8ea4cf7844116eee1f06be403f61bca8f3ed0dc94b2b",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "electron/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/electron/oh-package.json5",
+      "sha256": "3443d712f7b4f04bad35cafdc2c3f533289a0c78dc6d117aef577ef5451c420b",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "src/engine/gststartup.cpp",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/src/engine/gststartup.cpp",
+      "sha256": "9b4d53ebd10efac899f2953392fb4a3318f67458a027f845fe368be0ea0ed8ef",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/README.md",
+      "sha256": "d6f041176c42bcb8cd95c7f0491ddea0a3a7ac7b85121857450c91f825a46d45",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "src/engine/gstengine.cpp",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/src/engine/gstengine.cpp",
+      "sha256": "cbffaddbffd41930129c0a72e2424a89ed564426c97898d4785e8a8d46f66e83",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/CMakeLists.txt",
+      "sha256": "819f32b7e146d99ae15ded8bfac59837c55c278cc1962ad507c4f981d2466cc7",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "src/termwidget.cpp",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/src/termwidget.cpp",
+      "sha256": "8a1d07451b0bfecd48e3dc18f9bbd7e20cee4f9d32911a77405853a1c8ff0822",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "src/mainwindow.cpp",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/src/mainwindow.cpp",
+      "sha256": "37061e73540c813d552fb14e4b62976631aa882f015bf11df1e715096a192178",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/README.md",
+      "sha256": "c4b07e0c1cf0b8f115800dd0c499aa7e084e4c1c765d481ab55905b86c461dcb",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt",
+      "sha256": "c1e954a79f685be6cefdecd0f7093ededece6aed781ff8de5ea12aca8fc534d0",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+      "sha256": "89287699f6aee30cb6c44a25c587d0373d6ca94c49a19b7c9184a32e1c069f7f",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/src/ohosArm64Main/cinterop/image.def",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/src/ohosArm64Main/cinterop/image.def",
+      "sha256": "d08136a7abfc8f12f4844e8f2ee65f4d0c6b05585e662ef6a27685a560671691",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "coil-core/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/coil-core/build.gradle.kts",
+      "sha256": "d99a371245d0dc7b382c082011e0f40a0bacae33e68b9727080417fc46178f1f",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "buildSrc/src/main/kotlin/coil3/multiplatform.kt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/buildSrc/src/main/kotlin/coil3/multiplatform.kt",
+      "sha256": "64895d828b16dde4388a98188910f44d7bf797a2b6e8cd9ae202c784c46a08a0",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/build.ohos.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/build.ohos.gradle.kts",
+      "sha256": "a281c71a62b3f4f00f7b75ecae98e40cb92f27df204acd7d38c7fccd330afd13",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/src/nativeMain/cinterop/sqlite3.def",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/src/nativeMain/cinterop/sqlite3.def",
+      "sha256": "74f883fe5d0fec4bb98739876941f325958896f78bea3d42b7af0ee0e4d07575",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt",
+      "sha256": "82cda4b25c0be947fcb9bd14e544a359906be43dd967866cab907fb8a11731cc",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "VBSQLite/build.gradle.kts",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/VBSQLite/build.gradle.kts",
+      "sha256": "c9ecf3f612ba706baf6fb819fc0bc5b5618c00496ff5d79723655c0bd1cfffc6",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "VBSQLite/src/nativeInterop/cinterop/interop.def",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/VBSQLite/src/nativeInterop/cinterop/interop.def",
+      "sha256": "33e289f6852d57455d4a877bf668c65a109a5076dabafcab2a9471486b35fe2c",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "ohosApp/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/ohosApp/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "d7ceed78242db3f60718631af883c20d02756a00720a3e8094866443188e7b7c",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vbsqlite-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/vbsqlite-ohos/2026-10-27/README.md",
+      "sha256": "8316cc7196477214dfe8d0577f67c8b5534f6dc4a2f119c8b73e23c2ac9a82d7",
+      "revision": "734e996936cccc5e582521db511259133b958526",
+      "license": "No repository-level license found.",
+      "url": "https://github.com/Kuikly-contrib/VBSQLite",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+      "sha256": "06f1736ed77ef9a45a8f717084a40bbfce2f1f7eed81e985db499f35cbdc9eff",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+      "sha256": "459b4b8e33ff2b3a6a72af941596620a6e4fcf488c0e63412d3af82f9ea56bb0",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "sha256": "f35abe8dac73e4ca47e37b66c3b4e1f760da877cebe2b1b5403ca825d8e683ab",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+      "sha256": "518f743a3806f87471d956f8264f186d7d230397a5a37be8569e4ba777139391",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/react-native-harmony-gesture-handler/package.json",
+      "sha256": "4aa7b363fe02d6ad82f46c51fab30d36959e65bdec024d38793a07306925b513",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+      "sha256": "5b86ca2d22a70e6cd3c549655eec3f6cdba32984569c3e453746542ea25f87aa",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets",
+      "sha256": "ff2ddb61b938fa65e8a164a48628be44545c9e58f22272cfde2f7c9af905fc04",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/README.md",
+      "sha256": "a0d500b97da687fde888fa95430fc39656aae97481ed0f6c8eb2126bef495cbb",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "673ae0197c94c90e40199859ff4d0034836e8f82e037f06e186b6594e77a7a77",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "HarmonyOS/entry/src/main/cpp/patch_needed.py",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/HarmonyOS/entry/src/main/cpp/patch_needed.py",
+      "sha256": "11fa06c6fc32a22ae90a7e92e2eda28176340c75bd6f41083abd175c51591711",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "cmake/fix_ohos_needed_paths.py",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/cmake/fix_ohos_needed_paths.py",
+      "sha256": "2a0e66a33881ee235831a50e97c95bb3a5568e21fbcaa43125b3435b80845448",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "flutter-app-links",
+      "original_path": "ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-app-links/2026-10-27/ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets",
+      "sha256": "302cc7941f93e7b3b55d03faccaa621fec440ca92e47b74306f2fdf3ddbb46c7",
+      "revision": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "license": "MIT",
+      "url": "https://github.com/HarmonyCandies/app_links_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/oh-package-lock.json5",
+      "sha256": "4910613c764db40db3235b6a9b44edfc0a6a73d7996873da5c6bd5ae44b648c6",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "3a2a53489e5b67675e18930b0744b1baf87a500eb6f0b8e25a85cb88a6170634",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "src-tauri/gen/ohos/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/src-tauri/gen/ohos/entry/oh-package.json5",
+      "sha256": "abf786ab3a3eb3ea7c6a3b6180cf8c99a737eded7c8240031689da314993d415",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/lib/src/erika_player.dart",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-27/packages/erika_flutter/lib/src/erika_player.dart",
+      "sha256": "de6a11755b432b4b08905d2b0ecce173b0f9fb80d1fe309e9429466052364cb9",
+      "revision": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-10-27/packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets",
+      "sha256": "491b68ef25d3a54a0956f617784633a5486bfa12972b00a94b1f5b9a019bc5e4",
+      "revision": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/Cargo.toml",
+      "sha256": "2d1cecf59b23ffaf7933f4930955df6c6a7a69496f6a4bbb7914990558e9a9b3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/Cargo.lock",
+      "sha256": "fd32fc858ee787d9c1b02a7fd38367aec417ac1c1c5a0a57471b32f5675dd7f3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/tauri.conf.json",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/tauri.conf.json",
+      "sha256": "6ce2338c97d63e87ab5c39dd3651746ebba9ca116ed6c5a050437fdc8ed3dca3",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "d4cf61c756a2e5cbd6eb9fdb29d90e102b4cb129181a6102a6b52cfff5589ba2",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-27/crates/tauri/build.rs",
+      "sha256": "80f6b0d8391c8de748844cedc6f5d382aa126ac4c09607098a64497fbbaee60f",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0; existing notices retained.",
+      "url": "https://github.com/tauri-apps/tauri",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+      "sha256": "3c40c8a4d5c3b80f90555bfa756fda19df99757f0ba8126562fad959e92aa592",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+      "sha256": "7b4e54e0243096a7983419e8aa3939d0bc58a12512a77c4f316e2711efd3b5d0",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/entry/src/main/module.json5",
+      "sha256": "570b73c6c291074cb2b49261ce5906f29efa5711f5529601ee7eb9e140135344",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "src/apps/ohos/oh-rs-ability/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/src/apps/ohos/oh-rs-ability/oh-package.json5",
+      "sha256": "2a7ec1f6bebf60f6e3cd5eef45ccdd5eb1209477f020ddc143227794a42cef76",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+      "sha256": "e3def924f856452935a1ad687bb905c2fbb3051739c542cf24e22511004aa035",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+      "sha256": "3cf531f84cf3c30cea7f381d6aa507e92ffa5baa0a35340d7e0df18872d791da",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+      "sha256": "a42ad6fef19b5b0e4a7fffd0970344e60c4fd66296fe5bd7661a06998e16f741",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "sha256": "51db7bd3d45f9d0144755fe1836e4943d8650924071712191e699017875942e3",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "src-tauri/src/lib.rs",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/src-tauri/src/lib.rs",
+      "sha256": "121c72ca300cd7f1948b4de2fbb0e0d83fca602cd3fc9212c3e79d8323d5ec5b",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "harmony/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/harmony/entry/src/main/ets/pages/Index.ets",
+      "sha256": "98a1cc1e000bb33ada9de60e6a9c805a2e4f0c3e755c61630c2f86eeee6b6892",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/harmony/entry/oh-package.json5",
+      "sha256": "a1e93166a275c76c2bbf810e255fc4038a1c6ac57e2c968b2f176389ccc82fb0",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "package.json",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/package.json",
+      "sha256": "26a9fb46acc10046ba4c1fe42bc0e984281905630b8ac061643bcddad6cea226",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "metro.config.js",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/metro.config.js",
+      "sha256": "0a5c0d4c4cb51f14c59892207ef20bf0cbeb93a1175ed152fdef23c5e5f14ab6",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/LICENSE",
+      "sha256": "26cde83e266e38c7800b35baa8005254378bd71aeca579a7e7047d27940296bf",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "bitfun-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/bitfun-ohos/2026-10-27/README.md",
+      "sha256": "7e6bd49d44b691d7c6a131cdb39f2728103d29c092c5c7acd5696538c2687e21",
+      "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+      "license": "MIT root notice; dependency and vendored component terms apply.",
+      "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "cc-switch-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/cc-switch-ohos/2026-10-27/LICENSE",
+      "sha256": "912b6a597d10c43b40a0909349ed95b052b17efb6502b4898e1b35dafb896755",
+      "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+      "license": "MIT",
+      "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "LICENSE.txt",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/LICENSE.txt",
+      "sha256": "84c66dbd49a4994e13a95ba9b724cb3c9e6b9aa2c951ef6625cb397b87015468",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "coil-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/coil-ohos/2026-10-27/README.md",
+      "sha256": "3c567e8d0bdd1f8ed723cf53a18bedf521ca275c8ab8b8ba75dff7e737745f34",
+      "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+      "license": "Apache-2.0",
+      "url": "https://github.com/crowforkotlin/coil",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "electron-shell",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/electron-shell/2026-10-27/README.md",
+      "sha256": "49ed693c2da1a438591de609703a1032a86e1a6f8e8fcfe0dd94e74162851bd8",
+      "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+      "license": "No repository-level license found; vendor files carry their own headers.",
+      "url": "https://github.com/fellow99/ElectronShell",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "flutter-add2app",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flutter-add2app/2026-10-27/README.md",
+      "sha256": "59e25b4ce404c582df25c1b43d6d453f9cacda5aa78d2bc8110b4af6862a23c8",
+      "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+      "license": "No repository-level license found; reviewed FlutterUI.ets carries Apache-2.0 header; module manifest says OpenValley.",
+      "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "flutter-app-links",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/flutter-app-links/2026-10-27/LICENSE",
+      "sha256": "3bcc9f3c805f06441e109a022e8ef625dcf1b87a19c97122af11e5806cd984d6",
+      "revision": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "license": "MIT",
+      "url": "https://github.com/HarmonyCandies/app_links_ohos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "flutter-app-links",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flutter-app-links/2026-10-27/README.md",
+      "sha256": "f805d27b8003e122e52a012e4c0dc5a048efd8822be7c2c286d023cf02b84df1",
+      "revision": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+      "license": "MIT",
+      "url": "https://github.com/HarmonyCandies/app_links_ohos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/README.md",
+      "sha256": "37cc6ad6870ff0c5fbe1236a53df39743fc8d6125810f00e43b9410ca4071f2a",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "flutter-record-ohos",
+      "original_path": "record_ohos/LICENSE",
+      "snapshot": "provenance/snapshots/projects/flutter-record-ohos/2026-10-27/record_ohos/LICENSE",
+      "sha256": "b0cbe4a6717dc8286d44792bd905fdc49f179b80af8d1543e4194e61766803a3",
+      "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+      "license": "record_ohos/LICENSE is BSD-3-Clause; reviewed ArkTS files carry Apache-2.0 headers.",
+      "url": "https://github.com/bruce3x/flutter_record_ohos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "harmony-tauri-app",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/harmony-tauri-app/2026-10-27/README.md",
+      "sha256": "00b6a49772b5eae093c51f76784a7175d1aa293b2195b7d13d81847bc9cc11be",
+      "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+      "license": "No repository-level license found; derivative upstream components retain their notices.",
+      "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/LICENSE",
+      "sha256": "58fa350cc9a13c5fb1e00f327f8ffffb6a9b9172ed0efac4f302a48c97e29773",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "kuikly-sqlite",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/kuikly-sqlite/2026-10-27/README.md",
+      "sha256": "b9a3a9f8fed4ca2c8b3eef9f523843a11f469aee388aefc5f14f3476936c0647",
+      "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+      "license": "MIT; bundled SQLite has its own public-domain notice.",
+      "url": "https://github.com/HD-L/KuiklyUISqlite",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/LICENSE",
+      "sha256": "c8d10fd14c31e3094ff244b15fc6414a084373e86a8b2eb296d1e13832f91ed6",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "letos-ohos",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/letos-ohos/2026-10-27/README.md",
+      "sha256": "cbf581eb30e1dc0b1b41bed880f5ab04580d8c0161ceb0ff248a534bb1b5cb71",
+      "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/m0_52900670/letos",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "marktext-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/marktext-ohos/2026-10-27/LICENSE",
+      "sha256": "8837d0478cf2a98caed1925caf115058c4077b7bf7725376aa23e3136c2daddf",
+      "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+      "license": "MIT root notice; vendor bridge files carry Huawei BSD-style headers. No blanket relicensing inferred.",
+      "url": "https://github.com/1440196924/MarkText-HM",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "qterminal-ohos",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/qterminal-ohos/2026-10-27/LICENSE",
+      "sha256": "ead02ff1f91603ff84965fe76e86976a3587dc7faf45fb48affe02536b744b86",
+      "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+      "license": "GPL-2.0-or-later; bundled font has separate terms.",
+      "url": "https://gitcode.com/ohos-qt/qterminal",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/LICENSE",
+      "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-10-27/README.md",
+      "sha256": "d217cf3a5a5c37832aab1bc5791768d359e5b6218c6b8badf665baae5deca749",
+      "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/LICENSE",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-keep-awake",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-keep-awake/2026-10-27/README.md",
+      "sha256": "0b426ac5dfe1cb92dc79b7e27ffed3cda4d34ddadf5c7dba06a5082106c2f828",
+      "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+      "license": "MPL-2.0",
+      "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-on-harmony-pc",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-on-harmony-pc/2026-10-27/README.md",
+      "sha256": "f87a434fb61b4bb67fd8f69f5d0c0386a32a907f35b167c622411fca6ee98ae2",
+      "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+      "license": "No standalone license notice found; README attributes RNOH-related code to Huawei under MIT.",
+      "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/LICENSE",
+      "sha256": "56f5c636e56d32dbfb375b34e28d0adf6e50b4cff73a84d484f84d61debf2231",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/README.md",
+      "sha256": "5a0149e9c385f84c358d6269fd185bb3d4acde1151617836a3fe6c19b333ca69",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "strawberry-ohos",
+      "original_path": "COPYING",
+      "snapshot": "provenance/snapshots/projects/strawberry-ohos/2026-10-27/COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+      "license": "GPL-3.0",
+      "url": "https://gitcode.com/ohos-qt/strawberry",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "LICENSE",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/LICENSE",
+      "sha256": "bd382056e82599a7dc7a8b83897774a08ec4ebcc17f783cffec19bd0bfc130da",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/README.md",
+      "sha256": "9e7c165a9417e98f3b27d05cf9939a48e0c631cf06751204debd0611ed5d784b",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "License/context snapshot; source execution not authorized or performed."
+    }
+  ]
+}

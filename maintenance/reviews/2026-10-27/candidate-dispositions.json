@@ -1,0 +1,501 @@
+[
+  {
+    "url": "https://github.com/LeeLiangmin/tauri-ohos",
+    "selected_ref": "main",
+    "disposition": "inaccessible",
+    "reason": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/david921518/tauri-mobile",
+    "selected_ref": "main",
+    "disposition": "resource-list",
+    "reason": "README is a development-resource list, without an adaptation implementation.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/linlinjinzhen/tauri-ohos-test",
+    "selected_ref": "main",
+    "disposition": "duplicate-family",
+    "reason": "Compared commit graph: zero ahead and one behind the already reviewed canonical test source.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/SJMC-Dev/tauri-ohos-experimental",
+    "selected_ref": "feat/open-harmony",
+    "disposition": "duplicate",
+    "reason": "Selected branch identical to canonical tauri experimental checkpoint.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/2doright/airslate-pc-server",
+    "selected_ref": "main",
+    "disposition": "different-target",
+    "reason": "Tauri desktop server accompanies a separate HarmonyOS application; no Tauri OH port established.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/Linmoqian/tauri-harmonyos",
+    "selected_ref": "dev",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/nanhapy/sms-bridge",
+    "selected_ref": "main",
+    "disposition": "different-target",
+    "reason": "Windows Tauri receiver plus separate HarmonyOS phone client.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/omidnw/vorynth",
+    "selected_ref": "master",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/bluedeer000/clipboard-sync",
+    "selected_ref": "main",
+    "disposition": "different-target",
+    "reason": "macOS client plus HarmonyOS phone; not a Tauri OH host.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/Jesse205/F-OH-PWA",
+    "selected_ref": "main",
+    "disposition": "different-target",
+    "reason": "PWA and desktop clients distribute HAP files; not a Tauri OH runtime.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/lookapu/HarmonyAgent",
+    "selected_ref": "main",
+    "disposition": "inaccessible",
+    "reason": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/bernardotmr/tauri-demo",
+    "selected_ref": "main",
+    "disposition": "insufficient",
+    "reason": "README wraps an external download and generic desktop requirements; no source-backed OH remedy selected.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/jimmy54/tauri-demo",
+    "selected_ref": "master",
+    "disposition": "duplicate-family",
+    "reason": "Compared commit graph: zero ahead and eight behind the already reviewed canonical demo.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/ljlVink/ohos-cherrystudio-electron-base",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/fellow99/ElectronShell",
+    "selected_ref": "main",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "electron-shell",
+    "observed_commit": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56"
+  },
+  {
+    "url": "https://github.com/5-Super-Rookie-5/bilibili-electron-HarmonyOS",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/ohosvscode/YesPlayMusic",
+    "selected_ref": "master",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/Aik358/psychopy-studio-harmonyos",
+    "selected_ref": "main",
+    "disposition": "screened-no-new-atom",
+    "reason": "README and runtime/process-path screening repeat Electron runtime, private executable/dependency and local service boundaries. No full Python/native backend review claimed.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "psychopy-ohos",
+    "observed_commit": "703df012429d0df09287948f620e64ecb5be754a"
+  },
+  {
+    "url": "https://github.com/liys-online/qtc-for-harmonyos",
+    "selected_ref": "main",
+    "disposition": "tooling-screened",
+    "reason": "Host Qt Creator development plugin, not an app runtime adaptation. No distinct mechanism beyond represented toolchain/SDK coherence selected.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "qtc-harmony-plugin",
+    "observed_commit": "ac809cebabe8310fdd13dbe84740bcac92042f21"
+  },
+  {
+    "url": "https://github.com/XingHaiOvO/APNG-Generator",
+    "selected_ref": "main",
+    "disposition": "different-host",
+    "reason": "README separates Qt desktop, Flutter mobile and native ArkTS HarmonyOS implementations.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/jiahui1114/ComposeMediaPlayer-Ohos",
+    "selected_ref": "master",
+    "disposition": "inaccessible",
+    "reason": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/crowforkotlin/coil",
+    "selected_ref": "ohos",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "coil-ohos",
+    "observed_commit": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb"
+  },
+  {
+    "url": "https://github.com/0xZOne/ohos-flutter-add2app",
+    "selected_ref": "main",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "flutter-add2app",
+    "observed_commit": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6"
+  },
+  {
+    "url": "https://github.com/guoxiucai/ohos-scrcpy-app",
+    "selected_ref": "main",
+    "disposition": "different-target",
+    "reason": "Flutter runs on macOS/Windows; the OH device hosts a separate system HAP.",
+    "evidence": "github-candidate-readmes.json"
+  },
+  {
+    "url": "https://github.com/HarmonyCandies/app_links_ohos",
+    "selected_ref": "main",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "flutter-app-links",
+    "observed_commit": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0"
+  },
+  {
+    "url": "https://github.com/bruce3x/flutter_record_ohos",
+    "selected_ref": "bruce/ohos-startstream-fix",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json",
+    "source_id": "flutter-record-ohos",
+    "observed_commit": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1"
+  },
+  {
+    "url": "https://github.com/HD-L/KuiklyUISqlite",
+    "selected_ref": "main",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave2.json",
+    "source_id": "kuikly-sqlite",
+    "observed_commit": "981167b28a2f8497e983d6a602e1a86ebfb0973f"
+  },
+  {
+    "url": "https://github.com/kairowan/Kuikly-Network",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/Kuikly-contrib/VBSQLite",
+    "selected_ref": "main",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave2.json",
+    "source_id": "vbsqlite-ohos",
+    "observed_commit": "734e996936cccc5e582521db511259133b958526"
+  },
+  {
+    "url": "https://github.com/PoseidonMRT/KMPSupportOpenHarmonyDemo",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/123ningwang/KuiklyLoadView",
+    "selected_ref": "main",
+    "disposition": "unqualified",
+    "reason": "README covers Android/iOS/Web, no concrete OH implementation established.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/ohosvscode/electron-ohos-napi-shim",
+    "selected_ref": "main",
+    "disposition": "known-mechanism-lead",
+    "reason": "README describes NAPI shim usage; owning-VM symbol resolution already represented. No binary runtime inference.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/HU-WEITAO/EchoMusic_OHOS",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/1440196924/MarkText-HM",
+    "selected_ref": "master",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave2.json",
+    "source_id": "marktext-ohos",
+    "observed_commit": "04f5442b5d8b3f130ed535d96f16f9f017d824b1"
+  },
+  {
+    "url": "https://github.com/react-native-oh-library/react-native-harmony-gesture-handler",
+    "selected_ref": "sig",
+    "disposition": "moved",
+    "reason": "Followed declared migration to CPF-RN/rntpc_react-native-gesture-handler and reviewed native implementation there.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/react-native-oh-library/react-native-harmony-screens",
+    "selected_ref": "sig",
+    "disposition": "moved",
+    "reason": "Followed declared migration to CPF-RN/rntpc_react-native-screens; fetched source inventory is primarily JS plus prebuilt HAR.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/BlackishGreen33/Expo-Harmony-Toolkit",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/Kayshen-X/rn4oh-template",
+    "selected_ref": "main",
+    "disposition": "metadata-screened",
+    "reason": "README/source-family screening did not establish an additional independently actionable OH-PC mechanism. No adaptation or duplicate claim from metadata alone.",
+    "evidence": "github-extra-screen.json"
+  },
+  {
+    "url": "https://github.com/wildfirechat/hm-pc-chat",
+    "selected_ref": "master",
+    "disposition": "screened-no-new-atom",
+    "reason": "Retried correct master branch. Electron 34 runtime/template, app asset injection and proprietary addon/product permission conditions repeat represented mechanisms; source README only, no addon source/runtime review.",
+    "evidence": "closure-searches.json"
+  },
+  {
+    "url": "https://gitcode.com/ohos-qt/xi-qt",
+    "source_id": "xi-qt-ohos",
+    "selected_ref": "main",
+    "observed_commit": "869846c167cf6ed99fc1720f7f6885c3165839be",
+    "disposition": "insufficient",
+    "reason": "Selected main tree contains only README; organization dashboard claim is not implementation proof.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/ohos-qt/qterminal",
+    "source_id": "qterminal-ohos",
+    "selected_ref": "main",
+    "observed_commit": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/ohos-qt/strawberry",
+    "source_id": "strawberry-ohos",
+    "selected_ref": "main",
+    "observed_commit": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/m0_52900670/letos",
+    "source_id": "letos-ohos",
+    "selected_ref": "main",
+    "observed_commit": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/oh-react-native/react-native-keep-awake",
+    "source_id": "rnoh-keep-awake",
+    "selected_ref": "main",
+    "observed_commit": "b71e63120bab682874a9547efa2d94747fa2a59f",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_cc-switch",
+    "source_id": "cc-switch-ohos",
+    "selected_ref": "main",
+    "observed_commit": "ad4deb22727947307012441eee0a48202aebadf8",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+    "source_id": "rnoh-splash-screen",
+    "selected_ref": "master",
+    "observed_commit": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://github.com/SJMC-Dev/tauri-plugins-workspace-ohos-experimental",
+    "source_id": "tauri-plugins-ohos",
+    "selected_ref": "feat/open-harmony",
+    "observed_commit": "cc9ec9b4ad2f9ec9bd57c3503ded1bd94d092c48",
+    "disposition": "unqualified",
+    "reason": "Source inventory, dialog Cargo/mobile code and native grep have no OH implementation branch; package/branch name does not establish an OH plugin backend.",
+    "evidence": "candidate-fetch.json"
+  },
+  {
+    "url": "https://gitee.com/licq_workspace/kmp-cmp-harmony",
+    "source_id": "gitee-kmp-harmony",
+    "selected_ref": "master",
+    "observed_commit": null,
+    "disposition": "inaccessible",
+    "reason": "fatal: could not read Username for 'https://gitee.com': terminal prompts disabled\n",
+    "evidence": "candidate-wave2.json"
+  },
+  {
+    "url": "https://gitcode.com/CPF-RN/rntpc_react-native-screens",
+    "source_id": "rnoh-screens",
+    "selected_ref": "master",
+    "observed_commit": "9609029bf20b8ac3d6fcc5929bd03005fec3fd85",
+    "disposition": "insufficient-source",
+    "reason": "Fetched migrated source has JS and a prebuilt HAR; native behavior not reviewed or reverse engineered. No new remedy selected from version table.",
+    "evidence": "candidate-wave2.json"
+  },
+  {
+    "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+    "source_id": "rnoh-gesture-handler",
+    "selected_ref": "master",
+    "observed_commit": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave2.json"
+  },
+  {
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_mqtt_client_tauri",
+    "source_id": "mqtt-client-tauri",
+    "selected_ref": "main",
+    "observed_commit": "0058afa14956e08bfc8012df59da6fe66c889348",
+    "disposition": "partial",
+    "reason": "OH RustAbility/cdylib source present, but Tauri dependencies point to absent local ../tauri-ohos. Source-reported build not independently resolvable; version/patch lessons already covered.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+    "source_id": "harmony-tauri-app",
+    "selected_ref": "main",
+    "observed_commit": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_m3u8dl",
+    "source_id": "m3u8dl-ohos",
+    "selected_ref": "main",
+    "observed_commit": "eef22d861629463e1958eb598b78d8bbdeb6a690",
+    "disposition": "not-qualified",
+    "reason": "Selected tree has desktop Rust/Tauri source but no OH host/target/dependency inputs; repository title alone is insufficient.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/m0_65604719/tsl_editor",
+    "source_id": "tsl-editor",
+    "selected_ref": "main",
+    "observed_commit": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/fengjt007/ShuyoNote",
+    "source_id": "shuyonote",
+    "selected_ref": "main",
+    "observed_commit": "2179f14d3233c65b0bb94ce1decf5314889dd055",
+    "disposition": "not-qualified",
+    "reason": "Plans discuss OH; current selected tree has desktop/Web drivers without an actual OH host. No port inferred from roadmap.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/kopstar_mao/cj-tauri",
+    "source_id": "cj-tauri",
+    "selected_ref": "main",
+    "observed_commit": "6a7a4c126897870e6492534dd2150cf8e9bda0b7",
+    "disposition": "different-framework",
+    "reason": "Cangjie implementation inspired by Tauri, not Rust Tauri; HarmonyOS backend is a placeholder. No speculative framework atom.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+    "source_id": "bitfun-ohos",
+    "selected_ref": "main",
+    "observed_commit": "03084ca3966b62ea5237eccbc653a83e14552c44",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave3.json"
+  },
+  {
+    "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+    "source_id": "rnoh-on-harmony-pc",
+    "selected_ref": "main",
+    "observed_commit": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pinned host/target/implementation inputs reviewed; consumer/provenance mapping retained.",
+    "evidence": "candidate-wave4.json"
+  },
+  {
+    "url": "https://gitlab.com/leenhawk1/gproxy",
+    "disposition": "known-family-lead",
+    "reason": "Release page explicitly refers to artifacts built by GitHub Actions; already-reviewed gproxy source family. No independent runtime corroboration or exact mirror identity claim."
+  },
+  {
+    "url": "https://gitlab.com/rzkn/qtbase",
+    "disposition": "source-mirror-lead",
+    "reason": "Qt framework source mirror surfaced; no additional app-specific mechanism established."
+  },
+  {
+    "url": "https://github.com/HuakunShen/monio",
+    "disposition": "insufficient-runtime-evidence",
+    "reason": "Search/source description explicitly limits OH evidence to Rust checking, without link/package/device execution; no new working-input recipe extracted."
+  },
+  {
+    "url": "https://gitcode.com/yjx000001/OpenSPH-HarmonyOS",
+    "disposition": "known-host-mechanism-lead",
+    "reason": "wxWidgets application using QAbility/dlopen entry mechanism already represented. No unreviewed wxWidgets category added."
+  },
+  {
+    "url": "https://gitcode.com/gcw_vbU49vcA/bih_sfarklib",
+    "disposition": "infrastructure-lead",
+    "reason": "Large package/build registry, not independently reviewed adaptation projects. Package count and command smoke reports not imported as app/PC verification."
+  },
+  {
+    "url": "https://gitee.com/yqg.tom/EasyTier",
+    "disposition": "unqualified",
+    "reason": "Search surfaced a workspace including an OH Rust contribution and a Tauri desktop GUI; this does not establish a Tauri OH port."
+  },
+  {
+    "url": "https://codeberg.org/explore/repos",
+    "disposition": "access-limited",
+    "reason": "Web robots restriction; no negative ecosystem claim."
+  }
+]

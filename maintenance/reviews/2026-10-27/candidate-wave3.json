@@ -1,0 +1,94 @@
+[
+  {
+    "id": "mqtt-client-tauri",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_mqtt_client_tauri",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/mqtt-client-tauri.git",
+    "observed_commit": "0058afa14956e08bfc8012df59da6fe66c889348",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "harmony-tauri-app",
+    "url": "https://gitcode.com/jianguoxu/harmony-tauri-app",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/harmony-tauri-app.git",
+    "observed_commit": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "m3u8dl-ohos",
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_m3u8dl",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/m3u8dl-ohos.git",
+    "observed_commit": "eef22d861629463e1958eb598b78d8bbdeb6a690",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "tsl-editor",
+    "url": "https://gitcode.com/m0_65604719/tsl_editor",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/tsl-editor.git",
+    "observed_commit": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "shuyonote",
+    "url": "https://gitcode.com/fengjt007/ShuyoNote",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/shuyonote.git",
+    "observed_commit": "2179f14d3233c65b0bb94ce1decf5314889dd055",
+    "screened_paths": [
+      "LICENSE",
+      "README.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "cj-tauri",
+    "url": "https://gitcode.com/kopstar_mao/cj-tauri",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/cj-tauri.git",
+    "observed_commit": "6a7a4c126897870e6492534dd2150cf8e9bda0b7",
+    "screened_paths": [
+      "LICENSE",
+      "README.OpenSource",
+      "README.md",
+      "README_EN.md"
+    ],
+    "outcome": "fetched"
+  },
+  {
+    "id": "bitfun-ohos",
+    "url": "https://gitcode.com/leesinyi/bitfun_ade_9163",
+    "selected_ref": "main",
+    "framework": "tauri",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/bitfun-ohos.git",
+    "observed_commit": "03084ca3966b62ea5237eccbc653a83e14552c44",
+    "screened_paths": [
+      "LICENSE",
+      "README.md",
+      "README.zh-CN.md"
+    ],
+    "outcome": "fetched"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "rnoh-on-harmony-pc",
+    "url": "https://gitcode.com/jianguoxu/rnoh-on-harmony-pc",
+    "selected_ref": "main",
+    "framework": "react-native",
+    "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-10-27/rnoh-on-harmony-pc.git",
+    "observed_commit": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+    "screened_paths": [
+      "README.md"
+    ],
+    "outcome": "fetched"
+  }
+]

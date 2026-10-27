@@ -19,14 +19,46 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "tauri-harmony-toolchain",
+      "original_path": "scripts/env.sh",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/scripts/env.sh",
+      "sha256": "43c4e51cdab924b77c191fba385ae20c23ceb5717aa808e275fbd7e3cdd7a6ce",
+      "revision": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "url": "https://github.com/LeenHawk/tauri-harmony/blob/39c84a15cb5945b2704a34550a6832e516721e03/scripts/env.sh",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-harmony-toolchain",
+      "original_path": "scripts/ohos.cmake",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/scripts/ohos.cmake",
+      "sha256": "fbe29c4ca827b4a2e16f83bb2db6cf3f2d65370e6c81f566e21789dc9cd85713",
+      "revision": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "url": "https://github.com/LeenHawk/tauri-harmony/blob/39c84a15cb5945b2704a34550a6832e516721e03/scripts/ohos.cmake",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-harmony-toolchain",
+      "original_path": "README.md",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-toolchain/2026-10-22/README.md",
+      "sha256": "d72533067f1941bbed773241586aab99314d56a547e186d0967024c01c701458",
+      "revision": "39c84a15cb5945b2704a34550a6832e516721e03",
+      "license": "MIT for repository-authored scripts; bundled dependencies retain their own terms.",
+      "url": "https://github.com/LeenHawk/tauri-harmony/blob/39c84a15cb5945b2704a34550a6832e516721e03/README.md",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
     }
   ],
   "transformations": [
     "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
-    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
+    "Extended the existing common mechanism from Tauri ecosystem source; no cross-framework runtime verification inferred."
   ],
   "limitations": [
     "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
-    "HarmonyOS PC acceptance checks are proposed, not performed."
+    "HarmonyOS PC acceptance checks are proposed, not performed.",
+    "Added Rust/Cargo specifics were source-reviewed only."
   ]
 }

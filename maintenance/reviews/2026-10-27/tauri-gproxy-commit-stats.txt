@@ -1,0 +1,710 @@
+commit dc276fcf562926ce50c66ec2006297fc10d20a54 0efa615891ea0e27c4a277a3ff86f7c2ee4f1313
+fix(docs): translate updated OpenAI reference descriptions
+
+ docs/src/i18n/reference/ru.json    | 7 ++++++-
+ docs/src/i18n/reference/zh-cn.json | 7 ++++++-
+ docs/src/i18n/reference/zh-tw.json | 7 ++++++-
+ 3 files changed, 18 insertions(+), 3 deletions(-)
+commit bb7ba10377db354ff2ed1440d82523ddd2baa829 dc276fcf562926ce50c66ec2006297fc10d20a54
+chore(release): v4.1.9
+
+ Cargo.lock                                     | 128 +++----
+ Cargo.toml                                     |  34 +-
+ console/package.json                           |  12 +-
+ console/pnpm-lock.yaml                         | 494 ++++++++++++-------------
+ crates/gproxy-host-tauri/tauri.conf.json       |   2 +-
+ deploy/cloudflare-external/prepare-release.mjs |   2 +-
+ distribution/mobile/tauri.store.conf.json      |   2 +-
+ docs/package.json                              |   4 +-
+ docs/pnpm-lock.yaml                            | 388 +++++++++----------
+ docs/release-notes/v4.1.9.md                   |  57 +++
+ 10 files changed, 583 insertions(+), 540 deletions(-)
+commit 744e4d3c20ae53ee90c0d29885bbd9694ff7dd63 bb7ba10377db354ff2ed1440d82523ddd2baa829
+fix(console): prevent model variant picker overflow on mobile
+
+ console/src/components/providers/provider-model-variants.tsx | 2 +-
+ console/src/components/providers/variant-preset-picker.tsx   | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+commit f33ed63f073888a47433126120af85680fb79cb9 744e4d3c20ae53ee90c0d29885bbd9694ff7dd63
+fix(core): distinguish sticky and round-robin affinity strategies
+
+ console/src/locales/en/pages.json               |   1 -
+ console/src/locales/ru/pages.json               |   1 -
+ console/src/locales/zh-CN/pages.json            |   1 -
+ console/src/locales/zh-TW/pages.json            |   1 -
+ console/src/pages/providers/provider-form.tsx   |   4 +-
+ crates/gproxy-app/tests/call.rs                 |   8 +-
+ crates/gproxy-channel/src/channel/descriptor.rs |   7 +-
+ crates/gproxy-channel/tests/channel.rs          |   1 +
+ crates/gproxy-core/README.md                    |  17 +-
+ crates/gproxy-core/README.zh-CN.md              |  13 +-
+ crates/gproxy-core/src/assemble/mod.rs          |   1 -
+ crates/gproxy-core/src/assemble/native.rs       |   5 -
+ crates/gproxy-core/src/data.rs                  |   4 +-
+ crates/gproxy-core/src/lib.rs                   |   1 +
+ crates/gproxy-core/src/select.rs                |  64 +++++--
+ crates/gproxy-core/tests/fallback.rs            |   1 -
+ crates/gproxy-core/tests/rewrite.rs             |   1 -
+ crates/gproxy-core/tests/selection.rs           |  95 ++++++----
+ crates/gproxy-sdk/src/resolve/balance.rs        |  21 ---
+ crates/gproxy-sdk/src/resolve/mod.rs            |  20 +--
+ crates/gproxy-sdk/tests/call.rs                 | 219 ++++++++++++------------
+ docs/src/i18n/reference/ru.json                 |   1 -
+ docs/src/i18n/reference/zh-cn.json              |   1 -
+ docs/src/i18n/reference/zh-tw.json              |   1 -
+ 24 files changed, 254 insertions(+), 235 deletions(-)
+commit 20b9f8fa7c5ff776a48aa3b2a7d4f61d72cbc863 f33ed63f073888a47433126120af85680fb79cb9
+fix(claude): upgrade API contract and adapt legacy clients
+
+ .../src/channels/aws_bedrock/config.rs             |   6 +-
+ .../gproxy-channel/src/channels/aws_bedrock/mod.rs |   7 +-
+ .../gproxy-channel/src/channels/azure/request.rs   |  10 +-
+ .../src/channels/claudeapi/config.rs               |   2 +-
+ .../gproxy-channel/src/channels/claudeapi/mod.rs   |   2 +-
+ .../src/channels/claudecode/hygiene.rs             |  41 +---
+ .../gproxy-channel/src/channels/claudecode/mod.rs  |  30 ++-
+ crates/gproxy-channel/src/channels/custom.rs       |  31 +--
+ crates/gproxy-channel/src/channels/kimi/request.rs |   9 +-
+ .../src/channels/opencode/request.rs               |   2 +-
+ .../src/channels/shared/claude_hygiene.rs          |  47 +----
+ crates/gproxy-channel/src/channels/vercel/mod.rs   |  10 +-
+ crates/gproxy-channel/src/channels/vertex/mod.rs   |   2 +-
+ .../gproxy-channel/src/channels/vertex/request.rs  |  12 +-
+ crates/gproxy-channel/tests/aws_bedrock.rs         |   2 +-
+ crates/gproxy-channel/tests/azure.rs               |   2 +-
+ crates/gproxy-channel/tests/claudeapi.rs           |  10 +-
+ crates/gproxy-channel/tests/claudecode.rs          |   4 +-
+ crates/gproxy-channel/tests/custom.rs              |   2 +-
+ crates/gproxy-channel/tests/kimi.rs                |   2 +-
+ crates/gproxy-channel/tests/opencode.rs            |   2 +-
+ crates/gproxy-channel/tests/vertex.rs              |   2 +-
+ crates/gproxy-core/src/estimate.rs                 |   1 +
+ crates/gproxy-core/src/execute/attempt.rs          |   4 +-
+ crates/gproxy-core/src/execute/native.rs           |   1 +
+ crates/gproxy-core/tests/convert_models.rs         |  53 ++++++
+ crates/gproxy-protocol/README.md                   |  29 +++
+ .../src/adapt/generate/claude_compat.rs            | 126 +++++++++++++
+ crates/gproxy-protocol/src/adapt/generate/mod.rs   |   1 +
+ crates/gproxy-protocol/src/adapt/models/collect.rs |  20 +-
+ .../count_tokens/request/claude_gemini.rs          |   2 +
+ .../count_tokens/request/claude_openai.rs          |   1 +
+ .../src/transform/generate/claude_chat/content.rs  |   2 +
+ .../src/transform/generate/claude_chat/request.rs  |   8 +-
+ .../transform/generate/claude_chat/requirements.rs |   3 +-
+ .../src/transform/generate/claude_controls.rs      | 165 ++++++++++++++++
+ .../src/transform/generate/claude_gemini/config.rs |  15 +-
+ .../transform/generate/claude_gemini/request.rs    |   2 +
+ .../transform/generate/claude_responses/request.rs |   1 +
+ .../generate/claude_responses/request/controls.rs  |  33 ++--
+ .../generate/claude_responses/request/messages.rs  |   1 +
+ .../src/transform/generate/prompt_cache.rs         |   3 +-
+ .../gproxy-protocol/src/transform/models/common.rs |  29 ++-
+ crates/gproxy-protocol/src/transform/models/get.rs | 102 ++++++----
+ .../gproxy-protocol/src/transform/models/list.rs   |  10 +-
+ .../src/transform/models/supplement.rs             |  36 +++-
+ crates/gproxy-protocol/src/wire/claude/content.rs  |  49 ++++-
+ .../src/wire/claude/generate_content.rs            |   6 -
+ crates/gproxy-protocol/src/wire/claude/mod.rs      |   2 +
+ crates/gproxy-protocol/src/wire/claude/models.rs   |  92 ++++++++-
+ .../tests/adapt_generate/buffered.rs               | 207 +++++++++++++++++++++
+ crates/gproxy-protocol/tests/adapt_models.rs       |  22 ++-
+ .../tests/claude_generate_content.rs               |  19 +-
+ crates/gproxy-protocol/tests/models.rs             |  17 +-
+ .../gproxy-protocol/tests/transform_best_effort.rs |   2 +-
+ .../tests/transform_claude_gemini.rs               |   5 +-
+ .../tests/transform_count_tokens_request.rs        |  34 ++++
+ .../gproxy-protocol/tests/transform_gemini_chat.rs |   8 +-
+ crates/gproxy-protocol/tests/transform_models.rs   | 114 ++++++++++--
+ docs/release-notes/v4.1.10.md                      |  37 ++++
+ .../content/docs/getting-started/first-request.md  |   2 +-
+ .../docs/ru/getting-started/first-request.md       |   2 +-
+ .../docs/zh-cn/getting-started/first-request.md    |   2 +-
+ .../docs/zh-tw/getting-started/first-request.md    |   2 +-
+ docs/src/i18n/reference/ru.json                    |   7 +-
+ docs/src/i18n/reference/zh-cn.json                 |   7 +-
+ docs/src/i18n/reference/zh-tw.json                 |   7 +-
+ 67 files changed, 1233 insertions(+), 295 deletions(-)
+commit b75261675127ad3a9faf73f8f186cfe1ee660a03 20b9f8fa7c5ff776a48aa3b2a7d4f61d72cbc863
+feat(channel): add OrcaTerm account integration
+
+ console/src/locales/en/pages.json                  |   2 +
+ console/src/locales/ru/pages.json                  |   2 +
+ console/src/locales/zh-CN/pages.json               |   2 +
+ console/src/locales/zh-TW/pages.json               |   2 +
+ console/src/pages/credentials/upstream-label.ts    |   1 +
+ console/src/pages/credentials/upstream.tsx         |   2 +-
+ crates/gproxy-app/src/v3/channels.rs               |   3 +-
+ crates/gproxy-channel/Cargo.toml                   |   2 +
+ crates/gproxy-channel/src/channels/mod.rs          |   2 +
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   | 330 +++++++++++++++
+ .../gproxy-channel/src/channels/orcaterm/config.rs |  94 +++++
+ crates/gproxy-channel/src/channels/orcaterm/mod.rs | 134 ++++++
+ .../gproxy-channel/src/channels/orcaterm/models.rs | 146 +++++++
+ .../gproxy-channel/src/channels/orcaterm/oauth.rs  |  95 +++++
+ .../gproxy-channel/src/channels/orcaterm/quota.rs  | 122 ++++++
+ .../src/channels/orcaterm/request.rs               | 218 ++++++++++
+ .../src/channels/orcaterm/response.rs              | 464 +++++++++++++++++++++
+ crates/gproxy-channel/src/channels/shared/mod.rs   |   1 +
+ crates/gproxy-host-edge/Cargo.toml                 |   1 +
+ crates/gproxy-sdk/Cargo.toml                       |   2 +
+ crates/gproxy/Cargo.toml                           |   1 +
+ docs/src/content/docs/guides/orcaterm.md           | 148 +++++++
+ docs/src/content/docs/guides/providers.md          |   1 +
+ docs/src/content/docs/ru/guides/orcaterm.md        |  91 ++++
+ docs/src/content/docs/ru/guides/providers.md       |   1 +
+ docs/src/content/docs/zh-cn/guides/orcaterm.md     |  91 ++++
+ docs/src/content/docs/zh-cn/guides/providers.md    |   1 +
+ docs/src/content/docs/zh-tw/guides/orcaterm.md     |  91 ++++
+ docs/src/content/docs/zh-tw/guides/providers.md    |   1 +
+ docs/src/i18n/reference/ru.json                    |   4 +
+ docs/src/i18n/reference/zh-cn.json                 |   4 +
+ docs/src/i18n/reference/zh-tw.json                 |   4 +
+ 32 files changed, 2061 insertions(+), 2 deletions(-)
+commit 04e97a794a3716245a433adeda7b86d2a9319081 b75261675127ad3a9faf73f8f186cfe1ee660a03
+refactor(auth): unify credential initialization and remove cookie login API
+
+ console/src/api/credentials.ts                     |   3 +-
+ console/src/generated/app/LoginMode.ts             |   2 +-
+ console/src/generated/sdk/CookieExchange.ts        |  12 ---
+ console/src/generated/sdk/LoginMode.ts             |   2 +-
+ console/src/generated/sdk/index.ts                 |   1 -
+ console/src/locales/en/pages.json                  |   1 +
+ console/src/locales/ru/pages.json                  |   1 +
+ console/src/locales/zh-CN/pages.json               |   1 +
+ console/src/locales/zh-TW/pages.json               |   1 +
+ console/src/pages/credentials/bulk-import.tsx      |   2 +
+ console/src/pages/credentials/details.tsx          |   5 +-
+ console/src/pages/credentials/form.tsx             |   2 +-
+ console/src/pages/credentials/index.tsx            |   9 +-
+ console/src/pages/credentials/initialize.ts        |  16 +++
+ console/src/pages/credentials/login.test.tsx       |   2 +-
+ console/src/pages/credentials/login.tsx            |   9 +-
+ .../gproxy-app/src/operations/credential_login.rs  |   9 +-
+ crates/gproxy-channel/Cargo.toml                   |   4 +-
+ crates/gproxy-channel/README.md                    |   9 +-
+ crates/gproxy-channel/README.zh-CN.md              |   9 +-
+ crates/gproxy-channel/src/channel/descriptor.rs    |   2 -
+ crates/gproxy-channel/src/channel/mod.rs           |  15 +--
+ crates/gproxy-channel/src/channel/oauth.rs         |  10 --
+ crates/gproxy-channel/src/channel/refresh.rs       |   4 +-
+ .../src/channels/claudecode/cookie.rs              |  12 ++-
+ .../gproxy-channel/src/channels/claudecode/mod.rs  |  93 +++++++++--------
+ .../src/channels/claudecode/services.rs            |   2 +-
+ .../src/channels/claudeweb/bootstrap.rs            |   2 +-
+ .../gproxy-channel/src/channels/claudeweb/login.rs |  62 +++++-------
+ .../gproxy-channel/src/channels/claudeweb/mod.rs   |  31 ++++--
+ crates/gproxy-channel/src/channels/cline/oauth.rs  |   1 +
+ crates/gproxy-channel/src/channels/codex/oauth.rs  |   1 +
+ .../src/channels/copilotcli/oauth.rs               |   3 +-
+ .../gproxy-channel/src/channels/grokbuild/oauth.rs |   1 +
+ crates/gproxy-channel/src/channels/kimi/oauth.rs   |   1 +
+ crates/gproxy-channel/src/channels/kiro/oauth.rs   |   1 +
+ .../gproxy-channel/src/channels/opencode/oauth.rs  |   1 +
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   |  40 +++-----
+ crates/gproxy-channel/src/channels/orcaterm/mod.rs |  20 ++--
+ .../src/channels/shared/code_assist/google.rs      |   1 +
+ crates/gproxy-channel/src/channels/trae/oauth.rs   |   1 +
+ crates/gproxy-channel/src/channels/vertex/auth.rs  |   1 +
+ .../gproxy-channel/src/channels/workbuddy/oauth.rs |   1 +
+ crates/gproxy-channel/tests/capabilities.rs        |  31 +-----
+ crates/gproxy-channel/tests/channel.rs             |  53 ++--------
+ crates/gproxy-channel/tests/claudecode.rs          |  45 +++------
+ crates/gproxy-channel/tests/claudeweb.rs           |  57 +++++------
+ crates/gproxy-core/README.md                       |   4 +-
+ crates/gproxy-core/README.zh-CN.md                 |   2 +-
+ crates/gproxy-core/src/api/lifecycle.rs            |   1 +
+ crates/gproxy-core/src/assemble/native.rs          |   2 +-
+ crates/gproxy-core/src/data.rs                     |   3 +-
+ crates/gproxy-core/src/execute/prepare.rs          |   2 +-
+ crates/gproxy-core/src/refresh.rs                  |  10 +-
+ crates/gproxy-core/src/runtime.rs                  |   3 +-
+ crates/gproxy-core/tests/assembly.rs               |   2 +
+ crates/gproxy-core/tests/fallback.rs               |   1 -
+ crates/gproxy-core/tests/publication.rs            |   3 +
+ crates/gproxy-core/tests/quota.rs                  |   1 +
+ crates/gproxy-core/tests/refresh.rs                |   8 ++
+ crates/gproxy-core/tests/support/mod.rs            |   2 +-
+ .../gproxy-host-axum/src/admin/credential_login.rs |   7 +-
+ .../src/admin/credential_login_docs.rs             |   5 -
+ .../tests/credential_management.rs                 |  51 +++-------
+ crates/gproxy-host-tauri/src/ipc/table.rs          |   1 -
+ crates/gproxy-host-tauri/tests/table.rs            |   1 -
+ crates/gproxy-sdk/README.md                        |   5 +-
+ crates/gproxy-sdk/README.zh-CN.md                  |   5 +-
+ crates/gproxy-sdk/src/dto/export.rs                |   1 -
+ crates/gproxy-sdk/src/dto/login.rs                 |  17 ----
+ crates/gproxy-sdk/src/dto/mod.rs                   |   4 +-
+ crates/gproxy-sdk/src/login/mod.rs                 |  42 +-------
+ crates/gproxy-sdk/src/login/persist.rs             |   2 -
+ crates/gproxy-sdk/src/manage/credentials.rs        |   4 +-
+ crates/gproxy-sdk/tests/builder.rs                 |   2 +-
+ crates/gproxy-sdk/tests/login.rs                   | 110 ++++-----------------
+ crates/gproxy-sdk/tests/support/mod.rs             |  34 ++-----
+ crates/gproxy-store/src/operations/credentials.rs  |   7 +-
+ crates/gproxy-store/tests/store.rs                 |  10 ++
+ docs/src/content/docs/guides/adding-a-channel.md   |   5 +-
+ docs/src/content/docs/guides/cli-clients.mdx       |   2 +-
+ docs/src/content/docs/guides/console.md            |   4 +-
+ docs/src/content/docs/guides/orcaterm.md           |   8 +-
+ docs/src/content/docs/guides/providers.md          |   9 +-
+ .../src/content/docs/ru/guides/adding-a-channel.md |   5 +-
+ docs/src/content/docs/ru/guides/console.md         |   3 +-
+ docs/src/content/docs/ru/guides/orcaterm.md        |   2 +-
+ docs/src/content/docs/ru/guides/providers.md       |   9 +-
+ .../content/docs/zh-cn/guides/adding-a-channel.md  |   5 +-
+ docs/src/content/docs/zh-cn/guides/console.md      |   3 +-
+ docs/src/content/docs/zh-cn/guides/orcaterm.md     |   2 +-
+ docs/src/content/docs/zh-cn/guides/providers.md    |   9 +-
+ .../content/docs/zh-tw/guides/adding-a-channel.md  |   5 +-
+ docs/src/content/docs/zh-tw/guides/console.md      |   3 +-
+ docs/src/content/docs/zh-tw/guides/orcaterm.md     |   2 +-
+ docs/src/content/docs/zh-tw/guides/providers.md    |   9 +-
+ docs/src/i18n/reference/ru.json                    |   5 +-
+ docs/src/i18n/reference/zh-cn.json                 |   5 +-
+ docs/src/i18n/reference/zh-tw.json                 |   5 +-
+ 99 files changed, 402 insertions(+), 642 deletions(-)
+commit 4679db32062519b99cd130dc3199abe65592674d 04e97a794a3716245a433adeda7b86d2a9319081
+feat(orcaterm): support images and persist server token rotation
+
+ Cargo.lock                                         |  94 +++++++++
+ Cargo.toml                                         |   1 +
+ crates/gproxy-channel/Cargo.toml                   |   3 +-
+ crates/gproxy-channel/src/channel/refresh.rs       |  12 ++
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   |  63 ++++++
+ .../src/channels/orcaterm/image_processing.rs      |  97 +++++++++
+ .../gproxy-channel/src/channels/orcaterm/images.rs | 234 +++++++++++++++++++++
+ crates/gproxy-channel/src/channels/orcaterm/mod.rs |  24 ++-
+ .../gproxy-channel/src/channels/orcaterm/models.rs | 155 ++++++++++++--
+ .../src/channels/orcaterm/request.rs               | 134 +++++-------
+ .../src/channels/orcaterm/response.rs              |  75 +++++--
+ crates/gproxy-core/src/api/lifecycle.rs            |  13 +-
+ crates/gproxy-core/src/builder.rs                  |  15 +-
+ crates/gproxy-core/src/data.rs                     |   5 +-
+ crates/gproxy-core/src/lib.rs                      |   1 +
+ crates/gproxy-core/src/response_refresh.rs         | 144 +++++++++++++
+ crates/gproxy-core/src/store_observer.rs           |   1 +
+ docs/src/content/docs/guides/orcaterm.md           | 148 -------------
+ docs/src/content/docs/guides/providers.md          |   9 +-
+ docs/src/content/docs/ru/guides/orcaterm.md        |  91 --------
+ docs/src/content/docs/ru/guides/providers.md       |   9 +-
+ docs/src/content/docs/zh-cn/guides/orcaterm.md     |  91 --------
+ docs/src/content/docs/zh-cn/guides/providers.md    |   9 +-
+ docs/src/content/docs/zh-tw/guides/orcaterm.md     |  91 --------
+ docs/src/content/docs/zh-tw/guides/providers.md    |   9 +-
+ 25 files changed, 965 insertions(+), 563 deletions(-)
+commit 590cc72d490661ef3a01c5a178e79b9535993459 4679db32062519b99cd130dc3199abe65592674d
+fix(orcaterm): complete coding agent tool round trips
+
+ crates/gproxy-channel/src/channels/orcaterm/mod.rs |  35 +-
+ .../src/channels/orcaterm/request.rs               | 100 +++-
+ .../src/channels/orcaterm/response.rs              | 364 +++++++++++--
+ .../gproxy-channel/src/channels/orcaterm/tools.rs  | 565 +++++++++++++++++++++
+ .../src/adapt/generate/stream/invoke.rs            |  15 +-
+ .../src/adapt/generate/stream/next.rs              |   6 +-
+ .../src/transform/generate/client_tools.rs         | 116 +++--
+ .../src/transform/generate/client_tools/history.rs |   7 +-
+ .../src/transform/generate/client_tools/output.rs  |   8 +-
+ .../src/transform/generate/gemini_chat/content.rs  |  14 +-
+ docs/src/content/docs/guides/providers.md          |   4 +-
+ docs/src/content/docs/ru/guides/providers.md       |   4 +-
+ docs/src/content/docs/zh-cn/guides/providers.md    |   4 +-
+ docs/src/content/docs/zh-tw/guides/providers.md    |   4 +-
+ 14 files changed, 1122 insertions(+), 124 deletions(-)
+commit 1c228468b051389297d408940ba0e05c8229d349 590cc72d490661ef3a01c5a178e79b9535993459
+fix(console): localize OrcaTerm provider settings
+
+ console/src/locales/en/pages.json                  | 4 ++++
+ console/src/locales/ru/pages.json                  | 4 ++++
+ console/src/locales/zh-CN/pages.json               | 4 ++++
+ console/src/locales/zh-TW/pages.json               | 4 ++++
+ console/src/pages/providers/config-schema.ts       | 1 +
+ crates/gproxy-channel/src/channels/orcaterm/mod.rs | 3 ++-
+ 6 files changed, 19 insertions(+), 1 deletion(-)
+commit 2ff1d529ddc1feb88a8b7752cf8d5af877d39bb4 1c228468b051389297d408940ba0e05c8229d349
+test(core): version paid usage metadata updates
+
+ crates/gproxy-core/tests/paid_usage.rs | 2 ++
+ 1 file changed, 2 insertions(+)
+commit ca4719867ffac20973455b6a50650a344829eda8 2ff1d529ddc1feb88a8b7752cf8d5af877d39bb4
+chore(deps): refresh stable release dependencies
+
+ Cargo.lock             | 105 +++++++++++++++----------------
+ Cargo.toml             |   2 +-
+ console/package.json   |   4 +-
+ console/pnpm-lock.yaml | 166 ++++++++++++++++++++++++-------------------------
+ docs/package.json      |   2 +-
+ docs/pnpm-lock.yaml    |  50 +++++++--------
+ 6 files changed, 165 insertions(+), 164 deletions(-)
+commit 3eda87f88e507b4f7682012f88e0bba637c51877 ca4719867ffac20973455b6a50650a344829eda8
+chore(deps): refresh release preflight lockfiles
+
+ console/pnpm-lock.yaml | 18 +++++++--------
+ docs/pnpm-lock.yaml    | 60 +++++++++++++++++++++++++-------------------------
+ 2 files changed, 39 insertions(+), 39 deletions(-)
+commit 469cac742d3ad5be573b27d2f92b59110aab0105 3eda87f88e507b4f7682012f88e0bba637c51877
+chore(release): v4.1.10
+
+ Cargo.lock                                     | 38 +++++++++++++-------------
+ Cargo.toml                                     | 34 +++++++++++------------
+ crates/gproxy-host-tauri/tauri.conf.json       |  2 +-
+ deploy/cloudflare-button/package-lock.json     |  6 ++--
+ deploy/cloudflare-button/package.json          |  1 +
+ deploy/cloudflare-external/package-lock.json   |  6 ++--
+ deploy/cloudflare-external/package.json        |  1 +
+ deploy/cloudflare-external/prepare-release.mjs |  2 +-
+ deploy/cloudflare/package.json                 |  5 ++++
+ deploy/cloudflare/pnpm-lock.yaml               | 11 +++++---
+ distribution/mobile/tauri.store.conf.json      |  2 +-
+ docs/release-notes/v4.1.10.md                  | 34 +++++++++++++++++++++--
+ 12 files changed, 91 insertions(+), 51 deletions(-)
+commit 59549083e600b2a313bfdb288b927be67cc38fb2 469cac742d3ad5be573b27d2f92b59110aab0105
+fix(commandcode): drop server_config and render JSON provider fields
+
+ console/src/locales/en/pages.json                  |  2 ++
+ console/src/locales/ru/pages.json                  |  2 ++
+ console/src/locales/zh-CN/pages.json               |  2 ++
+ console/src/locales/zh-TW/pages.json               |  2 ++
+ console/src/pages/providers/config-controls.tsx    | 34 ++++++++++++++++++++++
+ console/src/pages/providers/config-schema.ts       |  2 ++
+ console/src/pages/providers/provider-form.tsx      |  2 +-
+ .../src/channels/commandcode/config.rs             |  2 --
+ .../gproxy-channel/src/channels/commandcode/mod.rs |  5 ----
+ .../src/channels/commandcode/request.rs            |  2 +-
+ 10 files changed, 46 insertions(+), 9 deletions(-)
+commit 2ab0112ac61683bc855b44c46232ff08c6a40e9d 59549083e600b2a313bfdb288b927be67cc38fb2
+build(deps): bump actions/setup-python from 7.0.0 to 7.1.0
+
+ .github/workflows/reproducible.yml   | 2 +-
+ .github/workflows/winget-publish.yml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+commit 40797a1fa9598a7cdc5d01264e09bc8e5d262e0d 2ab0112ac61683bc855b44c46232ff08c6a40e9d
+build(deps): bump library/rust in /deploy/container
+
+ deploy/container/Dockerfile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit eb80c29c701939f88f9f49fdb869d13d660139de 40797a1fa9598a7cdc5d01264e09bc8e5d262e0d
+build(deps): bump library/node in /deploy/container
+
+ deploy/container/Dockerfile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit 21137ee32fc3c294e26743480a9d72591de70977 eb80c29c701939f88f9f49fdb869d13d660139de
+build(deps): bump library/node in /.gitlab
+
+ .gitlab/Dockerfile.android | 2 +-
+ .gitlab/Dockerfile.desktop | 2 +-
+ .gitlab/Dockerfile.linux   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+commit 0efa197d8243db7474e36131a6e083ce5ff98231 21137ee32fc3c294e26743480a9d72591de70977
+build(deps): bump leenhawk/tauri-harmony in /.gitlab
+
+ .gitlab/Dockerfile.ohos | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit 5504b7903f653314088a7abddd6564617e3ff79f 0efa197d8243db7474e36131a6e083ce5ff98231
+build(deps): bump library/rust in /.gitlab
+
+ .gitlab/Dockerfile.android | 2 +-
+ .gitlab/Dockerfile.desktop | 2 +-
+ .gitlab/Dockerfile.linux   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+commit 55a55231e6e7ac8e62b5b5b1c2b0d1d1e228ac0e 5504b7903f653314088a7abddd6564617e3ff79f
+build(deps-dev): bump wrangler in /deploy/cloudflare
+
+ deploy/cloudflare/package.json   |  2 +-
+ deploy/cloudflare/pnpm-lock.yaml | 76 ++++++++++++++++++++--------------------
+ 2 files changed, 39 insertions(+), 39 deletions(-)
+commit b2192599fe0c606fd0b57c36bf2cb726b82c21ac 55a55231e6e7ac8e62b5b5b1c2b0d1d1e228ac0e
+build(deps): bump library/node in /.cnb
+
+ .cnb/Dockerfile         | 2 +-
+ .cnb/Dockerfile.android | 2 +-
+ .cnb/Dockerfile.cross   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+commit a72b7defe8b3ec9805e5d987ac2bf2e6403064db b2192599fe0c606fd0b57c36bf2cb726b82c21ac
+build(deps): bump library/rust in /.cnb
+
+ .cnb/Dockerfile         | 2 +-
+ .cnb/Dockerfile.android | 2 +-
+ .cnb/Dockerfile.cross   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+commit 033434edf6c687b7a3ade561596ab1e44ef8f01d a72b7defe8b3ec9805e5d987ac2bf2e6403064db
+build(deps): bump the codeql group across 1 directory with 2 updates
+
+ .github/workflows/codeql.yml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+commit 304a4b70f3196883b3901378f63f2646dd4ae267 033434edf6c687b7a3ade561596ab1e44ef8f01d
+fix(commandcode): drop the unused envelope config parameter
+
+ crates/gproxy-channel/src/channels/commandcode/request.rs | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+commit 19d788d29a63b2d319aa0c8be8081bd43c2ee102 304a4b70f3196883b3901378f63f2646dd4ae267
+fix(codex): align credential refresh with upstream client
+
+ crates/gproxy-channel/src/channel/mod.rs          |   5 +-
+ crates/gproxy-channel/src/channel/refresh.rs      |  42 ++++++++
+ crates/gproxy-channel/src/channels/codex/mod.rs   |   3 +
+ crates/gproxy-channel/src/channels/codex/oauth.rs | 111 ++++++++++++++++------
+ crates/gproxy-core/src/api.rs                     |   2 +
+ crates/gproxy-core/src/execute/attempt.rs         |   4 +-
+ crates/gproxy-core/src/execute/websocket.rs       |  14 ++-
+ crates/gproxy-core/src/quota.rs                   |   4 +-
+ crates/gproxy-core/src/refresh.rs                 |  74 ++++++++++-----
+ crates/gproxy-core/src/runtime.rs                 |  21 +++-
+ crates/gproxy-core/src/service.rs                 |   2 +-
+ docs/src/content/docs/guides/adding-a-channel.md  |  10 +-
+ 12 files changed, 231 insertions(+), 61 deletions(-)
+commit 48b3b5e889108488c600ba0ae99df9af4081c897 19d788d29a63b2d319aa0c8be8081bd43c2ee102
+fix(claudecode): align OAuth refresh with CLI 2.1.302
+
+ crates/gproxy-channel/src/channel/refresh.rs       |   7 +-
+ .../gproxy-channel/src/channels/claudecode/mod.rs  | 201 ++++++++++++++++-----
+ crates/gproxy-channel/src/channels/codex/oauth.rs  |   2 +-
+ crates/gproxy-core/src/refresh.rs                  |   6 +-
+ docs/src/content/docs/guides/adding-a-channel.md   |   4 +-
+ 5 files changed, 164 insertions(+), 56 deletions(-)
+commit cf231e38404a6e4dc7aa5a7ecbbef50acd030274 48b3b5e889108488c600ba0ae99df9af4081c897
+fix(channels): align refresh rejection with upstream clients
+
+ .../src/channels/claudeweb/bootstrap.rs            | 27 ++++++
+ .../gproxy-channel/src/channels/claudeweb/login.rs | 53 ++++++++++--
+ crates/gproxy-channel/src/channels/cline/oauth.rs  | 64 ++++++++++----
+ .../gproxy-channel/src/channels/codex/headers.rs   | 20 +++++
+ crates/gproxy-channel/src/channels/codex/oauth.rs  | 32 ++++---
+ .../src/channels/copilotcli/oauth.rs               | 38 ++++++---
+ .../gproxy-channel/src/channels/grokbuild/oauth.rs | 15 ++--
+ crates/gproxy-channel/src/channels/kimi/oauth.rs   | 12 ++-
+ crates/gproxy-channel/src/channels/kiro/oauth.rs   | 98 +++++++++++++++++-----
+ .../gproxy-channel/src/channels/opencode/oauth.rs  | 13 +--
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   | 10 ++-
+ .../src/channels/shared/code_assist/google.rs      | 36 ++++----
+ crates/gproxy-channel/src/channels/trae/oauth.rs   |  8 +-
+ crates/gproxy-channel/src/channels/vertex/auth.rs  | 37 ++++----
+ .../gproxy-channel/src/channels/workbuddy/oauth.rs |  8 ++
+ crates/gproxy-channel/tests/claudecode.rs          |  6 +-
+ crates/gproxy-channel/tests/cline.rs               | 15 +++-
+ 17 files changed, 358 insertions(+), 134 deletions(-)
+commit 9b7b3329ffabb10159726bdbd12c2a7d43d9e7bc cf231e38404a6e4dc7aa5a7ecbbef50acd030274
+fix(channels): follow upstream credential lifecycles
+
+ crates/gproxy-channel/Cargo.toml                   |  15 +-
+ .../gproxy-channel/src/channels/antigravity/mod.rs |   4 -
+ .../src/channels/antigravity/oauth.rs              |  29 +++-
+ .../src/channels/claudecode/usage_limit.rs         |  11 +-
+ crates/gproxy-channel/src/channels/cline/oauth.rs  |  20 ++-
+ .../gproxy-channel/src/channels/geminicli/oauth.rs |  29 +++-
+ .../gproxy-channel/src/channels/grokbuild/oauth.rs | 168 +++++++++++++++----
+ crates/gproxy-channel/src/channels/kimi/oauth.rs   | 154 +++++++++++++++---
+ crates/gproxy-channel/src/channels/kiro/oauth.rs   |  99 ++++++++++--
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   |  16 +-
+ .../src/channels/shared/code_assist/google.rs      | 177 ++++++++++++++++-----
+ crates/gproxy-channel/src/channels/shared/mod.rs   |  10 ++
+ crates/gproxy-channel/src/channels/shared/timer.rs |  14 ++
+ crates/gproxy-channel/src/channels/trae/oauth.rs   |  42 ++++-
+ .../gproxy-channel/src/channels/workbuddy/oauth.rs |  60 ++++++-
+ crates/gproxy-channel/tests/geminicli.rs           |   7 +-
+ crates/gproxy-channel/tests/grokbuild.rs           |   8 +-
+ 17 files changed, 718 insertions(+), 145 deletions(-)
+commit 91f710c2e27a5ebe8170013bfa0022d1dfcd2f0a 9b7b3329ffabb10159726bdbd12c2a7d43d9e7bc
+fix(channels): match upstream auth request fingerprints
+
+ .../src/channels/antigravity/oauth.rs              |  22 +-
+ crates/gproxy-channel/src/channels/cline/oauth.rs  |   6 +-
+ crates/gproxy-channel/src/channels/codex/oauth.rs  |  41 ++-
+ .../src/channels/copilotcli/config.rs              |   6 +-
+ .../gproxy-channel/src/channels/geminicli/oauth.rs |  23 ++
+ .../gproxy-channel/src/channels/grokbuild/oauth.rs |  65 ++--
+ crates/gproxy-channel/src/channels/kimi/auth.rs    |  68 ++++-
+ crates/gproxy-channel/src/channels/kimi/config.rs  |  13 +-
+ crates/gproxy-channel/src/channels/kimi/mod.rs     |  20 +-
+ crates/gproxy-channel/src/channels/kimi/oauth.rs   |  13 +-
+ crates/gproxy-channel/src/channels/kimi/quota.rs   |  11 +-
+ crates/gproxy-channel/src/channels/kimi/usage.rs   |   5 +-
+ crates/gproxy-channel/src/channels/kiro/oauth.rs   |  35 ++-
+ .../gproxy-channel/src/channels/opencode/oauth.rs  |  51 ++--
+ .../gproxy-channel/src/channels/orcaterm/auth.rs   |  38 +--
+ .../src/channels/shared/code_assist/google.rs      | 145 ++++++---
+ crates/gproxy-channel/src/channels/trae/oauth.rs   | 340 +++++++++++++++++----
+ .../gproxy-channel/src/channels/workbuddy/auth.rs  |  17 +-
+ .../gproxy-channel/src/channels/workbuddy/oauth.rs |  92 +++++-
+ crates/gproxy-channel/tests/codex.rs               |   3 +-
+ crates/gproxy-channel/tests/copilotcli.rs          |   4 +-
+ crates/gproxy-channel/tests/geminicli.rs           |   3 +-
+ crates/gproxy-channel/tests/kimi.rs                |  10 +-
+ crates/gproxy-channel/tests/kiro.rs                |   2 +-
+ 24 files changed, 791 insertions(+), 242 deletions(-)
+commit 716fa488d252b77e7b16f4075a2b5ec38da99a86 91f710c2e27a5ebe8170013bfa0022d1dfcd2f0a
+fix(trae): mint the desktop's 64-character PKCE verifier
+
+ crates/gproxy-channel/src/channel/oauth.rs       |  8 ++++++++
+ crates/gproxy-channel/src/channels/trae/oauth.rs |  6 ++++++
+ crates/gproxy-sdk/src/login/mod.rs               |  2 +-
+ crates/gproxy-sdk/src/login/pkce.rs              | 16 +++++++++-------
+ docs/src/content/docs/guides/adding-a-channel.md |  2 +-
+ 5 files changed, 25 insertions(+), 9 deletions(-)
+commit 6a8107b2824b6fc7ce8379f1de6fd3577956d049 716fa488d252b77e7b16f4075a2b5ec38da99a86
+feat(copilotcli)!: authenticate as the Copilot CLI
+
+ console/src/locales/en/pages.json                  |   3 +-
+ console/src/locales/ru/pages.json                  |   3 +-
+ console/src/locales/zh-CN/pages.json               |   3 +-
+ console/src/locales/zh-TW/pages.json               |   3 +-
+ .../gproxy-channel/src/channels/copilotcli/auth.rs | 178 ++++++++--------
+ .../src/channels/copilotcli/config.rs              |  55 ++---
+ .../src/channels/copilotcli/identity.rs            |  52 ++---
+ .../gproxy-channel/src/channels/copilotcli/mod.rs  |  64 +++---
+ .../src/channels/copilotcli/oauth.rs               | 235 +++++++++++++--------
+ .../src/channels/copilotcli/quota.rs               |   6 +-
+ crates/gproxy-channel/tests/copilotcli.rs          | 216 ++++++++++---------
+ 11 files changed, 424 insertions(+), 394 deletions(-)
+commit cd904a459f5790765258cb1de77f2115c931a8a0 6a8107b2824b6fc7ce8379f1de6fd3577956d049
+feat(antigravity): present as the Antigravity IDE
+
+ crates/gproxy-channel/Cargo.toml                   |   4 +-
+ .../gproxy-channel/src/channels/antigravity/mod.rs | 146 ++++++++++++++-------
+ .../src/channels/antigravity/oauth.rs              |  76 ++++++-----
+ .../src/channels/antigravity/quota.rs              |   4 +-
+ .../gproxy-channel/src/channels/geminicli/oauth.rs |  36 +++--
+ .../src/channels/shared/code_assist/google.rs      | 112 +++++++++-------
+ crates/gproxy-channel/tests/antigravity.rs         |  27 ++--
+ crates/gproxy-sdk/src/manage/catalog.rs            |  16 ++-
+ 8 files changed, 268 insertions(+), 153 deletions(-)
+commit 2607797c9a98b85694cc4c9e79cfec9a710a8e87 cd904a459f5790765258cb1de77f2115c931a8a0
+fix(cli): keep MSIX data per user instead of under System32
+
+ Cargo.lock                  |  1 +
+ crates/gproxy/Cargo.toml    |  4 ++++
+ crates/gproxy/src/cli.rs    |  3 ++-
+ crates/gproxy/src/config.rs | 31 ++++++++++++++++++++++++++++++-
+ 4 files changed, 37 insertions(+), 2 deletions(-)
+commit 2f86d3295b5490a6d7fd7ac2ca2b25f88269a74f 2607797c9a98b85694cc4c9e79cfec9a710a8e87
+docs(release-notes): note the MSIX CLI data directory move
+
+ docs/release-notes/v4.1.11.md | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+commit 21b93ff7ac0d9210dc87c41e0259871fa0b97519 2f86d3295b5490a6d7fd7ac2ca2b25f88269a74f
+docs(release-notes): draft v4.1.11
+
+ docs/release-notes/v4.1.11.md | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+commit 025d0451b64a6c8d81c33d281fb3407cdfd65a32 21b93ff7ac0d9210dc87c41e0259871fa0b97519
+fix(console): fall back when AbortSignal.any is missing
+
+ console/src/api/client.ts | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+commit 370e3dcbaaefa7f7830ea4233e172143d27a6ce4 025d0451b64a6c8d81c33d281fb3407cdfd65a32
+feat(android): warn when the system WebView is too old
+
+ .../com/leenhawk/gproxy/desktop/MainActivity.kt    | 37 +++++++++++++++++++++-
+ .../android/app/src/main/res/values-ru/strings.xml |  3 ++
+ .../android/app/src/main/res/values-zh/strings.xml |  4 +++
+ .../android/app/src/main/res/values/strings.xml    |  5 +++
+ 4 files changed, 48 insertions(+), 1 deletion(-)
+commit 9393024ed5c79767343024e7a7bf25d27f2c75ad 370e3dcbaaefa7f7830ea4233e172143d27a6ce4
+docs(release-notes): note the old WebView warning and AbortSignal fallback
+
+ docs/release-notes/v4.1.11.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+commit d81261c267bf201dde207a98158665713816e248 9393024ed5c79767343024e7a7bf25d27f2c75ad
+fix(docs): sync reference translations
+
+ docs/src/i18n/reference/ru.json    | 13 +++++++------
+ docs/src/i18n/reference/zh-cn.json | 13 +++++++------
+ docs/src/i18n/reference/zh-tw.json | 13 +++++++------
+ 3 files changed, 21 insertions(+), 18 deletions(-)
+commit b5f10fc437241a6f4b1164ef83323d961ae7e9b8 d81261c267bf201dde207a98158665713816e248
+chore(release): v4.1.11
+
+ Cargo.lock                                     | 90 +++++++++++++-------------
+ Cargo.toml                                     | 34 +++++-----
+ console/package.json                           |  4 +-
+ console/pnpm-lock.yaml                         | 54 ++++++++--------
+ crates/gproxy-host-tauri/tauri.conf.json       |  2 +-
+ deploy/cloudflare-external/prepare-release.mjs |  2 +-
+ distribution/mobile/tauri.store.conf.json      |  2 +-
+ docs/pnpm-lock.yaml                            | 57 +++++++---------
+ 8 files changed, 117 insertions(+), 128 deletions(-)
+commit 26a902505280a885edfd61330f07d1f461289bd1 b5f10fc437241a6f4b1164ef83323d961ae7e9b8
+test(protocol): expect function-wrapped custom tools on chat targets
+
+ crates/gproxy-protocol/tests/transform_chat_responses.rs | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+commit 660aa4b2530c7642a9aa2758656495a42d1fadf0 26a902505280a885edfd61330f07d1f461289bd1
+fix(android): pin one toolchain for the release image and F-Droid
+
+ .gitlab/Dockerfile.android          | 40 ++++++++++++++----------------
+ distribution/mobile/README.md       |  3 ++-
+ distribution/reproducible-builds.md |  7 ++++++
+ scripts/mobile/android-toolchain.sh | 49 +++++++++++++++++++++++++++++++++++++
+ scripts/mobile/fdroid-build.sh      |  3 ++-
+ scripts/mobile/fdroid-tools.sh      | 21 ++--------------
+ 6 files changed, 80 insertions(+), 43 deletions(-)
+commit 5d8f669c389173c171b7a8e8235afa1fd163f4c2 660aa4b2530c7642a9aa2758656495a42d1fadf0
+docs(release-notes): draft v4.1.12
+
+ docs/release-notes/v4.1.12.md | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+commit d266b510f9d168d7e674c1539c5b8002673e1436 5d8f669c389173c171b7a8e8235afa1fd163f4c2
+fix(cli): keep WinGet installs' data per user like MSIX
+
+ .github/microsoft-store/listing.md                 |  2 +-
+ .github/microsoft-store/listings.json              |  6 +++---
+ crates/gproxy/src/cli.rs                           |  4 ++--
+ crates/gproxy/src/config.rs                        | 25 +++++++++++++++++++---
+ docs/public/install.ps1                            |  2 +-
+ docs/src/content/docs/reference/configuration.md   |  4 +++-
+ .../src/content/docs/ru/reference/configuration.md |  4 +++-
+ .../content/docs/zh-cn/reference/configuration.md  |  4 +++-
+ .../content/docs/zh-tw/reference/configuration.md  |  4 +++-
+ 9 files changed, 41 insertions(+), 14 deletions(-)
+commit eb7e0160594c8d9ce95cf13180aa4f08842a0de2 d266b510f9d168d7e674c1539c5b8002673e1436
+docs(release-notes): note the WinGet data directory
+
+ docs/release-notes/v4.1.12.md | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+commit d671e89c53b756da13dc64bd1c25338ee64c7b50 eb7e0160594c8d9ce95cf13180aa4f08842a0de2
+feat(setup): one first-run wizard for the CLI and the application
+
+ Cargo.lock                                         |  93 ++-
+ Cargo.toml                                         |   3 +
+ console/src/api/setup.ts                           |   6 +-
+ console/src/app.tsx                                |   5 +-
+ console/src/locales/en/pages.json                  |  10 +-
+ console/src/locales/ru/pages.json                  |  10 +-
+ console/src/locales/zh-CN/pages.json               |  10 +-
+ console/src/locales/zh-TW/pages.json               |  10 +-
+ console/src/pages/setup/channel-picker.tsx         |  25 +
+ console/src/pages/setup/credentials.tsx            |  39 ++
+ console/src/pages/setup/frame.tsx                  |  18 +
+ console/src/pages/setup/index.tsx                  |  50 +-
+ console/src/pages/setup/pending.ts                 |  17 +
+ crates/gproxy-host-tauri/src/ipc/table.rs          |   8 +
+ crates/gproxy-host-tauri/src/setup.rs              |  85 +--
+ crates/gproxy/Cargo.toml                           |   2 +
+ crates/gproxy/src/lib.rs                           |  10 +-
+ crates/gproxy/src/setup.rs                         | 174 ++++++
+ crates/gproxy/src/wizard/i18n.rs                   | 289 +++++++++
+ crates/gproxy/src/wizard/mod.rs                    | 645 +++++++++++++++++++++
+ .../content/docs/getting-started/quick-start.mdx   |   2 +-
+ docs/src/content/docs/reference/configuration.md   |   6 +-
+ .../docs/ru/getting-started/quick-start.mdx        |   2 +-
+ .../src/content/docs/ru/reference/configuration.md |   6 +-
+ .../docs/zh-cn/getting-started/quick-start.mdx     |   2 +-
+ .../content/docs/zh-cn/reference/configuration.md  |   6 +-
+ .../docs/zh-tw/getting-started/quick-start.mdx     |   2 +-
+ .../content/docs/zh-tw/reference/configuration.md  |   6 +-
+ 28 files changed, 1443 insertions(+), 98 deletions(-)
+commit 7d17af989de3dca95c33a210e5ae9a3d2bae4e92 d671e89c53b756da13dc64bd1c25338ee64c7b50
+docs(release-notes): note the first-run setup wizard
+
+ docs/release-notes/v4.1.12.md | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+commit 3a81a1ed640a95f4d7fc0fd35a5f7bd40165b6e8 7d17af989de3dca95c33a210e5ae9a3d2bae4e92
+chore(release): v4.1.12
+
+ Cargo.lock                                     | 38 +++++++++++++-------------
+ Cargo.toml                                     | 34 +++++++++++------------
+ console/package.json                           |  2 +-
+ console/pnpm-lock.yaml                         | 18 ++++++------
+ crates/gproxy-host-tauri/tauri.conf.json       |  2 +-
+ deploy/cloudflare-external/prepare-release.mjs |  2 +-
+ distribution/mobile/tauri.store.conf.json      |  2 +-
+ 7 files changed, 49 insertions(+), 49 deletions(-)

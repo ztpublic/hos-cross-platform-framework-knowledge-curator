@@ -1,0 +1,112 @@
+[
+  {
+    "id": "flutter-knowledge-import",
+    "head": "0d01beb7f49ca9642107dc143da14e432841458c",
+    "changes": []
+  },
+  {
+    "id": "qt-knowledge-import",
+    "head": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
+    "changes": [
+      {
+        "path": "problems/_lookup.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "problems/_lookup.md",
+          "sha256": "a87592cbf88efee5998f7212d4737fcec29a36001e75a84b85892a5dec5737fe",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "problems/_index.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "problems/_index.md",
+          "sha256": "44be09226aeb7ad543dc9aa5c1fa965f70605a17a9f33b0eba107ac886d5c4f5",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/semantic/harmonyos-development-fundamentals.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/semantic/harmonyos-development-fundamentals.md",
+          "sha256": "0622996e9668cb2f7bcd6c63c102e6ccca2d2674b5e3d99f6efe24eadda5f9ed",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/semantic/harmonyos-platform-limits.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/semantic/harmonyos-platform-limits.md",
+          "sha256": "f0742bf17ecc2b1eb32d8ae27f5a272f00127feeae8b9f81527146ca56d534fb",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/semantic/deveco-mcp-capabilities.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/semantic/deveco-mcp-capabilities.md",
+          "sha256": "829d21fe1c0a27d0c2e626e3694eb3ef60fc94608eb634b354fee413c221c43a",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/procedural/ohos-llvm-cross-compile.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/procedural/ohos-llvm-cross-compile.md",
+          "sha256": "dfd9d9c2286a96cc2c9d48a44a380168db6d50a93d48d8dde24b7eee27de1dbb",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/procedural/cpython-dynamic-embedding-ohos.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/procedural/cpython-dynamic-embedding-ohos.md",
+          "sha256": "8940cb76c32a94fb9990e18469bdd014ecc76f733fd44dd7fe670e6d4974c650",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/procedural/deveco-cli-usage-rules.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/procedural/deveco-cli-usage-rules.md",
+          "sha256": "c3ee0e95f0ec3ab2dd1404b9c7243ccf956763c8099188994e25111c573f02d7",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      },
+      {
+        "path": "ohos-common-kb-public/procedural/ohos-gstreamer-cross-compile.md",
+        "status": "unmapped",
+        "prior_inventory": {
+          "path": "ohos-common-kb-public/procedural/ohos-gstreamer-cross-compile.md",
+          "sha256": "8d3dc721332748feb63386b9f488088bf67a306a429d99e03b507773a668da14",
+          "disposition": "not-extracted",
+          "reason": "Not part of this initial extraction; includes orchestration, templates, indexes and broader reference material. No claim of exhaustive extraction."
+        },
+        "new_since_import": false
+      }
+    ]
+  }
+]

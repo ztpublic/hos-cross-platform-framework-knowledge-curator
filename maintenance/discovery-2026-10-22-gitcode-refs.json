@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://gitcode.com/ohos-qt/persepolis",
+    "stdout": "ref: refs/heads/main\tHEAD\n6930d745a6ad44a51da06b1fe263beb3a5a29ef9\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/ohos-qt/persepolis.git/\n"
+  },
+  {
+    "url": "https://gitcode.com/oh-tpc/Kamel",
+    "stdout": "ref: refs/heads/main\tHEAD\n9a41666c6266521e56a1724ac35a42629f58a398\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/oh-tpc/Kamel.git/\n"
+  },
+  {
+    "url": "https://gitcode.com/oh-tpc/kotlinx-io",
+    "stdout": "ref: refs/heads/master\tHEAD\n97d2c325f6846ff2764f1509577e0aa1036f1bfc\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/oh-tpc/kotlinx-io.git/\n"
+  },
+  {
+    "url": "https://gitcode.com/oh-tpc/Result",
+    "stdout": "ref: refs/heads/master\tHEAD\n062c5402975abeb04ccfa8a837b1f044f59002f3\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/oh-tpc/Result.git/\n"
+  },
+  {
+    "url": "https://gitcode.com/OpenHarmonyPCDeveloper/ohos_CodeCountTool",
+    "stdout": "ref: refs/heads/main\tHEAD\n6a0f6452ea4128bdeaaee50331296bca3947d168\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/OpenHarmonyPCDeveloper/ohos_CodeCountTool.git/\n"
+  },
+  {
+    "url": "https://gitcode.com/kmp-cmp-tpc/KMPCMPOHOS",
+    "stdout": "ref: refs/heads/main\tHEAD\n3a5082b33dbc09ebb9c01a9dc05846d267295d81\tHEAD\n",
+    "error": "warning: redirecting to https://gitcode.com/kmp-cmp-tpc/KMPCMPOHOS.git/\n"
+  }
+]

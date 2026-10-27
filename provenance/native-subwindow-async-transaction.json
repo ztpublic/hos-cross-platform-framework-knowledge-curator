@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "native-subwindow-async-transaction",
+  "sources": [
+    {
+      "collection": "rnoh-splash-screen",
+      "original_path": "harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "snapshot": "provenance/snapshots/projects/rnoh-splash-screen/2026-10-27/harmony/splash_screen/src/main/ets/SplashScreen.ts",
+      "sha256": "2eb0c85054e0851f34160f11ca37272fb76127661766483b938398ecbb153b59",
+      "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+      "license": "MIT",
+      "url": "https://gitcode.com/ywp791322/rntpc_react-native-splash-screen",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "The reviewed source has static cached ownership and callback-based image release. Per-WindowStage generations and fully awaited image cleanup are curator recommendations, not claimed source fixes."
+  ]
+}

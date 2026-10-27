@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-relationalstore-sql-contract",
+  "sources": [
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+      "sha256": "e3def924f856452935a1ad687bb905c2fbb3051739c542cf24e22511004aa035",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+      "sha256": "3cf531f84cf3c30cea7f381d6aa507e92ffa5baa0a35340d7e0df18872d791da",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+      "sha256": "a42ad6fef19b5b0e4a7fffd0970344e60c4fd66296fe5bd7661a06998e16f741",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tsl-editor",
+      "original_path": "apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "snapshot": "provenance/snapshots/projects/tsl-editor/2026-10-27/apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets",
+      "sha256": "51db7bd3d45f9d0144755fe1836e4943d8650924071712191e699017875942e3",
+      "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+      "license": "MIT",
+      "url": "https://gitcode.com/m0_65604719/tsl_editor",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Guidance separates the reusable adapter shape from source defects; no data migration or runtime SQL checks were executed."
+  ]
+}

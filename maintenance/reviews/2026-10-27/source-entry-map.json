@@ -1,0 +1,376 @@
+[
+  {
+    "source_id": "bitfun-ohos",
+    "revision": "03084ca3966b62ea5237eccbc653a83e14552c44",
+    "entries": [
+      {
+        "id": "native-statusbar-event-routing",
+        "paths": [
+          "src/apps/ohos/entry/src/main/ets/services/StatusBarTrayService.ets",
+          "src/apps/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "src/apps/ohos/entry/src/main/module.json5",
+          "src/apps/ohos/oh-rs-ability/oh-package.json5"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "cc-switch-ohos",
+    "revision": "ad4deb22727947307012441eee0a48202aebadf8",
+    "entries": [
+      {
+        "id": "tauri-ohos-ability-host",
+        "paths": [
+          "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets",
+          "src-tauri/gen/ohos/entry/oh-package.json5"
+        ]
+      },
+      {
+        "id": "tauri-ohos-dependency-cohort",
+        "paths": [
+          "src-tauri/Cargo.toml",
+          "src-tauri/Cargo.lock",
+          "src-tauri/gen/ohos/entry/oh-package-lock.json5"
+        ]
+      },
+      {
+        "id": "tauri-ohos-platform-plugin-gates",
+        "paths": [
+          "src-tauri/Cargo.toml",
+          "src-tauri/Cargo.lock",
+          "src-tauri/src/lib.rs",
+          "src-tauri/capabilities/ohos.json"
+        ]
+      },
+      {
+        "id": "tauri-ohos-web-storage-fallback",
+        "paths": [
+          "src/index.html",
+          "README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "coil-ohos",
+    "revision": "26ccb2b79ab9ec1a3365261c7a07a92fcf684dbb",
+    "entries": [
+      {
+        "id": "kmp-ohos-coil-native-decoder",
+        "paths": [
+          "coil-core/src/ohosArm64Main/kotlin/coil3/decode/OhosImageDecoder.kt",
+          "coil-core/src/ohosArm64Main/kotlin/coil3/RealImageLoader.ohos.kt",
+          "coil-core/src/ohosArm64Main/cinterop/image.def",
+          "coil-core/build.gradle.kts",
+          "buildSrc/src/main/kotlin/coil3/multiplatform.kt"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "electron-shell",
+    "revision": "3f4ab0c769cc667a54d5eaa58a5fdaecc7e69c56",
+    "entries": [
+      {
+        "id": "electron-ohos-sessionmanager-prerequisite",
+        "paths": [
+          "docs/ohos-sessionmanager-adaptation.md",
+          "web_engine/src/main/ets/ability/WebAbility.ets",
+          "web_engine/src/main/ets/components/WebNodeHandleWindow.ets",
+          "electron/oh-package.json5"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "flutter-add2app",
+    "revision": "89a89651baaf1769c2e7f87edf6ebd01deaf0af6",
+    "entries": [
+      {
+        "id": "flutter-ohos-add-to-app-container-lifecycle",
+        "paths": [
+          "ohos_app/entry/src/main/ets/entryability/EntryAbility.ets",
+          "ohos_app/entry/src/main/ets/pages/FlutterUI.ets",
+          "ohos_app/modules/flutter_module/oh-package.json5"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "flutter-app-links",
+    "revision": "dc57b12b34e7e66fe90558be8f29c082c4d3dce0",
+    "entries": [
+      {
+        "id": "incoming-wants-before-runtime-ready",
+        "paths": [
+          "ohos/src/main/ets/components/plugin/AppLinksOhosPlugin.ets"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "flutter-record-ohos",
+    "revision": "2c0c5f9e000ea78ff97e9c86a71f021a8f33dfc1",
+    "entries": [
+      {
+        "id": "flutter-ohos-pcm-record-stream",
+        "paths": [
+          "record_ohos/ohos/src/main/ets/components/plugin/AudioStreamRecorder.ets",
+          "record_ohos/ohos/src/main/ets/components/plugin/AudioUtils.ets",
+          "record_ohos/ohos/src/main/ets/components/plugin/RecorderWrapper.ets",
+          "record_ohos/ohos/src/main/ets/components/plugin/RecorderRecordStreamHandler.ets",
+          "record_ohos/pubspec.yaml"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "harmony-tauri-app",
+    "revision": "fb4d06c8f88b21e66fdb0696975fbb7a4bfc3423",
+    "entries": [
+      {
+        "id": "napi-thread-and-handle-lifetime",
+        "paths": [
+          "src-tauri/src/lib.rs"
+        ]
+      },
+      {
+        "id": "tauri-ohos-production-custom-protocol",
+        "paths": [
+          "src-tauri/Cargo.toml",
+          "src-tauri/Cargo.lock",
+          "src-tauri/tauri.conf.json",
+          "src-tauri/gen/ohos/entry/src/main/ets/entryability/EntryAbility.ets"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "kuikly-sqlite",
+    "revision": "981167b28a2f8497e983d6a602e1a86ebfb0973f",
+    "entries": [
+      {
+        "id": "kmp-ohos-sqlite-cinterop",
+        "paths": [
+          "kuiklySqlite/build.ohos.gradle.kts",
+          "kuiklySqlite/src/nativeMain/cinterop/sqlite3.def",
+          "kuiklySqlite/src/nativeMain/cinterop/CMakeLists.txt"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "kuiklyui",
+    "revision": "7af1515cb9e093b07d65b5780347de06bee865e6",
+    "entries": [
+      {
+        "id": "kmp-kuikly-statusbar-scroll-ownership",
+        "paths": [
+          "core-render-ohos/src/main/cpp/libohos_render/expand/components/scroller/KRScrollerView.cpp",
+          "core-render-ohos/src/main/cpp/libohos_render/view/KRRenderView.cpp",
+          "core-render-ohos/src/main/cpp/libohos_render/expand/events/common_event/KRCommonEventManager.cpp"
+        ]
+      },
+      {
+        "id": "native-arkui-node-attribute-api-guard",
+        "paths": [
+          "core-render-ohos/src/main/cpp/libohos_render/utils/KRViewUtil.cpp"
+        ]
+      },
+      {
+        "id": "native-unicode-selection-boundaries",
+        "paths": [
+          "core-render-ohos/src/main/cpp/libohos_render/expand/components/richtext/KRRichTextView.cpp",
+          "core-render-ohos/src/main/cpp/CMakeLists.txt"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "letos-ohos",
+    "revision": "8ca336a91f852e328a2f2e37f3c622aeb2b444c0",
+    "entries": [
+      {
+        "id": "native-dependency-closure",
+        "paths": [
+          "HarmonyOS/entry/src/main/cpp/CMakeLists.txt",
+          "HarmonyOS/entry/src/main/cpp/patch_needed.py"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "liberika",
+    "revision": "cc297a7e15602ba0a185ed37879cd0ee5ed0601e",
+    "entries": [
+      {
+        "id": "rendering-budget-and-progressive-ui",
+        "paths": [
+          "packages/erika_flutter/lib/src/erika_player.dart",
+          "packages/erika_flutter/ohos/src/main/ets/components/plugin/ErikaFlutterPlugin.ets"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "marktext-ohos",
+    "revision": "04f5442b5d8b3f130ed535d96f16f9f017d824b1",
+    "entries": [
+      {
+        "id": "electron-ohos-harmonyshare-image-receive",
+        "paths": [
+          "web_engine/src/main/ets/adapter/HarmonyShareAdapter.ets",
+          "web_engine/src/main/ets/jsbindings/HarmonyShareAdapterBind.ets",
+          "README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "qterminal-ohos",
+    "revision": "1342444d525418989a2fc9a5b7f77b9eeb6213c1",
+    "entries": [
+      {
+        "id": "qt-ohos-terminal-direct-key-input",
+        "paths": [
+          "src/termwidget.cpp",
+          "src/mainwindow.cpp",
+          "README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "rnoh-gesture-handler",
+    "revision": "b6981b0feb0870fdf040a5abd3c0a0c7fa8246db",
+    "entries": [
+      {
+        "id": "rnoh-gesture-scroll-frame-hold",
+        "paths": [
+          "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.cpp",
+          "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/ScrollFramesHold.h",
+          "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+          "react-native-harmony-gesture-handler/docs/NATIVE-CODE-MAP.md",
+          "react-native-harmony-gesture-handler/package.json"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "rnoh-keep-awake",
+    "revision": "b71e63120bab682874a9547efa2d94747fa2a59f",
+    "entries": [
+      {
+        "id": "rnoh-window-keep-screen-on",
+        "paths": [
+          "package.json",
+          "harmony/keep_awake/src/main/ets/KeepAwakeTurboModule.ets"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "rnoh-on-harmony-pc",
+    "revision": "2c6e1c2e2b1382fdaf763b76afaaa89adc366c07",
+    "entries": [
+      {
+        "id": "rnoh-offline-bundle-and-fonts",
+        "paths": [
+          "harmony/entry/src/main/ets/pages/Index.ets",
+          "harmony/entry/oh-package.json5",
+          "package.json",
+          "metro.config.js"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "rnoh-splash-screen",
+    "revision": "3ac461bcdddc015be7e1e627074120f19b4bc3b7",
+    "entries": [
+      {
+        "id": "native-subwindow-async-transaction",
+        "paths": [
+          "harmony/splash_screen/src/main/ets/SplashScreen.ts"
+        ]
+      },
+      {
+        "id": "rnoh-splash-native-readiness",
+        "paths": [
+          "harmony/splash_screen/src/main/ets/SplashScreen.ts",
+          "example/harmony/entry/src/main/ets/entryability/EntryAbility.ets",
+          "harmony/splash_screen/oh-package.json5"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "strawberry-ohos",
+    "revision": "b660caea79bac6a5369f82eef6c9bb9c0febcada",
+    "entries": [
+      {
+        "id": "native-dependency-closure",
+        "paths": [
+          "cmake/fix_ohos_needed_paths.py"
+        ]
+      },
+      {
+        "id": "native-gstreamer-explicit-audio-sink",
+        "paths": [
+          "src/engine/gstengine.cpp",
+          "CMakeLists.txt",
+          "README.md"
+        ]
+      },
+      {
+        "id": "native-gstreamer-plugin-registry",
+        "paths": [
+          "src/engine/gststartup.cpp",
+          "README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "tauri-open-harmony",
+    "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+    "entries": [
+      {
+        "id": "tauri-ohos-production-custom-protocol",
+        "paths": [
+          "crates/tauri/build.rs"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "tsl-editor",
+    "revision": "bbbc93bc085d55b33c4eea536a4d77922fb0fa3a",
+    "entries": [
+      {
+        "id": "rnoh-relationalstore-sql-contract",
+        "paths": [
+          "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqliteTurboModule.ets",
+          "apps/tsl_editor_rn/harmony/entry/src/main/ets/HarmonySqlitePackage.ets",
+          "apps/tsl_editor_rn/harmony/entry/oh-package.json5",
+          "apps/tsl_editor_rn/harmony/entry/src/main/ets/RNPackagesFactory.ets"
+        ]
+      }
+    ]
+  },
+  {
+    "source_id": "vbsqlite-ohos",
+    "revision": "734e996936cccc5e582521db511259133b958526",
+    "entries": [
+      {
+        "id": "kmp-ohos-sqlite-cinterop",
+        "paths": [
+          "VBSQLite/build.gradle.kts",
+          "VBSQLite/src/nativeInterop/cinterop/interop.def",
+          "ohosApp/entry/src/main/cpp/CMakeLists.txt",
+          "README.md"
+        ]
+      }
+    ]
+  }
+]

@@ -30,7 +30,8 @@
   "related": [
     "kmp-ohos-compose-target",
     "kmp-ohos-rawfile-resources",
-    "kmp-ohos-compose-host"
+    "kmp-ohos-compose-host",
+    "kmp-native-image-core-without-compose"
   ]
 }
 ---
@@ -58,6 +59,8 @@ Pin OH-compatible KMP artifacts, select a platform-specific Ktor engine in `ohos
 ## Conditions and alternatives
 
 The adapter artifacts and private repository must be reachable. Renderer selection depends on the Compose/OH adapter version. A library without an OH artifact needs a platform-specific alternative or a stub.
+
+A failure such as `metadata version is 2.4.0, but the compiler version 2.2.0 can read up to 2.3.0` requires aligning the OH compiler and dependency generation, rather than changing only the application target. One reviewed dependency set uses HarmonyOS Kotlin `2.4.20-0.1.0-07` with its OH coroutines/okio artifacts and Ktor `3.5.1-0.1.0-01`; this is a pinned example, not a universal upgrade prescription. Verify actual artifacts, target variants and the compiler distribution, since a Maven metadata listing alone does not prove the binary exists.
 
 ## Common mistakes
 

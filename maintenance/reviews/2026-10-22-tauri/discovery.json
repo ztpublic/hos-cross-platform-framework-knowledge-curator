@@ -1,0 +1,111 @@
+{
+  "queried_on": "2026-10-22",
+  "queries": [
+    "tauri ohos",
+    "tauri harmonyos",
+    "tauri openharmony"
+  ],
+  "candidates": [
+    {
+      "repo": "Islatri/tauri-ohos-test",
+      "ref": "main",
+      "size": 6922
+    },
+    {
+      "repo": "LeeLiangmin/tauri-ohos",
+      "ref": "main",
+      "size": 37
+    },
+    {
+      "repo": "david921518/tauri-mobile",
+      "ref": "main",
+      "size": 9
+    },
+    {
+      "repo": "frankplus/tauri-ohos",
+      "ref": "main",
+      "size": 13329
+    },
+    {
+      "repo": "linlinjinzhen/tauri-ohos-test",
+      "ref": "main",
+      "size": 6850
+    },
+    {
+      "repo": "SJMC-Dev/tauri-ohos-experimental",
+      "ref": "feat/open-harmony",
+      "size": 109236
+    },
+    {
+      "repo": "SJMC-Dev/tauri-plugins-workspace-ohos-experimental",
+      "ref": "feat/open-harmony",
+      "size": 18663
+    },
+    {
+      "repo": "2doright/airslate-pc-server",
+      "ref": "main",
+      "size": 8137
+    },
+    {
+      "repo": "LeenHawk/tauri-harmony",
+      "ref": "main",
+      "size": 17
+    },
+    {
+      "repo": "Linmoqian/tauri-harmonyos",
+      "ref": "dev",
+      "size": 98871
+    },
+    {
+      "repo": "nanhapy/sms-bridge",
+      "ref": "main",
+      "size": 1222
+    },
+    {
+      "repo": "omidnw/vorynth",
+      "ref": "master",
+      "size": 9649
+    },
+    {
+      "repo": "bluedeer000/clipboard-sync",
+      "ref": "main",
+      "size": 922
+    },
+    {
+      "repo": "Jesse205/F-OH-PWA",
+      "ref": "main",
+      "size": 8892
+    },
+    {
+      "repo": "lookapu/HarmonyAgent",
+      "ref": "main",
+      "size": 6744
+    },
+    {
+      "repo": "richerfu/tauri-demo",
+      "ref": "master",
+      "size": 1103
+    },
+    {
+      "repo": "bernardotmr/tauri-demo",
+      "ref": "main",
+      "size": 1931
+    },
+    {
+      "repo": "jimmy54/tauri-demo",
+      "ref": "master",
+      "size": 986
+    }
+  ],
+  "linked_sources": [
+    {
+      "repo": "tauri-apps/tauri",
+      "ref": "feat/open-harmony"
+    },
+    {
+      "repo": "LeenHawk/gproxy",
+      "ref": "main"
+    }
+  ],
+  "note": "20 bounded candidate records, including two linked leads. Discovery hits are not independently qualified or deduplicated without source review."
+}

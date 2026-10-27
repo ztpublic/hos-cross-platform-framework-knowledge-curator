@@ -1,0 +1,170 @@
+.gitignore
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/module
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/0_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/1_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/2_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/3_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/4_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/5_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/6_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component/0_component.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm/0_kmm.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent/0_tencent.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com/0_com.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/manifest
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/module
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/0_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/1_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/2_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/3_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/4_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/5_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component.VBSQLite/6_VBSQLite.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm.component/0_component.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent.kmm/0_kmm.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com.tencent/0_tencent.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/linkdata/package_com/0_com.knm
+.kotlin/metadata/commonizer/VBSQLite/interop/hhgEzQAX99LPnltFX_OCpm55FTY=/(ios_arm64, ios_simulator_arm64, ios_x64, ohos_arm64)/com.tencent.kuiklybase_VBSQLite-cinterop-interop/default/manifest
+.kotlin/metadata/kotlinCInteropLibraries/VBSQLite-cinterop-interop-96jf0Q.klib
+.kotlin/metadata/kotlinCInteropLibraries/VBSQLite-cinterop-interop-DHqYaQ.klib
+.kotlin/metadata/kotlinCInteropLibraries/VBSQLite-cinterop-interop-HVjP3Q.klib
+.kotlin/metadata/kotlinCInteropLibraries/VBSQLite-cinterop-interop-UoBPdw.klib
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-appleMain.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-appleTest.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-iosMain.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-iosTest.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-nativeMain.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/.VBSQLite-nativeTest.cinteropLibraries.json
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.2-KBA-001-nativeMain-cinterop/org.jetbrains.kotlinx_atomicfu-cinterop-interop-RJQB-A.klib
+.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.2-KBA-001-noOhosMain-cinterop/org.jetbrains.kotlinx_atomicfu-cinterop-interop-RJQB-A.klib
+.kotlin/metadata/kotlinTransformedMetadataLibraries/org.jetbrains.kotlin-kotlin-stdlib-2.0.21-commonMain-WPEnbA.klib
+.kotlin/metadata/kotlinTransformedMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.2-KBA-001-commonMain-RJQB-A.klib
+.kotlin/metadata/kotlinTransformedMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.2-KBA-001-nativeMain-RJQB-A.klib
+.kotlin/metadata/kotlinTransformedMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.2-KBA-001-noOhosMain-RJQB-A.klib
+README.md
+VBSQLite.podspec
+VBSQLite/VBSQLite.podspec
+VBSQLite/build.gradle.kts
+VBSQLite/src/androidMain/AndroidManifest.xml
+VBSQLite/src/androidMain/kotlin/com/tencent/kmm/component/VBSQLite/Extension.android.kt
+VBSQLite/src/androidMain/kotlin/com/tencent/kmm/component/VBSQLite/Lock.android.kt
+VBSQLite/src/androidMain/kotlin/com/tencent/kmm/component/VBSQLite/VBDatabase.android.kt
+VBSQLite/src/androidMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBAndroidConnection.kt
+VBSQLite/src/androidMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBAndroidCursor.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/DefaultConfiguration.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/Extension.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/InternalLog.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/Lock.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/SqliteInitTask.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/VBDatabase.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/VBSQLiteException.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/IConfiguration.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/IConnection.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/ICursor.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/IDatabase.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/ILog.kt
+VBSQLite/src/commonMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/IStatement.kt
+VBSQLite/src/include/sqlite3.h
+VBSQLite/src/iosMain/kotlin/com/tencent/kmm/component/VBSQLite/Extension.ios.kt
+VBSQLite/src/iosMain/kotlin/com/tencent/kmm/component/VBSQLite/Lock.ios.kt
+VBSQLite/src/iosMain/kotlin/com/tencent/kmm/component/VBSQLite/Utils.ios.kt
+VBSQLite/src/iosMain/kotlin/com/tencent/kmm/component/VBSQLite/VBDatabase.ios.kt
+VBSQLite/src/libs/libsqlite3.so
+VBSQLite/src/nativeInterop/cinterop/interop.def
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/Utils.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBCursor.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBSQLiteConnection.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBSQLiteDatabase.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/impl/VBStatement.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/IDatabaseInternal.kt
+VBSQLite/src/nativeMain/kotlin/com/tencent/kmm/component/VBSQLite/interface/ISQLiteConnection.kt
+VBSQLite/src/ohosArm64Main/kotlin/com/tencent/kmm/component/VBSQLite/Extension.ohosArm64.kt
+VBSQLite/src/ohosArm64Main/kotlin/com/tencent/kmm/component/VBSQLite/Lock.ohosArm64.kt
+VBSQLite/src/ohosArm64Main/kotlin/com/tencent/kmm/component/VBSQLite/Utils.ohosArm64.kt
+VBSQLite/src/ohosArm64Main/kotlin/com/tencent/kmm/component/VBSQLite/VBDatabase.ohosArm64.kt
+androidApp/build.gradle.kts
+androidApp/src/main/AndroidManifest.xml
+androidApp/src/main/java/com/tencent/kmm/component/wcdb_kmm/android/KMMDataBaseImpl.kt
+androidApp/src/main/java/com/tencent/kmm/component/wcdb_kmm/android/MainActivity.kt
+androidApp/src/main/res/values/styles.xml
+build.gradle.kts
+gradle.properties
+gradle/libs.versions.toml
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+iosApp/Podfile
+iosApp/Podfile.lock
+iosApp/iosApp.xcodeproj/project.pbxproj
+iosApp/iosApp.xcworkspace/contents.xcworkspacedata
+iosApp/iosApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+iosApp/iosApp/AppDelegate.swift
+iosApp/iosApp/Assets.xcassets/AccentColor.colorset/Contents.json
+iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/Contents.json
+iosApp/iosApp/Assets.xcassets/Contents.json
+iosApp/iosApp/ContentView.swift
+iosApp/iosApp/Info.plist
+iosApp/iosApp/Preview Content/Preview Assets.xcassets/Contents.json
+iosApp/iosApp/SQLiteExample.h
+iosApp/iosApp/SQLiteExample.mm
+iosApp/iosApp/iOSApp.swift
+iosApp/iosApp/iosApp-Bridging-Header.h
+multi-mvn-push.gradle
+ohosApp/.gitignore
+ohosApp/AppScope/.gitignore
+ohosApp/AppScope/app.json5
+ohosApp/AppScope/resources/base/element/string.json
+ohosApp/AppScope/resources/base/media/app_icon.png
+ohosApp/build-profile.json5
+ohosApp/dependencies/hvigor-4.3.0.tgz
+ohosApp/dependencies/hvigor-ohos-arkui-x-plugin-3.3.0.tgz
+ohosApp/dependencies/hvigor-ohos-plugin-4.3.0.tgz
+ohosApp/entry/.gitignore
+ohosApp/entry/build-profile.json5
+ohosApp/entry/hvigorfile.ts
+ohosApp/entry/libs/arm64-v8a/libsqlite3.so
+ohosApp/entry/obfuscation-rules.txt
+ohosApp/entry/oh-package-lock.json5
+ohosApp/entry/oh-package.json5
+ohosApp/entry/src/main/cpp/CMakeLists.txt
+ohosApp/entry/src/main/cpp/include/libkn_api.h
+ohosApp/entry/src/main/cpp/oh_sample.cpp
+ohosApp/entry/src/main/cpp/types/libnative/index.d.ts
+ohosApp/entry/src/main/cpp/types/libnative/oh-package.json5
+ohosApp/entry/src/main/ets/entryability/EntryAbility.ets
+ohosApp/entry/src/main/ets/pages/Index.ets
+ohosApp/entry/src/main/module.json5
+ohosApp/entry/src/main/resources/base/element/color.json
+ohosApp/entry/src/main/resources/base/element/string.json
+ohosApp/entry/src/main/resources/base/media/icon.png
+ohosApp/entry/src/main/resources/base/media/startIcon.png
+ohosApp/entry/src/main/resources/base/profile/main_pages.json
+ohosApp/entry/src/main/resources/en_US/element/string.json
+ohosApp/entry/src/main/resources/zh_CN/element/string.json
+ohosApp/entry/src/ohosTest/ets/test/Ability.test.ets
+ohosApp/entry/src/ohosTest/ets/test/List.test.ets
+ohosApp/entry/src/ohosTest/ets/testability/TestAbility.ets
+ohosApp/entry/src/ohosTest/ets/testability/pages/Index.ets
+ohosApp/entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ets
+ohosApp/entry/src/ohosTest/module.json5
+ohosApp/entry/src/ohosTest/resources/base/element/color.json
+ohosApp/entry/src/ohosTest/resources/base/element/string.json
+ohosApp/entry/src/ohosTest/resources/base/media/icon.png
+ohosApp/entry/src/ohosTest/resources/base/profile/test_pages.json
+ohosApp/entry/src/test/List.test.ets
+ohosApp/entry/src/test/LocalUnit.test.ets
+ohosApp/hvigor/hvigor-config.json5
+ohosApp/hvigorfile.ts
+ohosApp/oh-package-lock.json5
+ohosApp/oh-package.json5
+ohosApp/signing/config/default_ohosApp_VFlfCGF6wypxbBpQg4NxIIop5yUwXGqU7YQYd3WWucY=.cer
+ohosApp/signing/config/default_ohosApp_VFlfCGF6wypxbBpQg4NxIIop5yUwXGqU7YQYd3WWucY=.p12
+ohosApp/signing/config/default_ohosApp_VFlfCGF6wypxbBpQg4NxIIop5yUwXGqU7YQYd3WWucY=.p7b
+ohosApp/signing/config/material/ac/e7097d3eb133459088ddbc2ea906cc8f
+ohosApp/signing/config/material/ce/a4bed673672243a19efb27ae4d081ce9
+ohosApp/signing/config/material/fd/0/b8c68174283f4d3391dde873ce66cc41
+ohosApp/signing/config/material/fd/1/c8385b6bf9544a4b9de6282e54b184b6
+ohosApp/signing/config/material/fd/2/1218892261d241739ced65e71321fae3
+scripts/publish-maven.sh
+settings.gradle.kts

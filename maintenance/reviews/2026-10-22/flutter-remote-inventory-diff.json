@@ -1,0 +1,142 @@
+[
+  {
+    "path": "knowledge/chunked-native-file-transfer.md",
+    "local_exists": true,
+    "remote_sha256": "55e56dae97dc6f8b60847d74a15445c9de02f76442fa5636e3567e8f4360c140"
+  },
+  {
+    "path": "knowledge/database-backend-and-data-contract.md",
+    "local_exists": true,
+    "remote_sha256": "aa9114aa543647c7cf5f894351c59033b09bee8e83e112c19288f77ea5eb1966"
+  },
+  {
+    "path": "knowledge/external-handoff-file-uri.md",
+    "local_exists": true,
+    "remote_sha256": "c25aee24d15e47ebd74049a34302c6ecbfec43b4026c83132f05f0514f9beb1b"
+  },
+  {
+    "path": "knowledge/incoming-wants-before-dart-ready.md",
+    "local_exists": true,
+    "remote_sha256": "5eb6de87bce10b69b93aee3fffa86e58bb5a5d587541479016c18e42390a84d3"
+  },
+  {
+    "path": "knowledge/native-playback-state-observation.md",
+    "local_exists": true,
+    "remote_sha256": "55c9eaae804ff429a47d5aef1af608771bfc6f5e338107b5bd47fdcf7953ae2d"
+  },
+  {
+    "path": "knowledge/plugin-graph-source-and-api.md",
+    "local_exists": true,
+    "remote_sha256": "a6478444b1ce8634953b137859f06237af42ac5f722d121c6871e2645e56fe5e"
+  },
+  {
+    "path": "knowledge/resumable-file-download-contract.md",
+    "local_exists": true,
+    "remote_sha256": "0201ea4511a10a629844d366da1b0763aaaa83b8f64fb4485fa4a55524564a52"
+  },
+  {
+    "path": "knowledge/rust-bridge-target-and-packaging.md",
+    "local_exists": true,
+    "remote_sha256": "79aff928f4022b2e1f0df9975624721dba44facf42bff4184907d76c04c81880"
+  },
+  {
+    "path": "knowledge/sandbox-paths-and-app-identity.md",
+    "local_exists": true,
+    "remote_sha256": "f193fb07ac378b22665c4c5da04232567dbd674d4564e08e9c32abcc2d155518"
+  },
+  {
+    "path": "knowledge/secure-storage-backend-selection.md",
+    "local_exists": true,
+    "remote_sha256": "0e166e00be5183bb779ab4f03e00e1a9affe2c767748bfcea608aeedaac633b9"
+  },
+  {
+    "path": "knowledge/video-surface-backend-contract.md",
+    "local_exists": true,
+    "remote_sha256": "72e490f24ecdc4f5cc286b2647ee67a23f1d9ba0df1002f3bf0002f18546899b"
+  },
+  {
+    "path": "knowledge/viewport-scale-and-layout-lifetime.md",
+    "local_exists": true,
+    "remote_sha256": "ad1c02e0319a191d377d7107e072c5a6ed46b68a03ad2840a6bf1be91c6d7cb6"
+  },
+  {
+    "path": "knowledge/webview-controller-and-lifetime.md",
+    "local_exists": true,
+    "remote_sha256": "1e3c8e05aff6b0ea85be5dd4a0d2960b82a895c135915d168074e61d4421d89a"
+  },
+  {
+    "path": "knowledge/window-mode-and-fullscreen-state.md",
+    "local_exists": true,
+    "remote_sha256": "2619e73080403cb4e1a8ad76c0f5e1c2b3d799d97fd627872fff1faf544fefb2"
+  },
+  {
+    "path": "provenance/chunked-native-file-transfer.json",
+    "local_exists": true,
+    "remote_sha256": "23028f3972044a7ebc30da5bbd6dee8d633666a3fab1fe88dfea3b9587859e79"
+  },
+  {
+    "path": "provenance/database-backend-and-data-contract.json",
+    "local_exists": true,
+    "remote_sha256": "e6da1cd29d532d1a64b65632cd06066e1ace90d8edf00f31ac3b2fb11a4131fe"
+  },
+  {
+    "path": "provenance/external-handoff-file-uri.json",
+    "local_exists": true,
+    "remote_sha256": "115dff668f4e3b89375d91d5578df2d2d52301136b3e25e9e4efae4e45ce4ddd"
+  },
+  {
+    "path": "provenance/incoming-wants-before-dart-ready.json",
+    "local_exists": true,
+    "remote_sha256": "1c6df7332353534f0cd1044c943eeff88b49902f6ba6d709516a304adad92c7f"
+  },
+  {
+    "path": "provenance/native-playback-state-observation.json",
+    "local_exists": true,
+    "remote_sha256": "fc781e21f25261ba4a437bf3076f7c9700da59d448799db314594dfc14ff7985"
+  },
+  {
+    "path": "provenance/plugin-graph-source-and-api.json",
+    "local_exists": true,
+    "remote_sha256": "eb39a3ae7bd48f800f17f43672a9ccb8417fa3b32cce9b947f39eef257686327"
+  },
+  {
+    "path": "provenance/resumable-file-download-contract.json",
+    "local_exists": true,
+    "remote_sha256": "6a50c3d864cbfb614b8bf8afa9d0c6b4ffa774e1c8be7cb4f703ac18ebd4f1a0"
+  },
+  {
+    "path": "provenance/rust-bridge-target-and-packaging.json",
+    "local_exists": true,
+    "remote_sha256": "a49e855dbc2cd618847aa8d9e3931110824477cbfc3972a38fe6d05b24831b9a"
+  },
+  {
+    "path": "provenance/sandbox-paths-and-app-identity.json",
+    "local_exists": true,
+    "remote_sha256": "b23b19428782754607fbc6589b426dae2ec7ce4816bfc60c355bd13bb3efa2c0"
+  },
+  {
+    "path": "provenance/secure-storage-backend-selection.json",
+    "local_exists": true,
+    "remote_sha256": "4511f95f8367d725b80d276b8e4287a427030f7d0d9f392130f9d65abb9cc024"
+  },
+  {
+    "path": "provenance/video-surface-backend-contract.json",
+    "local_exists": true,
+    "remote_sha256": "59e19d52b69f170f83a15e04a1fea8629ca8bdb498f7e477560890b2b276090a"
+  },
+  {
+    "path": "provenance/viewport-scale-and-layout-lifetime.json",
+    "local_exists": true,
+    "remote_sha256": "581607e174955ca90a12a696b340928beb933c566cf41865e4988935646076e7"
+  },
+  {
+    "path": "provenance/webview-controller-and-lifetime.json",
+    "local_exists": true,
+    "remote_sha256": "fc38029b850a314618a4bab75d03faea1e033cf88a50570eb15c65b7c7cd082f"
+  },
+  {
+    "path": "provenance/window-mode-and-fullscreen-state.json",
+    "local_exists": true,
+    "remote_sha256": "a7b3fe33eb7195f1d89025164f66c67178048b67e986bfae1d789734fdf81937"
+  }
+]

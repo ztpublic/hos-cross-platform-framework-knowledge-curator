@@ -10,14 +10,56 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/build.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/build.rs",
+      "sha256": "80f6b0d8391c8de748844cedc6f5d382aa126ac4c09607098a64497fbbaee60f",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri/build.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri/Cargo.toml",
+      "sha256": "b8d75c22aa66456a626ed356568f248dc5eeb8429d1b01e7d73e12ad415c9dcf",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-open-harmony",
+      "original_path": "crates/tauri-runtime-wry/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-open-harmony/2026-10-22/crates/tauri-runtime-wry/Cargo.toml",
+      "sha256": "053cc87101522996b1f5e96bd8c9f6fc68245b48507ffc49fa3d4be5bf737211",
+      "revision": "e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/tauri-apps/tauri/blob/e3bf6eb168bacc7bb5c8c32d923bb8beaf77c92b/crates/tauri-runtime-wry/Cargo.toml",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
+    },
+    {
+      "collection": "tauri-demo",
+      "original_path": "src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "snapshot": "provenance/snapshots/projects/tauri-demo/2026-10-22/src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "sha256": "c238c4f1763c6b42a915db4af16df7b201fe820502f0ce9fba925dc146922bf7",
+      "revision": "9f740694f96cc313bb34c472207dc872ac3bd5a5",
+      "license": "No repository-level license found; generalized guidance only.",
+      "url": "https://github.com/richerfu/tauri-demo/blob/9f740694f96cc313bb34c472207dc872ac3bd5a5/src-tauri/tauri-plugin-ohos-demo/src/platform.rs",
+      "evidence_note": "Pinned source review only. No source setup, dependency installation, build, signing, HAP installation or runtime checks performed."
     }
   ],
   "transformations": [
     "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
-    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
+    "Extended the existing common mechanism from Tauri ecosystem source; no cross-framework runtime verification inferred."
   ],
   "limitations": [
     "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",
-    "HarmonyOS PC acceptance checks are proposed, not performed."
+    "HarmonyOS PC acceptance checks are proposed, not performed.",
+    "Added Rust/Cargo specifics were source-reviewed only."
   ]
 }
