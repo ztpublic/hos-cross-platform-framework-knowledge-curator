@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "qt-ohos-focusin-after-modal-exec",
+  "sources": [
+    {
+      "collection": "qt-creator-ohos",
+      "original_path": "src/plugins/projectexplorer/projectexplorer.cpp",
+      "snapshot": "provenance/snapshots/projects/qt-creator-ohos/2026-11-06/src/plugins/projectexplorer/projectexplorer.cpp",
+      "sha256": "917a468887c45746ced87cc6b1e4cdee0ad0e81b3c6e3b17139161a1dc459c7c",
+      "revision": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+      "license": "GPL-3.0 with Qt exception; file headers also list Qt-Commercial.",
+      "url": "https://atomgit.com/ohos-qt/qt-creator",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "The cause is an author comment on one Qt 6 development build; the QPA root cause was not reviewed."
+  ]
+}

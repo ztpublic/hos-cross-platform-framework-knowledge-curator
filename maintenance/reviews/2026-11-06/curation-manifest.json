@@ -1,0 +1,36 @@
+{
+  "added": [
+    "electron-ohos-hardware-shortcut-modifier-replay",
+    "electron-ohos-asar-store-precheck",
+    "electron-ohos-platform-binding-loader-shim",
+    "native-self-extract-gnu-long-names",
+    "napi-handle-scope-without-js-frame",
+    "native-arkui-callback-no-throw-text",
+    "native-custom-text-app-font-scale-cap",
+    "kmp-kuikly-ohos-sync-gesture-context-scheduling",
+    "native-avcodec-native-buffer-format",
+    "native-bridge-weak-optional-runtime-symbol",
+    "native-wgpu-gles-adapter-limits",
+    "ohos-musl-symbol-interposition-localize",
+    "ohos-exec-helper-permission-section",
+    "ohos-fontconfig-sandbox-bootstrap",
+    "qt-ohos-focusin-after-modal-exec",
+    "rnoh-keyboard-avoidance-animated-insets",
+    "pasteboard-serialize-setdata",
+    "pasteboard-image-pixelmap-plus-encoded-record",
+    "kmp-ohos-libcxx-shared-staging",
+    "arkweb-javascriptproxy-deferred-reply",
+    "rust-ohos-tls-without-openssl",
+    "electron-ohos-arkts-call-bridge",
+    "ohos-input-injection-authorization",
+    "ohos-usb-driver-extension-binding",
+    "ohos-virtual-hid-device-injection",
+    "ohos-usbfs-preload-compat",
+    "native-hmdfs-no-hardlink-publish",
+    "native-ohos-flock-rejected"
+  ],
+  "extended": [
+    "ffi-library-and-symbol-availability",
+    "rnoh-gesture-scroll-frame-hold"
+  ]
+}

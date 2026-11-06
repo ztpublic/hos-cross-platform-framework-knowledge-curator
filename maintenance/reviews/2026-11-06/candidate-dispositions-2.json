@@ -1,0 +1,178 @@
+[
+  {
+    "id": "electron-harmonyos-kb",
+    "url": "https://atomgit.com/PERMISSION-DENIED/electron-harmonyos-kb",
+    "selected_ref": "main",
+    "commit": "f30776c87ab77a0567eda8a76c8643725334a9ca",
+    "disposition": "collection-contributed",
+    "reason": "Migration-reported pnpm and fork failures; most other pages overlap. Hash-only evidence."
+  },
+  {
+    "id": "electron-ohos-adapt",
+    "url": "https://atomgit.com/openharmony-skills/electron-ohos-adapt",
+    "selected_ref": "master",
+    "commit": "990b266b6f36129322c2d8fad460bc19eef6ab6b",
+    "disposition": "collection-contributed",
+    "reason": "Canonical of a duplicate pair by layout and date (not provable from shallow clones). Doc-only claims."
+  },
+  {
+    "id": "ohos-electron-skills",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Electron-skills",
+    "selected_ref": "main",
+    "commit": "bba7e70b5910461e3daba434a0efa195d4b08ad3",
+    "disposition": "duplicate",
+    "reason": "All 15 blobs identical to electron-ohos-adapt under a subdirectory."
+  },
+  {
+    "id": "rn-usage-docs",
+    "url": "https://atomgit.com/CPF-RN/usage-docs",
+    "selected_ref": "master",
+    "commit": "71e7fa75c01552a7f5963bb34cf4d0a271017767",
+    "disposition": "screened-no-new-atom",
+    "reason": "Install and version catalog with no PC sections in the pages checked."
+  },
+  {
+    "id": "github-desktop-ohos",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_github-desktop_electron",
+    "selected_ref": "main",
+    "commit": "53bfd6d3f5cdc9bf0b15b71aeaa17bffae52d629",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Patch set contributed process, environment, identity and crash atoms."
+  },
+  {
+    "id": "theia-ohos",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_theia",
+    "selected_ref": "main",
+    "commit": "3bf82ba096549f4b2650fae57db2e53a9763f7fa",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Close handling and a fork probe with device logs; reload branch unobserved in logs."
+  },
+  {
+    "id": "rstudio-ohos",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_rstudio",
+    "selected_ref": "main",
+    "commit": "9e45a1bfb26fb31e9fab0566888a52d803882131",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Description suggests a web IDE port; actual code is a Qt5 Widgets rewrite embedding R in-process, no QtWebEngine."
+  },
+  {
+    "id": "scribus-ohos",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Scribus",
+    "selected_ref": "main",
+    "commit": "0bd6b516bcab819c88352c04d4d1a6db74de0d32",
+    "disposition": "unqualified",
+    "reason": "Default build is a mock shell; the full-app option stops with FATAL_ERROR."
+  },
+  {
+    "id": "git-cola-ohos",
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_git-cola",
+    "selected_ref": "main",
+    "commit": "f8ec84ac0d957c759038e1d0deb610eb5898633d",
+    "disposition": "different-framework",
+    "reason": "ArkTS rewrite driving git; Python files untouched upstream."
+  },
+  {
+    "id": "openshot-ohos",
+    "url": "https://atomgit.com/ohos-qt/openshot",
+    "selected_ref": "main",
+    "commit": "786576d2df60053294f2bc7b7578eca3891c7a77",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Real PyQt5 and CPython launcher and runtime assembly report."
+  },
+  {
+    "id": "vidcutter-ohos",
+    "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+    "selected_ref": "main",
+    "commit": "61c9f545894d24de3b3f93978108a6125b8deedc",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Real embedded CPython running PyQt5; runtime libraries not committed. Hash-only evidence."
+  },
+  {
+    "id": "ohos-kmp-toolchain",
+    "url": "https://atomgit.com/CPF-KMP-CMP/ohos-kmp-toolchain",
+    "selected_ref": "develop",
+    "commit": "94c4aa6365e79b2a2ffb4f870efd8699b1aa712c",
+    "disposition": "source-reviewed-contributed",
+    "reason": "LLDB attach pipeline."
+  },
+  {
+    "id": "cmp-core-ohos",
+    "url": "https://atomgit.com/OHOS-CMP/compose-multiplatform-core",
+    "selected_ref": "lifecycle-2.8.0-4091af4f",
+    "commit": "96fe03c853059dcf3382909af2baa7d67338fa55",
+    "disposition": "insufficient",
+    "reason": "Only one odd lifecycle branch is published, with three trivial OH files."
+  },
+  {
+    "id": "flutter-downloader-ohos",
+    "url": "https://atomgit.com/oh-flutter/flutter_downloader_ohos",
+    "selected_ref": "master",
+    "commit": "c9e13c0c3d5793a0762325125d0429be56197612",
+    "disposition": "source-reviewed-contributed",
+    "reason": "System download flow and background engine read in full."
+  },
+  {
+    "id": "flutter-tts-ohos",
+    "url": "https://atomgit.com/oh-flutter/flutter_tts_ohos",
+    "selected_ref": "master",
+    "commit": "79bdecaefa19dd9ea53403ee5da46462a3332651",
+    "disposition": "source-reviewed-contributed",
+    "reason": "CoreSpeechKit plugin read."
+  },
+  {
+    "id": "flutter-harmony-ebook",
+    "url": "https://atomgit.com/oh-flutter/flutter-harmony-ebook",
+    "selected_ref": "main",
+    "commit": "b0336a709fb16d37d4ce21fd7e3f1d0c86fa5983",
+    "disposition": "collection-contributed",
+    "reason": "Write-ups with code excerpts; plugin sources absent, so doc-claims. media_kit chapter adds nothing new. Hash-only evidence."
+  },
+  {
+    "id": "flutter-oh-practice",
+    "url": "https://atomgit.com/sztu/flutterOhOs",
+    "selected_ref": "main",
+    "commit": "b93b92e30e69c473bf740cd7d7997c9e5633d54a",
+    "disposition": "screened-no-new-atom",
+    "reason": "Beginner tutorials; no PC mechanism."
+  },
+  {
+    "id": "tauri-ohos-batch",
+    "url": "https://atomgit.com/qq8864/tauri-ohos",
+    "selected_ref": "main",
+    "commit": null,
+    "disposition": "insufficient",
+    "reason": "Repository publishes no branches."
+  },
+  {
+    "id": "ohos-tauri-migrate",
+    "url": "https://atomgit.com/lqjmac/OHOS_Tauri",
+    "selected_ref": "main",
+    "commit": "390d90952bec99ce0807a55f9ffd9fdfc00fe1af",
+    "disposition": "different-host",
+    "reason": "Generates an ArkWeb host and a Tauri internals shim, with stubbed Rust, instead of the Tauri runtime. Not a Tauri port under the qualification rule."
+  },
+  {
+    "id": "jucang-ohos",
+    "url": "https://atomgit.com/qq8864/juCang",
+    "selected_ref": "master",
+    "commit": "7d39a7d11441b8414e1cf326e06a50a051d3765a",
+    "disposition": "unqualified",
+    "reason": "Windows desktop app only; no OH files."
+  },
+  {
+    "id": "tauri-mqtt-ohos",
+    "url": "https://atomgit.com/qq8864/tauri-mqtt-client-ohos",
+    "selected_ref": "master",
+    "commit": "9d64d987fdb6e7e517ede9257c4f540071555495",
+    "disposition": "duplicate",
+    "reason": "Still partial: tauri comes from an absent local path. Host is in the known family."
+  },
+  {
+    "id": "nutpi-tauri-demo",
+    "url": "https://atomgit.com/nutpi/tauri-demo",
+    "selected_ref": "master",
+    "commit": "5c26f8441158e96419f4824056f8b2ff95ea0cb8",
+    "disposition": "duplicate",
+    "reason": "Resolved known fork chain; adds nothing beyond existing Tauri entries."
+  }
+]

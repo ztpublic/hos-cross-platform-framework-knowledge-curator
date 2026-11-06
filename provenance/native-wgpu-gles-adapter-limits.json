@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "native-wgpu-gles-adapter-limits",
+  "sources": [
+    {
+      "collection": "liberika",
+      "original_path": "crates/erika/src/renderer/wgpu.rs",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/crates/erika/src/renderer/wgpu.rs",
+      "sha256": "33533fb4605c2b6ed3871ecf97aa98770795ba5cc4851d784f6a862f7e81c09f",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "docs/investigations/ohos-gles-20261103/README.zh.md",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/docs/investigations/ohos-gles-20261103/README.zh.md",
+      "sha256": "882a16a3a7fe6a12001b1186c47304a871b61cd880af61472431219af71acbb1",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ],
+  "source_reported_evidence": [
+    "The source investigation reports HarmonyOS 5.1.0 / API 18 / x86_64 emulator playback after the fix, and an unexplained host driver crash during consecutive stress runs. Attributed report; not repeated here."
+  ]
+}

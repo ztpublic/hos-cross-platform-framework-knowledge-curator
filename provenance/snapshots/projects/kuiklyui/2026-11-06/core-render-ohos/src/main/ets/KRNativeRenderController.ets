@@ -1,0 +1,1270 @@
+/*
+ * Tencent is pleased to support the open source community by making KuiklyUI
+ * available.
+ * Copyright (C) 2025 Tencent. All rights reserved.
+ * Licensed under the License of KuiklyUI;
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * https://github.com/Tencent-TDS/KuiklyUI/blob/main/LICENSE
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import { KRExceptionCallback } from './manager/KRNativeInstance';
+import render from 'libkuikly.so';
+import { AvoidAreaChangeParams, Insets, KRAny, KRJsonValue, KRPageData, KRRecord, KRValue } from './utils/KRDataTypes';
+import { KRNativeManager } from './manager/KRNativeManager';
+import { KRConvertUtil } from './utils/KRConvertUtil';
+import { common, EnvironmentCallback } from '@kit.AbilityKit';
+import { KRSize } from './foundation/KRSize';
+import { display, window } from '@kit.ArkUI';
+import { KRRect } from './foundation/KRRect';
+import { KRRenderViewExportCreator } from './components/base/KRBaseViewExport';
+import { KRRenderModuleExportCreator } from './modules/base/IKRModuleExport';
+import { KRRenderLog } from './adapter/KRRenderLog';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Configuration } from '@ohos.app.ability.Configuration';
+import { KRRenderExecuteModeBase } from './context/KRRenderExecuteModeBase';
+import { KRRenderNativeMode } from './context/KRRenderNativeMode';
+import { i18n } from '@kit.LocalizationKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { deviceInfo } from '@kit.BasicServicesKit';
+
+/** window尺寸变化事件名 */
+export const KRWindowSizeDidChangedEventKey = 'windowSizeDidChanged';
+
+/** RootView尺寸变化事件名. */
+export const KRRootViewSizeDidChangedEventKey = 'rootViewSizeDidChanged';
+
+/** 页面可见事件 */
+export const KRPageDidAppearEventKey = 'viewDidAppear';
+
+/** 页面不可见事件 */
+export const KRPageDidDisappearEventKey = 'viewDidDisappear';
+
+export const KRConfigurationUpdateEventKey = 'configurationDidChanged';
+
+/** 字典key常量 */
+export const KRRootViewWidthKey = 'rootViewWidth';
+
+export const KRRootViewHeightKey = 'rootViewHeight';
+
+export const KRUrlKey = 'url';
+
+export const KRStatusBarHeightKey = 'statusBarHeight';
+
+export const KRPlatformKey = 'platform';
+
+export const KRDeviceWidthKey = 'deviceWidth';
+
+export const KRDeviceHeightKey = 'deviceHeight';
+
+export const KRActivityWidthKey = 'activityWidth';
+
+export const KRActivityHeightKey = 'activityHeight';
+
+export const KROsVersionKey = 'osVersion';
+
+export const KRAppVersionKey = 'appVersion';
+
+export const KRParamKey = 'param';
+
+export const KRWidthKey = 'width';
+
+export const KRHeightKey = 'height';
+
+export const KRNativeBuild = 'nativeBuild';
+
+export const KRSafeAreaInsets = 'safeAreaInsets';
+
+/** 铰链/折叠状态，取值对齐 Kotlin [HingeStatus] / iOS UIHingeStatus，非鸿蒙 FoldStatus 原值 */
+export const KRHingeStatusKey = 'hingeStatus';
+
+export const KRDensityInfo = 'densityInfo';
+
+export const KRExecuteMode = 'executeMode';
+
+export const KRContextCode = 'contextCode';
+
+export const KRDensity = 'density';
+
+export const KRSystemLanguageKey = 'sysLang';
+
+export const KRFeature = 'feature';
+
+const KROnBackPressedKey = 'onBackPressed';
+
+enum KRBackPressConsumedState {
+  Undefined = 0,
+  Consumed,
+  NotConsumed
+}
+
+/** safeArea 纠偏：浮点尺寸比较容差（dp） */
+const KRSafeAreaMatchToleranceDp = 1.0;
+/** safeArea 纠偏：变化量等式判定容差（dp） */
+const KRSafeAreaDeltaEps = 0.1;
+
+/** 全局递增实例ID */
+let gGlobalInstanceId = 0;
+
+export class KRNativeRenderController {
+  /**
+   * 页面实例 id
+   */
+  instanceId: string = '';
+  /**
+   * 执行上下文code，驱动渲染对应的代码。KRRenderExecuteMode.Native模式时: 传递 ''
+   */
+  contextCode: string = '';
+  /**
+   * assets资源的实际路径，如未设置，默认在resfile中找assets资源
+   */
+  assetsDir: string = '';
+  /**
+   * 执行模式
+   */
+  executeMode: KRRenderExecuteModeBase = KRRenderNativeMode.Native;
+  /**
+   * 页面名字
+   */
+  pageName: string = '';
+  /**
+   * 透传给KR侧的页面数据
+   */
+  pageParams: KRPageData = {};
+  /**
+   * 鸿蒙侧，向用户提供新旧两种KRSharedPreferencesMoudle使用的控制开关（变量）
+   */
+  useOhSharedPreferences: boolean = false;
+  /**
+   * 所在的窗口Id
+   */
+  windowId: string = ""
+  /**
+   * SizeChanged 执行时机是否需提前至 onSizeChanged 而非 onAreaChanged，以避免页面 Size 变化时出现白屏
+   */
+  private sizeChangeHandledByOnSizeChange: boolean = false;
+  /** 上一帧窗口尺寸：突变帧注入检测（判据B）需要窗口变化量 */
+  private prevWindowRect: KRRect | null = null;
+  /** 上一帧 safeAreaRect：判据B的还原基准（稳态帧不会被注入，天然可靠） */
+  private lastSafeAreaRect: KRRect | null = null;
+  /** lastSafeAreaRect 入库时的窗口尺寸：rect 是绝对坐标，解构侧值必须用它自己同朝向的窗口，否则产生假侧值 */
+  private lastSafeAreaWinRect: KRRect | null = null;
+  /** 最近一次「viewRect 与 windowRect 同朝向」时换算出的 insets（判据A兜底值） */
+  private lastTrustedInsets: string | null = null;
+  /** viewRect 是否已跟随当前窗口重新测量：false = 窗口已变而页面未量完（判据A的拦截条件） */
+  private viewSyncedByWindow: boolean = true;
+  /** 窗口尺寸已变化、等待布局回调确认 viewRect 与新窗口同步（判据A 的开门依据）：
+   * 只有 onAreaChange/onSizeChange 写入新 viewRect 才会确认并清位，其余路径一律保持拦截 */
+  private windowSizeChangedPending: boolean = false;
+  /** 上次真正下发到 Kotlin 的 rootViewSizeDidChanged 快照：判等基线必须是「已送达值」，
+   * 不能用 safeAreaRect 缓存——后者会被 notify=false 静默更新，导致同值补发被误判为未变化而漏发 */
+  private lastNotifiedInsets: string | null = null;
+  private lastNotifiedWidth: number = -1;
+  private lastNotifiedHeight: number = -1;
+  private lastNotifiedDeviceWidth: number = -1;
+  private lastNotifiedDeviceHeight: number = -1;
+  /** 上次真正下发的 hingeStatus，纳入判等快照：折叠态（#1863）经 foldStatusChange 回调
+   * 走 notifySizeChange 下送，但该回调可能先于 windowSizeChange 到达——此刻窗口/视图尺寸
+   * 仍是旧值，若判等不含 hinge 会误判「未变化」而 SKIP，折叠状态只能寄望后续窗口变化
+   * 链路兜底送达；纳入后 hinge-only 变化也立即下发，送达不再依赖回调时序 */
+  private lastNotifiedHinge: number = -1;
+
+  private lifecycleCallbacks: Array<IKuiklyRenderViewLifecycleCallback> = [];
+
+  private fontSizeScale = 1.0;
+  private fontWeightScale = 1.0;
+  /**
+   * 输入法模式
+   * 在输入法中，获取不到window和safearea，所以只有有view rect后就可以初始化kuikly
+   */
+  imeMode = false;
+  private environmentCallbackId = -1;
+  private densityPixels: number = 0;
+  private uiContext: UIContext | null = null;
+  private uiAbilityContext: common.UIAbilityContext | null = null;
+  private didInit: Boolean = false;
+  private lazyTasks: (() => void)[] = [];
+  /**
+   * 外部自定义存放在Controller中的数据, 在Module中，可通过Controller来获取数据
+   */
+  private externalParams: KRRecord = {};
+  /**
+   * 外部自定义的Controller, 可设置此值，然后在Module中获取
+   */
+  private externalController: object | null = null;
+  private safeAreaRect: KRRect | null = null;
+  private viewRect: KRRect | null = null;
+  private windowRect: KRRect | null = null;
+  private updateSafeInsetsHandler: number = 0;
+  private windowClass: window.Window | null = null;
+  private destroyed: boolean = false;
+  /** 已映射为 Kuikly HingeStatus.rawValue 的折叠状态 */
+  private lastHingeStatusRaw: number = 0;
+  private foldStatusCallback: Callback<display.FoldStatus> | null = null;
+  private onWindowSizeChanged: Callback<window.Size> = (params: window.Size) => {
+    if (this.imeMode) {
+      return;
+    }
+    const density = this.getWindowActiveDensity();
+    const w = params.width / density;
+    const h = params.height / density;
+
+    // windowRect 是 deviceWidth/Height 唯一数据源，必须跟随窗口更新，否则旋转后 Compose 屏幕尺寸冻结；
+    // prevWindowRect 保留旧值，供判据B计算窗口变化量
+    this.prevWindowRect = this.windowRect;
+    this.windowRect = new KRRect(0, 0, w, h);
+    // 窗口已变而页面尚未重新测量，viewRect 旧尺寸作废（判据A拦截条件），等布局回调重新确认
+    this.viewSyncedByWindow = false;
+    // 登记待确认：窗口变化量不论大小（含分屏/自由窗口的同朝向 resize），
+    // 旧 viewRect 与新 safeAreaRect 相减必产生尺寸差假值，必须等布局回调写入新 viewRect 才能换算
+    this.windowSizeChangedPending = true;
+
+    this.notifyWindowSizeChanged(w, h);
+    // 同步刷新 safeArea（不走 setTimeout），避免与布局回调竞争产生「旧 viewRect − 新 safeAreaRect」错配
+    this.refreshSafeAreaSync();
+  };
+  private avoidAreaListener: Callback<AvoidAreaChangeParams> = (params: AvoidAreaChangeParams) => {
+    if (this.imeMode) {
+      return;
+    }
+    if (params.type == window.AvoidAreaType.TYPE_SYSTEM ||
+      params.type == window.AvoidAreaType.TYPE_CUTOUT ||
+      params.type == window.AvoidAreaType.TYPE_NAVIGATION_INDICATOR) {
+      this.doUpdateSafeArea();
+    }
+  };
+
+  /**
+   * 同步刷新 safeAreaRect 但不下发：让 safeAreaRect 与 windowRect 同帧就绪，
+   * 消除 setTimeout(0) 与布局回调的时序竞争，等 viewRect 同朝向后由布局链路统一下发。
+   */
+  private refreshSafeAreaSync(): void {
+    if (this.imeMode || this.windowClass == null) {
+      return;
+    }
+    // 同步已取到最新值，取消排队中的去抖任务，避免稍后重复赋值
+    if (this.updateSafeInsetsHandler > 0) {
+      clearTimeout(this.updateSafeInsetsHandler);
+      this.updateSafeInsetsHandler = 0;
+    }
+    try {
+      const synced = this.getSafeAreaRect(this.windowClass);
+      // 判据B已下沉到 onSafeAreaInsetsChanged 入库口统一验货，此处不再单独调用
+      this.onSafeAreaInsetsChanged(synced, false, 'windowSizeChange');
+    } catch (e) {
+      KRRenderLog.e('Window', `Error obtaining safearea, code:${e.code}`);
+    }
+  }
+
+  /** 将 safeAreaRect（x/y/width/height）按给定窗口尺寸换算为 [top,left,bottom,right] 侧值 */
+  private sideInsetsOf(rect: KRRect, winW: number, winH: number): number[] {
+    const sides: number[] = [0, 0, 0, 0];
+    sides[0] = rect.y;
+    sides[1] = rect.x;
+    sides[2] = winH - rect.y - rect.height;
+    sides[3] = winW - rect.x - rect.width;
+    return sides;
+  }
+
+  /**
+   * 判据B（兜底）：注入的机理是系统把「窗口尺寸变化量」错塞进 safeArea，故注入侧必满足
+   * |本帧侧值−上帧侧值| == |本帧窗口−上帧窗口|（同轴，0.1dp）——基于 bug 机理而非数值分布判定，无比例假设。
+   * 注意：prevWindowRect 只在窗口突变帧轮换，故一次旋转后到下次旋转前本判据持续处于激活态；
+   * 稳态帧依靠 oldSides/newSides 同坐标系比较（sideDelta≈0）放行，不会误伤。
+   * 已知边界：真实避让变化量与窗口变化量恰好精确等值（±0.1dp）的巧合会被误退一帧，概率极低，作为机理层残留风险保留。
+   */
+  private correctInjectedSafeArea(newRect: KRRect, source: string): KRRect {
+    const prevWin = this.prevWindowRect;
+    const curWin = this.windowRect;
+    const prevSafe = this.lastSafeAreaRect;
+    const prevSafeWin = this.lastSafeAreaWinRect;
+    if (prevWin == null || curWin == null || prevSafe == null || prevSafeWin == null) {
+      // 首帧无从比较，直接入库并登记其所属窗口尺寸
+      this.lastSafeAreaRect = newRect;
+      this.lastSafeAreaWinRect = curWin != null
+        ? new KRRect(curWin.x, curWin.y, curWin.width, curWin.height) : null;
+      return newRect;
+    }
+    const deltaW = Math.abs(curWin.width - prevWin.width);
+    const deltaH = Math.abs(curWin.height - prevWin.height);
+    // 上帧侧值必须用「上帧 safeAreaRect 自己入库时的窗口」解构——rect 是绝对坐标，
+    // 若借用 prevWindowRect（可能仍是上一朝向）解构新朝向矩形，会解出假侧值，
+    // 使干净值与窗口变化量「精确等值」而被误判成注入（avoidAreaChange 帧误修正的根因）
+    const oldSides = this.sideInsetsOf(prevSafe, prevSafeWin.width, prevSafeWin.height);
+    const newSides = this.sideInsetsOf(newRect, curWin.width, curWin.height);
+    // top/left/bottom/right 分别锚定窗口高/宽轴
+    const windowDeltas = [deltaH, deltaW, deltaH, deltaW];
+    let corrected = false;
+    const sideDeltas: number[] = [0, 0, 0, 0];
+    for (let i = 0; i < 4; i++) {
+      if (windowDeltas[i] < KRSafeAreaMatchToleranceDp) {
+        continue; // 该轴窗口没变化，不存在注入，也不该动真实值
+      }
+      const sideDelta = Math.abs(newSides[i] - oldSides[i]);
+      sideDeltas[i] = sideDelta;
+      if (Math.abs(sideDelta - windowDeltas[i]) < KRSafeAreaDeltaEps) {
+        newSides[i] = oldSides[i];
+        corrected = true;
+      }
+    }
+    // 统一以最终入库值登记，供下一帧做同坐标系比较
+    const result = corrected
+      ? new KRRect(newSides[1], newSides[0],
+          curWin.width - newSides[1] - newSides[3],
+          curWin.height - newSides[0] - newSides[2])
+      : newRect;
+    this.lastSafeAreaRect = result;
+    this.lastSafeAreaWinRect = new KRRect(curWin.x, curWin.y, curWin.width, curWin.height);
+    return result;
+  }
+
+  private doUpdateSafeArea() {
+    if (this.imeMode) {
+      return;
+    }
+    if (this.updateSafeInsetsHandler > 0) {
+      clearTimeout(this.updateSafeInsetsHandler);
+    }
+    this.updateSafeInsetsHandler = setTimeout(() => {
+      this.updateSafeInsetsHandler = 0;
+      try {
+        this.onSafeAreaInsetsChanged(this.getSafeAreaRect(this.windowClass!), true, 'avoidAreaChange');
+      } catch (e) {
+        KRRenderLog.e('Window', `Error obtaining safearea, code:${e.code}`);
+      }
+    }, 0);
+  }
+
+  init(uiContext: UIContext,
+    uiAbilityContext: common.UIAbilityContext,
+    executeMode: KRRenderExecuteModeBase,
+    pageName: string,
+    pageParams: KRPageData,
+    contextCode: string,
+    imeMode: boolean,
+    assetsDir: string,
+    useOhSharedPreferences: boolean,
+    viewRect?: KRRect,
+  ) {
+    this.uiContext = uiContext;
+    this.uiAbilityContext = uiAbilityContext;
+    this.executeMode = executeMode;
+    this.pageName = pageName;
+    this.pageParams = pageParams;
+    this.contextCode = contextCode;
+    this.imeMode = imeMode;
+    this.assetsDir = assetsDir;
+    if (viewRect) {
+      this.viewRect = viewRect;
+    }
+    this.useOhSharedPreferences = useOhSharedPreferences;
+    gGlobalInstanceId++;
+    this.instanceId = gGlobalInstanceId + '';
+    render.OnLaunchStart(this.instanceId, executeMode.mode); //  页面启动事件通知到native层，用于Performance性能采集
+    try {
+      this.windowClass = window.findWindow(uiContext.getWindowName());
+    } catch (e) {
+      KRRenderLog.e(`window`, `findWindow, stack: ${e}`);
+      return;
+    }
+    this.densityPixels = this.getWindowActiveDensity();
+    KRNativeManager.getInstance().createNativeInstance(this.instanceId, uiContext, this);
+    const currentConfig = uiAbilityContext.config;
+    // 应用上限限幅：config.fontSizeScale 为系统原值（不含 app.json5 configuration
+    // fontSizeMaxScale / setMaxFontScale 声明的应用上限），ArkUI 原生组件遵循上限，
+    // Kuikly 段落（C++ 侧直接乘倍率、不经 ArkUI）须在此取小，保持与宿主原生一致
+    this.fontSizeScale = currentConfig.fontSizeScale
+      ? Math.min(currentConfig.fontSizeScale, this.getEffectiveMaxFontScale())
+      : 1;
+    if (!this.fontSizeScaleFollowSystem()) {
+      this.fontSizeScale = 1;
+    }
+    this.fontWeightScale = currentConfig.fontWeightScale ? currentConfig.fontWeightScale : 1;
+
+    const theInstanceId = this.instanceId;
+    const theController = this;
+    let envCallback: EnvironmentCallback = {
+      onConfigurationUpdated(config) {
+        theController.onConfigurationUpdate(config);
+      },
+      onMemoryLevel(level) {
+        KRRenderLog.i('Configuration', `memory level: ${level}`);
+      }
+    };
+    try {
+      let applicationContext = uiAbilityContext.getApplicationContext();
+      this.environmentCallbackId = applicationContext.on('environment', envCallback);
+    } catch (paramError) {
+      KRRenderLog.e('Configuration',
+        `error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+
+    if (!imeMode) {
+      try {
+        const winRect = this.windowClass!.getWindowProperties().windowRect;
+        this.windowRect = new KRRect(0,0, px2vp(winRect.width), px2vp(winRect.height));
+        this.windowId = this.windowClass!.getWindowProperties().id + "";
+        KRNativeManager.getInstance().onLastWindow(this.windowClass!);
+        this.onSafeAreaInsetsChanged(this.getSafeAreaRect(this.windowClass!), true, 'attach');
+        this.windowClass!.on('avoidAreaChange', this.avoidAreaListener);
+        this.windowClass!.on('windowSizeChange', this.onWindowSizeChanged);
+        this.registerFoldStatusListenerIfNeeded();
+      } catch (e) {
+        KRRenderLog.e('Window', `Error obtaining window, stack:${e}`);
+      }
+    }
+  }
+
+  /**
+   * 未捕获异常回调
+   * @param exceptionCallback
+   */
+  registerExceptionCallback(exceptionCallback: KRExceptionCallback) {
+    KRNativeManager.getInstance().getNativeInstance(this.instanceId)?.registerExceptionCallback(exceptionCallback);
+  }
+
+  onViewSizeChanged(rect: KRRect, oldDensity: number = this.densityPixels, newDensity: number = this.densityPixels) {
+    this.viewRect = rect;
+    if (this.didInit) {
+      let densityInfo: KRRecord | null = null;
+      if (oldDensity != newDensity) {
+        densityInfo = {
+          'oldDensity': oldDensity,
+          'newDensity': newDensity
+        };
+      }
+      this.notifySizeChange(densityInfo);
+    } else {
+      this.doOnAttach();
+    }
+  }
+
+  notifyWindowSizeChanged(width: number, height: number) {
+    const data: KRRecord = {};
+    data[KRWidthKey] = width;
+    data[KRHeightKey] = height;
+    render.sendEvent(this.instanceId, KRWindowSizeDidChangedEventKey, data);
+  }
+
+  paramsReady(): boolean {
+    if (this.imeMode) {
+      return this.viewRect != null;
+    } else {
+      return this.safeAreaRect != null && // safearea updated
+        KRNativeManager.getInstance().getWindowInfo(this.windowId) != undefined && // window info updated
+        this.viewRect != null; // view rect updated
+    }
+  }
+  onConfigurationUpdate(config: Configuration) {
+    if(!this.didInit){
+      return
+    }
+    const data: KRRecord = {
+      'platform': 'ohos',
+    };
+    if (config.fontWeightScale) {
+      data['fontWeightScale'] = config.fontWeightScale;
+    }
+    if (config.fontSizeScale) {
+      // 运行中字号更新沿用同一应用上限（config 恒为系统原值，见 init 处注释）
+      data['fontSizeScale'] = Math.min(config.fontSizeScale, this.getEffectiveMaxFontScale());
+    }
+    let fontSizeScaleFollowSystem = this.fontSizeScaleFollowSystem();
+    if (!fontSizeScaleFollowSystem) {
+      data['fontSizeScale'] = 1
+    }
+    data['fontSizeScaleFollowSystem'] = this.fontSizeScaleFollowSystem();
+    try {
+      if (config.fontId) {
+        data['fontId'] = config.fontId;
+      }
+    } catch (e) {
+      const err = e as BusinessError;
+      KRRenderLog.e('Configuration',
+        `read config.fontId failed (requires API 14+), code=${err?.code}, message=${err?.message}`);
+    }
+
+    const instance = KRNativeManager.getInstance().getNativeInstance(this.instanceId)
+    if (instance){
+      instance.onConfigurationUpdate()
+    }
+
+    // update config to render core
+    render.updateConfig(this.instanceId, JSON.stringify(data));
+
+    // notify core to mark text elements dirty
+    render.sendEvent(this.instanceId, KRConfigurationUpdateEventKey, data);
+  }
+
+  /**
+   * safeAreaRect 唯一入库口：所有来源（windowSizeChange 同步刷新 / avoidAreaChange 去抖 /
+   * 密度变化 / 初始化 / pageShow 补刷）统一过判据B注入检测后再入库，杜绝脏值绕过验货直入缓存。
+   * notify=false 仅存不下发（windowSizeChange 专用）：
+   * 此刻 ArkUI 尚未布局、viewRect 仍是旧朝向，立即下发必产生错配 insets。
+   *
+   * 判等不在入库口做：判等基线是「上次真正下发的事件快照」（见 notifySizeChange），
+   * 而不是 safeAreaRect 缓存。缓存会被 notify=false 静默更新却不触发下发，若用它判等，
+   * 窗口变化后布局链路未补发时（重测变化量 < 0.1dp 或非全屏视图形态），
+   * 后续同值的 avoidAreaChange/pageShow 会被误判成「未变化」而跳过，这条更新就丢了。
+   */
+  onSafeAreaInsetsChanged(rect: KRRect, notify: boolean = true, source: string = 'unknown') {
+    const verified = this.correctInjectedSafeArea(rect, source);
+    this.safeAreaRect = verified;
+    if (this.didInit) {
+      if (notify) {
+        // 开门只信布局回调（onAreaChange/onSizeChange）：windowSizeChange 之后旧 viewRect
+        // 与新 safeAreaRect 相减必产生尺寸差假值（分屏/自由窗口的同朝向 resize 亦然，
+        // 偏差恰为窗口变化量），此处不做任何提前开门判定；未确认期间由判据A 钳制为
+        // 自洽的旧值下发，待布局回调开门后送达正确值。
+        this.notifySizeChange();
+      }
+    } else {
+      this.doOnAttach();
+    }
+  }
+
+  private encodeSafeAreaInsetsString() {
+    if (this.safeAreaRect == null || this.viewRect == null) {
+      return '0 0 0 0';
+    }
+    // 判据A（核心）：窗口变化后页面尚未重新测量（viewSyncedByWindow=false）时，viewRect 仍是旧朝向尺寸，
+    // 与新 safeAreaRect 相减必携带轴差假值——此时不换算，返回最近一次页面测量有效时的可信 insets
+    if (!this.viewSyncedByWindow) {
+      return this.lastTrustedInsets ?? '0 0 0 0';
+    }
+    const left = Math.max(0, this.safeAreaRect.x - this.viewRect.x);
+    const right = Math.max(0, this.viewRect.width - this.safeAreaRect.width - left);
+    const top = Math.max(0, this.safeAreaRect.y - this.viewRect.y);
+    const bottom = Math.max(0, this.viewRect.height - this.safeAreaRect.height - top);
+    const result = `${top} ${left} ${bottom} ${right}`;
+    this.lastTrustedInsets = result;
+    return result;
+  }
+
+  private notifySizeChange(densityInfo: KRRecord | null = null) {
+    if (this.viewRect == null) {
+      return;
+    }
+    const insets = this.encodeSafeAreaInsetsString();
+    const width = this.viewRect.width;
+    const height = this.viewRect.height;
+    const deviceWidth = this.windowRect != null ? this.windowRect.width : -1;
+    const deviceHeight = this.windowRect != null ? this.windowRect.height : -1;
+    const data: KRRecord = {};
+    data[KRWidthKey] = width;
+    data[KRHeightKey] = height;
+    data[KRSafeAreaInsets] = insets;
+    data[KRHingeStatusKey] = this.lastHingeStatusRaw;
+    if (densityInfo) {
+      data[KRDensityInfo] = JSON.stringify(densityInfo);
+    }
+    // 随事件下发最新窗口尺寸，Kotlin 侧 PagerData 收到后同步更新，
+    // Compose screenWidthDp/screenHeightDp 随之跟随旋转互换，否则冻结在初始朝向
+    if (this.windowRect != null) {
+      data[KRDeviceWidthKey] = deviceWidth;
+      data[KRDeviceHeightKey] = deviceHeight;
+    }
+
+    // 事件级去重：基线是「上次真正下发」的快照，而非 safeAreaRect 缓存。
+    // 缓存会被 notify=false 静默更新却不触发下发，用缓存判等会吞掉尚未送达的 insets 更新；
+    // 这里只有内容完全一致才跳过，density 变化属独立信息，强制下发且不纳入常规快照。
+    // hingeStatus 同属快照（见 lastNotifiedHinge 注释）：折叠回调先于 windowSizeChange 到达时
+    // 尺寸未变而 hinge 已变，纳入判等保证折叠状态立即送达，不依赖后续窗口变化链路兜底。
+    const unchanged = this.lastNotifiedInsets === insets &&
+      Math.abs(this.lastNotifiedWidth - width) < 0.01 &&
+      Math.abs(this.lastNotifiedHeight - height) < 0.01 &&
+      Math.abs(this.lastNotifiedDeviceWidth - deviceWidth) < 0.01 &&
+      Math.abs(this.lastNotifiedDeviceHeight - deviceHeight) < 0.01 &&
+      this.lastNotifiedHinge === this.lastHingeStatusRaw;
+    const willSend = densityInfo != null || !unchanged;
+    if (willSend) {
+      this.doSendEvent(KRRootViewSizeDidChangedEventKey, data, this.syncSendEvent(KRRootViewSizeDidChangedEventKey));
+      this.lastNotifiedInsets = insets;
+      this.lastNotifiedWidth = width;
+      this.lastNotifiedHeight = height;
+      this.lastNotifiedDeviceWidth = deviceWidth;
+      this.lastNotifiedDeviceHeight = deviceHeight;
+      this.lastNotifiedHinge = this.lastHingeStatusRaw;
+    }
+
+    this.runKRRenderTask(() => {
+      render.onRenderViewSizeChanged(this.instanceId, this.viewRect?.width as number, this.viewRect?.height as number);
+    });
+  }
+
+  onAttach() {
+    this.doOnAttach();
+  }
+  // 判断 View size 是否发生了改变
+  private isViewSizeChanged(width: number, height: number): boolean {
+    return this.viewRect == null ||
+      Math.abs(this.viewRect.width - width) >= 0.1 ||
+      Math.abs(this.viewRect.height - height) >= 0.1;
+  }
+
+  onAreaChange(newValue: Area) {
+    const newWidth = newValue.width as number;
+    const newHeight = newValue.height as number;
+    const sizeChanged = this.isViewSizeChanged(newWidth, newHeight);
+    // 始终更新 viewRect（包括 globalPosition），确保位置信息准确
+    this.viewRect = new KRRect(newValue.globalPosition.x as number,
+      newValue.globalPosition.y as number,
+      newWidth,
+      newHeight);
+    // 窗口变化后的首个布局回调：viewRect 已由本回调写入最新值，可确认同步。
+    // 纯位置滚动（无 windowSizeChange）且尺寸未变时不开门，保留判据A 对「旧朝向尺寸」的保护；
+    // 但窗口确实变过、只是重测量低于 0.1dp 阈值（非全屏/固定尺寸视图形态）时必须开门——
+    // 此时不存在旋转轴差，若继续拦着，新 insets 会被 lastTrustedInsets 永久钳制而无法送达。
+    const windowChangeConfirmed = this.windowSizeChangedPending;
+    if (sizeChanged || windowChangeConfirmed) {
+      this.viewSyncedByWindow = true;
+      this.windowSizeChangedPending = false;
+    }
+    if (this.didInit) {
+      if (this.sizeChangeHandledByOnSizeChange) {
+        // 已在 onSizeChange 中提前处理过，消费标志位，跳过重复执行
+        this.sizeChangeHandledByOnSizeChange = false;
+      } else if (sizeChanged || windowChangeConfirmed) {
+        // 尺寸未变但窗口确认同步时同样补发一次，把新 insets 送达 Kotlin；
+        // 事件级判等会消除与 onSizeChange 提前路径的重复下发
+        this.doOnAreaChange(newValue);
+        this.notifySizeChange();
+      }
+    } else {
+      this.doOnAttach();
+    }
+  }
+
+  onSizeChange(newValue: SizeOptions) {
+    if (this.viewRect == null) {
+      return;
+    }
+    const newWidth = newValue.width as number;
+    const newHeight = newValue.height as number;
+    if (!this.isViewSizeChanged(newWidth, newHeight)) {
+      return;
+    }
+    // 仅当业务方开启了 rootViewSizeDidChanged 同步策略时，才在布局前提前触发同步渲染
+    if (this.didInit && this.syncSendEvent(KRRootViewSizeDidChangedEventKey)) {
+      // onSizeChange 是布局前回调：提前更新 viewRect 使后续下发必然使用「新 viewRect − 新 safeAreaRect」，
+      // 关闭与 safeArea 刷新之间的错配窗口。
+      // 开门（判据A恢复换算）必须与「新尺寸写入」原子完成：先开门后写尺寸（或未写入）会留下
+      // 「门已开、viewRect 仍旧尺寸」的间隙，间隙内的 avoidAreaChange 下发会用旧尺寸换算出怪胎 insets；
+      // syncSendEvent=false 时不在此开门，由 onAreaChange 重建 viewRect 后开门并兜底下发
+      this.viewRect.width = newWidth;
+      this.viewRect.height = newHeight;
+      this.viewSyncedByWindow = true;
+      // 提前路径已用新 viewRect 完成同步，消费窗口变化待确认标志
+      this.windowSizeChangedPending = false;
+      this.runKRRenderTask(() => {
+        render.onRenderViewSizeChanged(this.instanceId, newWidth, newHeight);
+      });
+      this.notifySizeChange();
+      // 标记已处理，避免 onAreaChange 中重复执行
+      this.sizeChangeHandledByOnSizeChange = true;
+    }
+  }
+
+  onAboutToDisappear() {
+    this.destroyed = true;
+    try {
+      if (this.windowClass) {
+        this.windowClass.off('avoidAreaChange', this.avoidAreaListener);
+        this.windowClass.off('windowSizeChange', this.onWindowSizeChanged);
+      }
+      this.unregisterFoldStatusListener();
+      if (this.environmentCallbackId != -1) {
+        let applicationContext = this.uiAbilityContext?.getApplicationContext();
+        applicationContext?.off('environment', this.environmentCallbackId);
+        this.environmentCallbackId = -1;
+      }
+    } catch (e) {
+      KRRenderLog.e('Window', `unregister event failed:${e.code}`);
+    }
+
+    this.doAboutToDisappear();
+    KRNativeManager.getInstance().removeWindowInfoIfNeed(this.windowId);
+    KRNativeManager.getInstance().removeNativeInstance(this.instanceId);
+  }
+
+  onPageShow() {
+    this.doOnPageShow();
+
+    if (this.didInit && !this.destroyed) {
+      const newDensity = this.getWindowActiveDensity();
+      if (newDensity != this.densityPixels) {
+        // density变化，原因是修改了系统的无障碍选项
+        this.doOnDensityChanged(newDensity);
+      } else if (this.windowClass != null && !this.imeMode) {
+        // 回前台补刷：后台期间窗口/避让区可能已变化而回调未送达（或送达时未初始化），
+        // 主动重取 safeAreaRect 经唯一入库口验货下发（下发口按「上次已送达快照」判等，
+        // 值未变化时不产生冗余的全量 rootViewSizeDidChanged 事件）
+        try {
+          if (this.updateSafeInsetsHandler > 0) {
+            clearTimeout(this.updateSafeInsetsHandler);
+            this.updateSafeInsetsHandler = 0;
+          }
+          this.onSafeAreaInsetsChanged(this.getSafeAreaRect(this.windowClass), true, 'pageShow');
+        } catch (e) {
+          KRRenderLog.e('Window', `pageShow refresh safearea error code:${e.code}`);
+        }
+      }
+    }
+  }
+
+  private doOnDensityChanged(newDensity: number) {
+    const oldDensity = this.densityPixels;
+    this.densityPixels = newDensity;
+
+    let data: Record<string, string | number> = {
+      'vp2px': vp2px(1.0),
+    };
+
+    render.updateConfig(this.instanceId, JSON.stringify(data));
+
+    if (this.windowRect) {
+      this.windowRect = new KRRect(0, 0,
+        px2vp(this.windowRect.width * oldDensity),
+        px2vp(this.windowRect.height * oldDensity)
+      );
+
+      this.notifyWindowSizeChanged(this.windowRect.width, this.windowRect.height);
+    }
+    if (this.viewRect) {
+      this.viewRect = new KRRect(
+        px2vp(this.viewRect.x * oldDensity),
+        px2vp(this.viewRect.y * oldDensity),
+        px2vp(this.viewRect.width * oldDensity),
+        px2vp(this.viewRect.height * oldDensity)
+      );
+
+      this.onViewSizeChanged(this.viewRect, oldDensity, newDensity);
+    }
+    if (this.windowClass) {
+      try {
+        // 密度变化后旧基准的 dp 语义已整体失效（窗口/避让的 dp 值随密度缩放），重置比较基准，
+        // 避免判据B拿旧密度侧值与新密度侧值比较产生跨密度误判
+        this.lastSafeAreaRect = null;
+        this.lastSafeAreaWinRect = null;
+        this.onSafeAreaInsetsChanged(this.getSafeAreaRect(this.windowClass), true, 'densityChanged');
+      } catch (e) {
+        KRRenderLog.e('Window', `doOnDensityChanged update safearea error code:${e.code}`);
+      }
+    }
+  }
+
+  onPageHide() {
+    this.doOnPageHide();
+  }
+
+  sendEvent(event: string, data: KRRecord) {
+    this.doSendEvent(event, data);
+  }
+
+  sendEventSync(event: string, data: KRRecord, sync: boolean) {
+    this.doSendEvent(event, data, sync);
+  }
+
+  onBackPress() {
+    const sendTime = Date.now();
+    this.doSendEvent(KROnBackPressedKey, {}, this.syncSendEvent(KROnBackPressedKey));
+    const result: number = render.isBackPressConsumed(this.instanceId, sendTime);
+    if (result === KRBackPressConsumedState.Consumed) {
+      return true;
+    } else if (result === KRBackPressConsumedState.NotConsumed) {
+      return false;
+    }
+    return false;
+  }
+
+  putParam(key: string, value: KRValue) {
+    this.externalParams[key] = value;
+  }
+
+  getParam(key: string): KRAny | null {
+    return this.externalParams[key];
+  }
+
+  setExternalController(controller: object) {
+    this.externalController = controller;
+  }
+
+  getExternalController<T>(): T {
+    return this.externalController as T;
+  }
+
+  getUIAbilityContext(): common.UIAbilityContext | null {
+    return this.uiAbilityContext;
+  }
+
+  private doOnPageShow() {
+    const data: KRRecord = {};
+    data[KRPageDidAppearEventKey] = '1';
+    this.doSendEvent(KRPageDidAppearEventKey, data, this.syncSendEvent(KRPageDidAppearEventKey));
+  }
+
+  private doOnPageHide() {
+    const data: KRRecord = {};
+    data[KRPageDidDisappearEventKey] = '1';
+    this.doSendEvent(KRPageDidDisappearEventKey, data, this.syncSendEvent(KRPageDidDisappearEventKey));
+  }
+  // 外部接口：提供给业务指定需要同步执行的事件
+  syncSendEvent(event: string): boolean {
+    return event === KROnBackPressedKey;
+  }
+
+  private doSendEvent(event: string, data: KRRecord, sync?: boolean) {
+    this.runKRRenderTask(() => {
+      const shouldSync = sync ?? this.syncSendEvent(event);
+      // Record 直接下发：Native 侧构造 Map → NATIVE_JSON，避免 JSON.stringify + Kotlin 重解析
+      if (shouldSync) {
+        render.sendEventSync(this.instanceId, event, data, true);
+      } else {
+        render.sendEvent(this.instanceId, event, data);
+      }
+    });
+  }
+
+  private doOnAttach() {
+    if (this.didInit) {
+      return;
+    }
+    if (!this.paramsReady()) {
+      return;
+    }
+    this.doDidInit();
+  }
+
+  private doDidInit() {
+    if (this.viewRect == null) {
+      return;
+    }
+    this.didInit = true;
+    const pageData = this.createPageParams(this.pageParams, this.viewRect.width, this.viewRect.height);
+    // 初始下发基线快照（deviceWidth/deviceHeight 初值来自物理屏幕 screenSize）
+    const configJson = this.createConfigJson(new KRSize(this.viewRect.width, this.viewRect.height));
+    render.onInitRenderView(this.instanceId, this.pageName, this.contextCode, this.executeMode.mode, pageData,
+      this.viewRect.width, this.viewRect.height, configJson, this.uiContext,
+      this.uiContext?.getHostContext()?.resourceManager);
+    this.runLazyTasksOnce();
+  }
+
+  addKuiklyRenderViewLifecycleCallback(callback: IKuiklyRenderViewLifecycleCallback) {
+    this.lifecycleCallbacks.push(callback)
+  }
+
+  dispatchLifecycleStateChanged(state: number, params?: Object): void {
+    switch (state) {
+      case KRLifecycleState.STATE_INIT: {
+        this.lifecycleCallbacks.forEach(callback => callback.onInit());
+        break;
+      }
+      case KRLifecycleState.STATE_INIT_CORE_START: {
+        this.lifecycleCallbacks.forEach(callback => callback.onInitCoreStart());
+        break;
+      }
+      case KRLifecycleState.STATE_INIT_CORE_FINISH: {
+        this.lifecycleCallbacks.forEach(callback => callback.onInitCoreFinish());
+        break;
+      }
+      case KRLifecycleState.STATE_INIT_CONTEXT_START: {
+        this.lifecycleCallbacks.forEach(callback => callback.onInitContextStart());
+        break;
+      }
+      case KRLifecycleState.STATE_INIT_CONTEXT_FINISH: {
+        this.lifecycleCallbacks.forEach(callback => callback.onInitContextFinish());
+        break;
+      }
+      case KRLifecycleState.STATE_CREATE_INSTANCE_START: {
+        this.lifecycleCallbacks.forEach(callback => callback.onCreateInstanceStart());
+        break;
+      }
+      case KRLifecycleState.STATE_CREATE_INSTANCE_FINISH: {
+        this.lifecycleCallbacks.forEach(callback => callback.onCreateInstanceFinish());
+        break;
+      }
+      case KRLifecycleState.STATE_FIRST_FRAME_PAINT: {
+        this.lifecycleCallbacks.forEach(callback => callback.onFirstFramePaint());
+        break;
+      }
+    }
+  }
+
+  private doAboutToDisappear() {
+    this.runKRRenderTask(() => {
+      render.onDestroyRenderView(this.instanceId);
+    });
+  }
+
+  private doOnAreaChange(newValue: Area) {
+    this.runKRRenderTask(() => {
+      render.onRenderViewSizeChanged(this.instanceId, newValue.width as number, newValue.height as number);
+    });
+  }
+
+  private createPageParams(params: KRPageData, viewWidth: number, viewHeight: number): KRRecord {
+    let screenSize = KRConvertUtil.screenSize();
+    let pageData: Record<string, string | number | KRPageData> = {};
+    const sysLang = i18n.System.getSystemLanguages()[0];
+    // A KRJsonValue may be shared by the source page, the route store and this page, so it gets
+    // a copy carrying sysLang instead of an in-place write.
+    let pageParams: KRPageData = params;
+    if (render.isKRJSON(params)) {
+      pageParams = render.krJsonWithEntry(params as object, KRSystemLanguageKey, sysLang) as KRJsonValue;
+    } else {
+      (params as KRRecord)[KRSystemLanguageKey] = sysLang;
+    }
+    pageData[KRParamKey] = pageParams;
+    pageData[KRRootViewWidthKey] = viewWidth;
+    pageData[KRRootViewHeightKey] = viewHeight;
+    pageData[KRUrlKey] = this.pageName;
+    if (!this.imeMode) {
+      pageData[KRStatusBarHeightKey] = this.safeAreaRect!.y;
+      let windowInfo = KRNativeManager.getInstance().getWindowInfo(this.windowId);
+      if (windowInfo != undefined) {
+        pageData[KRActivityWidthKey] = px2vp(windowInfo.getWindowRect().width);
+        pageData[KRActivityHeightKey] = px2vp(windowInfo.getWindowRect().height);
+      }
+      pageData[KRSafeAreaInsets] = this.encodeSafeAreaInsetsString();
+      pageData[KRHingeStatusKey] = this.lastHingeStatusRaw;
+    }
+
+    let versionName = "1.0.0"
+    let osFullName = ""
+    try {
+      const bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION)
+      versionName = bundleInfo.versionName;
+      osFullName = deviceInfo.osFullName; // system version
+    }catch (e) {
+      // noop
+    }
+
+    pageData[KRDeviceWidthKey] = screenSize.width;
+    pageData[KRDeviceHeightKey] = screenSize.height;
+    pageData[KROsVersionKey] = osFullName; // 系统版本
+    pageData[KRNativeBuild] = 3;
+    pageData[KRAppVersionKey] = versionName;
+    pageData[KRPlatformKey] = 'ohos';
+    pageData[KRDensity] = this.getWindowActiveDensity();
+    pageData[KRFeature] = {
+      "box_shadow_fill" : 1
+    };
+    return pageData;
+  }
+
+  private createConfigJson(screenSize: KRSize): string {
+    let data: Record<string, string | number | boolean> = {
+      'vp2px': vp2px(1.0),
+      'screen_width': screenSize.width,
+      'screen_height': screenSize.height,
+      'resfile_dir': getContext().resourceDir,
+      'files_dir': getContext().filesDir,
+      'assets_dir': this.assetsDir,
+      'fontWeightScale': this.fontWeightScale,
+      'fontSizeScale': this.fontSizeScale,
+      'imeMode': this.imeMode ? 1 : 0,
+      'windowId': this.windowId,
+      'fontSizeScaleFollowSystem': this.fontSizeScaleFollowSystem() ? 1 : 0,
+      'performanceMonitorTypesMask': this.getMonitorTypeMask(),
+      "useOhSharedPreferences": this.useOhSharedPreferences
+    };
+
+    return JSON.stringify(data);
+  }
+
+  private runKRRenderTask(task: () => void) {
+    if (this.didInit) {
+      task();
+    } else {
+      this.lazyTasks.push(task);
+    }
+  }
+
+  private runLazyTasksOnce() {
+    this.lazyTasks.forEach((task, _) => {
+      task();
+    });
+    this.lazyTasks = [];
+  }
+
+  private getSafeAreaRect(data: window.Window): KRRect {
+    const winRect = data.getWindowProperties().windowRect;
+    const insets: Insets = {
+      left: 0,
+      top: 0,
+      right: winRect.width,
+      bottom: winRect.height,
+    };
+    const handle = (avoidArea: window.AvoidArea) => {
+      if (avoidArea.leftRect.width) {
+        insets.left = Math.max(insets.left, avoidArea.leftRect.left + avoidArea.leftRect.width);
+      }
+      if (avoidArea.topRect.height) {
+        insets.top = Math.max(insets.top, avoidArea.topRect.top + avoidArea.topRect.height);
+      }
+      if (avoidArea.rightRect.width) {
+        insets.right = Math.min(insets.right, avoidArea.rightRect.left);
+      }
+      if (avoidArea.bottomRect.height) {
+        insets.bottom = Math.min(insets.bottom, avoidArea.bottomRect.top);
+      }
+    };
+    handle(data.getWindowAvoidArea(window.AvoidAreaType.TYPE_SYSTEM));
+    handle(data.getWindowAvoidArea(window.AvoidAreaType.TYPE_CUTOUT));
+    handle(data.getWindowAvoidArea(window.AvoidAreaType.TYPE_NAVIGATION_INDICATOR));
+    const result = new KRRect(px2vp(insets.left), px2vp(insets.top), px2vp(insets.right - insets.left),
+      px2vp(insets.bottom - insets.top));
+    return result;
+  }
+
+  /**
+   * 获取窗口活跃的density
+   * customDensity的值默认为systemDensity
+   * 如果windowStage主动设置了DefaultDensityEnabled/CustomDensity,则分别是defaultDensity/customDensity
+   * 因此默认取customDensity作为活跃的density
+   */
+  private getWindowActiveDensity() {
+    if (this.windowClass != null) {
+      return this.windowClass.getWindowDensityInfo?.().customDensity ?? display.getDefaultDisplaySync().densityPixels;
+    } else {
+      return display.getDefaultDisplaySync().densityPixels
+    }
+  }
+
+  /**
+   * 字体缩放是否跟随系统
+   * @return boolean true:跟随系统(默认) false:不跟随系统(缩放比例为1)
+   */
+  fontSizeScaleFollowSystem(): boolean {
+    return true
+  }
+
+  /**
+   * 应用配置的最大字体倍率（宿主经 app.json5 configuration fontSizeMaxScale 或
+   * UIContext.setMaxFontScale 设置，ArkUI 原生组件遵循该上限；而系统
+   * Configuration.fontSizeScale 恒为系统原值、不含应用上限，不能直接当作有效倍率）。
+   * Kuikly 段落字号在 C++ 侧（KRParagraph）直接乘以下发倍率、不经过 ArkUI，
+   * 故须在入口统一限幅，保持与宿主原生文字一致。
+   * 未配置上限时 getMaxFontScale 返回 ArkUI 默认上限 2.0（取值范围 1~3，与宿主
+   * 原生组件默认行为一致）；仅 API 12 及以下设备（该方法为 API 13+）读取抛异常
+   * 或 uiContext 为空时返回 Number.MAX_VALUE 兜底，min 后保持原行为。
+   */
+  private getEffectiveMaxFontScale(): number {
+    try {
+      if (this.uiContext != null) {
+        return this.uiContext.getMaxFontScale();
+      }
+    } catch (e) {
+      KRRenderLog.e('Configuration', `getMaxFontScale failed: ${e}`);
+    }
+    return Number.MAX_VALUE;
+  }
+
+  /**
+   * 回调启动数据
+   */
+  onGetLaunchData(data: KRRecord): void {
+  }
+
+  /**
+   * 回调性能数据
+   */
+  onGetPerformanceData(data: KRRecord): void {
+  }
+
+  /**
+   * Kuikly框架设置性能监控选项，默认只开启动监控
+   * @return Array<KRMonitorType>: 需要设置的性能监控选项列表
+   */
+  performanceMonitorTypes(): Array<KRMonitorType> {
+    return [KRMonitorType.LAUNCH];
+  }
+
+  private getMonitorTypeMask(): number {
+    const mask = this.performanceMonitorTypes().reduce((acc: KRMonitorType, cur: KRMonitorType) => acc | cur, 0);
+    return mask;
+  }
+
+  /**
+   * 鸿蒙 display.FoldStatus 映射后再写入 hingeStatus。
+   * 双折轴 API 15+ 的复合状态按华为折叠屏 FAQ 的「展开 / 折叠 / 悬停」口径归类。
+   */
+  private mapFoldStatusToHingeRaw(foldStatus: number): number {
+    switch (foldStatus) {
+      case display.FoldStatus.FOLD_STATUS_FOLDED:
+        return 1; // HingeStatus.CLOSED
+      case display.FoldStatus.FOLD_STATUS_HALF_FOLDED:
+        return 2; // HingeStatus.PARTIALLY_OPEN
+      case display.FoldStatus.FOLD_STATUS_EXPANDED:
+        return 3; // HingeStatus.FULLY_OPEN
+      case display.FoldStatus.FOLD_STATUS_UNKNOWN:
+        return 0;
+      // 双折轴（API 15+）复合态：11 双展开；12 一折二展视为展开；13/21/23 悬停；22 双折半开
+      case 11:
+        return 3;
+      case 12:
+        return 3;
+      case 13:
+      case 21:
+      case 22:
+      case 23:
+        return 2;
+      default:
+        return 0;
+    }
+  }
+
+  private registerFoldStatusListenerIfNeeded(): void {
+    try {
+      if (!display.isFoldable()) {
+        return;
+      }
+      this.lastHingeStatusRaw = this.mapFoldStatusToHingeRaw(display.getFoldStatus());
+    } catch (e) {
+      KRRenderLog.e('Display', `read fold status failed: ${e}`);
+      return;
+    }
+    if (this.foldStatusCallback != null) {
+      return;
+    }
+    this.foldStatusCallback = (status: display.FoldStatus) => {
+      const raw = this.mapFoldStatusToHingeRaw(status);
+      if (raw === this.lastHingeStatusRaw) {
+        return;
+      }
+      this.lastHingeStatusRaw = raw;
+      if (this.didInit) {
+        this.notifySizeChange();
+      }
+    };
+    try {
+      display.on('foldStatusChange', this.foldStatusCallback);
+    } catch (e) {
+      KRRenderLog.e('Display', `register foldStatusChange failed: ${e}`);
+      this.foldStatusCallback = null;
+    }
+  }
+
+  private unregisterFoldStatusListener(): void {
+    if (this.foldStatusCallback == null) {
+      return;
+    }
+    try {
+      display.off('foldStatusChange', this.foldStatusCallback);
+    } catch (e) {
+      KRRenderLog.e('Display', `unregister foldStatusChange failed: ${e}`);
+    }
+    this.foldStatusCallback = null;
+  }
+
+}
+
+export abstract class IKuiklyViewDelegate extends KRNativeRenderController {
+  /**
+   * 获取自定义扩展渲染视图创建注册Map
+   */
+  abstract getCustomRenderViewCreatorRegisterMap(): Map<string, KRRenderViewExportCreator>;
+
+  /**
+   * 获取自定义扩展渲染视图创建注册Map。
+   * 通过这个方式注册的creator，创建的自定义view将不会有影子节点处理基础事件，需要用户在arkts侧响应所有属性的设置。
+   * 当这个方式的好处是，由于不存在影子节点，其view曾经和DSL中定义的是保持一致的。
+   * 建议仅在有强一致层级需求的时候才采用。
+   */
+  getCustomRenderViewCreatorRegisterMapV2(): Map<string, KRRenderViewExportCreator>{
+    // by default
+    return new Map();
+  }
+
+  /**
+   * 获取自定义扩展module创建注册Map
+   */
+  abstract getCustomRenderModuleCreatorRegisterMap(): Map<string, KRRenderModuleExportCreator>;
+
+  pageDidAppear() {
+    this.onPageShow();
+  }
+
+  pageDidDisappear() {
+    this.onPageHide();
+  }
+
+  /**
+   * 获取自定义[KuiklyRenderView]生命周期回调
+   */
+  getKuiklyRenderViewLifecycleCallback(): IKuiklyRenderViewLifecycleCallback | null {
+    return null
+  }
+}
+
+enum KRLifecycleState {
+  STATE_INIT = 1,
+  STATE_INIT_CORE_START,
+  STATE_INIT_CORE_FINISH,
+  STATE_INIT_CONTEXT_START,
+  STATE_INIT_CONTEXT_FINISH,
+  STATE_CREATE_INSTANCE_START,
+  STATE_CREATE_INSTANCE_FINISH,
+  STATE_FIRST_FRAME_PAINT
+}
+
+/**
+ * RenderView 生命周期回调
+ */
+export interface IKuiklyRenderViewLifecycleCallback {
+
+  /**
+   * 启动
+   */
+  onInit(): void
+
+  /**
+   * renderCore 初始化开始
+   */
+  onInitCoreStart(): void
+
+  /**
+   * renderCore 初始化完成
+   */
+  onInitCoreFinish(): void
+
+  /**
+   * 初始化渲染环境开始
+   */
+  onInitContextStart(): void
+
+  /**
+   * 初始化渲染环境完成
+   */
+  onInitContextFinish(): void
+
+  /**
+   * 创建页面开始
+   */
+  onCreateInstanceStart(): void
+
+  /**
+   * 创建页面结束
+   */
+  onCreateInstanceFinish(): void
+
+  /**
+   * 页面首帧渲染完成
+   */
+  onFirstFramePaint(): void
+
+}
+
+/**
+ * 性能监控类型
+ */
+export enum KRMonitorType {
+  LAUNCH = 1 << 0,  // 1 启动监控
+  FRAME = 1 << 1,  // 2 FPS监控
+  MEMORY = 1 << 2,  // 4 内存监控
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "kmp-kuikly-ohos-sync-gesture-context-scheduling",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "openspec/specs/ohos-sync-event-scheduling/spec.md",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/openspec/specs/ohos-sync-event-scheduling/spec.md",
+      "sha256": "15541e665cc9b199aa7d5778447e6752a234c4363d0c2329844a5fd60190d1a7",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "openspec/specs/ohos-vsync-frame-dispatcher/spec.md",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/openspec/specs/ohos-vsync-frame-dispatcher/spec.md",
+      "sha256": "ecdb5eee2b374458f110bffb34e6aafbfa94a8900b86185007bcd4447992bfe0",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/core/KRRenderCore.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/cpp/libohos_render/core/KRRenderCore.cpp",
+      "sha256": "99bdf757817e50ae0b87a31a175328fb65bc18de0716f7199821492a4d78aaa6",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Requirements were read from the repository specification with renderer file changes sampled, not a line-by-line implementation audit."
+  ]
+}

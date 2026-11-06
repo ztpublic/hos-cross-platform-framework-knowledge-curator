@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ohos-tts-playback-completion-and-voice-rebind",
+  "sources": [
+    {
+      "collection": "flutter-tts-ohos",
+      "original_path": "ohos/src/main/ets/components/plugin/FlutterTtsPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-tts-ohos/2026-11-06/ohos/src/main/ets/components/plugin/FlutterTtsPlugin.ets",
+      "sha256": "bac831f9bc2694f28dbd23b3ae2366cd29111dc770021ecbab90f62521e6b40a",
+      "revision": "79bdecaefa19dd9ea53403ee5da46462a3332651",
+      "license": "MIT",
+      "url": "https://atomgit.com/oh-flutter/flutter_tts_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

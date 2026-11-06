@@ -49,6 +49,8 @@ Preserve the original URI and its operation-specific grant; convert to a path on
 
 Relevant to all framework adapters using HarmonyOS document selection, including PC external volumes. File and directory authority, API level and access lifetime can differ.
 
+**Folder selection is not a write grant.** A write-up reports that a folder URI from DocumentViewPicker.select carries only temporary read permission, so writing a child file fails with `OpenFile ... err: 5`. It uses DocumentViewPicker.save with defaultFilePathUri set to that folder, letting the user confirm. This is a documentation report; check it on your API level and see the persistent-grant entry for long-term access.
+
 ## Common mistakes
 
 Do not strip a URI prefix into a path, infer recursive access, or treat permission denial as file deletion.

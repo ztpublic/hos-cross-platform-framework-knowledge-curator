@@ -19,11 +19,22 @@
       "revision": "e3f69039c6394ac7366449a9330b5749ce6a10b1",
       "license": "MIT; see maintenance/licenses/qt-MIT.txt",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter-harmony-ebook",
+      "original_path": "docs/flutter_file_dialog-鸿蒙适配实战.md",
+      "snapshot": "provenance/snapshots/projects/flutter-harmony-ebook/2026-11-06/docs/flutter_file_dialog-鸿蒙适配实战.md.evidence.json",
+      "sha256": "bcca54044749fe4b44935d0f094a81f01dcaed43bf5a4864339a3733ac25eaba",
+      "revision": "b0336a709fb16d37d4ce21fd7e3f1d0c86fa5983",
+      "license": "No license file found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/oh-flutter/flutter-harmony-ebook",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "transformations": [
     "Rewritten as one situation-to-solution contract; source identity retained only in provenance.",
-    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework."
+    "Classification follows mechanism rather than source framework. Common applicability is a conditional synthesis, not verification in another framework.",
+    "Added folder-selection write limit reported by a plugin write-up (documentation claim; hash-only evidence)."
   ],
   "limitations": [
     "Imported guidance only; original builds, devices and upstream APIs were not revalidated.",

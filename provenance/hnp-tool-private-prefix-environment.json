@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "hnp-tool-private-prefix-environment",
+  "sources": [
+    {
+      "collection": "github-desktop-ohos",
+      "original_path": "patches/desktop-ohos.patch",
+      "snapshot": "provenance/snapshots/projects/github-desktop-ohos/2026-11-06/patches/desktop-ohos.patch",
+      "sha256": "c426618e617273ca8a6b02632e1bc19ef4b9f7fc61384d0dbf83553d76819b9b",
+      "revision": "53bfd6d3f5cdc9bf0b15b71aeaa17bffae52d629",
+      "license": "MIT (upstream LICENSE retained in repository).",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_github-desktop_electron",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "github-desktop-ohos",
+      "original_path": "hnp-src/ghdtools/hnp.json",
+      "snapshot": "provenance/snapshots/projects/github-desktop-ohos/2026-11-06/hnp-src/ghdtools/hnp.json",
+      "sha256": "eaf8e87a29152961c4bfecc03c590ba2faa52c064b827096394ac1e021b05d8d",
+      "revision": "53bfd6d3f5cdc9bf0b15b71aeaa17bffae52d629",
+      "license": "MIT (upstream LICENSE retained in repository).",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_github-desktop_electron",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

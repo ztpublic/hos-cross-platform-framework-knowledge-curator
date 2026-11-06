@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "rust-ohos-tls-without-openssl",
+  "sources": [
+    {
+      "collection": "tauri-harmony-jianguoxu",
+      "original_path": "src-tauri/Cargo.toml",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-jianguoxu/2026-11-06/src-tauri/Cargo.toml.evidence.json",
+      "sha256": "d028d727f0522ff5dc9f44b83f483fd029ebda987d31ac87781ec3abebf7729f",
+      "revision": "61a2fdeb4910ec2dcf1d1d7e14af34b02b0ef1ce",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/jianguoxu/Tauri-harmony",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "tauri-harmony-jianguoxu",
+      "original_path": "src-tauri/Cargo.lock",
+      "snapshot": "provenance/snapshots/projects/tauri-harmony-jianguoxu/2026-11-06/src-tauri/Cargo.lock.evidence.json",
+      "sha256": "f63798b978f393755afb116a0921fb4c88155da74106c082deb445da13f4468b",
+      "revision": "61a2fdeb4910ec2dcf1d1d7e14af34b02b0ef1ce",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/jianguoxu/Tauri-harmony",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Hash-only evidence for sources without a license; bytes are not retained."
+  ],
+  "source_reported_evidence": [
+    "The source repository documentation reports the OpenSSL failure."
+  ]
+}

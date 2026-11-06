@@ -65,6 +65,8 @@ If ArkTS rejects or obscures a generic `Object` result, define an interface for 
 
 For large binary transfers, use the [owned chunk protocol](chunked-native-file-transfer.md) rather than an unbounded JSON array. Enforce integral byte/index/length fields before converting to Uint8Array; coercion can silently wrap invalid values.
 
+**Bytes for fileIo.** A write-up reports that a Dart Uint8List arrives as a Uint8Array, and fileIo.writeSync fails with `Failed to resolve buf and options`. Copy out an exact ArrayBuffer with `slice(byteOffset, byteOffset + byteLength)` before writing, so a view of a larger buffer does not write extra bytes.
+
 ## Common mistakes
 
 A cast does not validate an external value. Similar-looking accessors or APIs from another embedding version may not have the same contract.

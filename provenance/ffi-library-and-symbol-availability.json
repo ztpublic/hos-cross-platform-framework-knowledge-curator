@@ -19,6 +19,16 @@
       "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
       "license": "No database-level license found; upstream project license context retained in original provenance.",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/scheduler/KRContextScheduler.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/cpp/libohos_render/scheduler/KRContextScheduler.cpp",
+      "sha256": "af9f9497ecc6bf3248966e655ebad3d59ad17a344efeddd7316a40a87b37a58f",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "upstream_provenance": {
@@ -131,7 +141,8 @@
   "transformations": [
     "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
     "Single-contract entry retained.",
-    "Generalized runtime prose where the native contract does not depend on Flutter."
+    "Generalized runtime prose where the native contract does not depend on Flutter.",
+    "Added hidden-visibility export note from a release-only missing-symbol fix."
   ],
   "limitations": [
     "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "arkweb-javascriptproxy-deferred-reply",
+  "sources": [
+    {
+      "collection": "compose-webview-ohos",
+      "original_path": "example/ohos/entry/src/main/ets/pages/Index.ets",
+      "snapshot": "provenance/snapshots/projects/compose-webview-ohos/2026-11-06/example/ohos/entry/src/main/ets/pages/Index.ets",
+      "sha256": "10b6f33487830a12c344d838ab4c9030328076fe962916a48220e1259cfd12fb",
+      "revision": "4ec89b2b5ceb7eb7a38c96cda16407993f12bb18",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/oh-tpc/compose-webview-multiplatform",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

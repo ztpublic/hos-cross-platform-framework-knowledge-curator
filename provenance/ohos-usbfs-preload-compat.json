@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "ohos-usbfs-preload-compat",
+  "sources": [
+    {
+      "collection": "zcode-ohos",
+      "original_path": "web_engine/src/main/ets/adapter/UsbBridgeAdapter.ets",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/web_engine/src/main/ets/adapter/UsbBridgeAdapter.ets.evidence.json",
+      "sha256": "c9d8b098cc6305bc90d8f6b6a0f05edac59204aca4310e310d688b988d666b85",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "zcode-ohos",
+      "original_path": "web_engine/src/main/ets/adapter/UsbBridgeServer.ets",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/web_engine/src/main/ets/adapter/UsbBridgeServer.ets.evidence.json",
+      "sha256": "b48b1b49eea7700b74a4c28ab8ae08ff6dda93a3799bf9aca723edd756130c76",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "zcode-ohos",
+      "original_path": "native/usb-compat/sysfs.c",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/native/usb-compat/sysfs.c.evidence.json",
+      "sha256": "284fb826785b6e21e018833036c9276e75001ebb7d44786647d8a82e56a1c67e",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "zcode-ohos",
+      "original_path": "native/usb-compat/bridge.c",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/native/usb-compat/bridge.c.evidence.json",
+      "sha256": "964d27dfa97bfa8900b0c065ebbef8c812c0d288b5039476890a5f2b5713a8ba",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "zcode-ohos",
+      "original_path": "native/usb-compat/forkguard.c",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/native/usb-compat/forkguard.c.evidence.json",
+      "sha256": "25bfed154c722cf42984fbd72fd28434b86b15b72eca2d652dffa1c139b46b54",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "zcode-ohos",
+      "original_path": "docs/peripherals.md",
+      "snapshot": "provenance/snapshots/projects/zcode-ohos/2026-11-06/docs/peripherals.md.evidence.json",
+      "sha256": "8b883cfbec46e59973e070b854080bcd45925b0120525a721546aeb3b75d9c2c",
+      "revision": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/LiquidStudio/zcode",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Hash-only evidence for sources without a license; bytes are not retained."
+  ],
+  "source_reported_evidence": [
+    "The source documentation reports adb, fastboot and avrdude tests on devices. Attributed report; not repeated here."
+  ]
+}

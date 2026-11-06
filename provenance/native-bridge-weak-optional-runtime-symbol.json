@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-bridge-weak-optional-runtime-symbol",
+  "sources": [
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_ohos/src/main/cpp/presenter_bridge.h",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/packages/erika_ohos/src/main/cpp/presenter_bridge.h",
+      "sha256": "c3b398ecec8b5f06d9b3eec2cb4748b9fc298761df1774609a908be6ff4f0358",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "packages/erika_flutter/ohos/tests/presenter_stub.cpp",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/packages/erika_flutter/ohos/tests/presenter_stub.cpp",
+      "sha256": "cd14f75ece2ce9632b2b0c263e29d02bdb3325d11237defb08a3af57d0011807",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

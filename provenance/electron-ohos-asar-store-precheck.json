@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-asar-store-precheck",
+  "sources": [
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "scripts/stage-drawio-application.mjs",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/2026-11-06/scripts/stage-drawio-application.mjs",
+      "sha256": "5ed4b6af879386acd0b391bec99905cce10ac58e398e2aac8da065805c6b7d37",
+      "revision": "ca26149d68de99ede846b586d63286a128757a98",
+      "license": "GPL-3.0",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "scripts/verify-probe-hap.ps1",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/2026-11-06/scripts/verify-probe-hap.ps1",
+      "sha256": "82c646565fd2f2aa5a433a48f57182923629c3c9f030b0289e8cd2c2f7cdaa73",
+      "revision": "ca26149d68de99ede846b586d63286a128757a98",
+      "license": "GPL-3.0",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "drawio-in-harmony",
+      "original_path": "RELEASE.md",
+      "snapshot": "provenance/snapshots/projects/drawio-in-harmony/2026-11-06/RELEASE.md",
+      "sha256": "7f85d0a0b8f21f3c2acee7de970c69ced8b978f53f940c6eda65729b8a530b08",
+      "revision": "ca26149d68de99ede846b586d63286a128757a98",
+      "license": "GPL-3.0",
+      "url": "https://github.com/Red-Sa1t/drawio-in-harmony",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ],
+  "source_reported_evidence": [
+    "The source release notes report that the rebuilt package starts with --app-path=.../app.asar on a device. Whether the store check cleared is not established by the reviewed files."
+  ]
+}

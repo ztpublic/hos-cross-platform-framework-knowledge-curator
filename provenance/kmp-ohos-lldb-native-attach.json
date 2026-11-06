@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "kmp-ohos-lldb-native-attach",
+  "sources": [
+    {
+      "collection": "ohos-kmp-toolchain",
+      "original_path": "src/main/kotlin/org/cpf/kmp/tools/ohos/debugger/LLDBDebugProcess.kt",
+      "snapshot": "provenance/snapshots/projects/ohos-kmp-toolchain/2026-11-06/src/main/kotlin/org/cpf/kmp/tools/ohos/debugger/LLDBDebugProcess.kt",
+      "sha256": "20fb9f80ff16dd69c4a06e7bf53439f5faba7664c6ed39698d3ecb1481f56e75",
+      "revision": "94c4aa6365e79b2a2ffb4f870efd8699b1aa712c",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/CPF-KMP-CMP/ohos-kmp-toolchain",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "ohos-kmp-toolchain",
+      "original_path": "src/main/kotlin/org/cpf/kmp/tools/ohos/debugger/OhosExecSearchPathResolver.kt",
+      "snapshot": "provenance/snapshots/projects/ohos-kmp-toolchain/2026-11-06/src/main/kotlin/org/cpf/kmp/tools/ohos/debugger/OhosExecSearchPathResolver.kt",
+      "sha256": "2b0057091d6f35606d00261313c3a08aede4172da0f0468f3a4bf62f12b3d2b3",
+      "revision": "94c4aa6365e79b2a2ffb4f870efd8699b1aa712c",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/CPF-KMP-CMP/ohos-kmp-toolchain",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

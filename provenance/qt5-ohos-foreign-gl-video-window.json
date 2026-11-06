@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "qt5-ohos-foreign-gl-video-window",
+  "sources": [
+    {
+      "collection": "vidcutter-ohos",
+      "original_path": "entry/src/main/cpp/vidcutter_player.cpp",
+      "snapshot": "provenance/snapshots/projects/vidcutter-ohos/2026-11-06/entry/src/main/cpp/vidcutter_player.cpp.evidence.json",
+      "sha256": "2b7ebbdf98700d8672373d7b340d1c7c53147744038b1835cb38eabf3cb35917",
+      "revision": "61c9f545894d24de3b3f93978108a6125b8deedc",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vidcutter-ohos",
+      "original_path": "entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/vidcutter-ohos/2026-11-06/entry/src/main/cpp/CMakeLists.txt.evidence.json",
+      "sha256": "fc7bac24b33fd0de96e50e17f80b19e2c8f458952b907e7b204b3ada374399e8",
+      "revision": "61c9f545894d24de3b3f93978108a6125b8deedc",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

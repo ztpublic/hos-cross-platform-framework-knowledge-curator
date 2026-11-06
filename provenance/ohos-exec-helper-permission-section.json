@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "ohos-exec-helper-permission-section",
+  "sources": [
+    {
+      "collection": "qt-creator-ohos",
+      "original_path": "src/tools/qtc-askpass-ohos/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/qt-creator-ohos/2026-11-06/src/tools/qtc-askpass-ohos/CMakeLists.txt",
+      "sha256": "29e81e3c0289d3574ad1fbba0b0aceee39e31b08c9cb2aca20ee56678a8dddd0",
+      "revision": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+      "license": "GPL-3.0 with Qt exception; file headers also list Qt-Commercial.",
+      "url": "https://atomgit.com/ohos-qt/qt-creator",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qt-creator-ohos",
+      "original_path": "src/tools/qtc-askpass-ohos/askpass-ohos.cpp",
+      "snapshot": "provenance/snapshots/projects/qt-creator-ohos/2026-11-06/src/tools/qtc-askpass-ohos/askpass-ohos.cpp",
+      "sha256": "1f6aba98f10b21848ef55613565f406a3beb7b61de2a86519a7e689607ca0192",
+      "revision": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+      "license": "GPL-3.0 with Qt exception; file headers also list Qt-Commercial.",
+      "url": "https://atomgit.com/ohos-qt/qt-creator",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qt-creator-ohos",
+      "original_path": "bin_permission.json",
+      "snapshot": "provenance/snapshots/projects/qt-creator-ohos/2026-11-06/bin_permission.json",
+      "sha256": "494685e2edd73a2a72de432897b3749a5bbc2d1fd8229c547e45302602102143",
+      "revision": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+      "license": "GPL-3.0 with Qt exception; file headers also list Qt-Commercial.",
+      "url": "https://atomgit.com/ohos-qt/qt-creator",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "qt-creator-ohos",
+      "original_path": "src/plugins/projectexplorer/devicesupport/askpassserver.cpp",
+      "snapshot": "provenance/snapshots/projects/qt-creator-ohos/2026-11-06/src/plugins/projectexplorer/devicesupport/askpassserver.cpp",
+      "sha256": "92dec2e7c321379373381bfd144254f5361ad3f88dfe1f23da91a0d78dfcfa70",
+      "revision": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+      "license": "GPL-3.0 with Qt exception; file headers also list Qt-Commercial.",
+      "url": "https://atomgit.com/ohos-qt/qt-creator",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

@@ -19,6 +19,16 @@
       "revision": "0d01beb7f49ca9642107dc143da14e432841458c",
       "license": "No database-level license found; upstream project license context retained in original provenance.",
       "evidence_note": "Exact local working-file snapshot, potentially different from HEAD. Source-reported validation was not rerun."
+    },
+    {
+      "collection": "flutter-harmony-ebook",
+      "original_path": "docs/flutter_file_dialog-鸿蒙适配实战.md",
+      "snapshot": "provenance/snapshots/projects/flutter-harmony-ebook/2026-11-06/docs/flutter_file_dialog-鸿蒙适配实战.md.evidence.json",
+      "sha256": "bcca54044749fe4b44935d0f094a81f01dcaed43bf5a4864339a3733ac25eaba",
+      "revision": "b0336a709fb16d37d4ce21fd7e3f1d0c86fa5983",
+      "license": "No license file found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/oh-flutter/flutter-harmony-ebook",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "upstream_provenance": {
@@ -104,7 +114,8 @@
   "transformations": [
     "Retained actionable source guidance, normalized metadata and PC evidence boundary.",
     "Single-contract entry retained.",
-    "Retained Flutter-specific API/embedding conditions."
+    "Retained Flutter-specific API/embedding conditions.",
+    "Added Uint8Array-to-ArrayBuffer note reported by a plugin write-up (documentation claim; hash-only evidence)."
   ],
   "limitations": [
     "Exact local knowledge import, including uncommitted source bytes; upstream source and runtime tests were not rerun.",

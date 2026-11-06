@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-exec-path-metadata",
+  "sources": [
+    {
+      "collection": "electron-ohos-adapt",
+      "original_path": "references/code-adaptation.md",
+      "snapshot": "provenance/snapshots/projects/electron-ohos-adapt/2026-11-06/references/code-adaptation.md.evidence.json",
+      "sha256": "e062f8da4b1997c8284ec34f3fc8f782422e46998e6176d7f70a3d8a6286618e",
+      "revision": "990b266b6f36129322c2d8fad460bc19eef6ab6b",
+      "license": "No license file found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/openharmony-skills/electron-ohos-adapt",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Documentation claim only; hash-only evidence."
+  ]
+}

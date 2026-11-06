@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "qt-pyqt-ohos-ghost-tooltip-windows",
+  "sources": [
+    {
+      "collection": "vidcutter-ohos",
+      "original_path": "entry/src/main/resources/resfile/vidcutter/vidcutter_launch.py",
+      "snapshot": "provenance/snapshots/projects/vidcutter-ohos/2026-11-06/entry/src/main/resources/resfile/vidcutter/vidcutter_launch.py.evidence.json",
+      "sha256": "90ca0f39cc37a906e1630395450bc7b5c21c50c668790012fdcb33a4f700abad",
+      "revision": "61c9f545894d24de3b3f93978108a6125b8deedc",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

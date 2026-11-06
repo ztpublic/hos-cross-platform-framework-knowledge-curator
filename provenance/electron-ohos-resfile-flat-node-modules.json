@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-resfile-flat-node-modules",
+  "sources": [
+    {
+      "collection": "electron-harmonyos-kb",
+      "original_path": "problems/pnpm-nodemodules-symlink-ohos-resfile.md",
+      "snapshot": "provenance/snapshots/projects/electron-harmonyos-kb/2026-11-06/problems/pnpm-nodemodules-symlink-ohos-resfile.md.evidence.json",
+      "sha256": "de2bae36347f2f77425ec13a9a6c119fcceea292b48e32f9f122f772079cf8ef",
+      "revision": "f30776c87ab77a0567eda8a76c8643725334a9ca",
+      "license": "No license file; README says personal/team use. Hash-only evidence retained.",
+      "url": "https://atomgit.com/PERMISSION-DENIED/electron-harmonyos-kb",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Hash-only evidence. Project identity in the source is anonymized, and its evidence row is inconsistent with its device claim."
+  ]
+}

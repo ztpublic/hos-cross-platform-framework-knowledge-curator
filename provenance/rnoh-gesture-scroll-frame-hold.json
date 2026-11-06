@@ -51,11 +51,32 @@
       "license": "MIT",
       "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
       "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-11-06/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/native/NativeGestureManagerScroll.cpp",
+      "sha256": "09d553774e222c52265f07dcc3631e1a2ec2e1c34a28a96c233076756a4523d9",
+      "revision": "799c7f084c8243e15335efba2a2458ab391e656f",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-gesture-handler",
+      "original_path": "react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/NativeGestureManager.h",
+      "snapshot": "provenance/snapshots/projects/rnoh-gesture-handler/2026-11-06/react-native-harmony-gesture-handler/harmony/gesture_handler/src/main/cpp/NativeGestureManager.h",
+      "sha256": "1a8056ea0b5363c874f3f7f173f6e8e6651a31e14da1db5da4901ee648013405",
+      "revision": "799c7f084c8243e15335efba2a2458ab391e656f",
+      "license": "MIT",
+      "url": "https://gitcode.com/CPF-RN/rntpc_react-native-gesture-handler",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
     }
   ],
   "transformations": [
     "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
-    "Checks describe proposed acceptance cases; they were not executed."
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Added attach-before-mount retry note from a follow-up commit in the same gesture adapter."
   ],
   "limitations": [
     "No application build, device, emulator or PC validation performed.",

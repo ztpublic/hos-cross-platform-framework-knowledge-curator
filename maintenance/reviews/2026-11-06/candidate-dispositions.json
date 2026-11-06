@@ -1,0 +1,146 @@
+[
+  {
+    "url": "https://atomgit.com/LiquidStudio/zcode",
+    "disposition": "source-reviewed-contributed",
+    "reason": "USB compatibility layer contributed one atom; PTY, sqlite, HNP and resfile work already covered.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_carnac_electron",
+    "disposition": "screened-no-new-atom",
+    "reason": "main.js has no OH branch; dropping the global hook is a README claim.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/he-nan/electron-ohos-bridge",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Real N-API addon, AKI adapter and OH_Input calls. Hash-only evidence because of all-rights-reserved headers.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_insomnia_electron",
+    "disposition": "screened-no-new-atom",
+    "reason": "Pure-JS native addon replacement is covered by the addon ABI entry.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos-electron-builder",
+    "disposition": "screened-no-new-atom",
+    "reason": "Covered by the builder packaging entry; command-line signing noted as a lead for hap-signing-identity.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Anki",
+    "disposition": "unqualified",
+    "reason": "Description says PyQt6+QtWebEngine, but the build is a Qt5 QML stub over a JSON store with no CPython, PyQt or web layer.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/ohos-qt/qt-creator",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Real Q_OS_HARMONY branches; askpass helper and focus workaround. Sampled, not a full audit.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_krita",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Dependency build and main.cc fixes; default CMake build is a shell. Rawfile tree extraction and software-canvas seed rejected as atoms: fixed marker, swallowed failure and override of user choice make them poor guidance.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Shotcut",
+    "disposition": "screened-no-new-atom",
+    "reason": "Shell only with covered guards; full port is blocked according to its docs.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/bigmolihuan/hlbmerge_flutter",
+    "disposition": "unqualified",
+    "reason": "Phone-only deviceTypes and stock host; PC not targeted.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/oh-flutter/tracking_query",
+    "disposition": "screened-no-new-atom",
+    "reason": "phone+2in1 with stock host and no OH branches.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/XJ-Cyber/flutter_ohos_list_performance_demo",
+    "disposition": "unqualified",
+    "reason": "Phone-only generic list technique.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/CPF-RN/rn_ohfeatures",
+    "disposition": "screened-no-new-atom",
+    "reason": "Real TurboModules for phone features; DocumentPicker is covered.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/CPF-RN/rntpc_clipboard",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Pasteboard queue and image record structure.",
+    "commit": null
+  },
+  {
+    "url": "https://github.com/ftsukic/rnoh-keyboard-insets",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Fabric component with keyboard animation handling.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/wdracky/kmp-ohos-adapters",
+    "disposition": "unqualified",
+    "reason": "ArkTS rewrites and articles only; no Kotlin target or interop.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/oh-tpc/compose-webview-multiplatform",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Real ohosArm64/ohosX64 targets; example host contributed packaging and bridge atoms.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/jianguoxu/Tauri-harmony",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Resolved OH Tauri fork, cdylib and Ability host; TLS backend selection contributed.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/nutpi/InkNote",
+    "disposition": "different-framework",
+    "reason": "Flutter with flutter_rust_bridge, not Tauri; not reviewed further for adapter atoms.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+    "disposition": "source-reviewed-contributed",
+    "reason": "Driver extension, USB DDK and HID DDK sample.",
+    "commit": null
+  },
+  {
+    "url": "https://github.com/xristosstarnetgames439-del/HuiwenMCP",
+    "disposition": "not-fetched-suspicious-metadata",
+    "reason": "Disposable-looking owner, high stars and same-day push with a broad description. Not cloned or opened; treat with caution.",
+    "commit": null
+  },
+  {
+    "url": "https://github.com/dmalkerq/rnohp",
+    "disposition": "not-fetched-suspicious-metadata",
+    "reason": "Random-name repository family with placeholder description (also azyfg-aley/rnoh, Excellenceiuchannel/rnohfkxf, james2124661/rnohnm, scottana4/rnohae). Likely spam.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/PERMISSION-DENIED/electron-harmonyos-kb",
+    "disposition": "deferred-lead",
+    "reason": "Knowledge collection, not screened in this pass; also openharmony-skills/electron-ohos-adapt, OpenHarmonyPCDeveloper/ohos_Electron-skills and CPF-RN/usage-docs.",
+    "commit": null
+  },
+  {
+    "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_github-desktop_electron",
+    "disposition": "deferred-lead",
+    "reason": "Beyond the 20-candidate cap; also ohos_theia, ohos_rstudio, ohos_Scribus, ohos_git-cola, ohos-qt/openshot, ohos-pyqt/vidcutter, qq8864/tauri-ohos, CPF-KMP-CMP/ohos-kmp-toolchain, OHOS-CMP/compose-multiplatform-core.",
+    "commit": null
+  }
+]

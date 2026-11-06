@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "ohos-certificate-fingerprint-pinning",
+  "sources": [
+    {
+      "collection": "flutter-harmony-ebook",
+      "original_path": "docs/http_certificate_pinning-鸿蒙适配实战.md",
+      "snapshot": "provenance/snapshots/projects/flutter-harmony-ebook/2026-11-06/docs/http_certificate_pinning-鸿蒙适配实战.md.evidence.json",
+      "sha256": "28628f2645e82d52980715a31c9313f07288b56bd6a4a0146c7c568ed11e6e57",
+      "revision": "b0336a709fb16d37d4ce21fd7e3f1d0c86fa5983",
+      "license": "No license file found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/oh-flutter/flutter-harmony-ebook",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Documentation with code excerpts; hash-only evidence. The probe weakness is a curator caution."
+  ]
+}

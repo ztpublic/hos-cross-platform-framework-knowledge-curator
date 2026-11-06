@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "native-avcodec-native-buffer-format",
+  "sources": [
+    {
+      "collection": "liberika",
+      "original_path": "crates/erika/src/ohos/pixel_layout.rs",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/crates/erika/src/ohos/pixel_layout.rs",
+      "sha256": "ade7c86af0c7dc071665931f3facb877e6f0bbd18531b0327e61c91f6278ac46",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "liberika",
+      "original_path": "crates/erika/src/ohos/avcodec.rs",
+      "snapshot": "provenance/snapshots/projects/liberika/2026-11-06/crates/erika/src/ohos/avcodec.rs",
+      "sha256": "f8485fda2688418a9e4757d3b1e27516f061910f3de9a64674fd11231b8f651b",
+      "revision": "bf6f17b883ca91cb2b6076597d41c1bebc1d5166",
+      "license": "MPL-2.0; component notices apply.",
+      "url": "https://github.com/AimesSoft/liberika",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

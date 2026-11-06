@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "ohos-virtual-hid-device-injection",
+  "sources": [
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/cpp/inject_thread.cpp",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/cpp/inject_thread.cpp",
+      "sha256": "0e9e16d1c05a787e1d707fa4503eece3f1e737dae1369b053d2eaa094b073dec",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/cpp/hid_simulator.cpp",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/cpp/hid_simulator.cpp",
+      "sha256": "b254721ded1f260333109c8a799e48d84b82b42b3e1fb394ef9da2712ec74013",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/cpp/CMakeLists.txt",
+      "sha256": "3064f7dc73017a5062f723ce434a117c66e64f11c8bd654faa2e89954adbe32d",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

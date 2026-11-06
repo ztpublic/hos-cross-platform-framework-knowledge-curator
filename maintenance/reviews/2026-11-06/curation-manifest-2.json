@@ -1,0 +1,27 @@
+{
+  "added": [
+    "electron-ohos-close-reload-forced-exit",
+    "electron-ohos-renderer-subprocess-main-proxy",
+    "hnp-tool-private-prefix-environment",
+    "ohos-git-ssh-sandbox-identity",
+    "electron-ohos-crash-window-not-shown",
+    "electron-ohos-execpath-appspawn-fork",
+    "electron-ohos-resfile-flat-node-modules",
+    "electron-ohos-exec-path-metadata",
+    "ohos-window-close-async-veto",
+    "ohos-certificate-fingerprint-pinning",
+    "ohos-system-download-to-public-downloads",
+    "flutter-ohos-background-callback-engine",
+    "ohos-tts-playback-completion-and-voice-rebind",
+    "qt-pyqt-ohos-embedded-cpython-launcher",
+    "python-ohos-extension-suffix-match",
+    "qt-pyqt-ohos-ghost-tooltip-windows",
+    "ohos-embedded-interpreter-in-process",
+    "qt5-ohos-foreign-gl-video-window",
+    "kmp-ohos-lldb-native-attach"
+  ],
+  "extended": [
+    "document-picker-uri-access",
+    "typed-channel-payload-extraction"
+  ]
+}

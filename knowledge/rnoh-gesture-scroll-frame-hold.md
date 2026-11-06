@@ -52,6 +52,8 @@ Implement a temporary frame/delegate hold for a pending native gesture, retain n
 
 This depends on RNOH internal ScrollView/delegate APIs and the selected gesture port. It is not a portable JS-only workaround or proof of every gesture recognizer's correctness.
 
+**Attach before mount.** RNOH creates a component before mounting it, so an attach can land before the view is inserted up to the surface root and find no ancestor scrollers to guard. Report that case as incomplete and retry on a short, bounded delay, looking the handler up again by tag on each attempt, instead of assuming the first scan was complete.
+
 ## Common mistakes
 
 Rejecting a recognizer too early changes waitFor semantics; returning zero without holding nested-scroll policy can still move the parent.

@@ -1,0 +1,13 @@
+{
+    "type": "hnp-config",
+    "name": "ghdtools",
+    "version": "1.0",
+    "install": {
+        "links": [
+            { "source": "bin/desktop-askpass-trampoline", "target": "desktop-askpass-trampoline" },
+            { "source": "bin/desktop-credential-helper-trampoline", "target": "desktop-credential-helper-trampoline" },
+            { "source": "bin/git-credential-desktop", "target": "git-credential-desktop" },
+            { "source": "bin/ssh-wrapper", "target": "ssh-wrapper" }
+        ]
+    }
+}

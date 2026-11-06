@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-arkts-call-bridge",
+  "sources": [
+    {
+      "collection": "electron-ohos-bridge",
+      "original_path": "ets_bridge_adapter/ets_bridge_adapter.cc",
+      "snapshot": "provenance/snapshots/projects/electron-ohos-bridge/2026-11-06/ets_bridge_adapter/ets_bridge_adapter.cc.evidence.json",
+      "sha256": "c4d3e9a1e0053bb73bc0853d0a93bebb382fdac9003cd7e52642a18cd83d5937",
+      "revision": "175b60bcd859a6cf7932cdad3678967676877594",
+      "license": "No repository license found at root; reviewed adapter files state Huawei, all rights reserved; vendored aki is Apache-2.0. Hash-only evidence retained.",
+      "url": "https://atomgit.com/he-nan/electron-ohos-bridge",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-ohos-bridge",
+      "original_path": "ets_bridge_adapter/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/electron-ohos-bridge/2026-11-06/ets_bridge_adapter/CMakeLists.txt.evidence.json",
+      "sha256": "ab92894153b50fd7e2037e18798e9af005429c137c0aad7bea960d8331db74e1",
+      "revision": "175b60bcd859a6cf7932cdad3678967676877594",
+      "license": "No repository license found at root; reviewed adapter files state Huawei, all rights reserved; vendored aki is Apache-2.0. Hash-only evidence retained.",
+      "url": "https://atomgit.com/he-nan/electron-ohos-bridge",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-ohos-bridge",
+      "original_path": "ets_bridge_addon/bridge_worker.h",
+      "snapshot": "provenance/snapshots/projects/electron-ohos-bridge/2026-11-06/ets_bridge_addon/bridge_worker.h.evidence.json",
+      "sha256": "e9210b8d95e74f0f6a20700192b77b93aae0d29cf6ce38c0261b65b2dad61c07",
+      "revision": "175b60bcd859a6cf7932cdad3678967676877594",
+      "license": "No repository license found at root; reviewed adapter files state Huawei, all rights reserved; vendored aki is Apache-2.0. Hash-only evidence retained.",
+      "url": "https://atomgit.com/he-nan/electron-ohos-bridge",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Source files carry all-rights-reserved headers, so provenance retains hashes and locations only, and the guidance describes API use in general terms."
+  ]
+}

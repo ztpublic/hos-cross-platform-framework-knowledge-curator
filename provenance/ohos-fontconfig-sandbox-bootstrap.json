@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ohos-fontconfig-sandbox-bootstrap",
+  "sources": [
+    {
+      "collection": "krita-ohos",
+      "original_path": "krita/main.cc",
+      "snapshot": "provenance/snapshots/projects/krita-ohos/2026-11-06/krita/main.cc",
+      "sha256": "9ed6e9d9947916f295a6a295e5f9c02ad53deff59c0fc6a7c9060b800834f691",
+      "revision": "f6d7b05d835dc1978227b5466475400aecdabb63",
+      "license": "GPL-3.0",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_krita",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

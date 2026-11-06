@@ -1,0 +1,1970 @@
+diff --git a/app/app-info.ts b/app/app-info.ts
+index 382bb72..adf1b53 100644
+--- a/app/app-info.ts
++++ b/app/app-info.ts
+@@ -9,6 +9,14 @@ const channel = getChannel()
+ 
+ const s = JSON.stringify
+ 
++/**
++ * Set GHD_TARGET=ohos to build for HarmonyOS (Electron-on-OpenHarmony fork).
++ * The bundle is compiled as a Linux build (process.platform is baked in as
++ * 'linux') with __OHOS__ enabled for the HarmonyOS-specific code paths.
++ */
++export const isOhosTarget = process.env.GHD_TARGET === 'ohos'
++const targetPlatform = isOhosTarget ? 'linux' : process.platform
++
+ const optionalStringReplacement = (value: string | undefined) =>
+   value === undefined || value.length === 0 ? 'undefined' : s(value)
+ 
+@@ -20,9 +28,10 @@ export function getReplacements() {
+     __OAUTH_SECRET__: s(
+       process.env.DESKTOP_OAUTH_CLIENT_SECRET || devClientSecret
+     ),
+-    __DARWIN__: process.platform === 'darwin',
+-    __WIN32__: process.platform === 'win32',
+-    __LINUX__: process.platform === 'linux',
++    __DARWIN__: targetPlatform === 'darwin',
++    __WIN32__: targetPlatform === 'win32',
++    __LINUX__: targetPlatform === 'linux',
++    __OHOS__: isOhosTarget,
+     __APP_NAME__: s(productName),
+     __APP_VERSION__: s(version),
+     __DEV__: isDevBuild,
+@@ -36,7 +45,7 @@ export function getReplacements() {
+       process.env.DESKTOP_NON_FATAL_ERROR_REPORTING_ENDPOINT
+     ),
+     __SHA__: s(getSHA()),
+-    'process.platform': s(process.platform),
++    'process.platform': s(targetPlatform),
+     'process.env.NODE_ENV': s(process.env.NODE_ENV || 'development'),
+     'process.env.TEST_ENV': s(process.env.TEST_ENV),
+   }
+diff --git a/app/ohos-dugite-loader.js b/app/ohos-dugite-loader.js
+new file mode 100644
+index 0000000..f80d9f7
+--- /dev/null
++++ b/app/ohos-dugite-loader.js
+@@ -0,0 +1,41 @@
++// HarmonyOS build only (renderer bundle), applied to dugite's build/lib files:
++//
++//  - exec.js / spawn.js: `require("child_process")` -> the renderer IPC proxy
++//    (src/lib/ohos/remote-child-process.ts) so git runs in the main process.
++//    NormalModuleReplacementPlugin can't do this: `child_process` is a Node
++//    builtin and webpack's externals check the dependency's original request.
++//
++//  - git-environment.js: the "embedded" git directory is the git.hnp install
++//    location, fixed at build time rather than relying on LOCAL_GIT_DIRECTORY
++//    surviving in the renderer's process.env.
++const path = require('path')
++
++const ohosLib = path.resolve(__dirname, 'src', 'lib', 'ohos')
++const proxy = path.join(ohosLib, 'remote-child-process.ts')
++const environment = path.join(ohosLib, 'ohos-environment.ts')
++
++module.exports = function ohosDugiteLoader(source) {
++  const file = path.basename(this.resourcePath)
++
++  if (file === 'git-environment.js') {
++    const patched = source.replace(
++      'function resolveEmbeddedGitDir() {',
++      `function resolveEmbeddedGitDir() {\n    return require(${JSON.stringify(
++        environment
++      )}).OhosGitDir;`
++    )
++    if (patched === source) {
++      throw new Error('ohos-dugite-loader: resolveEmbeddedGitDir not found')
++    }
++    return patched
++  }
++
++  const patched = source.replace(
++    /require\((["'])child_process\1\)/g,
++    `require(${JSON.stringify(proxy)})`
++  )
++  if (patched === source) {
++    throw new Error(`ohos-dugite-loader: no child_process require in ${file}`)
++  }
++  return patched
++}
+diff --git a/app/src/lib/feature-flag.ts b/app/src/lib/feature-flag.ts
+index e19489e..537f144 100644
+--- a/app/src/lib/feature-flag.ts
++++ b/app/src/lib/feature-flag.ts
+@@ -100,6 +100,12 @@ export const enableCommitMessageGeneration = (account: Account) => {
+ }
+ 
+ export const enableCopilotSdkCommitMessageGeneration = (account: Account) => {
++  // The Copilot SDK drives a bundled Copilot CLI binary which isn't available
++  // on HarmonyOS.
++  if (__OHOS__) {
++    return false
++  }
++
+   // Enabled for all users in beta and development channels, and for users with
+   // the feature flag enabled in production.
+   return (
+@@ -111,13 +117,17 @@ export const enableCopilotSdkCommitMessageGeneration = (account: Account) => {
+ }
+ 
+ /** Should we enable Copilot-powered merge conflict resolution? */
+-export const enableCopilotConflictResolution = () => true
++export const enableCopilotConflictResolution = () => !__OHOS__
+ 
+ export function enableAccessibleListToolTips(): boolean {
+   return enableBetaFeatures()
+ }
+ 
+-export const enableHooksEnvironment = () => true
++/**
++ * Hook environment support copies the process-proxy binary into a temporary
++ * directory and executes it from there, which HarmonyOS doesn't permit.
++ */
++export const enableHooksEnvironment = () => !__OHOS__
+ 
+ export const enableHooksByDefault = enableBetaFeatures
+ 
+diff --git a/app/src/lib/git/lfs.ts b/app/src/lib/git/lfs.ts
+index 0b1f35a..ed7e5c2 100644
+--- a/app/src/lib/git/lfs.ts
++++ b/app/src/lib/git/lfs.ts
+@@ -1,6 +1,13 @@
+ import { git } from './core'
+ import { Repository } from '../../models/repository'
+ 
++/**
++ * HarmonyOS: git.hnp's git-lfs is a statically linked Go binary which the
++ * system refuses to execute ("cannot exec 'git-lfs'"), so LFS is unsupported
++ * there. Skip everything that would invoke it.
++ */
++const lfsUnavailable = __OHOS__
++
+ interface ILFSTrackOutput {
+   readonly patterns: ReadonlyArray<{
+     readonly tracked: boolean
+@@ -9,6 +16,10 @@ interface ILFSTrackOutput {
+ 
+ /** Install the global LFS filters. */
+ export async function installGlobalLFSFilters(force: boolean): Promise<void> {
++  if (lfsUnavailable) {
++    return
++  }
++
+   const args = ['lfs', 'install', '--skip-repo']
+   if (force) {
+     args.push('--force')
+@@ -22,6 +33,10 @@ export async function installLFSHooks(
+   repository: Repository,
+   force: boolean
+ ): Promise<void> {
++  if (lfsUnavailable) {
++    return
++  }
++
+   const args = ['lfs', 'install']
+   if (force) {
+     args.push('--force')
+@@ -32,6 +47,10 @@ export async function installLFSHooks(
+ 
+ /** Is the repository configured to track any paths with LFS? */
+ export async function isUsingLFS(repository: Repository): Promise<boolean> {
++  if (lfsUnavailable) {
++    return false
++  }
++
+   const env = {
+     GIT_LFS_TRACK_NO_INSTALL_HOOKS: '1',
+   }
+diff --git a/app/src/lib/globals.d.ts b/app/src/lib/globals.d.ts
+index 4e7337d..3f97c88 100644
+--- a/app/src/lib/globals.d.ts
++++ b/app/src/lib/globals.d.ts
+@@ -20,6 +20,12 @@ declare const __WIN32__: boolean
+ /** Is the app being built to run on Linux? */
+ declare const __LINUX__: boolean
+ 
++/**
++ * Is the app being built to run on HarmonyOS (Electron-on-OpenHarmony)?
++ * When true, __LINUX__ is also true.
++ */
++declare const __OHOS__: boolean
++
+ /**
+  * The product name of the app, this is intended to be a compile-time
+  * replacement for app.getName
+diff --git a/app/src/lib/ohos/install.ts b/app/src/lib/ohos/install.ts
+new file mode 100644
+index 0000000..41f4bda
+--- /dev/null
++++ b/app/src/lib/ohos/install.ts
+@@ -0,0 +1,5 @@
++import { configureOhosEnvironment } from './ohos-environment'
++
++// Imported for its side effect as the very first import of each process entry
++// point so the git/ssh environment is in place before any module spawns git.
++configureOhosEnvironment()
+diff --git a/app/src/lib/ohos/ohos-environment.ts b/app/src/lib/ohos/ohos-environment.ts
+new file mode 100644
+index 0000000..2984c2d
+--- /dev/null
++++ b/app/src/lib/ohos/ohos-environment.ts
+@@ -0,0 +1,180 @@
++import * as Fs from 'fs'
++import * as Os from 'os'
++import * as Path from 'path'
++
++/**
++ * HarmonyOS (Electron-on-OpenHarmony) runtime support.
++ *
++ * On HarmonyOS native executables can't live inside the app bundle, they are
++ * shipped as HNP (HarmonyOS Native Package) archives which the system extracts
++ * at install time. Private HNPs end up at
++ *
++ *   /data/app/<name>.org/<name>_<version>/
++ *
++ * The HAP ships three of them:
++ *
++ *  - git       Git 2.45.2 (with git-remote-https, git-lfs), from GitNext
++ *  - openssh   OpenSSH 9.8p1, from GitNext
++ *  - ghdtools  desktop-trampoline helpers + CA bundle, built by this port
++ *
++ * The version strings here must match the `version` in each HNP's hnp.json.
++ */
++const hnpRoot = (name: string, version: string) =>
++  `/data/app/${name}.org/${name}_${version}`
++
++export const OhosGitDir = hnpRoot('git', '2.45.2')
++export const OhosOpenSSHDir = hnpRoot('openssh', '9.8')
++export const OhosToolsDir = hnpRoot('ghdtools', '1.0')
++
++export const OhosAskpassTrampolinePath = Path.posix.join(
++  OhosToolsDir,
++  'bin',
++  'desktop-askpass-trampoline'
++)
++
++export const OhosSSHWrapperPath = Path.posix.join(
++  OhosToolsDir,
++  'bin',
++  'ssh-wrapper'
++)
++
++const OhosCABundlePath = Path.posix.join(OhosToolsDir, 'ssl', 'cacert.pem')
++
++/** App-private fallback for HOME when the inherited one isn't usable. */
++const OhosFallbackHome = '/data/storage/el2/base/files/home'
++
++function isWritableDirectory(path: string | undefined): path is string {
++  if (!path) {
++    return false
++  }
++
++  try {
++    Fs.accessSync(path, Fs.constants.W_OK)
++    return Fs.statSync(path).isDirectory()
++  } catch {
++    return false
++  }
++}
++
++function resolveHome(): string {
++  const candidates = [process.env.HOME, safeHomedir()]
++  const home = candidates.find(isWritableDirectory)
++
++  if (home !== undefined) {
++    return home
++  }
++
++  try {
++    Fs.mkdirSync(OhosFallbackHome, { recursive: true })
++  } catch {}
++
++  return OhosFallbackHome
++}
++
++function safeHomedir(): string | undefined {
++  try {
++    return Os.homedir()
++  } catch {
++    return undefined
++  }
++}
++
++/** ssh is invoked with `-F ~/.ssh/config` which fails if the file is missing */
++function ensureSSHConfig(home: string) {
++  try {
++    const sshDir = Path.posix.join(home, '.ssh')
++    Fs.mkdirSync(sshDir, { recursive: true, mode: 0o700 })
++    const config = Path.posix.join(sshDir, 'config')
++    if (!Fs.existsSync(config)) {
++      Fs.writeFileSync(config, '', { mode: 0o600 })
++    }
++  } catch {}
++}
++
++/**
++ * With GIT_CONFIG_GLOBAL set explicitly, `git config --global --list` fails
++ * if the file doesn't exist, unlike the default ~/.gitconfig lookup.
++ */
++function ensureFile(path: string) {
++  try {
++    if (!Fs.existsSync(path)) {
++      Fs.writeFileSync(path, '', { mode: 0o600 })
++    }
++  } catch {}
++  return path
++}
++
++/**
++ * Files under /storage/Users/currentUser are owned by a different uid than
++ * the app's sandbox user, so git's ownership check ("detected dubious
++ * ownership") rejects every repository there. The ownership check guards
++ * against other local users' repositories, which doesn't apply to the
++ * sandbox; this global config file is private to the app.
++ */
++function ensureSafeDirectoryWildcard(globalConfig: string) {
++  try {
++    const contents = Fs.readFileSync(globalConfig, 'utf8')
++    if (!/^\s*directory\s*=\s*\*\s*$/m.test(contents)) {
++      const separator = contents.length === 0 || contents.endsWith('\n') ? '' : '\n'
++      Fs.appendFileSync(globalConfig, `${separator}[safe]\n\tdirectory = *\n`)
++    }
++  } catch {}
++}
++
++let configured = false
++
++/**
++ * Point dugite, git and ssh at the HNP-installed binaries.
++ *
++ * Must run in every process that spawns git (both the main process and the
++ * renderer) before the first git invocation. The renderer can't rely on
++ * inheriting the main process environment on HarmonyOS since its processes
++ * are started by the ArkTS host rather than forked from the main process.
++ */
++export function configureOhosEnvironment() {
++  if (!__OHOS__ || configured) {
++    return
++  }
++
++  configured = true
++
++  const env = process.env
++
++  env.HOME = resolveHome()
++  ensureSSHConfig(env.HOME)
++
++  // The git.hnp build (GitNext) redirects the global config to
++  // /storage/Users/currentUser/.ohos_git/gitconfig, which this app can't
++  // read. GIT_CONFIG_GLOBAL takes precedence over that in git_global_config().
++  env.GIT_CONFIG_GLOBAL = ensureFile(Path.posix.join(env.HOME, '.gitconfig'))
++  ensureSafeDirectoryWildcard(env.GIT_CONFIG_GLOBAL)
++
++  // dugite resolves bin/git, libexec/git-core, share/git-core/templates and
++  // etc/gitconfig relative to LOCAL_GIT_DIRECTORY.
++  env.LOCAL_GIT_DIRECTORY = OhosGitDir
++  env.GIT_EXEC_PATH = Path.posix.join(OhosGitDir, 'libexec', 'git-core')
++
++  // The git HNP was compiled with a /data/service/hnp prefix so its built-in
++  // system config and template paths don't exist when installed as a private
++  // HNP. dugite sets GIT_TEMPLATE_DIR for us; the system config we skip.
++  env.GIT_CONFIG_NOSYSTEM = '1'
++
++  // libcurl inside git-remote-https looks for /etc/ssl/certs/cacert.pem which
++  // isn't guaranteed to exist on HarmonyOS. Use the bundled Mozilla bundle.
++  if (!env.GIT_SSL_CAINFO && Fs.existsSync(OhosCABundlePath)) {
++    env.GIT_SSL_CAINFO = OhosCABundlePath
++  }
++
++  // git-lfs and ssh are resolved through PATH by git and by ssh-wrapper.
++  const extraPath = [
++    Path.posix.join(OhosGitDir, 'bin'),
++    Path.posix.join(OhosOpenSSHDir, 'bin'),
++    Path.posix.join(OhosToolsDir, 'bin'),
++  ]
++  const currentPath = env.PATH ?? '/bin:/usr/bin'
++  env.PATH = [...extraPath, currentPath].join(':')
++
++  // No terminal to prompt on, and no pager/editor to launch.
++  env.GIT_TERMINAL_PROMPT = '0'
++  env.GIT_PAGER = 'cat'
++}
+diff --git a/app/src/lib/ohos/remote-child-process.ts b/app/src/lib/ohos/remote-child-process.ts
+new file mode 100644
+index 0000000..7e9959c
+--- /dev/null
++++ b/app/src/lib/ohos/remote-child-process.ts
+@@ -0,0 +1,307 @@
++/**
++ * HarmonyOS: a `child_process` stand-in for the renderer that runs processes
++ * in the main process (see main-process/ohos-process-host.ts for why).
++ *
++ * The renderer webpack build substitutes this module for `child_process`
++ * inside dugite only. It implements the subset of the Node API dugite uses —
++ * `spawn(file, args, { cwd, env })` and `execFile(file, args, options, cb)` —
++ * with ChildProcess-like objects: stdout/stderr readable streams, a writable
++ * stdin, kill(), and 'spawn' / 'error' / 'exit' / 'close' events whose
++ * arguments match Node's.
++ */
++import { ipcRenderer } from 'electron'
++import { EventEmitter } from 'events'
++import * as Path from 'path'
++import { PassThrough, Writable } from 'stream'
++import {
++  OhosProcessEvent,
++  OhosProcessEventChannel,
++  OhosProcessKillChannel,
++  OhosProcessSpawnChannel,
++  OhosProcessStdinChannel,
++  IOhosSpawnRequest,
++} from './remote-process-protocol'
++
++const live = new Map<string, RemoteChildProcess>()
++let listening = false
++
++function listen() {
++  if (listening) {
++    return
++  }
++  listening = true
++  ipcRenderer.on(OhosProcessEventChannel, (_, event: OhosProcessEvent) =>
++    live.get(event.id)?.handle(event)
++  )
++}
++
++const toBuffer = (data: Uint8Array) =>
++  Buffer.from(data.buffer, data.byteOffset, data.byteLength)
++
++export class RemoteChildProcess extends EventEmitter {
++  public readonly stdout = new PassThrough()
++  public readonly stderr = new PassThrough()
++  public readonly stdin: Writable
++  public readonly spawnfile: string
++  public readonly spawnargs: ReadonlyArray<string>
++  public pid: number | undefined = undefined
++  public exitCode: number | null = null
++  public signalCode: NodeJS.Signals | null = null
++  public killed = false
++
++  private readonly id = crypto.randomUUID()
++
++  public constructor(
++    file: string,
++    args: ReadonlyArray<string>,
++    options: { cwd?: string; env?: Record<string, string | undefined> }
++  ) {
++    super()
++    this.spawnfile = file
++    this.spawnargs = [file, ...args]
++
++    const id = this.id
++    this.stdin = new Writable({
++      write(chunk: Buffer, _encoding, callback) {
++        ipcRenderer.send(OhosProcessStdinChannel, { id, data: chunk })
++        callback()
++      },
++      final(callback) {
++        ipcRenderer.send(OhosProcessStdinChannel, { id, end: true })
++        callback()
++      },
++    })
++
++    listen()
++    live.set(id, this)
++
++    const request: IOhosSpawnRequest = {
++      id,
++      file,
++      args: [...args],
++      cwd: options.cwd,
++      neutralCwd: isNeutralCwd(options.cwd),
++      env: options.env ? withoutUndefined(options.env) : undefined,
++    }
++    ipcRenderer.send(OhosProcessSpawnChannel, request)
++  }
++
++  public kill(signal: NodeJS.Signals | number = 'SIGTERM') {
++    if (this.exitCode !== null || this.signalCode !== null) {
++      return false
++    }
++    this.killed = true
++    ipcRenderer.send(OhosProcessKillChannel, { id: this.id, signal })
++    return true
++  }
++
++  /** @internal */
++  public handle(event: OhosProcessEvent) {
++    switch (event.type) {
++      case 'spawn':
++        this.pid = event.pid
++        this.emit('spawn')
++        break
++      case 'stdout':
++        this.stdout.write(toBuffer(event.data))
++        break
++      case 'stderr':
++        this.stderr.write(toBuffer(event.data))
++        break
++      case 'error': {
++        const err: NodeJS.ErrnoException = new Error(event.message)
++        err.code = event.code
++        err.errno = event.errno
++        err.syscall = event.syscall
++        err.path = this.spawnfile
++        Object.assign(err, { spawnargs: this.spawnargs.slice(1) })
++        this.emit('error', err)
++        break
++      }
++      case 'exit':
++        this.exitCode = event.code
++        this.signalCode = event.signal
++        this.emit('exit', event.code, event.signal)
++        break
++      case 'close':
++        live.delete(this.id)
++        this.stdout.end()
++        this.stderr.end()
++        // Let already-written output flush to 'data' listeners first
++        setImmediate(() => this.emit('close', event.code, event.signal))
++        break
++    }
++  }
++}
++
++/**
++ * Git commands that don't operate on a repository (global config, --version)
++ * run with the renderer bundle's __dirname or the renderer's cwd as working
++ * directory. Those are renderer-side paths which don't necessarily exist for
++ * the main process, where the command actually runs; flag them so the host
++ * may substitute a directory that does. Other paths (repositories) must be
++ * used as-is, a missing repository has to surface as ENOENT.
++ */
++function isNeutralCwd(cwd: string | undefined) {
++  if (cwd === undefined) {
++    return false
++  }
++  const neutral = [__dirname, safeCwd()].filter(
++    (dir): dir is string => dir !== undefined
++  )
++  return neutral.some(dir => Path.resolve(dir) === Path.resolve(cwd))
++}
++
++function safeCwd() {
++  try {
++    return process.cwd()
++  } catch {
++    return undefined
++  }
++}
++
++function withoutUndefined(env: Record<string, string | undefined>) {
++  const result: Record<string, string> = {}
++  for (const [key, value] of Object.entries(env)) {
++    if (value !== undefined) {
++      result[key] = value
++    }
++  }
++  return result
++}
++
++export function spawn(
++  file: string,
++  args: ReadonlyArray<string> = [],
++  options: { cwd?: string; env?: Record<string, string | undefined> } = {}
++) {
++  return new RemoteChildProcess(file, args, options)
++}
++
++interface IExecFileOptions {
++  readonly cwd?: string
++  readonly env?: Record<string, string | undefined>
++  readonly encoding?: BufferEncoding | 'buffer' | null
++  readonly maxBuffer?: number
++  readonly signal?: AbortSignal
++  readonly killSignal?: NodeJS.Signals | number
++}
++
++type ExecFileCallback = (
++  err: Error | null,
++  stdout: string | Buffer,
++  stderr: string | Buffer
++) => void
++
++export function execFile(
++  file: string,
++  args: ReadonlyArray<string>,
++  options: IExecFileOptions,
++  callback: ExecFileCallback
++) {
++  const child = spawn(file, args, options)
++  const encoding = options.encoding === null ? 'buffer' : options.encoding ?? 'utf8'
++  const maxBuffer = options.maxBuffer ?? 1024 * 1024
++  const killSignal = options.killSignal ?? 'SIGTERM'
++
++  // Like Node's execFile: with a text encoding the stdio streams themselves
++  // are decoded (setEncoding), so consumers that attach to them — e.g.
++  // Desktop's progress parser via processCallback + byline — get strings.
++  if (encoding !== 'buffer') {
++    child.stdout.setEncoding(encoding)
++    child.stderr.setEncoding(encoding)
++  }
++
++  const stdoutChunks = new Array<Buffer | string>()
++  const stderrChunks = new Array<Buffer | string>()
++  let stdoutLength = 0
++  let stderrLength = 0
++  let pendingError: Error | null = null
++  let done = false
++
++  const decode = (chunks: Array<Buffer | string>) =>
++    encoding === 'buffer'
++      ? Buffer.concat(chunks as Buffer[])
++      : (chunks as string[]).join('')
++
++  // maxBuffer is in bytes, as in Node
++  const byteLength = (chunk: Buffer | string) =>
++    typeof chunk === 'string'
++      ? Buffer.byteLength(chunk, encoding === 'buffer' ? 'utf8' : encoding)
++      : chunk.length
++
++  const finish = (err: Error | null) => {
++    if (done) {
++      return
++    }
++    done = true
++    options.signal?.removeEventListener('abort', onAbort)
++    callback(err, decode(stdoutChunks), decode(stderrChunks))
++  }
++
++  const fail = (err: Error) => {
++    if (pendingError === null) {
++      pendingError = err
++      child.kill(killSignal)
++    }
++  }
++
++  child.stdout.on('data', (chunk: Buffer | string) => {
++    stdoutLength += byteLength(chunk)
++    if (stdoutLength > maxBuffer) {
++      const err = new RangeError('stdout maxBuffer length exceeded')
++      fail(Object.assign(err, { code: 'ERR_CHILD_PROCESS_STDIO_MAXBUFFER' }))
++    } else {
++      stdoutChunks.push(chunk)
++    }
++  })
++
++  child.stderr.on('data', (chunk: Buffer | string) => {
++    stderrLength += byteLength(chunk)
++    if (stderrLength > maxBuffer) {
++      const err = new RangeError('stderr maxBuffer length exceeded')
++      fail(Object.assign(err, { code: 'ERR_CHILD_PROCESS_STDIO_MAXBUFFER' }))
++    } else {
++      stderrChunks.push(chunk)
++    }
++  })
++
++  const onAbort = () => {
++    const err = new Error('The operation was aborted')
++    fail(Object.assign(err, { name: 'AbortError', code: 'ABORT_ERR' }))
++  }
++
++  if (options.signal?.aborted) {
++    onAbort()
++  } else {
++    options.signal?.addEventListener('abort', onAbort)
++  }
++
++  child.on('error', (err: Error) => finish(pendingError ?? err))
++
++  child.on('close', (code: number | null, signal: NodeJS.Signals | null) => {
++    if (pendingError !== null) {
++      return finish(pendingError)
++    }
++    if (code === 0 && signal === null) {
++      return finish(null)
++    }
++
++    // Same shape as Node's execFile error: numeric exit code (dugite relies
++    // on `typeof err.code === 'number'`), or code null + signal when killed.
++    const cmd = [file, ...args].join(' ')
++    const err = new Error(
++      `Command failed: ${cmd}\n${decode(stderrChunks).toString()}`
++    )
++    finish(
++      Object.assign(err, {
++        code,
++        killed: child.killed,
++        signal,
++        cmd,
++      })
++    )
++  })
++
++  return child
++}
+diff --git a/app/src/lib/ohos/remote-process-protocol.ts b/app/src/lib/ohos/remote-process-protocol.ts
+new file mode 100644
+index 0000000..3c621ac
+--- /dev/null
++++ b/app/src/lib/ohos/remote-process-protocol.ts
+@@ -0,0 +1,54 @@
++/** IPC protocol between lib/ohos/remote-child-process (renderer) and
++ * main-process/ohos-process-host (main). HarmonyOS only. */
++
++export const OhosProcessSpawnChannel = 'ohos-process:spawn'
++export const OhosProcessStdinChannel = 'ohos-process:stdin'
++export const OhosProcessKillChannel = 'ohos-process:kill'
++export const OhosProcessEventChannel = 'ohos-process:event'
++
++export interface IOhosSpawnRequest {
++  readonly id: string
++  readonly file: string
++  readonly args: ReadonlyArray<string>
++  readonly cwd?: string
++
++  /**
++   * The cwd is a renderer-side default (bundle dir / renderer cwd) rather
++   * than a repository; the host may replace it if it doesn't exist there.
++   */
++  readonly neutralCwd?: boolean
++  readonly env?: Record<string, string | undefined>
++}
++
++export interface IOhosStdinRequest {
++  readonly id: string
++  readonly data?: Uint8Array
++  readonly end?: boolean
++}
++
++export interface IOhosKillRequest {
++  readonly id: string
++  readonly signal?: NodeJS.Signals | number
++}
++
++export type OhosProcessEvent =
++  | { readonly id: string; readonly type: 'spawn'; readonly pid?: number }
++  | {
++      readonly id: string
++      readonly type: 'stdout' | 'stderr'
++      readonly data: Uint8Array
++    }
++  | {
++      readonly id: string
++      readonly type: 'error'
++      readonly code?: string
++      readonly errno?: number
++      readonly syscall?: string
++      readonly message: string
++    }
++  | {
++      readonly id: string
++      readonly type: 'exit' | 'close'
++      readonly code: number | null
++      readonly signal: NodeJS.Signals | null
++    }
+diff --git a/app/src/lib/ohos/shims/fs-admin.ts b/app/src/lib/ohos/shims/fs-admin.ts
+new file mode 100644
+index 0000000..96e445f
+--- /dev/null
++++ b/app/src/lib/ohos/shims/fs-admin.ts
+@@ -0,0 +1,33 @@
++/**
++ * fs-admin replacement for HarmonyOS. The real module performs privileged
++ * file operations through an OS authorization prompt (used to install the
++ * `github` CLI into /usr/local/bin), which doesn't exist on HarmonyOS.
++ */
++type Callback = (error: Error | null) => void
++
++const unsupported = (callback: Callback) =>
++  setImmediate(() =>
++    callback(new Error('Privileged file operations are not supported on HarmonyOS'))
++  )
++
++export function clearAuthorizationCache(): void {}
++
++export function createWriteStream(_filePath: string): void {
++  throw new Error('Privileged file operations are not supported on HarmonyOS')
++}
++
++export function makeTree(_directoryPath: string, callback: Callback) {
++  unsupported(callback)
++}
++
++export function recursiveCopy(_source: string, _dest: string, callback: Callback) {
++  unsupported(callback)
++}
++
++export function symlink(_target: string, _filePath: string, callback: Callback) {
++  unsupported(callback)
++}
++
++export function unlink(_filePath: string, callback: Callback) {
++  unsupported(callback)
++}
+diff --git a/app/src/lib/ohos/shims/keytar.ts b/app/src/lib/ohos/shims/keytar.ts
+new file mode 100644
+index 0000000..26577af
+--- /dev/null
++++ b/app/src/lib/ohos/shims/keytar.ts
+@@ -0,0 +1,83 @@
++/**
++ * keytar replacement for HarmonyOS.
++ *
++ * keytar is a native (NAN) addon backed by libsecret/Keychain/Credential
++ * Manager, none of which exist on HarmonyOS and the addon can't be loaded by
++ * the Electron fork. Credentials are instead kept in a JSON file inside the
++ * app sandbox:
++ *
++ *   /data/storage/el2/base/files/credentials.json   (mode 0600)
++ *
++ * el2 storage is only accessible to this app and is encrypted by the system
++ * with the user's lock screen credentials, which is the closest HarmonyOS
++ * equivalent of a per-user keychain available without a native module.
++ * A future version should move this to the HUKS/Asset Store kit via NAPI.
++ */
++import * as Fs from 'fs'
++import * as Path from 'path'
++
++const StorePath = '/data/storage/el2/base/files/credentials.json'
++
++type Store = Record<string, Record<string, string>>
++
++function read(): Store {
++  try {
++    const parsed = JSON.parse(Fs.readFileSync(StorePath, 'utf8'))
++    return typeof parsed === 'object' && parsed !== null ? parsed : {}
++  } catch {
++    return {}
++  }
++}
++
++function write(store: Store) {
++  Fs.mkdirSync(Path.dirname(StorePath), { recursive: true })
++  const tmp = `${StorePath}.${process.pid}.tmp`
++  Fs.writeFileSync(tmp, JSON.stringify(store), { mode: 0o600 })
++  Fs.renameSync(tmp, StorePath)
++}
++
++export async function getPassword(
++  service: string,
++  account: string
++): Promise<string | null> {
++  return read()[service]?.[account] ?? null
++}
++
++export async function setPassword(
++  service: string,
++  account: string,
++  password: string
++): Promise<void> {
++  const store = read()
++  store[service] = { ...store[service], [account]: password }
++  write(store)
++}
++
++export async function deletePassword(
++  service: string,
++  account: string
++): Promise<boolean> {
++  const store = read()
++  if (store[service]?.[account] === undefined) {
++    return false
++  }
++  delete store[service][account]
++  write(store)
++  return true
++}
++
++export async function findPassword(service: string): Promise<string | null> {
++  const accounts = read()[service] ?? {}
++  const first = Object.keys(accounts)[0]
++  return first === undefined ? null : accounts[first]
++}
++
++export async function findCredentials(
++  service: string
++): Promise<Array<{ account: string; password: string }>> {
++  const accounts = read()[service] ?? {}
++  return Object.entries(accounts).map(([account, password]) => ({
++    account,
++    password,
++  }))
++}
+diff --git a/app/src/lib/ohos/shims/registry-js.ts b/app/src/lib/ohos/shims/registry-js.ts
+new file mode 100644
+index 0000000..45426cb
+--- /dev/null
++++ b/app/src/lib/ohos/shims/registry-js.ts
+@@ -0,0 +1,47 @@
++/**
++ * registry-js replacement for HarmonyOS. Only reachable from Windows-specific
++ * code paths, but those modules are still part of the bundle so the native
++ * addon must not be required. Mirrors the real module's "Safe" behaviour on
++ * non-Windows platforms: reads return nothing, writes fail.
++ */
++export enum RegistryValueType {
++  REG_BINARY = 'REG_BINARY',
++  REG_DWORD = 'REG_DWORD',
++  REG_DWORD_LITTLE_ENDIAN = 'REG_DWORD_LITTLE_ENDIAN',
++  REG_DWORD_BIG_ENDIAN = 'REG_DWORD_BIG_ENDIAN',
++  REG_EXPAND_SZ = 'REG_EXPAND_SZ',
++  REG_LINK = 'REG_LINK',
++  REG_MULTI_SZ = 'REG_MULTI_SZ',
++  REG_NONE = 'REG_NONE',
++  REG_QWORD = 'REG_QWORD',
++  REG_QWORD_LITTLE_ENDIAN = 'REG_QWORD_LITTLE_ENDIAN',
++  REG_SZ = 'REG_SZ',
++}
++
++export enum HKEY {
++  HKEY_CLASSES_ROOT = 'HKEY_CLASSES_ROOT',
++  HKEY_CURRENT_CONFIG = 'HKEY_CURRENT_CONFIG',
++  HKEY_DYN_DATA = 'HKEY_DYN_DATA',
++  HKEY_CURRENT_USER_LOCAL_SETTINGS = 'HKEY_CURRENT_USER_LOCAL_SETTINGS',
++  HKEY_CURRENT_USER = 'HKEY_CURRENT_USER',
++  HKEY_LOCAL_MACHINE = 'HKEY_LOCAL_MACHINE',
++  HKEY_PERFORMANCE_DATA = 'HKEY_PERFORMANCE_DATA',
++  HKEY_PERFORMANCE_TEXT = 'HKEY_PERFORMANCE_TEXT',
++  HKEY_PERFORMANCE_NLSTEXT = 'HKEY_PERFORMANCE_NLSTEXT',
++  HKEY_USERS = 'HKEY_USERS',
++}
++
++export const enumerateValues = (_key: HKEY, _subkey: string) => []
++export const enumerateValuesSafe = enumerateValues
++export const enumerateKeys = (_key: HKEY, _subkey?: string | null) => []
++export const enumerateKeysSafe = enumerateKeys
++export const createKey = (_key: HKEY, _subkey: string) => false
++export const createKeySafe = createKey
++export const setValue = (
++  _key: HKEY,
++  _subkey: string,
++  _valueName: string,
++  _valueType: RegistryValueType,
++  _valueData: string
++) => false
++export const setValueSafe = setValue
+diff --git a/app/src/lib/ohos/shims/windows-argv-parser.ts b/app/src/lib/ohos/shims/windows-argv-parser.ts
+new file mode 100644
+index 0000000..580b408
+--- /dev/null
++++ b/app/src/lib/ohos/shims/windows-argv-parser.ts
+@@ -0,0 +1,10 @@
++/**
++ * windows-argv-parser replacement for HarmonyOS. The native module wraps
++ * Win32's CommandLineToArgvW; outside of Windows a POSIX-style split is the
++ * appropriate behaviour.
++ */
++import parseArgsStringToArgv from 'string-argv'
++
++export function parseCommandLineArgv(commandLine: string): string[] {
++  return parseArgsStringToArgv(commandLine)
++}
+diff --git a/app/src/lib/ssh/ssh.ts b/app/src/lib/ssh/ssh.ts
+index b494ee0..9f14c40 100644
+--- a/app/src/lib/ssh/ssh.ts
++++ b/app/src/lib/ssh/ssh.ts
+@@ -5,6 +5,7 @@ import {
+   getDesktopAskpassTrampolinePath,
+   getSSHWrapperPath,
+ } from '../trampoline/trampoline-environment'
++import { OhosOpenSSHDir } from '../ohos/ohos-environment'
+ 
+ const WindowsOpenSSHPath = 'C:/Windows/System32/OpenSSH/ssh.exe'
+ 
+@@ -48,6 +49,24 @@ export async function getSSHEnvironment() {
+     DISPLAY: '.',
+   }
+ 
++  if (__OHOS__) {
++    // OpenSSH 9.8 honours SSH_ASKPASS_REQUIRE so we don't need the forking
++    // ssh-wrapper. ssh resolves ~ from the passwd database rather than HOME,
++    // and the app's uid has no usable passwd entry on HarmonyOS, so point it
++    // at the user files explicitly.
++    const home = process.env.HOME ?? '/data/storage/el2/base/files/home'
++    const ssh = `${OhosOpenSSHDir}/bin/ssh`
++    return {
++      ...baseEnv,
++      SSH_ASKPASS_REQUIRE: 'force',
++      GIT_SSH_COMMAND:
++        `"${ssh}" -F "${home}/.ssh/config"` +
++        ` -o UserKnownHostsFile="${home}/.ssh/known_hosts"` +
++        ` -o IdentityFile="${home}/.ssh/id_ed25519"` +
++        ` -o IdentityFile="${home}/.ssh/id_rsa"`,
++    }
++  }
++
+   const canUseWindowsSSH = await isWindowsOpenSSHAvailable()
+   if (canUseWindowsSSH && isWindowsOpenSSHUseEnabled()) {
+     // Replace git ssh command with Windows' OpenSSH executable path
+diff --git a/app/src/lib/stores/app-store.ts b/app/src/lib/stores/app-store.ts
+index b5446ea..dac8c86 100644
+--- a/app/src/lib/stores/app-store.ts
++++ b/app/src/lib/stores/app-store.ts
+@@ -8086,6 +8086,11 @@ export class AppStore extends TypedBaseStore<IAppState> {
+     this.signInStore.authenticateWithBrowser()
+   }
+ 
++  /** This shouldn't be called directly. See 'Dispatcher'. */
++  public _authenticateWithToken(token: string) {
++    return this.signInStore.authenticateWithToken(token)
++  }
++
+   public async _setAppFocusState(isFocused: boolean): Promise<void> {
+     if (this.appIsFocused !== isFocused) {
+       this.appIsFocused = isFocused
+diff --git a/app/src/lib/stores/sign-in-store.ts b/app/src/lib/stores/sign-in-store.ts
+index c1d23e9..2d9d2b0 100644
+--- a/app/src/lib/stores/sign-in-store.ts
++++ b/app/src/lib/stores/sign-in-store.ts
+@@ -124,6 +124,13 @@ export interface IAuthenticationState extends ISignInState {
+   /** Whether Git supplied this unfamiliar Enterprise Server endpoint. */
+   readonly isUnrecognizedEnterpriseServer?: boolean
+ 
++  /**
++   * HarmonyOS: the OAuth browser round-trip isn't available (no custom URL
++   * scheme redirect back into the Electron fork), so the user pastes a
++   * personal access token instead.
++   */
++  readonly tokenEntry?: boolean
++
+   readonly resultCallback: (result: SignInResult) => void
+ 
+   readonly oauthState?: {
+@@ -205,6 +212,14 @@ export class SignInStore extends TypedBaseStore<SignInState | null> {
+    * event.
+    */
+   private setState(state: SignInState | null) {
++    if (
++      __OHOS__ &&
++      state?.kind === SignInStep.Authentication &&
++      !state.tokenEntry
++    ) {
++      state = { ...state, tokenEntry: true }
++    }
++
+     this.state = state
+     this.emitUpdate(this.getState())
+   }
+@@ -285,6 +300,22 @@ export class SignInStore extends TypedBaseStore<SignInState | null> {
+       }
+     }
+ 
++    if (__OHOS__) {
++      this.setState({
++        kind: SignInStep.Authentication,
++        endpoint: currentState.endpoint,
++        isUnrecognizedEnterpriseServer:
++          currentState.kind === SignInStep.Authentication
++            ? currentState.isUnrecognizedEnterpriseServer
++            : undefined,
++        resultCallback: currentState.resultCallback,
++        error: null,
++        loading: false,
++        tokenEntry: true,
++      })
++      return
++    }
++
+     const csrfToken = crypto.randomUUID()
+ 
+     new Promise<Account>((resolve, reject) => {
+@@ -337,6 +368,52 @@ export class SignInStore extends TypedBaseStore<SignInState | null> {
+       })
+   }
+ 
++  /**
++   * Sign in with a personal access token. Used on HarmonyOS in place of the
++   * browser OAuth flow. Must only be called in the authentication step.
++   */
++  public async authenticateWithToken(token: string) {
++    const currentState = this.state
++
++    if (currentState?.kind !== SignInStep.Authentication) {
++      const stepText = currentState ? currentState.kind : 'null'
++      return fatalError(
++        `Sign in step '${stepText}' not compatible with token authentication`
++      )
++    }
++
++    this.setState({ ...currentState, error: null, loading: true })
++
++    let account: Account
++    try {
++      account = await fetchUser(currentState.endpoint, token.trim())
++    } catch (e) {
++      if (this.state?.kind === SignInStep.Authentication) {
++        this.setState({
++          ...this.state,
++          loading: false,
++          error: new Error(
++            'Could not sign in with this token. Make sure it is a valid ' +
++              'classic personal access token with the repo, read:org, ' +
++              'user and workflow scopes.'
++          ),
++        })
++      }
++      return
++    }
++
++    if (this.state?.kind !== SignInStep.Authentication) {
++      log.warn('[SignInStore] token resolved but session has changed')
++      return
++    }
++
++    this.emitAuthenticate(account)
++    this.setState({
++      kind: SignInStep.Success,
++      resultCallback: this.state.resultCallback,
++    })
++  }
++
+   public async resolveOAuthRequest(action: IOAuthAction) {
+     if (!this.state || this.state.kind !== SignInStep.Authentication) {
+       return
+diff --git a/app/src/lib/trampoline/trampoline-environment.ts b/app/src/lib/trampoline/trampoline-environment.ts
+index 925d601..4ed883b 100644
+--- a/app/src/lib/trampoline/trampoline-environment.ts
++++ b/app/src/lib/trampoline/trampoline-environment.ts
+@@ -10,6 +10,10 @@ import { GitError as DugiteError, exec } from 'dugite'
+ import memoizeOne from 'memoize-one'
+ import { GitError, getDescriptionForError } from '../git/core'
+ import { getDesktopAskpassTrampolineFilename } from 'desktop-trampoline'
++import {
++  OhosAskpassTrampolinePath,
++  OhosSSHWrapperPath,
++} from '../ohos/ohos-environment'
+ 
+ const hasRejectedCredentialsForEndpoint = new Map<string, Set<string>>()
+ 
+@@ -208,6 +212,10 @@ const isSSHAuthFailure = (e: unknown): e is GitError =>
+ 
+ /** Returns the path of the desktop-askpass-trampoline binary. */
+ export function getDesktopAskpassTrampolinePath(): string {
++  if (__OHOS__) {
++    return OhosAskpassTrampolinePath
++  }
++
+   return Path.resolve(
+     __dirname,
+     'desktop-trampoline',
+@@ -217,5 +225,9 @@ export function getDesktopAskpassTrampolinePath(): string {
+ 
+ /** Returns the path of the ssh-wrapper binary. */
+ export function getSSHWrapperPath(): string {
++  if (__OHOS__) {
++    return OhosSSHWrapperPath
++  }
++
+   return Path.resolve(__dirname, 'desktop-trampoline', 'ssh-wrapper')
+ }
+diff --git a/app/src/main-process/app-window.ts b/app/src/main-process/app-window.ts
+index bb49c7f..5d9bbf5 100644
+--- a/app/src/main-process/app-window.ts
++++ b/app/src/main-process/app-window.ts
+@@ -402,6 +402,11 @@ export class AppWindow {
+     this.window.destroy()
+   }
+ 
++  /** Reload the renderer (HarmonyOS recovery from uncaught exceptions) */
++  public reload() {
++    this.window.webContents.reload()
++  }
++
+   public setupAutoUpdater() {
+     autoUpdater.on('error', (error: Error) => {
+       this.isDownloadingUpdate = false
+diff --git a/app/src/main-process/main.ts b/app/src/main-process/main.ts
+index 5a0d999..9a174a4 100644
+--- a/app/src/main-process/main.ts
++++ b/app/src/main-process/main.ts
+@@ -1,3 +1,4 @@
++import '../lib/ohos/install'
+ import '../lib/logging/main/install'
+ 
+ import {
+@@ -52,6 +53,8 @@ import {
+ } from 'desktop-notifications'
+ import { initializeDesktopNotifications } from './notifications'
+ import parseCommandLineArgs from 'minimist'
++import { installOhosProcessHost } from './ohos-process-host'
++import { handleOhosUncaughtException } from './ohos-uncaught-exception'
+ import { CLIAction } from '../lib/cli-action'
+ 
+ app.setAppLogsPath()
+@@ -69,6 +72,15 @@ type OnDidLoadFn = (window: AppWindow) => void
+ let onDidLoadFns: Array<OnDidLoadFn> | null = []
+ 
+ function handleUncaughtException(error: Error) {
++  if (__OHOS__ && mainWindow !== null) {
++    // Desktop destroys the main window and opens a separate crash window,
++    // which the HarmonyOS fork doesn't display: the app is left showing a
++    // dead window that ignores all input. Keep the window and let the user
++    // decide instead.
++    handleOhosUncaughtException(error, mainWindow)
++    return
++  }
++
+   preventQuit = true
+ 
+   // If we haven't got a window we'll assume it's because
+@@ -332,7 +344,16 @@ app.on('ready', () => {
+ 
+   readyTime = now() - launchTime
+ 
+-  possibleProtocols.forEach(protocol => setAsDefaultProtocolClient(protocol))
++  // HarmonyOS has no custom URL scheme registration for the Electron fork;
++  // sign-in uses personal access tokens instead of the OAuth redirect.
++  if (!__OHOS__) {
++    possibleProtocols.forEach(protocol => setAsDefaultProtocolClient(protocol))
++  }
++
++  // Renderer git invocations are executed here on HarmonyOS
++  if (__OHOS__) {
++    installOhosProcessHost()
++  }
+ 
+   createWindow()
+ 
+diff --git a/app/src/main-process/ohos-process-host.ts b/app/src/main-process/ohos-process-host.ts
+new file mode 100644
+index 0000000..bc69c94
+--- /dev/null
++++ b/app/src/main-process/ohos-process-host.ts
+@@ -0,0 +1,186 @@
++import { ipcMain, IpcMainEvent, WebContents } from 'electron'
++import { ChildProcess, spawn } from 'child_process'
++import * as Fs from 'fs'
++import { OhosToolsDir } from '../lib/ohos/ohos-environment'
++import {
++  OhosProcessEvent,
++  OhosProcessEventChannel,
++  OhosProcessKillChannel,
++  OhosProcessSpawnChannel,
++  OhosProcessStdinChannel,
++  IOhosSpawnRequest,
++  IOhosStdinRequest,
++  IOhosKillRequest,
++} from '../lib/ohos/remote-process-protocol'
++
++/**
++ * HarmonyOS: runs child processes on behalf of renderer processes.
++ *
++ * Electron-on-OpenHarmony renderers run in the Chromium render sandbox which
++ * can't see the HNP install locations (/data/app/<name>.org/...), so dugite's
++ * execFile/spawn in the renderer fail with ENOENT. The renderer bundle swaps
++ * dugite's child_process for a proxy (lib/ohos/remote-child-process) that
++ * forwards to this host, which spawns in the main process where HNP binaries
++ * are reachable, and streams stdio/exit back over IPC.
++ */
++export function installOhosProcessHost() {
++  const processes = new Map<string, ChildProcess>()
++  const tracked = new WeakSet<WebContents>()
++
++  const send = (sender: WebContents, event: OhosProcessEvent) => {
++    if (!sender.isDestroyed()) {
++      sender.send(OhosProcessEventChannel, event)
++    }
++  }
++
++  const track = (sender: WebContents) => {
++    if (tracked.has(sender)) {
++      return
++    }
++    tracked.add(sender)
++    // Don't leave git processes behind when a window goes away
++    sender.once('destroyed', () => {
++      for (const [key, cp] of processes) {
++        if (key.startsWith(`${sender.id}:`)) {
++          cp.kill()
++          processes.delete(key)
++        }
++      }
++    })
++  }
++
++  ipcMain.on(
++    OhosProcessSpawnChannel,
++    (event: IpcMainEvent, request: IOhosSpawnRequest) => {
++      const { sender } = event
++      const { id, file, args } = request
++      const cwd =
++        request.cwd === undefined ||
++        (request.neutralCwd && !Fs.existsSync(request.cwd))
++          ? existingDir(process.env.HOME)
++          : request.cwd
++      const env = withMainOhosEnv(request.env)
++      const key = `${sender.id}:${id}`
++      track(sender)
++
++      let cp: ChildProcess
++      try {
++        cp = spawn(file, args, { cwd, env })
++      } catch (e) {
++        const err = e as NodeJS.ErrnoException
++        send(sender, {
++          id,
++          type: 'error',
++          code: err.code,
++          message: err.message,
++        })
++        return
++      }
++
++      processes.set(key, cp)
++
++      cp.on('spawn', () => send(sender, { id, type: 'spawn', pid: cp.pid }))
++      cp.stdout?.on('data', (data: Buffer) =>
++        send(sender, { id, type: 'stdout', data })
++      )
++      cp.stderr?.on('data', (data: Buffer) =>
++        send(sender, { id, type: 'stderr', data })
++      )
++      // stdin errors (EPIPE when git exits early) surface via the exit code
++      cp.stdin?.on('error', () => {})
++
++      cp.on('error', (err: NodeJS.ErrnoException) => {
++        if (err.code === 'ENOENT') {
++          const detail = !Fs.existsSync(file)
++            ? `executable not found: ${file}`
++            : cwd !== undefined && !Fs.existsSync(cwd)
++            ? `working directory not found: ${cwd}`
++            : 'executable or its interpreter could not be loaded'
++          log.warn(`[ohos] spawn ${file} ${args.join(' ')} failed: ${detail}`)
++        }
++        send(sender, {
++          id,
++          type: 'error',
++          code: err.code,
++          errno: err.errno,
++          syscall: err.syscall,
++          message: err.message,
++        })
++        processes.delete(key)
++      })
++
++      cp.on('exit', (code, signal) =>
++        send(sender, { id, type: 'exit', code, signal })
++      )
++      cp.on('close', (code, signal) => {
++        send(sender, { id, type: 'close', code, signal })
++        processes.delete(key)
++      })
++    }
++  )
++
++  ipcMain.on(
++    OhosProcessStdinChannel,
++    (event: IpcMainEvent, { id, data, end }: IOhosStdinRequest) => {
++      const stdin = processes.get(`${event.sender.id}:${id}`)?.stdin
++      if (!stdin || stdin.destroyed) {
++        return
++      }
++      if (data !== undefined) {
++        stdin.write(Buffer.from(data))
++      }
++      if (end) {
++        stdin.end()
++      }
++    }
++  )
++
++  ipcMain.on(
++    OhosProcessKillChannel,
++    (event: IpcMainEvent, { id, signal }: IOhosKillRequest) => {
++      processes.get(`${event.sender.id}:${id}`)?.kill(signal)
++    }
++  )
++}
++
++const existingDir = (dir: string | undefined) =>
++  dir !== undefined && Fs.existsSync(dir) ? dir : undefined
++
++/**
++ * The git/ssh environment is configured in each process at startup
++ * (lib/ohos/ohos-environment.ts). Fill in anything the renderer's copy is
++ * missing or got wrong from the main process' own, known-good environment.
++ */
++function withMainOhosEnv(env: Record<string, string | undefined> | undefined) {
++  if (env === undefined) {
++    return undefined
++  }
++
++  const result = { ...env }
++  const main = process.env
++
++  for (const key of [
++    'HOME',
++    'GIT_CONFIG_GLOBAL',
++    'GIT_CONFIG_NOSYSTEM',
++    'GIT_TERMINAL_PROMPT',
++  ]) {
++    if (result[key] === undefined && main[key] !== undefined) {
++      result[key] = main[key]
++    }
++  }
++
++  if (result.HOME !== undefined && !Fs.existsSync(result.HOME)) {
++    result.HOME = main.HOME
++  }
++
++  if (!result.GIT_SSL_CAINFO || !Fs.existsSync(result.GIT_SSL_CAINFO)) {
++    result.GIT_SSL_CAINFO = main.GIT_SSL_CAINFO
++  }
++
++  if (!(result.PATH ?? '').includes(OhosToolsDir) && main.PATH !== undefined) {
++    result.PATH = main.PATH
++  }
++
++  return result
++}
+diff --git a/app/src/main-process/ohos-uncaught-exception.ts b/app/src/main-process/ohos-uncaught-exception.ts
+new file mode 100644
+index 0000000..2848e53
+--- /dev/null
++++ b/app/src/main-process/ohos-uncaught-exception.ts
+@@ -0,0 +1,66 @@
++import { app, dialog } from 'electron'
++import { AppWindow } from './app-window'
++
++let dialogOpen = false
++
++/**
++ * Renderer errors arrive over IPC and may be ErrorEvents or other non-Error
++ * objects whose properties don't survive serialization (they showed up as
++ * "[Unknown]: [Unknown]"), so describe whatever we got.
++ */
++export function describeError(error: unknown): string {
++  if (error instanceof Error) {
++    return error.stack ?? `${error.name}: ${error.message}`
++  }
++  if (error && typeof error === 'object') {
++    const e = error as Record<string, unknown>
++    const parts = ['name', 'message', 'filename', 'lineno', 'colno', 'stack']
++      .filter(key => e[key] !== undefined && e[key] !== '')
++      .map(key => `${key}: ${String(e[key])}`)
++    if (parts.length > 0) {
++      return parts.join('\n')
++    }
++    try {
++      return JSON.stringify(error)
++    } catch {}
++  }
++  return String(error)
++}
++
++/**
++ * HarmonyOS replacement for Desktop's crash flow (destroy the main window and
++ * show the crash window), whose crash window the Electron fork never shows.
++ */
++export async function handleOhosUncaughtException(
++  error: unknown,
++  window: AppWindow
++) {
++  const details = describeError(error)
++  log.error(`[ohos] uncaught exception\n${details}`)
++
++  if (dialogOpen) {
++    return
++  }
++  dialogOpen = true
++  try {
++    // Unparented on purpose: window-modal boxes aren't drawn on the fork
++    const { response } = await dialog.showMessageBox({
++      type: 'error',
++      title: 'Unexpected error',
++      message: 'GitHub Desktop encountered an unexpected error.',
++      detail: `${details}\n\nThe app may be in an inconsistent state. Reloading the window is the safest option.`,
++      buttons: ['Reload window', 'Continue', 'Quit'],
++      defaultId: 0,
++      cancelId: 1,
++    })
++    if (response === 0) {
++      window.reload()
++    } else if (response === 2) {
++      app.quit()
++    }
++  } catch (e) {
++    log.error('[ohos] could not show uncaught exception dialog', e)
++  } finally {
++    dialogOpen = false
++  }
++}
+diff --git a/app/src/ui/dispatcher/dispatcher.ts b/app/src/ui/dispatcher/dispatcher.ts
+index de6c674..148b525 100644
+--- a/app/src/ui/dispatcher/dispatcher.ts
++++ b/app/src/ui/dispatcher/dispatcher.ts
+@@ -1766,6 +1766,14 @@ export class Dispatcher {
+     this.appStore._requestBrowserAuthentication()
+   }
+ 
++  /**
++   * Sign in using a personal access token (HarmonyOS replacement for the
++   * browser OAuth flow). Must only be called in the authentication step.
++   */
++  public authenticateWithToken(token: string) {
++    return this.appStore._authenticateWithToken(token)
++  }
++
+   /**
+    * Initiate an OAuth sign in using the system configured browser to GitHub.com.
+    *
+diff --git a/app/src/ui/index.tsx b/app/src/ui/index.tsx
+index 414acb3..8a066ba 100644
+--- a/app/src/ui/index.tsx
++++ b/app/src/ui/index.tsx
+@@ -1,3 +1,4 @@
++import '../lib/ohos/install'
+ import '../lib/logging/renderer/install'
+ 
+ import * as React from 'react'
+@@ -89,15 +90,19 @@ if (shellNeedsPatching(process)) {
+ 
+ enableSourceMaps()
+ 
+-// Tell dugite where to find the git environment,
+-// see https://github.com/desktop/dugite/pull/85
+-process.env['LOCAL_GIT_DIRECTORY'] = Path.resolve(__dirname, 'git')
+-
+-// Ensure that dugite infers the GIT_EXEC_PATH
+-// based on the LOCAL_GIT_DIRECTORY env variable
+-// instead of just blindly trusting what's set in
+-// the current environment. See https://git.io/JJ7KF
+-delete process.env.GIT_EXEC_PATH
++// On HarmonyOS git isn't bundled next to the app but installed from git.hnp;
++// lib/ohos/install has already pointed LOCAL_GIT_DIRECTORY/GIT_EXEC_PATH there
++if (!__OHOS__) {
++  // Tell dugite where to find the git environment,
++  // see https://github.com/desktop/dugite/pull/85
++  process.env['LOCAL_GIT_DIRECTORY'] = Path.resolve(__dirname, 'git')
++
++  // Ensure that dugite infers the GIT_EXEC_PATH
++  // based on the LOCAL_GIT_DIRECTORY env variable
++  // instead of just blindly trusting what's set in
++  // the current environment. See https://git.io/JJ7KF
++  delete process.env.GIT_EXEC_PATH
++}
+ 
+ const startTime = performance.now()
+ 
+@@ -214,7 +219,11 @@ const onUncaughtException = (error: unknown) => {
+   // to be able to ignore the resize observer error above so we need to
+   // unsubscribe manually once we encounter an error we actually want to crash
+   // the app for.
+-  process.off('uncaughtException', onUncaughtException)
++  // On HarmonyOS the window survives uncaught exceptions (see main-process/
++  // ohos-uncaught-exception.ts), so keep reporting subsequent ones.
++  if (!__OHOS__) {
++    process.off('uncaughtException', onUncaughtException)
++  }
+ }
+ 
+ process.on('uncaughtException', onUncaughtException)
+diff --git a/app/src/ui/lib/sign-in.tsx b/app/src/ui/lib/sign-in.tsx
+index 86a42c2..81c7b70 100644
+--- a/app/src/ui/lib/sign-in.tsx
++++ b/app/src/ui/lib/sign-in.tsx
+@@ -13,6 +13,7 @@ import {
+ import { Ref } from './ref'
+ import { getHTMLURL } from '../../lib/api'
+ import { EnterpriseServerConfirmation } from './enterprise-server-confirmation'
++import { TokenSignIn } from './token-sign-in'
+ 
+ interface ISignInProps {
+   readonly signInState: SignInState
+@@ -33,6 +34,10 @@ export class SignIn extends React.Component<ISignInProps, {}> {
+     this.props.dispatcher.requestBrowserAuthentication()
+   }
+ 
++  private onTokenSubmitted = (token: string) => {
++    this.props.dispatcher.authenticateWithToken(token)
++  }
++
+   private renderExistingAccountWarningStep(state: IExistingAccountWarning) {
+     return (
+       <>
+@@ -71,6 +76,21 @@ export class SignIn extends React.Component<ISignInProps, {}> {
+         <EnterpriseServerConfirmation endpoint={state.endpoint} />
+       ) : null
+ 
++    if (state.kind === SignInStep.Authentication && state.tokenEntry) {
++      return (
++        <>
++          {confirmation}
++          <TokenSignIn
++            endpoint={state.endpoint}
++            loading={state.loading}
++            onSubmit={this.onTokenSubmitted}
++          />
++          {state.error && <p className="error">{state.error.message}</p>}
++          {children}
++        </>
++      )
++    }
++
+     return (
+       <>
+         {confirmation}
+diff --git a/app/src/ui/lib/token-sign-in.tsx b/app/src/ui/lib/token-sign-in.tsx
+new file mode 100644
+index 0000000..02243e2
+--- /dev/null
++++ b/app/src/ui/lib/token-sign-in.tsx
+@@ -0,0 +1,102 @@
++import * as React from 'react'
++import { Row } from './row'
++import { TextBox } from './text-box'
++import { Button } from './button'
++import { LinkButton } from './link-button'
++import { Loading } from './loading'
++import { getHTMLURL } from '../../lib/api'
++
++/** Scopes GitHub Desktop needs for everything it does with the API and git */
++const TokenScopes = ['repo', 'read:org', 'user', 'workflow']
++
++/** URL of the "new classic personal access token" page, prefilled */
++export function getNewTokenURL(endpoint: string) {
++  const description = encodeURIComponent('GitHub Desktop (HarmonyOS)')
++  const scopes = TokenScopes.join(',')
++  return `${getHTMLURL(endpoint)}/settings/tokens/new?scopes=${scopes}&description=${description}`
++}
++
++interface ITokenSignInProps {
++  readonly endpoint: string
++  readonly loading: boolean
++
++  /**
++   * Called with the entered token. When omitted no submit button is rendered
++   * and the owner (e.g. a dialog) is expected to submit via onTokenChanged.
++   */
++  readonly onSubmit?: (token: string) => void
++  readonly onTokenChanged?: (token: string) => void
++}
++
++interface ITokenSignInState {
++  readonly token: string
++}
++
++/**
++ * Personal access token sign-in, used on HarmonyOS where the browser OAuth
++ * redirect back into the app isn't available.
++ */
++export class TokenSignIn extends React.Component<
++  ITokenSignInProps,
++  ITokenSignInState
++> {
++  public constructor(props: ITokenSignInProps) {
++    super(props)
++    this.state = { token: '' }
++  }
++
++  private onTokenChanged = (token: string) => {
++    this.setState({ token })
++    this.props.onTokenChanged?.(token)
++  }
++
++  private onSubmit = () => {
++    const token = this.state.token.trim()
++    if (token.length > 0 && !this.props.loading) {
++      this.props.onSubmit?.(token)
++    }
++  }
++
++  public render() {
++    const { endpoint, loading, onSubmit } = this.props
++    const host = new URL(getHTMLURL(endpoint)).host
++
++    return (
++      <div className="token-sign-in">
++        <p>
++          Sign in to {host} with a personal access token.{' '}
++          <LinkButton uri={getNewTokenURL(endpoint)}>
++            Create a token in your browser
++          </LinkButton>{' '}
++          (classic token with the <code>{TokenScopes.join(', ')}</code>{' '}
++          scopes), then paste it below.
++        </p>
++        <Row>
++          <TextBox
++            label="Personal access token"
++            type="password"
++            value={this.state.token}
++            onValueChanged={this.onTokenChanged}
++            onEnterPressed={onSubmit ? this.onSubmit : undefined}
++            placeholder="ghp_…"
++            disabled={loading}
++            autoFocus={true}
++            spellcheck={false}
++          />
++        </Row>
++        {onSubmit && (
++          <Row>
++            <Button
++              type="button"
++              onClick={this.onSubmit}
++              disabled={loading || this.state.token.trim().length === 0}
++            >
++              {loading && <Loading />}
++              Sign in
++            </Button>
++          </Row>
++        )}
++      </div>
++    )
++  }
++}
+diff --git a/app/src/ui/sign-in/sign-in.tsx b/app/src/ui/sign-in/sign-in.tsx
+index 74a647c..4ea57f4 100644
+--- a/app/src/ui/sign-in/sign-in.tsx
++++ b/app/src/ui/sign-in/sign-in.tsx
+@@ -19,6 +19,7 @@ import {
+   EnterpriseServerConfirmation,
+   enterpriseServerConfirmationDescriptionId,
+ } from '../lib/enterprise-server-confirmation'
++import { TokenSignIn } from '../lib/token-sign-in'
+ 
+ interface ISignInProps {
+   readonly dispatcher: Dispatcher
+@@ -30,6 +31,9 @@ interface ISignInProps {
+ 
+ interface ISignInState {
+   readonly endpoint: string
++
++  /** HarmonyOS personal access token sign-in */
++  readonly token: string
+ }
+ 
+ const SignInWithBrowserTitle = __DARWIN__
+@@ -54,6 +58,7 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+ 
+     this.state = {
+       endpoint: '',
++      token: '',
+     }
+   }
+ 
+@@ -99,7 +104,11 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+           .then(() => this.props.dispatcher.setSignInEndpoint(state.endpoint))
+         break
+       case SignInStep.Authentication:
+-        this.props.dispatcher.requestBrowserAuthentication()
++        if (state.tokenEntry) {
++          this.props.dispatcher.authenticateWithToken(this.state.token)
++        } else {
++          this.props.dispatcher.requestBrowserAuthentication()
++        }
+         break
+       case SignInStep.Success:
+         this.onDismissed()
+@@ -113,6 +122,10 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+     this.setState({ endpoint })
+   }
+ 
++  private onTokenChanged = (token: string) => {
++    this.setState({ token })
++  }
++
+   private renderFooter(): JSX.Element | null {
+     const state = this.props.signInState
+ 
+@@ -137,7 +150,12 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+         primaryButtonText = continueWithBrowserLabel
+         break
+       case SignInStep.Authentication:
+-        primaryButtonText = continueWithBrowserLabel
++        if (state.tokenEntry) {
++          primaryButtonText = __DARWIN__ ? 'Sign In' : 'Sign in'
++          disableSubmit = this.state.token.trim().length === 0
++        } else {
++          primaryButtonText = continueWithBrowserLabel
++        }
+         break
+       default:
+         return assertNever(state, `Unknown sign in step ${stepKind}`)
+@@ -185,6 +203,21 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+   }
+ 
+   private renderAuthenticationStep(state: IAuthenticationState) {
++    if (state.tokenEntry) {
++      return (
++        <DialogContent>
++          {state.isUnrecognizedEnterpriseServer && (
++            <EnterpriseServerConfirmation endpoint={state.endpoint} />
++          )}
++          <TokenSignIn
++            endpoint={state.endpoint}
++            loading={state.loading}
++            onTokenChanged={this.onTokenChanged}
++          />
++        </DialogContent>
++      )
++    }
++
+     if (state.isUnrecognizedEnterpriseServer) {
+       return (
+         <DialogContent>
+@@ -245,7 +278,7 @@ export class SignIn extends React.Component<ISignInProps, ISignInState> {
+     ) : null
+ 
+     const title =
+-      state.kind === SignInStep.Authentication
++      state.kind === SignInStep.Authentication && !state.tokenEntry
+         ? SignInWithBrowserTitle
+         : DefaultTitle
+ 
+diff --git a/app/src/ui/welcome/sign-in-enterprise.tsx b/app/src/ui/welcome/sign-in-enterprise.tsx
+index 3a71a1f..d598ef5 100644
+--- a/app/src/ui/welcome/sign-in-enterprise.tsx
++++ b/app/src/ui/welcome/sign-in-enterprise.tsx
+@@ -9,6 +9,9 @@ interface ISignInEnterpriseProps {
+   readonly dispatcher: Dispatcher
+   readonly advance: (step: WelcomeStep) => void
+   readonly signInState: SignInState | null
++
++  /** Overrides the heading, used for GitHub.com token sign-in on HarmonyOS */
++  readonly title?: string
+ }
+ 
+ /** The Welcome flow step to login to an Enterprise instance. */
+@@ -23,12 +26,11 @@ export class SignInEnterprise extends React.Component<
+       return null
+     }
+ 
++    const title = this.props.title ?? 'Sign in to your GitHub Enterprise'
++
+     return (
+-      <section
+-        id="sign-in-enterprise"
+-        aria-label="Sign in to your GitHub Enterprise"
+-      >
+-        <h1 className="welcome-title">Sign in to your GitHub Enterprise</h1>
++      <section id="sign-in-enterprise" aria-label={title}>
++        <h1 className="welcome-title">{title}</h1>
+ 
+         <SignIn signInState={state} dispatcher={this.props.dispatcher}>
+           <Button onClick={this.cancel}>Cancel</Button>
+diff --git a/app/src/ui/welcome/welcome.tsx b/app/src/ui/welcome/welcome.tsx
+index 93f6f19..0826434 100644
+--- a/app/src/ui/welcome/welcome.tsx
++++ b/app/src/ui/welcome/welcome.tsx
+@@ -155,6 +155,24 @@ export class Welcome extends React.Component<IWelcomeProps, IWelcomeState> {
+     const step = this.state.currentStep
+     const signInState = this.props.signInState
+ 
++    // HarmonyOS has no browser OAuth redirect; GitHub.com sign-in happens
++    // in-app with a personal access token instead.
++    if (
++      __OHOS__ &&
++      step === WelcomeStep.SignInToDotComWithBrowser &&
++      signInState !== null &&
++      signInState.kind !== SignInStep.Success
++    ) {
++      return (
++        <SignInEnterprise
++          dispatcher={this.props.dispatcher}
++          advance={this.advanceToStep}
++          signInState={signInState}
++          title="Sign in to GitHub.com"
++        />
++      )
++    }
++
+     switch (step) {
+       case WelcomeStep.Start:
+       case WelcomeStep.SignInToDotComWithBrowser:
+diff --git a/app/test/globals.mts b/app/test/globals.mts
+index 959a68b..6b7fa15 100644
+--- a/app/test/globals.mts
++++ b/app/test/globals.mts
+@@ -18,6 +18,7 @@ Object.assign(globalThis, {
+   __DARWIN__: process.platform === 'darwin',
+   __WIN32__: process.platform === 'win32',
+   __LINUX__: process.platform === 'linux',
++  __OHOS__: false,
+   log: {
+     error: () => {},
+     warn: () => {},
+diff --git a/app/webpack.common.ts b/app/webpack.common.ts
+index 9487c66..5b5cfce 100644
+--- a/app/webpack.common.ts
++++ b/app/webpack.common.ts
+@@ -2,14 +2,42 @@ import * as path from 'path'
+ import HtmlWebpackPlugin from 'html-webpack-plugin'
+ import webpack from 'webpack'
+ import merge from 'webpack-merge'
+-import { getReplacements } from './app-info'
++import { getReplacements, isOhosTarget } from './app-info'
+ 
+ export const externals = ['7zip']
+ 
+ const outputDir = 'out'
+ export const replacements = getReplacements()
+ 
+-const commonConfig: webpack.Configuration = {
++const ohosShim = (name: string) =>
++  path.resolve(__dirname, 'src', 'lib', 'ohos', 'shims', name)
++
++/**
++ * HarmonyOS build: native addons can't be loaded by the Electron fork, so the
++ * ones that are required eagerly are swapped for JS implementations and any
++ * remaining (lazily required, never reached) `.node` binaries are left out.
++ */
++const ohosConfig: webpack.Configuration = isOhosTarget
++  ? {
++      resolve: {
++        alias: {
++          keytar$: ohosShim('keytar.ts'),
++          'fs-admin$': ohosShim('fs-admin.ts'),
++          'registry-js$': ohosShim('registry-js.ts'),
++          'windows-argv-parser$': ohosShim('windows-argv-parser.ts'),
++        },
++      },
++      plugins: [
++        // Only native addon binaries: a bare /\.node$/ also caught CodeMirror's
++        // './runmode.node' (runmode.node.js), breaking syntax highlighting
++        new webpack.IgnorePlugin({
++          resourceRegExp: /[\\/]build[\\/]Release[\\/][^\\/]+\.node$/,
++        }),
++      ],
++    }
++  : {}
++
++const commonConfig: webpack.Configuration = merge(ohosConfig, {
+   optimization: {
+     emitOnErrors: false,
+   },
+@@ -50,7 +78,7 @@ const commonConfig: webpack.Configuration = {
+     __dirname: false,
+     __filename: false,
+   },
+-}
++})
+ 
+ export const main = merge({}, commonConfig, {
+   entry: { main: path.resolve(__dirname, 'src/main-process/main') },
+@@ -64,7 +92,25 @@ export const main = merge({}, commonConfig, {
+   ],
+ })
+ 
+-export const renderer = merge({}, commonConfig, {
++/**
++ * HarmonyOS: the renderer sandbox can't see HNP-installed binaries, so git is
++ * run in the main process. dugite's child_process is replaced with an IPC
++ * proxy (see src/lib/ohos/remote-child-process.ts).
++ */
++const ohosRendererConfig: webpack.Configuration = isOhosTarget
++  ? {
++      module: {
++        rules: [
++          {
++            test: /[\\/]node_modules[\\/]dugite[\\/]build[\\/]lib[\\/](exec|spawn|git-environment)\.js$/,
++            use: [path.resolve(__dirname, 'ohos-dugite-loader.js')],
++          },
++        ],
++      },
++    }
++  : {}
++
++export const renderer = merge({}, commonConfig, ohosRendererConfig, {
+   entry: { renderer: path.resolve(__dirname, 'src/ui/index') },
+   target: 'electron-renderer',
+   module: {

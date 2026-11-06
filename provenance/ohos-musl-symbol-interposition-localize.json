@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "ohos-musl-symbol-interposition-localize",
+  "sources": [
+    {
+      "collection": "krita-ohos",
+      "original_path": "harmony_pc/deps/quazip-localize-minizip.map",
+      "snapshot": "provenance/snapshots/projects/krita-ohos/2026-11-06/harmony_pc/deps/quazip-localize-minizip.map",
+      "sha256": "03e547babc0becc3a0b16a02e64ea77605a112bc652a7f1331c45d145895ca94",
+      "revision": "f6d7b05d835dc1978227b5466475400aecdabb63",
+      "license": "GPL-3.0",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_krita",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "krita-ohos",
+      "original_path": "harmony_pc/deps/build-deps.sh",
+      "snapshot": "provenance/snapshots/projects/krita-ohos/2026-11-06/harmony_pc/deps/build-deps.sh",
+      "sha256": "095ddbaf815308da5b290053fddec4a7913d9dc5ac179a8d954f3a2aa7a0899f",
+      "revision": "f6d7b05d835dc1978227b5466475400aecdabb63",
+      "license": "GPL-3.0",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_krita",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

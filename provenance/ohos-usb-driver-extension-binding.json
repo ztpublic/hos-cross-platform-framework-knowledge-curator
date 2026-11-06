@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "ohos-usb-driver-extension-binding",
+  "sources": [
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/module.json5",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/module.json5",
+      "sha256": "44b9600e2e13f1de5c471a9d3edb789fec58f7109c2dae246937927aec12f117",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/ets/driverability/driver.ts",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/ets/driverability/driver.ts",
+      "sha256": "da70fe8ffbba4cfabe9067b5b46fcd46731e1f8441004b3490ed5f3cf4c3a68a",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/ets/tool/RpcTool.ets",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/ets/tool/RpcTool.ets",
+      "sha256": "ee21de50cb842ce4d561661240f24ef0d122ea8e4b48dfa3135fd4e42856ed76",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "pc-handwriting-pad",
+      "original_path": "entry/src/main/cpp/hello.cpp",
+      "snapshot": "provenance/snapshots/projects/pc-handwriting-pad/2026-11-06/entry/src/main/cpp/hello.cpp",
+      "sha256": "024dfa5c5fb7f10a18ddc7d8b0b26062ce82e4e8d5ea7330399d3539dc235fc3",
+      "revision": "3e49b5fec34b27e4902c3e4f813849802091c109",
+      "license": "Apache-2.0",
+      "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

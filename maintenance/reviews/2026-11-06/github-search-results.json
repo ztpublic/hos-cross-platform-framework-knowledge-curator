@@ -1,0 +1,276 @@
+{
+ "https://github.com/chaosst/crossdeck": {
+  "description": "跨端 Agent 桌面客户端（一份零平台依赖 core + Web / Electron / 鸿蒙三壳）",
+  "fullName": "chaosst/crossdeck",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-10-09T15:35:16Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-09T15:35:22Z",
+  "url": "https://github.com/chaosst/crossdeck",
+  "queries": [
+   "electron 鸿蒙"
+  ]
+ },
+ "https://github.com/AppFactory-EastWest/skill-qt-harmonyos": {
+  "description": "",
+  "fullName": "AppFactory-EastWest/skill-qt-harmonyos",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-09-20T17:57:02Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-09-20T21:25:52Z",
+  "url": "https://github.com/AppFactory-EastWest/skill-qt-harmonyos",
+  "queries": [
+   "qt harmonyos"
+  ]
+ },
+ "https://github.com/xristosstarnetgames439-del/HuiwenMCP": {
+  "description": "开源鸿蒙PC应用项目。Qt + OpenHarmony / HarmonyOS PC 文档阅读、编辑与格式转换项目，集成 ArkTS、CEF 浏览器内核、PDFium 与 Python HNP。已支持 PDF/Markdown 双栏预览、同步滚动、PDF 转 Markdown 与最近工作区恢复；规划支持 Word 文档预览与编辑、PDF 编辑、Markdown 编辑、OCR 文字识别及多格式批量转换。源码公开，供学习交流与教学参考，欢迎提交 Issue、通过 PR 贡献代码，共同完善鸿蒙 PC 文档工具。自有代码采用 PolyForm Noncommercial 1.0.0 许可。",
+  "fullName": "xristosstarnetgames439-del/HuiwenMCP",
+  "isFork": false,
+  "language": "C++",
+  "pushedAt": "2026-11-06T05:58:58Z",
+  "stargazersCount": 238,
+  "updatedAt": "2026-11-06T05:59:02Z",
+  "url": "https://github.com/xristosstarnetgames439-del/HuiwenMCP",
+  "queries": [
+   "qt openharmony"
+  ]
+ },
+ "https://github.com/KodeGood/qtwebkitview-openharmony": {
+  "description": "",
+  "fullName": "KodeGood/qtwebkitview-openharmony",
+  "isFork": false,
+  "language": "QML",
+  "pushedAt": "2026-10-26T15:02:49Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-26T15:02:53Z",
+  "url": "https://github.com/KodeGood/qtwebkitview-openharmony",
+  "queries": [
+   "qt openharmony"
+  ]
+ },
+ "https://github.com/Maicarons/papex-app": {
+  "description": "Official mobile client for the Papex academic literature platform (Android / HarmonyOS / iOS). React Native 0.82 + RNOH 0.82.30.",
+  "fullName": "Maicarons/papex-app",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-11-05T04:53:45Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-11-05T04:53:51Z",
+  "url": "https://github.com/Maicarons/papex-app",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/ftsukic/rnoh-keyboard-insets": {
+  "description": "@sdcx/keyboard-insets rnoh适配",
+  "fullName": "ftsukic/rnoh-keyboard-insets",
+  "isFork": false,
+  "language": "C++",
+  "pushedAt": "2026-11-04T22:21:31Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-11-04T22:21:35Z",
+  "url": "https://github.com/ftsukic/rnoh-keyboard-insets",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/git-duzhengjie/RNOH-New": {
+  "description": "React Native for HarmonyOS - A modern bridge framework to run React Native apps on HarmonyOS",
+  "fullName": "git-duzhengjie/RNOH-New",
+  "isFork": false,
+  "language": "C++",
+  "pushedAt": "2026-10-27T09:57:09Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-27T09:57:13Z",
+  "url": "https://github.com/git-duzhengjie/RNOH-New",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/dmalkerq/rnohp": {
+  "description": "content",
+  "fullName": "dmalkerq/rnohp",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-09-24T06:42:42Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-09-24T06:43:47Z",
+  "url": "https://github.com/dmalkerq/rnohp",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/azyfg-aley/rnoh": {
+  "description": "content",
+  "fullName": "azyfg-aley/rnoh",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-09-24T04:52:46Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-09-24T04:53:27Z",
+  "url": "https://github.com/azyfg-aley/rnoh",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/Excellenceiuchannel/rnohfkxf": {
+  "description": "",
+  "fullName": "Excellenceiuchannel/rnohfkxf",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-09-21T16:27:43Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-09-21T16:27:47Z",
+  "url": "https://github.com/Excellenceiuchannel/rnohfkxf",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/james2124661/rnohnm": {
+  "description": "",
+  "fullName": "james2124661/rnohnm",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-08-28T05:07:26Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-08-28T05:07:50Z",
+  "url": "https://github.com/james2124661/rnohnm",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/scottana4/rnohae": {
+  "description": "",
+  "fullName": "scottana4/rnohae",
+  "isFork": false,
+  "language": "",
+  "pushedAt": "2026-08-23T08:36:52Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-08-23T08:37:15Z",
+  "url": "https://github.com/scottana4/rnohae",
+  "queries": [
+   "rnoh"
+  ]
+ },
+ "https://github.com/itzkowitzhause811-cyber/harmony-interview-react-native": {
+  "description": "React Native + TypeScript interview learning app targeting Android, iOS and HarmonyOS/RNOH.",
+  "fullName": "itzkowitzhause811-cyber/harmony-interview-react-native",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-08-06T10:35:05Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-08-06T10:35:19Z",
+  "url": "https://github.com/itzkowitzhause811-cyber/harmony-interview-react-native",
+  "queries": [
+   "rnoh",
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/AllBinary/AllBinary-Platform-TypeScript": {
+  "description": "Do not create PRs for this repo.  Instead create any PRs on the main https://github.com/AllBinary/AllBinary-Platform project. This repo is the generated TypeScript code by the AllBinary Platform for React Native, ArkTs/Harmony OS 5+, and the like support.",
+  "fullName": "AllBinary/AllBinary-Platform-TypeScript",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-11-04T00:08:09Z",
+  "stargazersCount": 1,
+  "updatedAt": "2026-11-04T00:08:13Z",
+  "url": "https://github.com/AllBinary/AllBinary-Platform-TypeScript",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/wuyuanwuhui999/harmony-arkts-music-app-ui": {
+  "description": "基于harmony arkts开发的音乐app，后端采用springboot+mybatis+mysql开发，有flutter、react-native、java、微信小程序、uniapp多个版本，参见个人主页springboot、flutter、react-native等项目包括底部tab导航，首页，音乐推荐，音乐圈，我的，搜索页，分类页，播放页，登录，注册，浏览记录，播放记录，收藏，缓存，音乐排行榜等页面和模块、音乐，功能齐全完善，所有数据来自python爬虫程序，抓取酷狗和第三方音乐网站实时数据和酷狗音乐数据，持续更新中...",
+  "fullName": "wuyuanwuhui999/harmony-arkts-music-app-ui",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-11-01T13:26:44Z",
+  "stargazersCount": 2,
+  "updatedAt": "2026-11-01T13:26:47Z",
+  "url": "https://github.com/wuyuanwuhui999/harmony-arkts-music-app-ui",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/virg00/react-native-voice-harmony": {
+  "description": "@react-native-voice/voice with HarmonyOS (React Native for OpenHarmony) support",
+  "fullName": "virg00/react-native-voice-harmony",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-10-23T02:51:28Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-23T02:51:50Z",
+  "url": "https://github.com/virg00/react-native-voice-harmony",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/307499815/react-native-calendar-events-harmony": {
+  "description": "",
+  "fullName": "307499815/react-native-calendar-events-harmony",
+  "isFork": false,
+  "language": "TypeScript",
+  "pushedAt": "2026-10-16T02:59:21Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-16T02:59:25Z",
+  "url": "https://github.com/307499815/react-native-calendar-events-harmony",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/CarGuo/GSYGithubAPP": {
+  "description": "React Native 超完整的开源项目，功能丰富，适合学习和日常使用。GSYGithubApp 系列的优势：我们目前已经拥有 Flutter、Weex、ReactNative、Kotlin View、Kotlin Jetpack Compose ，Compose MultiPlatform，Harmony ArkUI 七个版本，功能齐全，项目框架内技术涉及面广，完成度高，持续维护，配套文章，适合全面学习，对比参考。",
+  "fullName": "CarGuo/GSYGithubAPP",
+  "isFork": false,
+  "language": "JavaScript",
+  "pushedAt": "2026-09-15T09:52:16Z",
+  "stargazersCount": 2496,
+  "updatedAt": "2026-11-03T08:11:19Z",
+  "url": "https://github.com/CarGuo/GSYGithubAPP",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/gizwits/react-native-wechat-lib-harmony": {
+  "description": "react-native-wechat-lib-harmony",
+  "fullName": "gizwits/react-native-wechat-lib-harmony",
+  "isFork": false,
+  "language": "JavaScript",
+  "pushedAt": "2026-09-05T04:58:08Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-09-05T04:58:12Z",
+  "url": "https://github.com/gizwits/react-native-wechat-lib-harmony",
+  "queries": [
+   "react-native-harmony"
+  ]
+ },
+ "https://github.com/xiaotaop/ohos_gsas-ii": {
+  "description": "GSAS-II HarmonyOS PC porting project",
+  "fullName": "xiaotaop/ohos_gsas-ii",
+  "isFork": false,
+  "language": "Python",
+  "pushedAt": "2026-10-26T16:09:46Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-26T16:09:51Z",
+  "url": "https://github.com/xiaotaop/ohos_gsas-ii",
+  "queries": [
+   "harmonyos pc port"
+  ]
+ },
+ "https://github.com/joinother/OpenSPH-HarmonyOS": {
+  "description": "OpenSPH 物理仿真软件鸿蒙 PC 移植（保留原生 wxWidgets UI），含 wxWidgets 鸿蒙适配、DevEco 壳工程与中文国际化",
+  "fullName": "joinother/OpenSPH-HarmonyOS",
+  "isFork": false,
+  "language": "C",
+  "pushedAt": "2026-10-27T16:46:34Z",
+  "stargazersCount": 0,
+  "updatedAt": "2026-10-27T16:46:38Z",
+  "url": "https://github.com/joinother/OpenSPH-HarmonyOS",
+  "queries": [
+   "鸿蒙PC 移植"
+  ]
+ }
+}

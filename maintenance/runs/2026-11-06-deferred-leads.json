@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-deferred-leads",
+  "date": "2026-11-06",
+  "mode": "discovery",
+  "outcome": "complete for the 22 selected leads and selected mechanisms; remaining AtomGit results unscreened, not ecosystem exhaustion",
+  "source_ids": [
+    "github-desktop-ohos",
+    "theia-ohos",
+    "electron-harmonyos-kb",
+    "electron-ohos-adapt",
+    "flutter-downloader-ohos",
+    "flutter-tts-ohos",
+    "flutter-harmony-ebook",
+    "vidcutter-ohos",
+    "openshot-ohos",
+    "rstudio-ohos",
+    "ohos-kmp-toolchain"
+  ],
+  "source_reviews": [],
+  "added_entries": [
+    "electron-ohos-close-reload-forced-exit",
+    "electron-ohos-renderer-subprocess-main-proxy",
+    "hnp-tool-private-prefix-environment",
+    "ohos-git-ssh-sandbox-identity",
+    "electron-ohos-crash-window-not-shown",
+    "electron-ohos-execpath-appspawn-fork",
+    "electron-ohos-resfile-flat-node-modules",
+    "electron-ohos-exec-path-metadata",
+    "ohos-window-close-async-veto",
+    "ohos-certificate-fingerprint-pinning",
+    "ohos-system-download-to-public-downloads",
+    "flutter-ohos-background-callback-engine",
+    "ohos-tts-playback-completion-and-voice-rebind",
+    "qt-pyqt-ohos-embedded-cpython-launcher",
+    "python-ohos-extension-suffix-match",
+    "qt-pyqt-ohos-ghost-tooltip-windows",
+    "ohos-embedded-interpreter-in-process",
+    "qt5-ohos-foreign-gl-video-window",
+    "kmp-ohos-lldb-native-attach"
+  ],
+  "extended_entries": [
+    "document-picker-uri-access",
+    "typed-channel-payload-extraction"
+  ],
+  "counts": {
+    "candidates_screened": 22,
+    "dispositions": {
+      "collection-contributed": 3,
+      "duplicate": 3,
+      "screened-no-new-atom": 2,
+      "source-reviewed-contributed": 8,
+      "unqualified": 2,
+      "different-framework": 1,
+      "insufficient": 2,
+      "different-host": 1
+    },
+    "new_sources": 11,
+    "registry_total": 80
+  },
+  "review_records": [
+    "reviews/2026-11-06/candidate-dispositions-2.json",
+    "reviews/2026-11-06/candidate-fetch-2.json",
+    "reviews/2026-11-06/atomgit-search-results-2.json"
+  ],
+  "verification_performed": [
+    "kb.py index and check",
+    "Symptom and framework retrieval checks",
+    "Key delegated findings re-read against pinned source before authoring",
+    "git diff --check"
+  ],
+  "limitations": [
+    "No source setup, build, signing, installation, emulator or PC run was performed.",
+    "Large repositories were sampled by path, not audited.",
+    "Doc-claim entries use evidence_tier imported-guidance and hash-only provenance where no license exists.",
+    "Fetched repositories are shallow, so history-based reasoning was not possible."
+  ]
+}

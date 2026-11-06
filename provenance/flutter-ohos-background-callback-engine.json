@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "flutter-ohos-background-callback-engine",
+  "sources": [
+    {
+      "collection": "flutter-downloader-ohos",
+      "original_path": "ohos/src/main/ets/components/FlutterDownloaderPlugin.ets",
+      "snapshot": "provenance/snapshots/projects/flutter-downloader-ohos/2026-11-06/ohos/src/main/ets/components/FlutterDownloaderPlugin.ets",
+      "sha256": "b3ba56f5ee0048dbd8f9f179648f4c7869ab4146bd818b18df0a62966a604825",
+      "revision": "c9e13c0c3d5793a0762325125d0429be56197612",
+      "license": "MIT LICENSE file; reviewed source header says Apache-2.0.",
+      "url": "https://atomgit.com/oh-flutter/flutter_downloader_ohos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "native-hmdfs-no-hardlink-publish",
+  "sources": [
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "patches/dsh-v0.2.1-rc.5/dsh-fs-hardlink-fallback.patch",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/2026-11-06/patches/dsh-v0.2.1-rc.5/dsh-fs-hardlink-fallback.patch",
+      "sha256": "f592381b0c3c66c398c5f0b6c3c23d5b04f530827263823a1acef26c71fa7eb6",
+      "revision": "6ca565388192c25dac3c4e456707084ce9c3d5bb",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "patches/dsh-v0.2.1-rc.5/dsh-hardlink-to-rename.patch",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/2026-11-06/patches/dsh-v0.2.1-rc.5/dsh-hardlink-to-rename.patch",
+      "sha256": "6cfea1ced457597a05a9f7c5db58d02df02aeaaa9b4e3ac0e92d2a8852de3fa6",
+      "revision": "6ca565388192c25dac3c4e456707084ce9c3d5bb",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Patches were present earlier and unchanged in this range; reviewed now because no entry covered them. The kernel statement is the patch author's comment."
+  ]
+}

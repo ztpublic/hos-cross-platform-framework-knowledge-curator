@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ohos-embedded-interpreter-in-process",
+  "sources": [
+    {
+      "collection": "rstudio-ohos",
+      "original_path": "ohos/entry/src/main/cpp/rstudio_qt_harmony.cpp",
+      "snapshot": "provenance/snapshots/projects/rstudio-ohos/2026-11-06/ohos/entry/src/main/cpp/rstudio_qt_harmony.cpp",
+      "sha256": "1b56e2c85c46a0e6014f571071a6f6aaa47920b23bc39476e7ef373df619da06",
+      "revision": "9e45a1bfb26fb31e9fab0566888a52d803882131",
+      "license": "AGPL-3.0",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_rstudio",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

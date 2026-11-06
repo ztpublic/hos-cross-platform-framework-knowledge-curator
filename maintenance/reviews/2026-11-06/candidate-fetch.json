@@ -1,0 +1,222 @@
+[
+ {
+  "id": "zcode-ohos",
+  "url": "https://atomgit.com/LiquidStudio/zcode",
+  "framework": "electron",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/zcode-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "cf3f16ab5c8279104fbdfb0948307167efc2db0d",
+  "files": 466,
+  "oh": 211,
+  "outcome": "fetched"
+ },
+ {
+  "id": "carnac-electron-ohos",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_carnac_electron",
+  "framework": "electron",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/carnac-electron-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "75d91f8cd47474e993039e7758fb994b97abeced",
+  "files": 229,
+  "oh": 226,
+  "outcome": "fetched"
+ },
+ {
+  "id": "electron-ohos-bridge",
+  "url": "https://atomgit.com/he-nan/electron-ohos-bridge",
+  "framework": "electron",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/electron-ohos-bridge.git",
+  "selected_ref": "main",
+  "observed_commit": "175b60bcd859a6cf7932cdad3678967676877594",
+  "files": 1493,
+  "oh": 1257,
+  "outcome": "fetched"
+ },
+ {
+  "id": "insomnia-electron-ohos",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_insomnia_electron",
+  "framework": "electron",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/insomnia-electron-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "a480dd7bddc3c9a8aa67c9145626c4427f06bf5d",
+  "files": 280,
+  "oh": 230,
+  "outcome": "fetched"
+ },
+ {
+  "id": "ohos-electron-builder",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos-electron-builder",
+  "framework": "electron",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/ohos-electron-builder.git",
+  "selected_ref": "main",
+  "observed_commit": "2a3092c468b7cbb3d8f6f2e4c7ce8f7d23e46348",
+  "files": 325,
+  "oh": 5,
+  "outcome": "fetched"
+ },
+ {
+  "id": "anki-ohos",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Anki",
+  "framework": "qt",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/anki-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "4f51ae95c0dfa68137e5496159139853fe9ac8e9",
+  "files": 11820,
+  "oh": 10165,
+  "outcome": "fetched"
+ },
+ {
+  "id": "qt-creator-ohos",
+  "url": "https://atomgit.com/ohos-qt/qt-creator",
+  "framework": "qt",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/qt-creator-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "ac0350dda3ace06b033f6402aea745a3f0cdb7dc",
+  "files": 18383,
+  "oh": 67,
+  "outcome": "fetched"
+ },
+ {
+  "id": "krita-ohos",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_krita",
+  "framework": "qt",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/krita-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "f6d7b05d835dc1978227b5466475400aecdabb63",
+  "files": 23123,
+  "oh": 10883,
+  "outcome": "fetched"
+ },
+ {
+  "id": "shotcut-ohos",
+  "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_Shotcut",
+  "framework": "qt",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/shotcut-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "084ccba9252c134983d4b6af722bb9373bac0573",
+  "files": 12137,
+  "oh": 10308,
+  "outcome": "fetched"
+ },
+ {
+  "id": "hlbmerge-flutter",
+  "url": "https://atomgit.com/bigmolihuan/hlbmerge_flutter",
+  "framework": "flutter",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/hlbmerge-flutter.git",
+  "selected_ref": "master",
+  "observed_commit": "a1fa32b1da94afe3fad91e21530c3ce9844909b5",
+  "files": 541,
+  "oh": 78,
+  "outcome": "fetched"
+ },
+ {
+  "id": "tracking-query-flutter",
+  "url": "https://atomgit.com/oh-flutter/tracking_query",
+  "framework": "flutter",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/tracking-query-flutter.git",
+  "selected_ref": "main",
+  "observed_commit": "8ad9181ceaa1f11db27a12102e14ffe5cff69cca",
+  "files": 175,
+  "oh": 33,
+  "outcome": "fetched"
+ },
+ {
+  "id": "flutter-list-perf",
+  "url": "https://atomgit.com/XJ-Cyber/flutter_ohos_list_performance_demo",
+  "framework": "flutter",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/flutter-list-perf.git",
+  "selected_ref": "main",
+  "observed_commit": "bd387d3b1ce8e6e40f3b749244884ceed2d486b1",
+  "files": 47,
+  "oh": 33,
+  "outcome": "fetched"
+ },
+ {
+  "id": "rn-ohfeatures",
+  "url": "https://atomgit.com/CPF-RN/rn_ohfeatures",
+  "framework": "react-native",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/rn-ohfeatures.git",
+  "selected_ref": "master",
+  "observed_commit": "c0d565461fe6668bd31d089b3d85084536327429",
+  "files": 378,
+  "oh": 204,
+  "outcome": "fetched"
+ },
+ {
+  "id": "rntpc-clipboard",
+  "url": "https://atomgit.com/CPF-RN/rntpc_clipboard",
+  "framework": "react-native",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/rntpc-clipboard.git",
+  "selected_ref": "master",
+  "observed_commit": "bacd93c0c49199482095ecbec91d8dac221c4b9c",
+  "files": 99,
+  "oh": 49,
+  "outcome": "fetched"
+ },
+ {
+  "id": "rnoh-keyboard-insets",
+  "url": "https://github.com/ftsukic/rnoh-keyboard-insets",
+  "framework": "react-native",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/rnoh-keyboard-insets.git",
+  "selected_ref": "main",
+  "observed_commit": "62f2e7fcaa6f872f6710f11ab1b9eabbee6ffefe",
+  "files": 36,
+  "oh": 27,
+  "outcome": "fetched"
+ },
+ {
+  "id": "kmp-ohos-adapters",
+  "url": "https://atomgit.com/wdracky/kmp-ohos-adapters",
+  "framework": "kotlin-multiplatform",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/kmp-ohos-adapters.git",
+  "selected_ref": "main",
+  "observed_commit": "c30209eec0de92c3ed968972e013050ea613ed4a",
+  "files": 246,
+  "oh": 125,
+  "outcome": "fetched"
+ },
+ {
+  "id": "compose-webview-ohos",
+  "url": "https://atomgit.com/oh-tpc/compose-webview-multiplatform",
+  "framework": "kotlin-multiplatform",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/compose-webview-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "4ec89b2b5ceb7eb7a38c96cda16407993f12bb18",
+  "files": 219,
+  "oh": 37,
+  "outcome": "fetched"
+ },
+ {
+  "id": "tauri-harmony-jianguoxu",
+  "url": "https://atomgit.com/jianguoxu/Tauri-harmony",
+  "framework": "tauri",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/tauri-harmony-jianguoxu.git",
+  "selected_ref": "master",
+  "observed_commit": "61a2fdeb4910ec2dcf1d1d7e14af34b02b0ef1ce",
+  "files": 100,
+  "oh": 45,
+  "outcome": "fetched"
+ },
+ {
+  "id": "inknote-ohos",
+  "url": "https://atomgit.com/nutpi/InkNote",
+  "framework": "tauri",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/inknote-ohos.git",
+  "selected_ref": "main",
+  "observed_commit": "1b9b9b430c743bf92e619d6b9d7016117a43dd7c",
+  "files": 379,
+  "oh": 48,
+  "outcome": "fetched"
+ },
+ {
+  "id": "pc-handwriting-pad",
+  "url": "https://atomgit.com/gcw_Y9SuENJM/harmonyos-pc-handwriting-pad",
+  "framework": "common",
+  "local_path": "/Users/mac/projects/harmonyos-kb-research/2026-11-06/pc-handwriting-pad.git",
+  "selected_ref": "main",
+  "observed_commit": "3e49b5fec34b27e4902c3e4f813849802091c109",
+  "files": 83,
+  "oh": 23,
+  "outcome": "fetched"
+ }
+]

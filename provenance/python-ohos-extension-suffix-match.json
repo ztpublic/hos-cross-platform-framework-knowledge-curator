@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "python-ohos-extension-suffix-match",
+  "sources": [
+    {
+      "collection": "openshot-ohos",
+      "original_path": "build-docs/python-runtime-summary.md",
+      "snapshot": "provenance/snapshots/projects/openshot-ohos/2026-11-06/build-docs/python-runtime-summary.md",
+      "sha256": "6d738b1e11c072fa57f182440e48704bd824c5559287896cae19396a3667b871",
+      "revision": "786576d2df60053294f2bc7b7578eca3891c7a77",
+      "license": "GPL-3.0",
+      "url": "https://atomgit.com/ohos-qt/openshot",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established.",
+    "Build documentation claim; the packaged runtime is not in the repository."
+  ]
+}

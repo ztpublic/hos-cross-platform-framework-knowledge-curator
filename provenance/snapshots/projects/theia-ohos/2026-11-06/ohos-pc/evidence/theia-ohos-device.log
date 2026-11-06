@@ -1,0 +1,765 @@
+[TheiaOHOS] 2026-08-23T06:25:29.408Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:25:29.410Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:25:29.411Z electron-patch-failed Error: The 'screen' module can't be used before the app 'ready' event
+    at createScreenIfNeeded (node:electron/js2c/browser_init:2:56745)
+    at Object.get (node:electron/js2c/browser_init:2:56787)
+    at patchElectron (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:143:41)
+    at Object.<anonymous> (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:212:5)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1904:10)
+    at Module.load (node:internal/modules/cjs/loader:1472:32)
+    at Module._load (node:internal/modules/cjs/loader:1289:12)
+    at c._load (node:electron/js2c/node_init:2:18013)
+    at node:electron/js2c/browser_init:2:135280
+[TheiaOHOS] 2026-08-23T06:25:29.411Z ohos-main {"pid":34377,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:25:29.411Z require-electron-main /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/electron-main.js
+[TheiaOHOS] 2026-08-23T06:25:29.502Z electron-main-returned {}
+[TheiaOHOS] 2026-08-23T06:27:03.049Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:27:03.052Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:27:03.052Z electron-patch-failed TypeError: Session can only be received when app is ready
+    at get defaultSession (node:electron/js2c/browser_init:2:60393)
+    at patchElectron (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:161:46)
+    at Object.<anonymous> (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:208:5)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1904:10)
+    at Module.load (node:internal/modules/cjs/loader:1472:32)
+    at Module._load (node:internal/modules/cjs/loader:1289:12)
+    at c._load (node:electron/js2c/node_init:2:18013)
+    at node:electron/js2c/browser_init:2:135280
+    at node:electron/js2c/browser_init:2:135489
+[TheiaOHOS] 2026-08-23T06:27:03.053Z ohos-main {"pid":35792,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:27:03.053Z require-electron-main /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/electron-main.js
+[TheiaOHOS] 2026-08-23T06:27:03.146Z electron-main-returned {}
+[TheiaOHOS] 2026-08-23T06:28:43.672Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:28:43.672Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:28:43.674Z electron-patch-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+    at patchElectron (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:192:28)
+    at Object.<anonymous> (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:233:5)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1904:10)
+    at Module.load (node:internal/modules/cjs/loader:1472:32)
+    at Module._load (node:internal/modules/cjs/loader:1289:12)
+    at c._load (node:electron/js2c/node_init:2:18013)
+    at node:electron/js2c/browser_init:2:135280
+    at node:electron/js2c/browser_init:2:135489
+    at node:electron/js2c/browser_init:2:135493
+[TheiaOHOS] 2026-08-23T06:28:43.674Z ohos-main {"pid":37078,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:28:43.674Z require-electron-main /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/electron-main.js
+[TheiaOHOS] 2026-08-23T06:28:43.768Z electron-main-returned {}
+[TheiaOHOS] 2026-08-23T06:31:01.584Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:31:01.584Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:31:01.586Z electron-patch-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+    at patchElectron (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:192:28)
+    at Object.<anonymous> (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:233:5)
+    at Module._compile (node:internal/modules/cjs/loader:1738:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1904:10)
+    at Module.load (node:internal/modules/cjs/loader:1472:32)
+    at Module._load (node:internal/modules/cjs/loader:1289:12)
+    at c._load (node:electron/js2c/node_init:2:18013)
+    at node:electron/js2c/browser_init:2:135280
+    at node:electron/js2c/browser_init:2:135489
+    at node:electron/js2c/browser_init:2:135493
+[TheiaOHOS] 2026-08-23T06:31:01.586Z ohos-main {"pid":38921,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:31:01.602Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T06:31:01.602Z app-ready {}
+[TheiaOHOS] 2026-08-23T06:31:01.603Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:31:01.721Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T06:31:02.270Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T06:31:02.273Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T06:31:02.275Z backend-returned {}
+[TheiaOHOS] 2026-08-23T06:31:02.318Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:31:02.318Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:31:02.602Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T06:31:02.604Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T06:31:02.875Z unhandledRejection Error: EPERM: operation not permitted, mkdir '/storage/Users/currentUser/.theia'
+[TheiaOHOS] 2026-08-23T06:31:02.875Z uncaughtException Error: EPERM: operation not permitted, mkdir '/storage/Users/currentUser/.theia'
+[TheiaOHOS] 2026-08-23T06:32:45.556Z frontend-loaded {}
+[TheiaOHOS] 2026-08-23T06:33:38.997Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:33:38.998Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:33:38.999Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T06:33:39.000Z ohos-main {"pid":41566,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:33:39.001Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia"}
+[TheiaOHOS] 2026-08-23T06:33:39.016Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T06:33:39.017Z app-ready {}
+[TheiaOHOS] 2026-08-23T06:33:39.017Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:33:39.129Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T06:33:39.688Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T06:33:39.690Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T06:33:39.692Z backend-returned {}
+[TheiaOHOS] 2026-08-23T06:33:39.737Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:33:39.737Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:33:40.023Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T06:33:40.024Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T06:33:40.274Z backend-address {"address":"127.0.0.1","family":"IPv4","port":40695}
+[TheiaOHOS] 2026-08-23T06:33:40.275Z load-url http://127.0.0.1:40695/
+[TheiaOHOS] 2026-08-23T06:35:22.344Z frontend-loaded http://127.0.0.1:40695/
+[TheiaOHOS] 2026-08-23T06:36:00.689Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:36:00.689Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:36:00.691Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T06:36:00.691Z ohos-main {"pid":43414,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:36:00.692Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia"}
+[TheiaOHOS] 2026-08-23T06:36:00.707Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T06:36:00.708Z app-ready {}
+[TheiaOHOS] 2026-08-23T06:36:00.708Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:36:00.828Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T06:36:01.397Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T06:36:01.399Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T06:36:01.402Z backend-returned {}
+[TheiaOHOS] 2026-08-23T06:36:01.445Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:36:01.445Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:36:01.728Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T06:36:01.730Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T06:36:01.981Z backend-address {"address":"127.0.0.1","family":"IPv4","port":42633}
+[TheiaOHOS] 2026-08-23T06:36:01.981Z load-url http://127.0.0.1:42633/
+[TheiaOHOS] 2026-08-23T06:36:02.221Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T06:36:05.988Z load-url-failed Error: loadURL timeout 4000ms
+    at Timeout._onTimeout (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:324:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[TheiaOHOS] 2026-08-23T06:36:05.989Z fallback-loadFile /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:36:06.259Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T06:36:36.982Z uncaughtException Error: It is not possible to decrease a counter
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:4252
+    at pMr.inc (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:3610)
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5650:9004
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5672
+    at Array.forEach (<anonymous>)
+    at Timeout.i [as _onTimeout] (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5659)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[TheiaOHOS] 2026-08-23T06:37:43.815Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T06:37:44.569Z renderer Frontend: loading modules... [98.544 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:37:44.617Z renderer Frontend: container created [98.616 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:37:44.628Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:37:44.628Z frontend-loaded-file {}
+[TheiaOHOS] 2026-08-23T06:50:42.774Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:50:42.774Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:50:42.776Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T06:50:42.776Z ohos-main {"pid":50721,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:50:42.782Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T06:50:42.798Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T06:50:42.798Z app-ready {}
+[TheiaOHOS] 2026-08-23T06:50:42.799Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:50:42.912Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T06:50:43.460Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T06:50:43.462Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T06:50:43.465Z backend-returned {}
+[TheiaOHOS] 2026-08-23T06:50:43.508Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:50:43.508Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:50:43.786Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T06:50:43.788Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T06:50:44.026Z backend-address {"address":"127.0.0.1","family":"IPv4","port":35153}
+[TheiaOHOS] 2026-08-23T06:50:44.029Z security-token-cookie {"port":35153}
+[TheiaOHOS] 2026-08-23T06:50:44.029Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35153
+[TheiaOHOS] 2026-08-23T06:50:44.261Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T06:51:19.029Z uncaughtException Error: It is not possible to decrease a counter
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:4252
+    at pMr.inc (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:3610)
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5650:9004
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5672
+    at Array.forEach (<anonymous>)
+    at Timeout.i [as _onTimeout] (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5659)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[TheiaOHOS] 2026-08-23T06:52:25.858Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T06:52:26.606Z renderer Frontend: loading modules... [102.402 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:52:26.672Z renderer Frontend: container created [102.494 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:52:26.688Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35153
+[TheiaOHOS] 2026-08-23T06:52:26.689Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35153
+[TheiaOHOS] 2026-08-23T06:52:26.748Z renderer sending initial connect on 7DORJ1ZBatVMV5paAAAB
+[TheiaOHOS] 2026-08-23T06:52:26.762Z renderer initial connect received on 7DORJ1ZBatVMV5paAAAB
+[TheiaOHOS] 2026-08-23T06:52:26.785Z renderer Frontend: preloaded [102.606 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:52:27.251Z renderer Frontend: core modules loaded [103.073 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:54:12.347Z renderer Frontend: modules loaded [208.169 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:54:12.348Z renderer Frontend: resolving application [208.169 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:54:12.370Z renderer Frontend: application resolved [208.192 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:54:12.497Z renderer Uncaught (in promise) Error: Error invoking remote method 'GetTitleStyleAtStartup': Error: No handler registered for 'GetTitleStyleAtStartup'
+[TheiaOHOS] 2026-08-23T06:54:14.204Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T06:58:06.601Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T06:58:06.602Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T06:58:06.604Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T06:58:06.604Z ohos-main {"pid":55188,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T06:58:06.613Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T06:58:06.629Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T06:58:06.629Z app-ready {}
+[TheiaOHOS] 2026-08-23T06:58:06.630Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T06:58:06.631Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T06:58:06.765Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T06:58:07.322Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T06:58:07.324Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T06:58:07.327Z backend-returned {}
+[TheiaOHOS] 2026-08-23T06:58:07.369Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:58:07.370Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T06:58:07.652Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T06:58:07.654Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T06:58:07.890Z backend-address {"address":"127.0.0.1","family":"IPv4","port":40245}
+[TheiaOHOS] 2026-08-23T06:58:07.896Z security-token-cookie {"port":40245}
+[TheiaOHOS] 2026-08-23T06:58:07.896Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=40245
+[TheiaOHOS] 2026-08-23T06:58:08.127Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T06:58:08.128Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T06:58:08.952Z renderer Frontend: loading modules... [0.878 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:09.002Z renderer Frontend: container created [0.958 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:09.011Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=40245
+[TheiaOHOS] 2026-08-23T06:58:09.012Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=40245
+[TheiaOHOS] 2026-08-23T06:58:09.056Z renderer sending initial connect on S72TOke_czDgN-XJAAAB
+[TheiaOHOS] 2026-08-23T06:58:09.069Z renderer initial connect received on S72TOke_czDgN-XJAAAB
+[TheiaOHOS] 2026-08-23T06:58:09.083Z renderer Frontend: preloaded [1.039 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:09.519Z renderer Frontend: core modules loaded [1.475 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:09.998Z renderer Frontend: modules loaded [1.954 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:09.998Z renderer Frontend: resolving application [1.954 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.003Z renderer Frontend: application resolved [1.959 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.197Z renderer 2026-08-23T06:58:10.195Z core:FrontendStopwatch WARN Frontend d_.configure took longer than the expected maximum 100 milliseconds: 101.9 ms [2.151 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.245Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T06:58:10.250Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T06:58:10.396Z renderer 2026-08-23T06:58:10.393Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T06:58:10.397Z renderer 2026-08-23T06:58:10.393Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T06:58:10.397Z renderer 2026-08-23T06:58:10.393Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T06:58:10.397Z renderer 2026-08-23T06:58:10.393Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T06:58:10.445Z renderer 2026-08-23T06:58:10.444Z core:FrontendStopwatch INFO [d846e288-a05b-4c2c-a631-089b31050cba] Waiting for backend deployment: 40.6 ms [2.401 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.554Z renderer 2026-08-23T06:58:10.554Z core:FrontendStopwatch WARN Frontend HCe.onStart took longer than the expected maximum 100 milliseconds: 149.9 ms [2.510 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.706Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T06:58:10.723Z renderer 2026-08-23T06:58:10.723Z core:FrontendStopwatch INFO Start frontend contributions: 702.5 ms [2.662 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.724Z renderer 2026-08-23T06:58:10.723Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T06:58:10.727Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T06:58:10.727Z renderer 2026-08-23T06:58:10.725Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T06:58:10.727Z renderer 2026-08-23T06:58:10.726Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T06:58:10.727Z renderer 2026-08-23T06:58:10.726Z plugin-ext:HostedPluginSupport INFO [d846e288-a05b-4c2c-a631-089b31050cba] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T06:58:10.748Z renderer 2026-08-23T06:58:10.748Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T06:58:10.886Z renderer 2026-08-23T06:58:10.886Z terminal:TerminalFrontendContribution ERROR Failed to initialize terminal in default layout Error: terminal "1566119759" does not exist
+    at Zrt.getProcessInfo (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:4571:13132)
+    at eAe.onRequest (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:553:55482)
+    at t.requestHandler (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/
+[TheiaOHOS] 2026-08-23T06:58:10.970Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T06:58:10.970Z renderer 2026-08-23T06:58:10.952Z core:FrontendStopwatch INFO Initialize the workbench layout: 221.3 ms [2.903 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:10.971Z renderer 2026-08-23T06:58:10.953Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T06:58:11.778Z app-state ready
+[TheiaOHOS] 2026-08-23T06:58:11.779Z renderer 2026-08-23T06:58:11.778Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 813.4 ms [3.733 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:11.791Z renderer 2026-08-23T06:58:11.791Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T06:58:11.792Z renderer 2026-08-23T06:58:11.791Z core:FrontendStopwatch INFO All frontend contributions settled: 1774.2 ms [3.734 s since frontend page start]
+[TheiaOHOS] 2026-08-23T06:58:13.831Z renderer 2026-08-23T06:58:13.830Z core:ApplicationShell WARN Widget was activated, but did not accept focus after 2000ms: getting.started.widget
+[TheiaOHOS] 2026-08-23T07:03:26.404Z app-state closing_window
+[TheiaOHOS] 2026-08-23T07:03:26.409Z renderer 2026-08-23T07:03:26.408Z core:FrontendApplicationStateService INFO Changed application state from 'ready' to 'closing_window'.
+[TheiaOHOS] 2026-08-23T07:03:26.410Z renderer 2026-08-23T07:03:26.408Z core:ShellLayoutRestorer INFO >>> Storing the layout...
+[TheiaOHOS] 2026-08-23T07:03:26.410Z renderer 2026-08-23T07:03:26.408Z core:ShellLayoutRestorer INFO <<< The layout has been successfully stored.
+[TheiaOHOS] 2026-08-23T07:03:26.410Z renderer 2026-08-23T07:03:26.408Z core:FrontendApplication INFO >>> Stopping frontend contributions...
+[TheiaOHOS] 2026-08-23T07:03:26.410Z renderer 2026-08-23T07:03:26.408Z core:FrontendApplication INFO <<< All frontend contributions have been stopped.
+[TheiaOHOS] 2026-08-23T07:03:26.508Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T07:03:26.509Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T07:03:27.139Z renderer Frontend: loading modules... [0.738 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:27.180Z renderer Frontend: container created [0.780 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:27.187Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=40245#/storage/Users/currentUser/Desktop
+[TheiaOHOS] 2026-08-23T07:03:27.216Z renderer sending initial connect on 5zvGBs4RroybS2TfAAAD
+[TheiaOHOS] 2026-08-23T07:03:27.239Z renderer initial connect received on 5zvGBs4RroybS2TfAAAD
+[TheiaOHOS] 2026-08-23T07:03:27.248Z renderer Frontend: preloaded [0.848 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:27.679Z renderer Frontend: core modules loaded [1.278 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.108Z renderer Frontend: modules loaded [1.708 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.109Z renderer Frontend: resolving application [1.708 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.113Z renderer Frontend: application resolved [1.712 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.296Z renderer 2026-08-23T07:03:28.296Z core:FrontendStopwatch WARN Frontend d_.configure took longer than the expected maximum 100 milliseconds: 106.0 ms [1.895 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.504Z renderer 2026-08-23T07:03:28.500Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:03:28.504Z renderer 2026-08-23T07:03:28.500Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:03:28.504Z renderer 2026-08-23T07:03:28.500Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:03:28.504Z renderer 2026-08-23T07:03:28.500Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:03:28.550Z renderer 2026-08-23T07:03:28.550Z core:FrontendStopwatch INFO [7cd1e675-a684-48e5-bf49-7615c29b7589] Waiting for backend deployment: 40.4 ms [2.149 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.673Z renderer 2026-08-23T07:03:28.673Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 111.9 ms [2.272 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.782Z renderer 2026-08-23T07:03:28.782Z core:FrontendStopwatch WARN Frontend sRt.onStart took longer than the expected maximum 100 milliseconds: 108.9 ms [2.381 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.785Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T07:03:28.791Z renderer 2026-08-23T07:03:28.791Z core:FrontendStopwatch INFO Start frontend contributions: 669.9 ms [2.382 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:28.792Z renderer 2026-08-23T07:03:28.791Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T07:03:28.925Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T07:03:28.925Z renderer 2026-08-23T07:03:28.923Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T07:03:28.926Z renderer 2026-08-23T07:03:28.923Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T07:03:28.928Z renderer 2026-08-23T07:03:28.926Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T07:03:29.059Z renderer 2026-08-23T07:03:29.059Z terminal:TerminalFrontendContribution ERROR Failed to initialize terminal in default layout Error: terminal "1076149833" does not exist
+    at Zrt.getProcessInfo (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:4571:13132)
+    at eAe.onRequest (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:553:55482)
+    at t.requestHandler (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/
+[TheiaOHOS] 2026-08-23T07:03:29.119Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T07:03:29.129Z renderer 2026-08-23T07:03:29.124Z core:FrontendStopwatch INFO Initialize the workbench layout: 196.3 ms [2.719 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:29.129Z renderer 2026-08-23T07:03:29.125Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T07:03:29.942Z app-state ready
+[TheiaOHOS] 2026-08-23T07:03:29.955Z renderer 2026-08-23T07:03:29.948Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 803.9 ms [3.540 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:29.965Z renderer 2026-08-23T07:03:29.963Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T07:03:29.966Z renderer 2026-08-23T07:03:29.964Z core:FrontendStopwatch INFO All frontend contributions settled: 1828.4 ms [3.541 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:03:31.992Z renderer 2026-08-23T07:03:31.991Z core:ApplicationShell WARN Widget was activated, but did not accept focus after 2000ms: getting.started.widget
+[TheiaOHOS] 2026-08-23T07:03:39.114Z renderer 2026-08-23T07:03:39.100Z ai-registry:MCPExtensionsContribution WARN AI registry fetch failed; MCP entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:03:39.114Z renderer 2026-08-23T07:03:39.100Z ai-registry:SkillExtensionsContribution WARN AI registry fetch failed; skill entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:03:39.114Z renderer 2026-08-23T07:03:39.101Z ai-registry:RegistryAutoUpdateService WARN AI registry auto-update check skipped: could not resolve registry entries. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:05:12.302Z renderer 2026-08-23T07:05:12.301Z plugin-ext:HostedPluginSupport INFO [7cd1e675-a684-48e5-bf49-7615c29b7589] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T07:21:55.646Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T07:21:55.646Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T07:21:55.647Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T07:21:55.648Z ohos-main {"pid":5740,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T07:21:55.656Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T07:21:55.674Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T07:21:55.674Z app-ready {}
+[TheiaOHOS] 2026-08-23T07:21:55.675Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T07:21:55.678Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T07:21:55.839Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T07:21:56.401Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T07:21:56.404Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T07:21:56.406Z backend-returned {}
+[TheiaOHOS] 2026-08-23T07:21:56.449Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:21:56.449Z dlopen-pty /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/prebuilds/openharmony-arm64/pty.node
+[TheiaOHOS] 2026-08-23T07:21:56.450Z pty-native-failed Error: Error loading shared library /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/prebuilds/openharmony-arm64/pty.node: No error information
+    at process.func (node:electron/js2c/node_init:2:2617)
+    at process.dlopen (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:122:28)
+    at loadOhosPty (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:80:13)
+    at getOhosPtyExports (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:91:26)
+    at Module._load (/data/storage/el1/bundle/electron/resources/resfile/resources/app/ohos-main.js:104:31)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+    at Module.require (node:internal/modules/cjs/loader:1494:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.xxs [as loadNativeModule] (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:1791:26213)
+[TheiaOHOS] 2026-08-23T07:21:56.450Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:21:56.729Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T07:21:56.730Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T07:21:56.977Z backend-address {"address":"127.0.0.1","family":"IPv4","port":46541}
+[TheiaOHOS] 2026-08-23T07:21:56.979Z security-token-cookie {"port":46541}
+[TheiaOHOS] 2026-08-23T07:21:56.979Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=46541
+[TheiaOHOS] 2026-08-23T07:21:57.222Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T07:21:57.224Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T07:21:58.042Z renderer Frontend: loading modules... [0.880 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:58.088Z renderer Frontend: container created [0.953 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:58.099Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=46541
+[TheiaOHOS] 2026-08-23T07:21:58.102Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=46541
+[TheiaOHOS] 2026-08-23T07:21:58.131Z renderer sending initial connect on XG7MqP3lrX3CvP3BAAAB
+[TheiaOHOS] 2026-08-23T07:21:58.145Z renderer initial connect received on XG7MqP3lrX3CvP3BAAAB
+[TheiaOHOS] 2026-08-23T07:21:58.161Z renderer Frontend: preloaded [1.026 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:58.595Z renderer Frontend: core modules loaded [1.460 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.081Z renderer Frontend: modules loaded [1.946 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.081Z renderer Frontend: resolving application [1.946 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.086Z renderer Frontend: application resolved [1.950 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.312Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T07:21:59.315Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T07:21:59.473Z renderer 2026-08-23T07:21:59.463Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:21:59.473Z renderer 2026-08-23T07:21:59.466Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:21:59.473Z renderer 2026-08-23T07:21:59.466Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:21:59.473Z renderer 2026-08-23T07:21:59.466Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:21:59.486Z renderer 2026-08-23T07:21:59.483Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:21:59.520Z renderer 2026-08-23T07:21:59.519Z core:FrontendStopwatch INFO [81da9edb-22a8-4d82-8bbe-485adbb291d0] Waiting for backend deployment: 41.5 ms [2.384 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.581Z renderer 2026-08-23T07:21:59.581Z core:FrontendStopwatch WARN Frontend HCe.onStart took longer than the expected maximum 100 milliseconds: 102.2 ms [2.445 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.748Z renderer 2026-08-23T07:21:59.747Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 164.4 ms [2.611 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.847Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T07:21:59.862Z renderer 2026-08-23T07:21:59.862Z core:FrontendStopwatch INFO Start frontend contributions: 760.4 ms [2.711 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:21:59.863Z renderer 2026-08-23T07:21:59.862Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T07:21:59.879Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T07:21:59.879Z renderer 2026-08-23T07:21:59.874Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T07:21:59.880Z renderer 2026-08-23T07:21:59.874Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T07:21:59.880Z renderer 2026-08-23T07:21:59.875Z plugin-ext:HostedPluginSupport INFO [81da9edb-22a8-4d82-8bbe-485adbb291d0] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T07:21:59.880Z renderer 2026-08-23T07:21:59.877Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T07:22:00.023Z renderer 2026-08-23T07:22:00.022Z terminal:TerminalFrontendContribution ERROR Failed to initialize terminal in default layout Error: terminal "854407497" does not exist
+    at Zrt.getProcessInfo (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:4571:13132)
+    at eAe.onRequest (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:553:55482)
+    at t.requestHandler (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/b
+[TheiaOHOS] 2026-08-23T07:22:00.027Z renderer 2026-08-23T07:22:00.023Z core:FrontendStopwatch WARN Frontend I0.initializeLayout took longer than the expected maximum 100 milliseconds: 100.2 ms [2.884 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:22:00.096Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T07:22:00.096Z renderer 2026-08-23T07:22:00.089Z core:FrontendStopwatch INFO Initialize the workbench layout: 209.8 ms [2.948 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:22:00.096Z renderer 2026-08-23T07:22:00.090Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T07:22:00.143Z renderer 2026-08-23T07:22:00.143Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:22:00.920Z app-state ready
+[TheiaOHOS] 2026-08-23T07:22:00.922Z renderer 2026-08-23T07:22:00.922Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 815.3 ms [3.782 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:22:00.928Z renderer 2026-08-23T07:22:00.927Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T07:22:00.928Z renderer 2026-08-23T07:22:00.927Z core:FrontendStopwatch INFO All frontend contributions settled: 1833.1 ms [3.784 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:22:02.952Z renderer 2026-08-23T07:22:02.951Z core:ApplicationShell WARN Widget was activated, but did not accept focus after 2000ms: getting.started.widget
+[TheiaOHOS] 2026-08-23T07:22:10.068Z renderer 2026-08-23T07:22:10.068Z ai-registry:MCPExtensionsContribution WARN AI registry fetch failed; MCP entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:22:10.069Z renderer 2026-08-23T07:22:10.068Z ai-registry:SkillExtensionsContribution WARN AI registry fetch failed; skill entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:22:10.069Z renderer 2026-08-23T07:22:10.068Z ai-registry:RegistryAutoUpdateService WARN AI registry auto-update check skipped: could not resolve registry entries. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T07:23:57.326Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T07:23:57.326Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T07:23:57.327Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T07:23:57.327Z ohos-main {"pid":7764,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T07:23:57.333Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T07:23:57.349Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T07:23:57.350Z app-ready {}
+[TheiaOHOS] 2026-08-23T07:23:57.350Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T07:23:57.351Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T07:23:57.463Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T07:23:58.003Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T07:23:58.005Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T07:23:58.010Z backend-returned {}
+[TheiaOHOS] 2026-08-23T07:23:58.050Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:23:58.051Z pty-native-loaded /data/storage/el1/bundle/libs/arm64/pty.node
+[TheiaOHOS] 2026-08-23T07:23:58.052Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:23:58.334Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T07:23:58.336Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T07:23:58.587Z backend-address {"address":"127.0.0.1","family":"IPv4","port":44949}
+[TheiaOHOS] 2026-08-23T07:23:58.589Z security-token-cookie {"port":44949}
+[TheiaOHOS] 2026-08-23T07:23:58.589Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=44949
+[TheiaOHOS] 2026-08-23T07:23:58.815Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T07:23:58.816Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T07:23:59.651Z renderer Frontend: loading modules... [0.894 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:23:59.697Z renderer Frontend: container created [0.966 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:23:59.706Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=44949
+[TheiaOHOS] 2026-08-23T07:23:59.706Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=44949
+[TheiaOHOS] 2026-08-23T07:23:59.732Z renderer sending initial connect on AiAuXVYeCJgPUDajAAAB
+[TheiaOHOS] 2026-08-23T07:23:59.743Z renderer initial connect received on AiAuXVYeCJgPUDajAAAB
+[TheiaOHOS] 2026-08-23T07:23:59.754Z renderer Frontend: preloaded [1.024 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.181Z renderer Frontend: core modules loaded [1.451 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.674Z renderer Frontend: modules loaded [1.938 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.674Z renderer Frontend: resolving application [1.938 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.674Z renderer Frontend: application resolved [1.942 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.875Z renderer 2026-08-23T07:24:00.875Z core:FrontendStopwatch WARN Frontend d_.configure took longer than the expected maximum 100 milliseconds: 110.5 ms [2.145 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:00.918Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T07:24:00.922Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T07:24:01.067Z renderer 2026-08-23T07:24:01.064Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:24:01.068Z renderer 2026-08-23T07:24:01.064Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:24:01.068Z renderer 2026-08-23T07:24:01.064Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:24:01.069Z renderer 2026-08-23T07:24:01.064Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:24:01.083Z renderer 2026-08-23T07:24:01.079Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:24:01.118Z renderer 2026-08-23T07:24:01.117Z core:FrontendStopwatch INFO [75b3086f-5a4b-4172-a243-5a6ded8e97e3] Waiting for backend deployment: 42.6 ms [2.387 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:01.245Z renderer 2026-08-23T07:24:01.244Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 110.1 ms [2.514 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:01.393Z renderer 2026-08-23T07:24:01.391Z core:FrontendStopwatch WARN Frontend sRt.onStart took longer than the expected maximum 100 milliseconds: 147.1 ms [2.661 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:01.394Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T07:24:01.409Z renderer 2026-08-23T07:24:01.409Z core:FrontendStopwatch INFO Start frontend contributions: 719.8 ms [2.663 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:24:01.410Z renderer 2026-08-23T07:24:01.409Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T07:24:01.447Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T07:24:01.448Z renderer 2026-08-23T07:24:01.447Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T07:24:01.448Z renderer 2026-08-23T07:24:01.447Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T07:24:01.448Z renderer 2026-08-23T07:24:01.447Z plugin-ext:HostedPluginSupport INFO [75b3086f-5a4b-4172-a243-5a6ded8e97e3] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T07:24:01.450Z renderer 2026-08-23T07:24:01.450Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T07:29:34.795Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T07:29:34.796Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T07:29:34.797Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T07:29:34.797Z ohos-main {"pid":11418,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T07:29:34.803Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T07:29:34.818Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T07:29:34.819Z app-ready {}
+[TheiaOHOS] 2026-08-23T07:29:34.819Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T07:29:34.821Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T07:29:34.930Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T07:29:35.477Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T07:29:35.479Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T07:29:35.483Z backend-returned {}
+[TheiaOHOS] 2026-08-23T07:29:35.524Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:29:35.524Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:29:35.804Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T07:29:35.805Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T07:29:36.048Z backend-address {"address":"127.0.0.1","family":"IPv4","port":45659}
+[TheiaOHOS] 2026-08-23T07:29:36.051Z security-token-cookie {"port":45659}
+[TheiaOHOS] 2026-08-23T07:29:36.051Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=45659
+[TheiaOHOS] 2026-08-23T07:29:36.292Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T07:29:36.294Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T07:29:37.095Z renderer Frontend: loading modules... [0.861 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:37.139Z renderer Frontend: container created [0.932 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:37.150Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=45659
+[TheiaOHOS] 2026-08-23T07:29:37.150Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=45659
+[TheiaOHOS] 2026-08-23T07:29:37.186Z renderer sending initial connect on CiZ8WT2R4MYUpRWwAAAB
+[TheiaOHOS] 2026-08-23T07:29:37.196Z renderer initial connect received on CiZ8WT2R4MYUpRWwAAAB
+[TheiaOHOS] 2026-08-23T07:29:37.210Z renderer Frontend: preloaded [1.003 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:37.661Z renderer Frontend: core modules loaded [1.454 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.136Z renderer Frontend: modules loaded [1.929 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.137Z renderer Frontend: resolving application [1.929 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.141Z renderer Frontend: application resolved [1.934 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.371Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T07:29:38.377Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T07:29:38.521Z renderer 2026-08-23T07:29:38.517Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:29:38.521Z renderer 2026-08-23T07:29:38.518Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:29:38.522Z renderer 2026-08-23T07:29:38.518Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:29:38.522Z renderer 2026-08-23T07:29:38.518Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:29:38.536Z renderer 2026-08-23T07:29:38.533Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:29:38.577Z renderer 2026-08-23T07:29:38.577Z core:FrontendStopwatch INFO [cc6d960a-ec6b-4278-9897-21a33f38b6cc] Waiting for backend deployment: 48.8 ms [2.369 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.632Z renderer 2026-08-23T07:29:38.629Z core:FrontendStopwatch WARN Frontend HCe.onStart took longer than the expected maximum 100 milliseconds: 101.1 ms [2.422 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.792Z renderer 2026-08-23T07:29:38.791Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 159.6 ms [2.583 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.891Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T07:29:38.906Z renderer 2026-08-23T07:29:38.906Z core:FrontendStopwatch INFO Start frontend contributions: 749.2 ms [2.683 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:38.906Z renderer 2026-08-23T07:29:38.906Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T07:29:38.907Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T07:29:38.908Z renderer 2026-08-23T07:29:38.907Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T07:29:38.908Z renderer 2026-08-23T07:29:38.907Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T07:29:38.908Z renderer 2026-08-23T07:29:38.908Z plugin-ext:HostedPluginSupport INFO [cc6d960a-ec6b-4278-9897-21a33f38b6cc] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T07:29:38.910Z renderer 2026-08-23T07:29:38.910Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T07:29:39.057Z renderer 2026-08-23T07:29:39.057Z terminal:TerminalFrontendContribution ERROR Failed to initialize terminal in default layout Error: terminal "2012141830" does not exist
+    at Zrt.getProcessInfo (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:4571:13132)
+    at eAe.onRequest (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:553:55482)
+    at t.requestHandler (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/
+[TheiaOHOS] 2026-08-23T07:29:39.057Z renderer 2026-08-23T07:29:39.057Z core:FrontendStopwatch WARN Frontend I0.initializeLayout took longer than the expected maximum 100 milliseconds: 104.2 ms [2.847 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:39.130Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T07:29:39.131Z renderer 2026-08-23T07:29:39.123Z core:FrontendStopwatch INFO Initialize the workbench layout: 210.8 ms [2.910 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:39.131Z renderer 2026-08-23T07:29:39.124Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T07:29:39.191Z renderer 2026-08-23T07:29:39.191Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:29:39.941Z app-state ready
+[TheiaOHOS] 2026-08-23T07:29:39.942Z renderer 2026-08-23T07:29:39.941Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 804.2 ms [3.733 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:39.946Z renderer 2026-08-23T07:29:39.945Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T07:29:39.947Z renderer 2026-08-23T07:29:39.945Z core:FrontendStopwatch INFO All frontend contributions settled: 1799.4 ms [3.733 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:29:41.982Z renderer 2026-08-23T07:29:41.982Z core:ApplicationShell WARN Widget was activated, but did not accept focus after 2000ms: getting.started.widget
+[TheiaOHOS] 2026-08-23T07:30:56.030Z renderer 2026-08-23T07:30:56.029Z preferences:PreferenceMarkdownRenderer WARN Linked preference "workbench.colorCustomizations" not found.
+[TheiaOHOS] 2026-08-23T07:30:56.030Z renderer 2026-08-23T07:30:56.029Z preferences:PreferenceMarkdownRenderer WARN Linked preference "editor.experimental.preferTreeSitter" not found.
+[TheiaOHOS] 2026-08-23T07:36:01.083Z uncaughtException Error: It is not possible to decrease a counter
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:4252
+    at pMr.inc (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:3610)
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5650:9004
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5672
+    at Array.forEach (<anonymous>)
+    at Timeout.i [as _onTimeout] (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5659)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[TheiaOHOS] 2026-08-23T07:51:05.511Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T07:51:05.512Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T07:51:05.513Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T07:51:05.513Z ohos-main {"pid":23567,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T07:51:05.520Z desktop-probe-failed Error: EPERM: operation not permitted, open '/storage/Users/currentUser/Desktop/theia-ohos-probe.txt'
+[TheiaOHOS] 2026-08-23T07:51:05.520Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T07:51:05.521Z fork {"modulePath":"/data/storage/el1/bundle/electron/resources/resfile/resources/app/fork-child.js","argsCount":0}
+[TheiaOHOS] 2026-08-23T07:51:05.566Z fork-probe-started {"childPath":"/data/storage/el1/bundle/electron/resources/resfile/resources/app/fork-child.js"}
+[TheiaOHOS] 2026-08-23T07:51:05.568Z fork-probe-error Error: spawn /system/bin/appspawn EACCES
+[TheiaOHOS] 2026-08-23T07:51:05.587Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T07:51:05.587Z app-ready {}
+[TheiaOHOS] 2026-08-23T07:51:05.588Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T07:51:05.589Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T07:51:05.707Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T07:51:06.266Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T07:51:06.271Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T07:51:06.273Z backend-returned {}
+[TheiaOHOS] 2026-08-23T07:51:06.317Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:51:06.318Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T07:51:06.604Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T07:51:06.606Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T07:51:06.858Z backend-address {"address":"127.0.0.1","family":"IPv4","port":43099}
+[TheiaOHOS] 2026-08-23T07:51:06.860Z security-token-cookie {"port":43099}
+[TheiaOHOS] 2026-08-23T07:51:06.861Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=43099
+[TheiaOHOS] 2026-08-23T07:51:07.094Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T07:51:07.095Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T07:51:07.927Z renderer Frontend: loading modules... [0.888 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:07.971Z renderer Frontend: container created [0.963 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:07.981Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=43099
+[TheiaOHOS] 2026-08-23T07:51:07.981Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=43099
+[TheiaOHOS] 2026-08-23T07:51:08.005Z renderer sending initial connect on A49lx0TyxIAF4_meAAAB
+[TheiaOHOS] 2026-08-23T07:51:08.015Z renderer initial connect received on A49lx0TyxIAF4_meAAAB
+[TheiaOHOS] 2026-08-23T07:51:08.027Z renderer Frontend: preloaded [1.019 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:08.453Z renderer Frontend: core modules loaded [1.445 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:08.928Z renderer Frontend: modules loaded [1.920 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:08.929Z renderer Frontend: resolving application [1.920 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:08.933Z renderer Frontend: application resolved [1.925 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.154Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T07:51:09.158Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T07:51:09.304Z renderer 2026-08-23T07:51:09.304Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:51:09.305Z renderer 2026-08-23T07:51:09.304Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:51:09.305Z renderer 2026-08-23T07:51:09.304Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T07:51:09.306Z renderer 2026-08-23T07:51:09.304Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T07:51:09.325Z renderer 2026-08-23T07:51:09.320Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:51:09.360Z renderer 2026-08-23T07:51:09.358Z core:FrontendStopwatch INFO [ffd523ab-d8ca-4f60-a11d-dfa5aee39a2c] Waiting for backend deployment: 43.4 ms [2.350 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.580Z renderer 2026-08-23T07:51:09.576Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 162.5 ms [2.569 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.678Z renderer 2026-08-23T07:51:09.677Z core:FrontendStopwatch WARN Frontend sRt.onStart took longer than the expected maximum 100 milliseconds: 100.5 ms [2.669 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.679Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T07:51:09.696Z renderer 2026-08-23T07:51:09.696Z core:FrontendStopwatch INFO Start frontend contributions: 745.3 ms [2.671 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.697Z renderer 2026-08-23T07:51:09.696Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T07:51:09.698Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T07:51:09.699Z renderer 2026-08-23T07:51:09.698Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T07:51:09.699Z renderer 2026-08-23T07:51:09.698Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T07:51:09.701Z renderer 2026-08-23T07:51:09.699Z plugin-ext:HostedPluginSupport INFO [ffd523ab-d8ca-4f60-a11d-dfa5aee39a2c] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T07:51:09.703Z renderer 2026-08-23T07:51:09.701Z core:ShellLayoutRestorer INFO <<< Nothing to restore.
+[TheiaOHOS] 2026-08-23T07:51:09.857Z renderer 2026-08-23T07:51:09.857Z terminal:TerminalFrontendContribution ERROR Failed to initialize terminal in default layout Error: terminal "266410463" does not exist
+    at Zrt.getProcessInfo (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:4571:13132)
+    at eAe.onRequest (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:553:55482)
+    at t.requestHandler (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/b
+[TheiaOHOS] 2026-08-23T07:51:09.858Z renderer 2026-08-23T07:51:09.857Z core:FrontendStopwatch WARN Frontend I0.initializeLayout took longer than the expected maximum 100 milliseconds: 114.8 ms [2.846 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.937Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T07:51:09.937Z renderer 2026-08-23T07:51:09.923Z core:FrontendStopwatch INFO Initialize the workbench layout: 219.7 ms [2.910 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:09.937Z renderer 2026-08-23T07:51:09.924Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T07:51:09.977Z renderer 2026-08-23T07:51:09.977Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T07:51:10.743Z app-state ready
+[TheiaOHOS] 2026-08-23T07:51:10.745Z renderer 2026-08-23T07:51:10.743Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 805.4 ms [3.733 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:10.761Z renderer 2026-08-23T07:51:10.748Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T07:51:10.761Z renderer 2026-08-23T07:51:10.748Z core:FrontendStopwatch INFO All frontend contributions settled: 1809.9 ms [3.735 s since frontend page start]
+[TheiaOHOS] 2026-08-23T07:51:12.785Z renderer 2026-08-23T07:51:12.783Z core:ApplicationShell WARN Widget was activated, but did not accept focus after 2000ms: getting.started.widget
+[TheiaOHOS] 2026-08-23T07:51:23.685Z renderer Uncaught Error: Cannot get key code from the keyboard event: [object KeyboardEvent].
+[TheiaOHOS] 2026-08-23T07:51:23.686Z renderer Uncaught Error: Cannot get key code from the keyboard event: [object KeyboardEvent].
+[TheiaOHOS] 2026-08-23T07:51:25.869Z renderer Uncaught (in promise) Canceled: Canceled
+[TheiaOHOS] 2026-08-23T07:51:26.207Z feature-probe {"title":"Welcome - Desktop - Theia","hasContainer":true,"commands":{"core.save":"ok","keymaps:open":"ok","outlineView:toggle":"ok","output:toggle":"ok","debug:toggle":"ok","preview:open":"The command 'preview:open' cannot be executed. There are no active handlers available for the command.","search-in-workspace.open":"ok","file-search.openFile":"ok","file-search.open":"The command 'file-search.open' cannot be executed. There are no active handlers available for the command.","workbench.action.quickOpen":"ok","vsxExtensions.toggle":"ok","callhierarchy:toggle":"ok","typehierarchy:toggle":"ok","aiChat:toggle":"ok","property-view:toggle":"ok","propertyView:toggle":"The command 'propertyView:toggle' cannot be executed. There are no active handlers available for the command."},"widgets":["theia-app-shell","theia-top-panel","theia-sample-toolbar-contribution","theia-left-right-split-panel","theia-left-content-panel","shell-tab-explorer-view-container","shell-tab-search-view-container","shell-tab-scm-view-container","shell-tab-debug","shell-tab-vsx-extensions-view-container","shell-tab-test-view-container","shell-tab-explorer-view-container-hidden","shell-tab-search-view-container-hidden","shell-tab-scm-view-container-hidden","shell-tab-debug-hidden","shell-tab-vsx-extensions-view-container-hidden","shell-tab-test-view-container-hidden","theia-left-side-panel","explorer-view-container","explorer-view-container--theia-open-editors-widget","navigator.close.all.editors.toolbar","navigator.save.all.editors.toolbar","theia-open-editors-widget","explorer-view-container--files","test-view-container","test-view-container--test-tree-widget","test-view-container--test-run-widget","debug:view-container:-1","debug:view-container:-1--debug:threads:-1","debug:view-container:-1--debug:frames:-1","debug:view-container:-1--debug:variables:-1","debug:view-container:-1--debug:watch:-1","debug:view-container:-1--debug:breakpoints:-1","scm-view-container","scm-view-container--scm-repositories-widget","scm-view-container--scm-view","scm-view","scm-view-container--scm-history-graph-widget","search-view-container","search-view-container--search-in-workspace","vsx-extensions-view-container","vsx-extensions-view-container--vsx-extensions:searchResult","vsx-extensions-view-container--vsx-extensions:recommended","vsx-extensions-view-container--vsx-extensions:installed","vsx-extensions-view-container--vsx-extensions:builtin","theia-bottom-split-panel","theia-main-content-panel","shell-tab-getting.started.widget","theia-bottom-content-panel","shell-tab-problems","theia-right-content-panel","shell-tab-chat-view-widget","shell-tab-outline-view","shell-tab-memory-layout-widget","shell-tab-chat-view-widget-hidden","shell-tab-outline-view-hidden","shell-tab-memory-layout-widget-hidden","theia-right-side-panel","outline-view","chat-view-widget","theia-main-content-panel","theia-statusBar","status-bar-theia-notification-center","theia-breadcrumbs-popups-overlay"],"tabs":["Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Extensions","Search","Source Control","Debug","Testing","Welcome","Problems","AI Chat","Outline","Memory Inspector","AI Chat","Outline","Memory Inspector","Outline","Memory Inspector","AI Chat"],"searchHits":0,"save":{"opened":true,"beforeLength":79,"command":"ok"},"hasCommands":true,"searchInput":true,"searchText":"","tabsAfter":["Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Extensions","Search","Source Control","Debug","Testing","Welcome","hello.md","Keyboard Shortcuts","Problems","Output","Call Hierarchy","Type Hierarchy","Properties","AI Chat","Outline","Memory Inspector","AI Chat","Outline","Memory Inspector","Outline","Memory Inspector","AI Chat"],"bodyClasses":"monaco-enable-motion underline-links vs light-theia linux theia-light","previewOpen":false,"keymapsOpen":true,"extensionsOpen":true}
+[TheiaOHOS] 2026-08-23T07:53:56.929Z uncaughtException Error: It is not possible to decrease a counter
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:4252
+    at pMr.inc (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5649:3610)
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5650:9004
+    at /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5672
+    at Array.forEach (<anonymous>)
+    at Timeout.i [as _onTimeout] (/data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js:5651:5659)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[TheiaOHOS] 2026-08-23T07:58:00.456Z rg-spawn ["--hidden","--json","--ignore-case","--max-filesize=20M","--glob=!**/.git","--glob=!**/.git/*","--glob=!**/.svn","--glob=!**/.svn/*","--glob=!**/.hg","--glob=!**/.hg/*","--glob=!**/CVS","--glob=!**/CVS/*","--glob=!**/.DS_Store","--glob=!**/.DS_Store/*","--glob=!**/node_modules","--glob=!**/node_modules/*","--glob=!**/data/storage/el2/base/files/workspace/hello.md","--glob=!**/data/storage/el2/base/files/workspace/hello.md/*","--follow","--fixed-strings","--","c","/storage/Users/currentUser/Desktop"]
+[TheiaOHOS] 2026-08-23T07:58:03.034Z rg-spawn ["--hidden","--json","--ignore-case","--max-filesize=20M","--glob=!**/.git","--glob=!**/.git/*","--glob=!**/.svn","--glob=!**/.svn/*","--glob=!**/.hg","--glob=!**/.hg/*","--glob=!**/CVS","--glob=!**/CVS/*","--glob=!**/.DS_Store","--glob=!**/.DS_Store/*","--glob=!**/node_modules","--glob=!**/node_modules/*","--glob=!**/data/storage/el2/base/files/workspace/hello.md","--glob=!**/data/storage/el2/base/files/workspace/hello.md/*","--follow","--fixed-strings","--","c吃牛排啊吃快餐","/storage/Users/currentUser/Desktop"]
+[TheiaOHOS] 2026-08-23T07:58:43.397Z rg-spawn ["--hidden","--json","--ignore-case","--max-filesize=20M","--glob=!**/.git","--glob=!**/.git/*","--glob=!**/.svn","--glob=!**/.svn/*","--glob=!**/.hg","--glob=!**/.hg/*","--glob=!**/CVS","--glob=!**/CVS/*","--glob=!**/.DS_Store","--glob=!**/.DS_Store/*","--glob=!**/node_modules","--glob=!**/node_modules/*","--glob=!**/data/storage/el2/base/files/workspace/hello.md","--glob=!**/data/storage/el2/base/files/workspace/hello.md/*","--follow","--fixed-strings","--","c吃牛排啊吃快餐","/storage/Users/currentUser/Desktop"]
+[TheiaOHOS] 2026-08-23T08:00:15.719Z renderer 2026-08-23T08:00:15.717Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T08:13:57.063Z app-state closing_window
+[TheiaOHOS] 2026-08-23T08:13:57.083Z renderer 2026-08-23T08:13:57.078Z core:FrontendApplicationStateService INFO Changed application state from 'ready' to 'closing_window'.
+[TheiaOHOS] 2026-08-23T08:13:57.084Z renderer 2026-08-23T08:13:57.078Z core:ShellLayoutRestorer INFO >>> Storing the layout...
+[TheiaOHOS] 2026-08-23T08:13:57.084Z renderer 2026-08-23T08:13:57.078Z core:ShellLayoutRestorer INFO <<< The layout has been successfully stored.
+[TheiaOHOS] 2026-08-23T08:13:57.084Z renderer 2026-08-23T08:13:57.078Z core:FrontendApplication INFO >>> Stopping frontend contributions...
+[TheiaOHOS] 2026-08-23T08:13:57.084Z renderer 2026-08-23T08:13:57.078Z core:FrontendApplication INFO <<< All frontend contributions have been stopped.
+[TheiaOHOS] 2026-08-23T08:26:21.883Z userData /data/storage/el2/base/files
+[TheiaOHOS] 2026-08-23T08:26:21.884Z polyfill nativeTheme
+[TheiaOHOS] 2026-08-23T08:26:21.886Z BrowserWindow-assign-failed TypeError: Cannot set property BrowserWindow of #<Object> which has only a getter
+[TheiaOHOS] 2026-08-23T08:26:21.887Z ohos-main {"pid":44931,"platform":"openharmony","arch":"arm64","electron":"37.2.0","node":"22.17.0","modules":"136","execPath":"/system/bin/appspawn","argv":["/system/bin/appspawn","--use-gl=egl","--enable-features=UseOzonePlatform","--ozone-platform=ohos","--enable-logging","--ozone-dump-file=/data/storage/el2/base/cache/","--no-zygote","--user-data-dir=/data/storage/el2/base/files/","--force-renderer-accessibility=basic","--disable-gpu-watchdog","--disable-features=EnableDrDc","--bundle-installation-dir=/data/storage/el1/bundle/electron/resources/resfile","--no-cluster"]}
+[TheiaOHOS] 2026-08-23T08:26:21.899Z desktop-probe-failed Error: EPERM: operation not permitted, open '/storage/Users/currentUser/Desktop/theia-ohos-probe.txt'
+[TheiaOHOS] 2026-08-23T08:26:21.901Z home {"HOME":"/data/storage/el2/base/files/home","THEIA_CONFIG_DIR":"/data/storage/el2/base/files/.theia","workspaceDir":"/data/storage/el2/base/files/workspace"}
+[TheiaOHOS] 2026-08-23T08:26:21.901Z fork {"modulePath":"/data/storage/el1/bundle/electron/resources/resfile/resources/app/fork-child.js","argsCount":0}
+[TheiaOHOS] 2026-08-23T08:26:21.981Z fork-probe-started {"childPath":"/data/storage/el1/bundle/electron/resources/resfile/resources/app/fork-child.js"}
+[TheiaOHOS] 2026-08-23T08:26:21.983Z fork-probe-error Error: spawn /system/bin/appspawn EACCES
+[TheiaOHOS] 2026-08-23T08:26:22.023Z setApplicationMenu true
+[TheiaOHOS] 2026-08-23T08:26:22.024Z app-ready {}
+[TheiaOHOS] 2026-08-23T08:26:22.024Z app-ready-show-frontend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html
+[TheiaOHOS] 2026-08-23T08:26:22.027Z polyfill theia-ipc
+[TheiaOHOS] 2026-08-23T08:26:22.266Z require-backend /data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/backend/main.js
+[TheiaOHOS] 2026-08-23T08:26:23.410Z native-intercept ./native/drivelist.node
+[TheiaOHOS] 2026-08-23T08:26:23.416Z native-intercept @parcel/watcher-openharmony-arm64
+[TheiaOHOS] 2026-08-23T08:26:23.428Z backend-returned {}
+[TheiaOHOS] 2026-08-23T08:26:23.520Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T08:26:23.521Z native-intercept ../build/Release/pty.node
+[TheiaOHOS] 2026-08-23T08:26:24.125Z native-intercept ./native/sshcrypto.node
+[TheiaOHOS] 2026-08-23T08:26:24.128Z native-intercept ./native/cpufeatures.node
+[TheiaOHOS] 2026-08-23T08:26:24.684Z backend-address {"address":"127.0.0.1","family":"IPv4","port":35459}
+[TheiaOHOS] 2026-08-23T08:26:24.689Z security-token-cookie {"port":35459}
+[TheiaOHOS] 2026-08-23T08:26:24.690Z load-file-url file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35459
+[TheiaOHOS] 2026-08-23T08:26:25.183Z renderer exposing theia core electron api
+[TheiaOHOS] 2026-08-23T08:26:25.190Z renderer exposing theia filesystem electron api
+[TheiaOHOS] 2026-08-23T08:26:27.006Z renderer Frontend: loading modules... [1.953 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:27.114Z renderer Frontend: container created [2.114 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:27.149Z did-finish-load file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35459
+[TheiaOHOS] 2026-08-23T08:26:27.150Z frontend-loaded file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/index.html?port=35459
+[TheiaOHOS] 2026-08-23T08:26:27.223Z renderer sending initial connect on 0PzhhmE5uNMJtkRBAAAB
+[TheiaOHOS] 2026-08-23T08:26:27.243Z renderer initial connect received on 0PzhhmE5uNMJtkRBAAAB
+[TheiaOHOS] 2026-08-23T08:26:27.292Z renderer Frontend: preloaded [2.292 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:28.327Z renderer Frontend: core modules loaded [3.329 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:29.468Z renderer Frontend: modules loaded [4.469 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:29.470Z renderer Frontend: resolving application [4.470 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:29.482Z renderer Frontend: application resolved [4.480 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:29.951Z renderer 2026-08-23T08:26:29.936Z core:FrontendStopwatch WARN Frontend d_.configure took longer than the expected maximum 100 milliseconds: 241.6 ms [4.938 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:30.042Z native-intercept ./native/keytar.node
+[TheiaOHOS] 2026-08-23T08:26:30.059Z native-intercept ./native/keymapping.node
+[TheiaOHOS] 2026-08-23T08:26:30.391Z renderer 2026-08-23T08:26:30.387Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T08:26:30.392Z renderer 2026-08-23T08:26:30.387Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129106)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T08:26:30.392Z renderer 2026-08-23T08:26:30.387Z root WARN Possible Emitter memory leak detected. 176 listeners added. Use event.maxListeners to increase the limit (175). MOST frequent listener (1):
+[TheiaOHOS] 2026-08-23T08:26:30.392Z renderer 2026-08-23T08:26:30.387Z root WARN     at _event._event.Object.assign.maxListeners (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:440:10391)
+    at ope.init (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:443:129248)
+    at Bjc (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:11:7821)
+    at _fs (file:///data/storage/el1/bundle/electron/resources/resf
+[TheiaOHOS] 2026-08-23T08:26:30.433Z renderer 2026-08-23T08:26:30.428Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T08:26:30.610Z renderer 2026-08-23T08:26:30.608Z core:FrontendStopwatch INFO [14b072a3-8017-45eb-b155-bb7e3c8d211c] Waiting for backend deployment: 191.1 ms [5.610 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:30.965Z renderer 2026-08-23T08:26:30.964Z core:FrontendStopwatch WARN Frontend HCe.onStart took longer than the expected maximum 100 milliseconds: 546.3 ms [5.967 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:31.199Z renderer 2026-08-23T08:26:31.196Z core:FrontendStopwatch WARN Frontend KDt.onStart took longer than the expected maximum 100 milliseconds: 228.0 ms [6.199 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:31.368Z renderer 2026-08-23T08:26:31.358Z core:FrontendStopwatch WARN Frontend sRt.onStart took longer than the expected maximum 100 milliseconds: 161.4 ms [6.360 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:31.369Z app-state started_contributions
+[TheiaOHOS] 2026-08-23T08:26:31.404Z renderer 2026-08-23T08:26:31.402Z core:FrontendStopwatch INFO Start frontend contributions: 1882.0 ms [6.364 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:31.405Z renderer 2026-08-23T08:26:31.403Z core:FrontendApplicationStateService INFO Changed application state from 'init' to 'started_contributions'.
+[TheiaOHOS] 2026-08-23T08:26:31.420Z app-state attached_shell
+[TheiaOHOS] 2026-08-23T08:26:31.429Z renderer 2026-08-23T08:26:31.419Z core:FrontendApplicationStateService INFO Changed application state from 'started_contributions' to 'attached_shell'.
+[TheiaOHOS] 2026-08-23T08:26:31.429Z renderer 2026-08-23T08:26:31.419Z core:ShellLayoutRestorer INFO >>> Restoring the layout state...
+[TheiaOHOS] 2026-08-23T08:26:31.429Z renderer 2026-08-23T08:26:31.423Z plugin-ext:HostedPluginSupport INFO [14b072a3-8017-45eb-b155-bb7e3c8d211c] Loading plugin contributions
+[TheiaOHOS] 2026-08-23T08:26:31.657Z rg-spawn ["--hidden","--json","--ignore-case","--max-filesize=20M","--glob=!**/.git","--glob=!**/.git/*","--glob=!**/.svn","--glob=!**/.svn/*","--glob=!**/.hg","--glob=!**/.hg/*","--glob=!**/CVS","--glob=!**/CVS/*","--glob=!**/.DS_Store","--glob=!**/.DS_Store/*","--glob=!**/node_modules","--glob=!**/node_modules/*","--follow","--fixed-strings","--","c吃牛排啊吃快餐","/storage/Users/currentUser/Desktop"]
+[TheiaOHOS] 2026-08-23T08:26:32.210Z renderer 2026-08-23T08:26:32.202Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T08:26:32.666Z renderer 2026-08-23T08:26:32.659Z core:ShellLayoutRestorer INFO <<< The layout has been successfully restored.
+[TheiaOHOS] 2026-08-23T08:26:32.679Z app-state initialized_layout
+[TheiaOHOS] 2026-08-23T08:26:32.690Z renderer 2026-08-23T08:26:32.688Z core:FrontendStopwatch INFO Initialize the workbench layout: 1242.4 ms [7.664 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:32.698Z renderer 2026-08-23T08:26:32.690Z core:FrontendApplicationStateService INFO Changed application state from 'attached_shell' to 'initialized_layout'.
+[TheiaOHOS] 2026-08-23T08:26:32.939Z renderer 2026-08-23T08:26:32.938Z filesystem:FileService ERROR Error: Request 'readdir' failed
+    at Proxy.<anonymous> (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:442:50792)
+    at YVt.readdir (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1904:460)
+    at g$.toFileStat (file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:1671:60469)
+    at g$.doResolveFile (
+[TheiaOHOS] 2026-08-23T08:26:33.510Z app-state ready
+[TheiaOHOS] 2026-08-23T08:26:33.523Z renderer 2026-08-23T08:26:33.520Z core:FrontendStopwatch INFO Replace loading indicator with ready workbench UI (animation): 809.5 ms [8.510 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:33.527Z renderer 2026-08-23T08:26:33.523Z core:FrontendApplicationStateService INFO Changed application state from 'initialized_layout' to 'ready'.
+[TheiaOHOS] 2026-08-23T08:26:33.527Z renderer 2026-08-23T08:26:33.523Z core:FrontendStopwatch INFO All frontend contributions settled: 4030.2 ms [8.511 s since frontend page start]
+[TheiaOHOS] 2026-08-23T08:26:41.636Z renderer 2026-08-23T08:26:41.635Z ai-registry:MCPExtensionsContribution WARN AI registry fetch failed; MCP entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T08:26:41.637Z renderer 2026-08-23T08:26:41.635Z ai-registry:SkillExtensionsContribution WARN AI registry fetch failed; skill entries unavailable. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T08:26:41.639Z renderer 2026-08-23T08:26:41.638Z ai-registry:RegistryAutoUpdateService WARN AI registry auto-update check skipped: could not resolve registry entries. Error: Timed out fetching the AI registry from https://ai.open-vsx.org/api/v1/all.json after 10000ms.
+    at file:///data/storage/el1/bundle/electron/resources/resfile/resources/app/lib/frontend/bundle.js:9831:138031
+[TheiaOHOS] 2026-08-23T08:26:42.962Z renderer Uncaught (in promise) Canceled: Canceled
+[TheiaOHOS] 2026-08-23T08:26:46.859Z renderer Uncaught Error: Cannot get key code from the keyboard event: [object KeyboardEvent].
+[TheiaOHOS] 2026-08-23T08:26:46.861Z renderer Uncaught Error: Cannot get key code from the keyboard event: [object KeyboardEvent].
+[TheiaOHOS] 2026-08-23T08:26:49.380Z feature-probe {"title":"hello.md - Desktop - Theia","hasContainer":true,"commands":{"core.save":"ok","keymaps:open":"ok","outlineView:toggle":"ok","output:toggle":"ok","debug:toggle":"ok","preview:open":"The command 'preview:open' cannot be executed. There are no active handlers available for the command.","search-in-workspace.open":"ok","file-search.openFile":"ok","file-search.open":"The command 'file-search.open' cannot be executed. There are no active handlers available for the command.","workbench.action.quickOpen":"ok","vsxExtensions.toggle":"ok","callhierarchy:toggle":"ok","typehierarchy:toggle":"ok","aiChat:toggle":"ok","property-view:toggle":"ok","propertyView:toggle":"The command 'propertyView:toggle' cannot be executed. There are no active handlers available for the command."},"widgets":["theia-app-shell","theia-top-panel","theia-sample-toolbar-contribution","theia-left-right-split-panel","theia-left-content-panel","shell-tab-explorer-view-container","shell-tab-search-view-container","shell-tab-scm-view-container","shell-tab-debug","shell-tab-vsx-extensions-view-container","shell-tab-test-view-container","shell-tab-explorer-view-container-hidden","shell-tab-search-view-container-hidden","shell-tab-scm-view-container-hidden","shell-tab-debug-hidden","shell-tab-vsx-extensions-view-container-hidden","shell-tab-test-view-container-hidden","theia-left-side-panel","explorer-view-container","explorer-view-container--theia-open-editors-widget","navigator.close.all.editors.toolbar","navigator.save.all.editors.toolbar","theia-open-editors-widget","explorer-view-container--files","search-view-container","search-view-container--search-in-workspace","scm-view-container","scm-view-container--scm-repositories-widget","scm-view-container--scm-view","scm-view","scm-view-container--scm-history-graph-widget","debug:view-container:-1","debug:view-container:-1--debug:threads:-1","debug:view-container:-1--debug:frames:-1","debug:view-container:-1--debug:variables:-1","debug:view-container:-1--debug:watch:-1","debug:view-container:-1--debug:breakpoints:-1","vsx-extensions-view-container","vsx-extensions-view-container--vsx-extensions:searchResult","vsx-extensions-view-container--vsx-extensions:recommended","vsx-extensions-view-container--vsx-extensions:installed","vsx-extensions-view-container--vsx-extensions:builtin","test-view-container","test-view-container--test-tree-widget","test-view-container--test-run-widget","theia-bottom-split-panel","theia-main-content-panel","shell-tab-getting.started.widget","shell-tab-code-editor-opener:file:///data/storage/el2/base/files/workspace/hello.md:8367471619711829","shell-tab-keybindings.view.widget","code-editor-opener:file:///data/storage/el2/base/files/workspace/hello.md:8367471619711829","keybindings.view.widget","theia-bottom-content-panel","shell-tab-problems","shell-tab-outputView","shell-tab-callhierarchy","shell-tab-theia-typehierarchy","shell-tab-property-view","theia-typehierarchy","property-view","theia-right-content-panel","shell-tab-chat-view-widget","shell-tab-outline-view","shell-tab-memory-layout-widget","shell-tab-chat-view-widget-hidden","shell-tab-outline-view-hidden","shell-tab-memory-layout-widget-hidden","theia-right-side-panel","chat-view-widget","outline-view","theia-main-content-panel","theia-statusBar","status-bar-editor-status-cursor-position","status-bar-editor-status-eol","status-bar-editor-status-encoding","status-bar-editor-status-tabbing-config","status-bar-editor-language-status-items","status-bar-editor-status-language","status-bar-theia-notification-center","theia-breadcrumbs-popups-overlay"],"tabs":["Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Testing","Extensions","Debug","Source Control","Search","Welcome","hello.md","Keyboard Shortcuts","Problems","Output","Call Hierarchy","Type Hierarchy","Properties","AI Chat","Outline","Memory Inspector","AI Chat","Outline","Memory Inspector","AI Chat","Memory Inspector","Outline"],"searchHits":0,"save":{"opened":true,"beforeLength":79,"command":"ok"},"hasCommands":true,"searchInput":true,"searchText":"","tabsAfter":["Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Search","Source Control","Debug","Extensions","Testing","Explorer","Testing","Extensions","Debug","Source Control","Search","Welcome","hello.md","Keyboard Shortcuts","Problems","Output","Call Hierarchy","Type Hierarchy","Properties","AI Chat","Outline","Memory Inspector","AI Chat","Outline","Memory Inspector","AI Chat","Memory Inspector","Outline"],"bodyClasses":"monaco-enable-motion underline-links vs light-theia linux theia-light","previewOpen":false,"keymapsOpen":true,"extensionsOpen":true}
+[TheiaOHOS] 2026-08-23T08:27:45.752Z window-close-event {"quitting":false,"closeInProgress":false}
+[TheiaOHOS] 2026-08-23T08:27:45.752Z begin-close window-close
+[TheiaOHOS] 2026-08-23T08:27:45.753Z RequestClose-sent {}
+[TheiaOHOS] 2026-08-23T08:27:45.758Z close-handshake-confirm {}
+[TheiaOHOS] 2026-08-23T08:27:45.758Z quit {"reason":"window-close","pid":44931}
+[TheiaOHOS] 2026-08-23T08:27:45.768Z window-closed-event {"remaining":0,"quitting":true}
+[TheiaOHOS] 2026-08-23T08:27:45.768Z window-all-closed {"pid":44931,"quitting":true}

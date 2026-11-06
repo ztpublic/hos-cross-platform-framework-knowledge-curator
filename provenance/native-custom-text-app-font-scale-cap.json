@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "native-custom-text-app-font-scale-cap",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/ets/KRNativeRenderController.ets",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/ets/KRNativeRenderController.ets",
+      "sha256": "2dc00830d59756d8675b443bbe88bc060b34c33db03a3e94045e0f1a991ff41b",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

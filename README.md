@@ -2,7 +2,7 @@
 
 Reusable solutions for developers adapting cross-platform applications to HarmonyOS PC. Each entry is a Markdown file in [knowledge/](knowledge/); the structured, searchable catalog is [index.csv](index.csv).
 
-The installed curator is [`harmonyos-pc-knowledge-curator`](/Users/mac/.codex/skills/harmonyos-pc-knowledge-curator/SKILL.md). It supports importing notes, researching new adaptations, updating tracked sources and querying this database for Flutter, Qt, Electron, React Native, Kotlin Multiplatform and Tauri.
+The installed curator is [`harmonyos-pc-knowledge-curator`](/Users/mac/.codex/skills/harmonyos-pc-knowledge-curator/SKILL.md), also installed for Claude Code at `~/.claude/skills/`. It supports importing notes, researching new adaptations, updating tracked sources and querying this database for Flutter, Qt, Electron, React Native, Kotlin Multiplatform and Tauri.
 
 ## Classification
 
@@ -11,7 +11,7 @@ The installed curator is [`harmonyos-pc-knowledge-curator`](/Users/mac/.codex/sk
 
 For example, document URI identity and read/write grants are common; consuming an XFile or mapping QFileDialog suffix filters are framework adapters. General guidance and adapters link to one another.
 
-The database contains **236 entries: 102 common and 134 framework-specific**, including **8 Tauri adapters**. Framework queries include applicable common knowledge; use `stats` for current category counts, which may overlap for multi-framework entries.
+The database contains **283 entries: 130 common and 153 framework-specific**, including **8 Tauri adapters**. Framework queries include applicable common knowledge; use `stats` for current category counts, which may overlap for multi-framework entries.
 
 ## Query and maintenance
 
@@ -45,3 +45,7 @@ The Qt collection's [MIT notice](maintenance/licenses/qt-MIT.txt) is retained. T
 The [Tauri curation report](maintenance/TAURI-2026-10-22.md) records five reviewed framework/demo/application/toolchain sources and one partial prototype. It adds five Tauri mechanisms and one common ELF packaging mechanism, and extends two existing common entries. Dependency generations, source-reported PC fixes and emulator evidence remain explicitly scoped.
 
 The [2026-10-27 update and discovery report](maintenance/UPDATE-2026-10-27.md) records 121 screened commits across five advanced refs, 19 new contributing source records, 21 added entries and seven evidence extensions. It documents 65 shortlisted candidate dispositions across GitHub, GitCode, Gitee and supplementary registry searches. There are 58 registered project/library/toolchain records plus two imported collections; one prototype retains a null analyzed checkpoint. All PC validation remains `not-run`.
+
+The [2026-11-06 update and discovery report](maintenance/UPDATE-2026-11-06.md) records 219 screened commits across seven advanced refs, 20 screened candidates from a new AtomGit search channel, nine new contributing sources, 28 added entries and two extensions. There are 67 registered project/library/toolchain records plus two imported collections. Many AtomGit PC projects remain unscreened, and all PC validation remains `not-run`. Sources that reserve all rights or have no license keep hash-only evidence.
+
+The [deferred-lead report](maintenance/UPDATE-2026-11-06-LEADS.md) screened 22 further leads, adding 19 entries and two extensions. The registry now holds 75 project/library/toolchain records plus five knowledge collections. Tauri gained no new framework-specific entry, five new entries are documentation-only `imported-guidance`, and one is `unresolved`. Seven sources from these passes keep hash-only evidence. Many AtomGit results remain unscreened.

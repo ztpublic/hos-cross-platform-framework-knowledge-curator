@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "pasteboard-serialize-setdata",
+  "sources": [
+    {
+      "collection": "rntpc-clipboard",
+      "original_path": "harmony/clipboard/src/main/ets/RNCClipboardTurboModule.ts",
+      "snapshot": "provenance/snapshots/projects/rntpc-clipboard/2026-11-06/harmony/clipboard/src/main/ets/RNCClipboardTurboModule.ts",
+      "sha256": "87fab9b9205233201142d5555bea1f1eda82387098f874afcf18566db55984ed",
+      "revision": "bacd93c0c49199482095ecbec91d8dac221c4b9c",
+      "license": "MIT",
+      "url": "https://atomgit.com/CPF-RN/rntpc_clipboard",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "qt-pyqt-ohos-embedded-cpython-launcher",
+  "sources": [
+    {
+      "collection": "vidcutter-ohos",
+      "original_path": "entry/src/main/cpp/main.cpp",
+      "snapshot": "provenance/snapshots/projects/vidcutter-ohos/2026-11-06/entry/src/main/cpp/main.cpp.evidence.json",
+      "sha256": "735f7e75f3c3f5d2c7e3c01007ac4d2f2cefc0f5d1dd261b2b835ab4213050c0",
+      "revision": "61c9f545894d24de3b3f93978108a6125b8deedc",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "vidcutter-ohos",
+      "original_path": "entry/src/main/cpp/CMakeLists.txt",
+      "snapshot": "provenance/snapshots/projects/vidcutter-ohos/2026-11-06/entry/src/main/cpp/CMakeLists.txt.evidence.json",
+      "sha256": "fc7bac24b33fd0de96e50e17f80b19e2c8f458952b907e7b204b3ada374399e8",
+      "revision": "61c9f545894d24de3b3f93978108a6125b8deedc",
+      "license": "No repository-level license found. Hash-only evidence retained.",
+      "url": "https://atomgit.com/ohos-pyqt/vidcutter",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "openshot-ohos",
+      "original_path": "entry/src/main/cpp/pyqtlauncher.cpp",
+      "snapshot": "provenance/snapshots/projects/openshot-ohos/2026-11-06/entry/src/main/cpp/pyqtlauncher.cpp",
+      "sha256": "5869c80ffe3e3de1f23c9105e9b4eb8fe6a56d773b9d354f00fa3fa5fbe9e782",
+      "revision": "786576d2df60053294f2bc7b7578eca3891c7a77",
+      "license": "GPL-3.0",
+      "url": "https://atomgit.com/ohos-qt/openshot",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

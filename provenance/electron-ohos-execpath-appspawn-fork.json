@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-execpath-appspawn-fork",
+  "sources": [
+    {
+      "collection": "theia-ohos",
+      "original_path": "ohos-pc/theia-app/ohos-main.js",
+      "snapshot": "provenance/snapshots/projects/theia-ohos/2026-11-06/ohos-pc/theia-app/ohos-main.js",
+      "sha256": "bce024a197555b24804220f20ac7d8903f497503fd4aefc0f3057211bfb83731",
+      "revision": "3bf82ba096549f4b2650fae57db2e53a9763f7fa",
+      "license": "Repository ships LICENSE-EPL and LICENSE-GPL-2.0-ONLY-CLASSPATH-EXCEPTION plus component notices.",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_theia",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "theia-ohos",
+      "original_path": "ohos-pc/evidence/theia-ohos-device.log",
+      "snapshot": "provenance/snapshots/projects/theia-ohos/2026-11-06/ohos-pc/evidence/theia-ohos-device.log",
+      "sha256": "c19b5d6a0f0162874ca4219e54c998485ff08ca5b9750c82fa864fe5aaaa264b",
+      "revision": "3bf82ba096549f4b2650fae57db2e53a9763f7fa",
+      "license": "Repository ships LICENSE-EPL and LICENSE-GPL-2.0-ONLY-CLASSPATH-EXCEPTION plus component notices.",
+      "url": "https://atomgit.com/OpenHarmonyPCDeveloper/ohos_theia",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "electron-harmonyos-kb",
+      "original_path": "problems/fork-crash-missing-jit-permission.md",
+      "snapshot": "provenance/snapshots/projects/electron-harmonyos-kb/2026-11-06/problems/fork-crash-missing-jit-permission.md.evidence.json",
+      "sha256": "94ca20eac8fd891aa857d1b8d7a7c650a5c451ca6a497b787d2ecde00e236240",
+      "revision": "f30776c87ab77a0567eda8a76c8643725334a9ca",
+      "license": "No license file; README says personal/team use. Hash-only evidence retained.",
+      "url": "https://atomgit.com/PERMISSION-DENIED/electron-harmonyos-kb",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

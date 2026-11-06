@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "native-arkui-callback-no-throw-text",
+  "sources": [
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/utils/KRUtfUtil.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/cpp/libohos_render/utils/KRUtfUtil.cpp",
+      "sha256": "a0cdd2107c0a67799182f7e5c26fb239c379163b77196bd438bfb0c91687410f",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/utils/KRUtfUtil.h",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/cpp/libohos_render/utils/KRUtfUtil.h",
+      "sha256": "51ae4b0e75c8ce6769007c6c6327fc4cfa137c240bfdc4797496b5c91fe9963d",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "kuiklyui",
+      "original_path": "core-render-ohos/src/main/cpp/libohos_render/expand/components/input/KRTextFieldView.cpp",
+      "snapshot": "provenance/snapshots/projects/kuiklyui/2026-11-06/core-render-ohos/src/main/cpp/libohos_render/expand/components/input/KRTextFieldView.cpp",
+      "sha256": "25b9430d39bf0ec45a37d031df9fd42e9fe3447f7ef0ef899b3cfece95357078",
+      "revision": "9309a6175a419c58de5f4a573398177106193bb1",
+      "license": "KuiklyUI License; custom license, existing notice retained.",
+      "url": "https://github.com/Tencent-TDS/KuiklyUI",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed.",
+    "Common classification is a curator inference from the native/platform contract, not corroboration on other frameworks."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

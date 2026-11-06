@@ -53,6 +53,8 @@ If an exported start function spawns work and returns immediately, retain the li
 
 For example, omitting an unsupported memory-limit setter may avoid lazy symbol lookup, but it also removes that particular resource bound. It is not an equivalent implementation of the limit.
 
+**Release-only missing symbols.** A public C function can disappear from the dynamic symbol table when release builds use -fvisibility=hidden and strip. Mark the function with the library's export macro, then check the stripped release artifact, not just the debug build, with an `nm -D` style listing.
+
 ## Common mistakes
 
 Do not infer complete compatibility from one successful initialization call or from an arm64 binary existing in the checkout. Avoid hiding every load failure behind an empty catch.

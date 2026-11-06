@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "electron-ohos-platform-binding-loader-shim",
+  "sources": [
+    {
+      "collection": "dsh-desktop-hos",
+      "original_path": "scripts/collect-dsh.mjs",
+      "snapshot": "provenance/snapshots/projects/dsh-desktop-hos/2026-11-06/scripts/collect-dsh.mjs",
+      "sha256": "7851a12b1e08a92b562785917053d6e5cb0e2f73c21461a7be2ccb484719d87f",
+      "revision": "6ca565388192c25dac3c4e456707084ce9c3d5bb",
+      "license": "MIT",
+      "url": "https://github.com/fellow99/dsh-desktop-hos",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ],
+  "source_reported_evidence": [
+    "The source commit reports that all internal loader APIs resolved and the host booted on a device. Attributed report; not repeated here."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "rnoh-keyboard-avoidance-animated-insets",
+  "sources": [
+    {
+      "collection": "rnoh-keyboard-insets",
+      "original_path": "harmony/keyboard_insets/src/main/ets/KeyboardInsetsPackage.ets",
+      "snapshot": "provenance/snapshots/projects/rnoh-keyboard-insets/2026-11-06/harmony/keyboard_insets/src/main/ets/KeyboardInsetsPackage.ets",
+      "sha256": "73637d8661211ba3a9bb658714827cd6f411c919afca0561ef815058cf6a66be",
+      "revision": "62f2e7fcaa6f872f6710f11ab1b9eabbee6ffefe",
+      "license": "MIT",
+      "url": "https://github.com/ftsukic/rnoh-keyboard-insets",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    },
+    {
+      "collection": "rnoh-keyboard-insets",
+      "original_path": "harmony/keyboard_insets/src/main/cpp/KeyboardInsetsViewComponentInstance.cpp",
+      "snapshot": "provenance/snapshots/projects/rnoh-keyboard-insets/2026-11-06/harmony/keyboard_insets/src/main/cpp/KeyboardInsetsViewComponentInstance.cpp",
+      "sha256": "6d3765ed4cdff6364056ea3d236c341ed68796d25132238f6fe5075a186ec04b",
+      "revision": "62f2e7fcaa6f872f6710f11ab1b9eabbee6ffefe",
+      "license": "MIT",
+      "url": "https://github.com/ftsukic/rnoh-keyboard-insets",
+      "evidence_note": "Pinned source review only; no source setup, build, device or PC execution."
+    }
+  ],
+  "transformations": [
+    "Generalized the reviewed mechanism and removed project/research identity from consumer guidance.",
+    "Checks describe proposed acceptance cases; they were not executed."
+  ],
+  "limitations": [
+    "No application build, device, emulator or PC validation performed by this curation.",
+    "Selected implementation paths only; published-package behavior is not established."
+  ]
+}

@@ -1,0 +1,1535 @@
+[
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "6ca5653",
+    "subject": "fix(require-builtin): shim the OpenHarmony platform package past the loader check",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "1f706a8",
+    "subject": "fix(extract): support GNU long file names when extracting the dsh payload",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "060dc99",
+    "subject": "docs: add project AGENTS.md with codegraph standard",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "46eedc2",
+    "subject": "docs(hos): align dsh base rc.5 / market 1.73.7; document workflow absent",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "cfac473",
+    "subject": "build(dsh): bump upstream baseline rc.2 -> rc.5 and dsh-market 1.73.7",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "d7a2b91",
+    "subject": "docs(specs): 对齐 0XX/1XX/2XX 编号并补充 013 品牌化",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "dsh-desktop-hos",
+    "commit": "6ad60c4",
+    "subject": "docs(capability): 源码核实修正——pnpm 已随包、补丁数 13、203 已实施、#33 ark 列更正",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "drawio-in-harmony",
+    "commit": "ca26149",
+    "subject": "Fix hardware keyboard shortcuts and ship the app as app.asar",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "drawio-in-harmony",
+    "commit": "eef61a3",
+    "subject": "store-listing: promo screenshots with embedded captions",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "drawio-in-harmony",
+    "commit": "f0bba78",
+    "subject": "RELEASE.md: pre-release device regression passed",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "drawio-in-harmony",
+    "commit": "919f4af",
+    "subject": "RELEASE.md: current store-submission status",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "drawio-in-harmony",
+    "commit": "fbde2b1",
+    "subject": "Add privacy policy page, set vendor, record release signing status",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "ohos-jupyter",
+    "commit": "d986202a",
+    "subject": "new: 新建文件 README.OpenHarmony_CN.md",
+    "disposition": "duplicate",
+    "reason": "History rewrite: tip tree 8168f585 is identical to the previously analyzed tree."
+  },
+  {
+    "source": "ohos-jupyter",
+    "commit": "e29dbad6",
+    "subject": "update: 更新文件 README.md",
+    "disposition": "duplicate",
+    "reason": "History rewrite: tip tree 8168f585 is identical to the previously analyzed tree."
+  },
+  {
+    "source": "ohos-jupyter",
+    "commit": "da2b89d5",
+    "subject": "remove temp logs",
+    "disposition": "duplicate",
+    "reason": "History rewrite: tip tree 8168f585 is identical to the previously analyzed tree."
+  },
+  {
+    "source": "ohos-jupyter",
+    "commit": "27a2a662",
+    "subject": "ohos_jupyter: full project (large files via Git LFS)",
+    "disposition": "duplicate",
+    "reason": "History rewrite: tip tree 8168f585 is identical to the previously analyzed tree."
+  },
+  {
+    "source": "ohos-jupyter",
+    "commit": "a94b99c6",
+    "subject": "上传 ohos_jupyter 全部工程内容",
+    "disposition": "duplicate",
+    "reason": "History rewrite: tip tree 8168f585 is identical to the previously analyzed tree."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "9309a61",
+    "subject": "fix(compose): make safeAreaInsets observable so insets-only changes update layout (#1856)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "45e6129",
+    "subject": "fix(ohos): avoid full-tree scan on KRView destruction to prevent main-thread freeze (#1870)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "f34a3aa",
+    "subject": "docs: clarify Input and TextArea overflow guidance (#1871)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "677c36f",
+    "subject": "feat(ohos): 鸿蒙折叠态映射为 pageData.hingeStatus (#1863)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "8b9c96b",
+    "subject": "fix: 修复 pager 分页除零崩溃 (#1866)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "10b48ae",
+    "subject": "fix(ios): warm up Kotlin/Native runtime on main thread to avoid finalizer 0xf8 crash (#1860)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "fb374b7",
+    "subject": "fix(ohos): add HandleScope to CallArkTSMethod to stop NAPI handle leak (#1865)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "aaaadf1",
+    "subject": "docs: add 2.30.0 version description to changelog (#1861)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "5c7cc1d",
+    "subject": "fix(ohos): 输入框粘贴超长文本崩溃（UTF-8 截断 + 解码抛异常） (#1843)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "5dfd9b3",
+    "subject": "fix(ohos): clamp fontSizeScale to app max font scale (#1854)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "9baf4df",
+    "subject": "fix(textSelection): 选区高亮绘制顺序与颜色下发修复 (#1845)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "59c8e21",
+    "subject": "perf(ohos): cut redundant copies and dedup cost in JSON response parsing (#1853)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "7b31dae",
+    "subject": "feat(web): add removeNotify doc (#1855)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "a4060b5",
+    "subject": "feat(ohos): sync event scheduling (#1851)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "4a1b996",
+    "subject": "fix(h5App-js): render canvas at device pixel ratio (#1850)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "08c65a8",
+    "subject": "fix(h5App-js): keep unrelated controls clickable after text selection (#1849)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "b6c3327",
+    "subject": "fix(web): dispatch notifications across live Kuikly pages (#1847)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "3e7c748",
+    "subject": "fix(compose): clamp non-scrollable Lazy exact content size (#1852)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "583bec1",
+    "subject": "fix(compose): re-observe snapshot reads in KNode onChanged to refresh derived-state baseline (#1837)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "6d2b1a9",
+    "subject": "docs(sidebar): fix a case mismatch and register two orphaned Compose pages (#1827)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "2fcb6f7",
+    "subject": "fix(h5): stabilize Hover positioning in transformed containers (#1838)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "f0d0389",
+    "subject": "feat(ohos): Expose instance id in set property callback (#1839)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "dd7d1de",
+    "subject": "fix(ohos): close unpaired napi handle scopes to stop ArkTS view leaks (#1729)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "99babbb",
+    "subject": "fix(android): guard RenderScriptBlur after destroy to avoid RSInvalidStateException (#1792)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "cfd986f",
+    "subject": "fix(android): destroy render layer after pageWillDestroy (#1834)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "kuiklyui",
+    "commit": "cbe47b3",
+    "subject": "fix(ohos): keep KRSetSyncMainTaskWarnTimeout exported under hidden visibility (#1831)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "bf6f17b",
+    "subject": "Merge pull request #200 from KOPZWMZ/fix/subtitle-configured-log-spam",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "f7aed2f",
+    "subject": "Merge pull request #201 from aozaoz112233/codex/fix-ohos-p010-output",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "aad19aa",
+    "subject": "fix(ohos): preserve P010 hardware-decoded frame layout",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "fc6f2d3",
+    "subject": "Merge pull request #199 from AimesSoft/codex/fix-ohos-gles-limits",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "0106d33",
+    "subject": "perf(subtitle): stop re-emitting the \"configured\" diagnostic on viewport changes",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "018dfc3",
+    "subject": "test(d3d11): allow CI software rendering time for GPU handoff",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "3187f87",
+    "subject": "fix(wgpu): respect reduced GLES dispatch limits",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "77de7e4",
+    "subject": "Merge pull request #198 from AimesSoft/codex/fix-ohos-upscaler-compat",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "7334e0f",
+    "subject": "fix(ohos): allow bridges to link with pre-custom-model runtimes",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "21b42ca",
+    "subject": "Merge pull request #195 from AimesSoft/feat/super-resolution",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "0cdef08",
+    "subject": "Merge pull request #196 from AimesSoft/feat/flutter-presenter-owners",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "b6e2072",
+    "subject": "perf(sr): add validated fp16 spatial heads and benchmark report",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "3059271",
+    "subject": "fix(linux): load and clear custom upscaler models on the presenter owner",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "liberika",
+    "commit": "63afdc5",
+    "subject": "fix(sr): sibling merging keeps residual slices and border variants",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "e83f1c8",
+    "subject": "feat(flutter): one owner thread per presenter on every platform (#93)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "f0865b9",
+    "subject": "test(capi): a wgpu presenter reports Building while its kernels compile",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "14362f2",
+    "subject": "feat(sr): network super resolution on every backend (#193, #194)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "7be60c4",
+    "subject": "Update native artifact manifest for v0.3.3",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "2bd4e02",
+    "subject": "release: 0.3.3",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "59d192b",
+    "subject": "Merge pull request #60 from AimesSoft/agent/mute-volume-controls",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "92fa119",
+    "subject": "feat(presenter): mute without losing the volume, and report both",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "84d501c",
+    "subject": "Merge pull request #190 from AimesSoft/fix/macos-timer-headroom",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "bd882cc",
+    "subject": "Merge pull request #189 from AimesSoft/fix/media-container-facts",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "24353a2",
+    "subject": "feat(media): tracks and diagnostics name a video's Dolby Vision profile",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "5b71606",
+    "subject": "fix(macos): the fallback timer follows the screen's headroom too",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "liberika",
+    "commit": "1dd1fb3",
+    "subject": "feat(capi): a `container` JSON method reports the opened container",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "d24dbd2",
+    "subject": "fix(media): diagnostics name the container and its bit rate",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "cab2d45",
+    "subject": "Merge pull request #188 from AimesSoft/build/wasm-bindgen-0.2.130",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "759cb02",
+    "subject": "build(web): wasm-bindgen 升到 0.2.130，js-sys 升到 0.3.107",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "liberika",
+    "commit": "8a9d260",
+    "subject": "Update native artifact manifest for v0.3.2",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "9afcdd8",
+    "subject": "Merge pull request #187 from AimesSoft/fix/windows-open-options",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "6886ecd",
+    "subject": "release: 0.3.2",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "518b4c7",
+    "subject": "fix(flutter): Windows no longer writes past ErikaOpenOptions",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "liberika",
+    "commit": "b60750b",
+    "subject": "docs: update integration guidance for 0.3.1 (#186)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "dec8e06",
+    "subject": "Update native artifact manifest for v0.3.1",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "7998c69",
+    "subject": "Merge pull request #185 from AimesSoft/docs/release-no-dry-run",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "da3e611",
+    "subject": "release: 0.3.1, not 0.4.0; the tag's run is the release, no rehearsal",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "012476a",
+    "subject": "Merge pull request #184 from AimesSoft/feat/next-parity",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "3158537",
+    "subject": "release: prepare liberika 0.4.0",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "d361b39",
+    "subject": "fix(flutter): the start position is known non-null where it is read",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "1e9e43f",
+    "subject": "feat: open at a position, say the media ended, delay subtitles, tell what they say",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "ae9574e",
+    "subject": "Merge pull request #182 from AimesSoft/codex/issue-180-ohos-subtitles",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "36b627a",
+    "subject": "Merge remote-tracking branch 'origin/main' into codex/issue-180-ohos-subtitles",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "ec581b3",
+    "subject": "Merge pull request #181 from AimesSoft/codex/issue-175-danmaku-capture",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "5448e8e",
+    "subject": "Merge remote-tracking branch 'origin/main' into review/pr-181",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "liberika",
+    "commit": "46a079e",
+    "subject": "fix(android): pass the danmaku flag to the merged capture helper",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "liberika",
+    "commit": "d3f1abc",
+    "subject": "docs: complete multilingual guides and references (#183)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "liberika",
+    "commit": "6868116",
+    "subject": "fix: address review of danmaku capture and native texture export",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "33cb7c9",
+    "subject": "simplify(ohos): keep the subtitle build fix minimal",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "fc21bc3",
+    "subject": "fix(ci): stage the current OpenHarmony subtitle runtime",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "liberika",
+    "commit": "aa6e81a",
+    "subject": "fix(ohos): include libass in text subtitle builds",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "liberika",
+    "commit": "1a1dd8d",
+    "subject": "feat: add danmaku capture and generic native texture export",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: shared code with no distinct OH mechanism identified; not a line-by-line audit."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "85d2703",
+    "subject": "build(upx): use the AUIPC filter for RISC-V again",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "bf5bbc4",
+    "subject": "build(upx): pack everything with gproxy-5.3.0-2",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "ea57b9e",
+    "subject": "fix(ci): trust the SignPath test certificate in the machine root store",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "b29c9e6",
+    "subject": "ci: submit SignPath test-signing requests without publishing test signatures",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "4caffb1",
+    "subject": "fix(console): keep a separate page size per picker data source",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c893dc6",
+    "subject": "fix(console): offer 100 rows per page and persist the select pager size",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "26564ab",
+    "subject": "docs(readme): add the F-Droid badge [skip ci]",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "2f6b600",
+    "subject": "docs(readme): point the FOSSA badge at the CLI-scanned project [skip ci]",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "9532b82",
+    "subject": "ci: scan licenses with the FOSSA CLI [skip ci]",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "06bba29",
+    "subject": "fix(core): send an error event when stream conversion fails mid-stream",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7966634",
+    "subject": "fix(protocol): stop failing streams on upstream model name changes",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "0f6274e",
+    "subject": "docs(readme): add the FOSSA license scan badge [skip ci]",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "0391bc5",
+    "subject": "fix(commandcode): preserve reported cache and reasoning usage",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "86c9c5b",
+    "subject": "fix(protocol): omit unspecified function tool strict in Chat conversion",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e95918f",
+    "subject": "fix(pricing): price claude-opus-5-5 at Opus 5.5 rates",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "6a1bf84",
+    "subject": "fix(commandcode): provide required CLI workspace context",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7406568",
+    "subject": "build(upx): let GitLab and CNB targets use install-upx.sh's default",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "3a904de",
+    "subject": "build(upx): pack with gproxy's UPX fork",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "997daf2",
+    "subject": "build(deps): bump leenhawk/tauri-harmony in /.gitlab (#327)",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "63a887e",
+    "subject": "build(deps): bump library/alpine in /deploy/container (#328)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "440696d",
+    "subject": "ci: fix the docs export push and the edge font pack",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "a3b35c9",
+    "subject": "fix(codex): drop input items that cannot resolve without storage",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c016833",
+    "subject": "feat(update): read announcements from the release hosts, with fallback",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "99cf7e0",
+    "subject": "feat(gemini): support Interactions API and protocol conversion",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "5e02974",
+    "subject": "docs: follow the documentation site onto Mintlify",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "82ea877",
+    "subject": "ci(docs): write to the documentation repository in either layout",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "f4f9a8e",
+    "subject": "ci(notifications): publish the announcement feed from GitHub Discussions",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "f5f643a",
+    "subject": "build: move the documentation site to the gproxy-docs submodule",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7ec09be",
+    "subject": "feat(console): download the optional font pack from public npm CDNs",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e182b05",
+    "subject": "chore: keep maintainer notes and local credentials in dev-docs",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "ef58ed4",
+    "subject": "docs(reference): keep upstream source citations out of the API reference",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d7ec77a",
+    "subject": "build(deps): bump oras-project/setup-oras",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "2c21ad3",
+    "subject": "build(deps): bump docker/login-action from 4.6.0 to 4.7.0",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "770c599",
+    "subject": "build(deps): bump library/node in /deploy/container",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "856eff3",
+    "subject": "build(deps): bump library/golang in /.gitlab",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "1ea64ad",
+    "subject": "build(deps): bump library/node in /.gitlab",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "dbb132b",
+    "subject": "build(deps): bump leenhawk/tauri-harmony in /.gitlab",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7903c7a",
+    "subject": "build(deps): bump library/golang in /.cnb",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7e2ab4a",
+    "subject": "build(deps): bump library/node in /.cnb",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "dc3a743",
+    "subject": "build(deps-dev): bump wrangler in /deploy/cloudflare",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e8c0505",
+    "subject": "fix(console): override minimatch to 11.0.4 for GHSA-g3hv-75wg-m249",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "15d6e01",
+    "subject": "feat(client-sdk): list and get models in the caller's dialect",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "41ce280",
+    "subject": "fix: read the model selector from multipart forms before routing",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "938bd58",
+    "subject": "fix(client-sdk): ignore empty Gemini Live messages",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "adb725a",
+    "subject": "fix(sdk): follow Gemini nextPageToken in model discovery",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "18c2b37",
+    "subject": "fix(client-sdk): typed native realtime events and collector metadata",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d402bb7",
+    "subject": "feat(realtime): resolve the session model in the gateway; Gemini Live on aistudio",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "a020270",
+    "subject": "feat(client-sdk): realtime sessions for OpenAI Realtime and Gemini Live",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7470e9b",
+    "subject": "feat(limits): raise the default request body cap to 128 MiB",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "42f5a41",
+    "subject": "refactor(channel): drop channel-side body size limits",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7f28a9c",
+    "subject": "fix(client-sdk): issues found in code review",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "5770d4d",
+    "subject": "fix(core): bind the upstream model in multipart form requests",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "1b9104b",
+    "subject": "fix(client-sdk): issues found in the live smoke test",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d4e48b4",
+    "subject": "feat(client-sdk): image generation/editing, speech and transcription IRs for OpenAI and Gemini",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "fd14c51",
+    "subject": "refactor(client-sdk): split into concept and per-dialect modules",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "305df46",
+    "subject": "feat(client-sdk): switchable asset delivery mode, inline by default",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "96c635e",
+    "subject": "feat(client-sdk): built-in S3 asset resolver over gproxy-file (OpenDAL), content-addressed upload and per-request presign",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "34b95e6",
+    "subject": "feat(client-sdk): round 3 — asset resolution via caller resolver, per-dialect delivery capability table, URL-first policy",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "fc9d066",
+    "subject": "feat(client-sdk): round 2 — response metadata, warnings, finish/error classification, portable reasoning, refusal, sources, embeddings IR, f",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "2bdb4e5",
+    "subject": "fix(docs): translate the nullable Claude citation reference description",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7523051",
+    "subject": "docs(readme): give the deploy buttons a uniform height",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "78e2270",
+    "subject": "wip(client-sdk): round 2 in progress (interrupted)",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e1c2eda",
+    "subject": "wip(client-sdk): round 1 — SDK-owned typed metadata/options, detailed content model, Chat Completions dialect",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "8542420",
+    "subject": "fix(protocol): allow a null context_management on Claude count responses",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "ac670a5",
+    "subject": "fix(protocol): allow a null document_title on Claude request citations",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "b30168d",
+    "subject": "wip(client-sdk): SDK crate only, rebased onto dev",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "fa6d374",
+    "subject": "feat(claudecode): present as the Claude Agent SDK and align the billing block with the CLI",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "66da652",
+    "subject": "docs: add Russian sections to the community policy files",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "2de8446",
+    "subject": "fix(docs): translate the usage upstream-model reference descriptions",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "47a9dab",
+    "subject": "docs(readme): show Render and Heroku as deploy badges",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "b1bee4c",
+    "subject": "chore(deploy): drop the Northflank template",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "ceed039",
+    "subject": "feat(usage): record the model the upstream response names",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "91f8b98",
+    "subject": "feat(cli): brand the help screen and add completions and man pages",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "58ef677",
+    "subject": "fix(codex): bind device and account metadata to selected credentials",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c695987",
+    "subject": "fix(core): reword an over-long prompt refusal for a client of the other dialect",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "feb886b",
+    "subject": "fix(protocol): keep thinking visible when gproxy turns a budget into adaptive thinking",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c1d4b38",
+    "subject": "fix(protocol): ask a Responses upstream for encrypted reasoning when a Claude client thinks",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e091f39",
+    "subject": "fix(console): give the rules and routing provider tabs icons like their siblings",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "456bcb9",
+    "subject": "feat(core): credential affinity lasts as long as the prompt cache",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "281bff4",
+    "subject": "feat(core): per-credential quota cap and headroom-biased selection",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d14bb81",
+    "subject": "fix(protocol): mark unsigned Gemini 3 function calls with the skip validator",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "500530e",
+    "subject": "feat(protocol): show Responses reasoning to Claude clients and replay it",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "fd8d052",
+    "subject": "fix(claudecode): send Claude Code's main-loop betas for clients without their own",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "463189c",
+    "subject": "fix(core): carry an over-long prompt refusal across Claude and OpenAI shapes",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "074b7cb",
+    "subject": "feat(copilotcli): send each model to the wire its catalogue names",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "aaf3574",
+    "subject": "fix(antigravity): drop Claude Code's billing line from the system instruction",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "62333ac",
+    "subject": "docs(antigravity): say the default Code Assist host is daily-cloudcode-pa",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "ae29feb",
+    "subject": "fix(antigravity): leave catalogue models marked disabled out of the list",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "bdafca4",
+    "subject": "fix(antigravity): give every array in a Claude tool schema an items schema",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "9b91265",
+    "subject": "fix(protocol): send adaptive thinking to adaptive Claude models and clamp budgets",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "fcb0eb7",
+    "subject": "fix(protocol): map an OpenAI prompt_cache_key to Claude automatic caching",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "0ab8430",
+    "subject": "fix(channel): keep Claude cache TTLs in Anthropic's required order",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "3f8de44",
+    "subject": "feat(core): body-aware rejections, per-request exclusion, stream error peek, cooldown probe",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d33791b",
+    "subject": "feat(channel): classify upstream rejections through a channel hook",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "9802b91",
+    "subject": "fix(protocol): map Responses reasoning.summary to Claude thinking display",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c510779",
+    "subject": "fix(protocol): fold a root union in tool schemas sent to Claude",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e63aa3d",
+    "subject": "fix(protocol): pair tool results with their calls in converted requests",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "e8ecf25",
+    "subject": "fix(protocol): accept empty tool IDs on Chat stream continuation fragments",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c1819b8",
+    "subject": "fix(protocol): join a Responses assistant turn into one Chat message",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "9d964b3",
+    "subject": "fix(antigravity): update project discovery logic and OAuth token handling",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c54d6aa",
+    "subject": "chore(release): v4.1.14",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "370755e",
+    "subject": "fix(antigravity): update default base URL to daily-cloudcode-pa",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "de00f0c",
+    "subject": "fix(winget): decode GitHub responses as UTF-8 on Windows",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "866fe6c",
+    "subject": "fix(release): sync GitLab version tags before publishing",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "05fa642",
+    "subject": "chore(release): v4.1.13",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "7321998",
+    "subject": "fix(docs): localize Codex audio reference schema description",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "5af0418",
+    "subject": "chore(deps): refresh dependencies before v4.1.14",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "d1cc263",
+    "subject": "fix(codex): align client wire and catalog with current upstream",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "57a2217",
+    "subject": "fix(claudecode): align with CLI 2.1.316 compaction attribution",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "dcda4f9",
+    "subject": "docs(android): drop the legacy v3 wrapper APK and its history notes",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "bdc0a45",
+    "subject": "fix(winget): upgrade manifest schema to 1.28.0",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "9092295",
+    "subject": "fix(claude): scale images for Anthropic's many-image limit",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "61f720d",
+    "subject": "fix(rules): scope dialect rules by their operation filter",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "8b457ca",
+    "subject": "fix(rules): apply dialect rules to streaming and count-tokens requests",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "892a5e2",
+    "subject": "fix(antigravity): present as the IDE 2.6.0 hub on the production host",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "b7024cc",
+    "subject": "fix(gemini): drop retired Flash aliases from model controls",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "2c091ea",
+    "subject": "fix(claudecode): align channel with CLI 2.1.311",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "1bef44f",
+    "subject": "fix(docs): translate new reference descriptions",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "c9a6e47",
+    "subject": "docs(release-notes): draft v4.1.13",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: documentation, release, CI or store material."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "4d40e99",
+    "subject": "fix(console): render on Android System WebView 108",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: another platform."
+  },
+  {
+    "source": "tauri-gproxy",
+    "commit": "0cea5af",
+    "subject": "fix(openai): follow October 27 upstream protocol references",
+    "disposition": "irrelevant",
+    "reason": "Subject and path triage: gateway/business change; only .gitlab/Dockerfile.ohos touches an OH path in this range (image digest bumps)."
+  },
+  {
+    "source": "rnoh-gesture-handler",
+    "commit": "799c7f0",
+    "subject": "!170 merge master into master",
+    "disposition": "duplicate",
+    "reason": "Merge integration; its parents are dispositioned separately."
+  },
+  {
+    "source": "rnoh-gesture-handler",
+    "commit": "9111b6b",
+    "subject": "fix: support the exclusive prop for multi-finger presses",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  },
+  {
+    "source": "rnoh-gesture-handler",
+    "commit": "fb3b58f",
+    "subject": "fix: support anchored width/height hitSlop bounds",
+    "disposition": "reviewed",
+    "reason": "Diff or message and affected files read; see source-entry map for any contribution."
+  }
+]

@@ -1,0 +1,37 @@
+/*
+ * Linker version script for libquazip on OpenHarmony.
+ *
+ * QuaZip bundles its own minizip (unzip.c/zip.c/ioapi.c) and exports those
+ * C symbols (unz*, zip*, the ioapi fill_* helpers, the QIODevice I/O
+ * callbacks) with default visibility. The OHOS *system* zlib
+ * (/system/lib64/.../libshared_libz.z.so) ALSO exports a minizip with the
+ * same names but an incompatible struct/ioapi ABI.
+ *
+ * On glibc, -Bsymbolic (DF_SYMBOLIC) makes libquazip prefer its own copies.
+ * The OHOS musl dynamic linker does not honour DF_SYMBOLIC, so at runtime
+ * QuaZip's internal calls into unzGoToFirstFile(), etc. get interposed by the
+ * system zlib's incompatible minizip — the central-directory parse reads
+ * garbage (wrong field offsets), which either dereferences a bad pointer
+ * (SIGSEGV in qiodevice64_seek_file_func) or reads a garbage uncompressed
+ * size and QByteArray::resize()s tens of GiB (RSS killer -> SIGKILL) while
+ * loading Krita's resource .bundle archives.
+ *
+ * Localising the minizip symbols makes them non-interposable: libquazip's own
+ * calls bind to its own definitions at link time, regardless of the linker's
+ * DF_SYMBOLIC support. QuaZip's C++ API (mangled _ZN... names) stays exported.
+ *
+ * IMPORTANT: only match the plain C minizip symbols, which begin with unz / zip
+ * / fill_. Do NOT use broad wildcards like *zlib_filefunc* or *qiodevice*: those
+ * also match C++ mangled names such as
+ * _ZN6QuaZip4openENS_4ModeEP19zlib_filefunc_def_s (QuaZip::open(Mode,
+ * zlib_filefunc_def_s*)), which is part of the PUBLIC API that libkritaresources
+ * links against — localising it makes libentry fail to load entirely
+ * ("symbol not found"). The qiodevice* I/O callbacks are QuaZip-only names the
+ * system zlib never exports, so they need no localisation.
+ */
+{
+  local:
+    unz*;
+    zip*;
+    fill_*filefunc*;
+};
